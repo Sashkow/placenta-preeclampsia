@@ -3,7 +3,7 @@ from django.forms import ModelForm
 from .models import Article, Attribute
 
 
-class ArticleForm(ModelForm):
+'''class ArticleForm(ModelForm):
     geo_id = forms.CharField(max_length=30, required=False)
     geo_link = forms.CharField(required=False)
     arr_id = forms.CharField(max_length=30, required=False)
@@ -43,3 +43,4 @@ class ArticleForm(ModelForm):
                                   attribute_value=attr_value)
                 entry.save()   
         return instance
+'''

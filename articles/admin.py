@@ -1,7 +1,7 @@
 from django.contrib import admin
 from django.contrib.admin import ModelAdmin
 
-from .forms import ArticleForm
+# from .forms import ArticleForm
 from .models import Article, Attribute
 
 def _lookup_f(attr_name):
@@ -21,13 +21,20 @@ def _lookup_f_tuple():
         lst.append(_lookup_f(attr_name))
     return tuple(lst)
 
+
+class AttributeInline(admin.TabularInline):
+    model = Attribute
+    extra = 0
+
+
 class ArticleAdmin(ModelAdmin):
-    form = ArticleForm
-    fieldsets = (
+    # form = ArticleForm
+    '''fieldsets = (
         (None, {
             'fields': Attribute.attribute_names,
         }),
-    )
+    )'''
+    inlines = [AttributeInline,]
 
     list_display = _lookup_f_tuple()
 
