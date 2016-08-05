@@ -2,7 +2,6 @@ from django.db import models
 from django.utils import timezone
 
 
-
 class Article(models.Model):
     def __str__(self):
         return str(self.id)
@@ -24,3 +23,63 @@ class Attribute(models.Model):
                              str(self.attribute_name),
                              str(self.attribute_value),]
                )
+
+from django.db import models
+from django_hstore import hstore
+
+class Experiment(models.Model):
+    must_have_attributes = ['accession', 'secondaryaccession',
+     'name', 'experimenttype', 'releasedate', 'lastupdatedate',
+    'samples']
+    
+    data = hstore.DictionaryField(db_index=True)
+    objects = hstore.HStoreManager()
+    microarrays = models.ManyToManyField('Microarray')
+
+    def __unicode__(self):
+        to_print = 'accession'
+        if to_print in sel.data:
+            return self.data[to_print]
+        else:
+            return 'some experiment'
+
+    def __str__(self):
+        return str(self.id)
+
+    def add_or_replace(data):
+        obj = Experiment.objects.get_or_create(data__contains=
+          {'accession':data['accession']})
+        obj.data = data
+        obj.save()
+
+
+class Sample(models.Model):
+    data = hstore.DictionaryField(db_index=True)
+    objects = hstore.HStoreManager()
+
+    def __unicode__(self):
+        to_print = 'name'
+        if to_print in sel.data:
+            return self.data[to_print]
+        else:
+            return 'some attribute'
+
+class Microarray(models.Model):
+    data = hstore.DictionaryField(db_index=True)
+    objects = hstore.HStoreManager()
+
+    def __unicode__(self):
+        to_print = 'name'
+        if to_print in sel.data:
+            return self.data[to_print]
+        else:
+            return 'some attribute'
+
+    def __str__(self):
+        return str(self.id)
+
+    def add_or_replace(data):
+        obj = Microarray.objects.get_or_create(data__contains=
+          {'accession':data['accession']})
+        obj.data = data
+        obj.save()
