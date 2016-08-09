@@ -57,15 +57,15 @@ def get_experiment_attributes(experiment_id):
             exp_data[item.tag] = item.text
         else:
             if item.tag == 'arraydesign':
-                array_data = {}
+                array_data = {}            
                 for array_attr in item.getchildren():
-                    if item.text != None:
-                        array_data[item.tag] = item.text
+                    if array_attr.text != None:
+                        array_data[array_attr.tag] = array_attr.text
                 arrays_data.append(array_data)
 
 
 
-    return exp_data, array_data
+    return exp_data, arrays_data
 
 
 def exp_to_db(experiment_id):
@@ -73,13 +73,17 @@ def exp_to_db(experiment_id):
     retreive experiment data and add it to db
     """
 
-    exp_data, array_data = get_experiment_attributes(experiment_id)
-    exp_obj = Experiment(data=exp_data)
-    
-    # array_obj = Microarray(experiment=exp_obj, data = array_data)
+    exp_data, arrays_data = get_experiment_attributes(experiment_id)
+    exp_obj = Experiment.add_or_replace(data=exp_data)
 
-    exp_obj.save()
     # array_obj.save()
+    for array_data in arrays_data:
+        array_obj = Microarray.add_or_replace(data=array_data)
+        if not(exp_obj.microarrays.filter(id=array_obj.id).exists()):
+            exp_obj.microarrays.add(array_obj)
+
+
+    
 
 
 

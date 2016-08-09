@@ -47,10 +47,12 @@ class Experiment(models.Model):
         return str(self.id)
 
     def add_or_replace(data):
-        obj = Experiment.objects.get_or_create(data__contains=
+        obj, some_bool = Experiment.objects.get_or_create(data__contains=
           {'accession':data['accession']})
+
         obj.data = data
         obj.save()
+        return obj
 
 
 class Sample(models.Model):
@@ -65,21 +67,25 @@ class Sample(models.Model):
             return 'some attribute'
 
 class Microarray(models.Model):
-    data = hstore.DictionaryField(db_index=True)
+    data = hstore.DictionaryField(db_index=True, blank=True)
     objects = hstore.HStoreManager()
 
-    def __unicode__(self):
+    def _show(self):
         to_print = 'name'
-        if to_print in sel.data:
-            return self.data[to_print]
+        if to_print in self.data:
+            return str(self.data[to_print])
         else:
-            return 'some attribute'
+            return str(self.id)
 
+    def __unicode__(self):
+        return self._show()
+        
     def __str__(self):
-        return str(self.id)
+        return self._show()
 
     def add_or_replace(data):
-        obj = Microarray.objects.get_or_create(data__contains=
+        obj, some_bool = Microarray.objects.get_or_create(data__contains=
           {'accession':data['accession']})
         obj.data = data
         obj.save()
+        return obj

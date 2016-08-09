@@ -11,14 +11,9 @@ class Command(BaseCommand):
         """
         self.stdout.write("performs")
         accessions = get_preeclampsia_accession()
-        exps = Experiment.objects.all()
-        
-        present_accessions = [exp.data['accession'] for exp in exps 
-                                if 'accession' in exp.data]
+        for accession in accessions:        
+            exp_to_db(accession)
                                 
-        for accession in accessions:
-            print_exp_array_title(accession)
-
         # for accession in accessions:
-        #     if not (accession in present_accessions):
-        #         exp_to_db(accession)
+        #     print_exp_array_title(accession)
+

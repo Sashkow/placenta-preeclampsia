@@ -10,6 +10,9 @@ import ast
 
 from articles.getdata import get_experiment_attributes
 
+from django.core.urlresolvers import reverse
+
+
 
 
 class AttributeInline(admin.TabularInline):
@@ -82,6 +85,7 @@ def _experiment_extra_display():
 def _experiment_list_display():
     
     f_lst = []
+
     for attr_name in Experiment.must_have_attributes:
         f_lst.append(_experiment_lookup_f(attr_name))
     return f_lst
@@ -106,12 +110,15 @@ class ExperimentAdmin(ModelAdmin):
                 accession = data['accession']
                 exp_attrs, arrays_attrs = get_experiment_attributes(accession)
                 experiment = Experiment.add_or_replace(exp_attrs) # obj.save() is here
+                print("microarrays:::", arrays_attrs)
                 for array_attrs in arrays_attrs:
                     microarray = Microarray.add_or_replace(array_attrs) # obj.save() is here
-                    if not(microarray in experiment.microarrays):
+                    if not(experiment.microarrays.filter(id=microarray.id).exists()):
                         experiment.microarrays.add(microarray)
-
-            return reverse("admin:experiment_change", args=[experiment.id])
+                
+                return HttpResponseRedirect(reverse("admin:articles_experiment_change", args=[experiment.id]))
+            else:
+                return HttpResponseRedirect(request.META.get('HTTP_REFERER'))
         return super(ExperimentAdmin, self).response_change(request, obj)
 
 admin.site.register(Experiment, ExperimentAdmin)
