@@ -1,0 +1,114 @@
+Good:
+[HuGene-2_0-st] Affymetrix Human Gene 2.0 ST Array [transcript (gene) version]
+Illumina HumanWG-6 v3.0 Expression BeadChip
+Illumina HumanHT-12_V4_0_R1_15002873_B
+Illumina HumanMethylation27 BeadChip (HumanMethylation27_270596_v.1.2)
+Illumina HumanMethylation450 BeadChip (HumanMethylation450_15017482_v.1.1)
+Illumina HumanHT-12 V4.0 expression beadchip
+Illumina HumanHT-12 v3.0 Expression BeadChip
+Illumina HumanHT-12 V4.0 expression beadchip
+Affymetrix GeneChip Human Gene 1.0 ST Array [HuGene-1_0-st-v1]
+Affymetrix GeneChip Mouse Genome 430 2.0 [Mouse430_2]
+Illumina Human-6 v2 Expression BeadChip
+Affymetrix GeneChip Human Genome U133 Plus 2.0 [HG-U133_Plus_2]
+
+
+Question/Bad:
+Affymetrix GeneChip Human Genome Focus Array [HG-Focus]
+	bad: less than 10k genes
+	http://media.affymetrix.com/support/technical/datasheets/human_datasheet.pdf
+
+Affymetrix GeneChip Human Genome HG-U133A [HG-U133A]
+Affymetrix GeneChip Human Genome HG-U133B [HG-U133B]
+	good: has all
+
+Affymetrix GeneChip Rat Genome U34A [RG_U34A]
+Affymetrix GeneChip Rat Genome U34B [RG_U34B]
+	question: U34C is missing
+	http://www.affymetrix.com/catalog/131543/AFFY/Rat+Genome+U34+Set#1_1
+
+Agilent-039494 SurePrint G3 Human GE v2 8x60K Microarray 039381
+	question: 50,599 biological features, genes amnt not found,
+	http://www.genomics.agilent.com/article.jsp?crumbAction=push&pageId=1516
+	has sequences
+	https://www.ebi.ac.uk/arrayexpress/files/A-GEOD-17077/A-GEOD-17077.adf.txt
+	has annotation
+	https://www.ebi.ac.uk/arrayexpress/files/A-GEOD-17077/A-GEOD-17077_comments.txt
+	
+Agilent-028004 SurePrint G3 Human GE 8x60K Microarray (Probe Name Version)
+Agilent 028004 SurePrint G3 Human GE 8x60K Microarray
+	good
+	Target 27,958 Entrez Gene RNAs    7,419 lincRNAs
+	http://www.genomics.agilent.com/article.jsp?pageId=1516
+	has sequences
+	http://www.ncbi.nlm.nih.gov/geo/query/acc.cgi?acc=GPL13607
+	has annotation
+	https://earray.chem.agilent.com/earray/catalogGeneLists.do?action=displaylist#
+
+[miRNA-2_0] Affymetrix Multispecies miRNA-2_0 Array
+	good
+	15 000 probesets, 1,105 mature miRNA
+	http://www.affymetrix.com/catalog/131473/AFFY/miRNA-Array#1_1
+	has sequences
+	https://www.ebi.ac.uk/arrayexpress/arrays/A-GEOD-14613/?ref=E-GEOD-74562
+
+Agilent Whole Human Genome Microarray 4x44K 014850 G4112F (85 cols x 532 rows)
+	good
+	45220 rows
+		ncbi
+	has annotations
+		http://www.chem.agilent.com/cag/bsp/gene_lists.asp
+	has sequences
+		arrayexpress
+
+Arraystar Human LncRNA microarray V2.0 (Agilent_033010 Probe Name version)
+	question: not mRNA
+	33,045 LncRNAs and 30,215 coding transcripts can be detected by our second-generation LncRNA microarray
+		ncbi
+	has sequences
+		ncbi
+	not found manybe does not exist
+
+
+NimbleGen Homo sapiens HG18 Expression Array (12x135k)
+	good
+	is big: 135096 probes
+	has annotations, sequences
+		http://www.chibi.ubc.ca/Gemma/arrays/showArrayDesign.html?id=649
+
+Capitalbio 22K Human oligo array version 1.0
+	question: kinna small
+	23232 rows 
+		http://www.ncbi.nlm.nih.gov/geo/query/acc.cgi?acc=GPL8380
+	has sequences 
+		http://www.ebi.ac.uk/arrayexpress/arrays/A-GEOD-8380/?sortby=name&sortorder=descending&page=127&pagesize=100
+	has annotation
+		http://www.ebi.ac.uk/arrayexpress/files/A-GEOD-8380/A-GEOD-8380_comments.txt
+
+Capitalbio mammal microRNA V3.0
+	question: not mRNA
+	has sequences
+		http://www.ebi.ac.uk/arrayexpress/files/A-GEOD-8469/A-GEOD-8469.adf.txt
+	has annotation
+		http://www.ebi.ac.uk/arrayexpress/files/A-GEOD-8469/A-GEOD-8469_comments.txt
+
+GynObsLU Human 800 PE-associated cDNA 
+	bad
+	small: 11k probes
+	has annotation
+		http://www.ebi.ac.uk/arrayexpress/files/A-GEOD-10579/A-GEOD-10579_comments.txt
+	sequences not found
+
+Applied Biosystems Human Genome Survey Microarray v2.0
+	good
+	29,098 genes, has annotation, sequences
+		http://www3.appliedbiosystems.com/cms/groups/mcb_marketing/documents/generaldocuments/cms_041901.pdf
+
+Agilent Whole Human Genome Oligo Microarray 012391 G4112A
+	good
+	not small 
+	has sequences
+		arrayexpress
+	has annotation
+		geo
+

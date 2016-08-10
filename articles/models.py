@@ -67,6 +67,7 @@ class Sample(models.Model):
             return 'some attribute'
 
 class Microarray(models.Model):
+    must_have_attributes = ['accession', 'name']
     data = hstore.DictionaryField(db_index=True, blank=True)
     objects = hstore.HStoreManager()
 

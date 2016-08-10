@@ -12,7 +12,21 @@ from articles.getdata import get_experiment_attributes
 
 from django.core.urlresolvers import reverse
 
+def _lookup_f(ModelClass, attr_name):
+        def f(obj):
+            if ModelClass.objects.filter(id=obj.id, data__contains=[attr_name]).exists():
+                return dict(ModelClass.objects.get(id=obj.id).data)[attr_name]
+            else:
+                return None
+        f.short_description = attr_name
+        return f
+        
+def _list_display(ModelClass):
+    f_lst = []
 
+    for attr_name in ModelClass.must_have_attributes:
+        f_lst.append(_lookup_f(ModelClass, attr_name))
+    return f_lst
 
 
 class AttributeInline(admin.TabularInline):
@@ -58,14 +72,6 @@ class AttributeAdmin(ModelAdmin):
     )
 admin.site.register(Attribute, AttributeAdmin)
 
-def _experiment_lookup_f(attr_name):
-        def f(obj):
-            if Experiment.objects.filter(id=obj.id, data__contains=[attr_name]).exists():
-                return dict(Experiment.objects.get(id=obj.id).data)[attr_name]
-            else:
-                return None
-        f.short_description = attr_name
-        return f
 
 def _experiment_extra_display():
     def f(obj):
@@ -78,17 +84,23 @@ def _experiment_extra_display():
         else:
             return None
 
-    f.short_description = "extra_data"
+    f.short_description = 'other data'
     return [f]
 
+def _experiment_microarrays_display():
+    def f(obj):
+        show_field = 'name'
+        names = ""
+        exists = Experiment.objects.filter(id=obj.id).exists()
+        if exists:
+            microarrays = Experiment.objects.get(id=obj.id).microarrays.all()
 
-def _experiment_list_display():
-    
-    f_lst = []
-
-    for attr_name in Experiment.must_have_attributes:
-        f_lst.append(_experiment_lookup_f(attr_name))
-    return f_lst
+            for microarray in microarrays:
+                if show_field in microarray.data:
+                    names += microarray.data[show_field] + ', '
+        return names
+    f.short_description = 'platform'
+    return [f]
 
 
 class MicroarrayInline(admin.TabularInline):
@@ -98,12 +110,13 @@ class MicroarrayInline(admin.TabularInline):
 
 class ExperimentAdmin(ModelAdmin):
     inlines = [MicroarrayInline,]    
-    list_display = _experiment_list_display()+_experiment_extra_display()
+    list_display = _list_display(Experiment) + \
+                   _experiment_microarrays_display() + \
+                   _experiment_extra_display()
     exclude = ['microarrays']
 
 
     def response_change(self, request, obj):
-        
         if '_autofillbutton' in request.POST:
             data = ast.literal_eval(dict(request.POST)['data'][0])
             if 'accession' in data:
@@ -124,14 +137,11 @@ class ExperimentAdmin(ModelAdmin):
 admin.site.register(Experiment, ExperimentAdmin)
 
 
+
 class MicroarrayAdmin(ModelAdmin):
-    def response_change(self, request, obj):
-        if '_autofillbutton' in request.POST:
-            print("MICROARRAY REQUEST SEES")
-            return HttpResponseRedirect(request.META.get('HTTP_REFERER'))
-        return super(ExperimentAdmin, self).response_change(request, obj)
+    list_display = _list_display(Microarray)
 
 
 
-admin.site.register(Microarray)
+admin.site.register(Microarray, MicroarrayAdmin)
 admin.site.register(Sample)
