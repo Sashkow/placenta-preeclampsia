@@ -52,8 +52,8 @@ def get_experiment_samples_attributes(experiment_id):
     url ='xml/v3/experiments/'+experiment_id+'/samples'
     samples_xml = s.http_get(url, 'xml')
     samples_xml = s.easyXML(samples_xml)
-    with open("samples_E-GEOD-74341.txt", "w") as text_file:
-        print(samples_xml.prettify(), file=text_file)
+    # with open("samples_E-GEOD-74341.txt", "w") as text_file:
+    #     print(samples_xml.prettify(), file=text_file)
 
     samples_xml = samples_xml.getchildren()
     samples = []

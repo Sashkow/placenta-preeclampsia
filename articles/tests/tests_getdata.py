@@ -42,6 +42,7 @@ class TestGetData(TestCase):
 
         self.assertTrue(isinstance(exp_data, tuple))
         self.assertTrue(len(exp_data), 2)
+        print(exp_data[0], exp_data[1])
         self.assertTrue(isinstance(exp_data[0],dict))
         self.assertTrue(isinstance(exp_data[1],dict))
 

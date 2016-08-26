@@ -24,7 +24,3 @@ class TestExperimentAutoFillButton(TestCase):
 		test AutoFill button exists in admin interface for Experiment 
 		"""
 		response = self.c.get('/admin/articles/experiment/add/')
-		
-	def test_
-
-	
