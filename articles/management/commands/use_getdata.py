@@ -9,10 +9,13 @@ class Command(BaseCommand):
         """
         command's hande method
         """        
-        for obj in Microarray.objects.all():
-            if 'name' in obj.data:
-                print(obj.data['name'])
-            else:
-                print(None)
+        acc = "E-GEOD-74341"
+        exp_to_db(acc)
+
+        # for obj in Microarray.objects.all():
+        #     if 'name' in obj.data:
+        #         print(obj.data['name'])
+        #     else:
+        #         print(None)
         
 

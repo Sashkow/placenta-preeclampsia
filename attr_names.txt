@@ -1,6 +1,6 @@
-age
+age -> maternal age
 		E-GEOD-30186 (12 samples)
-			20 years
+			20 years -> 20
 			23 years
 			24 years
 			27 years
@@ -9,33 +9,34 @@ age
 			30 years
 			31 years
 			32 years
-age of donor
+age of donor -> maternal age
 		E-MTAB-3309 (24 samples)
-			18 year
+			18 year -> 18
 			21 year
 			23 year
 			26 year
 			27 year
-batch
+batch -> None
 		E-GEOD-35574 (94 samples)
 			A
 			B
 		E-GEOD-25906 (60 samples)
 			A
 			B
-biosourceprovider
+
+biosourceprovider -> ?
 		E-TABM-682 (104 samples)
 			Bergen
 			Trondheim
 cell line
 		E-MTAB-3348 (4 samples)
 			HUVEC cell line
-cell type
+cell type -> cell type
 		E-MTAB-3309 (24 samples)
 			macrophage
 		E-GEOD-41681 (4 samples)
 			Human Umbilical Vein Endothelial Cells (HUVEC)
-classification
+classification -> group
 		E-GEOD-35574 (94 samples)
 			control
 			IUGR
@@ -43,11 +44,12 @@ classification
 		E-GEOD-25906 (60 samples)
 			control
 			preeclamptic
-condition
+condition -> group
 		E-GEOD-44667 (40 samples)
 			control
 			EOPET
-		E-GEOD-14722 (46 samples)
+
+		E-GEOD-14722 (46 samples) -> gestational age, group
 			24.1wk preeclamptic
 			24.7wk preterm
 			25.4wk preterm
@@ -71,7 +73,7 @@ condition
 			35.9wk preterm
 			36.6wk preterm
 			37.6wk preeclamptic
-diagnosis
+diagnosis -> group
 		E-GEOD-73377 (72 samples)
 			normotensive
 			preeclamptic
@@ -81,16 +83,16 @@ diagnosis
 		E-GEOD-73374 (36 samples)
 			normotensive
 			preeclamptic
-disease
+disease -> group
 		E-MTAB-3348 (4 samples)
 			mild preeclampsia
 			normal
 			severe preeclampsia
-disease state
+disease state -> group
 		E-GEOD-57767 (45 samples)
 			normal
 			preeclampsia
-diseasestate
+diseasestate -> group
 		E-TABM-682 (104 samples)
 			infant SGA
 			normal
@@ -103,14 +105,14 @@ fetus gender
 		E-GEOD-44667 (40 samples)
 			female
 			male
-gender
+gender -> fetus gender
 		E-GEOD-35574 (94 samples)
 			f
 			m
 		E-GEOD-25906 (60 samples)
 			F
 			M
-gestational age
+gestational age -> gestational age, ethnic group
 		E-GEOD-73377 (72 samples)
 			22
 			27
@@ -127,7 +129,7 @@ gestational age
 			39
 			40
 			41
-			African American
+			African American 
 			Asian
 			Caucasian
 			Hispanic
@@ -182,7 +184,7 @@ gestational age
 			38
 			39
 			40
-gestational age weeks
+gestational age weeks -> gestational age 
 		E-GEOD-44667 (40 samples)
 			24.86
 			25
@@ -206,22 +208,23 @@ gestational age weeks
 			34
 			36
 			37.28
-gestational classification
+
+gestational classification -> <delete>
 		E-GEOD-57767 (45 samples)
-			Preterm
+			Preterm 
 			Term
-group
+group -> group
 		E-GEOD-57050 (10 samples)
 			normal
 			preeclamptic
-induction of labor
+induction of labor -> induction of labor
 		E-GEOD-35574 (94 samples)
 			induced
 			spontaneous
 		E-GEOD-25906 (60 samples)
 			induced
 			spontaneous
-maternal age
+maternal age -> maternal age
 		E-GEOD-73377 (72 samples)
 			19
 			20
@@ -321,11 +324,11 @@ organism part
 			placenta
 		E-GEOD-57767 (45 samples)
 			placenta
-		E-GEOD-57050 (10 samples)
+		E-GEOD-57050 (10 samples) -> tissue
 			villous tissue
 		E-GEOD-44667 (40 samples)
-			placental chorionic villus
-organismpart
+			placental chorionic villus -> tissue
+organismpart -> ?
 		E-TABM-682 (104 samples)
 			Decidua basalis
 pool
@@ -333,7 +336,7 @@ pool
 			RNA pooled from 2 independent cultures of cells exposed to plasma from women with mild preeclampsia
 			RNA pooled from 3 independent cultures of cells exposed to plasma from women with severe preeclampsia
 			RNA pooled from 5 independent cultures of cells exposed to plasma from normal pregnant women
-race
+race -> gestational age(?), ethnicity
 		E-GEOD-73377 (72 samples)
 			22
 			27
@@ -377,18 +380,18 @@ race
 			Caucasian
 			Hispanic
 			Other
-rna interference
+rna interference -> ?
 		E-MTAB-3309 (24 samples)
 			siRNA CD74
 			siRNA non-targeting
-sex
+sex -> ?
 		E-MTAB-3309 (24 samples)
 			female
-stimulus
+stimulus -> ?
 		E-MTAB-3309 (24 samples)
 			IL-4
 			none
-tissue
+tissue -> organism part
 		E-GEOD-35574 (94 samples)
 			placenta
 		E-GEOD-30186 (12 samples)
@@ -396,3 +399,7 @@ tissue
 			placentas from preeclamptic pregnancies
 		E-GEOD-25906 (60 samples)
 			placenta
+
+add experiment type
+	in vitro
+	in vivo

@@ -55,16 +55,6 @@ class Experiment(models.Model):
         return obj
 
 
-class Sample(models.Model):
-    data = hstore.DictionaryField(db_index=True)
-    objects = hstore.HStoreManager()
-
-    def __unicode__(self):
-        to_print = 'name'
-        if to_print in sel.data:
-            return self.data[to_print]
-        else:
-            return 'some attribute'
 
 class Microarray(models.Model):
     must_have_attributes = ['accession', 'name']
@@ -90,3 +80,31 @@ class Microarray(models.Model):
         obj.data = data
         obj.save()
         return obj
+
+class Sample(models.Model):
+    must_have_attributes = ['name']
+    experiment = models.ForeignKey('Experiment')
+    data = hstore.DictionaryField(db_index=True)
+    objects = hstore.HStoreManager()
+
+    def add_or_replace(experiment, data):
+        obj, some_bool = \
+          Sample.objects.get_or_create(experiment=experiment,
+                                           data__contains={'name':data['name']})
+        obj.data = data
+        # obj.experiment = experiment
+        obj.save()
+        return obj
+
+    def _show(self):
+        to_print = 'name'
+        if to_print in self.data:
+            return str(self.data[to_print])
+        else:
+            return str(self.id)
+
+    def __unicode__(self):
+        return self._show()
+        
+    def __str__(self):
+        return self._show()

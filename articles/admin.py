@@ -9,6 +9,7 @@ from django.http import HttpResponseRedirect
 import ast
 
 from articles.getdata import get_experiment_attributes
+from articles.getdata import get_experiment_samples_attributes
 
 from django.core.urlresolvers import reverse
 
@@ -73,13 +74,13 @@ class AttributeAdmin(ModelAdmin):
 admin.site.register(Attribute, AttributeAdmin)
 
 
-def _experiment_extra_display():
+def _extra_display(ModelClass):
     def f(obj):
-        exists = Experiment.objects.filter(id=obj.id).exists()
+        exists = ModelClass.objects.filter(id=obj.id).exists()
         if exists:
-            exp_data = Experiment.objects.get(id=obj.id).data
+            exp_data = ModelClass.objects.get(id=obj.id).data
             extra_data = {item:exp_data[item] for item in exp_data 
-                            if not(item in Experiment.must_have_attributes)}
+                            if not(item in ModelClass.must_have_attributes)}
             return str(extra_data)
         else:
             return None
@@ -107,12 +108,16 @@ class MicroarrayInline(admin.TabularInline):
     model = Experiment.microarrays.through
     extra = 0
 
+class SampleInline(admin.StackedInline):
+    model = Sample
+    extra = 0
+
 
 class ExperimentAdmin(ModelAdmin):
-    inlines = [MicroarrayInline,]    
+    inlines = [MicroarrayInline, SampleInline]    
     list_display = _list_display(Experiment) + \
                    _experiment_microarrays_display() + \
-                   _experiment_extra_display()
+                   _extra_display(Experiment)
     exclude = ['microarrays']
 
 
@@ -122,13 +127,20 @@ class ExperimentAdmin(ModelAdmin):
             if 'accession' in data:
                 accession = data['accession']
                 exp_attrs, arrays_attrs = get_experiment_attributes(accession)
+                samples_attrs = get_experiment_samples_attributes(accession)
                 experiment = Experiment.add_or_replace(exp_attrs) # obj.save() is here
                 print("microarrays:::", arrays_attrs)
+
+                # add microarrays
                 for array_attrs in arrays_attrs:
                     microarray = Microarray.add_or_replace(array_attrs) # obj.save() is here
                     if not(experiment.microarrays.filter(id=microarray.id).exists()):
                         experiment.microarrays.add(microarray)
-                
+
+                # add samples
+                for sample_attrs in samples_attrs:
+                    sample_obj = Sample.add_or_replace(experiment=experiment, data=sample_attrs)
+
                 return HttpResponseRedirect(reverse("admin:articles_experiment_change", args=[experiment.id]))
             else:
                 return HttpResponseRedirect(request.META.get('HTTP_REFERER'))
@@ -143,5 +155,14 @@ class MicroarrayAdmin(ModelAdmin):
 
 
 
+
+class SampleAdmin(ModelAdmin):
+    list_display = ['data', 'experiment']
+    list_editable = ['data', 'experiment']
+    # list_display = _list_display(Sample)+_extra_display(Sample)
+    # list_editable = _list_display(Sample)+_extra_display(Sample)
+
+
+
 admin.site.register(Microarray, MicroarrayAdmin)
-admin.site.register(Sample)
+admin.site.register(Sample, SampleAdmin)

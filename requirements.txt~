@@ -2,7 +2,7 @@ appdirs==1.4.0
 beautifulsoup4==4.5.1
 bioservices==1.4.12
 colorama==0.3.7
-Django==1.9
+Django==1.8
 django-hstore==1.4.2
 easydev==0.9.25
 gevent==1.1.2

@@ -11,8 +11,10 @@ class Command(BaseCommand):
         """
         self.stdout.write("performs")
         accessions = get_preeclampsia_accession()
-        for accession in accessions:        
+        for accession in accessions:
+            print("Adding", accession, "to db")        
             exp_to_db(accession)
+
                                 
         # for accession in accessions:
         #     print_exp_array_title(accession)
