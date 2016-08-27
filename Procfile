@@ -1,0 +1,1 @@
+web: gunicorn preeclampsia_db.wsgi --log-file -
