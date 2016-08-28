@@ -19,12 +19,15 @@ from django.contrib import admin
 from django.conf.urls import patterns
 from django.conf import settings
 
+from django.contrib import admin
+admin.autodiscover()
+
 
 urlpatterns = [
     url(r'^admin/', admin.site.urls),
 
 ]
 
-urlpatterns += patterns('',
-    (r'^static/(?P<path>.*)$', 'django.views.static.serve', {'document_root': settings.STATIC_ROOT}),
-)
+# urlpatterns += patterns('',
+#     (r'^static/(?P<path>.*)$', 'django.views.static.serve', {'document_root': settings.STATIC_ROOT}),
+# )
