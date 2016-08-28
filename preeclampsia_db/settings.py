@@ -66,6 +66,7 @@ TEMPLATES = [
                 'django.template.context_processors.request',
                 'django.contrib.auth.context_processors.auth',
                 'django.contrib.messages.context_processors.messages',
+
             ],
         },
     },
@@ -77,16 +78,25 @@ WSGI_APPLICATION = 'preeclampsia_db.wsgi.application'
 # Database
 # https://docs.djangoproject.com/en/1.9/ref/settings/#databases
 
-DATABASES = {
-    'default': {
-        'ENGINE': 'django.db.backends.postgresql_psycopg2',
-        'NAME': 'preeclampsia',
-        'USER': 'sashko',
-        'PASSWORD': 'poland',
-        'HOST': 'localhost',
-        'PORT': '5433',
-    }
-}
+# Parse database configuration from $DATABASE_URL
+
+
+# DATABASES = {
+#     'default': {
+#         'ENGINE': 'django.db.backends.postgresql_psycopg2',
+#         'NAME': 'preeclampsia',
+#         'USER': 'sashko',
+#         'PASSWORD': 'poland',
+#         'HOST': 'localhost',
+#         'PORT': '5433',
+#     }
+# }
+
+import dj_database_url
+default_config = dj_database_url.config(default='postgres://yzjhlayqnripvc:KUzahGPnEFY8W9eU0Pu5Y0QzcT@ec2-54-235-104-63.compute-1.amazonaws.com:5432/d5sk8mi5cjc97v')
+print(default_config)
+DATABASES = {'default': default_config}
+
 
 
 
@@ -131,3 +141,5 @@ STATIC_ROOT = os.path.join(BASE_DIR, 'static')
 STATICFILES_DIRS = (
     os.path.join(BASE_DIR, 'static')
 )
+
+
