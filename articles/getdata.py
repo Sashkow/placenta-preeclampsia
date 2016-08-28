@@ -100,8 +100,8 @@ def exp_to_db(experiment_id):
     # array_obj.save()
     for microarray in microarrays:
         microarray_obj = Microarray.add_or_replace(data=microarray)
-            if experiment_obj.data['accession'] == 'E-GEOD-15789':
-                print("MARRAYS", experiment_obj.microarrays)
+        if experiment_obj.data['accession'] == 'E-GEOD-15789':
+            print("MARRAYS", experiment_obj.microarrays)
         if not(experiment_obj.microarrays.filter(id=microarray_obj.id).exists()):
 
 
