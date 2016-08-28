@@ -76,7 +76,7 @@ def get_experiment_samples_attributes(experiment_id):
                     # tag is absent or not unique 
                     first_tag = characteristic.getchildren()[0]
                     if first_tag.tag == 'name':
-                        print('Took name from sample xml <source> section',first_tag.tag,first_tag.text)
+                        # print('Took name from sample xml <source> section',first_tag.tag,first_tag.text)
                         sample[first_tag.tag] = first_tag.text
                         
 
@@ -100,7 +100,11 @@ def exp_to_db(experiment_id):
     # array_obj.save()
     for microarray in microarrays:
         microarray_obj = Microarray.add_or_replace(data=microarray)
+            if experiment_obj.data['accession'] == 'E-GEOD-15789':
+                print("MARRAYS", experiment_obj.microarrays)
         if not(experiment_obj.microarrays.filter(id=microarray_obj.id).exists()):
+
+
             experiment_obj.microarrays.add(microarray_obj)
 
     for sample in samples:
@@ -149,19 +153,21 @@ def get_preeclampsia_accession():
 # keywords="pre-eclampsia+OR+preeclampsia+OR+pre-eclamptic+OR+preeclamptic",
 #                              exptype="*array*",
 #                              species="homo+sapiens")
-    # res = ['E-GEOD-74341', 'E-GEOD-73377', 'E-GEOD-73375', 'E-GEOD-73374',
-    #        'E-GEOD-60438', 'E-MTAB-3265', 'E-MTAB-3348',
-    #        'E-MTAB-3309', 'E-GEOD-54400', 'E-GEOD-59274', 'E-GEOD-57767',
-    #        'E-GEOD-48424', 'E-GEOD-57050', 'E-GEOD-54618', 'E-GEOD-49343',
-    #        'E-GEOD-38747', 'E-GEOD-47187', 'E-GEOD-50783', 'E-GEOD-41681',
-    #        'E-GEOD-44712', 'E-GEOD-44711', 'E-GEOD-44667', 'E-GEOD-43942',
-    #        'E-GEOD-41336', 'E-GEOD-41331', 'E-GEOD-40182', 'E-GEOD-37901',
-    #        'E-GEOD-36083', 'E-GEOD-35574', 'E-GEOD-31679', 'E-GEOD-30186',
-    #        'E-GEOD-15789', 'E-GEOD-15787', 'E-GEOD-22526', 'E-GEOD-25906', 
-    res = [           'E-GEOD-24129', 'E-GEOD-10588', 'E-GEOD-13155', 'E-TABM-682',
+    res = ['E-GEOD-74341', 'E-GEOD-73377', 'E-GEOD-73375', 'E-GEOD-73374',
+           'E-GEOD-60438', 'E-MTAB-3265', 'E-MTAB-3348',
+           'E-MTAB-3309', 'E-GEOD-54400', 'E-GEOD-59274', 'E-GEOD-57767',
+           'E-GEOD-48424', 'E-GEOD-57050', 'E-GEOD-54618', 'E-GEOD-49343',
+           'E-GEOD-38747', 'E-GEOD-47187', 'E-GEOD-50783', 'E-GEOD-41681',
+           'E-GEOD-44712', 'E-GEOD-44711', 'E-GEOD-44667', 'E-GEOD-43942',
+           'E-GEOD-41336', 'E-GEOD-41331', 'E-GEOD-40182', 'E-GEOD-37901',
+           'E-GEOD-36083', 'E-GEOD-35574', 'E-GEOD-31679', 'E-GEOD-30186',
+           'E-GEOD-15789', 'E-GEOD-15787', 'E-GEOD-22526', 
+              'E-GEOD-24129', 'E-GEOD-10588', 'E-GEOD-13155', 'E-TABM-682',
            'E-GEOD-14722', 'E-GEOD-12767', 'E-GEOD-13475', 'E-GEOD-12216',
            'E-GEOD-9984', 'E-GEOD-6573', 'E-GEOD-4100', 'E-GEOD-4707',
             'E-MEXP-1050']
+
+            # cannot process 'E-GEOD-25906', 
     return res
 
 
