@@ -25,9 +25,7 @@ admin.autodiscover()
 
 urlpatterns = [
     url(r'^admin/', admin.site.urls),
+    url(r'^static/(?P<path>.*)$', 'django.views.static.serve', 
+    	{'document_root': settings.STATIC_ROOT})
 
 ]
-
-# urlpatterns += patterns('',
-#     (r'^static/(?P<path>.*)$', 'django.views.static.serve', {'document_root': settings.STATIC_ROOT}),
-# )
