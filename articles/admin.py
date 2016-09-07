@@ -1,8 +1,9 @@
 from django.contrib import admin
 from django.contrib.admin import ModelAdmin
+from super_inlines.admin import SuperInlineModelAdmin, SuperModelAdmin
 
 # from .forms import ArticleForm
-from .models import Article, Attribute, Experiment, Sample, Microarray
+from .models import *
 
 from django.http import HttpResponseRedirect
 
@@ -12,6 +13,8 @@ from articles.getdata import get_experiment_attributes
 from articles.getdata import get_experiment_samples_attributes
 
 from django.core.urlresolvers import reverse
+
+
 
 def _lookup_f(ModelClass, attr_name):
         def f(obj):
@@ -52,17 +55,18 @@ def _article_list_display():
     return tuple(lst)
     
 class ArticleAdmin(ModelAdmin):
-    # form = ArticleForm
-    '''fieldsets = (
-        (None, {
-            'fields': Attribute.attribute_names,
-        }),
-    )'''
-    inlines = [AttributeInline,]
+    pass
+    # # form = ArticleForm
+    # '''fieldsets = (
+    #     (None, {
+    #         'fields': Attribute.attribute_names,
+    #     }),
+    # )'''
+    # inlines = [AttributeInline,]
 
-    list_display = _article_list_display()
+    # list_display = _article_list_display()
 
-admin.site.register(Article, ArticleAdmin)
+admin.site.register(Article)
 
 
 class AttributeAdmin(ModelAdmin):
@@ -71,7 +75,7 @@ class AttributeAdmin(ModelAdmin):
                     'attribute_name',
                     'attribute_value',
     )
-admin.site.register(Attribute, AttributeAdmin)
+# admin.site.register(Attribute, AttributeAdmin)
 
 
 def _extra_display(ModelClass):
@@ -104,16 +108,21 @@ def _experiment_microarrays_display():
     return [f]
 
 
-class MicroarrayInline(admin.TabularInline):
+class MicroarrayInline(SuperInlineModelAdmin, admin.TabularInline):
     model = Experiment.microarrays.through
     extra = 0
 
-class SampleInline(admin.StackedInline):
-    model = Sample
+
+class SampleAttributeValueInSampleInline(SuperInlineModelAdmin, admin.TabularInline):
+    model = SampleAttributeValueInSample
     extra = 0
 
+class SampleInline(SuperInlineModelAdmin, admin.StackedInline):
+    model = Sample
+    inlines = [SampleAttributeValueInSampleInline,]
+    extra = 0
 
-class ExperimentAdmin(ModelAdmin):
+class ExperimentAdmin(SuperModelAdmin):
     inlines = [MicroarrayInline, SampleInline]    
     list_display = _list_display(Experiment) + \
                    _experiment_microarrays_display() + \
@@ -155,14 +164,23 @@ class MicroarrayAdmin(ModelAdmin):
 
 
 
+class SampleAdmin(SuperModelAdmin):
+    inlines = [SampleAttributeValueInSampleInline,]
 
-class SampleAdmin(ModelAdmin):
-    list_display = ['data', 'experiment']
-    list_editable = ['data', 'experiment']
+
+    # list_display = ['data', 'experiment']
+    # list_editable = ['data', 'experiment']
     # list_display = _list_display(Sample)+_extra_display(Sample)
     # list_editable = _list_display(Sample)+_extra_display(Sample)
 
 
 
+
 admin.site.register(Microarray, MicroarrayAdmin)
 admin.site.register(Sample, SampleAdmin)
+
+
+admin.site.register(UnificatedSamplesAttributeName)
+admin.site.register(SamplesAttributeNameInExperiment)
+admin.site.register(SampleAttributeValueInSample)
+admin.site.register(UnificatedSamplesAttributeValue)
