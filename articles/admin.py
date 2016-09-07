@@ -112,18 +112,21 @@ class MicroarrayInline(SuperInlineModelAdmin, admin.TabularInline):
     model = Experiment.microarrays.through
     extra = 0
 
+class SamplesAttributeNameInExperimentInline(SuperInlineModelAdmin, admin.TabularInline):
+    model = Experiment.sample_attribute_names.through
+    extra = 0
 
-class SampleAttributeValueInSampleInline(SuperInlineModelAdmin, admin.TabularInline):
-    model = SampleAttributeValueInSample
+class SampleAttributeInline(SuperInlineModelAdmin, admin.TabularInline):
+    model = SampleAttribute
     extra = 0
 
 class SampleInline(SuperInlineModelAdmin, admin.StackedInline):
     model = Sample
-    inlines = [SampleAttributeValueInSampleInline,]
+    inlines = [SampleAttributeInline,]
     extra = 0
 
 class ExperimentAdmin(SuperModelAdmin):
-    inlines = [MicroarrayInline, SampleInline]    
+    inlines = [MicroarrayInline, SampleInline, SamplesAttributeNameInExperimentInline]    
     list_display = _list_display(Experiment) + \
                    _experiment_microarrays_display() + \
                    _extra_display(Experiment)
@@ -165,7 +168,7 @@ class MicroarrayAdmin(ModelAdmin):
 
 
 class SampleAdmin(SuperModelAdmin):
-    inlines = [SampleAttributeValueInSampleInline,]
+    inlines = [SampleAttributeInline,]
 
 
     # list_display = ['data', 'experiment']
@@ -182,5 +185,5 @@ admin.site.register(Sample, SampleAdmin)
 
 admin.site.register(UnificatedSamplesAttributeName)
 admin.site.register(SamplesAttributeNameInExperiment)
-admin.site.register(SampleAttributeValueInSample)
+admin.site.register(SampleAttribute)
 admin.site.register(UnificatedSamplesAttributeValue)

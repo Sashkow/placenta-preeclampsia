@@ -1,0 +1,1962 @@
+--
+-- PostgreSQL database dump
+--
+
+SET statement_timeout = 0;
+SET lock_timeout = 0;
+SET client_encoding = 'UTF8';
+SET standard_conforming_strings = on;
+SET check_function_bodies = false;
+SET client_min_messages = warning;
+
+--
+-- Name: plpgsql; Type: EXTENSION; Schema: -; Owner: 
+--
+
+CREATE EXTENSION IF NOT EXISTS plpgsql WITH SCHEMA pg_catalog;
+
+
+--
+-- Name: EXTENSION plpgsql; Type: COMMENT; Schema: -; Owner: 
+--
+
+COMMENT ON EXTENSION plpgsql IS 'PL/pgSQL procedural language';
+
+
+--
+-- Name: hstore; Type: EXTENSION; Schema: -; Owner: 
+--
+
+CREATE EXTENSION IF NOT EXISTS hstore WITH SCHEMA public;
+
+
+--
+-- Name: EXTENSION hstore; Type: COMMENT; Schema: -; Owner: 
+--
+
+COMMENT ON EXTENSION hstore IS 'data type for storing sets of (key, value) pairs';
+
+
+SET search_path = public, pg_catalog;
+
+SET default_tablespace = '';
+
+SET default_with_oids = false;
+
+--
+-- Name: articles_article; Type: TABLE; Schema: public; Owner: sashko; Tablespace: 
+--
+
+CREATE TABLE articles_article (
+    id integer NOT NULL
+);
+
+
+ALTER TABLE public.articles_article OWNER TO sashko;
+
+--
+-- Name: articles_article_id_seq; Type: SEQUENCE; Schema: public; Owner: sashko
+--
+
+CREATE SEQUENCE articles_article_id_seq
+    START WITH 1
+    INCREMENT BY 1
+    NO MINVALUE
+    NO MAXVALUE
+    CACHE 1;
+
+
+ALTER TABLE public.articles_article_id_seq OWNER TO sashko;
+
+--
+-- Name: articles_article_id_seq; Type: SEQUENCE OWNED BY; Schema: public; Owner: sashko
+--
+
+ALTER SEQUENCE articles_article_id_seq OWNED BY articles_article.id;
+
+
+--
+-- Name: articles_attribute; Type: TABLE; Schema: public; Owner: sashko; Tablespace: 
+--
+
+CREATE TABLE articles_attribute (
+    id integer NOT NULL,
+    attribute_name character varying(200) NOT NULL,
+    attribute_value character varying(200) NOT NULL,
+    article_id integer NOT NULL
+);
+
+
+ALTER TABLE public.articles_attribute OWNER TO sashko;
+
+--
+-- Name: articles_attribute_id_seq; Type: SEQUENCE; Schema: public; Owner: sashko
+--
+
+CREATE SEQUENCE articles_attribute_id_seq
+    START WITH 1
+    INCREMENT BY 1
+    NO MINVALUE
+    NO MAXVALUE
+    CACHE 1;
+
+
+ALTER TABLE public.articles_attribute_id_seq OWNER TO sashko;
+
+--
+-- Name: articles_attribute_id_seq; Type: SEQUENCE OWNED BY; Schema: public; Owner: sashko
+--
+
+ALTER SEQUENCE articles_attribute_id_seq OWNED BY articles_attribute.id;
+
+
+--
+-- Name: articles_experiment; Type: TABLE; Schema: public; Owner: sashko; Tablespace: 
+--
+
+CREATE TABLE articles_experiment (
+    id integer NOT NULL,
+    data hstore NOT NULL
+);
+
+
+ALTER TABLE public.articles_experiment OWNER TO sashko;
+
+--
+-- Name: articles_experiment_id_seq; Type: SEQUENCE; Schema: public; Owner: sashko
+--
+
+CREATE SEQUENCE articles_experiment_id_seq
+    START WITH 1
+    INCREMENT BY 1
+    NO MINVALUE
+    NO MAXVALUE
+    CACHE 1;
+
+
+ALTER TABLE public.articles_experiment_id_seq OWNER TO sashko;
+
+--
+-- Name: articles_experiment_id_seq; Type: SEQUENCE OWNED BY; Schema: public; Owner: sashko
+--
+
+ALTER SEQUENCE articles_experiment_id_seq OWNED BY articles_experiment.id;
+
+
+--
+-- Name: articles_experiment_microarrays; Type: TABLE; Schema: public; Owner: sashko; Tablespace: 
+--
+
+CREATE TABLE articles_experiment_microarrays (
+    id integer NOT NULL,
+    experiment_id integer NOT NULL,
+    microarray_id integer NOT NULL
+);
+
+
+ALTER TABLE public.articles_experiment_microarrays OWNER TO sashko;
+
+--
+-- Name: articles_experiment_microarrays_id_seq; Type: SEQUENCE; Schema: public; Owner: sashko
+--
+
+CREATE SEQUENCE articles_experiment_microarrays_id_seq
+    START WITH 1
+    INCREMENT BY 1
+    NO MINVALUE
+    NO MAXVALUE
+    CACHE 1;
+
+
+ALTER TABLE public.articles_experiment_microarrays_id_seq OWNER TO sashko;
+
+--
+-- Name: articles_experiment_microarrays_id_seq; Type: SEQUENCE OWNED BY; Schema: public; Owner: sashko
+--
+
+ALTER SEQUENCE articles_experiment_microarrays_id_seq OWNED BY articles_experiment_microarrays.id;
+
+
+--
+-- Name: articles_experiment_sample_attribute_names; Type: TABLE; Schema: public; Owner: sashko; Tablespace: 
+--
+
+CREATE TABLE articles_experiment_sample_attribute_names (
+    id integer NOT NULL,
+    experiment_id integer NOT NULL,
+    samplesattributenameinexperiment_id integer NOT NULL
+);
+
+
+ALTER TABLE public.articles_experiment_sample_attribute_names OWNER TO sashko;
+
+--
+-- Name: articles_experiment_sample_attribute_names_id_seq; Type: SEQUENCE; Schema: public; Owner: sashko
+--
+
+CREATE SEQUENCE articles_experiment_sample_attribute_names_id_seq
+    START WITH 1
+    INCREMENT BY 1
+    NO MINVALUE
+    NO MAXVALUE
+    CACHE 1;
+
+
+ALTER TABLE public.articles_experiment_sample_attribute_names_id_seq OWNER TO sashko;
+
+--
+-- Name: articles_experiment_sample_attribute_names_id_seq; Type: SEQUENCE OWNED BY; Schema: public; Owner: sashko
+--
+
+ALTER SEQUENCE articles_experiment_sample_attribute_names_id_seq OWNED BY articles_experiment_sample_attribute_names.id;
+
+
+--
+-- Name: articles_microarray; Type: TABLE; Schema: public; Owner: sashko; Tablespace: 
+--
+
+CREATE TABLE articles_microarray (
+    id integer NOT NULL,
+    data hstore NOT NULL
+);
+
+
+ALTER TABLE public.articles_microarray OWNER TO sashko;
+
+--
+-- Name: articles_microarray_id_seq; Type: SEQUENCE; Schema: public; Owner: sashko
+--
+
+CREATE SEQUENCE articles_microarray_id_seq
+    START WITH 1
+    INCREMENT BY 1
+    NO MINVALUE
+    NO MAXVALUE
+    CACHE 1;
+
+
+ALTER TABLE public.articles_microarray_id_seq OWNER TO sashko;
+
+--
+-- Name: articles_microarray_id_seq; Type: SEQUENCE OWNED BY; Schema: public; Owner: sashko
+--
+
+ALTER SEQUENCE articles_microarray_id_seq OWNED BY articles_microarray.id;
+
+
+--
+-- Name: articles_sample; Type: TABLE; Schema: public; Owner: sashko; Tablespace: 
+--
+
+CREATE TABLE articles_sample (
+    id integer NOT NULL,
+    experiment_id integer NOT NULL,
+    fictional_field character varying(3) NOT NULL
+);
+
+
+ALTER TABLE public.articles_sample OWNER TO sashko;
+
+--
+-- Name: articles_sample_id_seq; Type: SEQUENCE; Schema: public; Owner: sashko
+--
+
+CREATE SEQUENCE articles_sample_id_seq
+    START WITH 1
+    INCREMENT BY 1
+    NO MINVALUE
+    NO MAXVALUE
+    CACHE 1;
+
+
+ALTER TABLE public.articles_sample_id_seq OWNER TO sashko;
+
+--
+-- Name: articles_sample_id_seq; Type: SEQUENCE OWNED BY; Schema: public; Owner: sashko
+--
+
+ALTER SEQUENCE articles_sample_id_seq OWNED BY articles_sample.id;
+
+
+--
+-- Name: articles_sampleattributevalueinsample; Type: TABLE; Schema: public; Owner: sashko; Tablespace: 
+--
+
+CREATE TABLE articles_sampleattributevalueinsample (
+    id integer NOT NULL,
+    old_value character varying(255) NOT NULL,
+    sample_id integer NOT NULL,
+    unificated_value_id integer NOT NULL,
+    unificated_name_id integer NOT NULL
+);
+
+
+ALTER TABLE public.articles_sampleattributevalueinsample OWNER TO sashko;
+
+--
+-- Name: articles_sampleattributevalueinsample_id_seq; Type: SEQUENCE; Schema: public; Owner: sashko
+--
+
+CREATE SEQUENCE articles_sampleattributevalueinsample_id_seq
+    START WITH 1
+    INCREMENT BY 1
+    NO MINVALUE
+    NO MAXVALUE
+    CACHE 1;
+
+
+ALTER TABLE public.articles_sampleattributevalueinsample_id_seq OWNER TO sashko;
+
+--
+-- Name: articles_sampleattributevalueinsample_id_seq; Type: SEQUENCE OWNED BY; Schema: public; Owner: sashko
+--
+
+ALTER SEQUENCE articles_sampleattributevalueinsample_id_seq OWNED BY articles_sampleattributevalueinsample.id;
+
+
+--
+-- Name: articles_samplesattributenameinexperiment; Type: TABLE; Schema: public; Owner: sashko; Tablespace: 
+--
+
+CREATE TABLE articles_samplesattributenameinexperiment (
+    id integer NOT NULL,
+    old_name character varying(255) NOT NULL,
+    unificated_name_id integer NOT NULL
+);
+
+
+ALTER TABLE public.articles_samplesattributenameinexperiment OWNER TO sashko;
+
+--
+-- Name: articles_samplesattributenameinexperiment_id_seq; Type: SEQUENCE; Schema: public; Owner: sashko
+--
+
+CREATE SEQUENCE articles_samplesattributenameinexperiment_id_seq
+    START WITH 1
+    INCREMENT BY 1
+    NO MINVALUE
+    NO MAXVALUE
+    CACHE 1;
+
+
+ALTER TABLE public.articles_samplesattributenameinexperiment_id_seq OWNER TO sashko;
+
+--
+-- Name: articles_samplesattributenameinexperiment_id_seq; Type: SEQUENCE OWNED BY; Schema: public; Owner: sashko
+--
+
+ALTER SEQUENCE articles_samplesattributenameinexperiment_id_seq OWNED BY articles_samplesattributenameinexperiment.id;
+
+
+--
+-- Name: articles_unificatedsamplesattributename; Type: TABLE; Schema: public; Owner: sashko; Tablespace: 
+--
+
+CREATE TABLE articles_unificatedsamplesattributename (
+    id integer NOT NULL,
+    name character varying(255) NOT NULL,
+    mesh_id character varying(255) NOT NULL
+);
+
+
+ALTER TABLE public.articles_unificatedsamplesattributename OWNER TO sashko;
+
+--
+-- Name: articles_unificatedsamplesattributename_id_seq; Type: SEQUENCE; Schema: public; Owner: sashko
+--
+
+CREATE SEQUENCE articles_unificatedsamplesattributename_id_seq
+    START WITH 1
+    INCREMENT BY 1
+    NO MINVALUE
+    NO MAXVALUE
+    CACHE 1;
+
+
+ALTER TABLE public.articles_unificatedsamplesattributename_id_seq OWNER TO sashko;
+
+--
+-- Name: articles_unificatedsamplesattributename_id_seq; Type: SEQUENCE OWNED BY; Schema: public; Owner: sashko
+--
+
+ALTER SEQUENCE articles_unificatedsamplesattributename_id_seq OWNED BY articles_unificatedsamplesattributename.id;
+
+
+--
+-- Name: articles_unificatedsamplesattributevalue; Type: TABLE; Schema: public; Owner: sashko; Tablespace: 
+--
+
+CREATE TABLE articles_unificatedsamplesattributevalue (
+    id integer NOT NULL,
+    value character varying(255) NOT NULL,
+    mesh_id character varying(255) NOT NULL
+);
+
+
+ALTER TABLE public.articles_unificatedsamplesattributevalue OWNER TO sashko;
+
+--
+-- Name: articles_unificatedsamplesattributevalue_id_seq; Type: SEQUENCE; Schema: public; Owner: sashko
+--
+
+CREATE SEQUENCE articles_unificatedsamplesattributevalue_id_seq
+    START WITH 1
+    INCREMENT BY 1
+    NO MINVALUE
+    NO MAXVALUE
+    CACHE 1;
+
+
+ALTER TABLE public.articles_unificatedsamplesattributevalue_id_seq OWNER TO sashko;
+
+--
+-- Name: articles_unificatedsamplesattributevalue_id_seq; Type: SEQUENCE OWNED BY; Schema: public; Owner: sashko
+--
+
+ALTER SEQUENCE articles_unificatedsamplesattributevalue_id_seq OWNED BY articles_unificatedsamplesattributevalue.id;
+
+
+--
+-- Name: auth_group; Type: TABLE; Schema: public; Owner: sashko; Tablespace: 
+--
+
+CREATE TABLE auth_group (
+    id integer NOT NULL,
+    name character varying(80) NOT NULL
+);
+
+
+ALTER TABLE public.auth_group OWNER TO sashko;
+
+--
+-- Name: auth_group_id_seq; Type: SEQUENCE; Schema: public; Owner: sashko
+--
+
+CREATE SEQUENCE auth_group_id_seq
+    START WITH 1
+    INCREMENT BY 1
+    NO MINVALUE
+    NO MAXVALUE
+    CACHE 1;
+
+
+ALTER TABLE public.auth_group_id_seq OWNER TO sashko;
+
+--
+-- Name: auth_group_id_seq; Type: SEQUENCE OWNED BY; Schema: public; Owner: sashko
+--
+
+ALTER SEQUENCE auth_group_id_seq OWNED BY auth_group.id;
+
+
+--
+-- Name: auth_group_permissions; Type: TABLE; Schema: public; Owner: sashko; Tablespace: 
+--
+
+CREATE TABLE auth_group_permissions (
+    id integer NOT NULL,
+    group_id integer NOT NULL,
+    permission_id integer NOT NULL
+);
+
+
+ALTER TABLE public.auth_group_permissions OWNER TO sashko;
+
+--
+-- Name: auth_group_permissions_id_seq; Type: SEQUENCE; Schema: public; Owner: sashko
+--
+
+CREATE SEQUENCE auth_group_permissions_id_seq
+    START WITH 1
+    INCREMENT BY 1
+    NO MINVALUE
+    NO MAXVALUE
+    CACHE 1;
+
+
+ALTER TABLE public.auth_group_permissions_id_seq OWNER TO sashko;
+
+--
+-- Name: auth_group_permissions_id_seq; Type: SEQUENCE OWNED BY; Schema: public; Owner: sashko
+--
+
+ALTER SEQUENCE auth_group_permissions_id_seq OWNED BY auth_group_permissions.id;
+
+
+--
+-- Name: auth_permission; Type: TABLE; Schema: public; Owner: sashko; Tablespace: 
+--
+
+CREATE TABLE auth_permission (
+    id integer NOT NULL,
+    name character varying(255) NOT NULL,
+    content_type_id integer NOT NULL,
+    codename character varying(100) NOT NULL
+);
+
+
+ALTER TABLE public.auth_permission OWNER TO sashko;
+
+--
+-- Name: auth_permission_id_seq; Type: SEQUENCE; Schema: public; Owner: sashko
+--
+
+CREATE SEQUENCE auth_permission_id_seq
+    START WITH 1
+    INCREMENT BY 1
+    NO MINVALUE
+    NO MAXVALUE
+    CACHE 1;
+
+
+ALTER TABLE public.auth_permission_id_seq OWNER TO sashko;
+
+--
+-- Name: auth_permission_id_seq; Type: SEQUENCE OWNED BY; Schema: public; Owner: sashko
+--
+
+ALTER SEQUENCE auth_permission_id_seq OWNED BY auth_permission.id;
+
+
+--
+-- Name: auth_user; Type: TABLE; Schema: public; Owner: sashko; Tablespace: 
+--
+
+CREATE TABLE auth_user (
+    id integer NOT NULL,
+    password character varying(128) NOT NULL,
+    last_login timestamp with time zone,
+    is_superuser boolean NOT NULL,
+    username character varying(30) NOT NULL,
+    first_name character varying(30) NOT NULL,
+    last_name character varying(30) NOT NULL,
+    email character varying(254) NOT NULL,
+    is_staff boolean NOT NULL,
+    is_active boolean NOT NULL,
+    date_joined timestamp with time zone NOT NULL
+);
+
+
+ALTER TABLE public.auth_user OWNER TO sashko;
+
+--
+-- Name: auth_user_groups; Type: TABLE; Schema: public; Owner: sashko; Tablespace: 
+--
+
+CREATE TABLE auth_user_groups (
+    id integer NOT NULL,
+    user_id integer NOT NULL,
+    group_id integer NOT NULL
+);
+
+
+ALTER TABLE public.auth_user_groups OWNER TO sashko;
+
+--
+-- Name: auth_user_groups_id_seq; Type: SEQUENCE; Schema: public; Owner: sashko
+--
+
+CREATE SEQUENCE auth_user_groups_id_seq
+    START WITH 1
+    INCREMENT BY 1
+    NO MINVALUE
+    NO MAXVALUE
+    CACHE 1;
+
+
+ALTER TABLE public.auth_user_groups_id_seq OWNER TO sashko;
+
+--
+-- Name: auth_user_groups_id_seq; Type: SEQUENCE OWNED BY; Schema: public; Owner: sashko
+--
+
+ALTER SEQUENCE auth_user_groups_id_seq OWNED BY auth_user_groups.id;
+
+
+--
+-- Name: auth_user_id_seq; Type: SEQUENCE; Schema: public; Owner: sashko
+--
+
+CREATE SEQUENCE auth_user_id_seq
+    START WITH 1
+    INCREMENT BY 1
+    NO MINVALUE
+    NO MAXVALUE
+    CACHE 1;
+
+
+ALTER TABLE public.auth_user_id_seq OWNER TO sashko;
+
+--
+-- Name: auth_user_id_seq; Type: SEQUENCE OWNED BY; Schema: public; Owner: sashko
+--
+
+ALTER SEQUENCE auth_user_id_seq OWNED BY auth_user.id;
+
+
+--
+-- Name: auth_user_user_permissions; Type: TABLE; Schema: public; Owner: sashko; Tablespace: 
+--
+
+CREATE TABLE auth_user_user_permissions (
+    id integer NOT NULL,
+    user_id integer NOT NULL,
+    permission_id integer NOT NULL
+);
+
+
+ALTER TABLE public.auth_user_user_permissions OWNER TO sashko;
+
+--
+-- Name: auth_user_user_permissions_id_seq; Type: SEQUENCE; Schema: public; Owner: sashko
+--
+
+CREATE SEQUENCE auth_user_user_permissions_id_seq
+    START WITH 1
+    INCREMENT BY 1
+    NO MINVALUE
+    NO MAXVALUE
+    CACHE 1;
+
+
+ALTER TABLE public.auth_user_user_permissions_id_seq OWNER TO sashko;
+
+--
+-- Name: auth_user_user_permissions_id_seq; Type: SEQUENCE OWNED BY; Schema: public; Owner: sashko
+--
+
+ALTER SEQUENCE auth_user_user_permissions_id_seq OWNED BY auth_user_user_permissions.id;
+
+
+--
+-- Name: django_admin_log; Type: TABLE; Schema: public; Owner: sashko; Tablespace: 
+--
+
+CREATE TABLE django_admin_log (
+    id integer NOT NULL,
+    action_time timestamp with time zone NOT NULL,
+    object_id text,
+    object_repr character varying(200) NOT NULL,
+    action_flag smallint NOT NULL,
+    change_message text NOT NULL,
+    content_type_id integer,
+    user_id integer NOT NULL,
+    CONSTRAINT django_admin_log_action_flag_check CHECK ((action_flag >= 0))
+);
+
+
+ALTER TABLE public.django_admin_log OWNER TO sashko;
+
+--
+-- Name: django_admin_log_id_seq; Type: SEQUENCE; Schema: public; Owner: sashko
+--
+
+CREATE SEQUENCE django_admin_log_id_seq
+    START WITH 1
+    INCREMENT BY 1
+    NO MINVALUE
+    NO MAXVALUE
+    CACHE 1;
+
+
+ALTER TABLE public.django_admin_log_id_seq OWNER TO sashko;
+
+--
+-- Name: django_admin_log_id_seq; Type: SEQUENCE OWNED BY; Schema: public; Owner: sashko
+--
+
+ALTER SEQUENCE django_admin_log_id_seq OWNED BY django_admin_log.id;
+
+
+--
+-- Name: django_content_type; Type: TABLE; Schema: public; Owner: sashko; Tablespace: 
+--
+
+CREATE TABLE django_content_type (
+    id integer NOT NULL,
+    app_label character varying(100) NOT NULL,
+    model character varying(100) NOT NULL
+);
+
+
+ALTER TABLE public.django_content_type OWNER TO sashko;
+
+--
+-- Name: django_content_type_id_seq; Type: SEQUENCE; Schema: public; Owner: sashko
+--
+
+CREATE SEQUENCE django_content_type_id_seq
+    START WITH 1
+    INCREMENT BY 1
+    NO MINVALUE
+    NO MAXVALUE
+    CACHE 1;
+
+
+ALTER TABLE public.django_content_type_id_seq OWNER TO sashko;
+
+--
+-- Name: django_content_type_id_seq; Type: SEQUENCE OWNED BY; Schema: public; Owner: sashko
+--
+
+ALTER SEQUENCE django_content_type_id_seq OWNED BY django_content_type.id;
+
+
+--
+-- Name: django_migrations; Type: TABLE; Schema: public; Owner: sashko; Tablespace: 
+--
+
+CREATE TABLE django_migrations (
+    id integer NOT NULL,
+    app character varying(255) NOT NULL,
+    name character varying(255) NOT NULL,
+    applied timestamp with time zone NOT NULL
+);
+
+
+ALTER TABLE public.django_migrations OWNER TO sashko;
+
+--
+-- Name: django_migrations_id_seq; Type: SEQUENCE; Schema: public; Owner: sashko
+--
+
+CREATE SEQUENCE django_migrations_id_seq
+    START WITH 1
+    INCREMENT BY 1
+    NO MINVALUE
+    NO MAXVALUE
+    CACHE 1;
+
+
+ALTER TABLE public.django_migrations_id_seq OWNER TO sashko;
+
+--
+-- Name: django_migrations_id_seq; Type: SEQUENCE OWNED BY; Schema: public; Owner: sashko
+--
+
+ALTER SEQUENCE django_migrations_id_seq OWNED BY django_migrations.id;
+
+
+--
+-- Name: django_session; Type: TABLE; Schema: public; Owner: sashko; Tablespace: 
+--
+
+CREATE TABLE django_session (
+    session_key character varying(40) NOT NULL,
+    session_data text NOT NULL,
+    expire_date timestamp with time zone NOT NULL
+);
+
+
+ALTER TABLE public.django_session OWNER TO sashko;
+
+--
+-- Name: id; Type: DEFAULT; Schema: public; Owner: sashko
+--
+
+ALTER TABLE ONLY articles_article ALTER COLUMN id SET DEFAULT nextval('articles_article_id_seq'::regclass);
+
+
+--
+-- Name: id; Type: DEFAULT; Schema: public; Owner: sashko
+--
+
+ALTER TABLE ONLY articles_attribute ALTER COLUMN id SET DEFAULT nextval('articles_attribute_id_seq'::regclass);
+
+
+--
+-- Name: id; Type: DEFAULT; Schema: public; Owner: sashko
+--
+
+ALTER TABLE ONLY articles_experiment ALTER COLUMN id SET DEFAULT nextval('articles_experiment_id_seq'::regclass);
+
+
+--
+-- Name: id; Type: DEFAULT; Schema: public; Owner: sashko
+--
+
+ALTER TABLE ONLY articles_experiment_microarrays ALTER COLUMN id SET DEFAULT nextval('articles_experiment_microarrays_id_seq'::regclass);
+
+
+--
+-- Name: id; Type: DEFAULT; Schema: public; Owner: sashko
+--
+
+ALTER TABLE ONLY articles_experiment_sample_attribute_names ALTER COLUMN id SET DEFAULT nextval('articles_experiment_sample_attribute_names_id_seq'::regclass);
+
+
+--
+-- Name: id; Type: DEFAULT; Schema: public; Owner: sashko
+--
+
+ALTER TABLE ONLY articles_microarray ALTER COLUMN id SET DEFAULT nextval('articles_microarray_id_seq'::regclass);
+
+
+--
+-- Name: id; Type: DEFAULT; Schema: public; Owner: sashko
+--
+
+ALTER TABLE ONLY articles_sample ALTER COLUMN id SET DEFAULT nextval('articles_sample_id_seq'::regclass);
+
+
+--
+-- Name: id; Type: DEFAULT; Schema: public; Owner: sashko
+--
+
+ALTER TABLE ONLY articles_sampleattributevalueinsample ALTER COLUMN id SET DEFAULT nextval('articles_sampleattributevalueinsample_id_seq'::regclass);
+
+
+--
+-- Name: id; Type: DEFAULT; Schema: public; Owner: sashko
+--
+
+ALTER TABLE ONLY articles_samplesattributenameinexperiment ALTER COLUMN id SET DEFAULT nextval('articles_samplesattributenameinexperiment_id_seq'::regclass);
+
+
+--
+-- Name: id; Type: DEFAULT; Schema: public; Owner: sashko
+--
+
+ALTER TABLE ONLY articles_unificatedsamplesattributename ALTER COLUMN id SET DEFAULT nextval('articles_unificatedsamplesattributename_id_seq'::regclass);
+
+
+--
+-- Name: id; Type: DEFAULT; Schema: public; Owner: sashko
+--
+
+ALTER TABLE ONLY articles_unificatedsamplesattributevalue ALTER COLUMN id SET DEFAULT nextval('articles_unificatedsamplesattributevalue_id_seq'::regclass);
+
+
+--
+-- Name: id; Type: DEFAULT; Schema: public; Owner: sashko
+--
+
+ALTER TABLE ONLY auth_group ALTER COLUMN id SET DEFAULT nextval('auth_group_id_seq'::regclass);
+
+
+--
+-- Name: id; Type: DEFAULT; Schema: public; Owner: sashko
+--
+
+ALTER TABLE ONLY auth_group_permissions ALTER COLUMN id SET DEFAULT nextval('auth_group_permissions_id_seq'::regclass);
+
+
+--
+-- Name: id; Type: DEFAULT; Schema: public; Owner: sashko
+--
+
+ALTER TABLE ONLY auth_permission ALTER COLUMN id SET DEFAULT nextval('auth_permission_id_seq'::regclass);
+
+
+--
+-- Name: id; Type: DEFAULT; Schema: public; Owner: sashko
+--
+
+ALTER TABLE ONLY auth_user ALTER COLUMN id SET DEFAULT nextval('auth_user_id_seq'::regclass);
+
+
+--
+-- Name: id; Type: DEFAULT; Schema: public; Owner: sashko
+--
+
+ALTER TABLE ONLY auth_user_groups ALTER COLUMN id SET DEFAULT nextval('auth_user_groups_id_seq'::regclass);
+
+
+--
+-- Name: id; Type: DEFAULT; Schema: public; Owner: sashko
+--
+
+ALTER TABLE ONLY auth_user_user_permissions ALTER COLUMN id SET DEFAULT nextval('auth_user_user_permissions_id_seq'::regclass);
+
+
+--
+-- Name: id; Type: DEFAULT; Schema: public; Owner: sashko
+--
+
+ALTER TABLE ONLY django_admin_log ALTER COLUMN id SET DEFAULT nextval('django_admin_log_id_seq'::regclass);
+
+
+--
+-- Name: id; Type: DEFAULT; Schema: public; Owner: sashko
+--
+
+ALTER TABLE ONLY django_content_type ALTER COLUMN id SET DEFAULT nextval('django_content_type_id_seq'::regclass);
+
+
+--
+-- Name: id; Type: DEFAULT; Schema: public; Owner: sashko
+--
+
+ALTER TABLE ONLY django_migrations ALTER COLUMN id SET DEFAULT nextval('django_migrations_id_seq'::regclass);
+
+
+--
+-- Data for Name: articles_article; Type: TABLE DATA; Schema: public; Owner: sashko
+--
+
+COPY articles_article (id) FROM stdin;
+\.
+
+
+--
+-- Name: articles_article_id_seq; Type: SEQUENCE SET; Schema: public; Owner: sashko
+--
+
+SELECT pg_catalog.setval('articles_article_id_seq', 1, false);
+
+
+--
+-- Data for Name: articles_attribute; Type: TABLE DATA; Schema: public; Owner: sashko
+--
+
+COPY articles_attribute (id, attribute_name, attribute_value, article_id) FROM stdin;
+\.
+
+
+--
+-- Name: articles_attribute_id_seq; Type: SEQUENCE SET; Schema: public; Owner: sashko
+--
+
+SELECT pg_catalog.setval('articles_attribute_id_seq', 1, false);
+
+
+--
+-- Data for Name: articles_experiment; Type: TABLE DATA; Schema: public; Owner: sashko
+--
+
+COPY articles_experiment (id, data) FROM stdin;
+2	"id"=>"27481", "name"=>"Transcription profiling of decidua basalis from women with normal pregnancies or preeclampsia and/or fetal growth restriction", "assays"=>"35", "samples"=>"35", "species"=>"Homo sapiens", "organism"=>"Homo sapiens", "accession"=>"E-MEXP-1050", "releasedate"=>"2007-08-31", "experimenttype"=>"transcription profiling by array", "lastupdatedate"=>"2014-05-02", "submissiondate"=>"2007-04-11", "experimentdesign"=>"disease state"
+\.
+
+
+--
+-- Name: articles_experiment_id_seq; Type: SEQUENCE SET; Schema: public; Owner: sashko
+--
+
+SELECT pg_catalog.setval('articles_experiment_id_seq', 2, true);
+
+
+--
+-- Data for Name: articles_experiment_microarrays; Type: TABLE DATA; Schema: public; Owner: sashko
+--
+
+COPY articles_experiment_microarrays (id, experiment_id, microarray_id) FROM stdin;
+2	2	2
+\.
+
+
+--
+-- Name: articles_experiment_microarrays_id_seq; Type: SEQUENCE SET; Schema: public; Owner: sashko
+--
+
+SELECT pg_catalog.setval('articles_experiment_microarrays_id_seq', 2, true);
+
+
+--
+-- Data for Name: articles_experiment_sample_attribute_names; Type: TABLE DATA; Schema: public; Owner: sashko
+--
+
+COPY articles_experiment_sample_attribute_names (id, experiment_id, samplesattributenameinexperiment_id) FROM stdin;
+3	2	3
+4	2	4
+5	2	5
+6	2	6
+7	2	7
+8	2	8
+9	2	10
+\.
+
+
+--
+-- Name: articles_experiment_sample_attribute_names_id_seq; Type: SEQUENCE SET; Schema: public; Owner: sashko
+--
+
+SELECT pg_catalog.setval('articles_experiment_sample_attribute_names_id_seq', 9, true);
+
+
+--
+-- Data for Name: articles_microarray; Type: TABLE DATA; Schema: public; Owner: sashko
+--
+
+COPY articles_microarray (id, data) FROM stdin;
+1	"a"=>"b"
+2	"id"=>"10917", "name"=>"Affymetrix GeneChip Human Genome Focus Array [HG-Focus]", "count"=>"35", "accession"=>"A-AFFY-41", "legacy_id"=>"327974795"
+\.
+
+
+--
+-- Name: articles_microarray_id_seq; Type: SEQUENCE SET; Schema: public; Owner: sashko
+--
+
+SELECT pg_catalog.setval('articles_microarray_id_seq', 2, true);
+
+
+--
+-- Data for Name: articles_sample; Type: TABLE DATA; Schema: public; Owner: sashko
+--
+
+COPY articles_sample (id, experiment_id, fictional_field) FROM stdin;
+39	2	
+\.
+
+
+--
+-- Name: articles_sample_id_seq; Type: SEQUENCE SET; Schema: public; Owner: sashko
+--
+
+SELECT pg_catalog.setval('articles_sample_id_seq', 39, true);
+
+
+--
+-- Data for Name: articles_sampleattributevalueinsample; Type: TABLE DATA; Schema: public; Owner: sashko
+--
+
+COPY articles_sampleattributevalueinsample (id, old_value, sample_id, unificated_value_id, unificated_name_id) FROM stdin;
+6	frozen_sample	39	3	3
+7	adult	39	4	4
+8	<empty>	39	5	5
+9	Homo sapiens	39	6	6
+10	female	39	7	8
+11	Control 74	39	8	9
+\.
+
+
+--
+-- Name: articles_sampleattributevalueinsample_id_seq; Type: SEQUENCE SET; Schema: public; Owner: sashko
+--
+
+SELECT pg_catalog.setval('articles_sampleattributevalueinsample_id_seq', 11, true);
+
+
+--
+-- Data for Name: articles_samplesattributenameinexperiment; Type: TABLE DATA; Schema: public; Owner: sashko
+--
+
+COPY articles_samplesattributenameinexperiment (id, old_name, unificated_name_id) FROM stdin;
+3	BioSourceType	2
+5	DiseaseState	4
+4	DevelopmetalStage	3
+6	Organizm	5
+7	OrganismPart	6
+8	Sex	7
+9	name	1
+10	name	8
+\.
+
+
+--
+-- Name: articles_samplesattributenameinexperiment_id_seq; Type: SEQUENCE SET; Schema: public; Owner: sashko
+--
+
+SELECT pg_catalog.setval('articles_samplesattributenameinexperiment_id_seq', 10, true);
+
+
+--
+-- Data for Name: articles_unificatedsamplesattributename; Type: TABLE DATA; Schema: public; Owner: sashko
+--
+
+COPY articles_unificatedsamplesattributename (id, name, mesh_id) FROM stdin;
+1	complication	q000150
+2	Tissue Preservation	D014021
+4	Research Design	D012107
+3	Age Groups	D009273
+5	Organism	
+6	Organism Part	
+7	Sex	D012723
+8	Name	
+\.
+
+
+--
+-- Name: articles_unificatedsamplesattributename_id_seq; Type: SEQUENCE SET; Schema: public; Owner: sashko
+--
+
+SELECT pg_catalog.setval('articles_unificatedsamplesattributename_id_seq', 8, true);
+
+
+--
+-- Data for Name: articles_unificatedsamplesattributevalue; Type: TABLE DATA; Schema: public; Owner: sashko
+--
+
+COPY articles_unificatedsamplesattributevalue (id, value, mesh_id) FROM stdin;
+3	Cryopreservation	D015925
+4	Adult	D000328
+5	Control Group	D035061
+6	Humans	D006801
+7	Female	D005260
+8	Old Value	
+\.
+
+
+--
+-- Name: articles_unificatedsamplesattributevalue_id_seq; Type: SEQUENCE SET; Schema: public; Owner: sashko
+--
+
+SELECT pg_catalog.setval('articles_unificatedsamplesattributevalue_id_seq', 8, true);
+
+
+--
+-- Data for Name: auth_group; Type: TABLE DATA; Schema: public; Owner: sashko
+--
+
+COPY auth_group (id, name) FROM stdin;
+\.
+
+
+--
+-- Name: auth_group_id_seq; Type: SEQUENCE SET; Schema: public; Owner: sashko
+--
+
+SELECT pg_catalog.setval('auth_group_id_seq', 1, false);
+
+
+--
+-- Data for Name: auth_group_permissions; Type: TABLE DATA; Schema: public; Owner: sashko
+--
+
+COPY auth_group_permissions (id, group_id, permission_id) FROM stdin;
+\.
+
+
+--
+-- Name: auth_group_permissions_id_seq; Type: SEQUENCE SET; Schema: public; Owner: sashko
+--
+
+SELECT pg_catalog.setval('auth_group_permissions_id_seq', 1, false);
+
+
+--
+-- Data for Name: auth_permission; Type: TABLE DATA; Schema: public; Owner: sashko
+--
+
+COPY auth_permission (id, name, content_type_id, codename) FROM stdin;
+1	Can add log entry	1	add_logentry
+2	Can change log entry	1	change_logentry
+3	Can delete log entry	1	delete_logentry
+4	Can add permission	2	add_permission
+5	Can change permission	2	change_permission
+6	Can delete permission	2	delete_permission
+7	Can add group	3	add_group
+8	Can change group	3	change_group
+9	Can delete group	3	delete_group
+10	Can add user	4	add_user
+11	Can change user	4	change_user
+12	Can delete user	4	delete_user
+13	Can add content type	5	add_contenttype
+14	Can change content type	5	change_contenttype
+15	Can delete content type	5	delete_contenttype
+16	Can add session	6	add_session
+17	Can change session	6	change_session
+18	Can delete session	6	delete_session
+19	Can add article	7	add_article
+20	Can change article	7	change_article
+21	Can delete article	7	delete_article
+22	Can add attribute	8	add_attribute
+23	Can change attribute	8	change_attribute
+24	Can delete attribute	8	delete_attribute
+25	Can add unificated samples attribute name	9	add_unificatedsamplesattributename
+26	Can change unificated samples attribute name	9	change_unificatedsamplesattributename
+27	Can delete unificated samples attribute name	9	delete_unificatedsamplesattributename
+28	Can add samples attribute name in experiment	10	add_samplesattributenameinexperiment
+29	Can change samples attribute name in experiment	10	change_samplesattributenameinexperiment
+30	Can delete samples attribute name in experiment	10	delete_samplesattributenameinexperiment
+31	Can add experiment	11	add_experiment
+32	Can change experiment	11	change_experiment
+33	Can delete experiment	11	delete_experiment
+34	Can add microarray	12	add_microarray
+35	Can change microarray	12	change_microarray
+36	Can delete microarray	12	delete_microarray
+37	Can add sample	13	add_sample
+38	Can change sample	13	change_sample
+39	Can delete sample	13	delete_sample
+40	Can add sample attribute value in sample	14	add_sampleattributevalueinsample
+41	Can change sample attribute value in sample	14	change_sampleattributevalueinsample
+42	Can delete sample attribute value in sample	14	delete_sampleattributevalueinsample
+43	Can add unificated samples attribute value	15	add_unificatedsamplesattributevalue
+44	Can change unificated samples attribute value	15	change_unificatedsamplesattributevalue
+45	Can delete unificated samples attribute value	15	delete_unificatedsamplesattributevalue
+\.
+
+
+--
+-- Name: auth_permission_id_seq; Type: SEQUENCE SET; Schema: public; Owner: sashko
+--
+
+SELECT pg_catalog.setval('auth_permission_id_seq', 45, true);
+
+
+--
+-- Data for Name: auth_user; Type: TABLE DATA; Schema: public; Owner: sashko
+--
+
+COPY auth_user (id, password, last_login, is_superuser, username, first_name, last_name, email, is_staff, is_active, date_joined) FROM stdin;
+1	pbkdf2_sha256$24000$eozy0d93MXYO$jpAwooQMryCzDIPPTViT+ghYTN3xVOcEUVKGOf0HB7A=	2016-09-06 14:47:20.733203+03	t	sashko				t	t	2016-09-06 14:46:58.872541+03
+\.
+
+
+--
+-- Data for Name: auth_user_groups; Type: TABLE DATA; Schema: public; Owner: sashko
+--
+
+COPY auth_user_groups (id, user_id, group_id) FROM stdin;
+\.
+
+
+--
+-- Name: auth_user_groups_id_seq; Type: SEQUENCE SET; Schema: public; Owner: sashko
+--
+
+SELECT pg_catalog.setval('auth_user_groups_id_seq', 1, false);
+
+
+--
+-- Name: auth_user_id_seq; Type: SEQUENCE SET; Schema: public; Owner: sashko
+--
+
+SELECT pg_catalog.setval('auth_user_id_seq', 1, true);
+
+
+--
+-- Data for Name: auth_user_user_permissions; Type: TABLE DATA; Schema: public; Owner: sashko
+--
+
+COPY auth_user_user_permissions (id, user_id, permission_id) FROM stdin;
+\.
+
+
+--
+-- Name: auth_user_user_permissions_id_seq; Type: SEQUENCE SET; Schema: public; Owner: sashko
+--
+
+SELECT pg_catalog.setval('auth_user_user_permissions_id_seq', 1, false);
+
+
+--
+-- Data for Name: django_admin_log; Type: TABLE DATA; Schema: public; Owner: sashko
+--
+
+COPY django_admin_log (id, action_time, object_id, object_repr, action_flag, change_message, content_type_id, user_id) FROM stdin;
+1	2016-09-06 14:48:51.144244+03	1	1	1	Added.	12	1
+2	2016-09-06 14:52:14.174256+03	2	complication	1	Added.	15	1
+3	2016-09-06 14:56:19.146246+03	1	complication	1	Added.	9	1
+4	2016-09-06 14:56:38.858754+03	1	complication	1	Added.	10	1
+5	2016-09-06 14:57:44.820058+03	1	1	1	Added. Added experiment-microarray relationship "Experiment_microarrays object".	11	1
+6	2016-09-06 15:12:51.61485+03	2	normal	2	Changed value and mesh_id.	15	1
+7	2016-09-06 15:25:11.700106+03	5	Sample object	1	Added. Added sample attribute value in sample "ncomplicationocomplicationrcomplicationmcomplicationacomplicationl".	13	1
+8	2016-09-06 15:27:10.710996+03	1	1	2	No fields changed.	11	1
+9	2016-09-06 15:35:56.061433+03	5	Sample object	2	Changed fictional_field.	13	1
+10	2016-09-06 15:35:56.178808+03	5	Sample object	2	Changed fictional_field.	13	1
+11	2016-09-06 16:07:20.782612+03	2	complication	1	Added.	10	1
+12	2016-09-06 16:13:44.224602+03	5	5	2	No fields changed.	13	1
+46	2016-09-07 17:51:48.219264+03	5	5	2	No fields changed.	13	1
+47	2016-09-07 18:41:51.653921+03	1	1	2	Changed  for sample "5". Changed unificated_name for sample attribute value in sample "ncomplicationocomplicationrcomplicationmcomplicationacomplicationl".	11	1
+48	2016-09-07 19:34:03.153745+03	1	1	2	Deleted experiment-samplesattributenameinexperiment relationship "Experiment_sample_attribute_names object".	11	1
+49	2016-09-07 19:34:03.61472+03	1	1	2	Changed sample_attribute_names.	11	1
+50	2016-09-07 19:34:24.261048+03	1	1	2	Deleted experiment-samplesattributenameinexperiment relationship "Experiment_sample_attribute_names object".	11	1
+51	2016-09-07 19:35:19.086867+03	1	1	3		11	1
+52	2016-09-07 19:38:36.130661+03	2	complication	3		10	1
+53	2016-09-07 19:38:36.161172+03	1	complication	3		10	1
+54	2016-09-07 19:40:53.88454+03	2	2	1	Added.	11	1
+55	2016-09-07 19:41:46.415028+03	2	Affymetrix GeneChip Human Genome Focus Array [HG-Focus]	1	Added.	12	1
+56	2016-09-07 19:52:09.83582+03	2	biosource type	1	Added.	9	1
+57	2016-09-07 19:52:18.609375+03	3	biosource type	1	Added.	10	1
+58	2016-09-07 21:04:56.133808+03	3	Age Groups	1	Added.	9	1
+59	2016-09-07 21:05:03.651698+03	4	Age Groups	1	Added.	10	1
+60	2016-09-07 21:06:43.801065+03	2	Tissue Preservation	2	Changed name and mesh_id.	9	1
+61	2016-09-07 21:07:47.243339+03	3	Tissue Preservation	2	No fields changed.	10	1
+62	2016-09-07 21:07:49.509528+03	2	2	2	Added experiment-microarray relationship "Experiment_microarrays object". Added experiment-samplesattributenameinexperiment relationship "Experiment_sample_attribute_names object". Added experiment-samplesattributenameinexperiment relationship "Experiment_sample_attribute_names object".	11	1
+63	2016-09-07 21:31:41.391689+03	4	Research Design	1	Added.	9	1
+64	2016-09-07 21:31:56.961868+03	5	Research Design	1	Added.	10	1
+65	2016-09-07 21:41:15.38569+03	3	Age Groups	2	No fields changed.	9	1
+66	2016-09-07 21:41:21.802547+03	4	Age Groups	2	No fields changed.	10	1
+67	2016-09-07 21:42:24.709579+03	5	Organism	1	Added.	9	1
+68	2016-09-07 21:42:28.408844+03	6	Organism	1	Added.	10	1
+69	2016-09-07 21:46:18.858865+03	6	Organism Part	1	Added.	9	1
+70	2016-09-07 21:46:21.059833+03	7	Organism Part	1	Added.	10	1
+71	2016-09-07 21:48:23.925205+03	7	Sex	1	Added.	9	1
+72	2016-09-07 21:48:26.000839+03	8	Sex	1	Added.	10	1
+73	2016-09-07 21:52:40.395696+03	8	Name	1	Added.	9	1
+74	2016-09-07 21:52:43.982021+03	9	Name	1	Added.	10	1
+75	2016-09-07 21:52:52.310275+03	2	2	2	Added experiment-samplesattributenameinexperiment relationship "Experiment_sample_attribute_names object". Added experiment-samplesattributenameinexperiment relationship "Experiment_sample_attribute_names object". Added experiment-samplesattributenameinexperiment relationship "Experiment_sample_attribute_names object". Added experiment-samplesattributenameinexperiment relationship "Experiment_sample_attribute_names object". Added experiment-samplesattributenameinexperiment relationship "Experiment_sample_attribute_names object".	11	1
+76	2016-09-07 21:55:49.425876+03	3	Cryopreservation	1	Added.	15	1
+77	2016-09-07 21:58:29.566221+03	4	Adult	1	Added.	15	1
+78	2016-09-07 22:02:10.209726+03	5	Control Group	1	Added.	15	1
+79	2016-09-07 22:02:48.10631+03	2	2	2	Added sample "39". Added sample attribute value in sample "CTissue PreservationrTissue PreservationyTissue PreservationoTissue PreservationpTissue PreservationrTissue PreservationeTissue PreservationsTissue PreservationeTissue PreservationrTissue PreservationvTissue PreservationaTissue PreservationtTissue PreservationiTissue PreservationoTissue Preservationn". Added sample attribute value in sample "AAge GroupsdAge GroupsuAge GroupslAge Groupst". Added sample attribute value in sample "CResearch DesignoResearch DesignnResearch DesigntResearch DesignrResearch DesignoResearch DesignlResearch Design Research DesignGResearch DesignrResearch DesignoResearch DesignuResearch Designp".	11	1
+80	2016-09-07 22:04:35.433073+03	6	Humans	1	Added.	15	1
+81	2016-09-07 22:07:35.996565+03	7	Female	1	Added.	15	1
+82	2016-09-07 22:12:38.122505+03	8	Old Value	1	Added.	15	1
+83	2016-09-07 22:14:03.891316+03	2	2	2	Changed  for sample "39". Added sample attribute value in sample "HOrganismuOrganismmOrganismaOrganismnOrganisms". Added sample attribute value in sample "FSexeSexmSexaSexlSexe". Added sample attribute value in sample "ONamelNamedName NameVNameaNamelNameuNamee".	11	1
+84	2016-09-07 22:15:21.275337+03	9	complication	2	Changed unificated_name.	10	1
+86	2016-09-07 22:15:39.691667+03	2	2	2	No fields changed.	11	1
+87	2016-09-07 22:16:16.455123+03	2	2	2	No fields changed.	11	1
+88	2016-09-07 22:17:39.578955+03	10	Name	1	Added.	10	1
+89	2016-09-07 22:17:47.946373+03	2	2	2	Changed samplesattributenameinexperiment for experiment-samplesattributenameinexperiment relationship "Experiment_sample_attribute_names object".	11	1
+90	2016-09-07 22:18:25.583288+03	2	2	2	No fields changed.	11	1
+91	2016-09-07 22:22:13.83664+03	2	normal	3		15	1
+\.
+
+
+--
+-- Name: django_admin_log_id_seq; Type: SEQUENCE SET; Schema: public; Owner: sashko
+--
+
+SELECT pg_catalog.setval('django_admin_log_id_seq', 91, true);
+
+
+--
+-- Data for Name: django_content_type; Type: TABLE DATA; Schema: public; Owner: sashko
+--
+
+COPY django_content_type (id, app_label, model) FROM stdin;
+1	admin	logentry
+2	auth	permission
+3	auth	group
+4	auth	user
+5	contenttypes	contenttype
+6	sessions	session
+7	articles	article
+8	articles	attribute
+9	articles	unificatedsamplesattributename
+10	articles	samplesattributenameinexperiment
+11	articles	experiment
+12	articles	microarray
+13	articles	sample
+14	articles	sampleattributevalueinsample
+15	articles	unificatedsamplesattributevalue
+\.
+
+
+--
+-- Name: django_content_type_id_seq; Type: SEQUENCE SET; Schema: public; Owner: sashko
+--
+
+SELECT pg_catalog.setval('django_content_type_id_seq', 15, true);
+
+
+--
+-- Data for Name: django_migrations; Type: TABLE DATA; Schema: public; Owner: sashko
+--
+
+COPY django_migrations (id, app, name, applied) FROM stdin;
+1	contenttypes	0001_initial	2016-09-06 14:44:11.96489+03
+2	auth	0001_initial	2016-09-06 14:44:13.012492+03
+3	admin	0001_initial	2016-09-06 14:44:13.299699+03
+4	admin	0002_logentry_remove_auto_add	2016-09-06 14:44:13.343115+03
+5	articles	0001_initial	2016-09-06 14:44:14.171932+03
+6	articles	0002_test	2016-09-06 14:44:14.414503+03
+7	articles	0003_auto_20160830_1650	2016-09-06 14:44:15.399453+03
+8	articles	0004_auto_20160830_1724	2016-09-06 14:44:15.473398+03
+9	articles	0005_auto_20160830_2314	2016-09-06 14:44:15.495373+03
+10	articles	0006_auto_20160831_1753	2016-09-06 14:44:16.33626+03
+11	articles	0007_auto_20160831_1901	2016-09-06 14:44:16.420658+03
+12	articles	0008_auto_20160906_1412	2016-09-06 14:44:16.70802+03
+13	contenttypes	0002_remove_content_type_name	2016-09-06 14:44:16.876331+03
+14	auth	0002_alter_permission_name_max_length	2016-09-06 14:44:16.950142+03
+15	auth	0003_alter_user_email_max_length	2016-09-06 14:44:17.028816+03
+16	auth	0004_alter_user_username_opts	2016-09-06 14:44:17.059273+03
+17	auth	0005_alter_user_last_login_null	2016-09-06 14:44:17.104676+03
+18	auth	0006_require_contenttypes_0002	2016-09-06 14:44:17.115957+03
+19	auth	0007_alter_validators_add_error_messages	2016-09-06 14:44:17.141509+03
+20	sessions	0001_initial	2016-09-06 14:44:17.368635+03
+21	articles	0009_auto_20160906_1510	2016-09-06 15:11:23.310292+03
+22	articles	0010_sample_fictional_field	2016-09-06 15:31:27.779122+03
+\.
+
+
+--
+-- Name: django_migrations_id_seq; Type: SEQUENCE SET; Schema: public; Owner: sashko
+--
+
+SELECT pg_catalog.setval('django_migrations_id_seq', 22, true);
+
+
+--
+-- Data for Name: django_session; Type: TABLE DATA; Schema: public; Owner: sashko
+--
+
+COPY django_session (session_key, session_data, expire_date) FROM stdin;
+a7gv8tet53f8hm0rrcxd4fg0lsc54vok	OTljMGI0OWFkM2FkOGU2N2VkYmJjNDJkM2M2MWIxN2NhMTBmZDc5Mjp7Il9hdXRoX3VzZXJfaGFzaCI6IjQ2Y2Y2MzI4YWI5YWY0NzE1MWI0NzY1ZGZjODYyNGQ1NmY5ZTlhNTgiLCJfYXV0aF91c2VyX2lkIjoiMSIsIl9hdXRoX3VzZXJfYmFja2VuZCI6ImRqYW5nby5jb250cmliLmF1dGguYmFja2VuZHMuTW9kZWxCYWNrZW5kIn0=	2016-09-20 14:47:20.789067+03
+\.
+
+
+--
+-- Name: articles_article_pkey; Type: CONSTRAINT; Schema: public; Owner: sashko; Tablespace: 
+--
+
+ALTER TABLE ONLY articles_article
+    ADD CONSTRAINT articles_article_pkey PRIMARY KEY (id);
+
+
+--
+-- Name: articles_attribute_pkey; Type: CONSTRAINT; Schema: public; Owner: sashko; Tablespace: 
+--
+
+ALTER TABLE ONLY articles_attribute
+    ADD CONSTRAINT articles_attribute_pkey PRIMARY KEY (id);
+
+
+--
+-- Name: articles_experiment_microarrays_experiment_id_85f591ed_uniq; Type: CONSTRAINT; Schema: public; Owner: sashko; Tablespace: 
+--
+
+ALTER TABLE ONLY articles_experiment_microarrays
+    ADD CONSTRAINT articles_experiment_microarrays_experiment_id_85f591ed_uniq UNIQUE (experiment_id, microarray_id);
+
+
+--
+-- Name: articles_experiment_microarrays_pkey; Type: CONSTRAINT; Schema: public; Owner: sashko; Tablespace: 
+--
+
+ALTER TABLE ONLY articles_experiment_microarrays
+    ADD CONSTRAINT articles_experiment_microarrays_pkey PRIMARY KEY (id);
+
+
+--
+-- Name: articles_experiment_pkey; Type: CONSTRAINT; Schema: public; Owner: sashko; Tablespace: 
+--
+
+ALTER TABLE ONLY articles_experiment
+    ADD CONSTRAINT articles_experiment_pkey PRIMARY KEY (id);
+
+
+--
+-- Name: articles_experiment_sample_attribut_experiment_id_954b0800_uniq; Type: CONSTRAINT; Schema: public; Owner: sashko; Tablespace: 
+--
+
+ALTER TABLE ONLY articles_experiment_sample_attribute_names
+    ADD CONSTRAINT articles_experiment_sample_attribut_experiment_id_954b0800_uniq UNIQUE (experiment_id, samplesattributenameinexperiment_id);
+
+
+--
+-- Name: articles_experiment_sample_attribute_names_pkey; Type: CONSTRAINT; Schema: public; Owner: sashko; Tablespace: 
+--
+
+ALTER TABLE ONLY articles_experiment_sample_attribute_names
+    ADD CONSTRAINT articles_experiment_sample_attribute_names_pkey PRIMARY KEY (id);
+
+
+--
+-- Name: articles_microarray_pkey; Type: CONSTRAINT; Schema: public; Owner: sashko; Tablespace: 
+--
+
+ALTER TABLE ONLY articles_microarray
+    ADD CONSTRAINT articles_microarray_pkey PRIMARY KEY (id);
+
+
+--
+-- Name: articles_sample_pkey; Type: CONSTRAINT; Schema: public; Owner: sashko; Tablespace: 
+--
+
+ALTER TABLE ONLY articles_sample
+    ADD CONSTRAINT articles_sample_pkey PRIMARY KEY (id);
+
+
+--
+-- Name: articles_sampleattributevalueinsample_pkey; Type: CONSTRAINT; Schema: public; Owner: sashko; Tablespace: 
+--
+
+ALTER TABLE ONLY articles_sampleattributevalueinsample
+    ADD CONSTRAINT articles_sampleattributevalueinsample_pkey PRIMARY KEY (id);
+
+
+--
+-- Name: articles_samplesattributenameinexperiment_pkey; Type: CONSTRAINT; Schema: public; Owner: sashko; Tablespace: 
+--
+
+ALTER TABLE ONLY articles_samplesattributenameinexperiment
+    ADD CONSTRAINT articles_samplesattributenameinexperiment_pkey PRIMARY KEY (id);
+
+
+--
+-- Name: articles_unificatedsamplesattributename_pkey; Type: CONSTRAINT; Schema: public; Owner: sashko; Tablespace: 
+--
+
+ALTER TABLE ONLY articles_unificatedsamplesattributename
+    ADD CONSTRAINT articles_unificatedsamplesattributename_pkey PRIMARY KEY (id);
+
+
+--
+-- Name: articles_unificatedsamplesattributevalue_pkey; Type: CONSTRAINT; Schema: public; Owner: sashko; Tablespace: 
+--
+
+ALTER TABLE ONLY articles_unificatedsamplesattributevalue
+    ADD CONSTRAINT articles_unificatedsamplesattributevalue_pkey PRIMARY KEY (id);
+
+
+--
+-- Name: auth_group_name_key; Type: CONSTRAINT; Schema: public; Owner: sashko; Tablespace: 
+--
+
+ALTER TABLE ONLY auth_group
+    ADD CONSTRAINT auth_group_name_key UNIQUE (name);
+
+
+--
+-- Name: auth_group_permissions_group_id_0cd325b0_uniq; Type: CONSTRAINT; Schema: public; Owner: sashko; Tablespace: 
+--
+
+ALTER TABLE ONLY auth_group_permissions
+    ADD CONSTRAINT auth_group_permissions_group_id_0cd325b0_uniq UNIQUE (group_id, permission_id);
+
+
+--
+-- Name: auth_group_permissions_pkey; Type: CONSTRAINT; Schema: public; Owner: sashko; Tablespace: 
+--
+
+ALTER TABLE ONLY auth_group_permissions
+    ADD CONSTRAINT auth_group_permissions_pkey PRIMARY KEY (id);
+
+
+--
+-- Name: auth_group_pkey; Type: CONSTRAINT; Schema: public; Owner: sashko; Tablespace: 
+--
+
+ALTER TABLE ONLY auth_group
+    ADD CONSTRAINT auth_group_pkey PRIMARY KEY (id);
+
+
+--
+-- Name: auth_permission_content_type_id_01ab375a_uniq; Type: CONSTRAINT; Schema: public; Owner: sashko; Tablespace: 
+--
+
+ALTER TABLE ONLY auth_permission
+    ADD CONSTRAINT auth_permission_content_type_id_01ab375a_uniq UNIQUE (content_type_id, codename);
+
+
+--
+-- Name: auth_permission_pkey; Type: CONSTRAINT; Schema: public; Owner: sashko; Tablespace: 
+--
+
+ALTER TABLE ONLY auth_permission
+    ADD CONSTRAINT auth_permission_pkey PRIMARY KEY (id);
+
+
+--
+-- Name: auth_user_groups_pkey; Type: CONSTRAINT; Schema: public; Owner: sashko; Tablespace: 
+--
+
+ALTER TABLE ONLY auth_user_groups
+    ADD CONSTRAINT auth_user_groups_pkey PRIMARY KEY (id);
+
+
+--
+-- Name: auth_user_groups_user_id_94350c0c_uniq; Type: CONSTRAINT; Schema: public; Owner: sashko; Tablespace: 
+--
+
+ALTER TABLE ONLY auth_user_groups
+    ADD CONSTRAINT auth_user_groups_user_id_94350c0c_uniq UNIQUE (user_id, group_id);
+
+
+--
+-- Name: auth_user_pkey; Type: CONSTRAINT; Schema: public; Owner: sashko; Tablespace: 
+--
+
+ALTER TABLE ONLY auth_user
+    ADD CONSTRAINT auth_user_pkey PRIMARY KEY (id);
+
+
+--
+-- Name: auth_user_user_permissions_pkey; Type: CONSTRAINT; Schema: public; Owner: sashko; Tablespace: 
+--
+
+ALTER TABLE ONLY auth_user_user_permissions
+    ADD CONSTRAINT auth_user_user_permissions_pkey PRIMARY KEY (id);
+
+
+--
+-- Name: auth_user_user_permissions_user_id_14a6b632_uniq; Type: CONSTRAINT; Schema: public; Owner: sashko; Tablespace: 
+--
+
+ALTER TABLE ONLY auth_user_user_permissions
+    ADD CONSTRAINT auth_user_user_permissions_user_id_14a6b632_uniq UNIQUE (user_id, permission_id);
+
+
+--
+-- Name: auth_user_username_key; Type: CONSTRAINT; Schema: public; Owner: sashko; Tablespace: 
+--
+
+ALTER TABLE ONLY auth_user
+    ADD CONSTRAINT auth_user_username_key UNIQUE (username);
+
+
+--
+-- Name: django_admin_log_pkey; Type: CONSTRAINT; Schema: public; Owner: sashko; Tablespace: 
+--
+
+ALTER TABLE ONLY django_admin_log
+    ADD CONSTRAINT django_admin_log_pkey PRIMARY KEY (id);
+
+
+--
+-- Name: django_content_type_app_label_76bd3d3b_uniq; Type: CONSTRAINT; Schema: public; Owner: sashko; Tablespace: 
+--
+
+ALTER TABLE ONLY django_content_type
+    ADD CONSTRAINT django_content_type_app_label_76bd3d3b_uniq UNIQUE (app_label, model);
+
+
+--
+-- Name: django_content_type_pkey; Type: CONSTRAINT; Schema: public; Owner: sashko; Tablespace: 
+--
+
+ALTER TABLE ONLY django_content_type
+    ADD CONSTRAINT django_content_type_pkey PRIMARY KEY (id);
+
+
+--
+-- Name: django_migrations_pkey; Type: CONSTRAINT; Schema: public; Owner: sashko; Tablespace: 
+--
+
+ALTER TABLE ONLY django_migrations
+    ADD CONSTRAINT django_migrations_pkey PRIMARY KEY (id);
+
+
+--
+-- Name: django_session_pkey; Type: CONSTRAINT; Schema: public; Owner: sashko; Tablespace: 
+--
+
+ALTER TABLE ONLY django_session
+    ADD CONSTRAINT django_session_pkey PRIMARY KEY (session_key);
+
+
+--
+-- Name: articles_attribute_a00c1b00; Type: INDEX; Schema: public; Owner: sashko; Tablespace: 
+--
+
+CREATE INDEX articles_attribute_a00c1b00 ON articles_attribute USING btree (article_id);
+
+
+--
+-- Name: articles_experiment_8d777f38; Type: INDEX; Schema: public; Owner: sashko; Tablespace: 
+--
+
+CREATE INDEX articles_experiment_8d777f38 ON articles_experiment USING btree (data);
+
+
+--
+-- Name: articles_experiment_microarrays_70488be9; Type: INDEX; Schema: public; Owner: sashko; Tablespace: 
+--
+
+CREATE INDEX articles_experiment_microarrays_70488be9 ON articles_experiment_microarrays USING btree (microarray_id);
+
+
+--
+-- Name: articles_experiment_microarrays_abd1812d; Type: INDEX; Schema: public; Owner: sashko; Tablespace: 
+--
+
+CREATE INDEX articles_experiment_microarrays_abd1812d ON articles_experiment_microarrays USING btree (experiment_id);
+
+
+--
+-- Name: articles_experiment_sample_attribute_names_17501659; Type: INDEX; Schema: public; Owner: sashko; Tablespace: 
+--
+
+CREATE INDEX articles_experiment_sample_attribute_names_17501659 ON articles_experiment_sample_attribute_names USING btree (samplesattributenameinexperiment_id);
+
+
+--
+-- Name: articles_experiment_sample_attribute_names_abd1812d; Type: INDEX; Schema: public; Owner: sashko; Tablespace: 
+--
+
+CREATE INDEX articles_experiment_sample_attribute_names_abd1812d ON articles_experiment_sample_attribute_names USING btree (experiment_id);
+
+
+--
+-- Name: articles_microarray_8d777f38; Type: INDEX; Schema: public; Owner: sashko; Tablespace: 
+--
+
+CREATE INDEX articles_microarray_8d777f38 ON articles_microarray USING btree (data);
+
+
+--
+-- Name: articles_sample_abd1812d; Type: INDEX; Schema: public; Owner: sashko; Tablespace: 
+--
+
+CREATE INDEX articles_sample_abd1812d ON articles_sample USING btree (experiment_id);
+
+
+--
+-- Name: articles_sampleattributevalueinsample_0acd920a; Type: INDEX; Schema: public; Owner: sashko; Tablespace: 
+--
+
+CREATE INDEX articles_sampleattributevalueinsample_0acd920a ON articles_sampleattributevalueinsample USING btree (unificated_name_id);
+
+
+--
+-- Name: articles_sampleattributevalueinsample_89bfbb4d; Type: INDEX; Schema: public; Owner: sashko; Tablespace: 
+--
+
+CREATE INDEX articles_sampleattributevalueinsample_89bfbb4d ON articles_sampleattributevalueinsample USING btree (unificated_value_id);
+
+
+--
+-- Name: articles_sampleattributevalueinsample_c09c8085; Type: INDEX; Schema: public; Owner: sashko; Tablespace: 
+--
+
+CREATE INDEX articles_sampleattributevalueinsample_c09c8085 ON articles_sampleattributevalueinsample USING btree (sample_id);
+
+
+--
+-- Name: articles_samplesattributenameinexperiment_0acd920a; Type: INDEX; Schema: public; Owner: sashko; Tablespace: 
+--
+
+CREATE INDEX articles_samplesattributenameinexperiment_0acd920a ON articles_samplesattributenameinexperiment USING btree (unificated_name_id);
+
+
+--
+-- Name: auth_group_name_a6ea08ec_like; Type: INDEX; Schema: public; Owner: sashko; Tablespace: 
+--
+
+CREATE INDEX auth_group_name_a6ea08ec_like ON auth_group USING btree (name varchar_pattern_ops);
+
+
+--
+-- Name: auth_group_permissions_0e939a4f; Type: INDEX; Schema: public; Owner: sashko; Tablespace: 
+--
+
+CREATE INDEX auth_group_permissions_0e939a4f ON auth_group_permissions USING btree (group_id);
+
+
+--
+-- Name: auth_group_permissions_8373b171; Type: INDEX; Schema: public; Owner: sashko; Tablespace: 
+--
+
+CREATE INDEX auth_group_permissions_8373b171 ON auth_group_permissions USING btree (permission_id);
+
+
+--
+-- Name: auth_permission_417f1b1c; Type: INDEX; Schema: public; Owner: sashko; Tablespace: 
+--
+
+CREATE INDEX auth_permission_417f1b1c ON auth_permission USING btree (content_type_id);
+
+
+--
+-- Name: auth_user_groups_0e939a4f; Type: INDEX; Schema: public; Owner: sashko; Tablespace: 
+--
+
+CREATE INDEX auth_user_groups_0e939a4f ON auth_user_groups USING btree (group_id);
+
+
+--
+-- Name: auth_user_groups_e8701ad4; Type: INDEX; Schema: public; Owner: sashko; Tablespace: 
+--
+
+CREATE INDEX auth_user_groups_e8701ad4 ON auth_user_groups USING btree (user_id);
+
+
+--
+-- Name: auth_user_user_permissions_8373b171; Type: INDEX; Schema: public; Owner: sashko; Tablespace: 
+--
+
+CREATE INDEX auth_user_user_permissions_8373b171 ON auth_user_user_permissions USING btree (permission_id);
+
+
+--
+-- Name: auth_user_user_permissions_e8701ad4; Type: INDEX; Schema: public; Owner: sashko; Tablespace: 
+--
+
+CREATE INDEX auth_user_user_permissions_e8701ad4 ON auth_user_user_permissions USING btree (user_id);
+
+
+--
+-- Name: auth_user_username_6821ab7c_like; Type: INDEX; Schema: public; Owner: sashko; Tablespace: 
+--
+
+CREATE INDEX auth_user_username_6821ab7c_like ON auth_user USING btree (username varchar_pattern_ops);
+
+
+--
+-- Name: django_admin_log_417f1b1c; Type: INDEX; Schema: public; Owner: sashko; Tablespace: 
+--
+
+CREATE INDEX django_admin_log_417f1b1c ON django_admin_log USING btree (content_type_id);
+
+
+--
+-- Name: django_admin_log_e8701ad4; Type: INDEX; Schema: public; Owner: sashko; Tablespace: 
+--
+
+CREATE INDEX django_admin_log_e8701ad4 ON django_admin_log USING btree (user_id);
+
+
+--
+-- Name: django_session_de54fa62; Type: INDEX; Schema: public; Owner: sashko; Tablespace: 
+--
+
+CREATE INDEX django_session_de54fa62 ON django_session USING btree (expire_date);
+
+
+--
+-- Name: django_session_session_key_c0390e0f_like; Type: INDEX; Schema: public; Owner: sashko; Tablespace: 
+--
+
+CREATE INDEX django_session_session_key_c0390e0f_like ON django_session USING btree (session_key varchar_pattern_ops);
+
+
+--
+-- Name: D26ff03be0990ecbb1c55354c36b8fe6; Type: FK CONSTRAINT; Schema: public; Owner: sashko
+--
+
+ALTER TABLE ONLY articles_sampleattributevalueinsample
+    ADD CONSTRAINT "D26ff03be0990ecbb1c55354c36b8fe6" FOREIGN KEY (unificated_name_id) REFERENCES articles_samplesattributenameinexperiment(id) DEFERRABLE INITIALLY DEFERRED;
+
+
+--
+-- Name: D51aaa9879ac2c43d71df11dfa903777; Type: FK CONSTRAINT; Schema: public; Owner: sashko
+--
+
+ALTER TABLE ONLY articles_samplesattributenameinexperiment
+    ADD CONSTRAINT "D51aaa9879ac2c43d71df11dfa903777" FOREIGN KEY (unificated_name_id) REFERENCES articles_unificatedsamplesattributename(id) DEFERRABLE INITIALLY DEFERRED;
+
+
+--
+-- Name: articles_attribute_article_id_a825d661_fk_articles_article_id; Type: FK CONSTRAINT; Schema: public; Owner: sashko
+--
+
+ALTER TABLE ONLY articles_attribute
+    ADD CONSTRAINT articles_attribute_article_id_a825d661_fk_articles_article_id FOREIGN KEY (article_id) REFERENCES articles_article(id) DEFERRABLE INITIALLY DEFERRED;
+
+
+--
+-- Name: articles_exper_experiment_id_15e603ff_fk_articles_experiment_id; Type: FK CONSTRAINT; Schema: public; Owner: sashko
+--
+
+ALTER TABLE ONLY articles_experiment_microarrays
+    ADD CONSTRAINT articles_exper_experiment_id_15e603ff_fk_articles_experiment_id FOREIGN KEY (experiment_id) REFERENCES articles_experiment(id) DEFERRABLE INITIALLY DEFERRED;
+
+
+--
+-- Name: articles_exper_experiment_id_35651530_fk_articles_experiment_id; Type: FK CONSTRAINT; Schema: public; Owner: sashko
+--
+
+ALTER TABLE ONLY articles_experiment_sample_attribute_names
+    ADD CONSTRAINT articles_exper_experiment_id_35651530_fk_articles_experiment_id FOREIGN KEY (experiment_id) REFERENCES articles_experiment(id) DEFERRABLE INITIALLY DEFERRED;
+
+
+--
+-- Name: articles_exper_microarray_id_9b6e7108_fk_articles_microarray_id; Type: FK CONSTRAINT; Schema: public; Owner: sashko
+--
+
+ALTER TABLE ONLY articles_experiment_microarrays
+    ADD CONSTRAINT articles_exper_microarray_id_9b6e7108_fk_articles_microarray_id FOREIGN KEY (microarray_id) REFERENCES articles_microarray(id) DEFERRABLE INITIALLY DEFERRED;
+
+
+--
+-- Name: articles_sampl_experiment_id_01b8eed1_fk_articles_experiment_id; Type: FK CONSTRAINT; Schema: public; Owner: sashko
+--
+
+ALTER TABLE ONLY articles_sample
+    ADD CONSTRAINT articles_sampl_experiment_id_01b8eed1_fk_articles_experiment_id FOREIGN KEY (experiment_id) REFERENCES articles_experiment(id) DEFERRABLE INITIALLY DEFERRED;
+
+
+--
+-- Name: articles_sampleattribu_sample_id_9a450597_fk_articles_sample_id; Type: FK CONSTRAINT; Schema: public; Owner: sashko
+--
+
+ALTER TABLE ONLY articles_sampleattributevalueinsample
+    ADD CONSTRAINT articles_sampleattribu_sample_id_9a450597_fk_articles_sample_id FOREIGN KEY (sample_id) REFERENCES articles_sample(id) DEFERRABLE INITIALLY DEFERRED;
+
+
+--
+-- Name: auth_group_permiss_permission_id_84c5c92e_fk_auth_permission_id; Type: FK CONSTRAINT; Schema: public; Owner: sashko
+--
+
+ALTER TABLE ONLY auth_group_permissions
+    ADD CONSTRAINT auth_group_permiss_permission_id_84c5c92e_fk_auth_permission_id FOREIGN KEY (permission_id) REFERENCES auth_permission(id) DEFERRABLE INITIALLY DEFERRED;
+
+
+--
+-- Name: auth_group_permissions_group_id_b120cbf9_fk_auth_group_id; Type: FK CONSTRAINT; Schema: public; Owner: sashko
+--
+
+ALTER TABLE ONLY auth_group_permissions
+    ADD CONSTRAINT auth_group_permissions_group_id_b120cbf9_fk_auth_group_id FOREIGN KEY (group_id) REFERENCES auth_group(id) DEFERRABLE INITIALLY DEFERRED;
+
+
+--
+-- Name: auth_permiss_content_type_id_2f476e4b_fk_django_content_type_id; Type: FK CONSTRAINT; Schema: public; Owner: sashko
+--
+
+ALTER TABLE ONLY auth_permission
+    ADD CONSTRAINT auth_permiss_content_type_id_2f476e4b_fk_django_content_type_id FOREIGN KEY (content_type_id) REFERENCES django_content_type(id) DEFERRABLE INITIALLY DEFERRED;
+
+
+--
+-- Name: auth_user_groups_group_id_97559544_fk_auth_group_id; Type: FK CONSTRAINT; Schema: public; Owner: sashko
+--
+
+ALTER TABLE ONLY auth_user_groups
+    ADD CONSTRAINT auth_user_groups_group_id_97559544_fk_auth_group_id FOREIGN KEY (group_id) REFERENCES auth_group(id) DEFERRABLE INITIALLY DEFERRED;
+
+
+--
+-- Name: auth_user_groups_user_id_6a12ed8b_fk_auth_user_id; Type: FK CONSTRAINT; Schema: public; Owner: sashko
+--
+
+ALTER TABLE ONLY auth_user_groups
+    ADD CONSTRAINT auth_user_groups_user_id_6a12ed8b_fk_auth_user_id FOREIGN KEY (user_id) REFERENCES auth_user(id) DEFERRABLE INITIALLY DEFERRED;
+
+
+--
+-- Name: auth_user_user_per_permission_id_1fbb5f2c_fk_auth_permission_id; Type: FK CONSTRAINT; Schema: public; Owner: sashko
+--
+
+ALTER TABLE ONLY auth_user_user_permissions
+    ADD CONSTRAINT auth_user_user_per_permission_id_1fbb5f2c_fk_auth_permission_id FOREIGN KEY (permission_id) REFERENCES auth_permission(id) DEFERRABLE INITIALLY DEFERRED;
+
+
+--
+-- Name: auth_user_user_permissions_user_id_a95ead1b_fk_auth_user_id; Type: FK CONSTRAINT; Schema: public; Owner: sashko
+--
+
+ALTER TABLE ONLY auth_user_user_permissions
+    ADD CONSTRAINT auth_user_user_permissions_user_id_a95ead1b_fk_auth_user_id FOREIGN KEY (user_id) REFERENCES auth_user(id) DEFERRABLE INITIALLY DEFERRED;
+
+
+--
+-- Name: c0f0a62784a734083c68e097b44aa468; Type: FK CONSTRAINT; Schema: public; Owner: sashko
+--
+
+ALTER TABLE ONLY articles_sampleattributevalueinsample
+    ADD CONSTRAINT c0f0a62784a734083c68e097b44aa468 FOREIGN KEY (unificated_value_id) REFERENCES articles_unificatedsamplesattributevalue(id) DEFERRABLE INITIALLY DEFERRED;
+
+
+--
+-- Name: d382ba148da4acbbd76ac2bf16221ed0; Type: FK CONSTRAINT; Schema: public; Owner: sashko
+--
+
+ALTER TABLE ONLY articles_experiment_sample_attribute_names
+    ADD CONSTRAINT d382ba148da4acbbd76ac2bf16221ed0 FOREIGN KEY (samplesattributenameinexperiment_id) REFERENCES articles_samplesattributenameinexperiment(id) DEFERRABLE INITIALLY DEFERRED;
+
+
+--
+-- Name: django_admin_content_type_id_c4bce8eb_fk_django_content_type_id; Type: FK CONSTRAINT; Schema: public; Owner: sashko
+--
+
+ALTER TABLE ONLY django_admin_log
+    ADD CONSTRAINT django_admin_content_type_id_c4bce8eb_fk_django_content_type_id FOREIGN KEY (content_type_id) REFERENCES django_content_type(id) DEFERRABLE INITIALLY DEFERRED;
+
+
+--
+-- Name: django_admin_log_user_id_c564eba6_fk_auth_user_id; Type: FK CONSTRAINT; Schema: public; Owner: sashko
+--
+
+ALTER TABLE ONLY django_admin_log
+    ADD CONSTRAINT django_admin_log_user_id_c564eba6_fk_auth_user_id FOREIGN KEY (user_id) REFERENCES auth_user(id) DEFERRABLE INITIALLY DEFERRED;
+
+
+--
+-- Name: public; Type: ACL; Schema: -; Owner: postgres
+--
+
+REVOKE ALL ON SCHEMA public FROM PUBLIC;
+REVOKE ALL ON SCHEMA public FROM postgres;
+GRANT ALL ON SCHEMA public TO postgres;
+GRANT ALL ON SCHEMA public TO PUBLIC;
+
+
+--
+-- PostgreSQL database dump complete
+--
+
