@@ -1,4 +1,4 @@
-from articles.models import Experiment, Microarray, Sample
+from articles.models import Experiment, Microarray, Sample, SampleAttribute
 
 from lxml import etree
 import pickle 
@@ -36,6 +36,7 @@ def get_experiment_attributes(experiment_id):
     arrays_data = []  # list of dicts, one dict per microarray
     # add all attributes that are "leaves" of the xml tree
     for item in exp.getchildren():
+      
         if item.text != None:
             exp_attrs.append(item.tag)
             exp_data[item.tag] = item.text
@@ -47,6 +48,7 @@ def get_experiment_attributes(experiment_id):
                         array_data[array_attr.tag] = array_attr.text
                 arrays_data.append(array_data)
     return exp_data, arrays_data
+
 
 def get_experiment_samples_attributes(experiment_id):
     url ='xml/v3/experiments/'+experiment_id+'/samples'
@@ -101,12 +103,19 @@ def exp_to_db(experiment_id):
     for microarray in microarrays:
         microarray_obj = Microarray.add_or_replace(data=microarray)
         if not(experiment_obj.microarrays.filter(id=microarray_obj.id).exists()):
-
-
             experiment_obj.microarrays.add(microarray_obj)
 
-    for sample in samples:
-        sample_obj = Sample.add_or_replace(experiment=experiment_obj, data=sample)
+    for sample in samples:  
+        sample_obj = Sample.add_or_replace(experiment=experiment_obj,
+                                           data=sample)
+        sample_attributes = SampleAttribute.objects.filter(sample=sample_obj)
+        for old_name, old_value in sample.items():
+            print(old_name,old_value)
+            if old_value == None or old_value == '':
+                SampleAttribute.add_or_replace(sample_obj, old_name, '<empty>')
+            else:
+                SampleAttribute.add_or_replace(sample_obj, old_name, old_value)
+
         
 
 
@@ -151,7 +160,7 @@ def get_preeclampsia_accession():
 # keywords="pre-eclampsia+OR+preeclampsia+OR+pre-eclamptic+OR+preeclamptic",
 #                              exptype="*array*",
 #                              species="homo+sapiens")
-    res = ['E-GEOD-74341', 'E-GEOD-73377', 'E-GEOD-73375', 'E-GEOD-73374',
+    res = ['E-GEOD-74341', 'E-GEOD-73377', ' E-GEOD-73375', 'E-GEOD-73374',
            'E-GEOD-60438', 'E-MTAB-3265', 'E-MTAB-3348',
            'E-MTAB-3309', 'E-GEOD-54400', 'E-GEOD-59274', 'E-GEOD-57767',
            'E-GEOD-48424', 'E-GEOD-57050', 'E-GEOD-54618', 'E-GEOD-49343',

@@ -8,7 +8,7 @@ from articles.models import Experiment
 
 # from sets import Set
 
-from articles.models import ShowModel, UnificatedSamplesAttributeName
+from articles.models import *
 
 import os
 # os.chdir(os.path.dirname(__file__))
@@ -26,3 +26,25 @@ class TestShowModel(TestCase):
         self.assertTrue(hasattr(us,'to_show'))
 
         print(us._show())
+
+
+calss TestSample(TestSample):
+    def setUp(self):
+        self.c = Client()
+
+    def test_add_or_replace(self):
+        e = Experiment.objects.create(data={'test':'test'})
+        s1 = Sample.objects.create(experiment=e)
+
+        un = SamplesAttributeNameInExperiment.objects.create(old_name='name')
+
+        sa_name = SampleAttribute.objects.create(sample=s1, unificated_name=un)
+
+        data = {'name':'test',}
+        s2 = Sample.objects.test_add_or_replace(e, data)
+        self.assertEqual(s1, s2)
+
+
+
+
+

@@ -403,3 +403,5 @@ tissue -> organism part
 add experiment type
 	in vitro
 	in vivo
+
+BioSourceType 

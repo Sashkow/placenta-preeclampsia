@@ -2,7 +2,7 @@ from django.contrib import admin
 from django.contrib.admin import ModelAdmin
 from super_inlines.admin import SuperInlineModelAdmin, SuperModelAdmin
 
-# from .forms import ArticleForm
+from .forms import SampleInlineForm
 from .models import *
 
 from django.http import HttpResponseRedirect
@@ -117,20 +117,56 @@ class SamplesAttributeNameInExperimentInline(SuperInlineModelAdmin, admin.Tabula
     extra = 0
 
 class SampleAttributeInline(SuperInlineModelAdmin, admin.TabularInline):
+    form = SampleInlineForm
+    fields = (
+              # 'old_name',
+              # 'old_value',
+              'unificated_name',
+              # 'name_for_each',
+              # 'unificated_value',
+              # 'value_for_each'
+              )
     model = SampleAttribute
     extra = 0
 
+    test_counter = 0
+
+    def formfield_for_dbfield(self, db_field, **kwargs):
+        SampleAttributeInline.test_counter+=1
+        print(SampleAttributeInline.test_counter)
+        formfield = super(SampleAttributeInline, self).formfield_for_dbfield(db_field, **kwargs)
+        if db_field.name == 'unificated_name':
+            # dirty trick so queryset is evaluated and cached in .choices
+            print(formfield.choices)
+            formfield.choices = formfield.choices
+        return formfield
+
 class SampleInline(SuperInlineModelAdmin, admin.StackedInline):
+    
     model = Sample
     inlines = [SampleAttributeInline,]
+    
     extra = 0
 
+
+
 class ExperimentAdmin(SuperModelAdmin):
-    inlines = [MicroarrayInline, SampleInline, SamplesAttributeNameInExperimentInline]    
+    inlines = [SampleInline,]
+    # inlines = [MicroarrayInline, SampleInline, SamplesAttributeNameInExperimentInline]    
     list_display = _list_display(Experiment) + \
                    _experiment_microarrays_display() + \
                    _extra_display(Experiment)
     exclude = ['microarrays']
+    fields = ('data',)
+
+    # def save_formset(self, request, form, formset, change):
+    #     instances = formset.save(commit=False)
+    #     for instance in instances: 
+    #         instance.save()
+    #     formset.save_m2m()
+
+
+    
 
 
     def response_change(self, request, obj):
@@ -169,6 +205,10 @@ class MicroarrayAdmin(ModelAdmin):
 
 class SampleAdmin(SuperModelAdmin):
     inlines = [SampleAttributeInline,]
+
+    def save_model(self, request, obj, form, change):
+        print("save sample")
+        obj.save()
 
 
     # list_display = ['data', 'experiment']
