@@ -32,6 +32,7 @@ ALLOWED_HOSTS = []
 
 INSTALLED_APPS = [
     # 'devserver',
+    'grappelli',
     'super_inlines',
     'django.contrib.admin',
     'django.contrib.auth',
@@ -74,13 +75,6 @@ TEMPLATES = [
     },
     
 ]
-
-TEMPLATE_LOADERS = (
-    ('django.template.loaders.cached.Loader', (
-        'django.template.loaders.filesystem.Loader',
-        'django.template.loaders.app_directories.Loader',
-    )),
-)
 
 WSGI_APPLICATION = 'preeclampsia_db.wsgi.application'
 

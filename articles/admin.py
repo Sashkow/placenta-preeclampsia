@@ -2,7 +2,7 @@ from django.contrib import admin
 from django.contrib.admin import ModelAdmin
 from super_inlines.admin import SuperInlineModelAdmin, SuperModelAdmin
 
-from .forms import SampleInlineForm
+from .forms import SampleAttributeInlineForm
 from .models import *
 
 from django.http import HttpResponseRedirect
@@ -92,6 +92,7 @@ def _extra_display(ModelClass):
     f.short_description = 'other data'
     return [f]
 
+
 def _experiment_microarrays_display():
     def f(obj):
         show_field = 'name'
@@ -117,27 +118,31 @@ class SamplesAttributeNameInExperimentInline(SuperInlineModelAdmin, admin.Tabula
     extra = 0
 
 class SampleAttributeInline(SuperInlineModelAdmin, admin.TabularInline):
-    form = SampleInlineForm
+    form = SampleAttributeInlineForm
     fields = (
-              # 'old_name',
-              # 'old_value',
+              'old_name',
+              'old_value',
               'unificated_name',
-              # 'name_for_each',
-              # 'unificated_value',
-              # 'value_for_each'
+              'name_for_each',
+              'unificated_value',
+              'value_for_each'
               )
+
+    raw_id_fields = ('unificated_name','unificated_value',)
+    # define the related_lookup_fields
+    autocomplete_lookup_fields = {
+        'fk': ['unificated_name', 'unificated_value']
+    }
+
     model = SampleAttribute
     extra = 0
 
-    test_counter = 0
 
     def formfield_for_dbfield(self, db_field, **kwargs):
-        SampleAttributeInline.test_counter+=1
-        print(SampleAttributeInline.test_counter)
+        
         formfield = super(SampleAttributeInline, self).formfield_for_dbfield(db_field, **kwargs)
         if db_field.name == 'unificated_name':
             # dirty trick so queryset is evaluated and cached in .choices
-            print(formfield.choices)
             formfield.choices = formfield.choices
         return formfield
 
@@ -151,8 +156,7 @@ class SampleInline(SuperInlineModelAdmin, admin.StackedInline):
 
 
 class ExperimentAdmin(SuperModelAdmin):
-    inlines = [SampleInline,]
-    # inlines = [MicroarrayInline, SampleInline, SamplesAttributeNameInExperimentInline]    
+    inlines = [MicroarrayInline, SampleInline, SamplesAttributeNameInExperimentInline]    
     list_display = _list_display(Experiment) + \
                    _experiment_microarrays_display() + \
                    _extra_display(Experiment)
@@ -206,18 +210,14 @@ class MicroarrayAdmin(ModelAdmin):
 class SampleAdmin(SuperModelAdmin):
     inlines = [SampleAttributeInline,]
 
-    def save_model(self, request, obj, form, change):
-        print("save sample")
-        obj.save()
-
-
     # list_display = ['data', 'experiment']
     # list_editable = ['data', 'experiment']
     # list_display = _list_display(Sample)+_extra_display(Sample)
     # list_editable = _list_display(Sample)+_extra_display(Sample)
 
 
-
+class SampleAttributeAdmin(ModelAdmin):
+    list_display = ['id','sample', 'unificated_name', 'unificated_value' ]
 
 admin.site.register(Microarray, MicroarrayAdmin)
 admin.site.register(Sample, SampleAdmin)
@@ -225,5 +225,7 @@ admin.site.register(Sample, SampleAdmin)
 
 admin.site.register(UnificatedSamplesAttributeName)
 admin.site.register(SamplesAttributeNameInExperiment)
-admin.site.register(SampleAttribute)
+
+admin.site.register(SampleAttribute,SampleAttributeAdmin)
+
 admin.site.register(UnificatedSamplesAttributeValue)

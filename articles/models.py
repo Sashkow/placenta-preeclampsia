@@ -58,6 +58,10 @@ class SamplesAttributeNameInExperiment(ShowModel):
         else:
             return str(self.old_name)
 
+    @staticmethod
+    def autocomplete_search_fields():
+        return ("id__iexact", "unificated_name__name__icontains",)
+
 
 class Experiment(models.Model):
     must_have_attributes = ['accession', 'secondaryaccession',
@@ -173,7 +177,13 @@ class Sample(models.Model):
 
 class SampleAttribute(models.Model):
     old_value = models.CharField(max_length=255) 
-    unificated_name = models.ForeignKey('SamplesAttributeNameInExperiment', blank=True, null=True)
+    
+    # Experiment.sample_attribute_names.through
+    unificated_name = models.ForeignKey('SamplesAttributeNameInExperiment',
+                                        blank=True,
+                                        null=True
+                                        )
+
     unificated_value = models.ForeignKey('UnificatedSamplesAttributeValue', blank=True, null=True)
     sample = models.ForeignKey('Sample')
 
@@ -215,3 +225,7 @@ class UnificatedSamplesAttributeValue(ShowModel):
     value = models.CharField(max_length=255)
     mesh_id = models.CharField(blank=True, max_length=255)
     to_show = 'value'
+
+    @staticmethod
+    def autocomplete_search_fields():
+        return ("id__iexact", "value__icontains",)

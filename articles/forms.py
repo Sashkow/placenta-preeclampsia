@@ -1,6 +1,6 @@
 from django import forms
 from django.forms import ModelForm
-from .models import Article, Attribute, SampleAttribute, Sample
+from .models import Article, Attribute, SampleAttribute, Sample, SamplesAttributeNameInExperiment
 
 
 # class ArticleForm(ModelForm):
@@ -44,7 +44,7 @@ from .models import Article, Attribute, SampleAttribute, Sample
 #                 entry.save()   
 #         return instance
 
-class SampleInlineForm(ModelForm):
+class SampleAttributeInlineForm(ModelForm):
     name_for_each = forms.BooleanField(required=False,
                                          label='for each sample')
     value_for_each = forms.BooleanField(required=False,
@@ -52,12 +52,17 @@ class SampleInlineForm(ModelForm):
     old_name = forms.CharField(required=False,label='old name')
 
     def __init__(self, *args, **kwargs):
-        super(SampleInlineForm, self).__init__(*args, **kwargs)
-        if hasattr(self,'instance'):
+        super(SampleAttributeInlineForm, self).__init__(*args, **kwargs)
+        if self.instance:
             if hasattr(self.instance, 'unificated_name'):
                 if hasattr(self.instance.unificated_name, 'old_name'):
                     self.fields['old_name'].initial = \
                       self.instance.unificated_name.old_name
+                      
+            if hasattr(self.instance, 'sample'):
+                self.fields['unificated_name'].queryset = \
+                  self.instance.sample.experiment.sample_attribute_names.through
+        
 
     def _get_all_with_same_old_name(self, instance):
         experiment = instance.sample.experiment
