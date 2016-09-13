@@ -210,11 +210,22 @@ class SampleAdmin(SuperModelAdmin):
 class SampleAttributeAdmin(ModelAdmin):
     list_display = ['id','sample', 'unificated_name', 'unificated_value' ]
 
+class UnificatedSamplesAttributeNameAdminInline(admin.TabularInline):
+
+    model = UnificatedSamplesAttributeName.synonyms.through
+    fk_name = 'from_unificatedsamplesattributename'
+    extra = 0
+
+
+class UnificatedSamplesAttributeNameAdmin(ModelAdmin):
+    inlines = [UnificatedSamplesAttributeNameAdminInline,]
+    exclude = ('synonyms',)
+
 admin.site.register(Microarray, MicroarrayAdmin)
 admin.site.register(Sample, SampleAdmin)
 
 
-admin.site.register(UnificatedSamplesAttributeName)
+admin.site.register(UnificatedSamplesAttributeName, UnificatedSamplesAttributeNameAdmin)
 
 
 admin.site.register(SampleAttribute,SampleAttributeAdmin)

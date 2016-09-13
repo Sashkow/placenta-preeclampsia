@@ -49,14 +49,13 @@ class SampleAttributeInlineForm(ModelForm):
                                          label='for each sample')
     value_for_each = forms.BooleanField(required=False,
                                          label='for each sample')
-    old_name = forms.CharField(required=False,label='old name')
 
     def __init__(self, *args, **kwargs):
         super(SampleAttributeInlineForm, self).__init__(*args, **kwargs)
 
-        self.fields['unificated_value'].queryset = \
-          UnificatedSamplesAttributeValue.objects.filter(
-            unificated_name=self.instance.unificated_name)
+        # self.fields['unificated_value'].queryset = \
+        #   UnificatedSamplesAttributeValue.objects.filter(
+        #     unificated_name=self.instance.unificated_name)
         
 
     def _get_all_with_same_old_name(self, instance):
@@ -73,13 +72,18 @@ class SampleAttributeInlineForm(ModelForm):
         return sample_attributes
 
     def _get_all_with_same_old_name_value(self, instance):
-        sample_attributes= self._get_all_with_same_old_name(instance).filter(
-          old_value=instance.old_value)
-        return sample_attributes
+        if instance.unificated_value.unificated_name.name == 'Common':
+            sample_attributes = self._get_all_with_same_old_name(instance)
+            return sample_attributes
+        else:
+            sample_attributes = \
+              self._get_all_with_same_old_name(instance).filter(
+                old_value=instance.old_value)
+            return sample_attributes
 
     def save(self, commit=True):
         
-        instance = super(SampleInlineForm, self).save(commit=False)
+        instance = super(SampleAttributeInlineForm, self).save(commit=False)
         instance.save() # don't know if needed
 
         if self.cleaned_data['name_for_each']:

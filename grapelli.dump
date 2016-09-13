@@ -1,0 +1,3073 @@
+--
+-- PostgreSQL database dump
+--
+
+SET statement_timeout = 0;
+SET lock_timeout = 0;
+SET client_encoding = 'UTF8';
+SET standard_conforming_strings = on;
+SET check_function_bodies = false;
+SET client_min_messages = warning;
+
+--
+-- Name: plpgsql; Type: EXTENSION; Schema: -; Owner: 
+--
+
+CREATE EXTENSION IF NOT EXISTS plpgsql WITH SCHEMA pg_catalog;
+
+
+--
+-- Name: EXTENSION plpgsql; Type: COMMENT; Schema: -; Owner: 
+--
+
+COMMENT ON EXTENSION plpgsql IS 'PL/pgSQL procedural language';
+
+
+--
+-- Name: hstore; Type: EXTENSION; Schema: -; Owner: 
+--
+
+CREATE EXTENSION IF NOT EXISTS hstore WITH SCHEMA public;
+
+
+--
+-- Name: EXTENSION hstore; Type: COMMENT; Schema: -; Owner: 
+--
+
+COMMENT ON EXTENSION hstore IS 'data type for storing sets of (key, value) pairs';
+
+
+SET search_path = public, pg_catalog;
+
+SET default_tablespace = '';
+
+SET default_with_oids = false;
+
+--
+-- Name: articles_article; Type: TABLE; Schema: public; Owner: sashko; Tablespace: 
+--
+
+CREATE TABLE articles_article (
+    id integer NOT NULL
+);
+
+
+ALTER TABLE public.articles_article OWNER TO sashko;
+
+--
+-- Name: articles_article_id_seq; Type: SEQUENCE; Schema: public; Owner: sashko
+--
+
+CREATE SEQUENCE articles_article_id_seq
+    START WITH 1
+    INCREMENT BY 1
+    NO MINVALUE
+    NO MAXVALUE
+    CACHE 1;
+
+
+ALTER TABLE public.articles_article_id_seq OWNER TO sashko;
+
+--
+-- Name: articles_article_id_seq; Type: SEQUENCE OWNED BY; Schema: public; Owner: sashko
+--
+
+ALTER SEQUENCE articles_article_id_seq OWNED BY articles_article.id;
+
+
+--
+-- Name: articles_attribute; Type: TABLE; Schema: public; Owner: sashko; Tablespace: 
+--
+
+CREATE TABLE articles_attribute (
+    id integer NOT NULL,
+    attribute_name character varying(200) NOT NULL,
+    attribute_value character varying(200) NOT NULL,
+    article_id integer NOT NULL
+);
+
+
+ALTER TABLE public.articles_attribute OWNER TO sashko;
+
+--
+-- Name: articles_attribute_id_seq; Type: SEQUENCE; Schema: public; Owner: sashko
+--
+
+CREATE SEQUENCE articles_attribute_id_seq
+    START WITH 1
+    INCREMENT BY 1
+    NO MINVALUE
+    NO MAXVALUE
+    CACHE 1;
+
+
+ALTER TABLE public.articles_attribute_id_seq OWNER TO sashko;
+
+--
+-- Name: articles_attribute_id_seq; Type: SEQUENCE OWNED BY; Schema: public; Owner: sashko
+--
+
+ALTER SEQUENCE articles_attribute_id_seq OWNED BY articles_attribute.id;
+
+
+--
+-- Name: articles_experiment; Type: TABLE; Schema: public; Owner: sashko; Tablespace: 
+--
+
+CREATE TABLE articles_experiment (
+    id integer NOT NULL,
+    data hstore NOT NULL
+);
+
+
+ALTER TABLE public.articles_experiment OWNER TO sashko;
+
+--
+-- Name: articles_experiment_id_seq; Type: SEQUENCE; Schema: public; Owner: sashko
+--
+
+CREATE SEQUENCE articles_experiment_id_seq
+    START WITH 1
+    INCREMENT BY 1
+    NO MINVALUE
+    NO MAXVALUE
+    CACHE 1;
+
+
+ALTER TABLE public.articles_experiment_id_seq OWNER TO sashko;
+
+--
+-- Name: articles_experiment_id_seq; Type: SEQUENCE OWNED BY; Schema: public; Owner: sashko
+--
+
+ALTER SEQUENCE articles_experiment_id_seq OWNED BY articles_experiment.id;
+
+
+--
+-- Name: articles_experiment_microarrays; Type: TABLE; Schema: public; Owner: sashko; Tablespace: 
+--
+
+CREATE TABLE articles_experiment_microarrays (
+    id integer NOT NULL,
+    experiment_id integer NOT NULL,
+    microarray_id integer NOT NULL
+);
+
+
+ALTER TABLE public.articles_experiment_microarrays OWNER TO sashko;
+
+--
+-- Name: articles_experiment_microarrays_id_seq; Type: SEQUENCE; Schema: public; Owner: sashko
+--
+
+CREATE SEQUENCE articles_experiment_microarrays_id_seq
+    START WITH 1
+    INCREMENT BY 1
+    NO MINVALUE
+    NO MAXVALUE
+    CACHE 1;
+
+
+ALTER TABLE public.articles_experiment_microarrays_id_seq OWNER TO sashko;
+
+--
+-- Name: articles_experiment_microarrays_id_seq; Type: SEQUENCE OWNED BY; Schema: public; Owner: sashko
+--
+
+ALTER SEQUENCE articles_experiment_microarrays_id_seq OWNED BY articles_experiment_microarrays.id;
+
+
+--
+-- Name: articles_microarray; Type: TABLE; Schema: public; Owner: sashko; Tablespace: 
+--
+
+CREATE TABLE articles_microarray (
+    id integer NOT NULL,
+    data hstore NOT NULL
+);
+
+
+ALTER TABLE public.articles_microarray OWNER TO sashko;
+
+--
+-- Name: articles_microarray_id_seq; Type: SEQUENCE; Schema: public; Owner: sashko
+--
+
+CREATE SEQUENCE articles_microarray_id_seq
+    START WITH 1
+    INCREMENT BY 1
+    NO MINVALUE
+    NO MAXVALUE
+    CACHE 1;
+
+
+ALTER TABLE public.articles_microarray_id_seq OWNER TO sashko;
+
+--
+-- Name: articles_microarray_id_seq; Type: SEQUENCE OWNED BY; Schema: public; Owner: sashko
+--
+
+ALTER SEQUENCE articles_microarray_id_seq OWNED BY articles_microarray.id;
+
+
+--
+-- Name: articles_sample; Type: TABLE; Schema: public; Owner: sashko; Tablespace: 
+--
+
+CREATE TABLE articles_sample (
+    id integer NOT NULL,
+    experiment_id integer NOT NULL
+);
+
+
+ALTER TABLE public.articles_sample OWNER TO sashko;
+
+--
+-- Name: articles_sample_id_seq; Type: SEQUENCE; Schema: public; Owner: sashko
+--
+
+CREATE SEQUENCE articles_sample_id_seq
+    START WITH 1
+    INCREMENT BY 1
+    NO MINVALUE
+    NO MAXVALUE
+    CACHE 1;
+
+
+ALTER TABLE public.articles_sample_id_seq OWNER TO sashko;
+
+--
+-- Name: articles_sample_id_seq; Type: SEQUENCE OWNED BY; Schema: public; Owner: sashko
+--
+
+ALTER SEQUENCE articles_sample_id_seq OWNED BY articles_sample.id;
+
+
+--
+-- Name: articles_sampleattribute; Type: TABLE; Schema: public; Owner: sashko; Tablespace: 
+--
+
+CREATE TABLE articles_sampleattribute (
+    id integer NOT NULL,
+    old_value character varying(255) NOT NULL,
+    sample_id integer NOT NULL,
+    unificated_value_id integer,
+    unificated_name_id integer,
+    old_name character varying(255) NOT NULL
+);
+
+
+ALTER TABLE public.articles_sampleattribute OWNER TO sashko;
+
+--
+-- Name: articles_sampleattributevalueinsample_id_seq; Type: SEQUENCE; Schema: public; Owner: sashko
+--
+
+CREATE SEQUENCE articles_sampleattributevalueinsample_id_seq
+    START WITH 1
+    INCREMENT BY 1
+    NO MINVALUE
+    NO MAXVALUE
+    CACHE 1;
+
+
+ALTER TABLE public.articles_sampleattributevalueinsample_id_seq OWNER TO sashko;
+
+--
+-- Name: articles_sampleattributevalueinsample_id_seq; Type: SEQUENCE OWNED BY; Schema: public; Owner: sashko
+--
+
+ALTER SEQUENCE articles_sampleattributevalueinsample_id_seq OWNED BY articles_sampleattribute.id;
+
+
+--
+-- Name: articles_unificatedsamplesattributename; Type: TABLE; Schema: public; Owner: sashko; Tablespace: 
+--
+
+CREATE TABLE articles_unificatedsamplesattributename (
+    id integer NOT NULL,
+    name character varying(255) NOT NULL,
+    additional_info hstore
+);
+
+
+ALTER TABLE public.articles_unificatedsamplesattributename OWNER TO sashko;
+
+--
+-- Name: articles_unificatedsamplesattributename_id_seq; Type: SEQUENCE; Schema: public; Owner: sashko
+--
+
+CREATE SEQUENCE articles_unificatedsamplesattributename_id_seq
+    START WITH 1
+    INCREMENT BY 1
+    NO MINVALUE
+    NO MAXVALUE
+    CACHE 1;
+
+
+ALTER TABLE public.articles_unificatedsamplesattributename_id_seq OWNER TO sashko;
+
+--
+-- Name: articles_unificatedsamplesattributename_id_seq; Type: SEQUENCE OWNED BY; Schema: public; Owner: sashko
+--
+
+ALTER SEQUENCE articles_unificatedsamplesattributename_id_seq OWNED BY articles_unificatedsamplesattributename.id;
+
+
+--
+-- Name: articles_unificatedsamplesattributename_synonyms; Type: TABLE; Schema: public; Owner: sashko; Tablespace: 
+--
+
+CREATE TABLE articles_unificatedsamplesattributename_synonyms (
+    id integer NOT NULL,
+    from_unificatedsamplesattributename_id integer NOT NULL,
+    to_unificatedsamplesattributename_id integer NOT NULL
+);
+
+
+ALTER TABLE public.articles_unificatedsamplesattributename_synonyms OWNER TO sashko;
+
+--
+-- Name: articles_unificatedsamplesattributename_synonyms_id_seq; Type: SEQUENCE; Schema: public; Owner: sashko
+--
+
+CREATE SEQUENCE articles_unificatedsamplesattributename_synonyms_id_seq
+    START WITH 1
+    INCREMENT BY 1
+    NO MINVALUE
+    NO MAXVALUE
+    CACHE 1;
+
+
+ALTER TABLE public.articles_unificatedsamplesattributename_synonyms_id_seq OWNER TO sashko;
+
+--
+-- Name: articles_unificatedsamplesattributename_synonyms_id_seq; Type: SEQUENCE OWNED BY; Schema: public; Owner: sashko
+--
+
+ALTER SEQUENCE articles_unificatedsamplesattributename_synonyms_id_seq OWNED BY articles_unificatedsamplesattributename_synonyms.id;
+
+
+--
+-- Name: articles_unificatedsamplesattributevalue; Type: TABLE; Schema: public; Owner: sashko; Tablespace: 
+--
+
+CREATE TABLE articles_unificatedsamplesattributevalue (
+    id integer NOT NULL,
+    value character varying(255) NOT NULL,
+    unificated_name_id integer NOT NULL,
+    additional_info hstore
+);
+
+
+ALTER TABLE public.articles_unificatedsamplesattributevalue OWNER TO sashko;
+
+--
+-- Name: articles_unificatedsamplesattributevalue_id_seq; Type: SEQUENCE; Schema: public; Owner: sashko
+--
+
+CREATE SEQUENCE articles_unificatedsamplesattributevalue_id_seq
+    START WITH 1
+    INCREMENT BY 1
+    NO MINVALUE
+    NO MAXVALUE
+    CACHE 1;
+
+
+ALTER TABLE public.articles_unificatedsamplesattributevalue_id_seq OWNER TO sashko;
+
+--
+-- Name: articles_unificatedsamplesattributevalue_id_seq; Type: SEQUENCE OWNED BY; Schema: public; Owner: sashko
+--
+
+ALTER SEQUENCE articles_unificatedsamplesattributevalue_id_seq OWNED BY articles_unificatedsamplesattributevalue.id;
+
+
+--
+-- Name: auth_group; Type: TABLE; Schema: public; Owner: sashko; Tablespace: 
+--
+
+CREATE TABLE auth_group (
+    id integer NOT NULL,
+    name character varying(80) NOT NULL
+);
+
+
+ALTER TABLE public.auth_group OWNER TO sashko;
+
+--
+-- Name: auth_group_id_seq; Type: SEQUENCE; Schema: public; Owner: sashko
+--
+
+CREATE SEQUENCE auth_group_id_seq
+    START WITH 1
+    INCREMENT BY 1
+    NO MINVALUE
+    NO MAXVALUE
+    CACHE 1;
+
+
+ALTER TABLE public.auth_group_id_seq OWNER TO sashko;
+
+--
+-- Name: auth_group_id_seq; Type: SEQUENCE OWNED BY; Schema: public; Owner: sashko
+--
+
+ALTER SEQUENCE auth_group_id_seq OWNED BY auth_group.id;
+
+
+--
+-- Name: auth_group_permissions; Type: TABLE; Schema: public; Owner: sashko; Tablespace: 
+--
+
+CREATE TABLE auth_group_permissions (
+    id integer NOT NULL,
+    group_id integer NOT NULL,
+    permission_id integer NOT NULL
+);
+
+
+ALTER TABLE public.auth_group_permissions OWNER TO sashko;
+
+--
+-- Name: auth_group_permissions_id_seq; Type: SEQUENCE; Schema: public; Owner: sashko
+--
+
+CREATE SEQUENCE auth_group_permissions_id_seq
+    START WITH 1
+    INCREMENT BY 1
+    NO MINVALUE
+    NO MAXVALUE
+    CACHE 1;
+
+
+ALTER TABLE public.auth_group_permissions_id_seq OWNER TO sashko;
+
+--
+-- Name: auth_group_permissions_id_seq; Type: SEQUENCE OWNED BY; Schema: public; Owner: sashko
+--
+
+ALTER SEQUENCE auth_group_permissions_id_seq OWNED BY auth_group_permissions.id;
+
+
+--
+-- Name: auth_permission; Type: TABLE; Schema: public; Owner: sashko; Tablespace: 
+--
+
+CREATE TABLE auth_permission (
+    id integer NOT NULL,
+    name character varying(255) NOT NULL,
+    content_type_id integer NOT NULL,
+    codename character varying(100) NOT NULL
+);
+
+
+ALTER TABLE public.auth_permission OWNER TO sashko;
+
+--
+-- Name: auth_permission_id_seq; Type: SEQUENCE; Schema: public; Owner: sashko
+--
+
+CREATE SEQUENCE auth_permission_id_seq
+    START WITH 1
+    INCREMENT BY 1
+    NO MINVALUE
+    NO MAXVALUE
+    CACHE 1;
+
+
+ALTER TABLE public.auth_permission_id_seq OWNER TO sashko;
+
+--
+-- Name: auth_permission_id_seq; Type: SEQUENCE OWNED BY; Schema: public; Owner: sashko
+--
+
+ALTER SEQUENCE auth_permission_id_seq OWNED BY auth_permission.id;
+
+
+--
+-- Name: auth_user; Type: TABLE; Schema: public; Owner: sashko; Tablespace: 
+--
+
+CREATE TABLE auth_user (
+    id integer NOT NULL,
+    password character varying(128) NOT NULL,
+    last_login timestamp with time zone,
+    is_superuser boolean NOT NULL,
+    username character varying(30) NOT NULL,
+    first_name character varying(30) NOT NULL,
+    last_name character varying(30) NOT NULL,
+    email character varying(254) NOT NULL,
+    is_staff boolean NOT NULL,
+    is_active boolean NOT NULL,
+    date_joined timestamp with time zone NOT NULL
+);
+
+
+ALTER TABLE public.auth_user OWNER TO sashko;
+
+--
+-- Name: auth_user_groups; Type: TABLE; Schema: public; Owner: sashko; Tablespace: 
+--
+
+CREATE TABLE auth_user_groups (
+    id integer NOT NULL,
+    user_id integer NOT NULL,
+    group_id integer NOT NULL
+);
+
+
+ALTER TABLE public.auth_user_groups OWNER TO sashko;
+
+--
+-- Name: auth_user_groups_id_seq; Type: SEQUENCE; Schema: public; Owner: sashko
+--
+
+CREATE SEQUENCE auth_user_groups_id_seq
+    START WITH 1
+    INCREMENT BY 1
+    NO MINVALUE
+    NO MAXVALUE
+    CACHE 1;
+
+
+ALTER TABLE public.auth_user_groups_id_seq OWNER TO sashko;
+
+--
+-- Name: auth_user_groups_id_seq; Type: SEQUENCE OWNED BY; Schema: public; Owner: sashko
+--
+
+ALTER SEQUENCE auth_user_groups_id_seq OWNED BY auth_user_groups.id;
+
+
+--
+-- Name: auth_user_id_seq; Type: SEQUENCE; Schema: public; Owner: sashko
+--
+
+CREATE SEQUENCE auth_user_id_seq
+    START WITH 1
+    INCREMENT BY 1
+    NO MINVALUE
+    NO MAXVALUE
+    CACHE 1;
+
+
+ALTER TABLE public.auth_user_id_seq OWNER TO sashko;
+
+--
+-- Name: auth_user_id_seq; Type: SEQUENCE OWNED BY; Schema: public; Owner: sashko
+--
+
+ALTER SEQUENCE auth_user_id_seq OWNED BY auth_user.id;
+
+
+--
+-- Name: auth_user_user_permissions; Type: TABLE; Schema: public; Owner: sashko; Tablespace: 
+--
+
+CREATE TABLE auth_user_user_permissions (
+    id integer NOT NULL,
+    user_id integer NOT NULL,
+    permission_id integer NOT NULL
+);
+
+
+ALTER TABLE public.auth_user_user_permissions OWNER TO sashko;
+
+--
+-- Name: auth_user_user_permissions_id_seq; Type: SEQUENCE; Schema: public; Owner: sashko
+--
+
+CREATE SEQUENCE auth_user_user_permissions_id_seq
+    START WITH 1
+    INCREMENT BY 1
+    NO MINVALUE
+    NO MAXVALUE
+    CACHE 1;
+
+
+ALTER TABLE public.auth_user_user_permissions_id_seq OWNER TO sashko;
+
+--
+-- Name: auth_user_user_permissions_id_seq; Type: SEQUENCE OWNED BY; Schema: public; Owner: sashko
+--
+
+ALTER SEQUENCE auth_user_user_permissions_id_seq OWNED BY auth_user_user_permissions.id;
+
+
+--
+-- Name: django_admin_log; Type: TABLE; Schema: public; Owner: sashko; Tablespace: 
+--
+
+CREATE TABLE django_admin_log (
+    id integer NOT NULL,
+    action_time timestamp with time zone NOT NULL,
+    object_id text,
+    object_repr character varying(200) NOT NULL,
+    action_flag smallint NOT NULL,
+    change_message text NOT NULL,
+    content_type_id integer,
+    user_id integer NOT NULL,
+    CONSTRAINT django_admin_log_action_flag_check CHECK ((action_flag >= 0))
+);
+
+
+ALTER TABLE public.django_admin_log OWNER TO sashko;
+
+--
+-- Name: django_admin_log_id_seq; Type: SEQUENCE; Schema: public; Owner: sashko
+--
+
+CREATE SEQUENCE django_admin_log_id_seq
+    START WITH 1
+    INCREMENT BY 1
+    NO MINVALUE
+    NO MAXVALUE
+    CACHE 1;
+
+
+ALTER TABLE public.django_admin_log_id_seq OWNER TO sashko;
+
+--
+-- Name: django_admin_log_id_seq; Type: SEQUENCE OWNED BY; Schema: public; Owner: sashko
+--
+
+ALTER SEQUENCE django_admin_log_id_seq OWNED BY django_admin_log.id;
+
+
+--
+-- Name: django_content_type; Type: TABLE; Schema: public; Owner: sashko; Tablespace: 
+--
+
+CREATE TABLE django_content_type (
+    id integer NOT NULL,
+    app_label character varying(100) NOT NULL,
+    model character varying(100) NOT NULL
+);
+
+
+ALTER TABLE public.django_content_type OWNER TO sashko;
+
+--
+-- Name: django_content_type_id_seq; Type: SEQUENCE; Schema: public; Owner: sashko
+--
+
+CREATE SEQUENCE django_content_type_id_seq
+    START WITH 1
+    INCREMENT BY 1
+    NO MINVALUE
+    NO MAXVALUE
+    CACHE 1;
+
+
+ALTER TABLE public.django_content_type_id_seq OWNER TO sashko;
+
+--
+-- Name: django_content_type_id_seq; Type: SEQUENCE OWNED BY; Schema: public; Owner: sashko
+--
+
+ALTER SEQUENCE django_content_type_id_seq OWNED BY django_content_type.id;
+
+
+--
+-- Name: django_migrations; Type: TABLE; Schema: public; Owner: sashko; Tablespace: 
+--
+
+CREATE TABLE django_migrations (
+    id integer NOT NULL,
+    app character varying(255) NOT NULL,
+    name character varying(255) NOT NULL,
+    applied timestamp with time zone NOT NULL
+);
+
+
+ALTER TABLE public.django_migrations OWNER TO sashko;
+
+--
+-- Name: django_migrations_id_seq; Type: SEQUENCE; Schema: public; Owner: sashko
+--
+
+CREATE SEQUENCE django_migrations_id_seq
+    START WITH 1
+    INCREMENT BY 1
+    NO MINVALUE
+    NO MAXVALUE
+    CACHE 1;
+
+
+ALTER TABLE public.django_migrations_id_seq OWNER TO sashko;
+
+--
+-- Name: django_migrations_id_seq; Type: SEQUENCE OWNED BY; Schema: public; Owner: sashko
+--
+
+ALTER SEQUENCE django_migrations_id_seq OWNED BY django_migrations.id;
+
+
+--
+-- Name: django_session; Type: TABLE; Schema: public; Owner: sashko; Tablespace: 
+--
+
+CREATE TABLE django_session (
+    session_key character varying(40) NOT NULL,
+    session_data text NOT NULL,
+    expire_date timestamp with time zone NOT NULL
+);
+
+
+ALTER TABLE public.django_session OWNER TO sashko;
+
+--
+-- Name: id; Type: DEFAULT; Schema: public; Owner: sashko
+--
+
+ALTER TABLE ONLY articles_article ALTER COLUMN id SET DEFAULT nextval('articles_article_id_seq'::regclass);
+
+
+--
+-- Name: id; Type: DEFAULT; Schema: public; Owner: sashko
+--
+
+ALTER TABLE ONLY articles_attribute ALTER COLUMN id SET DEFAULT nextval('articles_attribute_id_seq'::regclass);
+
+
+--
+-- Name: id; Type: DEFAULT; Schema: public; Owner: sashko
+--
+
+ALTER TABLE ONLY articles_experiment ALTER COLUMN id SET DEFAULT nextval('articles_experiment_id_seq'::regclass);
+
+
+--
+-- Name: id; Type: DEFAULT; Schema: public; Owner: sashko
+--
+
+ALTER TABLE ONLY articles_experiment_microarrays ALTER COLUMN id SET DEFAULT nextval('articles_experiment_microarrays_id_seq'::regclass);
+
+
+--
+-- Name: id; Type: DEFAULT; Schema: public; Owner: sashko
+--
+
+ALTER TABLE ONLY articles_microarray ALTER COLUMN id SET DEFAULT nextval('articles_microarray_id_seq'::regclass);
+
+
+--
+-- Name: id; Type: DEFAULT; Schema: public; Owner: sashko
+--
+
+ALTER TABLE ONLY articles_sample ALTER COLUMN id SET DEFAULT nextval('articles_sample_id_seq'::regclass);
+
+
+--
+-- Name: id; Type: DEFAULT; Schema: public; Owner: sashko
+--
+
+ALTER TABLE ONLY articles_sampleattribute ALTER COLUMN id SET DEFAULT nextval('articles_sampleattributevalueinsample_id_seq'::regclass);
+
+
+--
+-- Name: id; Type: DEFAULT; Schema: public; Owner: sashko
+--
+
+ALTER TABLE ONLY articles_unificatedsamplesattributename ALTER COLUMN id SET DEFAULT nextval('articles_unificatedsamplesattributename_id_seq'::regclass);
+
+
+--
+-- Name: id; Type: DEFAULT; Schema: public; Owner: sashko
+--
+
+ALTER TABLE ONLY articles_unificatedsamplesattributename_synonyms ALTER COLUMN id SET DEFAULT nextval('articles_unificatedsamplesattributename_synonyms_id_seq'::regclass);
+
+
+--
+-- Name: id; Type: DEFAULT; Schema: public; Owner: sashko
+--
+
+ALTER TABLE ONLY articles_unificatedsamplesattributevalue ALTER COLUMN id SET DEFAULT nextval('articles_unificatedsamplesattributevalue_id_seq'::regclass);
+
+
+--
+-- Name: id; Type: DEFAULT; Schema: public; Owner: sashko
+--
+
+ALTER TABLE ONLY auth_group ALTER COLUMN id SET DEFAULT nextval('auth_group_id_seq'::regclass);
+
+
+--
+-- Name: id; Type: DEFAULT; Schema: public; Owner: sashko
+--
+
+ALTER TABLE ONLY auth_group_permissions ALTER COLUMN id SET DEFAULT nextval('auth_group_permissions_id_seq'::regclass);
+
+
+--
+-- Name: id; Type: DEFAULT; Schema: public; Owner: sashko
+--
+
+ALTER TABLE ONLY auth_permission ALTER COLUMN id SET DEFAULT nextval('auth_permission_id_seq'::regclass);
+
+
+--
+-- Name: id; Type: DEFAULT; Schema: public; Owner: sashko
+--
+
+ALTER TABLE ONLY auth_user ALTER COLUMN id SET DEFAULT nextval('auth_user_id_seq'::regclass);
+
+
+--
+-- Name: id; Type: DEFAULT; Schema: public; Owner: sashko
+--
+
+ALTER TABLE ONLY auth_user_groups ALTER COLUMN id SET DEFAULT nextval('auth_user_groups_id_seq'::regclass);
+
+
+--
+-- Name: id; Type: DEFAULT; Schema: public; Owner: sashko
+--
+
+ALTER TABLE ONLY auth_user_user_permissions ALTER COLUMN id SET DEFAULT nextval('auth_user_user_permissions_id_seq'::regclass);
+
+
+--
+-- Name: id; Type: DEFAULT; Schema: public; Owner: sashko
+--
+
+ALTER TABLE ONLY django_admin_log ALTER COLUMN id SET DEFAULT nextval('django_admin_log_id_seq'::regclass);
+
+
+--
+-- Name: id; Type: DEFAULT; Schema: public; Owner: sashko
+--
+
+ALTER TABLE ONLY django_content_type ALTER COLUMN id SET DEFAULT nextval('django_content_type_id_seq'::regclass);
+
+
+--
+-- Name: id; Type: DEFAULT; Schema: public; Owner: sashko
+--
+
+ALTER TABLE ONLY django_migrations ALTER COLUMN id SET DEFAULT nextval('django_migrations_id_seq'::regclass);
+
+
+--
+-- Data for Name: articles_article; Type: TABLE DATA; Schema: public; Owner: sashko
+--
+
+COPY articles_article (id) FROM stdin;
+\.
+
+
+--
+-- Name: articles_article_id_seq; Type: SEQUENCE SET; Schema: public; Owner: sashko
+--
+
+SELECT pg_catalog.setval('articles_article_id_seq', 1, false);
+
+
+--
+-- Data for Name: articles_attribute; Type: TABLE DATA; Schema: public; Owner: sashko
+--
+
+COPY articles_attribute (id, attribute_name, attribute_value, article_id) FROM stdin;
+\.
+
+
+--
+-- Name: articles_attribute_id_seq; Type: SEQUENCE SET; Schema: public; Owner: sashko
+--
+
+SELECT pg_catalog.setval('articles_attribute_id_seq', 1, false);
+
+
+--
+-- Data for Name: articles_experiment; Type: TABLE DATA; Schema: public; Owner: sashko
+--
+
+COPY articles_experiment (id, data) FROM stdin;
+3	"id"=>"529820", "name"=>"Epigenetics and Preeclampsia: Defining Functional Epimutations in the Preeclamptic Placenta Related to the TGF-β Pathway [methylation]", "assays"=>"36", "samples"=>"36", "species"=>"Homo sapiens", "unified"=>"true", "organism"=>"Homo sapiens", "accession"=>"E-GEOD-73375", "releasedate"=>"2015-09-24", "experimenttype"=>"methylation profiling by array", "lastupdatedate"=>"2015-09-25", "secondaryaccession"=>"GSE73375"
+1	"id"=>"531095", "name"=>"Gene expression profiling reveal different molecular pattern in G-protein coupled receptor protein signaling pathway between early- and late-onset preeclampsia", "assays"=>"25", "samples"=>"50", "species"=>"Homo sapiens", "organism"=>"Homo sapiens", "accession"=>"E-GEOD-74341", "releasedate"=>"2015-10-27", "experimenttype"=>"transcription profiling by array", "lastupdatedate"=>"2015-11-24", "secondaryaccession"=>"GSE74341"
+2	"id"=>"529822", "name"=>"Epigenetics and Preeclampsia: Defining Functional Epimutations in the Preeclamptic Placenta Related to the TGF-β Pathway", "assays"=>"72", "samples"=>"72", "species"=>"Homo sapiens", "organism"=>"Homo sapiens", "accession"=>"E-GEOD-73377", "releasedate"=>"2015-09-24", "experimenttype"=>"methylation profiling by array", "lastupdatedate"=>"2015-09-25", "secondaryaccession"=>"GSE73377"
+\.
+
+
+--
+-- Name: articles_experiment_id_seq; Type: SEQUENCE SET; Schema: public; Owner: sashko
+--
+
+SELECT pg_catalog.setval('articles_experiment_id_seq', 3, true);
+
+
+--
+-- Data for Name: articles_experiment_microarrays; Type: TABLE DATA; Schema: public; Owner: sashko
+--
+
+COPY articles_experiment_microarrays (id, experiment_id, microarray_id) FROM stdin;
+2	1	2
+3	2	3
+4	2	4
+5	3	3
+\.
+
+
+--
+-- Name: articles_experiment_microarrays_id_seq; Type: SEQUENCE SET; Schema: public; Owner: sashko
+--
+
+SELECT pg_catalog.setval('articles_experiment_microarrays_id_seq', 5, true);
+
+
+--
+-- Data for Name: articles_microarray; Type: TABLE DATA; Schema: public; Owner: sashko
+--
+
+COPY articles_microarray (id, data) FROM stdin;
+2	"id"=>"24553", "name"=>"Agilent-039494 SurePrint G3 Human GE v2 8x60K Microarray 039381", "count"=>"25", "accession"=>"A-GEOD-16699"
+4	"id"=>"24568", "name"=>"[HuGene-2_0-st] Affymetrix Human Gene 2.0 ST Array [transcript (gene) version]", "count"=>"36", "accession"=>"A-GEOD-16686"
+3	"id"=>"19396", "name"=>"Illumina HumanMethylation450 BeadChip (HumanMethylation450_15017482_v.1.1)", "count"=>"36", "accession"=>"A-GEOD-13534"
+\.
+
+
+--
+-- Name: articles_microarray_id_seq; Type: SEQUENCE SET; Schema: public; Owner: sashko
+--
+
+SELECT pg_catalog.setval('articles_microarray_id_seq', 4, true);
+
+
+--
+-- Data for Name: articles_sample; Type: TABLE DATA; Schema: public; Owner: sashko
+--
+
+COPY articles_sample (id, experiment_id) FROM stdin;
+48	1
+49	1
+50	1
+51	1
+52	2
+53	2
+54	2
+55	2
+56	2
+57	2
+58	2
+59	2
+60	2
+61	2
+62	2
+63	2
+64	2
+65	2
+66	2
+67	2
+68	2
+69	2
+70	2
+71	2
+72	2
+73	2
+74	2
+75	2
+76	2
+77	2
+78	2
+79	2
+80	2
+81	2
+82	2
+83	2
+84	2
+85	2
+86	2
+87	2
+88	2
+89	2
+90	2
+91	2
+92	2
+93	2
+94	2
+95	2
+96	2
+97	2
+98	2
+99	2
+100	2
+101	2
+102	2
+103	2
+104	2
+105	2
+106	2
+107	2
+108	2
+109	2
+110	2
+111	2
+112	2
+113	2
+114	2
+115	2
+116	2
+117	2
+118	2
+119	2
+120	2
+121	2
+122	2
+123	2
+125	3
+130	3
+133	3
+127	3
+128	3
+129	3
+134	3
+131	3
+132	3
+141	3
+135	3
+136	3
+137	3
+138	3
+139	3
+140	3
+142	3
+143	3
+144	3
+145	3
+146	3
+2	1
+3	1
+4	1
+5	1
+6	1
+7	1
+8	1
+9	1
+10	1
+11	1
+12	1
+13	1
+14	1
+15	1
+16	1
+17	1
+18	1
+19	1
+20	1
+21	1
+22	1
+23	1
+24	1
+25	1
+26	1
+27	1
+28	1
+29	1
+30	1
+31	1
+32	1
+33	1
+34	1
+35	1
+36	1
+37	1
+38	1
+39	1
+40	1
+41	1
+42	1
+43	1
+44	1
+45	1
+46	1
+47	1
+147	3
+148	3
+149	3
+150	3
+151	3
+152	3
+153	3
+154	3
+155	3
+156	3
+157	3
+158	3
+159	3
+124	3
+126	3
+\.
+
+
+--
+-- Name: articles_sample_id_seq; Type: SEQUENCE SET; Schema: public; Owner: sashko
+--
+
+SELECT pg_catalog.setval('articles_sample_id_seq', 159, true);
+
+
+--
+-- Data for Name: articles_sampleattribute; Type: TABLE DATA; Schema: public; Owner: sashko
+--
+
+COPY articles_sampleattribute (id, old_value, sample_id, unificated_value_id, unificated_name_id, old_name) FROM stdin;
+51	Homo sapiens	12	\N	\N	organism
+50	GSM1917680 2	11	\N	\N	name
+4	pooled-sample reference	2	\N	\N	sample type
+1	placental tissue	2	\N	\N	organism part
+6	Homo sapiens	3	\N	\N	organism
+5	GSM1917684 1	2	\N	\N	name
+9	<empty>	3	\N	\N	sample type
+10	GSM1917684 2	3	\N	\N	name
+8	placental tissue	3	\N	\N	organism part
+11	Homo sapiens	4	\N	\N	organism
+7	controls who delivered preterm (<34 weeks)	3	\N	\N	subject status
+14	<empty>	4	\N	\N	sample type
+15	GSM1917683 2	4	\N	\N	name
+13	placental tissue	4	\N	\N	organism part
+16	Homo sapiens	5	\N	\N	organism
+12	controls who delivered preterm (<34 weeks)	4	\N	\N	subject status
+19	pooled-sample reference	5	\N	\N	sample type
+20	GSM1917683 1	5	\N	\N	name
+18	placental tissue	5	\N	\N	organism part
+21	Homo sapiens	6	\N	\N	organism
+17	controls who delivered at term (>36 weeks)	5	\N	\N	subject status
+24	pooled-sample reference	6	\N	\N	sample type
+25	GSM1917682 1	6	\N	\N	name
+23	placental tissue	6	\N	\N	organism part
+26	Homo sapiens	7	\N	\N	organism
+22	controls who delivered at term (>36 weeks)	6	\N	\N	subject status
+29	<empty>	7	\N	\N	sample type
+30	GSM1917682 2	7	\N	\N	name
+28	placental tissue	7	\N	\N	organism part
+31	Homo sapiens	8	\N	\N	organism
+27	controls who delivered preterm (<34 weeks)	7	\N	\N	subject status
+34	pooled-sample reference	8	\N	\N	sample type
+35	GSM1917681 1	8	\N	\N	name
+33	placental tissue	8	\N	\N	organism part
+36	Homo sapiens	9	\N	\N	organism
+32	controls who delivered at term (>36 weeks)	8	\N	\N	subject status
+39	<empty>	9	\N	\N	sample type
+40	GSM1917681 2	9	\N	\N	name
+38	placental tissue	9	\N	\N	organism part
+41	Homo sapiens	10	\N	\N	organism
+37	controls who delivered preterm (<34 weeks)	9	\N	\N	subject status
+44	pooled-sample reference	10	\N	\N	sample type
+45	GSM1917680 1	10	\N	\N	name
+43	placental tissue	10	\N	\N	organism part
+46	Homo sapiens	11	\N	\N	organism
+42	controls who delivered at term (>36 weeks)	10	\N	\N	subject status
+49	<empty>	11	\N	\N	sample type
+47	controls who delivered preterm (<34 weeks)	11	\N	\N	subject status
+48	placental tissue	11	\N	\N	organism part
+54	pooled-sample reference	12	\N	\N	sample type
+55	GSM1917679 1	12	\N	\N	name
+53	placental tissue	12	\N	\N	organism part
+56	Homo sapiens	13	\N	\N	organism
+52	controls who delivered at term (>36 weeks)	12	\N	\N	subject status
+59	<empty>	13	\N	\N	sample type
+60	GSM1917679 2	13	\N	\N	name
+58	placental tissue	13	\N	\N	organism part
+61	Homo sapiens	14	\N	\N	organism
+57	controls who delivered at term (>36 weeks)	13	\N	\N	subject status
+64	pooled-sample reference	14	\N	\N	sample type
+65	GSM1917678 1	14	\N	\N	name
+63	placental tissue	14	\N	\N	organism part
+66	Homo sapiens	15	\N	\N	organism
+62	controls who delivered at term (>36 weeks)	14	\N	\N	subject status
+69	<empty>	15	\N	\N	sample type
+70	GSM1917678 2	15	\N	\N	name
+68	placental tissue	15	\N	\N	organism part
+71	Homo sapiens	16	\N	\N	organism
+67	controls who delivered at term (>36 weeks)	15	\N	\N	subject status
+74	pooled-sample reference	16	\N	\N	sample type
+75	GSM1917677 1	16	\N	\N	name
+73	placental tissue	16	\N	\N	organism part
+76	Homo sapiens	17	\N	\N	organism
+72	controls who delivered at term (>36 weeks)	16	\N	\N	subject status
+79	<empty>	17	\N	\N	sample type
+80	GSM1917677 2	17	\N	\N	name
+78	placental tissue	17	\N	\N	organism part
+81	Homo sapiens	18	\N	\N	organism
+77	controls who delivered at term (>36 weeks)	17	\N	\N	subject status
+84	pooled-sample reference	18	\N	\N	sample type
+85	GSM1917676 1	18	\N	\N	name
+83	placental tissue	18	\N	\N	organism part
+86	Homo sapiens	19	\N	\N	organism
+82	controls who delivered at term (>36 weeks)	18	\N	\N	subject status
+89	<empty>	19	\N	\N	sample type
+90	GSM1917676 2	19	\N	\N	name
+88	placental tissue	19	\N	\N	organism part
+91	Homo sapiens	20	\N	\N	organism
+87	controls who delivered at term (>36 weeks)	19	\N	\N	subject status
+94	<empty>	20	\N	\N	sample type
+95	GSM1917675 2	20	\N	\N	name
+93	placental tissue	20	\N	\N	organism part
+96	Homo sapiens	21	\N	\N	organism
+92	controls who delivered at term (>36 weeks)	20	\N	\N	subject status
+99	pooled-sample reference	21	\N	\N	sample type
+100	GSM1917675 1	21	\N	\N	name
+98	placental tissue	21	\N	\N	organism part
+101	Homo sapiens	22	\N	\N	organism
+97	controls who delivered at term (>36 weeks)	21	\N	\N	subject status
+102	controls who delivered at term (>36 weeks)	22	\N	\N	subject status
+103	placental tissue	22	\N	\N	organism part
+205	GSM1917664 2	42	\N	\N	name
+105	GSM1917674 1	22	\N	\N	name
+106	Homo sapiens	23	\N	\N	organism
+109	<empty>	23	\N	\N	sample type
+108	placental tissue	23	\N	\N	organism part
+111	Homo sapiens	24	\N	\N	organism
+110	GSM1917674 2	23	\N	\N	name
+114	<empty>	24	\N	\N	sample type
+115	GSM1917673 2	24	\N	\N	name
+113	placental tissue	24	\N	\N	organism part
+116	Homo sapiens	25	\N	\N	organism
+112	patients with late-onset (>36 weeks) preeclampsia (LOPE)	24	\N	\N	subject status
+119	pooled-sample reference	25	\N	\N	sample type
+120	GSM1917673 1	25	\N	\N	name
+118	placental tissue	25	\N	\N	organism part
+121	Homo sapiens	26	\N	\N	organism
+117	controls who delivered at term (>36 weeks)	25	\N	\N	subject status
+124	<empty>	26	\N	\N	sample type
+125	GSM1917672 2	26	\N	\N	name
+123	placental tissue	26	\N	\N	organism part
+126	Homo sapiens	27	\N	\N	organism
+122	patients with late-onset (>36 weeks) preeclampsia (LOPE)	26	\N	\N	subject status
+129	pooled-sample reference	27	\N	\N	sample type
+130	GSM1917672 1	27	\N	\N	name
+128	placental tissue	27	\N	\N	organism part
+131	Homo sapiens	28	\N	\N	organism
+127	controls who delivered at term (>36 weeks)	27	\N	\N	subject status
+134	pooled-sample reference	28	\N	\N	sample type
+135	GSM1917671 1	28	\N	\N	name
+133	placental tissue	28	\N	\N	organism part
+136	Homo sapiens	29	\N	\N	organism
+132	controls who delivered at term (>36 weeks)	28	\N	\N	subject status
+139	<empty>	29	\N	\N	sample type
+140	GSM1917671 2	29	\N	\N	name
+138	placental tissue	29	\N	\N	organism part
+141	Homo sapiens	30	\N	\N	organism
+137	patients with late-onset (>36 weeks) preeclampsia (LOPE)	29	\N	\N	subject status
+144	pooled-sample reference	30	\N	\N	sample type
+145	GSM1917670 1	30	\N	\N	name
+143	placental tissue	30	\N	\N	organism part
+146	Homo sapiens	31	\N	\N	organism
+142	controls who delivered at term (>36 weeks)	30	\N	\N	subject status
+149	<empty>	31	\N	\N	sample type
+150	GSM1917670 2	31	\N	\N	name
+148	placental tissue	31	\N	\N	organism part
+151	Homo sapiens	32	\N	\N	organism
+147	patients with late-onset (>36 weeks) preeclampsia (LOPE)	31	\N	\N	subject status
+154	<empty>	32	\N	\N	sample type
+155	GSM1917669 2	32	\N	\N	name
+153	placental tissue	32	\N	\N	organism part
+156	Homo sapiens	33	\N	\N	organism
+152	patients with late-onset (>36 weeks) preeclampsia (LOPE)	32	\N	\N	subject status
+159	pooled-sample reference	33	\N	\N	sample type
+160	GSM1917669 1	33	\N	\N	name
+158	placental tissue	33	\N	\N	organism part
+161	Homo sapiens	34	\N	\N	organism
+157	controls who delivered at term (>36 weeks)	33	\N	\N	subject status
+164	<empty>	34	\N	\N	sample type
+165	GSM1917668 2	34	\N	\N	name
+163	placental tissue	34	\N	\N	organism part
+166	Homo sapiens	35	\N	\N	organism
+162	patients with late-onset (>36 weeks) preeclampsia (LOPE)	34	\N	\N	subject status
+169	pooled-sample reference	35	\N	\N	sample type
+170	GSM1917668 1	35	\N	\N	name
+168	placental tissue	35	\N	\N	organism part
+171	Homo sapiens	36	\N	\N	organism
+167	controls who delivered at term (>36 weeks)	35	\N	\N	subject status
+174	<empty>	36	\N	\N	sample type
+175	GSM1917667 2	36	\N	\N	name
+173	placental tissue	36	\N	\N	organism part
+176	Homo sapiens	37	\N	\N	organism
+172	patients with late-onset (>36 weeks) preeclampsia (LOPE)	36	\N	\N	subject status
+179	pooled-sample reference	37	\N	\N	sample type
+180	GSM1917667 1	37	\N	\N	name
+178	placental tissue	37	\N	\N	organism part
+181	Homo sapiens	38	\N	\N	organism
+177	controls who delivered at term (>36 weeks)	37	\N	\N	subject status
+184	pooled-sample reference	38	\N	\N	sample type
+185	GSM1917666 1	38	\N	\N	name
+183	placental tissue	38	\N	\N	organism part
+186	Homo sapiens	39	\N	\N	organism
+182	controls who delivered at term (>36 weeks)	38	\N	\N	subject status
+189	<empty>	39	\N	\N	sample type
+190	GSM1917666 2	39	\N	\N	name
+188	placental tissue	39	\N	\N	organism part
+191	Homo sapiens	40	\N	\N	organism
+187	patients with early-onset (<34 weeks) preeclampsia (EOPE)	39	\N	\N	subject status
+194	<empty>	40	\N	\N	sample type
+195	GSM1917665 2	40	\N	\N	name
+193	placental tissue	40	\N	\N	organism part
+196	Homo sapiens	41	\N	\N	organism
+192	patients with early-onset (<34 weeks) preeclampsia (EOPE)	40	\N	\N	subject status
+199	pooled-sample reference	41	\N	\N	sample type
+200	GSM1917665 1	41	\N	\N	name
+198	placental tissue	41	\N	\N	organism part
+201	Homo sapiens	42	\N	\N	organism
+197	controls who delivered at term (>36 weeks)	41	\N	\N	subject status
+204	<empty>	42	\N	\N	sample type
+202	patients with early-onset (<34 weeks) preeclampsia (EOPE)	42	\N	\N	subject status
+203	placental tissue	42	\N	\N	organism part
+104	pooled-sample reference	22	\N	\N	sample type
+209	pooled-sample reference	43	\N	\N	sample type
+208	placental tissue	43	\N	\N	organism part
+211	Homo sapiens	44	\N	\N	organism
+210	GSM1917664 1	43	\N	\N	name
+214	<empty>	44	\N	\N	sample type
+215	GSM1917663 2	44	\N	\N	name
+213	placental tissue	44	\N	\N	organism part
+216	Homo sapiens	45	\N	\N	organism
+212	patients with early-onset (<34 weeks) preeclampsia (EOPE)	44	\N	\N	subject status
+219	pooled-sample reference	45	\N	\N	sample type
+220	GSM1917663 1	45	\N	\N	name
+218	placental tissue	45	\N	\N	organism part
+221	Homo sapiens	46	\N	\N	organism
+217	controls who delivered at term (>36 weeks)	45	\N	\N	subject status
+224	<empty>	46	\N	\N	sample type
+225	GSM1917662 2	46	\N	\N	name
+223	placental tissue	46	\N	\N	organism part
+226	Homo sapiens	47	\N	\N	organism
+222	patients with early-onset (<34 weeks) preeclampsia (EOPE)	46	\N	\N	subject status
+229	pooled-sample reference	47	\N	\N	sample type
+230	GSM1917662 1	47	\N	\N	name
+228	placental tissue	47	\N	\N	organism part
+231	Homo sapiens	48	\N	\N	organism
+227	controls who delivered at term (>36 weeks)	47	\N	\N	subject status
+234	<empty>	48	\N	\N	sample type
+235	GSM1917661 2	48	\N	\N	name
+233	placental tissue	48	\N	\N	organism part
+236	Homo sapiens	49	\N	\N	organism
+232	patients with early-onset (<34 weeks) preeclampsia (EOPE)	48	\N	\N	subject status
+239	pooled-sample reference	49	\N	\N	sample type
+240	GSM1917661 1	49	\N	\N	name
+238	placental tissue	49	\N	\N	organism part
+241	Homo sapiens	50	\N	\N	organism
+237	controls who delivered at term (>36 weeks)	49	\N	\N	subject status
+244	pooled-sample reference	50	\N	\N	sample type
+245	GSM1917660 1	50	\N	\N	name
+243	placental tissue	50	\N	\N	organism part
+246	Homo sapiens	51	\N	\N	organism
+242	controls who delivered at term (>36 weeks)	50	\N	\N	subject status
+249	<empty>	51	\N	\N	sample type
+250	GSM1917660 2	51	\N	\N	name
+248	placental tissue	51	\N	\N	organism part
+253	Homo sapiens	52	\N	\N	organism
+247	patients with early-onset (<34 weeks) preeclampsia (EOPE)	51	\N	\N	subject status
+255	GSM1892024 1	52	\N	\N	name
+257	25	52	\N	\N	maternal age
+256	placenta	52	\N	\N	organism part
+251	preeclamptic	52	\N	\N	diagnosis
+260	Homo sapiens	53	\N	\N	organism
+252	35	52	\N	\N	gestational age
+254	African American	52	\N	\N	race
+262	GSM1892023 1	53	\N	\N	name
+264	26	53	\N	\N	maternal age
+263	placenta	53	\N	\N	organism part
+258	preeclamptic	53	\N	\N	diagnosis
+267	Homo sapiens	54	\N	\N	organism
+259	36	53	\N	\N	gestational age
+261	Caucasian	53	\N	\N	race
+269	GSM1892022 1	54	\N	\N	name
+271	37	54	\N	\N	maternal age
+270	placenta	54	\N	\N	organism part
+265	preeclamptic	54	\N	\N	diagnosis
+274	Homo sapiens	55	\N	\N	organism
+266	28	54	\N	\N	gestational age
+268	Caucasian	54	\N	\N	race
+276	GSM1892021 1	55	\N	\N	name
+278	36	55	\N	\N	maternal age
+277	placenta	55	\N	\N	organism part
+272	preeclamptic	55	\N	\N	diagnosis
+281	Homo sapiens	56	\N	\N	organism
+273	37	55	\N	\N	gestational age
+275	Hispanic	55	\N	\N	race
+283	GSM1892020 1	56	\N	\N	name
+285	24	56	\N	\N	maternal age
+284	placenta	56	\N	\N	organism part
+279	preeclamptic	56	\N	\N	diagnosis
+288	Homo sapiens	57	\N	\N	organism
+280	35	56	\N	\N	gestational age
+282	African American	56	\N	\N	race
+290	GSM1892019 1	57	\N	\N	name
+292	20	57	\N	\N	maternal age
+291	placenta	57	\N	\N	organism part
+286	preeclamptic	57	\N	\N	diagnosis
+295	Homo sapiens	58	\N	\N	organism
+287	27	57	\N	\N	gestational age
+289	African American	57	\N	\N	race
+297	GSM1892018 1	58	\N	\N	name
+299	20	58	\N	\N	maternal age
+298	placenta	58	\N	\N	organism part
+293	preeclamptic	58	\N	\N	diagnosis
+302	Homo sapiens	59	\N	\N	organism
+294	40	58	\N	\N	gestational age
+296	African American	58	\N	\N	race
+304	GSM1892017 1	59	\N	\N	name
+306	31	59	\N	\N	maternal age
+305	placenta	59	\N	\N	organism part
+300	preeclamptic	59	\N	\N	diagnosis
+309	Homo sapiens	60	\N	\N	organism
+301	32	59	\N	\N	gestational age
+303	Other	59	\N	\N	race
+311	GSM1892016 1	60	\N	\N	name
+313	32	60	\N	\N	maternal age
+312	placenta	60	\N	\N	organism part
+307	preeclamptic	60	\N	\N	diagnosis
+316	Homo sapiens	61	\N	\N	organism
+308	36	60	\N	\N	gestational age
+310	Other	60	\N	\N	race
+314	preeclamptic	61	\N	\N	diagnosis
+315	30	61	\N	\N	gestational age
+206	Homo sapiens	43	\N	\N	organism
+320	32	61	\N	\N	maternal age
+317	African American	61	\N	\N	race
+319	placenta	61	\N	\N	organism part
+327	29	62	\N	\N	maternal age
+326	placenta	62	\N	\N	organism part
+325	GSM1892014 1	62	\N	\N	name
+330	Homo sapiens	63	\N	\N	organism
+321	preeclamptic	62	\N	\N	diagnosis
+324	Caucasian	62	\N	\N	race
+322	40	62	\N	\N	gestational age
+334	34	63	\N	\N	maternal age
+333	placenta	63	\N	\N	organism part
+332	GSM1892013 1	63	\N	\N	name
+337	Homo sapiens	64	\N	\N	organism
+328	preeclamptic	63	\N	\N	diagnosis
+331	Caucasian	63	\N	\N	race
+329	30	63	\N	\N	gestational age
+341	34	64	\N	\N	maternal age
+340	placenta	64	\N	\N	organism part
+339	GSM1892012 1	64	\N	\N	name
+344	Homo sapiens	65	\N	\N	organism
+335	preeclamptic	64	\N	\N	diagnosis
+338	African American	64	\N	\N	race
+336	27	64	\N	\N	gestational age
+348	24	65	\N	\N	maternal age
+347	placenta	65	\N	\N	organism part
+346	GSM1892011 1	65	\N	\N	name
+351	Homo sapiens	66	\N	\N	organism
+342	preeclamptic	65	\N	\N	diagnosis
+345	Other	65	\N	\N	race
+343	22	65	\N	\N	gestational age
+355	29	66	\N	\N	maternal age
+354	placenta	66	\N	\N	organism part
+353	GSM1892010 1	66	\N	\N	name
+358	Homo sapiens	67	\N	\N	organism
+349	preeclamptic	66	\N	\N	diagnosis
+352	Caucasian	66	\N	\N	race
+350	29	66	\N	\N	gestational age
+362	19	67	\N	\N	maternal age
+361	placenta	67	\N	\N	organism part
+360	GSM1892009 1	67	\N	\N	name
+365	Homo sapiens	68	\N	\N	organism
+356	preeclamptic	67	\N	\N	diagnosis
+359	Hispanic	67	\N	\N	race
+357	38	67	\N	\N	gestational age
+369	25	68	\N	\N	maternal age
+368	placenta	68	\N	\N	organism part
+367	GSM1892008 1	68	\N	\N	name
+372	Homo sapiens	69	\N	\N	organism
+363	preeclamptic	68	\N	\N	diagnosis
+366	African American	68	\N	\N	race
+364	34	68	\N	\N	gestational age
+376	25	69	\N	\N	maternal age
+375	placenta	69	\N	\N	organism part
+374	GSM1892007 1	69	\N	\N	name
+379	Homo sapiens	70	\N	\N	organism
+370	normotensive	69	\N	\N	diagnosis
+373	Caucasian	69	\N	\N	race
+371	36	69	\N	\N	gestational age
+383	32	70	\N	\N	maternal age
+382	placenta	70	\N	\N	organism part
+381	GSM1892006 1	70	\N	\N	name
+386	Homo sapiens	71	\N	\N	organism
+377	normotensive	70	\N	\N	diagnosis
+380	Caucasian	70	\N	\N	race
+378	35	70	\N	\N	gestational age
+390	20	71	\N	\N	maternal age
+389	placenta	71	\N	\N	organism part
+388	GSM1892005 1	71	\N	\N	name
+393	Homo sapiens	72	\N	\N	organism
+384	normotensive	71	\N	\N	diagnosis
+387	Hispanic	71	\N	\N	race
+385	40	71	\N	\N	gestational age
+397	25	72	\N	\N	maternal age
+396	placenta	72	\N	\N	organism part
+395	GSM1892004 1	72	\N	\N	name
+400	Homo sapiens	73	\N	\N	organism
+391	normotensive	72	\N	\N	diagnosis
+394	Hispanic	72	\N	\N	race
+392	40	72	\N	\N	gestational age
+404	36	73	\N	\N	maternal age
+403	placenta	73	\N	\N	organism part
+402	GSM1892003 1	73	\N	\N	name
+407	Homo sapiens	74	\N	\N	organism
+398	normotensive	73	\N	\N	diagnosis
+401	Hispanic	73	\N	\N	race
+399	38	73	\N	\N	gestational age
+411	32	74	\N	\N	maternal age
+410	placenta	74	\N	\N	organism part
+409	GSM1892002 1	74	\N	\N	name
+414	Homo sapiens	75	\N	\N	organism
+405	normotensive	74	\N	\N	diagnosis
+408	Caucasian	74	\N	\N	race
+406	40	74	\N	\N	gestational age
+418	38	75	\N	\N	maternal age
+417	placenta	75	\N	\N	organism part
+416	GSM1892001 1	75	\N	\N	name
+421	Homo sapiens	76	\N	\N	organism
+412	normotensive	75	\N	\N	diagnosis
+415	African American	75	\N	\N	race
+413	38	75	\N	\N	gestational age
+425	27	76	\N	\N	maternal age
+424	placenta	76	\N	\N	organism part
+423	GSM1892000 1	76	\N	\N	name
+428	Homo sapiens	77	\N	\N	organism
+419	normotensive	76	\N	\N	diagnosis
+422	African American	76	\N	\N	race
+420	41	76	\N	\N	gestational age
+432	20	77	\N	\N	maternal age
+431	placenta	77	\N	\N	organism part
+430	GSM1891999 1	77	\N	\N	name
+435	Homo sapiens	78	\N	\N	organism
+426	normotensive	77	\N	\N	diagnosis
+429	African American	77	\N	\N	race
+427	37	77	\N	\N	gestational age
+434	36	78	\N	\N	gestational age
+433	normotensive	78	\N	\N	diagnosis
+318	GSM1892015 1	61	\N	\N	name
+323	Homo sapiens	62	\N	\N	organism
+439	33	78	\N	\N	maternal age
+436	African American	78	\N	\N	race
+438	placenta	78	\N	\N	organism part
+446	19	79	\N	\N	maternal age
+445	placenta	79	\N	\N	organism part
+444	GSM1891997 1	79	\N	\N	name
+449	Homo sapiens	80	\N	\N	organism
+440	normotensive	79	\N	\N	diagnosis
+443	Hispanic	79	\N	\N	race
+441	40	79	\N	\N	gestational age
+453	30	80	\N	\N	maternal age
+452	placenta	80	\N	\N	organism part
+451	GSM1891996 1	80	\N	\N	name
+456	Homo sapiens	81	\N	\N	organism
+447	normotensive	80	\N	\N	diagnosis
+450	Asian	80	\N	\N	race
+448	36	80	\N	\N	gestational age
+460	33	81	\N	\N	maternal age
+459	placenta	81	\N	\N	organism part
+458	GSM1891995 1	81	\N	\N	name
+463	Homo sapiens	82	\N	\N	organism
+454	normotensive	81	\N	\N	diagnosis
+457	Caucasian	81	\N	\N	race
+455	40	81	\N	\N	gestational age
+467	34	82	\N	\N	maternal age
+466	placenta	82	\N	\N	organism part
+465	GSM1891994 1	82	\N	\N	name
+470	Homo sapiens	83	\N	\N	organism
+461	normotensive	82	\N	\N	diagnosis
+464	Caucasian	82	\N	\N	race
+462	39	82	\N	\N	gestational age
+474	26	83	\N	\N	maternal age
+473	placenta	83	\N	\N	organism part
+472	GSM1891993 1	83	\N	\N	name
+477	Homo sapiens	84	\N	\N	organism
+468	normotensive	83	\N	\N	diagnosis
+471	African American	83	\N	\N	race
+469	40	83	\N	\N	gestational age
+481	22	84	\N	\N	maternal age
+480	placenta	84	\N	\N	organism part
+479	GSM1891992 1	84	\N	\N	name
+484	Homo sapiens	85	\N	\N	organism
+475	normotensive	84	\N	\N	diagnosis
+478	African American	84	\N	\N	race
+476	41	84	\N	\N	gestational age
+488	28	85	\N	\N	maternal age
+487	placenta	85	\N	\N	organism part
+486	GSM1891991 1	85	\N	\N	name
+491	Homo sapiens	86	\N	\N	organism
+482	preeclamptic	85	\N	\N	diagnosis
+485	African American	85	\N	\N	race
+483	33	85	\N	\N	gestational age
+495	35	86	\N	\N	maternal age
+494	placenta	86	\N	\N	organism part
+493	GSM1891990 1	86	\N	\N	name
+498	Homo sapiens	87	\N	\N	organism
+489	preeclamptic	86	\N	\N	diagnosis
+492	African American	86	\N	\N	race
+490	34	86	\N	\N	gestational age
+502	28	87	\N	\N	maternal age
+501	placenta	87	\N	\N	organism part
+500	GSM1891989 1	87	\N	\N	name
+505	Homo sapiens	88	\N	\N	organism
+496	normotensive	87	\N	\N	diagnosis
+499	Caucasian	87	\N	\N	race
+497	39	87	\N	\N	gestational age
+509	32	88	\N	\N	maternal age
+508	placenta	88	\N	\N	organism part
+507	GSM1892060 1	88	\N	\N	name
+512	Homo sapiens	89	\N	\N	organism
+503	preeclamptic	88	\N	\N	diagnosis
+506	36	88	\N	\N	race
+504	Other	88	\N	\N	gestational age
+516	32	89	\N	\N	maternal age
+515	placenta	89	\N	\N	organism part
+514	GSM1892059 1	89	\N	\N	name
+519	Homo sapiens	90	\N	\N	organism
+510	preeclamptic	89	\N	\N	diagnosis
+513	30	89	\N	\N	race
+511	African American	89	\N	\N	gestational age
+523	29	90	\N	\N	maternal age
+522	placenta	90	\N	\N	organism part
+521	GSM1892058 1	90	\N	\N	name
+526	Homo sapiens	91	\N	\N	organism
+517	preeclamptic	90	\N	\N	diagnosis
+520	40	90	\N	\N	race
+518	Caucasian	90	\N	\N	gestational age
+530	34	91	\N	\N	maternal age
+529	placenta	91	\N	\N	organism part
+528	GSM1892057 1	91	\N	\N	name
+533	Homo sapiens	92	\N	\N	organism
+524	preeclamptic	91	\N	\N	diagnosis
+527	30	91	\N	\N	race
+525	Caucasian	91	\N	\N	gestational age
+537	34	92	\N	\N	maternal age
+536	placenta	92	\N	\N	organism part
+535	GSM1892056 1	92	\N	\N	name
+540	Homo sapiens	93	\N	\N	organism
+531	preeclamptic	92	\N	\N	diagnosis
+534	27	92	\N	\N	race
+532	African American	92	\N	\N	gestational age
+544	24	93	\N	\N	maternal age
+543	placenta	93	\N	\N	organism part
+542	GSM1892055 1	93	\N	\N	name
+547	Homo sapiens	94	\N	\N	organism
+538	preeclamptic	93	\N	\N	diagnosis
+541	22	93	\N	\N	race
+539	Other	93	\N	\N	gestational age
+551	27	94	\N	\N	maternal age
+550	placenta	94	\N	\N	organism part
+549	GSM1892054 1	94	\N	\N	name
+554	Homo sapiens	95	\N	\N	organism
+545	normotensive	94	\N	\N	diagnosis
+548	41	94	\N	\N	race
+546	African American	94	\N	\N	gestational age
+553	African American	95	\N	\N	gestational age
+552	normotensive	95	\N	\N	diagnosis
+437	GSM1891998 1	78	\N	\N	name
+442	Homo sapiens	79	\N	\N	organism
+558	20	95	\N	\N	maternal age
+555	37	95	\N	\N	race
+557	placenta	95	\N	\N	organism part
+565	33	96	\N	\N	maternal age
+564	placenta	96	\N	\N	organism part
+563	GSM1892052 1	96	\N	\N	name
+568	Homo sapiens	97	\N	\N	organism
+559	normotensive	96	\N	\N	diagnosis
+562	36	96	\N	\N	race
+560	African American	96	\N	\N	gestational age
+572	19	97	\N	\N	maternal age
+571	placenta	97	\N	\N	organism part
+570	GSM1892051 1	97	\N	\N	name
+575	Homo sapiens	98	\N	\N	organism
+566	normotensive	97	\N	\N	diagnosis
+569	40	97	\N	\N	race
+567	Hispanic	97	\N	\N	gestational age
+579	30	98	\N	\N	maternal age
+578	placenta	98	\N	\N	organism part
+577	GSM1892050 1	98	\N	\N	name
+582	Homo sapiens	99	\N	\N	organism
+573	normotensive	98	\N	\N	diagnosis
+576	36	98	\N	\N	race
+574	Asian	98	\N	\N	gestational age
+586	28	99	\N	\N	maternal age
+585	placenta	99	\N	\N	organism part
+584	GSM1892049 1	99	\N	\N	name
+589	Homo sapiens	100	\N	\N	organism
+580	normotensive	99	\N	\N	diagnosis
+583	39	99	\N	\N	race
+581	Caucasian	99	\N	\N	gestational age
+593	20	100	\N	\N	maternal age
+592	placenta	100	\N	\N	organism part
+591	GSM1892048 1	100	\N	\N	name
+596	Homo sapiens	101	\N	\N	organism
+587	preeclamptic	100	\N	\N	diagnosis
+590	27	100	\N	\N	race
+588	African American	100	\N	\N	gestational age
+600	31	101	\N	\N	maternal age
+599	placenta	101	\N	\N	organism part
+598	GSM1892047 1	101	\N	\N	name
+603	Homo sapiens	102	\N	\N	organism
+594	preeclamptic	101	\N	\N	diagnosis
+597	32	101	\N	\N	race
+595	Other	101	\N	\N	gestational age
+607	36	102	\N	\N	maternal age
+606	placenta	102	\N	\N	organism part
+605	GSM1892046 1	102	\N	\N	name
+610	Homo sapiens	103	\N	\N	organism
+601	normotensive	102	\N	\N	diagnosis
+604	38	102	\N	\N	race
+602	Hispanic	102	\N	\N	gestational age
+614	38	103	\N	\N	maternal age
+613	placenta	103	\N	\N	organism part
+612	GSM1892045 1	103	\N	\N	name
+617	Homo sapiens	104	\N	\N	organism
+608	normotensive	103	\N	\N	diagnosis
+611	38	103	\N	\N	race
+609	African American	103	\N	\N	gestational age
+621	29	104	\N	\N	maternal age
+620	placenta	104	\N	\N	organism part
+619	GSM1892044 1	104	\N	\N	name
+624	Homo sapiens	105	\N	\N	organism
+615	preeclamptic	104	\N	\N	diagnosis
+618	29	104	\N	\N	race
+616	Caucasian	104	\N	\N	gestational age
+628	19	105	\N	\N	maternal age
+627	placenta	105	\N	\N	organism part
+626	GSM1892043 1	105	\N	\N	name
+631	Homo sapiens	106	\N	\N	organism
+622	preeclamptic	105	\N	\N	diagnosis
+625	38	105	\N	\N	race
+623	Hispanic	105	\N	\N	gestational age
+635	35	106	\N	\N	maternal age
+634	placenta	106	\N	\N	organism part
+633	GSM1892042 1	106	\N	\N	name
+638	Homo sapiens	107	\N	\N	organism
+629	preeclamptic	106	\N	\N	diagnosis
+632	34	106	\N	\N	race
+630	African American	106	\N	\N	gestational age
+642	25	107	\N	\N	maternal age
+641	placenta	107	\N	\N	organism part
+640	GSM1892041 1	107	\N	\N	name
+645	Homo sapiens	108	\N	\N	organism
+636	preeclamptic	107	\N	\N	diagnosis
+639	35	107	\N	\N	race
+637	African American	107	\N	\N	gestational age
+649	26	108	\N	\N	maternal age
+648	placenta	108	\N	\N	organism part
+647	GSM1892040 1	108	\N	\N	name
+652	Homo sapiens	109	\N	\N	organism
+643	preeclamptic	108	\N	\N	diagnosis
+646	36	108	\N	\N	race
+644	Caucasian	108	\N	\N	gestational age
+656	28	109	\N	\N	maternal age
+655	placenta	109	\N	\N	organism part
+654	GSM1892039 1	109	\N	\N	name
+659	Homo sapiens	110	\N	\N	organism
+650	preeclamptic	109	\N	\N	diagnosis
+653	33	109	\N	\N	race
+651	African American	109	\N	\N	gestational age
+663	33	110	\N	\N	maternal age
+662	placenta	110	\N	\N	organism part
+661	GSM1892038 1	110	\N	\N	name
+666	Homo sapiens	111	\N	\N	organism
+657	normotensive	110	\N	\N	diagnosis
+660	40	110	\N	\N	race
+658	Caucasian	110	\N	\N	gestational age
+670	34	111	\N	\N	maternal age
+669	placenta	111	\N	\N	organism part
+668	GSM1892037 1	111	\N	\N	name
+673	Homo sapiens	112	\N	\N	organism
+664	normotensive	111	\N	\N	diagnosis
+667	39	111	\N	\N	race
+665	Caucasian	111	\N	\N	gestational age
+672	African American	112	\N	\N	gestational age
+674	40	112	\N	\N	race
+671	normotensive	112	\N	\N	diagnosis
+561	Homo sapiens	96	\N	\N	organism
+680	Homo sapiens	113	\N	\N	organism
+682	GSM1892035 1	113	\N	\N	name
+678	normotensive	113	\N	\N	diagnosis
+705	24	116	\N	\N	maternal age
+700	African American	116	\N	\N	gestational age
+704	placenta	116	\N	\N	organism part
+702	35	116	\N	\N	race
+708	Homo sapiens	117	\N	\N	organism
+710	GSM1892031 1	117	\N	\N	name
+706	preeclamptic	117	\N	\N	diagnosis
+712	20	117	\N	\N	maternal age
+707	African American	117	\N	\N	gestational age
+711	placenta	117	\N	\N	organism part
+709	40	117	\N	\N	race
+715	Homo sapiens	118	\N	\N	organism
+717	GSM1892030 1	118	\N	\N	name
+713	preeclamptic	118	\N	\N	diagnosis
+719	25	118	\N	\N	maternal age
+714	African American	118	\N	\N	gestational age
+718	placenta	118	\N	\N	organism part
+716	34	118	\N	\N	race
+722	Homo sapiens	119	\N	\N	organism
+724	GSM1892029 1	119	\N	\N	name
+720	normotensive	119	\N	\N	diagnosis
+726	32	119	\N	\N	maternal age
+725	placenta	119	\N	\N	organism part
+721	Caucasian	119	\N	\N	gestational age
+723	35	119	\N	\N	race
+729	Homo sapiens	120	\N	\N	organism
+731	GSM1892028 1	120	\N	\N	name
+727	normotensive	120	\N	\N	diagnosis
+733	20	120	\N	\N	maternal age
+728	Hispanic	120	\N	\N	gestational age
+732	placenta	120	\N	\N	organism part
+730	40	120	\N	\N	race
+736	Homo sapiens	121	\N	\N	organism
+738	GSM1892027 1	121	\N	\N	name
+734	normotensive	121	\N	\N	diagnosis
+740	25	121	\N	\N	maternal age
+735	Hispanic	121	\N	\N	gestational age
+739	placenta	121	\N	\N	organism part
+737	40	121	\N	\N	race
+743	Homo sapiens	122	\N	\N	organism
+745	GSM1892026 1	122	\N	\N	name
+741	normotensive	122	\N	\N	diagnosis
+747	32	122	\N	\N	maternal age
+742	Caucasian	122	\N	\N	gestational age
+746	placenta	122	\N	\N	organism part
+752	GSM1892025 1	123	\N	\N	name
+744	40	122	\N	\N	race
+748	normotensive	123	\N	\N	diagnosis
+750	Homo sapiens	123	\N	\N	organism
+754	22	123	\N	\N	maternal age
+749	African American	123	\N	\N	gestational age
+753	placenta	123	\N	\N	organism part
+751	41	123	\N	\N	race
+2	Homo sapiens	2	\N	\N	organism
+3	controls who delivered at term (>36 weeks)	2	\N	\N	subject status
+107	patients with late-onset (>36 weeks) preeclampsia (LOPE)	23	\N	\N	subject status
+207	controls who delivered at term (>36 weeks)	43	\N	\N	subject status
+556	GSM1892053 1	95	\N	\N	name
+675	GSM1892036 1	112	\N	\N	name
+677	26	112	\N	\N	maternal age
+676	placenta	112	\N	\N	organism part
+684	25	113	\N	\N	maternal age
+679	Caucasian	113	\N	\N	gestational age
+683	placenta	113	\N	\N	organism part
+681	36	113	\N	\N	race
+687	Homo sapiens	114	\N	\N	organism
+689	GSM1892034 1	114	\N	\N	name
+685	preeclamptic	114	\N	\N	diagnosis
+691	37	114	\N	\N	maternal age
+686	Caucasian	114	\N	\N	gestational age
+690	placenta	114	\N	\N	organism part
+688	28	114	\N	\N	race
+694	Homo sapiens	115	\N	\N	organism
+696	GSM1892033 1	115	\N	\N	name
+692	preeclamptic	115	\N	\N	diagnosis
+698	36	115	\N	\N	maternal age
+693	Hispanic	115	\N	\N	gestational age
+697	placenta	115	\N	\N	organism part
+695	37	115	\N	\N	race
+701	Homo sapiens	116	\N	\N	organism
+703	GSM1892032 1	116	\N	\N	name
+699	preeclamptic	116	\N	\N	diagnosis
+762	placenta	125	1	1	organism part
+769	placenta	126	1	1	organism part
+776	placenta	127	1	1	organism part
+783	placenta	128	1	1	organism part
+757	36	124	2	3	race
+790	placenta	129	1	1	organism part
+840	Homo sapiens	136	3	2	organism
+847	Homo sapiens	137	3	2	organism
+854	Homo sapiens	138	3	2	organism
+861	Homo sapiens	139	3	2	organism
+868	Homo sapiens	140	3	2	organism
+875	Homo sapiens	141	3	2	organism
+882	Homo sapiens	142	3	2	organism
+889	Homo sapiens	143	3	2	organism
+896	Homo sapiens	144	3	2	organism
+903	Homo sapiens	145	3	2	organism
+910	Homo sapiens	146	3	2	organism
+917	Homo sapiens	147	3	2	organism
+924	Homo sapiens	148	3	2	organism
+931	Homo sapiens	149	3	2	organism
+938	Homo sapiens	150	3	2	organism
+945	Homo sapiens	151	3	2	organism
+952	Homo sapiens	152	3	2	organism
+959	Homo sapiens	153	3	2	organism
+966	Homo sapiens	154	3	2	organism
+973	Homo sapiens	155	3	2	organism
+980	Homo sapiens	156	3	2	organism
+987	Homo sapiens	157	3	2	organism
+994	Homo sapiens	158	3	2	organism
+1001	Homo sapiens	159	3	2	organism
+813	36	132	2	3	race
+827	36	134	2	3	race
+765	preeclamptic	125	4	4	diagnosis
+772	preeclamptic	126	4	4	diagnosis
+779	preeclamptic	127	4	4	diagnosis
+786	preeclamptic	128	4	4	diagnosis
+793	preeclamptic	129	4	4	diagnosis
+842	preeclamptic	136	4	4	diagnosis
+849	preeclamptic	137	4	4	diagnosis
+870	preeclamptic	140	4	4	diagnosis
+877	preeclamptic	141	4	4	diagnosis
+884	preeclamptic	142	4	4	diagnosis
+891	preeclamptic	143	4	4	diagnosis
+898	preeclamptic	144	4	4	diagnosis
+905	preeclamptic	145	4	4	diagnosis
+940	preeclamptic	150	4	4	diagnosis
+947	preeclamptic	151	4	4	diagnosis
+954	preeclamptic	152	4	4	diagnosis
+961	preeclamptic	153	4	4	diagnosis
+968	preeclamptic	154	4	4	diagnosis
+758	preeclamptic	124	4	4	diagnosis
+897	36	144	2	3	race
+932	36	149	2	3	race
+921	34	147	6	6	maternal age
+928	26	148	6	6	maternal age
+935	25	149	6	6	maternal age
+942	37	150	6	6	maternal age
+949	36	151	6	6	maternal age
+956	24	152	6	6	maternal age
+963	20	153	6	6	maternal age
+970	25	154	6	6	maternal age
+984	20	156	6	6	maternal age
+991	25	157	6	6	maternal age
+1005	22	159	6	6	maternal age
+767	32	125	6	6	maternal age
+977	32	155	6	6	maternal age
+998	32	158	6	6	maternal age
+895	placenta	144	1	1	organism part
+902	placenta	145	1	1	organism part
+930	placenta	149	1	1	organism part
+937	placenta	150	1	1	organism part
+944	placenta	151	1	1	organism part
+951	placenta	152	1	1	organism part
+958	placenta	153	1	1	organism part
+965	placenta	154	1	1	organism part
+972	placenta	155	1	1	organism part
+979	placenta	156	1	1	organism part
+986	placenta	157	1	1	organism part
+993	placenta	158	1	1	organism part
+1000	placenta	159	1	1	organism part
+755	placenta	124	1	1	organism part
+797	placenta	130	1	1	organism part
+804	placenta	131	1	1	organism part
+811	placenta	132	1	1	organism part
+818	placenta	133	1	1	organism part
+825	placenta	134	1	1	organism part
+832	placenta	135	1	1	organism part
+839	placenta	136	1	1	organism part
+846	placenta	137	1	1	organism part
+853	placenta	138	1	1	organism part
+860	placenta	139	1	1	organism part
+867	placenta	140	1	1	organism part
+874	placenta	141	1	1	organism part
+909	placenta	146	1	1	organism part
+916	placenta	147	1	1	organism part
+923	placenta	148	1	1	organism part
+763	Homo sapiens	125	3	2	organism
+770	Homo sapiens	126	3	2	organism
+777	Homo sapiens	127	3	2	organism
+784	Homo sapiens	128	3	2	organism
+791	Homo sapiens	129	3	2	organism
+798	Homo sapiens	130	3	2	organism
+805	Homo sapiens	131	3	2	organism
+812	Homo sapiens	132	3	2	organism
+819	Homo sapiens	133	3	2	organism
+826	Homo sapiens	134	3	2	organism
+833	Homo sapiens	135	3	2	organism
+756	Homo sapiens	124	3	2	organism
+907	28	145	6	6	maternal age
+914	33	146	6	6	maternal age
+760	32	124	6	6	maternal age
+774	29	126	6	6	maternal age
+781	34	127	6	6	maternal age
+788	34	128	6	6	maternal age
+795	24	129	6	6	maternal age
+802	27	130	6	6	maternal age
+809	20	131	6	6	maternal age
+816	33	132	6	6	maternal age
+823	19	133	6	6	maternal age
+830	30	134	6	6	maternal age
+837	28	135	6	6	maternal age
+844	20	136	6	6	maternal age
+851	31	137	6	6	maternal age
+858	36	138	6	6	maternal age
+865	38	139	6	6	maternal age
+872	29	140	6	6	maternal age
+879	19	141	6	6	maternal age
+886	35	142	6	6	maternal age
+893	25	143	6	6	maternal age
+900	26	144	6	6	maternal age
+800	normotensive	130	10	4	diagnosis
+807	normotensive	131	10	4	diagnosis
+814	normotensive	132	10	4	diagnosis
+821	normotensive	133	10	4	diagnosis
+828	normotensive	134	10	4	diagnosis
+835	normotensive	135	10	4	diagnosis
+856	normotensive	138	10	4	diagnosis
+863	normotensive	139	10	4	diagnosis
+912	normotensive	146	10	4	diagnosis
+919	normotensive	147	10	4	diagnosis
+926	normotensive	148	10	4	diagnosis
+933	normotensive	149	10	4	diagnosis
+975	normotensive	155	10	4	diagnosis
+982	normotensive	156	10	4	diagnosis
+989	normotensive	157	10	4	diagnosis
+996	normotensive	158	10	4	diagnosis
+1003	normotensive	159	10	4	diagnosis
+881	placenta	142	1	1	organism part
+888	placenta	143	1	1	organism part
+764	30	125	2	3	race
+771	40	126	2	3	race
+778	30	127	2	3	race
+785	27	128	2	3	race
+792	22	129	2	3	race
+799	41	130	2	3	race
+806	37	131	2	3	race
+820	40	133	2	3	race
+834	39	135	2	3	race
+841	27	136	2	3	race
+848	32	137	2	3	race
+855	38	138	2	3	race
+862	38	139	2	3	race
+869	29	140	2	3	race
+876	38	141	2	3	race
+883	34	142	2	3	race
+890	35	143	2	3	race
+904	33	145	2	3	race
+911	40	146	2	3	race
+918	39	147	2	3	race
+925	40	148	2	3	race
+939	28	150	2	3	race
+946	37	151	2	3	race
+953	35	152	2	3	race
+960	40	153	2	3	race
+967	34	154	2	3	race
+974	35	155	2	3	race
+981	40	156	2	3	race
+988	40	157	2	3	race
+995	40	158	2	3	race
+1002	41	159	2	3	race
+850	GSM1892047 1	137	5	5	name
+857	GSM1892046 1	138	5	5	name
+864	GSM1892045 1	139	5	5	name
+871	GSM1892044 1	140	5	5	name
+878	GSM1892043 1	141	5	5	name
+885	GSM1892042 1	142	5	5	name
+892	GSM1892041 1	143	5	5	name
+899	GSM1892040 1	144	5	5	name
+906	GSM1892039 1	145	5	5	name
+913	GSM1892038 1	146	5	5	name
+920	GSM1892037 1	147	5	5	name
+927	GSM1892036 1	148	5	5	name
+934	GSM1892035 1	149	5	5	name
+941	GSM1892034 1	150	5	5	name
+948	GSM1892033 1	151	5	5	name
+955	GSM1892032 1	152	5	5	name
+962	GSM1892031 1	153	5	5	name
+969	GSM1892030 1	154	5	5	name
+976	GSM1892029 1	155	5	5	name
+983	GSM1892028 1	156	5	5	name
+990	GSM1892027 1	157	5	5	name
+997	GSM1892026 1	158	5	5	name
+1004	GSM1892025 1	159	5	5	name
+759	GSM1892060 1	124	5	5	name
+768	African American	125	9	7	gestational age
+789	African American	128	9	7	gestational age
+803	African American	130	9	7	gestational age
+810	African American	131	9	7	gestational age
+817	African American	132	9	7	gestational age
+845	African American	136	9	7	gestational age
+866	African American	139	9	7	gestational age
+887	African American	142	9	7	gestational age
+894	African American	143	9	7	gestational age
+908	African American	145	9	7	gestational age
+929	African American	148	9	7	gestational age
+957	African American	152	9	7	gestational age
+964	African American	153	9	7	gestational age
+971	African American	154	9	7	gestational age
+1006	African American	159	9	7	gestational age
+775	Caucasian	126	8	7	gestational age
+782	Caucasian	127	8	7	gestational age
+838	Caucasian	135	8	7	gestational age
+873	Caucasian	140	8	7	gestational age
+901	Caucasian	144	8	7	gestational age
+915	Caucasian	146	8	7	gestational age
+922	Caucasian	147	8	7	gestational age
+936	Caucasian	149	8	7	gestational age
+943	Caucasian	150	8	7	gestational age
+978	Caucasian	155	8	7	gestational age
+999	Caucasian	158	8	7	gestational age
+831	Asian	134	12	7	gestational age
+824	Hispanic	133	13	7	gestational age
+880	Hispanic	141	13	7	gestational age
+859	Hispanic	138	13	7	gestational age
+950	Hispanic	151	13	7	gestational age
+985	Hispanic	156	13	7	gestational age
+992	Hispanic	157	13	7	gestational age
+766	GSM1892059 1	125	5	5	name
+773	GSM1892058 1	126	5	5	name
+780	GSM1892057 1	127	5	5	name
+787	GSM1892056 1	128	5	5	name
+794	GSM1892055 1	129	5	5	name
+801	GSM1892054 1	130	5	5	name
+796	Other	129	7	7	gestational age
+852	Other	137	7	7	gestational age
+761	Other	124	7	7	gestational age
+808	GSM1892053 1	131	5	5	name
+815	GSM1892052 1	132	5	5	name
+822	GSM1892051 1	133	5	5	name
+829	GSM1892050 1	134	5	5	name
+836	GSM1892049 1	135	5	5	name
+843	GSM1892048 1	136	5	5	name
+\.
+
+
+--
+-- Name: articles_sampleattributevalueinsample_id_seq; Type: SEQUENCE SET; Schema: public; Owner: sashko
+--
+
+SELECT pg_catalog.setval('articles_sampleattributevalueinsample_id_seq', 1006, true);
+
+
+--
+-- Data for Name: articles_unificatedsamplesattributename; Type: TABLE DATA; Schema: public; Owner: sashko
+--
+
+COPY articles_unificatedsamplesattributename (id, name, additional_info) FROM stdin;
+8	Common	"not mesh"=>""
+1	Embryonic Structures	"link"=>"https://www.nlm.nih.gov/cgi/mesh/2016/MB_cgi", "mesh id"=>"D004628", "alternative"=>"anatomy"
+2	Classification	"mesh id"=>"Q000145"
+3	Gestational Age	"mesh id"=>"D005865"
+5	name	"not a mesh term"=>""
+6	Maternal Age	"mesh id"=>"D008423"
+9	Ethnology	"mesh id"=>"D005007"
+10	Diagnosis	"mesh id"=>"D003933"
+4	Pathology	"mesh id"=>"D010336"
+7	Race	"mesh id"=>"D044469"
+\.
+
+
+--
+-- Name: articles_unificatedsamplesattributename_id_seq; Type: SEQUENCE SET; Schema: public; Owner: sashko
+--
+
+SELECT pg_catalog.setval('articles_unificatedsamplesattributename_id_seq', 10, true);
+
+
+--
+-- Data for Name: articles_unificatedsamplesattributename_synonyms; Type: TABLE DATA; Schema: public; Owner: sashko
+--
+
+COPY articles_unificatedsamplesattributename_synonyms (id, from_unificatedsamplesattributename_id, to_unificatedsamplesattributename_id) FROM stdin;
+1	7	9
+2	9	7
+3	4	10
+\.
+
+
+--
+-- Name: articles_unificatedsamplesattributename_synonyms_id_seq; Type: SEQUENCE SET; Schema: public; Owner: sashko
+--
+
+SELECT pg_catalog.setval('articles_unificatedsamplesattributename_synonyms_id_seq', 3, true);
+
+
+--
+-- Data for Name: articles_unificatedsamplesattributevalue; Type: TABLE DATA; Schema: public; Owner: sashko
+--
+
+COPY articles_unificatedsamplesattributevalue (id, value, unificated_name_id, additional_info) FROM stdin;
+1	Placenta	1	"link"=>"https://www.nlm.nih.gov/cgi/mesh/2016/MB_cgi", "mesh id"=>"D010920"
+3	Humans	2	
+4	Pre-Eclampsia	4	
+7	Other	7	"not mesh"=>""
+2	Number in weeks	8	"not a mesh term"=>""
+6	Number in years	8	
+5	Text Value	8	
+8	European Continental Ancestry Group	7	"mesh id"=>"D044465"
+9	African Americans	7	"mesh id"=>"D001741"
+10	Health	4	"mesh id"=>"D006262"
+11	Hispanic Americans	7	
+12	Asian Continental Ancestry Group	7	
+13	Hispanic Americans	7	"mesh id"=>"D006630"
+\.
+
+
+--
+-- Name: articles_unificatedsamplesattributevalue_id_seq; Type: SEQUENCE SET; Schema: public; Owner: sashko
+--
+
+SELECT pg_catalog.setval('articles_unificatedsamplesattributevalue_id_seq', 13, true);
+
+
+--
+-- Data for Name: auth_group; Type: TABLE DATA; Schema: public; Owner: sashko
+--
+
+COPY auth_group (id, name) FROM stdin;
+\.
+
+
+--
+-- Name: auth_group_id_seq; Type: SEQUENCE SET; Schema: public; Owner: sashko
+--
+
+SELECT pg_catalog.setval('auth_group_id_seq', 1, false);
+
+
+--
+-- Data for Name: auth_group_permissions; Type: TABLE DATA; Schema: public; Owner: sashko
+--
+
+COPY auth_group_permissions (id, group_id, permission_id) FROM stdin;
+\.
+
+
+--
+-- Name: auth_group_permissions_id_seq; Type: SEQUENCE SET; Schema: public; Owner: sashko
+--
+
+SELECT pg_catalog.setval('auth_group_permissions_id_seq', 1, false);
+
+
+--
+-- Data for Name: auth_permission; Type: TABLE DATA; Schema: public; Owner: sashko
+--
+
+COPY auth_permission (id, name, content_type_id, codename) FROM stdin;
+1	Can add log entry	1	add_logentry
+2	Can change log entry	1	change_logentry
+3	Can delete log entry	1	delete_logentry
+4	Can add permission	2	add_permission
+5	Can change permission	2	change_permission
+6	Can delete permission	2	delete_permission
+7	Can add group	3	add_group
+8	Can change group	3	change_group
+9	Can delete group	3	delete_group
+10	Can add user	4	add_user
+11	Can change user	4	change_user
+12	Can delete user	4	delete_user
+13	Can add content type	5	add_contenttype
+14	Can change content type	5	change_contenttype
+15	Can delete content type	5	delete_contenttype
+16	Can add session	6	add_session
+17	Can change session	6	change_session
+18	Can delete session	6	delete_session
+19	Can add article	7	add_article
+20	Can change article	7	change_article
+21	Can delete article	7	delete_article
+22	Can add attribute	8	add_attribute
+23	Can change attribute	8	change_attribute
+24	Can delete attribute	8	delete_attribute
+25	Can add unificated samples attribute name	9	add_unificatedsamplesattributename
+26	Can change unificated samples attribute name	9	change_unificatedsamplesattributename
+27	Can delete unificated samples attribute name	9	delete_unificatedsamplesattributename
+28	Can add experiment	10	add_experiment
+29	Can change experiment	10	change_experiment
+30	Can delete experiment	10	delete_experiment
+31	Can add microarray	11	add_microarray
+32	Can change microarray	11	change_microarray
+33	Can delete microarray	11	delete_microarray
+34	Can add sample	12	add_sample
+35	Can change sample	12	change_sample
+36	Can delete sample	12	delete_sample
+37	Can add sample attribute	13	add_sampleattribute
+38	Can change sample attribute	13	change_sampleattribute
+39	Can delete sample attribute	13	delete_sampleattribute
+40	Can add unificated samples attribute value	14	add_unificatedsamplesattributevalue
+41	Can change unificated samples attribute value	14	change_unificatedsamplesattributevalue
+42	Can delete unificated samples attribute value	14	delete_unificatedsamplesattributevalue
+\.
+
+
+--
+-- Name: auth_permission_id_seq; Type: SEQUENCE SET; Schema: public; Owner: sashko
+--
+
+SELECT pg_catalog.setval('auth_permission_id_seq', 42, true);
+
+
+--
+-- Data for Name: auth_user; Type: TABLE DATA; Schema: public; Owner: sashko
+--
+
+COPY auth_user (id, password, last_login, is_superuser, username, first_name, last_name, email, is_staff, is_active, date_joined) FROM stdin;
+1	pbkdf2_sha256$24000$2xHJgjS0DQxw$edJwFWWJNDQqmAtaZaYvTUBsAFJW0afqWwQ4Z+Lp2Gs=	2016-09-13 05:15:25.217213+03	t	sashko				t	t	2016-09-12 22:46:20.131809+03
+\.
+
+
+--
+-- Data for Name: auth_user_groups; Type: TABLE DATA; Schema: public; Owner: sashko
+--
+
+COPY auth_user_groups (id, user_id, group_id) FROM stdin;
+\.
+
+
+--
+-- Name: auth_user_groups_id_seq; Type: SEQUENCE SET; Schema: public; Owner: sashko
+--
+
+SELECT pg_catalog.setval('auth_user_groups_id_seq', 1, false);
+
+
+--
+-- Name: auth_user_id_seq; Type: SEQUENCE SET; Schema: public; Owner: sashko
+--
+
+SELECT pg_catalog.setval('auth_user_id_seq', 1, true);
+
+
+--
+-- Data for Name: auth_user_user_permissions; Type: TABLE DATA; Schema: public; Owner: sashko
+--
+
+COPY auth_user_user_permissions (id, user_id, permission_id) FROM stdin;
+\.
+
+
+--
+-- Name: auth_user_user_permissions_id_seq; Type: SEQUENCE SET; Schema: public; Owner: sashko
+--
+
+SELECT pg_catalog.setval('auth_user_user_permissions_id_seq', 1, false);
+
+
+--
+-- Data for Name: django_admin_log; Type: TABLE DATA; Schema: public; Owner: sashko
+--
+
+COPY django_admin_log (id, action_time, object_id, object_repr, action_flag, change_message, content_type_id, user_id) FROM stdin;
+1	2016-09-12 22:48:50.891568+03	1	1	1	Added.	10	1
+3	2016-09-13 11:01:59.660727+03	1	Embryonic Structures	1	Added.	9	1
+4	2016-09-13 11:49:21.458976+03	1	Embryonic Structures	2	Changed additional_info.	9	1
+5	2016-09-13 11:49:58.04943+03	1	Embryonic Structures	2	Changed additional_info.	9	1
+6	2016-09-13 11:52:11.961129+03	3	3	2	Changed  for sample "124". Changed unificated_name for sample attribute "Embryonic Structures None".	10	1
+7	2016-09-13 12:15:06.798325+03	1	Placenta	1	Added.	14	1
+8	2016-09-13 12:22:12.615835+03	2	Classification	1	Added.	9	1
+9	2016-09-13 12:22:27.55944+03	3	3	2	Changed  for sample "124". Changed unificated_value for sample attribute "Embryonic Structures Placenta". Changed unificated_name for sample attribute "Classification None".	10	1
+10	2016-09-13 12:24:35.158417+03	1	Embryonic Structures	2	Changed additional_info.	9	1
+11	2016-09-13 12:31:41.474546+03	3	Gestational Age	1	Added.	9	1
+12	2016-09-13 12:34:13.366674+03	2	Number in weeks	1	Added.	14	1
+13	2016-09-13 12:35:49.086+03	4	Pathology	1	Added.	9	1
+14	2016-09-13 12:36:13.663426+03	5	name	1	Added.	9	1
+15	2016-09-13 12:36:37.245263+03	5	name	2	Changed additional_info.	9	1
+16	2016-09-13 12:38:03.904454+03	6	Maternal Age	1	Added.	9	1
+17	2016-09-13 12:43:27.049657+03	7	Race	1	Added.	9	1
+18	2016-09-13 12:44:46.54796+03	2	Number in weeks	2	Changed additional_info.	14	1
+19	2016-09-13 12:45:18.282055+03	3	3	2	Changed  for sample "124". Changed unificated_name for sample attribute "Gestational Age None". Changed unificated_name for sample attribute "Pathology None". Changed unificated_name for sample attribute "name None". Changed unificated_name for sample attribute "Maternal Age None". Changed unificated_name for sample attribute "Race None".	10	1
+20	2016-09-13 12:45:59.746942+03	3	3	2	Changed  for sample "124". Changed unificated_value for sample attribute "Gestational Age Number in weeks".	10	1
+21	2016-09-13 12:48:16.536182+03	3	Hi	1	Added.	14	1
+22	2016-09-13 12:48:29.558032+03	3	Hum	2	Changed value.	14	1
+23	2016-09-13 12:49:16.716299+03	3	Humans	2	Changed value.	14	1
+24	2016-09-13 12:50:20.56531+03	4	Pre-Eclampsia	1	Added.	14	1
+25	2016-09-13 12:54:47.502393+03	5	Text Value	1	Added.	14	1
+26	2016-09-13 12:55:17.294614+03	6	Number in years	1	Added.	14	1
+27	2016-09-13 12:57:33.107658+03	7	Other	1	Added.	14	1
+28	2016-09-13 12:57:41.251516+03	3	3	2	Changed  for sample "124". Changed name_for_each for sample attribute "Embryonic Structures Placenta". Changed name_for_each and unificated_value for sample attribute "Classification Humans". Changed name_for_each for sample attribute "Gestational Age Number in weeks". Changed name_for_each and unificated_value for sample attribute "Pathology Pre-Eclampsia". Changed name_for_each and unificated_value for sample attribute "name Text Value". Changed name_for_each and unificated_value for sample attribute "Maternal Age Number in years". Changed name_for_each and unificated_value for sample attribute "Race Other".	10	1
+29	2016-09-13 12:58:15.922144+03	3	3	2	Changed  for sample "124". Changed value_for_each for sample attribute "Embryonic Structures Placenta". Changed value_for_each for sample attribute "Classification Humans". Changed value_for_each for sample attribute "Gestational Age Number in weeks". Changed value_for_each for sample attribute "Pathology Pre-Eclampsia". Changed value_for_each for sample attribute "name Text Value". Changed value_for_each for sample attribute "Maternal Age Number in years". Changed value_for_each for sample attribute "Race Other".	10	1
+30	2016-09-13 13:19:47.007091+03	8	Common	1	Added.	9	1
+31	2016-09-13 13:19:55.471528+03	8	Common	2	Changed additional_info.	9	1
+32	2016-09-13 13:21:16.181116+03	2	Number in weeks	2	Changed unificated_name.	14	1
+33	2016-09-13 13:21:28.49311+03	6	Number in years	2	Changed unificated_name.	14	1
+34	2016-09-13 13:22:44.062199+03	5	Text Value	2	Changed unificated_name.	14	1
+35	2016-09-13 13:30:33.347416+03	3	3	2	Changed  for sample "124". Changed value_for_each for sample attribute "Embryonic Structures Placenta". Changed value_for_each for sample attribute "Classification Humans". Changed value_for_each for sample attribute "Gestational Age Number in weeks". Changed value_for_each for sample attribute "Pathology Pre-Eclampsia". Changed value_for_each for sample attribute "name Text Value". Changed value_for_each for sample attribute "Maternal Age Number in years". Changed value_for_each for sample attribute "Race Other".	10	1
+36	2016-09-13 13:33:20.176783+03	3	3	2	Changed  for sample "124". Changed value_for_each for sample attribute "Gestational Age Number in weeks".	10	1
+37	2016-09-13 13:34:09.821523+03	3	3	2	Changed  for sample "124". Changed name_for_each for sample attribute "name Text Value". Changed name_for_each for sample attribute "Maternal Age Number in years".	10	1
+38	2016-09-13 13:35:04.626354+03	3	3	2	Changed  for sample "124". Changed value_for_each for sample attribute "name Text Value". Changed value_for_each for sample attribute "Maternal Age Number in years".	10	1
+39	2016-09-13 13:38:28.421231+03	8	European Continental Ancestry Group	1	Added.	14	1
+40	2016-09-13 13:41:49.265304+03	9	African Americans	1	Added.	14	1
+41	2016-09-13 13:42:46.072692+03	3	3	2	Changed  for sample "125". Changed  for sample "126". Changed unificated_value and value_for_each for sample attribute "Race African Americans". Changed unificated_value and value_for_each for sample attribute "Race European Continental Ancestry Group".	10	1
+42	2016-09-13 13:50:34.905251+03	10	Health	1	Added.	14	1
+43	2016-09-13 13:50:55.300634+03	3	3	2	Changed  for sample "130". Changed unificated_value and value_for_each for sample attribute "Pathology Health".	10	1
+44	2016-09-13 14:24:02.660157+03	11	Hispanic Americans	1	Added.	14	1
+45	2016-09-13 14:27:55.512012+03	12	Asian Continental Ancestry Group	1	Added.	14	1
+46	2016-09-13 14:28:07.531256+03	3	3	2	Changed  for sample "133". Changed  for sample "134". Changed unificated_value for sample attribute "Race Hispanic Americans". Changed unificated_value and value_for_each for sample attribute "Race Asian Continental Ancestry Group".	10	1
+47	2016-09-13 17:03:08.773462+03	9	Ethnology	1	Added.	9	1
+48	2016-09-13 17:04:24.171216+03	7	Race	2	Changed additional_info. Added from_unificatedsamplesattributename-to_unificatedsamplesattributename relationship "UnificatedSamplesAttributeName_synonyms object".	9	1
+49	2016-09-13 17:04:40.468355+03	9	Ethnology	2	Added from_unificatedsamplesattributename-to_unificatedsamplesattributename relationship "UnificatedSamplesAttributeName_synonyms object".	9	1
+50	2016-09-13 17:09:44.285705+03	10	Diagnosis	1	Added.	9	1
+51	2016-09-13 17:10:27.661892+03	4	Pathology	2	Added from_unificatedsamplesattributename-to_unificatedsamplesattributename relationship "UnificatedSamplesAttributeName_synonyms object".	9	1
+52	2016-09-13 17:22:41.132866+03	13	Hispanic Americans	1	Added.	14	1
+53	2016-09-13 17:25:34.269194+03	3	3	2	Changed  for sample "141". Changed unificated_value and value_for_each for sample attribute "Race Hispanic Americans".	10	1
+54	2016-09-13 17:27:57.147638+03	3	3	2	Changed data.	10	1
+\.
+
+
+--
+-- Name: django_admin_log_id_seq; Type: SEQUENCE SET; Schema: public; Owner: sashko
+--
+
+SELECT pg_catalog.setval('django_admin_log_id_seq', 54, true);
+
+
+--
+-- Data for Name: django_content_type; Type: TABLE DATA; Schema: public; Owner: sashko
+--
+
+COPY django_content_type (id, app_label, model) FROM stdin;
+1	admin	logentry
+2	auth	permission
+3	auth	group
+4	auth	user
+5	contenttypes	contenttype
+6	sessions	session
+7	articles	article
+8	articles	attribute
+9	articles	unificatedsamplesattributename
+10	articles	experiment
+11	articles	microarray
+12	articles	sample
+13	articles	sampleattribute
+14	articles	unificatedsamplesattributevalue
+\.
+
+
+--
+-- Name: django_content_type_id_seq; Type: SEQUENCE SET; Schema: public; Owner: sashko
+--
+
+SELECT pg_catalog.setval('django_content_type_id_seq', 14, true);
+
+
+--
+-- Data for Name: django_migrations; Type: TABLE DATA; Schema: public; Owner: sashko
+--
+
+COPY django_migrations (id, app, name, applied) FROM stdin;
+1	contenttypes	0001_initial	2016-09-12 22:45:50.855186+03
+2	auth	0001_initial	2016-09-12 22:45:51.795288+03
+3	admin	0001_initial	2016-09-12 22:45:52.026134+03
+4	admin	0002_logentry_remove_auto_add	2016-09-12 22:45:52.071009+03
+5	articles	0001_initial	2016-09-12 22:45:52.974385+03
+6	articles	0002_test	2016-09-12 22:45:53.261112+03
+7	articles	0003_auto_20160830_1650	2016-09-12 22:45:54.245294+03
+8	articles	0004_auto_20160830_1724	2016-09-12 22:45:54.341764+03
+9	articles	0005_auto_20160830_2314	2016-09-12 22:45:54.375019+03
+10	articles	0006_auto_20160831_1753	2016-09-12 22:45:54.972261+03
+11	articles	0007_auto_20160831_1901	2016-09-12 22:45:55.046293+03
+12	articles	0008_auto_20160906_1412	2016-09-12 22:45:55.255597+03
+13	articles	0009_auto_20160906_1510	2016-09-12 22:45:55.431547+03
+14	articles	0010_sample_fictional_field	2016-09-12 22:45:55.576946+03
+15	articles	0011_auto_20160907_2247	2016-09-12 22:45:55.707202+03
+16	articles	0012_auto_20160908_1230	2016-09-12 22:45:55.883234+03
+17	articles	0013_auto_20160908_1238	2016-09-12 22:45:55.981717+03
+18	articles	0014_auto_20160912_2245	2016-09-12 22:45:56.448624+03
+19	contenttypes	0002_remove_content_type_name	2016-09-12 22:45:56.52278+03
+20	auth	0002_alter_permission_name_max_length	2016-09-12 22:45:56.567741+03
+21	auth	0003_alter_user_email_max_length	2016-09-12 22:45:56.600076+03
+22	auth	0004_alter_user_username_opts	2016-09-12 22:45:56.624662+03
+23	auth	0005_alter_user_last_login_null	2016-09-12 22:45:56.65415+03
+24	auth	0006_require_contenttypes_0002	2016-09-12 22:45:56.667195+03
+25	auth	0007_alter_validators_add_error_messages	2016-09-12 22:45:56.688017+03
+26	sessions	0001_initial	2016-09-12 22:45:56.897727+03
+27	articles	0015_auto_20160913_0535	2016-09-13 05:35:57.706349+03
+28	articles	0016_unificatedsamplesattributename_synonyms	2016-09-13 15:57:42.731818+03
+29	articles	0017_auto_20160913_1707	2016-09-13 17:08:07.79648+03
+\.
+
+
+--
+-- Name: django_migrations_id_seq; Type: SEQUENCE SET; Schema: public; Owner: sashko
+--
+
+SELECT pg_catalog.setval('django_migrations_id_seq', 29, true);
+
+
+--
+-- Data for Name: django_session; Type: TABLE DATA; Schema: public; Owner: sashko
+--
+
+COPY django_session (session_key, session_data, expire_date) FROM stdin;
+be1tinaggc7tocyz1og8m1jyvf7r84zz	OThhZmQwNzE2M2E2OWE0NzNiNTBkNmMwMjZmODFiZGU1ZmQ4N2ZiZDp7Il9hdXRoX3VzZXJfaGFzaCI6ImRlMjlmZTBlMDI0ZWY0NjhiYWVkMjFlMGM0NzNlMzc0Y2Y0ZjgzOTEiLCJfYXV0aF91c2VyX2JhY2tlbmQiOiJkamFuZ28uY29udHJpYi5hdXRoLmJhY2tlbmRzLk1vZGVsQmFja2VuZCIsIl9hdXRoX3VzZXJfaWQiOiIxIn0=	2016-09-26 22:48:00.174489+03
+s53h3nkulpr208e76r5fjp6d4gfxjrk7	ZGE2ZmJmYmMzY2Y5ZTM5NzRmMmZjOGVmZDdhNmRiZTJmOTM2MjhiOTp7Il9hdXRoX3VzZXJfaGFzaCI6ImRlMjlmZTBlMDI0ZWY0NjhiYWVkMjFlMGM0NzNlMzc0Y2Y0ZjgzOTEiLCJfYXV0aF91c2VyX2lkIjoiMSIsIl9hdXRoX3VzZXJfYmFja2VuZCI6ImRqYW5nby5jb250cmliLmF1dGguYmFja2VuZHMuTW9kZWxCYWNrZW5kIn0=	2016-09-27 05:15:25.229537+03
+\.
+
+
+--
+-- Name: articles_article_pkey; Type: CONSTRAINT; Schema: public; Owner: sashko; Tablespace: 
+--
+
+ALTER TABLE ONLY articles_article
+    ADD CONSTRAINT articles_article_pkey PRIMARY KEY (id);
+
+
+--
+-- Name: articles_attribute_pkey; Type: CONSTRAINT; Schema: public; Owner: sashko; Tablespace: 
+--
+
+ALTER TABLE ONLY articles_attribute
+    ADD CONSTRAINT articles_attribute_pkey PRIMARY KEY (id);
+
+
+--
+-- Name: articles_experiment_microarrays_experiment_id_85f591ed_uniq; Type: CONSTRAINT; Schema: public; Owner: sashko; Tablespace: 
+--
+
+ALTER TABLE ONLY articles_experiment_microarrays
+    ADD CONSTRAINT articles_experiment_microarrays_experiment_id_85f591ed_uniq UNIQUE (experiment_id, microarray_id);
+
+
+--
+-- Name: articles_experiment_microarrays_pkey; Type: CONSTRAINT; Schema: public; Owner: sashko; Tablespace: 
+--
+
+ALTER TABLE ONLY articles_experiment_microarrays
+    ADD CONSTRAINT articles_experiment_microarrays_pkey PRIMARY KEY (id);
+
+
+--
+-- Name: articles_experiment_pkey; Type: CONSTRAINT; Schema: public; Owner: sashko; Tablespace: 
+--
+
+ALTER TABLE ONLY articles_experiment
+    ADD CONSTRAINT articles_experiment_pkey PRIMARY KEY (id);
+
+
+--
+-- Name: articles_microarray_pkey; Type: CONSTRAINT; Schema: public; Owner: sashko; Tablespace: 
+--
+
+ALTER TABLE ONLY articles_microarray
+    ADD CONSTRAINT articles_microarray_pkey PRIMARY KEY (id);
+
+
+--
+-- Name: articles_sample_pkey; Type: CONSTRAINT; Schema: public; Owner: sashko; Tablespace: 
+--
+
+ALTER TABLE ONLY articles_sample
+    ADD CONSTRAINT articles_sample_pkey PRIMARY KEY (id);
+
+
+--
+-- Name: articles_sampleattributevalueinsample_pkey; Type: CONSTRAINT; Schema: public; Owner: sashko; Tablespace: 
+--
+
+ALTER TABLE ONLY articles_sampleattribute
+    ADD CONSTRAINT articles_sampleattributevalueinsample_pkey PRIMARY KEY (id);
+
+
+--
+-- Name: articles_u_from_unificatedsamplesattributename_id_36df0c2b_uniq; Type: CONSTRAINT; Schema: public; Owner: sashko; Tablespace: 
+--
+
+ALTER TABLE ONLY articles_unificatedsamplesattributename_synonyms
+    ADD CONSTRAINT articles_u_from_unificatedsamplesattributename_id_36df0c2b_uniq UNIQUE (from_unificatedsamplesattributename_id, to_unificatedsamplesattributename_id);
+
+
+--
+-- Name: articles_unificatedsamplesattributename_pkey; Type: CONSTRAINT; Schema: public; Owner: sashko; Tablespace: 
+--
+
+ALTER TABLE ONLY articles_unificatedsamplesattributename
+    ADD CONSTRAINT articles_unificatedsamplesattributename_pkey PRIMARY KEY (id);
+
+
+--
+-- Name: articles_unificatedsamplesattributename_synonyms_pkey; Type: CONSTRAINT; Schema: public; Owner: sashko; Tablespace: 
+--
+
+ALTER TABLE ONLY articles_unificatedsamplesattributename_synonyms
+    ADD CONSTRAINT articles_unificatedsamplesattributename_synonyms_pkey PRIMARY KEY (id);
+
+
+--
+-- Name: articles_unificatedsamplesattributevalue_pkey; Type: CONSTRAINT; Schema: public; Owner: sashko; Tablespace: 
+--
+
+ALTER TABLE ONLY articles_unificatedsamplesattributevalue
+    ADD CONSTRAINT articles_unificatedsamplesattributevalue_pkey PRIMARY KEY (id);
+
+
+--
+-- Name: auth_group_name_key; Type: CONSTRAINT; Schema: public; Owner: sashko; Tablespace: 
+--
+
+ALTER TABLE ONLY auth_group
+    ADD CONSTRAINT auth_group_name_key UNIQUE (name);
+
+
+--
+-- Name: auth_group_permissions_group_id_0cd325b0_uniq; Type: CONSTRAINT; Schema: public; Owner: sashko; Tablespace: 
+--
+
+ALTER TABLE ONLY auth_group_permissions
+    ADD CONSTRAINT auth_group_permissions_group_id_0cd325b0_uniq UNIQUE (group_id, permission_id);
+
+
+--
+-- Name: auth_group_permissions_pkey; Type: CONSTRAINT; Schema: public; Owner: sashko; Tablespace: 
+--
+
+ALTER TABLE ONLY auth_group_permissions
+    ADD CONSTRAINT auth_group_permissions_pkey PRIMARY KEY (id);
+
+
+--
+-- Name: auth_group_pkey; Type: CONSTRAINT; Schema: public; Owner: sashko; Tablespace: 
+--
+
+ALTER TABLE ONLY auth_group
+    ADD CONSTRAINT auth_group_pkey PRIMARY KEY (id);
+
+
+--
+-- Name: auth_permission_content_type_id_01ab375a_uniq; Type: CONSTRAINT; Schema: public; Owner: sashko; Tablespace: 
+--
+
+ALTER TABLE ONLY auth_permission
+    ADD CONSTRAINT auth_permission_content_type_id_01ab375a_uniq UNIQUE (content_type_id, codename);
+
+
+--
+-- Name: auth_permission_pkey; Type: CONSTRAINT; Schema: public; Owner: sashko; Tablespace: 
+--
+
+ALTER TABLE ONLY auth_permission
+    ADD CONSTRAINT auth_permission_pkey PRIMARY KEY (id);
+
+
+--
+-- Name: auth_user_groups_pkey; Type: CONSTRAINT; Schema: public; Owner: sashko; Tablespace: 
+--
+
+ALTER TABLE ONLY auth_user_groups
+    ADD CONSTRAINT auth_user_groups_pkey PRIMARY KEY (id);
+
+
+--
+-- Name: auth_user_groups_user_id_94350c0c_uniq; Type: CONSTRAINT; Schema: public; Owner: sashko; Tablespace: 
+--
+
+ALTER TABLE ONLY auth_user_groups
+    ADD CONSTRAINT auth_user_groups_user_id_94350c0c_uniq UNIQUE (user_id, group_id);
+
+
+--
+-- Name: auth_user_pkey; Type: CONSTRAINT; Schema: public; Owner: sashko; Tablespace: 
+--
+
+ALTER TABLE ONLY auth_user
+    ADD CONSTRAINT auth_user_pkey PRIMARY KEY (id);
+
+
+--
+-- Name: auth_user_user_permissions_pkey; Type: CONSTRAINT; Schema: public; Owner: sashko; Tablespace: 
+--
+
+ALTER TABLE ONLY auth_user_user_permissions
+    ADD CONSTRAINT auth_user_user_permissions_pkey PRIMARY KEY (id);
+
+
+--
+-- Name: auth_user_user_permissions_user_id_14a6b632_uniq; Type: CONSTRAINT; Schema: public; Owner: sashko; Tablespace: 
+--
+
+ALTER TABLE ONLY auth_user_user_permissions
+    ADD CONSTRAINT auth_user_user_permissions_user_id_14a6b632_uniq UNIQUE (user_id, permission_id);
+
+
+--
+-- Name: auth_user_username_key; Type: CONSTRAINT; Schema: public; Owner: sashko; Tablespace: 
+--
+
+ALTER TABLE ONLY auth_user
+    ADD CONSTRAINT auth_user_username_key UNIQUE (username);
+
+
+--
+-- Name: django_admin_log_pkey; Type: CONSTRAINT; Schema: public; Owner: sashko; Tablespace: 
+--
+
+ALTER TABLE ONLY django_admin_log
+    ADD CONSTRAINT django_admin_log_pkey PRIMARY KEY (id);
+
+
+--
+-- Name: django_content_type_app_label_76bd3d3b_uniq; Type: CONSTRAINT; Schema: public; Owner: sashko; Tablespace: 
+--
+
+ALTER TABLE ONLY django_content_type
+    ADD CONSTRAINT django_content_type_app_label_76bd3d3b_uniq UNIQUE (app_label, model);
+
+
+--
+-- Name: django_content_type_pkey; Type: CONSTRAINT; Schema: public; Owner: sashko; Tablespace: 
+--
+
+ALTER TABLE ONLY django_content_type
+    ADD CONSTRAINT django_content_type_pkey PRIMARY KEY (id);
+
+
+--
+-- Name: django_migrations_pkey; Type: CONSTRAINT; Schema: public; Owner: sashko; Tablespace: 
+--
+
+ALTER TABLE ONLY django_migrations
+    ADD CONSTRAINT django_migrations_pkey PRIMARY KEY (id);
+
+
+--
+-- Name: django_session_pkey; Type: CONSTRAINT; Schema: public; Owner: sashko; Tablespace: 
+--
+
+ALTER TABLE ONLY django_session
+    ADD CONSTRAINT django_session_pkey PRIMARY KEY (session_key);
+
+
+--
+-- Name: articles_attribute_a00c1b00; Type: INDEX; Schema: public; Owner: sashko; Tablespace: 
+--
+
+CREATE INDEX articles_attribute_a00c1b00 ON articles_attribute USING btree (article_id);
+
+
+--
+-- Name: articles_experiment_8d777f38; Type: INDEX; Schema: public; Owner: sashko; Tablespace: 
+--
+
+CREATE INDEX articles_experiment_8d777f38 ON articles_experiment USING btree (data);
+
+
+--
+-- Name: articles_experiment_microarrays_70488be9; Type: INDEX; Schema: public; Owner: sashko; Tablespace: 
+--
+
+CREATE INDEX articles_experiment_microarrays_70488be9 ON articles_experiment_microarrays USING btree (microarray_id);
+
+
+--
+-- Name: articles_experiment_microarrays_abd1812d; Type: INDEX; Schema: public; Owner: sashko; Tablespace: 
+--
+
+CREATE INDEX articles_experiment_microarrays_abd1812d ON articles_experiment_microarrays USING btree (experiment_id);
+
+
+--
+-- Name: articles_microarray_8d777f38; Type: INDEX; Schema: public; Owner: sashko; Tablespace: 
+--
+
+CREATE INDEX articles_microarray_8d777f38 ON articles_microarray USING btree (data);
+
+
+--
+-- Name: articles_sample_abd1812d; Type: INDEX; Schema: public; Owner: sashko; Tablespace: 
+--
+
+CREATE INDEX articles_sample_abd1812d ON articles_sample USING btree (experiment_id);
+
+
+--
+-- Name: articles_sampleattributevalueinsample_0acd920a; Type: INDEX; Schema: public; Owner: sashko; Tablespace: 
+--
+
+CREATE INDEX articles_sampleattributevalueinsample_0acd920a ON articles_sampleattribute USING btree (unificated_name_id);
+
+
+--
+-- Name: articles_sampleattributevalueinsample_89bfbb4d; Type: INDEX; Schema: public; Owner: sashko; Tablespace: 
+--
+
+CREATE INDEX articles_sampleattributevalueinsample_89bfbb4d ON articles_sampleattribute USING btree (unificated_value_id);
+
+
+--
+-- Name: articles_sampleattributevalueinsample_c09c8085; Type: INDEX; Schema: public; Owner: sashko; Tablespace: 
+--
+
+CREATE INDEX articles_sampleattributevalueinsample_c09c8085 ON articles_sampleattribute USING btree (sample_id);
+
+
+--
+-- Name: articles_unificatedsamplesattributename_b6f69c9e; Type: INDEX; Schema: public; Owner: sashko; Tablespace: 
+--
+
+CREATE INDEX articles_unificatedsamplesattributename_b6f69c9e ON articles_unificatedsamplesattributename USING btree (additional_info);
+
+
+--
+-- Name: articles_unificatedsamplesattributename_synonyms_7ed110a6; Type: INDEX; Schema: public; Owner: sashko; Tablespace: 
+--
+
+CREATE INDEX articles_unificatedsamplesattributename_synonyms_7ed110a6 ON articles_unificatedsamplesattributename_synonyms USING btree (from_unificatedsamplesattributename_id);
+
+
+--
+-- Name: articles_unificatedsamplesattributename_synonyms_b43f09c8; Type: INDEX; Schema: public; Owner: sashko; Tablespace: 
+--
+
+CREATE INDEX articles_unificatedsamplesattributename_synonyms_b43f09c8 ON articles_unificatedsamplesattributename_synonyms USING btree (to_unificatedsamplesattributename_id);
+
+
+--
+-- Name: articles_unificatedsamplesattributevalue_0acd920a; Type: INDEX; Schema: public; Owner: sashko; Tablespace: 
+--
+
+CREATE INDEX articles_unificatedsamplesattributevalue_0acd920a ON articles_unificatedsamplesattributevalue USING btree (unificated_name_id);
+
+
+--
+-- Name: articles_unificatedsamplesattributevalue_b6f69c9e; Type: INDEX; Schema: public; Owner: sashko; Tablespace: 
+--
+
+CREATE INDEX articles_unificatedsamplesattributevalue_b6f69c9e ON articles_unificatedsamplesattributevalue USING btree (additional_info);
+
+
+--
+-- Name: auth_group_name_a6ea08ec_like; Type: INDEX; Schema: public; Owner: sashko; Tablespace: 
+--
+
+CREATE INDEX auth_group_name_a6ea08ec_like ON auth_group USING btree (name varchar_pattern_ops);
+
+
+--
+-- Name: auth_group_permissions_0e939a4f; Type: INDEX; Schema: public; Owner: sashko; Tablespace: 
+--
+
+CREATE INDEX auth_group_permissions_0e939a4f ON auth_group_permissions USING btree (group_id);
+
+
+--
+-- Name: auth_group_permissions_8373b171; Type: INDEX; Schema: public; Owner: sashko; Tablespace: 
+--
+
+CREATE INDEX auth_group_permissions_8373b171 ON auth_group_permissions USING btree (permission_id);
+
+
+--
+-- Name: auth_permission_417f1b1c; Type: INDEX; Schema: public; Owner: sashko; Tablespace: 
+--
+
+CREATE INDEX auth_permission_417f1b1c ON auth_permission USING btree (content_type_id);
+
+
+--
+-- Name: auth_user_groups_0e939a4f; Type: INDEX; Schema: public; Owner: sashko; Tablespace: 
+--
+
+CREATE INDEX auth_user_groups_0e939a4f ON auth_user_groups USING btree (group_id);
+
+
+--
+-- Name: auth_user_groups_e8701ad4; Type: INDEX; Schema: public; Owner: sashko; Tablespace: 
+--
+
+CREATE INDEX auth_user_groups_e8701ad4 ON auth_user_groups USING btree (user_id);
+
+
+--
+-- Name: auth_user_user_permissions_8373b171; Type: INDEX; Schema: public; Owner: sashko; Tablespace: 
+--
+
+CREATE INDEX auth_user_user_permissions_8373b171 ON auth_user_user_permissions USING btree (permission_id);
+
+
+--
+-- Name: auth_user_user_permissions_e8701ad4; Type: INDEX; Schema: public; Owner: sashko; Tablespace: 
+--
+
+CREATE INDEX auth_user_user_permissions_e8701ad4 ON auth_user_user_permissions USING btree (user_id);
+
+
+--
+-- Name: auth_user_username_6821ab7c_like; Type: INDEX; Schema: public; Owner: sashko; Tablespace: 
+--
+
+CREATE INDEX auth_user_username_6821ab7c_like ON auth_user USING btree (username varchar_pattern_ops);
+
+
+--
+-- Name: django_admin_log_417f1b1c; Type: INDEX; Schema: public; Owner: sashko; Tablespace: 
+--
+
+CREATE INDEX django_admin_log_417f1b1c ON django_admin_log USING btree (content_type_id);
+
+
+--
+-- Name: django_admin_log_e8701ad4; Type: INDEX; Schema: public; Owner: sashko; Tablespace: 
+--
+
+CREATE INDEX django_admin_log_e8701ad4 ON django_admin_log USING btree (user_id);
+
+
+--
+-- Name: django_session_de54fa62; Type: INDEX; Schema: public; Owner: sashko; Tablespace: 
+--
+
+CREATE INDEX django_session_de54fa62 ON django_session USING btree (expire_date);
+
+
+--
+-- Name: django_session_session_key_c0390e0f_like; Type: INDEX; Schema: public; Owner: sashko; Tablespace: 
+--
+
+CREATE INDEX django_session_session_key_c0390e0f_like ON django_session USING btree (session_key varchar_pattern_ops);
+
+
+--
+-- Name: D1af45b0eda3e2891bfe422e93b563a6; Type: FK CONSTRAINT; Schema: public; Owner: sashko
+--
+
+ALTER TABLE ONLY articles_sampleattribute
+    ADD CONSTRAINT "D1af45b0eda3e2891bfe422e93b563a6" FOREIGN KEY (unificated_name_id) REFERENCES articles_unificatedsamplesattributename(id) DEFERRABLE INITIALLY DEFERRED;
+
+
+--
+-- Name: D6e4b82fa1da0c78c5adaa94426cd9c0; Type: FK CONSTRAINT; Schema: public; Owner: sashko
+--
+
+ALTER TABLE ONLY articles_unificatedsamplesattributename_synonyms
+    ADD CONSTRAINT "D6e4b82fa1da0c78c5adaa94426cd9c0" FOREIGN KEY (to_unificatedsamplesattributename_id) REFERENCES articles_unificatedsamplesattributename(id) DEFERRABLE INITIALLY DEFERRED;
+
+
+--
+-- Name: a2a055cc601fbf5b8be7649f77f3130a; Type: FK CONSTRAINT; Schema: public; Owner: sashko
+--
+
+ALTER TABLE ONLY articles_sampleattribute
+    ADD CONSTRAINT a2a055cc601fbf5b8be7649f77f3130a FOREIGN KEY (unificated_value_id) REFERENCES articles_unificatedsamplesattributevalue(id) DEFERRABLE INITIALLY DEFERRED;
+
+
+--
+-- Name: ae90e85db832a9765e6e89056e5e552f; Type: FK CONSTRAINT; Schema: public; Owner: sashko
+--
+
+ALTER TABLE ONLY articles_unificatedsamplesattributename_synonyms
+    ADD CONSTRAINT ae90e85db832a9765e6e89056e5e552f FOREIGN KEY (from_unificatedsamplesattributename_id) REFERENCES articles_unificatedsamplesattributename(id) DEFERRABLE INITIALLY DEFERRED;
+
+
+--
+-- Name: articles_attribute_article_id_a825d661_fk_articles_article_id; Type: FK CONSTRAINT; Schema: public; Owner: sashko
+--
+
+ALTER TABLE ONLY articles_attribute
+    ADD CONSTRAINT articles_attribute_article_id_a825d661_fk_articles_article_id FOREIGN KEY (article_id) REFERENCES articles_article(id) DEFERRABLE INITIALLY DEFERRED;
+
+
+--
+-- Name: articles_exper_experiment_id_15e603ff_fk_articles_experiment_id; Type: FK CONSTRAINT; Schema: public; Owner: sashko
+--
+
+ALTER TABLE ONLY articles_experiment_microarrays
+    ADD CONSTRAINT articles_exper_experiment_id_15e603ff_fk_articles_experiment_id FOREIGN KEY (experiment_id) REFERENCES articles_experiment(id) DEFERRABLE INITIALLY DEFERRED;
+
+
+--
+-- Name: articles_exper_microarray_id_9b6e7108_fk_articles_microarray_id; Type: FK CONSTRAINT; Schema: public; Owner: sashko
+--
+
+ALTER TABLE ONLY articles_experiment_microarrays
+    ADD CONSTRAINT articles_exper_microarray_id_9b6e7108_fk_articles_microarray_id FOREIGN KEY (microarray_id) REFERENCES articles_microarray(id) DEFERRABLE INITIALLY DEFERRED;
+
+
+--
+-- Name: articles_sampl_experiment_id_01b8eed1_fk_articles_experiment_id; Type: FK CONSTRAINT; Schema: public; Owner: sashko
+--
+
+ALTER TABLE ONLY articles_sample
+    ADD CONSTRAINT articles_sampl_experiment_id_01b8eed1_fk_articles_experiment_id FOREIGN KEY (experiment_id) REFERENCES articles_experiment(id) DEFERRABLE INITIALLY DEFERRED;
+
+
+--
+-- Name: articles_sampleattribu_sample_id_9a450597_fk_articles_sample_id; Type: FK CONSTRAINT; Schema: public; Owner: sashko
+--
+
+ALTER TABLE ONLY articles_sampleattribute
+    ADD CONSTRAINT articles_sampleattribu_sample_id_9a450597_fk_articles_sample_id FOREIGN KEY (sample_id) REFERENCES articles_sample(id) DEFERRABLE INITIALLY DEFERRED;
+
+
+--
+-- Name: auth_group_permiss_permission_id_84c5c92e_fk_auth_permission_id; Type: FK CONSTRAINT; Schema: public; Owner: sashko
+--
+
+ALTER TABLE ONLY auth_group_permissions
+    ADD CONSTRAINT auth_group_permiss_permission_id_84c5c92e_fk_auth_permission_id FOREIGN KEY (permission_id) REFERENCES auth_permission(id) DEFERRABLE INITIALLY DEFERRED;
+
+
+--
+-- Name: auth_group_permissions_group_id_b120cbf9_fk_auth_group_id; Type: FK CONSTRAINT; Schema: public; Owner: sashko
+--
+
+ALTER TABLE ONLY auth_group_permissions
+    ADD CONSTRAINT auth_group_permissions_group_id_b120cbf9_fk_auth_group_id FOREIGN KEY (group_id) REFERENCES auth_group(id) DEFERRABLE INITIALLY DEFERRED;
+
+
+--
+-- Name: auth_permiss_content_type_id_2f476e4b_fk_django_content_type_id; Type: FK CONSTRAINT; Schema: public; Owner: sashko
+--
+
+ALTER TABLE ONLY auth_permission
+    ADD CONSTRAINT auth_permiss_content_type_id_2f476e4b_fk_django_content_type_id FOREIGN KEY (content_type_id) REFERENCES django_content_type(id) DEFERRABLE INITIALLY DEFERRED;
+
+
+--
+-- Name: auth_user_groups_group_id_97559544_fk_auth_group_id; Type: FK CONSTRAINT; Schema: public; Owner: sashko
+--
+
+ALTER TABLE ONLY auth_user_groups
+    ADD CONSTRAINT auth_user_groups_group_id_97559544_fk_auth_group_id FOREIGN KEY (group_id) REFERENCES auth_group(id) DEFERRABLE INITIALLY DEFERRED;
+
+
+--
+-- Name: auth_user_groups_user_id_6a12ed8b_fk_auth_user_id; Type: FK CONSTRAINT; Schema: public; Owner: sashko
+--
+
+ALTER TABLE ONLY auth_user_groups
+    ADD CONSTRAINT auth_user_groups_user_id_6a12ed8b_fk_auth_user_id FOREIGN KEY (user_id) REFERENCES auth_user(id) DEFERRABLE INITIALLY DEFERRED;
+
+
+--
+-- Name: auth_user_user_per_permission_id_1fbb5f2c_fk_auth_permission_id; Type: FK CONSTRAINT; Schema: public; Owner: sashko
+--
+
+ALTER TABLE ONLY auth_user_user_permissions
+    ADD CONSTRAINT auth_user_user_per_permission_id_1fbb5f2c_fk_auth_permission_id FOREIGN KEY (permission_id) REFERENCES auth_permission(id) DEFERRABLE INITIALLY DEFERRED;
+
+
+--
+-- Name: auth_user_user_permissions_user_id_a95ead1b_fk_auth_user_id; Type: FK CONSTRAINT; Schema: public; Owner: sashko
+--
+
+ALTER TABLE ONLY auth_user_user_permissions
+    ADD CONSTRAINT auth_user_user_permissions_user_id_a95ead1b_fk_auth_user_id FOREIGN KEY (user_id) REFERENCES auth_user(id) DEFERRABLE INITIALLY DEFERRED;
+
+
+--
+-- Name: bfab6503399bf15f8e808da86b4edd69; Type: FK CONSTRAINT; Schema: public; Owner: sashko
+--
+
+ALTER TABLE ONLY articles_unificatedsamplesattributevalue
+    ADD CONSTRAINT bfab6503399bf15f8e808da86b4edd69 FOREIGN KEY (unificated_name_id) REFERENCES articles_unificatedsamplesattributename(id) DEFERRABLE INITIALLY DEFERRED;
+
+
+--
+-- Name: django_admin_content_type_id_c4bce8eb_fk_django_content_type_id; Type: FK CONSTRAINT; Schema: public; Owner: sashko
+--
+
+ALTER TABLE ONLY django_admin_log
+    ADD CONSTRAINT django_admin_content_type_id_c4bce8eb_fk_django_content_type_id FOREIGN KEY (content_type_id) REFERENCES django_content_type(id) DEFERRABLE INITIALLY DEFERRED;
+
+
+--
+-- Name: django_admin_log_user_id_c564eba6_fk_auth_user_id; Type: FK CONSTRAINT; Schema: public; Owner: sashko
+--
+
+ALTER TABLE ONLY django_admin_log
+    ADD CONSTRAINT django_admin_log_user_id_c564eba6_fk_auth_user_id FOREIGN KEY (user_id) REFERENCES auth_user(id) DEFERRABLE INITIALLY DEFERRED;
+
+
+--
+-- Name: public; Type: ACL; Schema: -; Owner: postgres
+--
+
+REVOKE ALL ON SCHEMA public FROM PUBLIC;
+REVOKE ALL ON SCHEMA public FROM postgres;
+GRANT ALL ON SCHEMA public TO postgres;
+GRANT ALL ON SCHEMA public TO PUBLIC;
+
+
+--
+-- PostgreSQL database dump complete
+--
+

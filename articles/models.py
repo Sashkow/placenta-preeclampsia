@@ -3,8 +3,6 @@ from django.utils import timezone
 
 from django_hstore import hstore
 
-
-
 class ShowModel(models.Model):
     to_show = 'name'
     def _show(self):
@@ -44,15 +42,28 @@ class Attribute(ShowModel):
     
 class UnificatedSamplesAttributeName(ShowModel):
     name = models.CharField(max_length=255)
-    mesh_id = models.CharField(blank=True, max_length=255)
+    additional_info = hstore.DictionaryField(db_index=True, blank=True, null=True)
+    synonyms = models.ManyToManyField('self', symmetrical=True)
     to_show = 'name'
-
-
 
 
     @staticmethod
     def autocomplete_search_fields():
-        return ("id__iexact", "unificated_name__name__icontains",)
+        return ("id__iexact", "name__icontains",)
+
+
+
+class UnificatedSamplesAttributeValue(ShowModel):
+    unificated_name = models.ForeignKey('UnificatedSamplesAttributeName')
+    value = models.CharField(max_length=255)
+    additional_info = hstore.DictionaryField(db_index=True, blank=True, null=True)
+    to_show = 'value'
+
+    objects = hstore.HStoreManager()
+
+    @staticmethod
+    def autocomplete_search_fields():
+        return ("id__iexact", "value__icontains",)
 
 
 class Experiment(models.Model):
@@ -203,12 +214,3 @@ class SampleAttribute(models.Model):
         return attribute_obj
             
 
-class UnificatedSamplesAttributeValue(ShowModel):
-    unificated_name = models.ForeignKey('UnificatedSamplesAttributeName')
-    value = models.CharField(max_length=255)
-    mesh_id = models.CharField(blank=True, max_length=255)
-    to_show = 'value'
-
-    @staticmethod
-    def autocomplete_search_fields():
-        return ("id__iexact", "value__icontains",)

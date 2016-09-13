@@ -32,7 +32,7 @@ ALLOWED_HOSTS = []
 
 INSTALLED_APPS = [
     # 'devserver',
-    'super_inlines.grappelli_integration',
+    # 'super_inlines.grappelli_integration',
     'grappelli',
     'super_inlines',
     'django.contrib.admin',
