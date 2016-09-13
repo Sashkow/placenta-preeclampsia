@@ -19,7 +19,7 @@ s = ArrayExpress()
 #         children.remove(exp)
 
 
-
+    
 
 def get_experiment_attributes(experiment_id):
     """
@@ -162,8 +162,8 @@ def get_preeclampsia_accession():
 # keywords="pre-eclampsia+OR+preeclampsia+OR+pre-eclamptic+OR+preeclamptic",
 #                              exptype="*array*",
 #                              species="homo+sapiens")
-    # res = ['E-GEOD-74341', 'E-GEOD-73377', 'E-GEOD-73375',] 
-    res =['E-GEOD-73374',
+
+    res =['E-GEOD-74341', 'E-GEOD-73377', 'E-GEOD-73375', 'E-GEOD-73374',
            'E-GEOD-60438', 'E-MTAB-3265', 'E-MTAB-3348',
            'E-MTAB-3309', 'E-GEOD-54400', 'E-GEOD-59274', 'E-GEOD-57767',
            'E-GEOD-48424', 'E-GEOD-57050', 'E-GEOD-54618', 'E-GEOD-49343',

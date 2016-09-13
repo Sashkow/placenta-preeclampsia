@@ -43,7 +43,7 @@ class Attribute(ShowModel):
 class UnificatedSamplesAttributeName(ShowModel):
     name = models.CharField(max_length=255)
     additional_info = hstore.DictionaryField(db_index=True, blank=True, null=True)
-    synonyms = models.ManyToManyField('self', symmetrical=True)
+    synonyms = models.ManyToManyField('self', symmetrical=False)
     to_show = 'name'
 
 
@@ -57,6 +57,7 @@ class UnificatedSamplesAttributeValue(ShowModel):
     unificated_name = models.ForeignKey('UnificatedSamplesAttributeName')
     value = models.CharField(max_length=255)
     additional_info = hstore.DictionaryField(db_index=True, blank=True, null=True)
+    synonyms = models.ManyToManyField('self', symmetrical=False)
     to_show = 'value'
 
     objects = hstore.HStoreManager()
@@ -177,8 +178,8 @@ class Sample(models.Model):
     #     return self._show()
 
 class SampleAttribute(models.Model):
-    old_name = models.CharField(max_length=255)
-    old_value = models.CharField(max_length=255) 
+    old_name = models.CharField(max_length=255, blank=True)
+    old_value = models.CharField(max_length=255, blank=True) 
     
     unificated_name = models.ForeignKey('UnificatedSamplesAttributeName',
                                         blank=True,
