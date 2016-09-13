@@ -1,6 +1,6 @@
 from django import forms
 from django.forms import ModelForm
-from .models import Article, Attribute, SampleAttribute, Sample, SamplesAttributeNameInExperiment
+from .models import Article, Attribute, SampleAttribute, Sample, UnificatedSamplesAttributeValue
 
 
 # class ArticleForm(ModelForm):
@@ -53,27 +53,22 @@ class SampleAttributeInlineForm(ModelForm):
 
     def __init__(self, *args, **kwargs):
         super(SampleAttributeInlineForm, self).__init__(*args, **kwargs)
-        if self.instance:
-            if hasattr(self.instance, 'unificated_name'):
-                if hasattr(self.instance.unificated_name, 'old_name'):
-                    self.fields['old_name'].initial = \
-                      self.instance.unificated_name.old_name
-                      
-            if hasattr(self.instance, 'sample'):
-                self.fields['unificated_name'].queryset = \
-                  self.instance.sample.experiment.sample_attribute_names.through
+
+        self.fields['unificated_value'].queryset = \
+          UnificatedSamplesAttributeValue.objects.filter(
+            unificated_name=self.instance.unificated_name)
         
 
     def _get_all_with_same_old_name(self, instance):
         experiment = instance.sample.experiment
-        old_name = instance.unificated_name.old_name
+        old_name = instance.old_name
         
         samples_in_experiment = Sample.objects.filter(
           experiment=experiment)
 
         sample_attributes = SampleAttribute.objects.filter(
           sample__in=samples_in_experiment,
-          unificated_name__old_name=old_name)
+          old_name=old_name)
 
         return sample_attributes
 
@@ -85,8 +80,6 @@ class SampleAttributeInlineForm(ModelForm):
     def save(self, commit=True):
         
         instance = super(SampleInlineForm, self).save(commit=False)
-
-        
         instance.save() # don't know if needed
 
         if self.cleaned_data['name_for_each']:

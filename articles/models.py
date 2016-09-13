@@ -48,15 +48,7 @@ class UnificatedSamplesAttributeName(ShowModel):
     to_show = 'name'
 
 
-class SamplesAttributeNameInExperiment(ShowModel):
-    old_name = models.CharField(max_length=255)
-    unificated_name = models.ForeignKey('UnificatedSamplesAttributeName', blank=True, null=True)
-    
-    def _show(self):
-        if hasattr(self.unificated_name, '_show'):
-            return self.unificated_name._show()
-        else:
-            return str(self.old_name)
+
 
     @staticmethod
     def autocomplete_search_fields():
@@ -71,7 +63,6 @@ class Experiment(models.Model):
     data = hstore.DictionaryField(db_index=True)
     objects = hstore.HStoreManager()
     microarrays = models.ManyToManyField('Microarray')
-    sample_attribute_names = models.ManyToManyField('SamplesAttributeNameInExperiment', blank=True)
 
     def __unicode__(self):
         to_print = 'accession'
@@ -134,15 +125,14 @@ class Sample(models.Model):
     def has_old_name(self, old_name):
         sample_attributes = SampleAttribute.objects.filter(
                             sample=self)
-        name_attribute = sample_attributes.filter(
-                         unificated_name__old_name=old_name)
+        name_attribute = sample_attributes.filter(old_name=old_name)
         return name_attribute.exists()
 
     def get_old_value(self, old_name):
         sample_attributes = SampleAttribute.objects.filter(
                             sample=self)
         name_attribute = sample_attributes.filter(
-                         unificated_name__old_name=old_name)
+                         old_name=old_name)
         if name_attribute.exists():
             return name_attribute[0].old_value
         else:
@@ -176,15 +166,15 @@ class Sample(models.Model):
     #     return self._show()
 
 class SampleAttribute(models.Model):
+    old_name = models.CharField(max_length=255)
     old_value = models.CharField(max_length=255) 
     
-    # Experiment.sample_attribute_names.through
-    unificated_name = models.ForeignKey('SamplesAttributeNameInExperiment',
+    unificated_name = models.ForeignKey('UnificatedSamplesAttributeName',
                                         blank=True,
-                                        null=True
-                                        )
-
-    unificated_value = models.ForeignKey('UnificatedSamplesAttributeValue', blank=True, null=True)
+                                        null=True)
+    unificated_value = models.ForeignKey('UnificatedSamplesAttributeValue', 
+                                         blank=True,
+                                         null=True)
     sample = models.ForeignKey('Sample')
 
     def _show(self):
@@ -197,31 +187,24 @@ class SampleAttribute(models.Model):
     def __str__(self):
         return self._show()
 
-    def create(sample, old_name, old_value):
-        unificated_name = SamplesAttributeNameInExperiment.objects.create(
-          old_name=old_name)
-        unificated_name.save()
-        obj = SampleAttribute.objects.create(
-                sample=sample,
-                unificated_name=unificated_name,
-                old_value=old_value)
-        obj.save()
-        return obj
 
     def add_or_replace(sample, old_name, old_value):
         attribute = SampleAttribute.objects.filter(sample=sample,
-          unificated_name__old_name=old_name)
+                                                   old_name=old_name)
         if attribute.exists():
             attribute_obj = attribute[0]
             attribute_obj.old_value = old_value
         else:
-            attribute_obj = SampleAttribute.create(sample, old_name, old_value)
+            attribute_obj = SampleAttribute.objects.create(sample=sample, 
+                                                           old_name=old_name,
+                                                           old_value=old_value)
 
         attribute_obj.save()
         return attribute_obj
             
 
 class UnificatedSamplesAttributeValue(ShowModel):
+    unificated_name = models.ForeignKey('UnificatedSamplesAttributeName')
     value = models.CharField(max_length=255)
     mesh_id = models.CharField(blank=True, max_length=255)
     to_show = 'value'

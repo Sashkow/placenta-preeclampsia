@@ -113,10 +113,6 @@ class MicroarrayInline(SuperInlineModelAdmin, admin.TabularInline):
     model = Experiment.microarrays.through
     extra = 0
 
-class SamplesAttributeNameInExperimentInline(SuperInlineModelAdmin, admin.TabularInline):
-    model = Experiment.sample_attribute_names.through
-    extra = 0
-
 class SampleAttributeInline(SuperInlineModelAdmin, admin.TabularInline):
     form = SampleAttributeInlineForm
     fields = (
@@ -149,14 +145,13 @@ class SampleAttributeInline(SuperInlineModelAdmin, admin.TabularInline):
 class SampleInline(SuperInlineModelAdmin, admin.StackedInline):
     
     model = Sample
-    inlines = [SampleAttributeInline,]
-    
+    inlines = [SampleAttributeInline,]   
     extra = 0
 
 
 
 class ExperimentAdmin(SuperModelAdmin):
-    inlines = [MicroarrayInline, SampleInline, SamplesAttributeNameInExperimentInline]    
+    inlines = [MicroarrayInline, SampleInline]    
     list_display = _list_display(Experiment) + \
                    _experiment_microarrays_display() + \
                    _extra_display(Experiment)
@@ -168,10 +163,6 @@ class ExperimentAdmin(SuperModelAdmin):
     #     for instance in instances: 
     #         instance.save()
     #     formset.save_m2m()
-
-
-    
-
 
     def response_change(self, request, obj):
         if '_autofillbutton' in request.POST:
@@ -224,7 +215,7 @@ admin.site.register(Sample, SampleAdmin)
 
 
 admin.site.register(UnificatedSamplesAttributeName)
-admin.site.register(SamplesAttributeNameInExperiment)
+
 
 admin.site.register(SampleAttribute,SampleAttributeAdmin)
 
