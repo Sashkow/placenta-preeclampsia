@@ -195,4 +195,4 @@ Requires core.js, SelectBox.js and addevent.js.
         }
     };
 
-})(django.jQuery);
+})(grp.jQuery);

@@ -1,6 +1,6 @@
 from django import forms
 from django.forms import ModelForm
-from .models import Article, Attribute, SampleAttribute, Sample
+from .models import Article, Attribute, SampleAttribute, Sample, UnificatedSamplesAttributeValue
 
 
 # class ArticleForm(ModelForm):
@@ -44,44 +44,54 @@ from .models import Article, Attribute, SampleAttribute, Sample
 #                 entry.save()   
 #         return instance
 
-class SampleInlineForm(ModelForm):
+class SampleAttributeInlineForm(ModelForm):
     name_for_each = forms.BooleanField(required=False,
                                          label='for each sample')
     value_for_each = forms.BooleanField(required=False,
                                          label='for each sample')
-    old_name = forms.CharField(required=False,label='old name')
 
     def __init__(self, *args, **kwargs):
-        super(SampleInlineForm, self).__init__(*args, **kwargs)
-        if hasattr(self,'instance'):
-            if hasattr(self.instance, 'unificated_name'):
-                if hasattr(self.instance.unificated_name, 'old_name'):
-                    self.fields['old_name'].initial = \
-                      self.instance.unificated_name.old_name
+        super(SampleAttributeInlineForm, self).__init__(*args, **kwargs)
+
+        # self.fields['unificated_value'].queryset = \
+        #   UnificatedSamplesAttributeValue.objects.filter(
+        #     unificated_name=self.instance.unificated_name)
+        
 
     def _get_all_with_same_old_name(self, instance):
         experiment = instance.sample.experiment
-        old_name = instance.unificated_name.old_name
-        
-        samples_in_experiment = Sample.objects.filter(
-          experiment=experiment)
+        old_name = instance.old_name
 
-        sample_attributes = SampleAttribute.objects.filter(
-          sample__in=samples_in_experiment,
-          unificated_name__old_name=old_name)
-
-        return sample_attributes
+        if old_name:
+            samples_in_experiment = Sample.objects.filter(
+              experiment=experiment)
+            sample_attributes = SampleAttribute.objects.filter(
+              sample__in=samples_in_experiment,
+              old_name=old_name)
+            return sample_attributes
+        else:
+            for sample in Sample.objects.filter(experiment=experiment):
+                SampleAttribute.objects.create(
+                  sample=sample,
+                  unificated_name=instance.unificated_name)
+            return []
 
     def _get_all_with_same_old_name_value(self, instance):
-        sample_attributes= self._get_all_with_same_old_name(instance).filter(
-          old_value=instance.old_value)
-        return sample_attributes
+        if instance.unificated_value.unificated_name.name == 'Common':
+            sample_attributes = self._get_all_with_same_old_name(instance)
+            return sample_attributes
+        else:
+            if instance.old_value:
+                sample_attributes = \
+                  self._get_all_with_same_old_name(instance).filter(
+                    old_value=instance.old_value)
+                return sample_attributes
+            else:
+                return []
 
     def save(self, commit=True):
         
-        instance = super(SampleInlineForm, self).save(commit=False)
-
-        
+        instance = super(SampleAttributeInlineForm, self).save(commit=False)
         instance.save() # don't know if needed
 
         if self.cleaned_data['name_for_each']:

@@ -22,9 +22,13 @@ from django.conf import settings
 from django.contrib import admin
 admin.autodiscover()
 
+from grappelli import urls as grappelli_urls
+
+from django.conf.urls import include
 
 urlpatterns = [
-    url(r'^admin/', admin.site.urls),
+    url(r'^grappelli/', include('grappelli.urls')), # grappelli URLS
+    url(r'^admin/', admin.site.urls), # admin site
     url(r'^static/(?P<path>.*)$', 'django.views.static.serve', 
     	{'document_root': settings.STATIC_ROOT})
 

@@ -44,6 +44,9 @@ calss TestSample(TestSample):
         s2 = Sample.objects.test_add_or_replace(e, data)
         self.assertEqual(s1, s2)
 
+        data_
+        s3 = Sample.objects.test_add_or_replace(e, data)
+
 
 
 
