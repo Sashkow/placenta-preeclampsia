@@ -27,10 +27,10 @@ def _lookup_f(ModelClass, attr_name):
         
 def _list_display(ModelClass):
     f_lst = []
-
     for attr_name in ModelClass.must_have_attributes:
         f_lst.append(_lookup_f(ModelClass, attr_name))
     return f_lst
+
 
 
 class AttributeInline(admin.TabularInline):
@@ -108,29 +108,38 @@ def _experiment_microarrays_display():
     f.short_description = 'platform'
     return [f]
 
+def _experiment_unified_display():
+    def f(obj):
+        exp_samples = obj.samples()
+        has_empty_name = SampleAttribute.objects.filter(
+          sample__in=exp_samples,
+          unificated_name=None).exists()
+
+        has_empty_value = SampleAttribute.objects.filter(
+          sample__in=exp_samples,
+          unificated_value=None).exists()
+        if has_empty_name or has_empty_value:
+            return False
+        else:
+            return True
+    
+    f.short_description = 'is unificated'
+    return [f]
+
 
 class MicroarrayInline(SuperInlineModelAdmin, admin.TabularInline):
     model = Experiment.microarrays.through
     extra = 0
 
 class SampleAttributeInline(SuperInlineModelAdmin, admin.TabularInline):
+    model = SampleAttribute
     form = SampleAttributeInlineForm
-    fields = (
-              'old_name',
-              'old_value',
-              'unificated_name',
-              'name_for_each',
-              'unificated_value',
-              'value_for_each'
-              )
-
     raw_id_fields = ('unificated_name','unificated_value',)
     # define the related_lookup_fields
     autocomplete_lookup_fields = {
-        'fk': ['unificated_name', 'unificated_value']
+        'fk': ['unificated_name', 'unificated_value',]
     }
 
-    model = SampleAttribute
     extra = 0
 
 
@@ -154,6 +163,7 @@ class ExperimentAdmin(SuperModelAdmin):
     inlines = [MicroarrayInline, SampleInline]    
     list_display = _list_display(Experiment) + \
                    _experiment_microarrays_display() + \
+                   _experiment_unified_display() + \
                    _extra_display(Experiment)
     exclude = ['microarrays']
     fields = ('data',)
@@ -209,6 +219,14 @@ class SampleAdmin(SuperModelAdmin):
 
 class SampleAttributeAdmin(ModelAdmin):
     list_display = ['id','sample', 'unificated_name', 'unificated_value' ]
+    form = SampleAttributeInlineForm
+
+    raw_id_fields = ('unificated_name','unificated_value',)
+    # define the related_lookup_fields
+    autocomplete_lookup_fields = {
+        'fk': ['unificated_name', 'unificated_value',]
+    }
+
 
 
 class UnificatedSamplesAttributeNameAdminInline(admin.TabularInline):

@@ -10,7 +10,9 @@ class Command(BaseCommand):
         command's hande method
         """        
         acc = "E-GEOD-74341"
-        exp_to_db(acc)
+        get_experiment_attributes(acc)
+
+
 
         # for obj in Microarray.objects.all():
         #     if 'name' in obj.data:

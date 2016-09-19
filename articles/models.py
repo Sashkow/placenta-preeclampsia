@@ -70,11 +70,14 @@ class UnificatedSamplesAttributeValue(ShowModel):
 class Experiment(models.Model):
     must_have_attributes = ['accession', 'secondaryaccession',
      'name', 'experimenttype', 'releasedate', 'lastupdatedate',
-    'samples']
+    'samples','excluded']
     
     data = hstore.DictionaryField(db_index=True)
     objects = hstore.HStoreManager()
     microarrays = models.ManyToManyField('Microarray')
+
+    def samples(self):
+        return Sample.objects.filter(experiment=self)
 
     def __unicode__(self):
         to_print = 'accession'

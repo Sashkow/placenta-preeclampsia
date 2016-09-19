@@ -1,4 +1,4 @@
-age of donor
+age of donor common, numeric
       18
       21
       23

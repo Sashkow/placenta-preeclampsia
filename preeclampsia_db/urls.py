@@ -26,10 +26,12 @@ from grappelli import urls as grappelli_urls
 
 from django.conf.urls import include
 
+
+
+
 urlpatterns = [
     url(r'^grappelli/', include('grappelli.urls')), # grappelli URLS
     url(r'^admin/', admin.site.urls), # admin site
     url(r'^static/(?P<path>.*)$', 'django.views.static.serve', 
-    	{'document_root': settings.STATIC_ROOT})
-
+    	{'document_root': settings.STATIC_ROOT}),
 ]

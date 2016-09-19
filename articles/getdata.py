@@ -27,6 +27,7 @@ def get_experiment_attributes(experiment_id):
 
     returns dictionary attribute:value
     """
+    
     exp = s.retrieveExperiment(experiment_id)
     # pass top level of xml 
     exp = exp.getchildren()[0]

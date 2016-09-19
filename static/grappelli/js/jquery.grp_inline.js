@@ -1,217 +1,204 @@
-/**
- * GRAPPELLI INLINES
- * jquery-plugin for inlines (stacked and tabular)
- */
-
-
 (function($) {
-    $.fn.grp_inline = function(options) {
-        var defaults = {
-            prefix: "form",                         // The form prefix for your django formset
-            addText: "add another",                 // Text for the add link
-            deleteText: "remove",                   // Text for the delete link
-            addCssClass: "grp-add-handler",             // CSS class applied to the add link
-            removeCssClass: "grp-remove-handler",       // CSS class applied to the remove link
-            deleteCssClass: "grp-delete-handler",       // CSS class applied to the delete link
-            emptyCssClass: "grp-empty-form",            // CSS class applied to the empty row
-            formCssClass: "grp-dynamic-form",           // CSS class applied to each form in a formset
-            predeleteCssClass: "grp-predelete",
-            onBeforeInit: function(form) {},        // Function called before a form is initialized
-            onBeforeAdded: function(inline) {},     // Function called before a form is added
-            onBeforeRemoved: function(form) {},     // Function called before a form is removed
-            onBeforeDeleted: function(form) {},     // Function called before a form is deleted
-            onAfterInit: function(form) {},         // Function called after a form has been initialized
-            onAfterAdded: function(form) {},        // Function called after a form has been added
-            onAfterRemoved: function(inline) {},    // Function called after a form has been removed
-            onAfterDeleted: function(form) {}       // Function called after a form has been deleted
-        };
-        options = $.extend(defaults, options);
-        
-        return this.each(function() {
-            var inline = $(this); // the current inline node
-            var totalForms = inline.find("#id_" + options.prefix + "-TOTAL_FORMS");
-            // set autocomplete to off in order to prevent the browser from keeping the current value after reload
-            totalForms.attr("autocomplete", "off");
-            // init inline and add-buttons
-            initInlineForms(inline, options);
-            initAddButtons(inline, options);
-            // button handlers
-            addButtonHandler(inline.find("a." + options.addCssClass), options);
-            removeButtonHandler(inline.find("a." + options.removeCssClass), options);
-            deleteButtonHandler(inline.find("a." + options.deleteCssClass), options);
-        });
-    };
 
-    getFormIndex = function(elem, options, regex) {
-        var formIndex = elem.find("[id^='id_" + options.prefix + "']").attr('id');
-        if (!formIndex) { return -1; }
-        return parseInt(regex.exec(formIndex)[1], 10);
-    };
-    
-    updateFormIndex = function(elem, options, replace_regex, replace_with) {
-        elem.find(':input,span,table,iframe,label,a,ul,p,img,div').each(function() {
-            var node = $(this),
-                node_id = node.attr('id'),
-                node_name = node.attr('name'),
-                node_for = node.attr('for'),
-                node_href = node.attr("href"),
-                node_class = node.attr("class"),
-                node_onclick = node.attr("onclick");
-            if (node_id) { node.attr('id', node_id.replace(replace_regex, replace_with)); }
-            if (node_name) { node.attr('name', node_name.replace(replace_regex, replace_with)); }
-            if (node_for) { node.attr('for', node_for.replace(replace_regex, replace_with)); }
-            if (node_href) { node.attr('href', node_href.replace(replace_regex, replace_with)); }
-            if (node_class) { node.attr('class', node_class.replace(replace_regex, replace_with)); }
-            if (node_onclick) { node.attr('onclick', node_onclick.replace(replace_regex, replace_with)); }
-        });
-        // update prepopulate ids for function initPrepopulatedFields
-        elem.find('.prepopulated_field').each(function() {
-            var dependency_ids = $(this).data('dependency_ids') || [],
-                dependency_ids_updated = [];
-            $.each(dependency_ids, function(i, id) {
-                dependency_ids_updated.push(id.replace(replace_regex, replace_with));
-            });
-            $(this).data('dependency_ids', dependency_ids_updated);
-        });
-    };
+  //
+  // InlineForm class
+  //
 
-    var initPrepopulatedFields = function(elem, options) {
-        elem.find('.prepopulated_field').each(function() {
-            var dependency_ids = $(this).data('dependency_ids') || [];
-            $(this).prepopulate(dependency_ids, $(this).attr('maxlength'));
-        });
-    };
-    
-    initInlineForms = function(elem, options) {
-        elem.find("div.grp-module").each(function() {
-            var form = $(this);
-            // callback
-            options.onBeforeInit(form);
-            // add options.formCssClass to all forms in the inline
-            // except table/theader/add-item
-            if (form.attr('id') !== "") {
-                form.not("." + options.emptyCssClass).not(".grp-table").not(".grp-thead").not(".add-item").addClass(options.formCssClass);
-            }
-            // add options.predeleteCssClass to forms with the delete checkbox checked
-            form.find("li.grp-delete-handler-container input").each(function() {
-                if ($(this).is(":checked") && form.hasClass("has_original")) {
-                    form.toggleClass(options.predeleteCssClass);
-                }
-            });
-            // callback
-            options.onAfterInit(form);
-        });
-    };
-    
-    initAddButtons = function(elem, options) {
-        var totalForms = elem.find("#id_" + options.prefix + "-TOTAL_FORMS");
-        var maxForms = elem.find("#id_" + options.prefix + "-MAX_NUM_FORMS");
-        var addButtons = elem.find("a." + options.addCssClass);
-        // hide add button in case we've hit the max, except we want to add infinitely
-        if ((maxForms.val() !== '') && (maxForms.val()-totalForms.val()) <= 0) {
-            hideAddButtons(elem, options);
+  function InlineForm(formset, $row) {
+    this.formset = formset;
+    this.updateIndex(this.formset.forms.length);
+    this.formset.forms.push(this);
+
+    this.isInitial = typeof $row !== 'undefined';
+
+    if (this.isInitial) {
+      this.$row = $row;
+      var $idInput = this.$row.find('[name="' + this.prefix + '-id"]');
+      this.hasOriginal = $idInput.val() !== '';
+    } else {
+      this.$row = (this.formset.$templateForm.clone(true)
+                   .removeClass(this.formset.emptyCssClass)
+                   .addClass(this.formset.formCssClass));
+      this.hasOriginal = false;
+    }
+
+    if (this.formset.inlineType == 'tabular') {
+      this.$tools = this.$row.find('> .grp-tr > .grp-tools-container > .grp-tools');
+    } else {
+      this.$tools = this.$row.find('> .grp-tools');
+    }
+
+    if (this.hasOriginal) {
+      this.$deletebutton = this.$tools.find('.grp-delete-handler');
+      this.$deletebutton.bind("click", function() {
+        var $deleteInput = this.$deletebutton.prev();
+        $deleteInput.attr('checked', !$deleteInput.attr('checked'));
+        this.$row.toggleClass('grp-predelete');
+      }.bind(this));
+    } else {
+      this.createRemoveButton();
+    }
+
+    this.formset.$templateForm.before(this.$row); // Inserts the form
+
+    this.formset.update();
+
+    this.initPrepopulatedFields();
+
+    this.formset.onAfterAdd(this.formset.$root, this.$row, this.formset.fullPrefix, this.isInitial);
+
+    this.$row.find('.grp-group').each(function (_, subFormset) {
+      $(subFormset).formset(this.formset.onAfterAdd, this.formset.postInit, this);
+    }.bind(this));
+  }
+
+  InlineForm.prototype.createRemoveButton = function() {
+    this.$removeButton = this.$tools.find('.' + this.formset.removeCssClass);
+    this.$removeButton.click(this.removeHandler.bind(this));
+  };
+
+  InlineForm.prototype.removeHandler = function(e) {
+    e.preventDefault();
+    this.$row.remove();
+    this.formset.forms.splice(this.index, 1);  // Unregisters the form
+    this.formset.update();
+  };
+
+  InlineForm.prototype.initPrepopulatedFields = function() {
+    var $row = this.$row;
+    $row.find('.prepopulated_field').each(function() {
+      var $input = $(this).find('input, select, textarea'),
+          dependency_list = $input.data('dependency_list') || [],
+          dependencies = [];
+      $.each(dependency_list, function(i, fieldName) {
+        dependencies.push('#' + $row.find('.field-' + fieldName).find('input, select, textarea').attr('id'));
+      });
+      if (dependencies.length) {
+        $input.prepopulate(dependencies, $input.attr('maxlength'));
+      }
+    });
+  };
+
+  InlineForm.prototype.fillAttrPlaceholders = function() {
+    var $elements = this.$row.find('*').addBack();
+    var idRegex = new RegExp('((?:' + this.formset.fullPrefix + '|' + this.formset.prefix + ')-(?:\\d+|__prefix__))');
+    var formPrefix = this.prefix;
+    $.each(['for', 'id', 'name'], function(i, attrName) {
+      $elements.each(function() {
+        var $el = $(this), attr = $el.attr(attrName);
+        if (attr) {
+          $el.attr(attrName, attr.replace(idRegex, formPrefix));
         }
-    };
-    
-    addButtonHandler = function(elem, options) {
-        elem.bind("click", function() {
-            var inline = elem.parents(".grp-group"),
-                totalForms = inline.find("#id_" + options.prefix + "-TOTAL_FORMS"),
-                maxForms = inline.find("#id_" + options.prefix + "-MAX_NUM_FORMS"),
-                addButtons = inline.find("a." + options.addCssClass),
-                empty_template = inline.find("#" + options.prefix + "-empty");
-            // callback
-            options.onBeforeAdded(inline);
-            // create new form
-            var index = parseInt(totalForms.val(), 10),
-                form = empty_template.clone(true);
-            form.removeClass(options.emptyCssClass)
-                .attr("id", empty_template.attr('id').replace("-empty", index));
-            // update form index
-            var re = /__prefix__/g;
-            updateFormIndex(form, options, re, index);
-            // after "__prefix__" strings has been substituted with the number
-            // of the inline, we can add the form to DOM, not earlier.
-            // This way we can support handlers that track live element
-            // adding/removing, like those used in django-autocomplete-light
-            form.insertBefore(empty_template)
-                .addClass(options.formCssClass);
-            // update total forms
-            totalForms.val(index + 1);
-            // hide add button in case we've hit the max, except we want to add infinitely
-            if ((maxForms.val() !== 0) && (maxForms.val() !== "") && (maxForms.val() - totalForms.val()) <= 0) {
-                hideAddButtons(inline, options);
-            }
-            // prepopulate fields
-            initPrepopulatedFields(form, options);
-            // callback
-            options.onAfterAdded(form);
-        });
-    };
-    
-    removeButtonHandler = function(elem, options) {
-        elem.bind("click", function() {
-            var inline = elem.parents(".grp-group"),
-                form = $(this).parents("." + options.formCssClass).first(),
-                totalForms = inline.find("#id_" + options.prefix + "-TOTAL_FORMS"),
-                maxForms = inline.find("#id_" + options.prefix + "-MAX_NUM_FORMS"),
-                re = /-(\d+)-/,
-                removedFormIndex = getFormIndex(form, options, re);
-            // callback
-            options.onBeforeRemoved(form);
-            // remove form
-            form.remove();
-            // update total forms
-            totalForms.val(parseInt(totalForms.val(), 10) - 1);
-            // show add button in case we've dropped below max
-            if ((maxForms.val() !== 0) && (maxForms.val() - totalForms.val()) > 0) {
-                showAddButtons(inline, options);
-            }
-            // update form index (only forms with a higher index than the removed form)
-            inline.find("." + options.formCssClass).each(function() {
-                var form = $(this),
-                    formIndex = getFormIndex(form, options, re);
-                if (formIndex > removedFormIndex) {
-                    updateFormIndex(form, options, re, "-" + (formIndex - 1) + "-");
-                }
-            });
-            // callback
-            options.onAfterRemoved(inline);
-        });
-    };
-    
-    deleteButtonHandler = function(elem, options) {
-        elem.bind("click", function() {
-            var deleteInput = $(this).prev(),
-                form = $(this).parents("." + options.formCssClass).first();
-            // callback
-            options.onBeforeDeleted(form);
-            // toggle options.predeleteCssClass and toggle checkbox
-            if (form.hasClass("has_original")) {
-                form.toggleClass(options.predeleteCssClass);
-                if (deleteInput.prop("checked")) {
-                    deleteInput.removeAttr("checked");
-                } else {
-                    deleteInput.prop("checked", true);
-                }
-            }
-            // callback
-            options.onAfterDeleted(form);
-        });
-    };
-    
-    hideAddButtons = function(elem, options) {
-        var addButtons = elem.find("a." + options.addCssClass);
-        addButtons.hide().parents('.grp-add-item').hide();
-        // last row with stacked/tabular
-        addButtons.closest('.grp-module.grp-transparent').hide();
-    };
-    
-    showAddButtons = function(elem, options) {
-        var addButtons = elem.find("a." + options.addCssClass);
-        addButtons.show().parents('.grp-add-item').show();
-        // last row with stacked/tabular
-        addButtons.closest('.grp-module.grp-transparent').show();
-    };
-    
+      });
+    });
+  };
+
+  InlineForm.prototype.updateIndex = function(index) {
+    this.index = index;
+    this.prefix = this.formset.fullPrefix + '-' + this.index;
+  };
+
+  InlineForm.prototype.update = function(index) {
+    this.updateIndex(index);
+    this.fillAttrPlaceholders();
+  };
+
+  //
+  // InlineFormSet class
+  //
+
+  function InlineFormSet($root, onAfterAdd, postInit, parentInlineForm) {
+    this.$root = $root;
+    this.parentInlineForm = parentInlineForm;
+    this.inlineType = this.$root.data('inline-type');
+
+    this.prefix = this.$root.data('prefix');
+    this.fullPrefix = this.prefix;
+    if (typeof this.parentInlineForm !== 'undefined' && !this.parentInlineForm.isInitial) {
+      this.fullPrefix += '-' + this.parentInlineForm.index;
+    }
+
+    if (typeof onAfterAdd === 'undefined') {
+      onAfterAdd = function ($form, prefix) {};
+    }
+    this.onAfterAdd = onAfterAdd;
+    if (typeof postInit === 'undefined') {
+      postInit = function ($formset, prefix) {};
+    }
+    this.postInit = postInit;
+
+    this.addCssClass = 'grp-add-handler';
+    this.removeCssClass = 'grp-remove-handler';
+    this.emptyCssClass = 'grp-empty-form';
+    this.formCssClass = 'grp-dynamic-form';
+
+    this.addText = this.$root.data('add-text');
+    this.removeText = this.$root.data('remove-text');
+
+    this.$totalForms = this.$root.find('[name="' + this.prefix + '-TOTAL_FORMS"]').attr('autocomplete', 'off');
+    this.$initialForms = this.$root.find('[name="' + this.prefix + '-INITIAL_FORMS"]').attr('autocomplete', 'off');
+    this.$maxForms = this.$root.find('[name="' + this.prefix + '-MAX_NUM_FORMS"]').attr('autocomplete', 'off');
+    this.$totalForms.attr('name', this.fullPrefix + '-TOTAL_FORMS');
+    this.$initialForms.attr('name', this.fullPrefix + '-INITIAL_FORMS');
+    this.$maxForms.attr('name', this.fullPrefix + '-MAX_NUM_FORMS');
+
+    this.$templateForm = this.getFormsAndTemplate().filter('.' + this.emptyCssClass);
+
+    this.$addButton = this.$root.find('> .grp-transparent, > .grp-tools').find('.' + this.addCssClass);
+    this.$addButtonContainer = this.$addButton.parents('.grp-transparent');
+
+    this.forms = [];
+    // Adds already existing forms
+    this.getForms().each(function (i, row) {
+      new InlineForm(this, $(row));
+    }.bind(this));
+
+    this.$addButton.click(this.addHandler.bind(this));
+
+    this.postInit($root, this.fullPrefix);
+  }
+
+  InlineFormSet.prototype.getFormsAndTemplate = function() {
+    if (this.inlineType == 'tabular') {
+      return this.$root.find('> .grp-table > .grp-tbody');
+    }
+    return this.$root.find('> .grp-items > .grp-module');
+  };
+
+  InlineFormSet.prototype.getForms = function() {
+    return this.getFormsAndTemplate().not('.' + this.emptyCssClass)
+  };
+
+  InlineFormSet.prototype.canAdd = function() {
+    // Note: if `max_num` is None, $maxForms.val() == ''
+    return (this.$maxForms.val() === '')
+            || (this.$maxForms.val()-this.$totalForms.val()) > 0;
+  };
+
+  InlineFormSet.prototype.addHandler = function(e) {
+    e.preventDefault();
+    if (this.canAdd()) {
+      new InlineForm(this);
+    }
+  };
+
+  InlineFormSet.prototype.update = function() {
+    this.forms.forEach(function(form, index) {
+      form.update(index);
+    });
+
+    this.$totalForms.val(this.forms.length);
+
+    this.$addButtonContainer.toggle(this.canAdd());
+  };
+
+  //
+  // jQuery plugin creation
+  //
+
+  $.fn.formset = function(onAfterAdd, postInit, parentInlineForm) {
+    new InlineFormSet(this, onAfterAdd, postInit, parentInlineForm);
+    return this;
+  };
+
 })(grp.jQuery);
