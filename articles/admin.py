@@ -14,7 +14,7 @@ from articles.getdata import get_experiment_samples_attributes
 
 from django.core.urlresolvers import reverse
 
-
+from simple_history.admin import SimpleHistoryAdmin
 
 def _lookup_f(ModelClass, attr_name):
         def f(obj):
@@ -159,7 +159,8 @@ class SampleInline(SuperInlineModelAdmin, admin.StackedInline):
 
 
 
-class ExperimentAdmin(SuperModelAdmin):
+
+class ExperimentAdmin(SuperModelAdmin, SimpleHistoryAdmin):
     inlines = [MicroarrayInline, SampleInline]    
     list_display = _list_display(Experiment) + \
                    _experiment_microarrays_display() + \
@@ -168,6 +169,7 @@ class ExperimentAdmin(SuperModelAdmin):
     exclude = ['microarrays']
     fields = ('data',)
 
+    
     # def save_formset(self, request, form, formset, change):
     #     instances = formset.save(commit=False)
     #     for instance in instances: 

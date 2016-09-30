@@ -34,7 +34,7 @@ ALLOWED_HOSTS = []
 
 INSTALLED_APPS = [
     # 'devserver',
-    
+    'simple_history',
     'super_inlines.grappelli_integration',
     'super_inlines',
     'grappelli',
@@ -51,6 +51,7 @@ INSTALLED_APPS = [
 ]
 
 MIDDLEWARE_CLASSES = [
+    'simple_history.middleware.HistoryRequestMiddleware',
     'django.middleware.security.SecurityMiddleware',
     'django.contrib.sessions.middleware.SessionMiddleware',
     'django.middleware.common.CommonMiddleware',
@@ -101,23 +102,32 @@ WSGI_APPLICATION = 'preeclampsia_db.wsgi.application'
 #     }
 # }
 
+DATABASES = {
+    'default': {
+        'ENGINE': 'django.db.backends.postgresql_psycopg2',
+        'NAME': 'test_db',
+        'USER': 'sashko',
+        'PASSWORD': 'poland',
+        'HOST': 'localhost',
+        'PORT': '5433',
+    }
+}
+
+# import dj_database_url
+# default_config = dj_database_url.config(default='postgres://yzjhlayqnripvc:KUzahGPnEFY8W9eU0Pu5Y0QzcT@ec2-54-235-104-63.compute-1.amazonaws.com:5432/d5sk8mi5cjc97v')
+# DATABASES = {'default': default_config}
+# GRANT ALL PRIVILEGES ON DATABASE d5sk8mi5cjc97v for user yzjhlayqnripvc;
+
 # DATABASES = {
 #     'default': {
 #         'ENGINE': 'django.db.backends.postgresql_psycopg2',
-#         'NAME': 'test_db',
-#         'USER': 'sashko',
-#         'PASSWORD': 'poland',
+#         'NAME': 'iotd',
+#         'USER': '',
+#         'PASSWORD': '',
 #         'HOST': 'localhost',
-#         'PORT': '5433',
+#         'PORT': '5432',
 #     }
 # }
-
-import dj_database_url
-default_config = dj_database_url.config(default='postgres://yzjhlayqnripvc:KUzahGPnEFY8W9eU0Pu5Y0QzcT@ec2-54-235-104-63.compute-1.amazonaws.com:5432/d5sk8mi5cjc97v')
-print(default_config)
-DATABASES = {'default': default_config}
-
-
 
 
 # Password validation

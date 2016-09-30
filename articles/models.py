@@ -2,6 +2,8 @@ from django.db import models
 from django.utils import timezone
 
 from django_hstore import hstore
+from simple_history.models import HistoricalRecords
+
 
 class ShowModel(models.Model):
     to_show = 'name'
@@ -47,6 +49,8 @@ class UnificatedSamplesAttributeName(ShowModel):
     to_show = 'name'
 
 
+
+
     @staticmethod
     def autocomplete_search_fields():
         return ("id__iexact", "name__icontains",)
@@ -74,6 +78,7 @@ class Experiment(models.Model):
     
     data = hstore.DictionaryField(db_index=True)
     objects = hstore.HStoreManager()
+    history = HistoricalRecords()
     microarrays = models.ManyToManyField('Microarray')
 
     def samples(self):
