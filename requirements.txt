@@ -33,7 +33,6 @@ jmespath==0.9.0
 joblib==0.10.2
 line-profiler==1.0
 lxml==3.6.1
-numpy==1.11.1
 pandas==0.18.1
 pathspec==0.3.4
 pexpect==4.2.0
