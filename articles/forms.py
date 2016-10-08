@@ -80,22 +80,23 @@ class SampleAttributeInlineForm(ModelForm):
     def _get_all_with_same_old_name(self, instance):
         experiment = instance.sample.experiment
         old_name = instance.old_name
+        samples_in_experiment = Sample.objects.filter(experiment=experiment)
+        
 
         if old_name:
-            samples_in_experiment = Sample.objects.filter(
-              experiment=experiment)
             sample_attributes = SampleAttribute.objects.filter(
               sample__in=samples_in_experiment,
               old_name=old_name)
             return sample_attributes
         else:
-            for sample in Sample.objects.filter(experiment=experiment):
+            for sample in samples_in_experiment.exclude(id=instance.sample.id):
                 SampleAttribute.objects.create(
                   sample=sample,
                   unificated_name=instance.unificated_name)
             return []
 
     def _get_all_with_same_old_name_value(self, instance):
+        experiment = instance.sample.experiment
         if instance.unificated_value.unificated_name.name == 'Common':
             sample_attributes = self._get_all_with_same_old_name(instance)
             return sample_attributes
@@ -106,7 +107,15 @@ class SampleAttributeInlineForm(ModelForm):
                     old_value=instance.old_value)
                 return sample_attributes
             else:
-                return []
+                samples_in_experiment = Sample.objects.filter(experiment=experiment)
+                sample_attributes = SampleAttribute.objects.filter(
+                  sample__in=samples_in_experiment,
+                  unificated_name=instance.unificated_name)
+                return sample_attributes
+
+
+
+
 
     def save(self, commit=True):
         

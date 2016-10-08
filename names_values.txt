@@ -1,10 +1,10 @@
-age of donor common, numeric
+age of donor -> maternal age
       18
       21
       23
       27
       26
-cd14
+cd14 
       NO
       YES
 karyotype

@@ -1,0 +1,4744 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<experiment api-revision="091015" api-version="3" revision="091015" version="1.0">
+ <accession>
+  E-GEOD-14722
+ </accession>
+ <sample>
+  <assay>
+   <name>
+    GSM367826
+   </name>
+  </assay>
+  <characteristic>
+   <category>
+    Organism
+   </category>
+   <value>
+    Homo sapiens
+   </value>
+  </characteristic>
+  <characteristic>
+   <category>
+    condition
+   </category>
+   <value>
+    37.6wk preeclamptic
+   </value>
+  </characteristic>
+  <extract>
+   <name>
+    GSM367826 extract 1
+   </name>
+  </extract>
+  <file>
+   <type>
+    data
+   </type>
+   <name>
+    GSM367826.CEL
+   </name>
+   <url>
+    ftp://ftp.ebi.ac.uk/pub/databases/microarray/data/experiment/GEOD/E-GEOD-14722/E-GEOD-14722.raw.1.zip/GSM367826.CEL
+   </url>
+   <comment>
+    <name>
+     ArrayExpress FTP file
+    </name>
+    <value>
+     ftp://ftp.ebi.ac.uk/pub/databases/microarray/data/experiment/GEOD/E-GEOD-14722/E-GEOD-14722.raw.1.zip
+    </value>
+   </comment>
+  </file>
+  <file>
+   <type>
+    derived data
+   </type>
+   <name>
+    GSM367826_sample_table.txt
+   </name>
+   <url>
+    ftp://ftp.ebi.ac.uk/pub/databases/microarray/data/experiment/GEOD/E-GEOD-14722/E-GEOD-14722.processed.1.zip/GSM367826_sample_table.txt
+   </url>
+   <comment>
+    <name>
+     Derived ArrayExpress FTP file
+    </name>
+    <value>
+     ftp://ftp.ebi.ac.uk/pub/databases/microarray/data/experiment/GEOD/E-GEOD-14722/E-GEOD-14722.processed.1.zip
+    </value>
+   </comment>
+  </file>
+  <labeled-extract>
+   <name>
+    GSM367826 LE 1
+   </name>
+   <label>
+    biotin
+   </label>
+  </labeled-extract>
+  <source>
+   <name>
+    GSM367826 1
+   </name>
+   <comment>
+    <name>
+     Sample_description
+    </name>
+    <value>
+     Gene expression data.
+    </value>
+   </comment>
+   <comment>
+    <name>
+     Sample_source_name
+    </name>
+    <value>
+     human placenta, preeclampsia
+    </value>
+   </comment>
+  </source>
+  <variable>
+   <name>
+    CONDITION
+   </name>
+   <value>
+    37.6wk preeclamptic
+   </value>
+  </variable>
+ </sample>
+ <sample>
+  <assay>
+   <name>
+    GSM367825
+   </name>
+  </assay>
+  <characteristic>
+   <category>
+    Organism
+   </category>
+   <value>
+    Homo sapiens
+   </value>
+  </characteristic>
+  <characteristic>
+   <category>
+    condition
+   </category>
+   <value>
+    35.9wk preeclamptic
+   </value>
+  </characteristic>
+  <extract>
+   <name>
+    GSM367825 extract 1
+   </name>
+  </extract>
+  <file>
+   <type>
+    data
+   </type>
+   <name>
+    GSM367825.CEL
+   </name>
+   <url>
+    ftp://ftp.ebi.ac.uk/pub/databases/microarray/data/experiment/GEOD/E-GEOD-14722/E-GEOD-14722.raw.1.zip/GSM367825.CEL
+   </url>
+   <comment>
+    <name>
+     ArrayExpress FTP file
+    </name>
+    <value>
+     ftp://ftp.ebi.ac.uk/pub/databases/microarray/data/experiment/GEOD/E-GEOD-14722/E-GEOD-14722.raw.1.zip
+    </value>
+   </comment>
+  </file>
+  <file>
+   <type>
+    derived data
+   </type>
+   <name>
+    GSM367825_sample_table.txt
+   </name>
+   <url>
+    ftp://ftp.ebi.ac.uk/pub/databases/microarray/data/experiment/GEOD/E-GEOD-14722/E-GEOD-14722.processed.1.zip/GSM367825_sample_table.txt
+   </url>
+   <comment>
+    <name>
+     Derived ArrayExpress FTP file
+    </name>
+    <value>
+     ftp://ftp.ebi.ac.uk/pub/databases/microarray/data/experiment/GEOD/E-GEOD-14722/E-GEOD-14722.processed.1.zip
+    </value>
+   </comment>
+  </file>
+  <labeled-extract>
+   <name>
+    GSM367825 LE 1
+   </name>
+   <label>
+    biotin
+   </label>
+  </labeled-extract>
+  <source>
+   <name>
+    GSM367825 1
+   </name>
+   <comment>
+    <name>
+     Sample_description
+    </name>
+    <value>
+     Gene expression data.
+    </value>
+   </comment>
+   <comment>
+    <name>
+     Sample_source_name
+    </name>
+    <value>
+     human placenta, preeclampsia
+    </value>
+   </comment>
+  </source>
+  <variable>
+   <name>
+    CONDITION
+   </name>
+   <value>
+    35.9wk preeclamptic
+   </value>
+  </variable>
+ </sample>
+ <sample>
+  <assay>
+   <name>
+    GSM367824
+   </name>
+  </assay>
+  <characteristic>
+   <category>
+    Organism
+   </category>
+   <value>
+    Homo sapiens
+   </value>
+  </characteristic>
+  <characteristic>
+   <category>
+    condition
+   </category>
+   <value>
+    34.0wk preeclamptic
+   </value>
+  </characteristic>
+  <extract>
+   <name>
+    GSM367824 extract 1
+   </name>
+  </extract>
+  <file>
+   <type>
+    data
+   </type>
+   <name>
+    GSM367824.CEL
+   </name>
+   <url>
+    ftp://ftp.ebi.ac.uk/pub/databases/microarray/data/experiment/GEOD/E-GEOD-14722/E-GEOD-14722.raw.1.zip/GSM367824.CEL
+   </url>
+   <comment>
+    <name>
+     ArrayExpress FTP file
+    </name>
+    <value>
+     ftp://ftp.ebi.ac.uk/pub/databases/microarray/data/experiment/GEOD/E-GEOD-14722/E-GEOD-14722.raw.1.zip
+    </value>
+   </comment>
+  </file>
+  <file>
+   <type>
+    derived data
+   </type>
+   <name>
+    GSM367824_sample_table.txt
+   </name>
+   <url>
+    ftp://ftp.ebi.ac.uk/pub/databases/microarray/data/experiment/GEOD/E-GEOD-14722/E-GEOD-14722.processed.1.zip/GSM367824_sample_table.txt
+   </url>
+   <comment>
+    <name>
+     Derived ArrayExpress FTP file
+    </name>
+    <value>
+     ftp://ftp.ebi.ac.uk/pub/databases/microarray/data/experiment/GEOD/E-GEOD-14722/E-GEOD-14722.processed.1.zip
+    </value>
+   </comment>
+  </file>
+  <labeled-extract>
+   <name>
+    GSM367824 LE 1
+   </name>
+   <label>
+    biotin
+   </label>
+  </labeled-extract>
+  <source>
+   <name>
+    GSM367824 1
+   </name>
+   <comment>
+    <name>
+     Sample_description
+    </name>
+    <value>
+     Gene expression data.
+    </value>
+   </comment>
+   <comment>
+    <name>
+     Sample_source_name
+    </name>
+    <value>
+     human placenta, preeclampsia
+    </value>
+   </comment>
+  </source>
+  <variable>
+   <name>
+    CONDITION
+   </name>
+   <value>
+    34.0wk preeclamptic
+   </value>
+  </variable>
+ </sample>
+ <sample>
+  <assay>
+   <name>
+    GSM367823
+   </name>
+  </assay>
+  <characteristic>
+   <category>
+    Organism
+   </category>
+   <value>
+    Homo sapiens
+   </value>
+  </characteristic>
+  <characteristic>
+   <category>
+    condition
+   </category>
+   <value>
+    33.0wk preeclamptic
+   </value>
+  </characteristic>
+  <extract>
+   <name>
+    GSM367823 extract 1
+   </name>
+  </extract>
+  <file>
+   <type>
+    data
+   </type>
+   <name>
+    GSM367823.CEL
+   </name>
+   <url>
+    ftp://ftp.ebi.ac.uk/pub/databases/microarray/data/experiment/GEOD/E-GEOD-14722/E-GEOD-14722.raw.1.zip/GSM367823.CEL
+   </url>
+   <comment>
+    <name>
+     ArrayExpress FTP file
+    </name>
+    <value>
+     ftp://ftp.ebi.ac.uk/pub/databases/microarray/data/experiment/GEOD/E-GEOD-14722/E-GEOD-14722.raw.1.zip
+    </value>
+   </comment>
+  </file>
+  <file>
+   <type>
+    derived data
+   </type>
+   <name>
+    GSM367823_sample_table.txt
+   </name>
+   <url>
+    ftp://ftp.ebi.ac.uk/pub/databases/microarray/data/experiment/GEOD/E-GEOD-14722/E-GEOD-14722.processed.1.zip/GSM367823_sample_table.txt
+   </url>
+   <comment>
+    <name>
+     Derived ArrayExpress FTP file
+    </name>
+    <value>
+     ftp://ftp.ebi.ac.uk/pub/databases/microarray/data/experiment/GEOD/E-GEOD-14722/E-GEOD-14722.processed.1.zip
+    </value>
+   </comment>
+  </file>
+  <labeled-extract>
+   <name>
+    GSM367823 LE 1
+   </name>
+   <label>
+    biotin
+   </label>
+  </labeled-extract>
+  <source>
+   <name>
+    GSM367823 1
+   </name>
+   <comment>
+    <name>
+     Sample_description
+    </name>
+    <value>
+     Gene expression data.
+    </value>
+   </comment>
+   <comment>
+    <name>
+     Sample_source_name
+    </name>
+    <value>
+     human placenta, preeclampsia
+    </value>
+   </comment>
+  </source>
+  <variable>
+   <name>
+    CONDITION
+   </name>
+   <value>
+    33.0wk preeclamptic
+   </value>
+  </variable>
+ </sample>
+ <sample>
+  <assay>
+   <name>
+    GSM367822
+   </name>
+  </assay>
+  <characteristic>
+   <category>
+    Organism
+   </category>
+   <value>
+    Homo sapiens
+   </value>
+  </characteristic>
+  <characteristic>
+   <category>
+    condition
+   </category>
+   <value>
+    32.9wk preeclamptic
+   </value>
+  </characteristic>
+  <extract>
+   <name>
+    GSM367822 extract 1
+   </name>
+  </extract>
+  <file>
+   <type>
+    data
+   </type>
+   <name>
+    GSM367822.CEL
+   </name>
+   <url>
+    ftp://ftp.ebi.ac.uk/pub/databases/microarray/data/experiment/GEOD/E-GEOD-14722/E-GEOD-14722.raw.1.zip/GSM367822.CEL
+   </url>
+   <comment>
+    <name>
+     ArrayExpress FTP file
+    </name>
+    <value>
+     ftp://ftp.ebi.ac.uk/pub/databases/microarray/data/experiment/GEOD/E-GEOD-14722/E-GEOD-14722.raw.1.zip
+    </value>
+   </comment>
+  </file>
+  <file>
+   <type>
+    derived data
+   </type>
+   <name>
+    GSM367822_sample_table.txt
+   </name>
+   <url>
+    ftp://ftp.ebi.ac.uk/pub/databases/microarray/data/experiment/GEOD/E-GEOD-14722/E-GEOD-14722.processed.1.zip/GSM367822_sample_table.txt
+   </url>
+   <comment>
+    <name>
+     Derived ArrayExpress FTP file
+    </name>
+    <value>
+     ftp://ftp.ebi.ac.uk/pub/databases/microarray/data/experiment/GEOD/E-GEOD-14722/E-GEOD-14722.processed.1.zip
+    </value>
+   </comment>
+  </file>
+  <labeled-extract>
+   <name>
+    GSM367822 LE 1
+   </name>
+   <label>
+    biotin
+   </label>
+  </labeled-extract>
+  <source>
+   <name>
+    GSM367822 1
+   </name>
+   <comment>
+    <name>
+     Sample_description
+    </name>
+    <value>
+     Gene expression data.
+    </value>
+   </comment>
+   <comment>
+    <name>
+     Sample_source_name
+    </name>
+    <value>
+     human placenta, preeclampsia
+    </value>
+   </comment>
+  </source>
+  <variable>
+   <name>
+    CONDITION
+   </name>
+   <value>
+    32.9wk preeclamptic
+   </value>
+  </variable>
+ </sample>
+ <sample>
+  <assay>
+   <name>
+    GSM367821
+   </name>
+  </assay>
+  <characteristic>
+   <category>
+    Organism
+   </category>
+   <value>
+    Homo sapiens
+   </value>
+  </characteristic>
+  <characteristic>
+   <category>
+    condition
+   </category>
+   <value>
+    32.0wk preeclamptic
+   </value>
+  </characteristic>
+  <extract>
+   <name>
+    GSM367821 extract 1
+   </name>
+  </extract>
+  <file>
+   <type>
+    data
+   </type>
+   <name>
+    GSM367821.CEL
+   </name>
+   <url>
+    ftp://ftp.ebi.ac.uk/pub/databases/microarray/data/experiment/GEOD/E-GEOD-14722/E-GEOD-14722.raw.1.zip/GSM367821.CEL
+   </url>
+   <comment>
+    <name>
+     ArrayExpress FTP file
+    </name>
+    <value>
+     ftp://ftp.ebi.ac.uk/pub/databases/microarray/data/experiment/GEOD/E-GEOD-14722/E-GEOD-14722.raw.1.zip
+    </value>
+   </comment>
+  </file>
+  <file>
+   <type>
+    derived data
+   </type>
+   <name>
+    GSM367821_sample_table.txt
+   </name>
+   <url>
+    ftp://ftp.ebi.ac.uk/pub/databases/microarray/data/experiment/GEOD/E-GEOD-14722/E-GEOD-14722.processed.1.zip/GSM367821_sample_table.txt
+   </url>
+   <comment>
+    <name>
+     Derived ArrayExpress FTP file
+    </name>
+    <value>
+     ftp://ftp.ebi.ac.uk/pub/databases/microarray/data/experiment/GEOD/E-GEOD-14722/E-GEOD-14722.processed.1.zip
+    </value>
+   </comment>
+  </file>
+  <labeled-extract>
+   <name>
+    GSM367821 LE 1
+   </name>
+   <label>
+    biotin
+   </label>
+  </labeled-extract>
+  <source>
+   <name>
+    GSM367821 1
+   </name>
+   <comment>
+    <name>
+     Sample_description
+    </name>
+    <value>
+     Gene expression data.
+    </value>
+   </comment>
+   <comment>
+    <name>
+     Sample_source_name
+    </name>
+    <value>
+     human placenta, preeclampsia
+    </value>
+   </comment>
+  </source>
+  <variable>
+   <name>
+    CONDITION
+   </name>
+   <value>
+    32.0wk preeclamptic
+   </value>
+  </variable>
+ </sample>
+ <sample>
+  <assay>
+   <name>
+    GSM367820
+   </name>
+  </assay>
+  <characteristic>
+   <category>
+    Organism
+   </category>
+   <value>
+    Homo sapiens
+   </value>
+  </characteristic>
+  <characteristic>
+   <category>
+    condition
+   </category>
+   <value>
+    31.9wk preeclamptic
+   </value>
+  </characteristic>
+  <extract>
+   <name>
+    GSM367820 extract 1
+   </name>
+  </extract>
+  <file>
+   <type>
+    data
+   </type>
+   <name>
+    GSM367820.CEL
+   </name>
+   <url>
+    ftp://ftp.ebi.ac.uk/pub/databases/microarray/data/experiment/GEOD/E-GEOD-14722/E-GEOD-14722.raw.1.zip/GSM367820.CEL
+   </url>
+   <comment>
+    <name>
+     ArrayExpress FTP file
+    </name>
+    <value>
+     ftp://ftp.ebi.ac.uk/pub/databases/microarray/data/experiment/GEOD/E-GEOD-14722/E-GEOD-14722.raw.1.zip
+    </value>
+   </comment>
+  </file>
+  <file>
+   <type>
+    derived data
+   </type>
+   <name>
+    GSM367820_sample_table.txt
+   </name>
+   <url>
+    ftp://ftp.ebi.ac.uk/pub/databases/microarray/data/experiment/GEOD/E-GEOD-14722/E-GEOD-14722.processed.1.zip/GSM367820_sample_table.txt
+   </url>
+   <comment>
+    <name>
+     Derived ArrayExpress FTP file
+    </name>
+    <value>
+     ftp://ftp.ebi.ac.uk/pub/databases/microarray/data/experiment/GEOD/E-GEOD-14722/E-GEOD-14722.processed.1.zip
+    </value>
+   </comment>
+  </file>
+  <labeled-extract>
+   <name>
+    GSM367820 LE 1
+   </name>
+   <label>
+    biotin
+   </label>
+  </labeled-extract>
+  <source>
+   <name>
+    GSM367820 1
+   </name>
+   <comment>
+    <name>
+     Sample_description
+    </name>
+    <value>
+     Gene expression data.
+    </value>
+   </comment>
+   <comment>
+    <name>
+     Sample_source_name
+    </name>
+    <value>
+     human placenta, preeclampsia
+    </value>
+   </comment>
+  </source>
+  <variable>
+   <name>
+    CONDITION
+   </name>
+   <value>
+    31.9wk preeclamptic
+   </value>
+  </variable>
+ </sample>
+ <sample>
+  <assay>
+   <name>
+    GSM367819
+   </name>
+  </assay>
+  <characteristic>
+   <category>
+    Organism
+   </category>
+   <value>
+    Homo sapiens
+   </value>
+  </characteristic>
+  <characteristic>
+   <category>
+    condition
+   </category>
+   <value>
+    31.7wk preeclamptic
+   </value>
+  </characteristic>
+  <extract>
+   <name>
+    GSM367819 extract 1
+   </name>
+  </extract>
+  <file>
+   <type>
+    data
+   </type>
+   <name>
+    GSM367819.CEL
+   </name>
+   <url>
+    ftp://ftp.ebi.ac.uk/pub/databases/microarray/data/experiment/GEOD/E-GEOD-14722/E-GEOD-14722.raw.1.zip/GSM367819.CEL
+   </url>
+   <comment>
+    <name>
+     ArrayExpress FTP file
+    </name>
+    <value>
+     ftp://ftp.ebi.ac.uk/pub/databases/microarray/data/experiment/GEOD/E-GEOD-14722/E-GEOD-14722.raw.1.zip
+    </value>
+   </comment>
+  </file>
+  <file>
+   <type>
+    derived data
+   </type>
+   <name>
+    GSM367819_sample_table.txt
+   </name>
+   <url>
+    ftp://ftp.ebi.ac.uk/pub/databases/microarray/data/experiment/GEOD/E-GEOD-14722/E-GEOD-14722.processed.1.zip/GSM367819_sample_table.txt
+   </url>
+   <comment>
+    <name>
+     Derived ArrayExpress FTP file
+    </name>
+    <value>
+     ftp://ftp.ebi.ac.uk/pub/databases/microarray/data/experiment/GEOD/E-GEOD-14722/E-GEOD-14722.processed.1.zip
+    </value>
+   </comment>
+  </file>
+  <labeled-extract>
+   <name>
+    GSM367819 LE 1
+   </name>
+   <label>
+    biotin
+   </label>
+  </labeled-extract>
+  <source>
+   <name>
+    GSM367819 1
+   </name>
+   <comment>
+    <name>
+     Sample_description
+    </name>
+    <value>
+     Gene expression data.
+    </value>
+   </comment>
+   <comment>
+    <name>
+     Sample_source_name
+    </name>
+    <value>
+     human placenta, preeclampsia
+    </value>
+   </comment>
+  </source>
+  <variable>
+   <name>
+    CONDITION
+   </name>
+   <value>
+    31.7wk preeclamptic
+   </value>
+  </variable>
+ </sample>
+ <sample>
+  <assay>
+   <name>
+    GSM367818
+   </name>
+  </assay>
+  <characteristic>
+   <category>
+    Organism
+   </category>
+   <value>
+    Homo sapiens
+   </value>
+  </characteristic>
+  <characteristic>
+   <category>
+    condition
+   </category>
+   <value>
+    31.1wk preeclamptic
+   </value>
+  </characteristic>
+  <extract>
+   <name>
+    GSM367818 extract 1
+   </name>
+  </extract>
+  <file>
+   <type>
+    data
+   </type>
+   <name>
+    GSM367818.CEL
+   </name>
+   <url>
+    ftp://ftp.ebi.ac.uk/pub/databases/microarray/data/experiment/GEOD/E-GEOD-14722/E-GEOD-14722.raw.1.zip/GSM367818.CEL
+   </url>
+   <comment>
+    <name>
+     ArrayExpress FTP file
+    </name>
+    <value>
+     ftp://ftp.ebi.ac.uk/pub/databases/microarray/data/experiment/GEOD/E-GEOD-14722/E-GEOD-14722.raw.1.zip
+    </value>
+   </comment>
+  </file>
+  <file>
+   <type>
+    derived data
+   </type>
+   <name>
+    GSM367818_sample_table.txt
+   </name>
+   <url>
+    ftp://ftp.ebi.ac.uk/pub/databases/microarray/data/experiment/GEOD/E-GEOD-14722/E-GEOD-14722.processed.1.zip/GSM367818_sample_table.txt
+   </url>
+   <comment>
+    <name>
+     Derived ArrayExpress FTP file
+    </name>
+    <value>
+     ftp://ftp.ebi.ac.uk/pub/databases/microarray/data/experiment/GEOD/E-GEOD-14722/E-GEOD-14722.processed.1.zip
+    </value>
+   </comment>
+  </file>
+  <labeled-extract>
+   <name>
+    GSM367818 LE 1
+   </name>
+   <label>
+    biotin
+   </label>
+  </labeled-extract>
+  <source>
+   <name>
+    GSM367818 1
+   </name>
+   <comment>
+    <name>
+     Sample_description
+    </name>
+    <value>
+     Gene expression data.
+    </value>
+   </comment>
+   <comment>
+    <name>
+     Sample_source_name
+    </name>
+    <value>
+     human placenta, preeclampsia
+    </value>
+   </comment>
+  </source>
+  <variable>
+   <name>
+    CONDITION
+   </name>
+   <value>
+    31.1wk preeclamptic
+   </value>
+  </variable>
+ </sample>
+ <sample>
+  <assay>
+   <name>
+    GSM367817
+   </name>
+  </assay>
+  <characteristic>
+   <category>
+    Organism
+   </category>
+   <value>
+    Homo sapiens
+   </value>
+  </characteristic>
+  <characteristic>
+   <category>
+    condition
+   </category>
+   <value>
+    30.6wk preeclamptic
+   </value>
+  </characteristic>
+  <extract>
+   <name>
+    GSM367817 extract 1
+   </name>
+  </extract>
+  <file>
+   <type>
+    data
+   </type>
+   <name>
+    GSM367817.CEL
+   </name>
+   <url>
+    ftp://ftp.ebi.ac.uk/pub/databases/microarray/data/experiment/GEOD/E-GEOD-14722/E-GEOD-14722.raw.1.zip/GSM367817.CEL
+   </url>
+   <comment>
+    <name>
+     ArrayExpress FTP file
+    </name>
+    <value>
+     ftp://ftp.ebi.ac.uk/pub/databases/microarray/data/experiment/GEOD/E-GEOD-14722/E-GEOD-14722.raw.1.zip
+    </value>
+   </comment>
+  </file>
+  <file>
+   <type>
+    derived data
+   </type>
+   <name>
+    GSM367817_sample_table.txt
+   </name>
+   <url>
+    ftp://ftp.ebi.ac.uk/pub/databases/microarray/data/experiment/GEOD/E-GEOD-14722/E-GEOD-14722.processed.1.zip/GSM367817_sample_table.txt
+   </url>
+   <comment>
+    <name>
+     Derived ArrayExpress FTP file
+    </name>
+    <value>
+     ftp://ftp.ebi.ac.uk/pub/databases/microarray/data/experiment/GEOD/E-GEOD-14722/E-GEOD-14722.processed.1.zip
+    </value>
+   </comment>
+  </file>
+  <labeled-extract>
+   <name>
+    GSM367817 LE 1
+   </name>
+   <label>
+    biotin
+   </label>
+  </labeled-extract>
+  <source>
+   <name>
+    GSM367817 1
+   </name>
+   <comment>
+    <name>
+     Sample_description
+    </name>
+    <value>
+     Gene expression data.
+    </value>
+   </comment>
+   <comment>
+    <name>
+     Sample_source_name
+    </name>
+    <value>
+     human placenta, preeclampsia
+    </value>
+   </comment>
+  </source>
+  <variable>
+   <name>
+    CONDITION
+   </name>
+   <value>
+    30.6wk preeclamptic
+   </value>
+  </variable>
+ </sample>
+ <sample>
+  <assay>
+   <name>
+    GSM367816
+   </name>
+  </assay>
+  <characteristic>
+   <category>
+    Organism
+   </category>
+   <value>
+    Homo sapiens
+   </value>
+  </characteristic>
+  <characteristic>
+   <category>
+    condition
+   </category>
+   <value>
+    30.4wk preeclamptic
+   </value>
+  </characteristic>
+  <extract>
+   <name>
+    GSM367816 extract 1
+   </name>
+  </extract>
+  <file>
+   <type>
+    data
+   </type>
+   <name>
+    GSM367816.CEL
+   </name>
+   <url>
+    ftp://ftp.ebi.ac.uk/pub/databases/microarray/data/experiment/GEOD/E-GEOD-14722/E-GEOD-14722.raw.1.zip/GSM367816.CEL
+   </url>
+   <comment>
+    <name>
+     ArrayExpress FTP file
+    </name>
+    <value>
+     ftp://ftp.ebi.ac.uk/pub/databases/microarray/data/experiment/GEOD/E-GEOD-14722/E-GEOD-14722.raw.1.zip
+    </value>
+   </comment>
+  </file>
+  <file>
+   <type>
+    derived data
+   </type>
+   <name>
+    GSM367816_sample_table.txt
+   </name>
+   <url>
+    ftp://ftp.ebi.ac.uk/pub/databases/microarray/data/experiment/GEOD/E-GEOD-14722/E-GEOD-14722.processed.1.zip/GSM367816_sample_table.txt
+   </url>
+   <comment>
+    <name>
+     Derived ArrayExpress FTP file
+    </name>
+    <value>
+     ftp://ftp.ebi.ac.uk/pub/databases/microarray/data/experiment/GEOD/E-GEOD-14722/E-GEOD-14722.processed.1.zip
+    </value>
+   </comment>
+  </file>
+  <labeled-extract>
+   <name>
+    GSM367816 LE 1
+   </name>
+   <label>
+    biotin
+   </label>
+  </labeled-extract>
+  <source>
+   <name>
+    GSM367816 1
+   </name>
+   <comment>
+    <name>
+     Sample_description
+    </name>
+    <value>
+     Gene expression data.
+    </value>
+   </comment>
+   <comment>
+    <name>
+     Sample_source_name
+    </name>
+    <value>
+     human placenta, preeclampsia
+    </value>
+   </comment>
+  </source>
+  <variable>
+   <name>
+    CONDITION
+   </name>
+   <value>
+    30.4wk preeclamptic
+   </value>
+  </variable>
+ </sample>
+ <sample>
+  <assay>
+   <name>
+    GSM367815
+   </name>
+  </assay>
+  <characteristic>
+   <category>
+    Organism
+   </category>
+   <value>
+    Homo sapiens
+   </value>
+  </characteristic>
+  <characteristic>
+   <category>
+    condition
+   </category>
+   <value>
+    24.1wk preeclamptic
+   </value>
+  </characteristic>
+  <extract>
+   <name>
+    GSM367815 extract 1
+   </name>
+  </extract>
+  <file>
+   <type>
+    data
+   </type>
+   <name>
+    GSM367815.CEL
+   </name>
+   <url>
+    ftp://ftp.ebi.ac.uk/pub/databases/microarray/data/experiment/GEOD/E-GEOD-14722/E-GEOD-14722.raw.1.zip/GSM367815.CEL
+   </url>
+   <comment>
+    <name>
+     ArrayExpress FTP file
+    </name>
+    <value>
+     ftp://ftp.ebi.ac.uk/pub/databases/microarray/data/experiment/GEOD/E-GEOD-14722/E-GEOD-14722.raw.1.zip
+    </value>
+   </comment>
+  </file>
+  <file>
+   <type>
+    derived data
+   </type>
+   <name>
+    GSM367815_sample_table.txt
+   </name>
+   <url>
+    ftp://ftp.ebi.ac.uk/pub/databases/microarray/data/experiment/GEOD/E-GEOD-14722/E-GEOD-14722.processed.1.zip/GSM367815_sample_table.txt
+   </url>
+   <comment>
+    <name>
+     Derived ArrayExpress FTP file
+    </name>
+    <value>
+     ftp://ftp.ebi.ac.uk/pub/databases/microarray/data/experiment/GEOD/E-GEOD-14722/E-GEOD-14722.processed.1.zip
+    </value>
+   </comment>
+  </file>
+  <labeled-extract>
+   <name>
+    GSM367815 LE 1
+   </name>
+   <label>
+    biotin
+   </label>
+  </labeled-extract>
+  <source>
+   <name>
+    GSM367815 1
+   </name>
+   <comment>
+    <name>
+     Sample_description
+    </name>
+    <value>
+     Gene expression data.
+    </value>
+   </comment>
+   <comment>
+    <name>
+     Sample_source_name
+    </name>
+    <value>
+     human placenta, preeclampsia
+    </value>
+   </comment>
+  </source>
+  <variable>
+   <name>
+    CONDITION
+   </name>
+   <value>
+    24.1wk preeclamptic
+   </value>
+  </variable>
+ </sample>
+ <sample>
+  <assay>
+   <name>
+    GSM367814
+   </name>
+  </assay>
+  <characteristic>
+   <category>
+    Organism
+   </category>
+   <value>
+    Homo sapiens
+   </value>
+  </characteristic>
+  <characteristic>
+   <category>
+    condition
+   </category>
+   <value>
+    36.6wk preterm
+   </value>
+  </characteristic>
+  <extract>
+   <name>
+    GSM367814 extract 1
+   </name>
+  </extract>
+  <file>
+   <type>
+    data
+   </type>
+   <name>
+    GSM367814.CEL
+   </name>
+   <url>
+    ftp://ftp.ebi.ac.uk/pub/databases/microarray/data/experiment/GEOD/E-GEOD-14722/E-GEOD-14722.raw.1.zip/GSM367814.CEL
+   </url>
+   <comment>
+    <name>
+     ArrayExpress FTP file
+    </name>
+    <value>
+     ftp://ftp.ebi.ac.uk/pub/databases/microarray/data/experiment/GEOD/E-GEOD-14722/E-GEOD-14722.raw.1.zip
+    </value>
+   </comment>
+  </file>
+  <file>
+   <type>
+    derived data
+   </type>
+   <name>
+    GSM367814_sample_table.txt
+   </name>
+   <url>
+    ftp://ftp.ebi.ac.uk/pub/databases/microarray/data/experiment/GEOD/E-GEOD-14722/E-GEOD-14722.processed.1.zip/GSM367814_sample_table.txt
+   </url>
+   <comment>
+    <name>
+     Derived ArrayExpress FTP file
+    </name>
+    <value>
+     ftp://ftp.ebi.ac.uk/pub/databases/microarray/data/experiment/GEOD/E-GEOD-14722/E-GEOD-14722.processed.1.zip
+    </value>
+   </comment>
+  </file>
+  <labeled-extract>
+   <name>
+    GSM367814 LE 1
+   </name>
+   <label>
+    biotin
+   </label>
+  </labeled-extract>
+  <source>
+   <name>
+    GSM367814 1
+   </name>
+   <comment>
+    <name>
+     Sample_description
+    </name>
+    <value>
+     Gene expression data.
+    </value>
+   </comment>
+   <comment>
+    <name>
+     Sample_source_name
+    </name>
+    <value>
+     human placenta, preterm labor
+    </value>
+   </comment>
+  </source>
+  <variable>
+   <name>
+    CONDITION
+   </name>
+   <value>
+    36.6wk preterm
+   </value>
+  </variable>
+ </sample>
+ <sample>
+  <assay>
+   <name>
+    GSM367813
+   </name>
+  </assay>
+  <characteristic>
+   <category>
+    Organism
+   </category>
+   <value>
+    Homo sapiens
+   </value>
+  </characteristic>
+  <characteristic>
+   <category>
+    condition
+   </category>
+   <value>
+    35.9wk preterm
+   </value>
+  </characteristic>
+  <extract>
+   <name>
+    GSM367813 extract 1
+   </name>
+  </extract>
+  <file>
+   <type>
+    data
+   </type>
+   <name>
+    GSM367813.CEL
+   </name>
+   <url>
+    ftp://ftp.ebi.ac.uk/pub/databases/microarray/data/experiment/GEOD/E-GEOD-14722/E-GEOD-14722.raw.1.zip/GSM367813.CEL
+   </url>
+   <comment>
+    <name>
+     ArrayExpress FTP file
+    </name>
+    <value>
+     ftp://ftp.ebi.ac.uk/pub/databases/microarray/data/experiment/GEOD/E-GEOD-14722/E-GEOD-14722.raw.1.zip
+    </value>
+   </comment>
+  </file>
+  <file>
+   <type>
+    derived data
+   </type>
+   <name>
+    GSM367813_sample_table.txt
+   </name>
+   <url>
+    ftp://ftp.ebi.ac.uk/pub/databases/microarray/data/experiment/GEOD/E-GEOD-14722/E-GEOD-14722.processed.1.zip/GSM367813_sample_table.txt
+   </url>
+   <comment>
+    <name>
+     Derived ArrayExpress FTP file
+    </name>
+    <value>
+     ftp://ftp.ebi.ac.uk/pub/databases/microarray/data/experiment/GEOD/E-GEOD-14722/E-GEOD-14722.processed.1.zip
+    </value>
+   </comment>
+  </file>
+  <labeled-extract>
+   <name>
+    GSM367813 LE 1
+   </name>
+   <label>
+    biotin
+   </label>
+  </labeled-extract>
+  <source>
+   <name>
+    GSM367813 1
+   </name>
+   <comment>
+    <name>
+     Sample_description
+    </name>
+    <value>
+     Gene expression data.
+    </value>
+   </comment>
+   <comment>
+    <name>
+     Sample_source_name
+    </name>
+    <value>
+     human placenta, preterm labor
+    </value>
+   </comment>
+  </source>
+  <variable>
+   <name>
+    CONDITION
+   </name>
+   <value>
+    35.9wk preterm
+   </value>
+  </variable>
+ </sample>
+ <sample>
+  <assay>
+   <name>
+    GSM367812
+   </name>
+  </assay>
+  <characteristic>
+   <category>
+    Organism
+   </category>
+   <value>
+    Homo sapiens
+   </value>
+  </characteristic>
+  <characteristic>
+   <category>
+    condition
+   </category>
+   <value>
+    35.7wk preterm
+   </value>
+  </characteristic>
+  <extract>
+   <name>
+    GSM367812 extract 1
+   </name>
+  </extract>
+  <file>
+   <type>
+    data
+   </type>
+   <name>
+    GSM367812.CEL
+   </name>
+   <url>
+    ftp://ftp.ebi.ac.uk/pub/databases/microarray/data/experiment/GEOD/E-GEOD-14722/E-GEOD-14722.raw.1.zip/GSM367812.CEL
+   </url>
+   <comment>
+    <name>
+     ArrayExpress FTP file
+    </name>
+    <value>
+     ftp://ftp.ebi.ac.uk/pub/databases/microarray/data/experiment/GEOD/E-GEOD-14722/E-GEOD-14722.raw.1.zip
+    </value>
+   </comment>
+  </file>
+  <file>
+   <type>
+    derived data
+   </type>
+   <name>
+    GSM367812_sample_table.txt
+   </name>
+   <url>
+    ftp://ftp.ebi.ac.uk/pub/databases/microarray/data/experiment/GEOD/E-GEOD-14722/E-GEOD-14722.processed.1.zip/GSM367812_sample_table.txt
+   </url>
+   <comment>
+    <name>
+     Derived ArrayExpress FTP file
+    </name>
+    <value>
+     ftp://ftp.ebi.ac.uk/pub/databases/microarray/data/experiment/GEOD/E-GEOD-14722/E-GEOD-14722.processed.1.zip
+    </value>
+   </comment>
+  </file>
+  <labeled-extract>
+   <name>
+    GSM367812 LE 1
+   </name>
+   <label>
+    biotin
+   </label>
+  </labeled-extract>
+  <source>
+   <name>
+    GSM367812 1
+   </name>
+   <comment>
+    <name>
+     Sample_description
+    </name>
+    <value>
+     Gene expression data.
+    </value>
+   </comment>
+   <comment>
+    <name>
+     Sample_source_name
+    </name>
+    <value>
+     human placenta, preterm labor
+    </value>
+   </comment>
+  </source>
+  <variable>
+   <name>
+    CONDITION
+   </name>
+   <value>
+    35.7wk preterm
+   </value>
+  </variable>
+ </sample>
+ <sample>
+  <assay>
+   <name>
+    GSM367811
+   </name>
+  </assay>
+  <characteristic>
+   <category>
+    Organism
+   </category>
+   <value>
+    Homo sapiens
+   </value>
+  </characteristic>
+  <characteristic>
+   <category>
+    condition
+   </category>
+   <value>
+    33.9wk preterm
+   </value>
+  </characteristic>
+  <extract>
+   <name>
+    GSM367811 extract 1
+   </name>
+  </extract>
+  <file>
+   <type>
+    data
+   </type>
+   <name>
+    GSM367811.CEL
+   </name>
+   <url>
+    ftp://ftp.ebi.ac.uk/pub/databases/microarray/data/experiment/GEOD/E-GEOD-14722/E-GEOD-14722.raw.1.zip/GSM367811.CEL
+   </url>
+   <comment>
+    <name>
+     ArrayExpress FTP file
+    </name>
+    <value>
+     ftp://ftp.ebi.ac.uk/pub/databases/microarray/data/experiment/GEOD/E-GEOD-14722/E-GEOD-14722.raw.1.zip
+    </value>
+   </comment>
+  </file>
+  <file>
+   <type>
+    derived data
+   </type>
+   <name>
+    GSM367811_sample_table.txt
+   </name>
+   <url>
+    ftp://ftp.ebi.ac.uk/pub/databases/microarray/data/experiment/GEOD/E-GEOD-14722/E-GEOD-14722.processed.1.zip/GSM367811_sample_table.txt
+   </url>
+   <comment>
+    <name>
+     Derived ArrayExpress FTP file
+    </name>
+    <value>
+     ftp://ftp.ebi.ac.uk/pub/databases/microarray/data/experiment/GEOD/E-GEOD-14722/E-GEOD-14722.processed.1.zip
+    </value>
+   </comment>
+  </file>
+  <labeled-extract>
+   <name>
+    GSM367811 LE 1
+   </name>
+   <label>
+    biotin
+   </label>
+  </labeled-extract>
+  <source>
+   <name>
+    GSM367811 1
+   </name>
+   <comment>
+    <name>
+     Sample_description
+    </name>
+    <value>
+     Gene expression data.
+    </value>
+   </comment>
+   <comment>
+    <name>
+     Sample_source_name
+    </name>
+    <value>
+     human placenta, preterm labor
+    </value>
+   </comment>
+  </source>
+  <variable>
+   <name>
+    CONDITION
+   </name>
+   <value>
+    33.9wk preterm
+   </value>
+  </variable>
+ </sample>
+ <sample>
+  <assay>
+   <name>
+    GSM367810
+   </name>
+  </assay>
+  <characteristic>
+   <category>
+    Organism
+   </category>
+   <value>
+    Homo sapiens
+   </value>
+  </characteristic>
+  <characteristic>
+   <category>
+    condition
+   </category>
+   <value>
+    33.3wk preterm
+   </value>
+  </characteristic>
+  <extract>
+   <name>
+    GSM367810 extract 1
+   </name>
+  </extract>
+  <file>
+   <type>
+    data
+   </type>
+   <name>
+    GSM367810.CEL
+   </name>
+   <url>
+    ftp://ftp.ebi.ac.uk/pub/databases/microarray/data/experiment/GEOD/E-GEOD-14722/E-GEOD-14722.raw.1.zip/GSM367810.CEL
+   </url>
+   <comment>
+    <name>
+     ArrayExpress FTP file
+    </name>
+    <value>
+     ftp://ftp.ebi.ac.uk/pub/databases/microarray/data/experiment/GEOD/E-GEOD-14722/E-GEOD-14722.raw.1.zip
+    </value>
+   </comment>
+  </file>
+  <file>
+   <type>
+    derived data
+   </type>
+   <name>
+    GSM367810_sample_table.txt
+   </name>
+   <url>
+    ftp://ftp.ebi.ac.uk/pub/databases/microarray/data/experiment/GEOD/E-GEOD-14722/E-GEOD-14722.processed.1.zip/GSM367810_sample_table.txt
+   </url>
+   <comment>
+    <name>
+     Derived ArrayExpress FTP file
+    </name>
+    <value>
+     ftp://ftp.ebi.ac.uk/pub/databases/microarray/data/experiment/GEOD/E-GEOD-14722/E-GEOD-14722.processed.1.zip
+    </value>
+   </comment>
+  </file>
+  <labeled-extract>
+   <name>
+    GSM367810 LE 1
+   </name>
+   <label>
+    biotin
+   </label>
+  </labeled-extract>
+  <source>
+   <name>
+    GSM367810 1
+   </name>
+   <comment>
+    <name>
+     Sample_description
+    </name>
+    <value>
+     Gene expression data.
+    </value>
+   </comment>
+   <comment>
+    <name>
+     Sample_source_name
+    </name>
+    <value>
+     human placenta, preterm labor
+    </value>
+   </comment>
+  </source>
+  <variable>
+   <name>
+    CONDITION
+   </name>
+   <value>
+    33.3wk preterm
+   </value>
+  </variable>
+ </sample>
+ <sample>
+  <assay>
+   <name>
+    GSM367809
+   </name>
+  </assay>
+  <characteristic>
+   <category>
+    Organism
+   </category>
+   <value>
+    Homo sapiens
+   </value>
+  </characteristic>
+  <characteristic>
+   <category>
+    condition
+   </category>
+   <value>
+    33.0wk preterm
+   </value>
+  </characteristic>
+  <extract>
+   <name>
+    GSM367809 extract 1
+   </name>
+  </extract>
+  <file>
+   <type>
+    data
+   </type>
+   <name>
+    GSM367809.CEL
+   </name>
+   <url>
+    ftp://ftp.ebi.ac.uk/pub/databases/microarray/data/experiment/GEOD/E-GEOD-14722/E-GEOD-14722.raw.1.zip/GSM367809.CEL
+   </url>
+   <comment>
+    <name>
+     ArrayExpress FTP file
+    </name>
+    <value>
+     ftp://ftp.ebi.ac.uk/pub/databases/microarray/data/experiment/GEOD/E-GEOD-14722/E-GEOD-14722.raw.1.zip
+    </value>
+   </comment>
+  </file>
+  <file>
+   <type>
+    derived data
+   </type>
+   <name>
+    GSM367809_sample_table.txt
+   </name>
+   <url>
+    ftp://ftp.ebi.ac.uk/pub/databases/microarray/data/experiment/GEOD/E-GEOD-14722/E-GEOD-14722.processed.1.zip/GSM367809_sample_table.txt
+   </url>
+   <comment>
+    <name>
+     Derived ArrayExpress FTP file
+    </name>
+    <value>
+     ftp://ftp.ebi.ac.uk/pub/databases/microarray/data/experiment/GEOD/E-GEOD-14722/E-GEOD-14722.processed.1.zip
+    </value>
+   </comment>
+  </file>
+  <labeled-extract>
+   <name>
+    GSM367809 LE 1
+   </name>
+   <label>
+    biotin
+   </label>
+  </labeled-extract>
+  <source>
+   <name>
+    GSM367809 1
+   </name>
+   <comment>
+    <name>
+     Sample_description
+    </name>
+    <value>
+     Gene expression data.
+    </value>
+   </comment>
+   <comment>
+    <name>
+     Sample_source_name
+    </name>
+    <value>
+     human placenta, preterm labor
+    </value>
+   </comment>
+  </source>
+  <variable>
+   <name>
+    CONDITION
+   </name>
+   <value>
+    33.0wk preterm
+   </value>
+  </variable>
+ </sample>
+ <sample>
+  <assay>
+   <name>
+    GSM367808
+   </name>
+  </assay>
+  <characteristic>
+   <category>
+    Organism
+   </category>
+   <value>
+    Homo sapiens
+   </value>
+  </characteristic>
+  <characteristic>
+   <category>
+    condition
+   </category>
+   <value>
+    29.9wk preterm
+   </value>
+  </characteristic>
+  <extract>
+   <name>
+    GSM367808 extract 1
+   </name>
+  </extract>
+  <file>
+   <type>
+    data
+   </type>
+   <name>
+    GSM367808.CEL
+   </name>
+   <url>
+    ftp://ftp.ebi.ac.uk/pub/databases/microarray/data/experiment/GEOD/E-GEOD-14722/E-GEOD-14722.raw.1.zip/GSM367808.CEL
+   </url>
+   <comment>
+    <name>
+     ArrayExpress FTP file
+    </name>
+    <value>
+     ftp://ftp.ebi.ac.uk/pub/databases/microarray/data/experiment/GEOD/E-GEOD-14722/E-GEOD-14722.raw.1.zip
+    </value>
+   </comment>
+  </file>
+  <file>
+   <type>
+    derived data
+   </type>
+   <name>
+    GSM367808_sample_table.txt
+   </name>
+   <url>
+    ftp://ftp.ebi.ac.uk/pub/databases/microarray/data/experiment/GEOD/E-GEOD-14722/E-GEOD-14722.processed.1.zip/GSM367808_sample_table.txt
+   </url>
+   <comment>
+    <name>
+     Derived ArrayExpress FTP file
+    </name>
+    <value>
+     ftp://ftp.ebi.ac.uk/pub/databases/microarray/data/experiment/GEOD/E-GEOD-14722/E-GEOD-14722.processed.1.zip
+    </value>
+   </comment>
+  </file>
+  <labeled-extract>
+   <name>
+    GSM367808 LE 1
+   </name>
+   <label>
+    biotin
+   </label>
+  </labeled-extract>
+  <source>
+   <name>
+    GSM367808 1
+   </name>
+   <comment>
+    <name>
+     Sample_description
+    </name>
+    <value>
+     Gene expression data.
+    </value>
+   </comment>
+   <comment>
+    <name>
+     Sample_source_name
+    </name>
+    <value>
+     human placenta, preterm labor
+    </value>
+   </comment>
+  </source>
+  <variable>
+   <name>
+    CONDITION
+   </name>
+   <value>
+    29.9wk preterm
+   </value>
+  </variable>
+ </sample>
+ <sample>
+  <assay>
+   <name>
+    GSM367807
+   </name>
+  </assay>
+  <characteristic>
+   <category>
+    Organism
+   </category>
+   <value>
+    Homo sapiens
+   </value>
+  </characteristic>
+  <characteristic>
+   <category>
+    condition
+   </category>
+   <value>
+    27.1wk preterm
+   </value>
+  </characteristic>
+  <extract>
+   <name>
+    GSM367807 extract 1
+   </name>
+  </extract>
+  <file>
+   <type>
+    data
+   </type>
+   <name>
+    GSM367807.CEL
+   </name>
+   <url>
+    ftp://ftp.ebi.ac.uk/pub/databases/microarray/data/experiment/GEOD/E-GEOD-14722/E-GEOD-14722.raw.1.zip/GSM367807.CEL
+   </url>
+   <comment>
+    <name>
+     ArrayExpress FTP file
+    </name>
+    <value>
+     ftp://ftp.ebi.ac.uk/pub/databases/microarray/data/experiment/GEOD/E-GEOD-14722/E-GEOD-14722.raw.1.zip
+    </value>
+   </comment>
+  </file>
+  <file>
+   <type>
+    derived data
+   </type>
+   <name>
+    GSM367807_sample_table.txt
+   </name>
+   <url>
+    ftp://ftp.ebi.ac.uk/pub/databases/microarray/data/experiment/GEOD/E-GEOD-14722/E-GEOD-14722.processed.1.zip/GSM367807_sample_table.txt
+   </url>
+   <comment>
+    <name>
+     Derived ArrayExpress FTP file
+    </name>
+    <value>
+     ftp://ftp.ebi.ac.uk/pub/databases/microarray/data/experiment/GEOD/E-GEOD-14722/E-GEOD-14722.processed.1.zip
+    </value>
+   </comment>
+  </file>
+  <labeled-extract>
+   <name>
+    GSM367807 LE 1
+   </name>
+   <label>
+    biotin
+   </label>
+  </labeled-extract>
+  <source>
+   <name>
+    GSM367807 1
+   </name>
+   <comment>
+    <name>
+     Sample_description
+    </name>
+    <value>
+     Gene expression data.
+    </value>
+   </comment>
+   <comment>
+    <name>
+     Sample_source_name
+    </name>
+    <value>
+     human placenta, preterm labor
+    </value>
+   </comment>
+  </source>
+  <variable>
+   <name>
+    CONDITION
+   </name>
+   <value>
+    27.1wk preterm
+   </value>
+  </variable>
+ </sample>
+ <sample>
+  <assay>
+   <name>
+    GSM367806
+   </name>
+  </assay>
+  <characteristic>
+   <category>
+    Organism
+   </category>
+   <value>
+    Homo sapiens
+   </value>
+  </characteristic>
+  <characteristic>
+   <category>
+    condition
+   </category>
+   <value>
+    25.6wk preterm
+   </value>
+  </characteristic>
+  <extract>
+   <name>
+    GSM367806 extract 1
+   </name>
+  </extract>
+  <file>
+   <type>
+    data
+   </type>
+   <name>
+    GSM367806.CEL
+   </name>
+   <url>
+    ftp://ftp.ebi.ac.uk/pub/databases/microarray/data/experiment/GEOD/E-GEOD-14722/E-GEOD-14722.raw.1.zip/GSM367806.CEL
+   </url>
+   <comment>
+    <name>
+     ArrayExpress FTP file
+    </name>
+    <value>
+     ftp://ftp.ebi.ac.uk/pub/databases/microarray/data/experiment/GEOD/E-GEOD-14722/E-GEOD-14722.raw.1.zip
+    </value>
+   </comment>
+  </file>
+  <file>
+   <type>
+    derived data
+   </type>
+   <name>
+    GSM367806_sample_table.txt
+   </name>
+   <url>
+    ftp://ftp.ebi.ac.uk/pub/databases/microarray/data/experiment/GEOD/E-GEOD-14722/E-GEOD-14722.processed.1.zip/GSM367806_sample_table.txt
+   </url>
+   <comment>
+    <name>
+     Derived ArrayExpress FTP file
+    </name>
+    <value>
+     ftp://ftp.ebi.ac.uk/pub/databases/microarray/data/experiment/GEOD/E-GEOD-14722/E-GEOD-14722.processed.1.zip
+    </value>
+   </comment>
+  </file>
+  <labeled-extract>
+   <name>
+    GSM367806 LE 1
+   </name>
+   <label>
+    biotin
+   </label>
+  </labeled-extract>
+  <source>
+   <name>
+    GSM367806 1
+   </name>
+   <comment>
+    <name>
+     Sample_description
+    </name>
+    <value>
+     Gene expression data.
+    </value>
+   </comment>
+   <comment>
+    <name>
+     Sample_source_name
+    </name>
+    <value>
+     human placenta, preterm labor
+    </value>
+   </comment>
+  </source>
+  <variable>
+   <name>
+    CONDITION
+   </name>
+   <value>
+    25.6wk preterm
+   </value>
+  </variable>
+ </sample>
+ <sample>
+  <assay>
+   <name>
+    GSM367805
+   </name>
+  </assay>
+  <characteristic>
+   <category>
+    Organism
+   </category>
+   <value>
+    Homo sapiens
+   </value>
+  </characteristic>
+  <characteristic>
+   <category>
+    condition
+   </category>
+   <value>
+    25.4wk preterm
+   </value>
+  </characteristic>
+  <extract>
+   <name>
+    GSM367805 extract 1
+   </name>
+  </extract>
+  <file>
+   <type>
+    data
+   </type>
+   <name>
+    GSM367805.CEL
+   </name>
+   <url>
+    ftp://ftp.ebi.ac.uk/pub/databases/microarray/data/experiment/GEOD/E-GEOD-14722/E-GEOD-14722.raw.1.zip/GSM367805.CEL
+   </url>
+   <comment>
+    <name>
+     ArrayExpress FTP file
+    </name>
+    <value>
+     ftp://ftp.ebi.ac.uk/pub/databases/microarray/data/experiment/GEOD/E-GEOD-14722/E-GEOD-14722.raw.1.zip
+    </value>
+   </comment>
+  </file>
+  <file>
+   <type>
+    derived data
+   </type>
+   <name>
+    GSM367805_sample_table.txt
+   </name>
+   <url>
+    ftp://ftp.ebi.ac.uk/pub/databases/microarray/data/experiment/GEOD/E-GEOD-14722/E-GEOD-14722.processed.1.zip/GSM367805_sample_table.txt
+   </url>
+   <comment>
+    <name>
+     Derived ArrayExpress FTP file
+    </name>
+    <value>
+     ftp://ftp.ebi.ac.uk/pub/databases/microarray/data/experiment/GEOD/E-GEOD-14722/E-GEOD-14722.processed.1.zip
+    </value>
+   </comment>
+  </file>
+  <labeled-extract>
+   <name>
+    GSM367805 LE 1
+   </name>
+   <label>
+    biotin
+   </label>
+  </labeled-extract>
+  <source>
+   <name>
+    GSM367805 1
+   </name>
+   <comment>
+    <name>
+     Sample_description
+    </name>
+    <value>
+     Gene expression data.
+    </value>
+   </comment>
+   <comment>
+    <name>
+     Sample_source_name
+    </name>
+    <value>
+     human placenta, preterm labor
+    </value>
+   </comment>
+  </source>
+  <variable>
+   <name>
+    CONDITION
+   </name>
+   <value>
+    25.4wk preterm
+   </value>
+  </variable>
+ </sample>
+ <sample>
+  <assay>
+   <name>
+    GSM367804
+   </name>
+  </assay>
+  <characteristic>
+   <category>
+    Organism
+   </category>
+   <value>
+    Homo sapiens
+   </value>
+  </characteristic>
+  <characteristic>
+   <category>
+    condition
+   </category>
+   <value>
+    24.7wk preterm
+   </value>
+  </characteristic>
+  <extract>
+   <name>
+    GSM367804 extract 1
+   </name>
+  </extract>
+  <file>
+   <type>
+    data
+   </type>
+   <name>
+    GSM367804.CEL
+   </name>
+   <url>
+    ftp://ftp.ebi.ac.uk/pub/databases/microarray/data/experiment/GEOD/E-GEOD-14722/E-GEOD-14722.raw.1.zip/GSM367804.CEL
+   </url>
+   <comment>
+    <name>
+     ArrayExpress FTP file
+    </name>
+    <value>
+     ftp://ftp.ebi.ac.uk/pub/databases/microarray/data/experiment/GEOD/E-GEOD-14722/E-GEOD-14722.raw.1.zip
+    </value>
+   </comment>
+  </file>
+  <file>
+   <type>
+    derived data
+   </type>
+   <name>
+    GSM367804_sample_table.txt
+   </name>
+   <url>
+    ftp://ftp.ebi.ac.uk/pub/databases/microarray/data/experiment/GEOD/E-GEOD-14722/E-GEOD-14722.processed.1.zip/GSM367804_sample_table.txt
+   </url>
+   <comment>
+    <name>
+     Derived ArrayExpress FTP file
+    </name>
+    <value>
+     ftp://ftp.ebi.ac.uk/pub/databases/microarray/data/experiment/GEOD/E-GEOD-14722/E-GEOD-14722.processed.1.zip
+    </value>
+   </comment>
+  </file>
+  <labeled-extract>
+   <name>
+    GSM367804 LE 1
+   </name>
+   <label>
+    biotin
+   </label>
+  </labeled-extract>
+  <source>
+   <name>
+    GSM367804 1
+   </name>
+   <comment>
+    <name>
+     Sample_description
+    </name>
+    <value>
+     Gene expression data.
+    </value>
+   </comment>
+   <comment>
+    <name>
+     Sample_source_name
+    </name>
+    <value>
+     human placenta, preterm labor
+    </value>
+   </comment>
+  </source>
+  <variable>
+   <name>
+    CONDITION
+   </name>
+   <value>
+    24.7wk preterm
+   </value>
+  </variable>
+ </sample>
+ <sample>
+  <assay>
+   <name>
+    GSM367803
+   </name>
+  </assay>
+  <characteristic>
+   <category>
+    Organism
+   </category>
+   <value>
+    Homo sapiens
+   </value>
+  </characteristic>
+  <characteristic>
+   <category>
+    condition
+   </category>
+   <value>
+    37.6wk preeclamptic
+   </value>
+  </characteristic>
+  <extract>
+   <name>
+    GSM367803 extract 1
+   </name>
+  </extract>
+  <file>
+   <type>
+    data
+   </type>
+   <name>
+    GSM367803.CEL
+   </name>
+   <url>
+    ftp://ftp.ebi.ac.uk/pub/databases/microarray/data/experiment/GEOD/E-GEOD-14722/E-GEOD-14722.raw.1.zip/GSM367803.CEL
+   </url>
+   <comment>
+    <name>
+     ArrayExpress FTP file
+    </name>
+    <value>
+     ftp://ftp.ebi.ac.uk/pub/databases/microarray/data/experiment/GEOD/E-GEOD-14722/E-GEOD-14722.raw.1.zip
+    </value>
+   </comment>
+  </file>
+  <file>
+   <type>
+    derived data
+   </type>
+   <name>
+    GSM367803_sample_table.txt
+   </name>
+   <url>
+    ftp://ftp.ebi.ac.uk/pub/databases/microarray/data/experiment/GEOD/E-GEOD-14722/E-GEOD-14722.processed.1.zip/GSM367803_sample_table.txt
+   </url>
+   <comment>
+    <name>
+     Derived ArrayExpress FTP file
+    </name>
+    <value>
+     ftp://ftp.ebi.ac.uk/pub/databases/microarray/data/experiment/GEOD/E-GEOD-14722/E-GEOD-14722.processed.1.zip
+    </value>
+   </comment>
+  </file>
+  <labeled-extract>
+   <name>
+    GSM367803 LE 1
+   </name>
+   <label>
+    biotin
+   </label>
+  </labeled-extract>
+  <source>
+   <name>
+    GSM367803 1
+   </name>
+   <comment>
+    <name>
+     Sample_description
+    </name>
+    <value>
+     Gene expression data.
+    </value>
+   </comment>
+   <comment>
+    <name>
+     Sample_source_name
+    </name>
+    <value>
+     human placenta, preeclampsia
+    </value>
+   </comment>
+  </source>
+  <variable>
+   <name>
+    CONDITION
+   </name>
+   <value>
+    37.6wk preeclamptic
+   </value>
+  </variable>
+ </sample>
+ <sample>
+  <assay>
+   <name>
+    GSM367802
+   </name>
+  </assay>
+  <characteristic>
+   <category>
+    Organism
+   </category>
+   <value>
+    Homo sapiens
+   </value>
+  </characteristic>
+  <characteristic>
+   <category>
+    condition
+   </category>
+   <value>
+    35.9wk preeclamptic
+   </value>
+  </characteristic>
+  <extract>
+   <name>
+    GSM367802 extract 1
+   </name>
+  </extract>
+  <file>
+   <type>
+    data
+   </type>
+   <name>
+    GSM367802.CEL
+   </name>
+   <url>
+    ftp://ftp.ebi.ac.uk/pub/databases/microarray/data/experiment/GEOD/E-GEOD-14722/E-GEOD-14722.raw.1.zip/GSM367802.CEL
+   </url>
+   <comment>
+    <name>
+     ArrayExpress FTP file
+    </name>
+    <value>
+     ftp://ftp.ebi.ac.uk/pub/databases/microarray/data/experiment/GEOD/E-GEOD-14722/E-GEOD-14722.raw.1.zip
+    </value>
+   </comment>
+  </file>
+  <file>
+   <type>
+    derived data
+   </type>
+   <name>
+    GSM367802_sample_table.txt
+   </name>
+   <url>
+    ftp://ftp.ebi.ac.uk/pub/databases/microarray/data/experiment/GEOD/E-GEOD-14722/E-GEOD-14722.processed.1.zip/GSM367802_sample_table.txt
+   </url>
+   <comment>
+    <name>
+     Derived ArrayExpress FTP file
+    </name>
+    <value>
+     ftp://ftp.ebi.ac.uk/pub/databases/microarray/data/experiment/GEOD/E-GEOD-14722/E-GEOD-14722.processed.1.zip
+    </value>
+   </comment>
+  </file>
+  <labeled-extract>
+   <name>
+    GSM367802 LE 1
+   </name>
+   <label>
+    biotin
+   </label>
+  </labeled-extract>
+  <source>
+   <name>
+    GSM367802 1
+   </name>
+   <comment>
+    <name>
+     Sample_description
+    </name>
+    <value>
+     Gene expression data.
+    </value>
+   </comment>
+   <comment>
+    <name>
+     Sample_source_name
+    </name>
+    <value>
+     human placenta, preeclampsia
+    </value>
+   </comment>
+  </source>
+  <variable>
+   <name>
+    CONDITION
+   </name>
+   <value>
+    35.9wk preeclamptic
+   </value>
+  </variable>
+ </sample>
+ <sample>
+  <assay>
+   <name>
+    GSM367801
+   </name>
+  </assay>
+  <characteristic>
+   <category>
+    Organism
+   </category>
+   <value>
+    Homo sapiens
+   </value>
+  </characteristic>
+  <characteristic>
+   <category>
+    condition
+   </category>
+   <value>
+    34.0wk preeclamptic
+   </value>
+  </characteristic>
+  <extract>
+   <name>
+    GSM367801 extract 1
+   </name>
+  </extract>
+  <file>
+   <type>
+    data
+   </type>
+   <name>
+    GSM367801.CEL
+   </name>
+   <url>
+    ftp://ftp.ebi.ac.uk/pub/databases/microarray/data/experiment/GEOD/E-GEOD-14722/E-GEOD-14722.raw.1.zip/GSM367801.CEL
+   </url>
+   <comment>
+    <name>
+     ArrayExpress FTP file
+    </name>
+    <value>
+     ftp://ftp.ebi.ac.uk/pub/databases/microarray/data/experiment/GEOD/E-GEOD-14722/E-GEOD-14722.raw.1.zip
+    </value>
+   </comment>
+  </file>
+  <file>
+   <type>
+    derived data
+   </type>
+   <name>
+    GSM367801_sample_table.txt
+   </name>
+   <url>
+    ftp://ftp.ebi.ac.uk/pub/databases/microarray/data/experiment/GEOD/E-GEOD-14722/E-GEOD-14722.processed.1.zip/GSM367801_sample_table.txt
+   </url>
+   <comment>
+    <name>
+     Derived ArrayExpress FTP file
+    </name>
+    <value>
+     ftp://ftp.ebi.ac.uk/pub/databases/microarray/data/experiment/GEOD/E-GEOD-14722/E-GEOD-14722.processed.1.zip
+    </value>
+   </comment>
+  </file>
+  <labeled-extract>
+   <name>
+    GSM367801 LE 1
+   </name>
+   <label>
+    biotin
+   </label>
+  </labeled-extract>
+  <source>
+   <name>
+    GSM367801 1
+   </name>
+   <comment>
+    <name>
+     Sample_description
+    </name>
+    <value>
+     Gene expression data.
+    </value>
+   </comment>
+   <comment>
+    <name>
+     Sample_source_name
+    </name>
+    <value>
+     human placenta, preeclampsia
+    </value>
+   </comment>
+  </source>
+  <variable>
+   <name>
+    CONDITION
+   </name>
+   <value>
+    34.0wk preeclamptic
+   </value>
+  </variable>
+ </sample>
+ <sample>
+  <assay>
+   <name>
+    GSM367800
+   </name>
+  </assay>
+  <characteristic>
+   <category>
+    Organism
+   </category>
+   <value>
+    Homo sapiens
+   </value>
+  </characteristic>
+  <characteristic>
+   <category>
+    condition
+   </category>
+   <value>
+    33.0wk preeclamptic
+   </value>
+  </characteristic>
+  <extract>
+   <name>
+    GSM367800 extract 1
+   </name>
+  </extract>
+  <file>
+   <type>
+    data
+   </type>
+   <name>
+    GSM367800.CEL
+   </name>
+   <url>
+    ftp://ftp.ebi.ac.uk/pub/databases/microarray/data/experiment/GEOD/E-GEOD-14722/E-GEOD-14722.raw.1.zip/GSM367800.CEL
+   </url>
+   <comment>
+    <name>
+     ArrayExpress FTP file
+    </name>
+    <value>
+     ftp://ftp.ebi.ac.uk/pub/databases/microarray/data/experiment/GEOD/E-GEOD-14722/E-GEOD-14722.raw.1.zip
+    </value>
+   </comment>
+  </file>
+  <file>
+   <type>
+    derived data
+   </type>
+   <name>
+    GSM367800_sample_table.txt
+   </name>
+   <url>
+    ftp://ftp.ebi.ac.uk/pub/databases/microarray/data/experiment/GEOD/E-GEOD-14722/E-GEOD-14722.processed.1.zip/GSM367800_sample_table.txt
+   </url>
+   <comment>
+    <name>
+     Derived ArrayExpress FTP file
+    </name>
+    <value>
+     ftp://ftp.ebi.ac.uk/pub/databases/microarray/data/experiment/GEOD/E-GEOD-14722/E-GEOD-14722.processed.1.zip
+    </value>
+   </comment>
+  </file>
+  <labeled-extract>
+   <name>
+    GSM367800 LE 1
+   </name>
+   <label>
+    biotin
+   </label>
+  </labeled-extract>
+  <source>
+   <name>
+    GSM367800 1
+   </name>
+   <comment>
+    <name>
+     Sample_description
+    </name>
+    <value>
+     Gene expression data.
+    </value>
+   </comment>
+   <comment>
+    <name>
+     Sample_source_name
+    </name>
+    <value>
+     human placenta, preeclampsia
+    </value>
+   </comment>
+  </source>
+  <variable>
+   <name>
+    CONDITION
+   </name>
+   <value>
+    33.0wk preeclamptic
+   </value>
+  </variable>
+ </sample>
+ <sample>
+  <assay>
+   <name>
+    GSM367799
+   </name>
+  </assay>
+  <characteristic>
+   <category>
+    Organism
+   </category>
+   <value>
+    Homo sapiens
+   </value>
+  </characteristic>
+  <characteristic>
+   <category>
+    condition
+   </category>
+   <value>
+    32.9wk preeclamptic
+   </value>
+  </characteristic>
+  <extract>
+   <name>
+    GSM367799 extract 1
+   </name>
+  </extract>
+  <file>
+   <type>
+    data
+   </type>
+   <name>
+    GSM367799.CEL
+   </name>
+   <url>
+    ftp://ftp.ebi.ac.uk/pub/databases/microarray/data/experiment/GEOD/E-GEOD-14722/E-GEOD-14722.raw.1.zip/GSM367799.CEL
+   </url>
+   <comment>
+    <name>
+     ArrayExpress FTP file
+    </name>
+    <value>
+     ftp://ftp.ebi.ac.uk/pub/databases/microarray/data/experiment/GEOD/E-GEOD-14722/E-GEOD-14722.raw.1.zip
+    </value>
+   </comment>
+  </file>
+  <file>
+   <type>
+    derived data
+   </type>
+   <name>
+    GSM367799_sample_table.txt
+   </name>
+   <url>
+    ftp://ftp.ebi.ac.uk/pub/databases/microarray/data/experiment/GEOD/E-GEOD-14722/E-GEOD-14722.processed.1.zip/GSM367799_sample_table.txt
+   </url>
+   <comment>
+    <name>
+     Derived ArrayExpress FTP file
+    </name>
+    <value>
+     ftp://ftp.ebi.ac.uk/pub/databases/microarray/data/experiment/GEOD/E-GEOD-14722/E-GEOD-14722.processed.1.zip
+    </value>
+   </comment>
+  </file>
+  <labeled-extract>
+   <name>
+    GSM367799 LE 1
+   </name>
+   <label>
+    biotin
+   </label>
+  </labeled-extract>
+  <source>
+   <name>
+    GSM367799 1
+   </name>
+   <comment>
+    <name>
+     Sample_description
+    </name>
+    <value>
+     Gene expression data.
+    </value>
+   </comment>
+   <comment>
+    <name>
+     Sample_source_name
+    </name>
+    <value>
+     human placenta, preeclampsia
+    </value>
+   </comment>
+  </source>
+  <variable>
+   <name>
+    CONDITION
+   </name>
+   <value>
+    32.9wk preeclamptic
+   </value>
+  </variable>
+ </sample>
+ <sample>
+  <assay>
+   <name>
+    GSM367798
+   </name>
+  </assay>
+  <characteristic>
+   <category>
+    Organism
+   </category>
+   <value>
+    Homo sapiens
+   </value>
+  </characteristic>
+  <characteristic>
+   <category>
+    condition
+   </category>
+   <value>
+    32.0wk preeclamptic
+   </value>
+  </characteristic>
+  <extract>
+   <name>
+    GSM367798 extract 1
+   </name>
+  </extract>
+  <file>
+   <type>
+    data
+   </type>
+   <name>
+    GSM367798.CEL
+   </name>
+   <url>
+    ftp://ftp.ebi.ac.uk/pub/databases/microarray/data/experiment/GEOD/E-GEOD-14722/E-GEOD-14722.raw.1.zip/GSM367798.CEL
+   </url>
+   <comment>
+    <name>
+     ArrayExpress FTP file
+    </name>
+    <value>
+     ftp://ftp.ebi.ac.uk/pub/databases/microarray/data/experiment/GEOD/E-GEOD-14722/E-GEOD-14722.raw.1.zip
+    </value>
+   </comment>
+  </file>
+  <file>
+   <type>
+    derived data
+   </type>
+   <name>
+    GSM367798_sample_table.txt
+   </name>
+   <url>
+    ftp://ftp.ebi.ac.uk/pub/databases/microarray/data/experiment/GEOD/E-GEOD-14722/E-GEOD-14722.processed.1.zip/GSM367798_sample_table.txt
+   </url>
+   <comment>
+    <name>
+     Derived ArrayExpress FTP file
+    </name>
+    <value>
+     ftp://ftp.ebi.ac.uk/pub/databases/microarray/data/experiment/GEOD/E-GEOD-14722/E-GEOD-14722.processed.1.zip
+    </value>
+   </comment>
+  </file>
+  <labeled-extract>
+   <name>
+    GSM367798 LE 1
+   </name>
+   <label>
+    biotin
+   </label>
+  </labeled-extract>
+  <source>
+   <name>
+    GSM367798 1
+   </name>
+   <comment>
+    <name>
+     Sample_description
+    </name>
+    <value>
+     Gene expression data.
+    </value>
+   </comment>
+   <comment>
+    <name>
+     Sample_source_name
+    </name>
+    <value>
+     human placenta, preeclampsia
+    </value>
+   </comment>
+  </source>
+  <variable>
+   <name>
+    CONDITION
+   </name>
+   <value>
+    32.0wk preeclamptic
+   </value>
+  </variable>
+ </sample>
+ <sample>
+  <assay>
+   <name>
+    GSM367797
+   </name>
+  </assay>
+  <characteristic>
+   <category>
+    Organism
+   </category>
+   <value>
+    Homo sapiens
+   </value>
+  </characteristic>
+  <characteristic>
+   <category>
+    condition
+   </category>
+   <value>
+    31.9wk preeclamptic
+   </value>
+  </characteristic>
+  <extract>
+   <name>
+    GSM367797 extract 1
+   </name>
+  </extract>
+  <file>
+   <type>
+    data
+   </type>
+   <name>
+    GSM367797.CEL
+   </name>
+   <url>
+    ftp://ftp.ebi.ac.uk/pub/databases/microarray/data/experiment/GEOD/E-GEOD-14722/E-GEOD-14722.raw.1.zip/GSM367797.CEL
+   </url>
+   <comment>
+    <name>
+     ArrayExpress FTP file
+    </name>
+    <value>
+     ftp://ftp.ebi.ac.uk/pub/databases/microarray/data/experiment/GEOD/E-GEOD-14722/E-GEOD-14722.raw.1.zip
+    </value>
+   </comment>
+  </file>
+  <file>
+   <type>
+    derived data
+   </type>
+   <name>
+    GSM367797_sample_table.txt
+   </name>
+   <url>
+    ftp://ftp.ebi.ac.uk/pub/databases/microarray/data/experiment/GEOD/E-GEOD-14722/E-GEOD-14722.processed.1.zip/GSM367797_sample_table.txt
+   </url>
+   <comment>
+    <name>
+     Derived ArrayExpress FTP file
+    </name>
+    <value>
+     ftp://ftp.ebi.ac.uk/pub/databases/microarray/data/experiment/GEOD/E-GEOD-14722/E-GEOD-14722.processed.1.zip
+    </value>
+   </comment>
+  </file>
+  <labeled-extract>
+   <name>
+    GSM367797 LE 1
+   </name>
+   <label>
+    biotin
+   </label>
+  </labeled-extract>
+  <source>
+   <name>
+    GSM367797 1
+   </name>
+   <comment>
+    <name>
+     Sample_description
+    </name>
+    <value>
+     Gene expression data.
+    </value>
+   </comment>
+   <comment>
+    <name>
+     Sample_source_name
+    </name>
+    <value>
+     human placenta, preeclampsia
+    </value>
+   </comment>
+  </source>
+  <variable>
+   <name>
+    CONDITION
+   </name>
+   <value>
+    31.9wk preeclamptic
+   </value>
+  </variable>
+ </sample>
+ <sample>
+  <assay>
+   <name>
+    GSM367796
+   </name>
+  </assay>
+  <characteristic>
+   <category>
+    Organism
+   </category>
+   <value>
+    Homo sapiens
+   </value>
+  </characteristic>
+  <characteristic>
+   <category>
+    condition
+   </category>
+   <value>
+    31.7wk preeclamptic
+   </value>
+  </characteristic>
+  <extract>
+   <name>
+    GSM367796 extract 1
+   </name>
+  </extract>
+  <file>
+   <type>
+    data
+   </type>
+   <name>
+    GSM367796.CEL
+   </name>
+   <url>
+    ftp://ftp.ebi.ac.uk/pub/databases/microarray/data/experiment/GEOD/E-GEOD-14722/E-GEOD-14722.raw.1.zip/GSM367796.CEL
+   </url>
+   <comment>
+    <name>
+     ArrayExpress FTP file
+    </name>
+    <value>
+     ftp://ftp.ebi.ac.uk/pub/databases/microarray/data/experiment/GEOD/E-GEOD-14722/E-GEOD-14722.raw.1.zip
+    </value>
+   </comment>
+  </file>
+  <file>
+   <type>
+    derived data
+   </type>
+   <name>
+    GSM367796_sample_table.txt
+   </name>
+   <url>
+    ftp://ftp.ebi.ac.uk/pub/databases/microarray/data/experiment/GEOD/E-GEOD-14722/E-GEOD-14722.processed.1.zip/GSM367796_sample_table.txt
+   </url>
+   <comment>
+    <name>
+     Derived ArrayExpress FTP file
+    </name>
+    <value>
+     ftp://ftp.ebi.ac.uk/pub/databases/microarray/data/experiment/GEOD/E-GEOD-14722/E-GEOD-14722.processed.1.zip
+    </value>
+   </comment>
+  </file>
+  <labeled-extract>
+   <name>
+    GSM367796 LE 1
+   </name>
+   <label>
+    biotin
+   </label>
+  </labeled-extract>
+  <source>
+   <name>
+    GSM367796 1
+   </name>
+   <comment>
+    <name>
+     Sample_description
+    </name>
+    <value>
+     Gene expression data.
+    </value>
+   </comment>
+   <comment>
+    <name>
+     Sample_source_name
+    </name>
+    <value>
+     human placenta, preeclampsia
+    </value>
+   </comment>
+  </source>
+  <variable>
+   <name>
+    CONDITION
+   </name>
+   <value>
+    31.7wk preeclamptic
+   </value>
+  </variable>
+ </sample>
+ <sample>
+  <assay>
+   <name>
+    GSM367795
+   </name>
+  </assay>
+  <characteristic>
+   <category>
+    Organism
+   </category>
+   <value>
+    Homo sapiens
+   </value>
+  </characteristic>
+  <characteristic>
+   <category>
+    condition
+   </category>
+   <value>
+    31.1wk preeclamptic
+   </value>
+  </characteristic>
+  <extract>
+   <name>
+    GSM367795 extract 1
+   </name>
+  </extract>
+  <file>
+   <type>
+    data
+   </type>
+   <name>
+    GSM367795.CEL
+   </name>
+   <url>
+    ftp://ftp.ebi.ac.uk/pub/databases/microarray/data/experiment/GEOD/E-GEOD-14722/E-GEOD-14722.raw.1.zip/GSM367795.CEL
+   </url>
+   <comment>
+    <name>
+     ArrayExpress FTP file
+    </name>
+    <value>
+     ftp://ftp.ebi.ac.uk/pub/databases/microarray/data/experiment/GEOD/E-GEOD-14722/E-GEOD-14722.raw.1.zip
+    </value>
+   </comment>
+  </file>
+  <file>
+   <type>
+    derived data
+   </type>
+   <name>
+    GSM367795_sample_table.txt
+   </name>
+   <url>
+    ftp://ftp.ebi.ac.uk/pub/databases/microarray/data/experiment/GEOD/E-GEOD-14722/E-GEOD-14722.processed.1.zip/GSM367795_sample_table.txt
+   </url>
+   <comment>
+    <name>
+     Derived ArrayExpress FTP file
+    </name>
+    <value>
+     ftp://ftp.ebi.ac.uk/pub/databases/microarray/data/experiment/GEOD/E-GEOD-14722/E-GEOD-14722.processed.1.zip
+    </value>
+   </comment>
+  </file>
+  <labeled-extract>
+   <name>
+    GSM367795 LE 1
+   </name>
+   <label>
+    biotin
+   </label>
+  </labeled-extract>
+  <source>
+   <name>
+    GSM367795 1
+   </name>
+   <comment>
+    <name>
+     Sample_description
+    </name>
+    <value>
+     Gene expression data.
+    </value>
+   </comment>
+   <comment>
+    <name>
+     Sample_source_name
+    </name>
+    <value>
+     human placenta, preeclampsia
+    </value>
+   </comment>
+  </source>
+  <variable>
+   <name>
+    CONDITION
+   </name>
+   <value>
+    31.1wk preeclamptic
+   </value>
+  </variable>
+ </sample>
+ <sample>
+  <assay>
+   <name>
+    GSM367794
+   </name>
+  </assay>
+  <characteristic>
+   <category>
+    Organism
+   </category>
+   <value>
+    Homo sapiens
+   </value>
+  </characteristic>
+  <characteristic>
+   <category>
+    condition
+   </category>
+   <value>
+    30.6wk preeclamptic
+   </value>
+  </characteristic>
+  <extract>
+   <name>
+    GSM367794 extract 1
+   </name>
+  </extract>
+  <file>
+   <type>
+    data
+   </type>
+   <name>
+    GSM367794.CEL
+   </name>
+   <url>
+    ftp://ftp.ebi.ac.uk/pub/databases/microarray/data/experiment/GEOD/E-GEOD-14722/E-GEOD-14722.raw.1.zip/GSM367794.CEL
+   </url>
+   <comment>
+    <name>
+     ArrayExpress FTP file
+    </name>
+    <value>
+     ftp://ftp.ebi.ac.uk/pub/databases/microarray/data/experiment/GEOD/E-GEOD-14722/E-GEOD-14722.raw.1.zip
+    </value>
+   </comment>
+  </file>
+  <file>
+   <type>
+    derived data
+   </type>
+   <name>
+    GSM367794_sample_table.txt
+   </name>
+   <url>
+    ftp://ftp.ebi.ac.uk/pub/databases/microarray/data/experiment/GEOD/E-GEOD-14722/E-GEOD-14722.processed.1.zip/GSM367794_sample_table.txt
+   </url>
+   <comment>
+    <name>
+     Derived ArrayExpress FTP file
+    </name>
+    <value>
+     ftp://ftp.ebi.ac.uk/pub/databases/microarray/data/experiment/GEOD/E-GEOD-14722/E-GEOD-14722.processed.1.zip
+    </value>
+   </comment>
+  </file>
+  <labeled-extract>
+   <name>
+    GSM367794 LE 1
+   </name>
+   <label>
+    biotin
+   </label>
+  </labeled-extract>
+  <source>
+   <name>
+    GSM367794 1
+   </name>
+   <comment>
+    <name>
+     Sample_description
+    </name>
+    <value>
+     Gene expression data.
+    </value>
+   </comment>
+   <comment>
+    <name>
+     Sample_source_name
+    </name>
+    <value>
+     human placenta, preeclampsia
+    </value>
+   </comment>
+  </source>
+  <variable>
+   <name>
+    CONDITION
+   </name>
+   <value>
+    30.6wk preeclamptic
+   </value>
+  </variable>
+ </sample>
+ <sample>
+  <assay>
+   <name>
+    GSM367793
+   </name>
+  </assay>
+  <characteristic>
+   <category>
+    Organism
+   </category>
+   <value>
+    Homo sapiens
+   </value>
+  </characteristic>
+  <characteristic>
+   <category>
+    condition
+   </category>
+   <value>
+    30.4wk preeclamptic
+   </value>
+  </characteristic>
+  <extract>
+   <name>
+    GSM367793 extract 1
+   </name>
+  </extract>
+  <file>
+   <type>
+    data
+   </type>
+   <name>
+    GSM367793.CEL
+   </name>
+   <url>
+    ftp://ftp.ebi.ac.uk/pub/databases/microarray/data/experiment/GEOD/E-GEOD-14722/E-GEOD-14722.raw.1.zip/GSM367793.CEL
+   </url>
+   <comment>
+    <name>
+     ArrayExpress FTP file
+    </name>
+    <value>
+     ftp://ftp.ebi.ac.uk/pub/databases/microarray/data/experiment/GEOD/E-GEOD-14722/E-GEOD-14722.raw.1.zip
+    </value>
+   </comment>
+  </file>
+  <file>
+   <type>
+    derived data
+   </type>
+   <name>
+    GSM367793_sample_table.txt
+   </name>
+   <url>
+    ftp://ftp.ebi.ac.uk/pub/databases/microarray/data/experiment/GEOD/E-GEOD-14722/E-GEOD-14722.processed.1.zip/GSM367793_sample_table.txt
+   </url>
+   <comment>
+    <name>
+     Derived ArrayExpress FTP file
+    </name>
+    <value>
+     ftp://ftp.ebi.ac.uk/pub/databases/microarray/data/experiment/GEOD/E-GEOD-14722/E-GEOD-14722.processed.1.zip
+    </value>
+   </comment>
+  </file>
+  <labeled-extract>
+   <name>
+    GSM367793 LE 1
+   </name>
+   <label>
+    biotin
+   </label>
+  </labeled-extract>
+  <source>
+   <name>
+    GSM367793 1
+   </name>
+   <comment>
+    <name>
+     Sample_description
+    </name>
+    <value>
+     Gene expression data.
+    </value>
+   </comment>
+   <comment>
+    <name>
+     Sample_source_name
+    </name>
+    <value>
+     human placenta, preeclampsia
+    </value>
+   </comment>
+  </source>
+  <variable>
+   <name>
+    CONDITION
+   </name>
+   <value>
+    30.4wk preeclamptic
+   </value>
+  </variable>
+ </sample>
+ <sample>
+  <assay>
+   <name>
+    GSM367792
+   </name>
+  </assay>
+  <characteristic>
+   <category>
+    Organism
+   </category>
+   <value>
+    Homo sapiens
+   </value>
+  </characteristic>
+  <characteristic>
+   <category>
+    condition
+   </category>
+   <value>
+    24.1wk preeclamptic
+   </value>
+  </characteristic>
+  <extract>
+   <name>
+    GSM367792 extract 1
+   </name>
+  </extract>
+  <file>
+   <type>
+    data
+   </type>
+   <name>
+    GSM367792.CEL
+   </name>
+   <url>
+    ftp://ftp.ebi.ac.uk/pub/databases/microarray/data/experiment/GEOD/E-GEOD-14722/E-GEOD-14722.raw.1.zip/GSM367792.CEL
+   </url>
+   <comment>
+    <name>
+     ArrayExpress FTP file
+    </name>
+    <value>
+     ftp://ftp.ebi.ac.uk/pub/databases/microarray/data/experiment/GEOD/E-GEOD-14722/E-GEOD-14722.raw.1.zip
+    </value>
+   </comment>
+  </file>
+  <file>
+   <type>
+    derived data
+   </type>
+   <name>
+    GSM367792_sample_table.txt
+   </name>
+   <url>
+    ftp://ftp.ebi.ac.uk/pub/databases/microarray/data/experiment/GEOD/E-GEOD-14722/E-GEOD-14722.processed.1.zip/GSM367792_sample_table.txt
+   </url>
+   <comment>
+    <name>
+     Derived ArrayExpress FTP file
+    </name>
+    <value>
+     ftp://ftp.ebi.ac.uk/pub/databases/microarray/data/experiment/GEOD/E-GEOD-14722/E-GEOD-14722.processed.1.zip
+    </value>
+   </comment>
+  </file>
+  <labeled-extract>
+   <name>
+    GSM367792 LE 1
+   </name>
+   <label>
+    biotin
+   </label>
+  </labeled-extract>
+  <source>
+   <name>
+    GSM367792 1
+   </name>
+   <comment>
+    <name>
+     Sample_description
+    </name>
+    <value>
+     Gene expression data.
+    </value>
+   </comment>
+   <comment>
+    <name>
+     Sample_source_name
+    </name>
+    <value>
+     human placenta, preeclampsia
+    </value>
+   </comment>
+  </source>
+  <variable>
+   <name>
+    CONDITION
+   </name>
+   <value>
+    24.1wk preeclamptic
+   </value>
+  </variable>
+ </sample>
+ <sample>
+  <assay>
+   <name>
+    GSM367791
+   </name>
+  </assay>
+  <characteristic>
+   <category>
+    Organism
+   </category>
+   <value>
+    Homo sapiens
+   </value>
+  </characteristic>
+  <characteristic>
+   <category>
+    condition
+   </category>
+   <value>
+    36.6wk preterm
+   </value>
+  </characteristic>
+  <extract>
+   <name>
+    GSM367791 extract 1
+   </name>
+  </extract>
+  <file>
+   <type>
+    data
+   </type>
+   <name>
+    GSM367791.CEL
+   </name>
+   <url>
+    ftp://ftp.ebi.ac.uk/pub/databases/microarray/data/experiment/GEOD/E-GEOD-14722/E-GEOD-14722.raw.1.zip/GSM367791.CEL
+   </url>
+   <comment>
+    <name>
+     ArrayExpress FTP file
+    </name>
+    <value>
+     ftp://ftp.ebi.ac.uk/pub/databases/microarray/data/experiment/GEOD/E-GEOD-14722/E-GEOD-14722.raw.1.zip
+    </value>
+   </comment>
+  </file>
+  <file>
+   <type>
+    derived data
+   </type>
+   <name>
+    GSM367791_sample_table.txt
+   </name>
+   <url>
+    ftp://ftp.ebi.ac.uk/pub/databases/microarray/data/experiment/GEOD/E-GEOD-14722/E-GEOD-14722.processed.1.zip/GSM367791_sample_table.txt
+   </url>
+   <comment>
+    <name>
+     Derived ArrayExpress FTP file
+    </name>
+    <value>
+     ftp://ftp.ebi.ac.uk/pub/databases/microarray/data/experiment/GEOD/E-GEOD-14722/E-GEOD-14722.processed.1.zip
+    </value>
+   </comment>
+  </file>
+  <labeled-extract>
+   <name>
+    GSM367791 LE 1
+   </name>
+   <label>
+    biotin
+   </label>
+  </labeled-extract>
+  <source>
+   <name>
+    GSM367791 1
+   </name>
+   <comment>
+    <name>
+     Sample_description
+    </name>
+    <value>
+     Gene expression data.
+    </value>
+   </comment>
+   <comment>
+    <name>
+     Sample_source_name
+    </name>
+    <value>
+     human placenta, preterm labor
+    </value>
+   </comment>
+  </source>
+  <variable>
+   <name>
+    CONDITION
+   </name>
+   <value>
+    36.6wk preterm
+   </value>
+  </variable>
+ </sample>
+ <sample>
+  <assay>
+   <name>
+    GSM367790
+   </name>
+  </assay>
+  <characteristic>
+   <category>
+    Organism
+   </category>
+   <value>
+    Homo sapiens
+   </value>
+  </characteristic>
+  <characteristic>
+   <category>
+    condition
+   </category>
+   <value>
+    35.9wk preterm
+   </value>
+  </characteristic>
+  <extract>
+   <name>
+    GSM367790 extract 1
+   </name>
+  </extract>
+  <file>
+   <type>
+    data
+   </type>
+   <name>
+    GSM367790.CEL
+   </name>
+   <url>
+    ftp://ftp.ebi.ac.uk/pub/databases/microarray/data/experiment/GEOD/E-GEOD-14722/E-GEOD-14722.raw.1.zip/GSM367790.CEL
+   </url>
+   <comment>
+    <name>
+     ArrayExpress FTP file
+    </name>
+    <value>
+     ftp://ftp.ebi.ac.uk/pub/databases/microarray/data/experiment/GEOD/E-GEOD-14722/E-GEOD-14722.raw.1.zip
+    </value>
+   </comment>
+  </file>
+  <file>
+   <type>
+    derived data
+   </type>
+   <name>
+    GSM367790_sample_table.txt
+   </name>
+   <url>
+    ftp://ftp.ebi.ac.uk/pub/databases/microarray/data/experiment/GEOD/E-GEOD-14722/E-GEOD-14722.processed.1.zip/GSM367790_sample_table.txt
+   </url>
+   <comment>
+    <name>
+     Derived ArrayExpress FTP file
+    </name>
+    <value>
+     ftp://ftp.ebi.ac.uk/pub/databases/microarray/data/experiment/GEOD/E-GEOD-14722/E-GEOD-14722.processed.1.zip
+    </value>
+   </comment>
+  </file>
+  <labeled-extract>
+   <name>
+    GSM367790 LE 1
+   </name>
+   <label>
+    biotin
+   </label>
+  </labeled-extract>
+  <source>
+   <name>
+    GSM367790 1
+   </name>
+   <comment>
+    <name>
+     Sample_description
+    </name>
+    <value>
+     Gene expression data.
+    </value>
+   </comment>
+   <comment>
+    <name>
+     Sample_source_name
+    </name>
+    <value>
+     human placenta, preterm labor
+    </value>
+   </comment>
+  </source>
+  <variable>
+   <name>
+    CONDITION
+   </name>
+   <value>
+    35.9wk preterm
+   </value>
+  </variable>
+ </sample>
+ <sample>
+  <assay>
+   <name>
+    GSM367789
+   </name>
+  </assay>
+  <characteristic>
+   <category>
+    Organism
+   </category>
+   <value>
+    Homo sapiens
+   </value>
+  </characteristic>
+  <characteristic>
+   <category>
+    condition
+   </category>
+   <value>
+    35.7wk preterm
+   </value>
+  </characteristic>
+  <extract>
+   <name>
+    GSM367789 extract 1
+   </name>
+  </extract>
+  <file>
+   <type>
+    data
+   </type>
+   <name>
+    GSM367789.CEL
+   </name>
+   <url>
+    ftp://ftp.ebi.ac.uk/pub/databases/microarray/data/experiment/GEOD/E-GEOD-14722/E-GEOD-14722.raw.1.zip/GSM367789.CEL
+   </url>
+   <comment>
+    <name>
+     ArrayExpress FTP file
+    </name>
+    <value>
+     ftp://ftp.ebi.ac.uk/pub/databases/microarray/data/experiment/GEOD/E-GEOD-14722/E-GEOD-14722.raw.1.zip
+    </value>
+   </comment>
+  </file>
+  <file>
+   <type>
+    derived data
+   </type>
+   <name>
+    GSM367789_sample_table.txt
+   </name>
+   <url>
+    ftp://ftp.ebi.ac.uk/pub/databases/microarray/data/experiment/GEOD/E-GEOD-14722/E-GEOD-14722.processed.1.zip/GSM367789_sample_table.txt
+   </url>
+   <comment>
+    <name>
+     Derived ArrayExpress FTP file
+    </name>
+    <value>
+     ftp://ftp.ebi.ac.uk/pub/databases/microarray/data/experiment/GEOD/E-GEOD-14722/E-GEOD-14722.processed.1.zip
+    </value>
+   </comment>
+  </file>
+  <labeled-extract>
+   <name>
+    GSM367789 LE 1
+   </name>
+   <label>
+    biotin
+   </label>
+  </labeled-extract>
+  <source>
+   <name>
+    GSM367789 1
+   </name>
+   <comment>
+    <name>
+     Sample_description
+    </name>
+    <value>
+     Gene expression data.
+    </value>
+   </comment>
+   <comment>
+    <name>
+     Sample_source_name
+    </name>
+    <value>
+     human placenta, preterm labor
+    </value>
+   </comment>
+  </source>
+  <variable>
+   <name>
+    CONDITION
+   </name>
+   <value>
+    35.7wk preterm
+   </value>
+  </variable>
+ </sample>
+ <sample>
+  <assay>
+   <name>
+    GSM367788
+   </name>
+  </assay>
+  <characteristic>
+   <category>
+    Organism
+   </category>
+   <value>
+    Homo sapiens
+   </value>
+  </characteristic>
+  <characteristic>
+   <category>
+    condition
+   </category>
+   <value>
+    33.9wk preterm
+   </value>
+  </characteristic>
+  <extract>
+   <name>
+    GSM367788 extract 1
+   </name>
+  </extract>
+  <file>
+   <type>
+    data
+   </type>
+   <name>
+    GSM367788.CEL
+   </name>
+   <url>
+    ftp://ftp.ebi.ac.uk/pub/databases/microarray/data/experiment/GEOD/E-GEOD-14722/E-GEOD-14722.raw.1.zip/GSM367788.CEL
+   </url>
+   <comment>
+    <name>
+     ArrayExpress FTP file
+    </name>
+    <value>
+     ftp://ftp.ebi.ac.uk/pub/databases/microarray/data/experiment/GEOD/E-GEOD-14722/E-GEOD-14722.raw.1.zip
+    </value>
+   </comment>
+  </file>
+  <file>
+   <type>
+    derived data
+   </type>
+   <name>
+    GSM367788_sample_table.txt
+   </name>
+   <url>
+    ftp://ftp.ebi.ac.uk/pub/databases/microarray/data/experiment/GEOD/E-GEOD-14722/E-GEOD-14722.processed.1.zip/GSM367788_sample_table.txt
+   </url>
+   <comment>
+    <name>
+     Derived ArrayExpress FTP file
+    </name>
+    <value>
+     ftp://ftp.ebi.ac.uk/pub/databases/microarray/data/experiment/GEOD/E-GEOD-14722/E-GEOD-14722.processed.1.zip
+    </value>
+   </comment>
+  </file>
+  <labeled-extract>
+   <name>
+    GSM367788 LE 1
+   </name>
+   <label>
+    biotin
+   </label>
+  </labeled-extract>
+  <source>
+   <name>
+    GSM367788 1
+   </name>
+   <comment>
+    <name>
+     Sample_description
+    </name>
+    <value>
+     Gene expression data.
+    </value>
+   </comment>
+   <comment>
+    <name>
+     Sample_source_name
+    </name>
+    <value>
+     human placenta, preterm labor
+    </value>
+   </comment>
+  </source>
+  <variable>
+   <name>
+    CONDITION
+   </name>
+   <value>
+    33.9wk preterm
+   </value>
+  </variable>
+ </sample>
+ <sample>
+  <assay>
+   <name>
+    GSM367787
+   </name>
+  </assay>
+  <characteristic>
+   <category>
+    Organism
+   </category>
+   <value>
+    Homo sapiens
+   </value>
+  </characteristic>
+  <characteristic>
+   <category>
+    condition
+   </category>
+   <value>
+    33.3wk preterm
+   </value>
+  </characteristic>
+  <extract>
+   <name>
+    GSM367787 extract 1
+   </name>
+  </extract>
+  <file>
+   <type>
+    data
+   </type>
+   <name>
+    GSM367787.CEL
+   </name>
+   <url>
+    ftp://ftp.ebi.ac.uk/pub/databases/microarray/data/experiment/GEOD/E-GEOD-14722/E-GEOD-14722.raw.1.zip/GSM367787.CEL
+   </url>
+   <comment>
+    <name>
+     ArrayExpress FTP file
+    </name>
+    <value>
+     ftp://ftp.ebi.ac.uk/pub/databases/microarray/data/experiment/GEOD/E-GEOD-14722/E-GEOD-14722.raw.1.zip
+    </value>
+   </comment>
+  </file>
+  <file>
+   <type>
+    derived data
+   </type>
+   <name>
+    GSM367787_sample_table.txt
+   </name>
+   <url>
+    ftp://ftp.ebi.ac.uk/pub/databases/microarray/data/experiment/GEOD/E-GEOD-14722/E-GEOD-14722.processed.1.zip/GSM367787_sample_table.txt
+   </url>
+   <comment>
+    <name>
+     Derived ArrayExpress FTP file
+    </name>
+    <value>
+     ftp://ftp.ebi.ac.uk/pub/databases/microarray/data/experiment/GEOD/E-GEOD-14722/E-GEOD-14722.processed.1.zip
+    </value>
+   </comment>
+  </file>
+  <labeled-extract>
+   <name>
+    GSM367787 LE 1
+   </name>
+   <label>
+    biotin
+   </label>
+  </labeled-extract>
+  <source>
+   <name>
+    GSM367787 1
+   </name>
+   <comment>
+    <name>
+     Sample_description
+    </name>
+    <value>
+     Gene expression data.
+    </value>
+   </comment>
+   <comment>
+    <name>
+     Sample_source_name
+    </name>
+    <value>
+     human placenta, preterm labor
+    </value>
+   </comment>
+  </source>
+  <variable>
+   <name>
+    CONDITION
+   </name>
+   <value>
+    33.3wk preterm
+   </value>
+  </variable>
+ </sample>
+ <sample>
+  <assay>
+   <name>
+    GSM367786
+   </name>
+  </assay>
+  <characteristic>
+   <category>
+    Organism
+   </category>
+   <value>
+    Homo sapiens
+   </value>
+  </characteristic>
+  <characteristic>
+   <category>
+    condition
+   </category>
+   <value>
+    33.0wk preterm
+   </value>
+  </characteristic>
+  <extract>
+   <name>
+    GSM367786 extract 1
+   </name>
+  </extract>
+  <file>
+   <type>
+    data
+   </type>
+   <name>
+    GSM367786.CEL
+   </name>
+   <url>
+    ftp://ftp.ebi.ac.uk/pub/databases/microarray/data/experiment/GEOD/E-GEOD-14722/E-GEOD-14722.raw.1.zip/GSM367786.CEL
+   </url>
+   <comment>
+    <name>
+     ArrayExpress FTP file
+    </name>
+    <value>
+     ftp://ftp.ebi.ac.uk/pub/databases/microarray/data/experiment/GEOD/E-GEOD-14722/E-GEOD-14722.raw.1.zip
+    </value>
+   </comment>
+  </file>
+  <file>
+   <type>
+    derived data
+   </type>
+   <name>
+    GSM367786_sample_table.txt
+   </name>
+   <url>
+    ftp://ftp.ebi.ac.uk/pub/databases/microarray/data/experiment/GEOD/E-GEOD-14722/E-GEOD-14722.processed.1.zip/GSM367786_sample_table.txt
+   </url>
+   <comment>
+    <name>
+     Derived ArrayExpress FTP file
+    </name>
+    <value>
+     ftp://ftp.ebi.ac.uk/pub/databases/microarray/data/experiment/GEOD/E-GEOD-14722/E-GEOD-14722.processed.1.zip
+    </value>
+   </comment>
+  </file>
+  <labeled-extract>
+   <name>
+    GSM367786 LE 1
+   </name>
+   <label>
+    biotin
+   </label>
+  </labeled-extract>
+  <source>
+   <name>
+    GSM367786 1
+   </name>
+   <comment>
+    <name>
+     Sample_description
+    </name>
+    <value>
+     Gene expression data.
+    </value>
+   </comment>
+   <comment>
+    <name>
+     Sample_source_name
+    </name>
+    <value>
+     human placenta, preterm labor
+    </value>
+   </comment>
+  </source>
+  <variable>
+   <name>
+    CONDITION
+   </name>
+   <value>
+    33.0wk preterm
+   </value>
+  </variable>
+ </sample>
+ <sample>
+  <assay>
+   <name>
+    GSM367785
+   </name>
+  </assay>
+  <characteristic>
+   <category>
+    Organism
+   </category>
+   <value>
+    Homo sapiens
+   </value>
+  </characteristic>
+  <characteristic>
+   <category>
+    condition
+   </category>
+   <value>
+    29.9wk preterm
+   </value>
+  </characteristic>
+  <extract>
+   <name>
+    GSM367785 extract 1
+   </name>
+  </extract>
+  <file>
+   <type>
+    data
+   </type>
+   <name>
+    GSM367785.CEL
+   </name>
+   <url>
+    ftp://ftp.ebi.ac.uk/pub/databases/microarray/data/experiment/GEOD/E-GEOD-14722/E-GEOD-14722.raw.1.zip/GSM367785.CEL
+   </url>
+   <comment>
+    <name>
+     ArrayExpress FTP file
+    </name>
+    <value>
+     ftp://ftp.ebi.ac.uk/pub/databases/microarray/data/experiment/GEOD/E-GEOD-14722/E-GEOD-14722.raw.1.zip
+    </value>
+   </comment>
+  </file>
+  <file>
+   <type>
+    derived data
+   </type>
+   <name>
+    GSM367785_sample_table.txt
+   </name>
+   <url>
+    ftp://ftp.ebi.ac.uk/pub/databases/microarray/data/experiment/GEOD/E-GEOD-14722/E-GEOD-14722.processed.1.zip/GSM367785_sample_table.txt
+   </url>
+   <comment>
+    <name>
+     Derived ArrayExpress FTP file
+    </name>
+    <value>
+     ftp://ftp.ebi.ac.uk/pub/databases/microarray/data/experiment/GEOD/E-GEOD-14722/E-GEOD-14722.processed.1.zip
+    </value>
+   </comment>
+  </file>
+  <labeled-extract>
+   <name>
+    GSM367785 LE 1
+   </name>
+   <label>
+    biotin
+   </label>
+  </labeled-extract>
+  <source>
+   <name>
+    GSM367785 1
+   </name>
+   <comment>
+    <name>
+     Sample_description
+    </name>
+    <value>
+     Gene expression data.
+    </value>
+   </comment>
+   <comment>
+    <name>
+     Sample_source_name
+    </name>
+    <value>
+     human placenta, preterm labor
+    </value>
+   </comment>
+  </source>
+  <variable>
+   <name>
+    CONDITION
+   </name>
+   <value>
+    29.9wk preterm
+   </value>
+  </variable>
+ </sample>
+ <sample>
+  <assay>
+   <name>
+    GSM367784
+   </name>
+  </assay>
+  <characteristic>
+   <category>
+    Organism
+   </category>
+   <value>
+    Homo sapiens
+   </value>
+  </characteristic>
+  <characteristic>
+   <category>
+    condition
+   </category>
+   <value>
+    27.1wk preterm
+   </value>
+  </characteristic>
+  <extract>
+   <name>
+    GSM367784 extract 1
+   </name>
+  </extract>
+  <file>
+   <type>
+    data
+   </type>
+   <name>
+    GSM367784.CEL
+   </name>
+   <url>
+    ftp://ftp.ebi.ac.uk/pub/databases/microarray/data/experiment/GEOD/E-GEOD-14722/E-GEOD-14722.raw.1.zip/GSM367784.CEL
+   </url>
+   <comment>
+    <name>
+     ArrayExpress FTP file
+    </name>
+    <value>
+     ftp://ftp.ebi.ac.uk/pub/databases/microarray/data/experiment/GEOD/E-GEOD-14722/E-GEOD-14722.raw.1.zip
+    </value>
+   </comment>
+  </file>
+  <file>
+   <type>
+    derived data
+   </type>
+   <name>
+    GSM367784_sample_table.txt
+   </name>
+   <url>
+    ftp://ftp.ebi.ac.uk/pub/databases/microarray/data/experiment/GEOD/E-GEOD-14722/E-GEOD-14722.processed.1.zip/GSM367784_sample_table.txt
+   </url>
+   <comment>
+    <name>
+     Derived ArrayExpress FTP file
+    </name>
+    <value>
+     ftp://ftp.ebi.ac.uk/pub/databases/microarray/data/experiment/GEOD/E-GEOD-14722/E-GEOD-14722.processed.1.zip
+    </value>
+   </comment>
+  </file>
+  <labeled-extract>
+   <name>
+    GSM367784 LE 1
+   </name>
+   <label>
+    biotin
+   </label>
+  </labeled-extract>
+  <source>
+   <name>
+    GSM367784 1
+   </name>
+   <comment>
+    <name>
+     Sample_description
+    </name>
+    <value>
+     Gene expression data.
+    </value>
+   </comment>
+   <comment>
+    <name>
+     Sample_source_name
+    </name>
+    <value>
+     human placenta, preterm labor
+    </value>
+   </comment>
+  </source>
+  <variable>
+   <name>
+    CONDITION
+   </name>
+   <value>
+    27.1wk preterm
+   </value>
+  </variable>
+ </sample>
+ <sample>
+  <assay>
+   <name>
+    GSM367783
+   </name>
+  </assay>
+  <characteristic>
+   <category>
+    Organism
+   </category>
+   <value>
+    Homo sapiens
+   </value>
+  </characteristic>
+  <characteristic>
+   <category>
+    condition
+   </category>
+   <value>
+    25.6wk preterm
+   </value>
+  </characteristic>
+  <extract>
+   <name>
+    GSM367783 extract 1
+   </name>
+  </extract>
+  <file>
+   <type>
+    data
+   </type>
+   <name>
+    GSM367783.CEL
+   </name>
+   <url>
+    ftp://ftp.ebi.ac.uk/pub/databases/microarray/data/experiment/GEOD/E-GEOD-14722/E-GEOD-14722.raw.1.zip/GSM367783.CEL
+   </url>
+   <comment>
+    <name>
+     ArrayExpress FTP file
+    </name>
+    <value>
+     ftp://ftp.ebi.ac.uk/pub/databases/microarray/data/experiment/GEOD/E-GEOD-14722/E-GEOD-14722.raw.1.zip
+    </value>
+   </comment>
+  </file>
+  <file>
+   <type>
+    derived data
+   </type>
+   <name>
+    GSM367783_sample_table.txt
+   </name>
+   <url>
+    ftp://ftp.ebi.ac.uk/pub/databases/microarray/data/experiment/GEOD/E-GEOD-14722/E-GEOD-14722.processed.1.zip/GSM367783_sample_table.txt
+   </url>
+   <comment>
+    <name>
+     Derived ArrayExpress FTP file
+    </name>
+    <value>
+     ftp://ftp.ebi.ac.uk/pub/databases/microarray/data/experiment/GEOD/E-GEOD-14722/E-GEOD-14722.processed.1.zip
+    </value>
+   </comment>
+  </file>
+  <labeled-extract>
+   <name>
+    GSM367783 LE 1
+   </name>
+   <label>
+    biotin
+   </label>
+  </labeled-extract>
+  <source>
+   <name>
+    GSM367783 1
+   </name>
+   <comment>
+    <name>
+     Sample_description
+    </name>
+    <value>
+     Gene expression data.
+    </value>
+   </comment>
+   <comment>
+    <name>
+     Sample_source_name
+    </name>
+    <value>
+     human placenta, preterm labor
+    </value>
+   </comment>
+  </source>
+  <variable>
+   <name>
+    CONDITION
+   </name>
+   <value>
+    25.6wk preterm
+   </value>
+  </variable>
+ </sample>
+ <sample>
+  <assay>
+   <name>
+    GSM367782
+   </name>
+  </assay>
+  <characteristic>
+   <category>
+    Organism
+   </category>
+   <value>
+    Homo sapiens
+   </value>
+  </characteristic>
+  <characteristic>
+   <category>
+    condition
+   </category>
+   <value>
+    25.4wk preterm
+   </value>
+  </characteristic>
+  <extract>
+   <name>
+    GSM367782 extract 1
+   </name>
+  </extract>
+  <file>
+   <type>
+    data
+   </type>
+   <name>
+    GSM367782.CEL
+   </name>
+   <url>
+    ftp://ftp.ebi.ac.uk/pub/databases/microarray/data/experiment/GEOD/E-GEOD-14722/E-GEOD-14722.raw.1.zip/GSM367782.CEL
+   </url>
+   <comment>
+    <name>
+     ArrayExpress FTP file
+    </name>
+    <value>
+     ftp://ftp.ebi.ac.uk/pub/databases/microarray/data/experiment/GEOD/E-GEOD-14722/E-GEOD-14722.raw.1.zip
+    </value>
+   </comment>
+  </file>
+  <file>
+   <type>
+    derived data
+   </type>
+   <name>
+    GSM367782_sample_table.txt
+   </name>
+   <url>
+    ftp://ftp.ebi.ac.uk/pub/databases/microarray/data/experiment/GEOD/E-GEOD-14722/E-GEOD-14722.processed.1.zip/GSM367782_sample_table.txt
+   </url>
+   <comment>
+    <name>
+     Derived ArrayExpress FTP file
+    </name>
+    <value>
+     ftp://ftp.ebi.ac.uk/pub/databases/microarray/data/experiment/GEOD/E-GEOD-14722/E-GEOD-14722.processed.1.zip
+    </value>
+   </comment>
+  </file>
+  <labeled-extract>
+   <name>
+    GSM367782 LE 1
+   </name>
+   <label>
+    biotin
+   </label>
+  </labeled-extract>
+  <source>
+   <name>
+    GSM367782 1
+   </name>
+   <comment>
+    <name>
+     Sample_description
+    </name>
+    <value>
+     Gene expression data.
+    </value>
+   </comment>
+   <comment>
+    <name>
+     Sample_source_name
+    </name>
+    <value>
+     human placenta, preterm labor
+    </value>
+   </comment>
+  </source>
+  <variable>
+   <name>
+    CONDITION
+   </name>
+   <value>
+    25.4wk preterm
+   </value>
+  </variable>
+ </sample>
+ <sample>
+  <assay>
+   <name>
+    GSM367781
+   </name>
+  </assay>
+  <characteristic>
+   <category>
+    Organism
+   </category>
+   <value>
+    Homo sapiens
+   </value>
+  </characteristic>
+  <characteristic>
+   <category>
+    condition
+   </category>
+   <value>
+    24.7wk preterm
+   </value>
+  </characteristic>
+  <extract>
+   <name>
+    GSM367781 extract 1
+   </name>
+  </extract>
+  <file>
+   <type>
+    data
+   </type>
+   <name>
+    GSM367781.CEL
+   </name>
+   <url>
+    ftp://ftp.ebi.ac.uk/pub/databases/microarray/data/experiment/GEOD/E-GEOD-14722/E-GEOD-14722.raw.1.zip/GSM367781.CEL
+   </url>
+   <comment>
+    <name>
+     ArrayExpress FTP file
+    </name>
+    <value>
+     ftp://ftp.ebi.ac.uk/pub/databases/microarray/data/experiment/GEOD/E-GEOD-14722/E-GEOD-14722.raw.1.zip
+    </value>
+   </comment>
+  </file>
+  <file>
+   <type>
+    derived data
+   </type>
+   <name>
+    GSM367781_sample_table.txt
+   </name>
+   <url>
+    ftp://ftp.ebi.ac.uk/pub/databases/microarray/data/experiment/GEOD/E-GEOD-14722/E-GEOD-14722.processed.1.zip/GSM367781_sample_table.txt
+   </url>
+   <comment>
+    <name>
+     Derived ArrayExpress FTP file
+    </name>
+    <value>
+     ftp://ftp.ebi.ac.uk/pub/databases/microarray/data/experiment/GEOD/E-GEOD-14722/E-GEOD-14722.processed.1.zip
+    </value>
+   </comment>
+  </file>
+  <labeled-extract>
+   <name>
+    GSM367781 LE 1
+   </name>
+   <label>
+    biotin
+   </label>
+  </labeled-extract>
+  <source>
+   <name>
+    GSM367781 1
+   </name>
+   <comment>
+    <name>
+     Sample_description
+    </name>
+    <value>
+     Gene expression data.
+    </value>
+   </comment>
+   <comment>
+    <name>
+     Sample_source_name
+    </name>
+    <value>
+     human placenta, preterm labor
+    </value>
+   </comment>
+  </source>
+  <variable>
+   <name>
+    CONDITION
+   </name>
+   <value>
+    24.7wk preterm
+   </value>
+  </variable>
+ </sample>
+</experiment>

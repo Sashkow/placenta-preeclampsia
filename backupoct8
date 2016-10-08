@@ -178,6 +178,43 @@ ALTER SEQUENCE articles_experiment_microarrays_id_seq OWNED BY articles_experime
 
 
 --
+-- Name: articles_historicalexperiment; Type: TABLE; Schema: public; Owner: sashko; Tablespace: 
+--
+
+CREATE TABLE articles_historicalexperiment (
+    id integer NOT NULL,
+    data hstore NOT NULL,
+    history_id integer NOT NULL,
+    history_date timestamp with time zone NOT NULL,
+    history_type character varying(1) NOT NULL,
+    history_user_id integer
+);
+
+
+ALTER TABLE public.articles_historicalexperiment OWNER TO sashko;
+
+--
+-- Name: articles_historicalexperiment_history_id_seq; Type: SEQUENCE; Schema: public; Owner: sashko
+--
+
+CREATE SEQUENCE articles_historicalexperiment_history_id_seq
+    START WITH 1
+    INCREMENT BY 1
+    NO MINVALUE
+    NO MAXVALUE
+    CACHE 1;
+
+
+ALTER TABLE public.articles_historicalexperiment_history_id_seq OWNER TO sashko;
+
+--
+-- Name: articles_historicalexperiment_history_id_seq; Type: SEQUENCE OWNED BY; Schema: public; Owner: sashko
+--
+
+ALTER SEQUENCE articles_historicalexperiment_history_id_seq OWNED BY articles_historicalexperiment.history_id;
+
+
+--
 -- Name: articles_microarray; Type: TABLE; Schema: public; Owner: sashko; Tablespace: 
 --
 
@@ -780,6 +817,13 @@ ALTER TABLE ONLY articles_experiment_microarrays ALTER COLUMN id SET DEFAULT nex
 
 
 --
+-- Name: history_id; Type: DEFAULT; Schema: public; Owner: sashko
+--
+
+ALTER TABLE ONLY articles_historicalexperiment ALTER COLUMN history_id SET DEFAULT nextval('articles_historicalexperiment_history_id_seq'::regclass);
+
+
+--
 -- Name: id; Type: DEFAULT; Schema: public; Owner: sashko
 --
 
@@ -957,22 +1001,22 @@ COPY articles_experiment (id, data) FROM stdin;
 29	"id"=>"180545", "name"=>"Differentially expressed microRNAs revealed by molecular signatures of Preeclampsia and IUGR in human placenta", "assays"=>"94", "samples"=>"94", "species"=>"Homo sapiens", "organism"=>"Homo sapiens", "accession"=>"E-GEOD-35574", "releasedate"=>"2012-02-07", "experimenttype"=>"transcription profiling by array", "lastupdatedate"=>"2012-02-15", "secondaryaccession"=>"GSE35574"
 30	"id"=>"159304", "name"=>"A Comparative Analysis of the Transcriptome of Hypoxia and Inflammation in Swan 71 Human Trophophoblast Cells: Its Implications in Preeclampsia", "assays"=>"39", "samples"=>"39", "species"=>"Homo sapiens", "organism"=>"Homo sapiens", "accession"=>"E-GEOD-31679", "releasedate"=>"2011-11-15", "experimenttype"=>"transcription profiling by array", "lastupdatedate"=>"2011-11-21", "secondaryaccession"=>"GSE31679"
 31	"id"=>"88752", "name"=>"Genome-wide analysis of gene expression in placentas derived from patients with preeclampsia", "assays"=>"12", "samples"=>"12", "species"=>"Homo sapiens", "organism"=>"Homo sapiens", "accession"=>"E-GEOD-30186", "releasedate"=>"2011-06-24", "experimenttype"=>"transcription profiling by array", "lastupdatedate"=>"2011-07-08", "secondaryaccession"=>"GSE30186"
-32	"id"=>"68272", "name"=>"Differential expression of microRNAs in the placentae of Chinese patients with severe pre-eclampsia", "assays"=>"8", "samples"=>"16", "species"=>"Homo sapiens", "organism"=>"Homo sapiens", "accession"=>"E-GEOD-15789", "releasedate"=>"2011-04-14", "experimenttype"=>"transcription profiling by array", "lastupdatedate"=>"2014-05-03", "secondaryaccession"=>"GSE15789"
 33	"id"=>"68269", "name"=>"Latexin is downregulated in human upper digestive track tumors and exhibits tumor suppressor potential", "assays"=>"9", "samples"=>"18", "species"=>"Homo sapiens", "excluded"=>"true", "organism"=>"Homo sapiens", "accession"=>"E-GEOD-15787", "releasedate"=>"2011-04-14", "experimenttype"=>"transcription profiling by array", "lastupdatedate"=>"2014-05-03", "secondaryaccession"=>"GSE15787"
-35	"id"=>"37611", "name"=>"Gene expression profiling for placentas from pre-eclamptic, unexplained FGR and normal pregnancies", "assays"=>"24", "samples"=>"24", "species"=>"Homo sapiens", "organism"=>"Homo sapiens", "accession"=>"E-GEOD-24129", "releasedate"=>"2010-09-15", "experimenttype"=>"transcription profiling by array", "lastupdatedate"=>"2011-06-10", "secondaryaccession"=>"GSE24129"
-36	"id"=>"536", "name"=>"Placental gene expression in severe preeclampsia", "assays"=>"43", "samples"=>"43", "species"=>"Homo sapiens", "organism"=>"Homo sapiens", "accession"=>"E-GEOD-10588", "releasedate"=>"2010-05-26", "experimenttype"=>"transcription profiling by array", "lastupdatedate"=>"2014-05-02", "submissiondate"=>"2008-02-20", "secondaryaccession"=>"GSE10588"
+32	"id"=>"68272", "name"=>"Differential expression of microRNAs in the placentae of Chinese patients with severe pre-eclampsia", "assays"=>"8", "samples"=>"16", "species"=>"Homo sapiens", "organism"=>"Homo sapiens", "accession"=>"E-GEOD-15789", "mail sent"=>"true", "releasedate"=>"2011-04-14", "experimenttype"=>"transcription profiling by array", "lastupdatedate"=>"2014-05-03", "secondaryaccession"=>"GSE15789"
+35	"id"=>"37611", "name"=>"Gene expression profiling for placentas from pre-eclamptic, unexplained FGR and normal pregnancies", "assays"=>"24", "samples"=>"24", "species"=>"Homo sapiens", "organism"=>"Homo sapiens", "accession"=>"E-GEOD-24129", "mail sent"=>"true", "releasedate"=>"2010-09-15", "experimenttype"=>"transcription profiling by array", "lastupdatedate"=>"2011-06-10", "secondaryaccession"=>"GSE24129"
 41	"id"=>"3951", "name"=>"Transcription profiling of human choriocarcinoma cells overexpressing STOX1 mimicks transcriptional alterations observed in preeclamptic placentas", "assays"=>"2", "samples"=>"2", "species"=>"Homo sapiens", "organism"=>"Homo sapiens", "accession"=>"E-GEOD-13475", "releasedate"=>"2008-11-14", "experimenttype"=>"transcription profiling by array", "lastupdatedate"=>"2011-06-10", "submissiondate"=>"2008-11-05", "experimentdesign"=>"unknown experiment type", "secondaryaccession"=>"GSE13475"
 37	"id"=>"3759", "name"=>"Transcription profiling of mouse placental labyrinth and human villus tree", "assays"=>"4", "samples"=>"4", "species"=>"Mus musculus", "organism"=>"Mus musculus", "accession"=>"E-GEOD-13155", "releasedate"=>"2009-06-22", "experimenttype"=>"transcription profiling by array", "lastupdatedate"=>"2011-06-10", "submissiondate"=>"2008-10-10", "experimentdesign"=>"unknown experiment type", "secondaryaccession"=>"GSE13155"
 38	"id"=>"32244", "name"=>"Transcription profiling of human decidua basalis to identify pre-eclampsia susceptibility genes", "assays"=>"104", "samples"=>"104", "species"=>"Homo sapiens", "organism"=>"Homo sapiens", "accession"=>"E-TABM-682", "releasedate"=>"2009-04-07", "experimenttype"=>"transcription profiling by array", "lastupdatedate"=>"2014-05-02", "submissiondate"=>"2009-01-04", "experimentdesign"=>"disease state"
-39	"id"=>"60575", "name"=>"Severe Preeclampsia-Related Changes in Gene Expression at the Maternal-Fetal Interface Include Siglec-6 and Pappalysin-2", "assays"=>"46", "samples"=>"46", "species"=>"Homo sapiens", "organism"=>"Homo sapiens", "accession"=>"E-GEOD-14722", "releasedate"=>"2009-02-06", "experimenttype"=>"transcription profiling by array", "lastupdatedate"=>"2012-03-27", "secondaryaccession"=>"GSE14722"
-40	"id"=>"330258", "name"=>"Transcription profiling by array of human placenta from patients with preeclampsia", "assays"=>"12", "samples"=>"12", "species"=>"Homo sapiens", "organism"=>"Homo sapiens", "accession"=>"E-GEOD-12767", "releasedate"=>"2008-11-29", "experimenttype"=>"transcription profiling by array", "lastupdatedate"=>"2013-08-15", "experimentdesign"=>"disease state design", "secondaryaccession"=>"GSE12767"
-42	"id"=>"3247", "name"=>"Gene expression profiling indicates inflammatory pathways involved in IUGR due to placental insufficiency", "assays"=>"16", "samples"=>"16", "species"=>"Homo sapiens", "organism"=>"Homo sapiens", "accession"=>"E-GEOD-12216", "releasedate"=>"2008-08-01", "experimenttype"=>"transcription profiling by array", "lastupdatedate"=>"2012-03-27", "submissiondate"=>"2008-07-22", "secondaryaccession"=>"GSE12216"
-43	"id"=>"27266", "name"=>"Transcription profiling of human placentae of different gestational ages: an opru network and uw scor study", "assays"=>"12", "samples"=>"12", "species"=>"Homo sapiens", "organism"=>"Homo sapiens", "accession"=>"E-GEOD-9984", "releasedate"=>"2008-06-17", "experimenttype"=>"transcription profiling by array", "lastupdatedate"=>"2011-06-10", "submissiondate"=>"2007-12-19", "experimentdesign"=>"unknown experiment type", "secondaryaccession"=>"GSE9984"
-44	"id"=>"87337", "name"=>"Transcription profiling of human adipose tissue, decidua and placenta from patients with preeclampsia vs. unaffected indviduals reveals dysregulation of the circulating and tissue-based renin-angiotensin system in preeclampsia", "assays"=>"6", "samples"=>"6", "species"=>"Homo sapiens", "organism"=>"Homo sapiens", "accession"=>"E-GEOD-6573", "releasedate"=>"2008-06-14", "experimenttype"=>"transcription profiling by array", "lastupdatedate"=>"2012-03-27", "experimentdesign"=>"unknown experiment type", "secondaryaccession"=>"GSE6573"
+43	"id"=>"27266", "name"=>"Transcription profiling of human placentae of different gestational ages: an opru network and uw scor study", "assays"=>"12", "samples"=>"12", "species"=>"Homo sapiens", "organism"=>"Homo sapiens", "accession"=>"E-GEOD-9984", "releasedate"=>"2008-06-17", "experimenttype"=>"transcription profiling by array", "lastupdatedate"=>"2011-06-10", "submissiondate"=>"2007-12-19", "healthy samples"=>"12", "experimentdesign"=>"unknown experiment type", "secondaryaccession"=>"GSE9984"
 45	"id"=>"21314", "name"=>"Transcription profiling of human trophoblast cell cultures", "assays"=>"2", "samples"=>"2", "species"=>"Homo sapiens", "organism"=>"Homo sapiens", "accession"=>"E-GEOD-4100", "releasedate"=>"2008-06-12", "experimenttype"=>"transcription profiling by array", "lastupdatedate"=>"2011-06-10", "submissiondate"=>"2006-01-25", "experimentdesign"=>"unknown experiment type", "secondaryaccession"=>"GSE4100", " Investigative Techniques"=>"In vitro"
 34	"id"=>"55318", "name"=>"Gene expression profiling of placenta from women with early- and late-onset preeclampsia reveals differences in angiogenesis", "assays"=>"15", "samples"=>"30", "species"=>"Homo sapiens", "excluded"=>"true", "organism"=>"Homo sapiens", "accession"=>"E-GEOD-22526", "releasedate"=>"2011-02-28", "experimenttype"=>"transcription profiling by array", "lastupdatedate"=>"2014-05-01", "secondaryaccession"=>"GSE22526"
+46	"id"=>"21650", "name"=>"Transcription profiling of placenta from women who underwent a normal pregnancy and from those suffering from early or late onset pre-eclampsia", "assays"=>"14", "samples"=>"28", "species"=>"Homo sapiens", "organism"=>"Homo sapiens", "accession"=>"E-GEOD-4707", "releasedate"=>"2008-05-07", "experimenttype"=>"transcription profiling by array", "lastupdatedate"=>"2014-05-03", "submissiondate"=>"2006-04-24", "healthy samples"=>"18", "experimentdesign"=>"disease state", "secondaryaccession"=>"GDS2080", "geographic location"=>"japan", "preeclampsia samples"=>"10"
 47	"id"=>"27481", "name"=>"Transcription profiling of decidua basalis from women with normal pregnancies or preeclampsia and/or fetal growth restriction", "assays"=>"35", "samples"=>"35", "species"=>"Homo sapiens", "excluded"=>"true", "organism"=>"Homo sapiens", "accession"=>"E-MEXP-1050", "releasedate"=>"2007-08-31", "experimenttype"=>"transcription profiling by array", "lastupdatedate"=>"2014-05-02", "submissiondate"=>"2007-04-11", "experimentdesign"=>"disease state"
-46	"id"=>"21650", "name"=>"Transcription profiling of placenta from women who underwent a normal pregnancy and from those suffering from early or late onset pre-eclampsia", "assays"=>"14", "samples"=>"28", "species"=>"Homo sapiens", "organism"=>"Homo sapiens", "accession"=>"E-GEOD-4707", "releasedate"=>"2008-05-07", "experimenttype"=>"transcription profiling by array", "lastupdatedate"=>"2014-05-03", "submissiondate"=>"2006-04-24", "experimentdesign"=>"disease state", "secondaryaccession"=>"GDS2080", "geographic location"=>"japan"
+44	"id"=>"87337", "name"=>"Transcription profiling of human adipose tissue, decidua and placenta from patients with preeclampsia vs. unaffected indviduals reveals dysregulation of the circulating and tissue-based renin-angiotensin system in preeclampsia", "assays"=>"6", "samples"=>"6", "species"=>"Homo sapiens", "organism"=>"Homo sapiens", "accession"=>"E-GEOD-6573", "releasedate"=>"2008-06-14", "experimenttype"=>"transcription profiling by array", "lastupdatedate"=>"2012-03-27", "healthy samples"=>"3", "experimentdesign"=>"unknown experiment type", "secondaryaccession"=>"GSE6573", "preeclampsia samples"=>"3"
+42	"id"=>"3247", "name"=>"Gene expression profiling indicates inflammatory pathways involved in IUGR due to placental insufficiency", "assays"=>"16", "samples"=>"16", "species"=>"Homo sapiens", "organism"=>"Homo sapiens", "accession"=>"E-GEOD-12216", "releasedate"=>"2008-08-01", "iugr samples"=>"8", "experimenttype"=>"transcription profiling by array", "lastupdatedate"=>"2012-03-27", "submissiondate"=>"2008-07-22", "healthy samples"=>"8", "secondaryaccession"=>"GSE12216"
+39	"id"=>"60575", "name"=>"Severe Preeclampsia-Related Changes in Gene Expression at the Maternal-Fetal Interface Include Siglec-6 and Pappalysin-2", "assays"=>"46", "samples"=>"46", "species"=>"Homo sapiens", "organism"=>"Homo sapiens", "accession"=>"E-GEOD-14722", "mail sent"=>"true", "releasedate"=>"2009-02-06", "experimenttype"=>"transcription profiling by array", "lastupdatedate"=>"2012-03-27", "secondaryaccession"=>"GSE14722"
+36	"id"=>"536", "name"=>"Placental gene expression in severe preeclampsia", "assays"=>"43", "samples"=>"43", "species"=>"Homo sapiens", "organism"=>"Homo sapiens", "accession"=>"E-GEOD-10588", "mail sent"=>"true", "releasedate"=>"2010-05-26", "experimenttype"=>"transcription profiling by array", "lastupdatedate"=>"2014-05-02", "submissiondate"=>"2008-02-20", "secondaryaccession"=>"GSE10588"
+40	"id"=>"330258", "name"=>"Transcription profiling by array of human placenta from patients with preeclampsia", "assays"=>"12", "samples"=>"12", "species"=>"Homo sapiens", "organism"=>"Homo sapiens", "accession"=>"E-GEOD-12767", "mail sent"=>"true", "releasedate"=>"2008-11-29", "experimenttype"=>"transcription profiling by array", "lastupdatedate"=>"2013-08-15", "experimentdesign"=>"disease state design", "secondaryaccession"=>"GSE12767"
 \.
 
 
@@ -1052,6 +1096,143 @@ SELECT pg_catalog.setval('articles_experiment_microarrays_id_seq', 54, true);
 
 
 --
+-- Data for Name: articles_historicalexperiment; Type: TABLE DATA; Schema: public; Owner: sashko
+--
+
+COPY articles_historicalexperiment (id, data, history_id, history_date, history_type, history_user_id) FROM stdin;
+3	"id"=>"529820", "name"=>"Epigenetics and Preeclampsia: Defining Functional Epimutations in the Preeclamptic Placenta Related to the TGF-β Pathway [methylation]", "assays"=>"36", "samples"=>"36", "species"=>"Homo sapiens", "unified"=>"true", "organism"=>"Homo sapiens", "accession"=>"E-GEOD-73375", "releasedate"=>"2015-09-24", "experimenttype"=>"methylation profiling by array", "lastupdatedate"=>"2015-09-25", "secondaryaccession"=>"GSE73375"	1	2016-09-21 03:56:46.529199+03		\N
+4	"id"=>"529821", "name"=>"Epigenetics and Preeclampsia: Defining Functional Epimutations in the Preeclamptic Placenta Related to the TGF-β Pathway [gene expression]", "assays"=>"36", "samples"=>"36", "species"=>"Homo sapiens", "organism"=>"Homo sapiens", "accession"=>"E-GEOD-73374", "releasedate"=>"2015-09-24", "experimenttype"=>"transcription profiling by array", "lastupdatedate"=>"2015-09-25", "secondaryaccession"=>"GSE73374"	2	2016-09-21 03:56:46.529451+03		\N
+1	"id"=>"531095", "name"=>"Gene expression profiling reveal different molecular pattern in G-protein coupled receptor protein signaling pathway between early- and late-onset preeclampsia", "assays"=>"25", "samples"=>"50", "species"=>"Homo sapiens", "organism"=>"Homo sapiens", "accession"=>"E-GEOD-74341", "releasedate"=>"2015-10-27", "experimenttype"=>"transcription profiling by array", "lastupdatedate"=>"2015-11-24", "secondaryaccession"=>"GSE74341"	3	2016-09-21 03:56:46.529602+03		\N
+2	"id"=>"529822", "name"=>"Epigenetics and Preeclampsia: Defining Functional Epimutations in the Preeclamptic Placenta Related to the TGF-β Pathway", "assays"=>"72", "samples"=>"72", "species"=>"Homo sapiens", "organism"=>"Homo sapiens", "accession"=>"E-GEOD-73377", "releasedate"=>"2015-09-24", "experimenttype"=>"methylation profiling by array", "lastupdatedate"=>"2015-09-25", "secondaryaccession"=>"GSE73377"	4	2016-09-21 03:56:46.529745+03		\N
+5	"id"=>"526569", "name"=>"Transcriptome profiling of deciduas from pre-eclamptic and normotensive pregnancies", "assays"=>"125", "samples"=>"125", "species"=>"Homo sapiens", "organism"=>"Homo sapiens", "accession"=>"E-GEOD-60438", "releasedate"=>"2015-08-05", "experimenttype"=>"transcription profiling by array", "lastupdatedate"=>"2015-08-19", "secondaryaccession"=>"GSE60438"	5	2016-09-21 03:56:46.529909+03		\N
+6	"id"=>"517862", "name"=>"Transcription profiling by array of placental vilous tissues from women with high or low risks of developing placental complications during pregnancy", "assays"=>"22", "samples"=>"22", "species"=>"Homo sapiens", "organism"=>"Homo sapiens", "accession"=>"E-MTAB-3265", "releasedate"=>"2015-07-22", "experimenttype"=>"transcription profiling by array", "lastupdatedate"=>"2015-01-23", "submissiondate"=>"2010-04-19", "experimentdesign"=>"clinical history design"	6	2016-09-21 03:56:46.530052+03		\N
+7	"id"=>"519113", "name"=>"Long term exposure of HUVEC to plasma from preeclamptic versus normal pregnancies", "assays"=>"4", "samples"=>"4", "species"=>"Homo sapiens", "organism"=>"Homo sapiens", "accession"=>"E-MTAB-3348", "releasedate"=>"2015-06-29", "experimenttype"=>"transcription profiling by array", "lastupdatedate"=>"2015-02-23", "submissiondate"=>"2012-03-22", "experimentdesign"=>"case control design"	7	2016-09-21 03:56:46.530198+03		\N
+8	"id"=>"518672", "name"=>"Transcription profiling of human blood monocyte-derived macrophages that were non- or IL-4-activated and treated with small interfering RNA against CD74 (siRNA CD74) or non-targeting siRNA (siRNA non-targeting)", "assays"=>"24", "samples"=>"24", "species"=>"Homo sapiens", "organism"=>"Homo sapiens", "accession"=>"E-MTAB-3309", "releasedate"=>"2015-04-29", "experimenttype"=>"transcription profiling by array", "lastupdatedate"=>"2015-02-11", "submissiondate"=>"2013-11-27", "experimentdesign"=>"genotype design"	8	2016-09-21 03:56:46.530341+03		\N
+9	"id"=>"507591", "name"=>"Transcriptome analysis of human umbilical cord fibroblasts from babies whose mother experienced preeclampsia", "assays"=>"47", "samples"=>"47", "species"=>"Homo sapiens", "organism"=>"Homo sapiens", "accession"=>"E-GEOD-54400", "releasedate"=>"2014-08-31", "experimenttype"=>"transcription profiling by array", "lastupdatedate"=>"2014-10-06", "secondaryaccession"=>"GSE54400"	9	2016-09-21 03:56:46.530494+03		\N
+10	"id"=>"470399", "name"=>"Comprehensive Analysis of Preeclampsia-Associated DNA Methylation in the Placenta", "assays"=>"48", "samples"=>"48", "species"=>"Homo sapiens", "organism"=>"Homo sapiens", "accession"=>"E-GEOD-59274", "releasedate"=>"2014-07-12", "experimenttype"=>"methylation profiling by array", "lastupdatedate"=>"2014-07-14", "secondaryaccession"=>"GSE59274"	10	2016-09-21 03:56:46.530702+03		\N
+11	"id"=>"444302", "name"=>"Epigenome analysis of normal and preeclamptic placenta samples", "assays"=>"45", "samples"=>"45", "species"=>"Homo sapiens", "organism"=>"Homo sapiens", "accession"=>"E-GEOD-57767", "releasedate"=>"2014-05-20", "experimenttype"=>"methylation profiling by array", "lastupdatedate"=>"2014-05-25", "secondaryaccession"=>"GSE57767"	11	2016-09-21 03:56:46.530847+03		\N
+12	"id"=>"443293", "name"=>"Severe preeclampsia: new blood circulating biomarkers", "assays"=>"36", "samples"=>"36", "species"=>"Homo sapiens", "organism"=>"Homo sapiens", "accession"=>"E-GEOD-48424", "releasedate"=>"2014-05-14", "experimenttype"=>"transcription profiling by array", "lastupdatedate"=>"2014-06-03", "secondaryaccession"=>"GSE48424"	12	2016-09-21 03:56:46.530987+03		\N
+13	"id"=>"436278", "name"=>"miRNA Profile in Normal and Preeclamptic Placenta", "assays"=>"10", "samples"=>"10", "species"=>"Homo sapiens", "organism"=>"Homo sapiens", "accession"=>"E-GEOD-57050", "releasedate"=>"2014-04-25", "experimenttype"=>"transcription profiling by array", "lastupdatedate"=>"2014-06-03", "secondaryaccession"=>"GSE57050"	13	2016-09-21 03:56:46.531127+03		\N
+14	"id"=>"419265", "name"=>"Microarray analysis of human pre-eclamptic placenta", "assays"=>"24", "samples"=>"24", "species"=>"Homo sapiens", "organism"=>"Homo sapiens", "accession"=>"E-GEOD-54618", "releasedate"=>"2014-04-01", "experimenttype"=>"transcription profiling by array", "lastupdatedate"=>"2014-06-03", "secondaryaccession"=>"GSE54618"	14	2016-09-21 03:56:46.531268+03		\N
+15	"id"=>"394397", "name"=>"Overlapping DNA methylation profile between placentas with trisomy 16 and early-onset preeclampsia", "assays"=>"30", "samples"=>"30", "species"=>"Homo sapiens", "organism"=>"Homo sapiens", "accession"=>"E-GEOD-49343", "releasedate"=>"2014-01-15", "experimenttype"=>"methylation profiling by array", "lastupdatedate"=>"2014-01-26", "secondaryaccession"=>"GSE49343"	15	2016-09-21 03:56:46.531416+03		\N
+16	"id"=>"390321", "name"=>"Regulatory role of multinucleated giant cells derived from placental CD14+ macrophages: Pathophysiological implications", "assays"=>"12", "samples"=>"12", "species"=>"Homo sapiens", "organism"=>"Homo sapiens", "accession"=>"E-GEOD-38747", "releasedate"=>"2014-01-07", "experimenttype"=>"transcription profiling by array", "lastupdatedate"=>"2014-06-02", "secondaryaccession"=>"GSE38747"	16	2016-09-21 03:56:46.531557+03		\N
+17	"id"=>"350262", "name"=>"Analysis of differentially expressed genes in placental tissues of Pre-eclampsia Using microarray combined with Connectivity Map database", "assays"=>"5", "samples"=>"10", "species"=>"Homo sapiens", "organism"=>"Homo sapiens", "accession"=>"E-GEOD-47187", "releasedate"=>"2013-10-01", "experimenttype"=>"transcription profiling by array", "lastupdatedate"=>"2014-06-03", "secondaryaccession"=>"GSE47187"	17	2016-09-21 03:56:46.531696+03		\N
+18	"id"=>"344336", "name"=>"LncRNAs Expression in Preeclampsia Placenta Reveals the Potential Role of LncRNAs Contributing to Preeclampsia Pathogenesis", "assays"=>"11", "samples"=>"11", "species"=>"Homo sapiens", "organism"=>"Homo sapiens", "accession"=>"E-GEOD-50783", "releasedate"=>"2013-09-12", "experimenttype"=>"transcription profiling by array", "lastupdatedate"=>"2014-05-13", "secondaryaccession"=>"GSE50783"	18	2016-09-21 03:56:46.53188+03		\N
+19	"id"=>"320283", "name"=>"Influence of plasma from normal and preeclamptic women on HUVEC cells", "assays"=>"4", "samples"=>"4", "species"=>"Homo sapiens", "organism"=>"Homo sapiens", "accession"=>"E-GEOD-41681", "releasedate"=>"2013-06-30", "experimenttype"=>"transcription profiling by array", "lastupdatedate"=>"2014-06-02", "secondaryaccession"=>"GSE41681"	19	2016-09-21 03:56:46.532023+03		\N
+25	"id"=>"270284", "name"=>"Cultured Cyto and Syncytio-trophoblast samples exposed to varying degrees of hypoxia (expression)", "assays"=>"15", "samples"=>"15", "species"=>"Homo sapiens", "organism"=>"Homo sapiens", "accession"=>"E-GEOD-41331", "releasedate"=>"2013-01-18", "experimenttype"=>"transcription profiling by array", "lastupdatedate"=>"2014-06-02", "secondaryaccession"=>"GSE41331"	20	2016-09-21 03:56:46.532163+03		\N
+20	"id"=>"317330", "name"=>"Early-Onset Preeclampsia Placentas and Controls", "assays"=>"56", "samples"=>"56", "species"=>"Homo sapiens", "organism"=>"Homo sapiens", "accession"=>"E-GEOD-44712", "releasedate"=>"2013-06-21", "experimenttype"=>"methylation profiling by array", "lastupdatedate"=>"2014-05-03", "secondaryaccession"=>"GSE44712"	21	2016-09-21 03:56:46.532301+03		\N
+21	"id"=>"317327", "name"=>"Gene expression in Early-Onset Preeclampsia Placentas and Controls", "assays"=>"16", "samples"=>"16", "species"=>"Homo sapiens", "organism"=>"Homo sapiens", "accession"=>"E-GEOD-44711", "releasedate"=>"2013-06-21", "experimenttype"=>"transcription profiling by array", "lastupdatedate"=>"2014-06-02", "secondaryaccession"=>"GSE44711"	22	2016-09-21 03:56:46.53244+03		\N
+22	"id"=>"317332", "name"=>"DNA methylation in Early Onset Preeclamptic placentas", "assays"=>"40", "samples"=>"40", "species"=>"Homo sapiens", "organism"=>"Homo sapiens", "accession"=>"E-GEOD-44667", "releasedate"=>"2013-06-21", "experimenttype"=>"methylation profiling by array", "lastupdatedate"=>"2013-07-01", "secondaryaccession"=>"GSE44667"	23	2016-09-21 03:56:46.532579+03		\N
+23	"id"=>"415380", "name"=>"Gene expression profiling for placentas from pre-eclamptic and normal pregnancies", "assays"=>"12", "samples"=>"12", "species"=>"Homo sapiens", "organism"=>"Homo sapiens", "accession"=>"E-GEOD-43942", "releasedate"=>"2013-02-01", "experimenttype"=>"transcription profiling by array", "lastupdatedate"=>"2014-04-03", "secondaryaccession"=>"GSE43942"	24	2016-09-21 03:56:46.532719+03		\N
+24	"id"=>"270285", "name"=>"Cultured Cyto and Syncytio-trophoblast samples exposed to varying degrees of hypoxia (methylation)", "assays"=>"90", "samples"=>"90", "species"=>"Homo sapiens", "organism"=>"Homo sapiens", "accession"=>"E-GEOD-41336", "releasedate"=>"2013-01-18", "experimenttype"=>"methylation profiling by array", "lastupdatedate"=>"2013-01-28", "secondaryaccession"=>"GSE41336"	25	2016-09-21 03:56:46.532859+03		\N
+26	"id"=>"239614", "name"=>"Preeclampsia: the in vivo milieu leads to cytotrophoblast dysregulation", "assays"=>"39", "samples"=>"39", "species"=>"Homo sapiens", "organism"=>"Homo sapiens", "accession"=>"E-GEOD-40182", "releasedate"=>"2012-08-17", "experimenttype"=>"transcription profiling by array", "lastupdatedate"=>"2012-09-26", "secondaryaccession"=>"GSE40182"	26	2016-09-21 03:56:46.533004+03		\N
+27	"id"=>"206303", "name"=>"Mid-gestational gene expression profile in placenta and link to pregnancy complications", "assays"=>"4", "samples"=>"4", "species"=>"Homo sapiens", "organism"=>"Homo sapiens", "accession"=>"E-GEOD-37901", "releasedate"=>"2012-05-10", "experimenttype"=>"transcription profiling by array", "lastupdatedate"=>"2012-05-21", "secondaryaccession"=>"GSE37901"	27	2016-09-21 03:56:46.533147+03		\N
+28	"id"=>"186650", "name"=>"Transcriptomic Analysis of Placenta Affected by Antiphospholipid Antibodies: Following the TRAIL of trophoblast death", "assays"=>"6", "samples"=>"6", "species"=>"Homo sapiens", "organism"=>"Homo sapiens", "accession"=>"E-GEOD-36083", "releasedate"=>"2012-02-27", "experimenttype"=>"transcription profiling by array", "lastupdatedate"=>"2012-03-06", "secondaryaccession"=>"GSE36083"	28	2016-09-21 03:56:46.533287+03		\N
+29	"id"=>"180545", "name"=>"Differentially expressed microRNAs revealed by molecular signatures of Preeclampsia and IUGR in human placenta", "assays"=>"94", "samples"=>"94", "species"=>"Homo sapiens", "organism"=>"Homo sapiens", "accession"=>"E-GEOD-35574", "releasedate"=>"2012-02-07", "experimenttype"=>"transcription profiling by array", "lastupdatedate"=>"2012-02-15", "secondaryaccession"=>"GSE35574"	29	2016-09-21 03:56:46.533425+03		\N
+30	"id"=>"159304", "name"=>"A Comparative Analysis of the Transcriptome of Hypoxia and Inflammation in Swan 71 Human Trophophoblast Cells: Its Implications in Preeclampsia", "assays"=>"39", "samples"=>"39", "species"=>"Homo sapiens", "organism"=>"Homo sapiens", "accession"=>"E-GEOD-31679", "releasedate"=>"2011-11-15", "experimenttype"=>"transcription profiling by array", "lastupdatedate"=>"2011-11-21", "secondaryaccession"=>"GSE31679"	30	2016-09-21 03:56:46.533564+03		\N
+31	"id"=>"88752", "name"=>"Genome-wide analysis of gene expression in placentas derived from patients with preeclampsia", "assays"=>"12", "samples"=>"12", "species"=>"Homo sapiens", "organism"=>"Homo sapiens", "accession"=>"E-GEOD-30186", "releasedate"=>"2011-06-24", "experimenttype"=>"transcription profiling by array", "lastupdatedate"=>"2011-07-08", "secondaryaccession"=>"GSE30186"	31	2016-09-21 03:56:46.533701+03		\N
+32	"id"=>"68272", "name"=>"Differential expression of microRNAs in the placentae of Chinese patients with severe pre-eclampsia", "assays"=>"8", "samples"=>"16", "species"=>"Homo sapiens", "organism"=>"Homo sapiens", "accession"=>"E-GEOD-15789", "releasedate"=>"2011-04-14", "experimenttype"=>"transcription profiling by array", "lastupdatedate"=>"2014-05-03", "secondaryaccession"=>"GSE15789"	32	2016-09-21 03:56:46.533841+03		\N
+33	"id"=>"68269", "name"=>"Latexin is downregulated in human upper digestive track tumors and exhibits tumor suppressor potential", "assays"=>"9", "samples"=>"18", "species"=>"Homo sapiens", "excluded"=>"true", "organism"=>"Homo sapiens", "accession"=>"E-GEOD-15787", "releasedate"=>"2011-04-14", "experimenttype"=>"transcription profiling by array", "lastupdatedate"=>"2014-05-03", "secondaryaccession"=>"GSE15787"	33	2016-09-21 03:56:46.534004+03		\N
+35	"id"=>"37611", "name"=>"Gene expression profiling for placentas from pre-eclamptic, unexplained FGR and normal pregnancies", "assays"=>"24", "samples"=>"24", "species"=>"Homo sapiens", "organism"=>"Homo sapiens", "accession"=>"E-GEOD-24129", "releasedate"=>"2010-09-15", "experimenttype"=>"transcription profiling by array", "lastupdatedate"=>"2011-06-10", "secondaryaccession"=>"GSE24129"	34	2016-09-21 03:56:46.534141+03		\N
+36	"id"=>"536", "name"=>"Placental gene expression in severe preeclampsia", "assays"=>"43", "samples"=>"43", "species"=>"Homo sapiens", "organism"=>"Homo sapiens", "accession"=>"E-GEOD-10588", "releasedate"=>"2010-05-26", "experimenttype"=>"transcription profiling by array", "lastupdatedate"=>"2014-05-02", "submissiondate"=>"2008-02-20", "secondaryaccession"=>"GSE10588"	35	2016-09-21 03:56:46.534272+03		\N
+41	"id"=>"3951", "name"=>"Transcription profiling of human choriocarcinoma cells overexpressing STOX1 mimicks transcriptional alterations observed in preeclamptic placentas", "assays"=>"2", "samples"=>"2", "species"=>"Homo sapiens", "organism"=>"Homo sapiens", "accession"=>"E-GEOD-13475", "releasedate"=>"2008-11-14", "experimenttype"=>"transcription profiling by array", "lastupdatedate"=>"2011-06-10", "submissiondate"=>"2008-11-05", "experimentdesign"=>"unknown experiment type", "secondaryaccession"=>"GSE13475"	36	2016-09-21 03:56:46.534408+03		\N
+37	"id"=>"3759", "name"=>"Transcription profiling of mouse placental labyrinth and human villus tree", "assays"=>"4", "samples"=>"4", "species"=>"Mus musculus", "organism"=>"Mus musculus", "accession"=>"E-GEOD-13155", "releasedate"=>"2009-06-22", "experimenttype"=>"transcription profiling by array", "lastupdatedate"=>"2011-06-10", "submissiondate"=>"2008-10-10", "experimentdesign"=>"unknown experiment type", "secondaryaccession"=>"GSE13155"	37	2016-09-21 03:56:46.534554+03		\N
+38	"id"=>"32244", "name"=>"Transcription profiling of human decidua basalis to identify pre-eclampsia susceptibility genes", "assays"=>"104", "samples"=>"104", "species"=>"Homo sapiens", "organism"=>"Homo sapiens", "accession"=>"E-TABM-682", "releasedate"=>"2009-04-07", "experimenttype"=>"transcription profiling by array", "lastupdatedate"=>"2014-05-02", "submissiondate"=>"2009-01-04", "experimentdesign"=>"disease state"	38	2016-09-21 03:56:46.534697+03		\N
+39	"id"=>"60575", "name"=>"Severe Preeclampsia-Related Changes in Gene Expression at the Maternal-Fetal Interface Include Siglec-6 and Pappalysin-2", "assays"=>"46", "samples"=>"46", "species"=>"Homo sapiens", "organism"=>"Homo sapiens", "accession"=>"E-GEOD-14722", "releasedate"=>"2009-02-06", "experimenttype"=>"transcription profiling by array", "lastupdatedate"=>"2012-03-27", "secondaryaccession"=>"GSE14722"	39	2016-09-21 03:56:46.534835+03		\N
+40	"id"=>"330258", "name"=>"Transcription profiling by array of human placenta from patients with preeclampsia", "assays"=>"12", "samples"=>"12", "species"=>"Homo sapiens", "organism"=>"Homo sapiens", "accession"=>"E-GEOD-12767", "releasedate"=>"2008-11-29", "experimenttype"=>"transcription profiling by array", "lastupdatedate"=>"2013-08-15", "experimentdesign"=>"disease state design", "secondaryaccession"=>"GSE12767"	40	2016-09-21 03:56:46.534974+03		\N
+42	"id"=>"3247", "name"=>"Gene expression profiling indicates inflammatory pathways involved in IUGR due to placental insufficiency", "assays"=>"16", "samples"=>"16", "species"=>"Homo sapiens", "organism"=>"Homo sapiens", "accession"=>"E-GEOD-12216", "releasedate"=>"2008-08-01", "experimenttype"=>"transcription profiling by array", "lastupdatedate"=>"2012-03-27", "submissiondate"=>"2008-07-22", "secondaryaccession"=>"GSE12216"	41	2016-09-21 03:56:46.535113+03		\N
+43	"id"=>"27266", "name"=>"Transcription profiling of human placentae of different gestational ages: an opru network and uw scor study", "assays"=>"12", "samples"=>"12", "species"=>"Homo sapiens", "organism"=>"Homo sapiens", "accession"=>"E-GEOD-9984", "releasedate"=>"2008-06-17", "experimenttype"=>"transcription profiling by array", "lastupdatedate"=>"2011-06-10", "submissiondate"=>"2007-12-19", "experimentdesign"=>"unknown experiment type", "secondaryaccession"=>"GSE9984"	42	2016-09-21 03:56:46.535249+03		\N
+44	"id"=>"87337", "name"=>"Transcription profiling of human adipose tissue, decidua and placenta from patients with preeclampsia vs. unaffected indviduals reveals dysregulation of the circulating and tissue-based renin-angiotensin system in preeclampsia", "assays"=>"6", "samples"=>"6", "species"=>"Homo sapiens", "organism"=>"Homo sapiens", "accession"=>"E-GEOD-6573", "releasedate"=>"2008-06-14", "experimenttype"=>"transcription profiling by array", "lastupdatedate"=>"2012-03-27", "experimentdesign"=>"unknown experiment type", "secondaryaccession"=>"GSE6573"	43	2016-09-21 03:56:46.535391+03		\N
+45	"id"=>"21314", "name"=>"Transcription profiling of human trophoblast cell cultures", "assays"=>"2", "samples"=>"2", "species"=>"Homo sapiens", "organism"=>"Homo sapiens", "accession"=>"E-GEOD-4100", "releasedate"=>"2008-06-12", "experimenttype"=>"transcription profiling by array", "lastupdatedate"=>"2011-06-10", "submissiondate"=>"2006-01-25", "experimentdesign"=>"unknown experiment type", "secondaryaccession"=>"GSE4100", " Investigative Techniques"=>"In vitro"	44	2016-09-21 03:56:46.535528+03		\N
+34	"id"=>"55318", "name"=>"Gene expression profiling of placenta from women with early- and late-onset preeclampsia reveals differences in angiogenesis", "assays"=>"15", "samples"=>"30", "species"=>"Homo sapiens", "excluded"=>"true", "organism"=>"Homo sapiens", "accession"=>"E-GEOD-22526", "releasedate"=>"2011-02-28", "experimenttype"=>"transcription profiling by array", "lastupdatedate"=>"2014-05-01", "secondaryaccession"=>"GSE22526"	45	2016-09-21 03:56:46.535675+03		\N
+46	"id"=>"21650", "name"=>"Transcription profiling of placenta from women who underwent a normal pregnancy and from those suffering from early or late onset pre-eclampsia", "assays"=>"14", "samples"=>"28", "species"=>"Homo sapiens", "organism"=>"Homo sapiens", "accession"=>"E-GEOD-4707", "releasedate"=>"2008-05-07", "experimenttype"=>"transcription profiling by array", "lastupdatedate"=>"2014-05-03", "submissiondate"=>"2006-04-24", "experimentdesign"=>"disease state", "secondaryaccession"=>"GDS2080", "geographic location"=>"japan"	46	2016-09-21 03:56:46.535812+03		\N
+47	"id"=>"27481", "name"=>"Transcription profiling of decidua basalis from women with normal pregnancies or preeclampsia and/or fetal growth restriction", "assays"=>"35", "samples"=>"35", "species"=>"Homo sapiens", "excluded"=>"true", "organism"=>"Homo sapiens", "accession"=>"E-MEXP-1050", "releasedate"=>"2007-08-31", "experimenttype"=>"transcription profiling by array", "lastupdatedate"=>"2014-05-02", "submissiondate"=>"2007-04-11", "experimentdesign"=>"disease state"	47	2016-09-21 03:56:46.535965+03		\N
+44	"id"=>"87337", "name"=>"Transcription profiling of human adipose tissue, decidua and placenta from patients with preeclampsia vs. unaffected indviduals reveals dysregulation of the circulating and tissue-based renin-angiotensin system in preeclampsia", "assays"=>"6", "samples"=>"6", "species"=>"Homo sapiens", "organism"=>"Homo sapiens", "accession"=>"E-GEOD-6573", "releasedate"=>"2008-06-14", "experimenttype"=>"transcription profiling by array", "lastupdatedate"=>"2012-03-27", "healthy samples"=>"3", "experimentdesign"=>"unknown experiment type", "secondaryaccession"=>"GSE6573", "preeclampsia samples"=>"3"	48	2016-10-03 17:49:09.82643+03	~	1
+43	"id"=>"27266", "name"=>"Transcription profiling of human placentae of different gestational ages: an opru network and uw scor study", "assays"=>"12", "samples"=>"12", "species"=>"Homo sapiens", "organism"=>"Homo sapiens", "accession"=>"E-GEOD-9984", "releasedate"=>"2008-06-17", "experimenttype"=>"transcription profiling by array", "lastupdatedate"=>"2011-06-10", "submissiondate"=>"2007-12-19", "healthy samples"=>"12", "experimentdesign"=>"unknown experiment type", "secondaryaccession"=>"GSE9984"	49	2016-10-03 17:51:53.980734+03	~	1
+40	"id"=>"330258", "name"=>"Transcription profiling by array of human placenta from patients with preeclampsia", "assays"=>"12", "samples"=>"12", "species"=>"Homo sapiens", "organism"=>"Homo sapiens", "accession"=>"E-GEOD-12767", "releasedate"=>"2008-11-29", "experimenttype"=>"transcription profiling by array", "lastupdatedate"=>"2013-08-15", "experimentdesign"=>"disease state design", "secondaryaccession"=>"GSE12767"	64	2016-10-06 18:16:35.381904+03	~	1
+46	"id"=>"21650", "name"=>"Transcription profiling of placenta from women who underwent a normal pregnancy and from those suffering from early or late onset pre-eclampsia", "assays"=>"14", "samples"=>"28", "species"=>"Homo sapiens", "organism"=>"Homo sapiens", "accession"=>"E-GEOD-4707", "releasedate"=>"2008-05-07", "experimenttype"=>"transcription profiling by array", "lastupdatedate"=>"2014-05-03", "submissiondate"=>"2006-04-24", "healthy samples"=>"18", "experimentdesign"=>"disease state", "secondaryaccession"=>"GDS2080", "geographic location"=>"japan", "preecpampsia samples"=>"10"	50	2016-10-03 17:56:29.551701+03	~	1
+46	"id"=>"21650", "name"=>"Transcription profiling of placenta from women who underwent a normal pregnancy and from those suffering from early or late onset pre-eclampsia", "assays"=>"14", "samples"=>"28", "species"=>"Homo sapiens", "organism"=>"Homo sapiens", "accession"=>"E-GEOD-4707", "releasedate"=>"2008-05-07", "experimenttype"=>"transcription profiling by array", "lastupdatedate"=>"2014-05-03", "submissiondate"=>"2006-04-24", "healthy samples"=>"18", "experimentdesign"=>"disease state", "secondaryaccession"=>"GDS2080", "geographic location"=>"japan", "preeclampsia samples"=>"10"	51	2016-10-03 17:57:19.572432+03	~	1
+42	"id"=>"3247", "name"=>"Gene expression profiling indicates inflammatory pathways involved in IUGR due to placental insufficiency", "assays"=>"16", "samples"=>"16", "species"=>"Homo sapiens", "organism"=>"Homo sapiens", "accession"=>"E-GEOD-12216", "releasedate"=>"2008-08-01", "iugr samples"=>"8", "experimenttype"=>"transcription profiling by array", "lastupdatedate"=>"2012-03-27", "submissiondate"=>"2008-07-22", "healthy samples"=>"8", "secondaryaccession"=>"GSE12216"	52	2016-10-03 18:01:48.46023+03	~	1
+40	"id"=>"330258", "name"=>"Transcription profiling by array of human placenta from patients with preeclampsia", "assays"=>"12", "samples"=>"12", "species"=>"Homo sapiens", "organism"=>"Homo sapiens", "accession"=>"E-GEOD-12767", "releasedate"=>"2008-11-29", "experimenttype"=>"transcription profiling by array", "lastupdatedate"=>"2013-08-15", "healthy samples"=>"8", "experimentdesign"=>"disease state design", "secondaryaccession"=>"GSE12767", "preeclampsia samples"=>"4"	53	2016-10-03 18:09:17.420888+03	~	1
+39	"id"=>"60575", "name"=>"Severe Preeclampsia-Related Changes in Gene Expression at the Maternal-Fetal Interface Include Siglec-6 and Pappalysin-2", "assays"=>"46", "samples"=>"46", "species"=>"Homo sapiens", "organism"=>"Homo sapiens", "accession"=>"E-GEOD-14722", "releasedate"=>"2009-02-06", "experimenttype"=>"transcription profiling by array", "lastupdatedate"=>"2012-03-27", "healthy samples"=>"13", "secondaryaccession"=>"GSE14722", "preeclampsia samples"=>"33"	54	2016-10-03 19:27:14.057536+03	~	1
+39	"id"=>"60575", "name"=>"Severe Preeclampsia-Related Changes in Gene Expression at the Maternal-Fetal Interface Include Siglec-6 and Pappalysin-2", "assays"=>"46", "samples"=>"23", "species"=>"Homo sapiens", "organism"=>"Homo sapiens", "accession"=>"E-GEOD-14722", "releasedate"=>"2009-02-06", "experimenttype"=>"transcription profiling by array", "lastupdatedate"=>"2012-03-27", "healthy samples"=>"11", "secondaryaccession"=>"GSE14722", "preeclampsia samples"=>"12"	55	2016-10-03 19:37:21.139239+03	~	1
+41	"id"=>"3951", "name"=>"Transcription profiling of human choriocarcinoma cells overexpressing STOX1 mimicks transcriptional alterations observed in preeclamptic placentas", "assays"=>"2", "samples"=>"2", "species"=>"Homo sapiens", "organism"=>"Homo sapiens", "accession"=>"E-GEOD-13475", "releasedate"=>"2008-11-14", "experimenttype"=>"transcription profiling by array", "lastupdatedate"=>"2011-06-10", "submissiondate"=>"2008-11-05", "experimentdesign"=>"unknown experiment type", "secondaryaccession"=>"GSE13475"	56	2016-10-04 21:45:33.982159+03	~	1
+41	"id"=>"3951", "name"=>"Transcription profiling of human choriocarcinoma cells overexpressing STOX1 mimicks transcriptional alterations observed in preeclamptic placentas", "assays"=>"2", "samples"=>"2", "species"=>"Homo sapiens", "organism"=>"Homo sapiens", "accession"=>"E-GEOD-13475", "releasedate"=>"2008-11-14", "experimenttype"=>"transcription profiling by array", "lastupdatedate"=>"2011-06-10", "submissiondate"=>"2008-11-05", "experimentdesign"=>"unknown experiment type", "secondaryaccession"=>"GSE13475"	57	2016-10-06 16:06:51.162381+03	~	1
+41	"id"=>"3951", "name"=>"Transcription profiling of human choriocarcinoma cells overexpressing STOX1 mimicks transcriptional alterations observed in preeclamptic placentas", "assays"=>"2", "samples"=>"2", "species"=>"Homo sapiens", "organism"=>"Homo sapiens", "accession"=>"E-GEOD-13475", "releasedate"=>"2008-11-14", "experimenttype"=>"transcription profiling by array", "lastupdatedate"=>"2011-06-10", "submissiondate"=>"2008-11-05", "experimentdesign"=>"unknown experiment type", "secondaryaccession"=>"GSE13475"	58	2016-10-06 16:31:38.348448+03	~	1
+41	"id"=>"3951", "name"=>"Transcription profiling of human choriocarcinoma cells overexpressing STOX1 mimicks transcriptional alterations observed in preeclamptic placentas", "assays"=>"2", "samples"=>"2", "species"=>"Homo sapiens", "organism"=>"Homo sapiens", "accession"=>"E-GEOD-13475", "releasedate"=>"2008-11-14", "experimenttype"=>"transcription profiling by array", "lastupdatedate"=>"2011-06-10", "submissiondate"=>"2008-11-05", "experimentdesign"=>"unknown experiment type", "secondaryaccession"=>"GSE13475"	59	2016-10-06 17:44:46.547284+03	~	1
+40	"id"=>"330258", "name"=>"Transcription profiling by array of human placenta from patients with preeclampsia", "assays"=>"12", "samples"=>"12", "species"=>"Homo sapiens", "organism"=>"Homo sapiens", "accession"=>"E-GEOD-12767", "releasedate"=>"2008-11-29", "experimenttype"=>"transcription profiling by array", "lastupdatedate"=>"2013-08-15", "healthy samples"=>"8", "experimentdesign"=>"disease state design", "secondaryaccession"=>"GSE12767", "preeclampsia samples"=>"4"	60	2016-10-06 17:46:25.975645+03	~	1
+40	"id"=>"330258", "name"=>"Transcription profiling by array of human placenta from patients with preeclampsia", "assays"=>"12", "samples"=>"12", "species"=>"Homo sapiens", "organism"=>"Homo sapiens", "accession"=>"E-GEOD-12767", "releasedate"=>"2008-11-29", "experimenttype"=>"transcription profiling by array", "lastupdatedate"=>"2013-08-15", "experimentdesign"=>"disease state design", "secondaryaccession"=>"GSE12767"	61	2016-10-06 17:46:27.820633+03	~	1
+40	"id"=>"330258", "name"=>"Transcription profiling by array of human placenta from patients with preeclampsia", "assays"=>"12", "samples"=>"12", "species"=>"Homo sapiens", "organism"=>"Homo sapiens", "accession"=>"E-GEOD-12767", "releasedate"=>"2008-11-29", "experimenttype"=>"transcription profiling by array", "lastupdatedate"=>"2013-08-15", "experimentdesign"=>"disease state design", "secondaryaccession"=>"GSE12767"	62	2016-10-06 17:50:39.415535+03	~	1
+40	"id"=>"330258", "name"=>"Transcription profiling by array of human placenta from patients with preeclampsia", "assays"=>"12", "samples"=>"12", "species"=>"Homo sapiens", "organism"=>"Homo sapiens", "accession"=>"E-GEOD-12767", "releasedate"=>"2008-11-29", "experimenttype"=>"transcription profiling by array", "lastupdatedate"=>"2013-08-15", "experimentdesign"=>"disease state design", "secondaryaccession"=>"GSE12767"	63	2016-10-06 17:53:01.330085+03	~	1
+40	"id"=>"330258", "name"=>"Transcription profiling by array of human placenta from patients with preeclampsia", "assays"=>"12", "samples"=>"12", "species"=>"Homo sapiens", "organism"=>"Homo sapiens", "accession"=>"E-GEOD-12767", "releasedate"=>"2008-11-29", "experimenttype"=>"transcription profiling by array", "lastupdatedate"=>"2013-08-15", "experimentdesign"=>"disease state design", "secondaryaccession"=>"GSE12767"	65	2016-10-06 18:17:05.751993+03	~	1
+40	"id"=>"330258", "name"=>"Transcription profiling by array of human placenta from patients with preeclampsia", "assays"=>"12", "samples"=>"12", "species"=>"Homo sapiens", "organism"=>"Homo sapiens", "accession"=>"E-GEOD-12767", "releasedate"=>"2008-11-29", "experimenttype"=>"transcription profiling by array", "lastupdatedate"=>"2013-08-15", "experimentdesign"=>"disease state design", "secondaryaccession"=>"GSE12767"	67	2016-10-06 18:17:54.806845+03	~	1
+40	"id"=>"330258", "name"=>"Transcription profiling by array of human placenta from patients with preeclampsia", "assays"=>"12", "samples"=>"12", "species"=>"Homo sapiens", "organism"=>"Homo sapiens", "accession"=>"E-GEOD-12767", "releasedate"=>"2008-11-29", "experimenttype"=>"transcription profiling by array", "lastupdatedate"=>"2013-08-15", "experimentdesign"=>"disease state design", "secondaryaccession"=>"GSE12767"	68	2016-10-06 18:39:36.970318+03	~	1
+40	"id"=>"330258", "name"=>"Transcription profiling by array of human placenta from patients with preeclampsia", "assays"=>"12", "samples"=>"12", "species"=>"Homo sapiens", "organism"=>"Homo sapiens", "accession"=>"E-GEOD-12767", "releasedate"=>"2008-11-29", "experimenttype"=>"transcription profiling by array", "lastupdatedate"=>"2013-08-15", "experimentdesign"=>"disease state design", "secondaryaccession"=>"GSE12767"	69	2016-10-06 18:47:52.735065+03	~	1
+40	"id"=>"330258", "name"=>"Transcription profiling by array of human placenta from patients with preeclampsia", "assays"=>"12", "samples"=>"12", "species"=>"Homo sapiens", "organism"=>"Homo sapiens", "accession"=>"E-GEOD-12767", "releasedate"=>"2008-11-29", "experimenttype"=>"transcription profiling by array", "lastupdatedate"=>"2013-08-15", "experimentdesign"=>"disease state design", "secondaryaccession"=>"GSE12767"	70	2016-10-06 18:49:42.363614+03	~	1
+40	"id"=>"330258", "name"=>"Transcription profiling by array of human placenta from patients with preeclampsia", "assays"=>"12", "samples"=>"12", "species"=>"Homo sapiens", "organism"=>"Homo sapiens", "accession"=>"E-GEOD-12767", "mail sent"=>"true", "releasedate"=>"2008-11-29", "experimenttype"=>"transcription profiling by array", "lastupdatedate"=>"2013-08-15", "experimentdesign"=>"disease state design", "secondaryaccession"=>"GSE12767"	71	2016-10-06 19:29:50.938202+03	~	1
+40	"id"=>"330258", "name"=>"Transcription profiling by array of human placenta from patients with preeclampsia", "assays"=>"12", "samples"=>"12", "species"=>"Homo sapiens", "organism"=>"Homo sapiens", "accession"=>"E-GEOD-12767", "mail sent"=>"true", "releasedate"=>"2008-11-29", "experimenttype"=>"transcription profiling by array", "lastupdatedate"=>"2013-08-15", "experimentdesign"=>"disease state design", "secondaryaccession"=>"GSE12767"	73	2016-10-07 14:58:53.217318+03	~	1
+40	"id"=>"330258", "name"=>"Transcription profiling by array of human placenta from patients with preeclampsia", "assays"=>"12", "samples"=>"12", "species"=>"Homo sapiens", "organism"=>"Homo sapiens", "accession"=>"E-GEOD-12767", "mail sent"=>"true", "releasedate"=>"2008-11-29", "experimenttype"=>"transcription profiling by array", "lastupdatedate"=>"2013-08-15", "experimentdesign"=>"disease state design", "secondaryaccession"=>"GSE12767"	74	2016-10-07 15:00:10.15505+03	~	1
+40	"id"=>"330258", "name"=>"Transcription profiling by array of human placenta from patients with preeclampsia", "assays"=>"12", "samples"=>"12", "species"=>"Homo sapiens", "organism"=>"Homo sapiens", "accession"=>"E-GEOD-12767", "mail sent"=>"true", "releasedate"=>"2008-11-29", "experimenttype"=>"transcription profiling by array", "lastupdatedate"=>"2013-08-15", "experimentdesign"=>"disease state design", "secondaryaccession"=>"GSE12767"	75	2016-10-07 15:06:11.204437+03	~	1
+40	"id"=>"330258", "name"=>"Transcription profiling by array of human placenta from patients with preeclampsia", "assays"=>"12", "samples"=>"12", "species"=>"Homo sapiens", "organism"=>"Homo sapiens", "accession"=>"E-GEOD-12767", "mail sent"=>"true", "releasedate"=>"2008-11-29", "experimenttype"=>"transcription profiling by array", "lastupdatedate"=>"2013-08-15", "experimentdesign"=>"disease state design", "secondaryaccession"=>"GSE12767"	76	2016-10-07 15:08:03.474299+03	~	1
+40	"id"=>"330258", "name"=>"Transcription profiling by array of human placenta from patients with preeclampsia", "assays"=>"12", "samples"=>"12", "species"=>"Homo sapiens", "organism"=>"Homo sapiens", "accession"=>"E-GEOD-12767", "mail sent"=>"true", "releasedate"=>"2008-11-29", "experimenttype"=>"transcription profiling by array", "lastupdatedate"=>"2013-08-15", "experimentdesign"=>"disease state design", "secondaryaccession"=>"GSE12767"	77	2016-10-07 15:24:28.844468+03	~	1
+40	"id"=>"330258", "name"=>"Transcription profiling by array of human placenta from patients with preeclampsia", "assays"=>"12", "samples"=>"12", "species"=>"Homo sapiens", "organism"=>"Homo sapiens", "accession"=>"E-GEOD-12767", "mail sent"=>"true", "releasedate"=>"2008-11-29", "experimenttype"=>"transcription profiling by array", "lastupdatedate"=>"2013-08-15", "experimentdesign"=>"disease state design", "secondaryaccession"=>"GSE12767"	78	2016-10-07 15:32:34.714432+03	~	1
+39	"id"=>"60575", "name"=>"Severe Preeclampsia-Related Changes in Gene Expression at the Maternal-Fetal Interface Include Siglec-6 and Pappalysin-2", "assays"=>"46", "samples"=>"46", "species"=>"Homo sapiens", "organism"=>"Homo sapiens", "accession"=>"E-GEOD-14722", "releasedate"=>"2009-02-06", "experimenttype"=>"transcription profiling by array", "lastupdatedate"=>"2012-03-27", "secondaryaccession"=>"GSE14722"	79	2016-10-07 18:14:57.440925+03	~	\N
+39	"id"=>"60575", "name"=>"Severe Preeclampsia-Related Changes in Gene Expression at the Maternal-Fetal Interface Include Siglec-6 and Pappalysin-2", "assays"=>"46", "samples"=>"46", "species"=>"Homo sapiens", "organism"=>"Homo sapiens", "accession"=>"E-GEOD-14722", "releasedate"=>"2009-02-06", "experimenttype"=>"transcription profiling by array", "lastupdatedate"=>"2012-03-27", "secondaryaccession"=>"GSE14722"	80	2016-10-07 18:21:04.291215+03	~	\N
+39	"id"=>"60575", "name"=>"Severe Preeclampsia-Related Changes in Gene Expression at the Maternal-Fetal Interface Include Siglec-6 and Pappalysin-2", "assays"=>"46", "samples"=>"46", "species"=>"Homo sapiens", "organism"=>"Homo sapiens", "accession"=>"E-GEOD-14722", "releasedate"=>"2009-02-06", "experimenttype"=>"transcription profiling by array", "lastupdatedate"=>"2012-03-27", "secondaryaccession"=>"GSE14722"	81	2016-10-07 18:24:45.820898+03	~	1
+39	"id"=>"60575", "name"=>"Severe Preeclampsia-Related Changes in Gene Expression at the Maternal-Fetal Interface Include Siglec-6 and Pappalysin-2", "assays"=>"46", "samples"=>"46", "species"=>"Homo sapiens", "organism"=>"Homo sapiens", "accession"=>"E-GEOD-14722", "releasedate"=>"2009-02-06", "experimenttype"=>"transcription profiling by array", "lastupdatedate"=>"2012-03-27", "secondaryaccession"=>"GSE14722"	82	2016-10-07 18:31:13.643829+03	~	1
+39	"id"=>"60575", "name"=>"Severe Preeclampsia-Related Changes in Gene Expression at the Maternal-Fetal Interface Include Siglec-6 and Pappalysin-2", "assays"=>"46", "samples"=>"46", "species"=>"Homo sapiens", "organism"=>"Homo sapiens", "accession"=>"E-GEOD-14722", "releasedate"=>"2009-02-06", "experimenttype"=>"transcription profiling by array", "lastupdatedate"=>"2012-03-27", "secondaryaccession"=>"GSE14722"	85	2016-10-07 19:25:38.553344+03	~	1
+39	"id"=>"60575", "name"=>"Severe Preeclampsia-Related Changes in Gene Expression at the Maternal-Fetal Interface Include Siglec-6 and Pappalysin-2", "assays"=>"46", "samples"=>"46", "species"=>"Homo sapiens", "organism"=>"Homo sapiens", "accession"=>"E-GEOD-14722", "releasedate"=>"2009-02-06", "experimenttype"=>"transcription profiling by array", "lastupdatedate"=>"2012-03-27", "secondaryaccession"=>"GSE14722"	86	2016-10-07 19:28:30.217414+03	~	1
+39	"id"=>"60575", "name"=>"Severe Preeclampsia-Related Changes in Gene Expression at the Maternal-Fetal Interface Include Siglec-6 and Pappalysin-2", "assays"=>"46", "samples"=>"46", "species"=>"Homo sapiens", "organism"=>"Homo sapiens", "accession"=>"E-GEOD-14722", "releasedate"=>"2009-02-06", "experimenttype"=>"transcription profiling by array", "lastupdatedate"=>"2012-03-27", "secondaryaccession"=>"GSE14722"	87	2016-10-07 19:35:40.140652+03	~	1
+39	"id"=>"60575", "name"=>"Severe Preeclampsia-Related Changes in Gene Expression at the Maternal-Fetal Interface Include Siglec-6 and Pappalysin-2", "assays"=>"46", "samples"=>"46", "species"=>"Homo sapiens", "organism"=>"Homo sapiens", "accession"=>"E-GEOD-14722", "releasedate"=>"2009-02-06", "experimenttype"=>"transcription profiling by array", "lastupdatedate"=>"2012-03-27", "secondaryaccession"=>"GSE14722"	88	2016-10-07 19:58:43.361001+03	~	1
+39	"id"=>"60575", "name"=>"Severe Preeclampsia-Related Changes in Gene Expression at the Maternal-Fetal Interface Include Siglec-6 and Pappalysin-2", "assays"=>"46", "samples"=>"46", "species"=>"Homo sapiens", "organism"=>"Homo sapiens", "accession"=>"E-GEOD-14722", "releasedate"=>"2009-02-06", "experimenttype"=>"transcription profiling by array", "lastupdatedate"=>"2012-03-27", "secondaryaccession"=>"GSE14722"	89	2016-10-07 20:05:02.415866+03	~	\N
+39	"id"=>"60575", "name"=>"Severe Preeclampsia-Related Changes in Gene Expression at the Maternal-Fetal Interface Include Siglec-6 and Pappalysin-2", "assays"=>"46", "samples"=>"46", "species"=>"Homo sapiens", "organism"=>"Homo sapiens", "accession"=>"E-GEOD-14722", "releasedate"=>"2009-02-06", "experimenttype"=>"transcription profiling by array", "lastupdatedate"=>"2012-03-27", "secondaryaccession"=>"GSE14722"	90	2016-10-07 20:10:28.180696+03	~	1
+39	"id"=>"60575", "name"=>"Severe Preeclampsia-Related Changes in Gene Expression at the Maternal-Fetal Interface Include Siglec-6 and Pappalysin-2", "assays"=>"46", "samples"=>"46", "species"=>"Homo sapiens", "organism"=>"Homo sapiens", "accession"=>"E-GEOD-14722", "mail sent"=>"true", "releasedate"=>"2009-02-06", "experimenttype"=>"transcription profiling by array", "lastupdatedate"=>"2012-03-27", "secondaryaccession"=>"GSE14722"	91	2016-10-07 20:30:09.593995+03	~	1
+39	"id"=>"60575", "name"=>"Severe Preeclampsia-Related Changes in Gene Expression at the Maternal-Fetal Interface Include Siglec-6 and Pappalysin-2", "assays"=>"46", "samples"=>"46", "species"=>"Homo sapiens", "organism"=>"Homo sapiens", "accession"=>"E-GEOD-14722", "mail sent"=>"true", "releasedate"=>"2009-02-06", "experimenttype"=>"transcription profiling by array", "lastupdatedate"=>"2012-03-27", "secondaryaccession"=>"GSE14722"	92	2016-10-07 20:35:25.620165+03	~	1
+39	"id"=>"60575", "name"=>"Severe Preeclampsia-Related Changes in Gene Expression at the Maternal-Fetal Interface Include Siglec-6 and Pappalysin-2", "assays"=>"46", "samples"=>"46", "species"=>"Homo sapiens", "organism"=>"Homo sapiens", "accession"=>"E-GEOD-14722", "mail sent"=>"true", "releasedate"=>"2009-02-06", "experimenttype"=>"transcription profiling by array", "lastupdatedate"=>"2012-03-27", "secondaryaccession"=>"GSE14722"	93	2016-10-07 20:44:56.796279+03	~	1
+39	"id"=>"60575", "name"=>"Severe Preeclampsia-Related Changes in Gene Expression at the Maternal-Fetal Interface Include Siglec-6 and Pappalysin-2", "assays"=>"46", "samples"=>"46", "species"=>"Homo sapiens", "organism"=>"Homo sapiens", "accession"=>"E-GEOD-14722", "mail sent"=>"true", "releasedate"=>"2009-02-06", "experimenttype"=>"transcription profiling by array", "lastupdatedate"=>"2012-03-27", "secondaryaccession"=>"GSE14722"	95	2016-10-07 20:50:29.390297+03	~	1
+39	"id"=>"60575", "name"=>"Severe Preeclampsia-Related Changes in Gene Expression at the Maternal-Fetal Interface Include Siglec-6 and Pappalysin-2", "assays"=>"46", "samples"=>"46", "species"=>"Homo sapiens", "organism"=>"Homo sapiens", "accession"=>"E-GEOD-14722", "mail sent"=>"true", "releasedate"=>"2009-02-06", "experimenttype"=>"transcription profiling by array", "lastupdatedate"=>"2012-03-27", "secondaryaccession"=>"GSE14722"	96	2016-10-07 20:51:55.70844+03	~	1
+37	"id"=>"3759", "name"=>"Transcription profiling of mouse placental labyrinth and human villus tree", "assays"=>"4", "samples"=>"4", "species"=>"Mus musculus", "organism"=>"Mus musculus", "accession"=>"E-GEOD-13155", "releasedate"=>"2009-06-22", "experimenttype"=>"transcription profiling by array", "lastupdatedate"=>"2011-06-10", "submissiondate"=>"2008-10-10", "experimentdesign"=>"unknown experiment type", "secondaryaccession"=>"GSE13155"	97	2016-10-08 17:51:25.585276+03	~	1
+37	"id"=>"3759", "name"=>"Transcription profiling of mouse placental labyrinth and human villus tree", "assays"=>"4", "samples"=>"4", "species"=>"Mus musculus", "organism"=>"Mus musculus", "accession"=>"E-GEOD-13155", "releasedate"=>"2009-06-22", "experimenttype"=>"transcription profiling by array", "lastupdatedate"=>"2011-06-10", "submissiondate"=>"2008-10-10", "experimentdesign"=>"unknown experiment type", "secondaryaccession"=>"GSE13155"	98	2016-10-08 17:53:09.989932+03	~	1
+37	"id"=>"3759", "name"=>"Transcription profiling of mouse placental labyrinth and human villus tree", "assays"=>"4", "samples"=>"4", "species"=>"Mus musculus", "organism"=>"Mus musculus", "accession"=>"E-GEOD-13155", "releasedate"=>"2009-06-22", "experimenttype"=>"transcription profiling by array", "lastupdatedate"=>"2011-06-10", "submissiondate"=>"2008-10-10", "experimentdesign"=>"unknown experiment type", "secondaryaccession"=>"GSE13155"	99	2016-10-08 18:15:16.171715+03	~	1
+37	"id"=>"3759", "name"=>"Transcription profiling of mouse placental labyrinth and human villus tree", "assays"=>"4", "samples"=>"4", "species"=>"Mus musculus", "organism"=>"Mus musculus", "accession"=>"E-GEOD-13155", "releasedate"=>"2009-06-22", "experimenttype"=>"transcription profiling by array", "lastupdatedate"=>"2011-06-10", "submissiondate"=>"2008-10-10", "experimentdesign"=>"unknown experiment type", "secondaryaccession"=>"GSE13155"	100	2016-10-08 18:35:09.854404+03	~	1
+37	"id"=>"3759", "name"=>"Transcription profiling of mouse placental labyrinth and human villus tree", "assays"=>"4", "samples"=>"4", "species"=>"Mus musculus", "organism"=>"Mus musculus", "accession"=>"E-GEOD-13155", "releasedate"=>"2009-06-22", "experimenttype"=>"transcription profiling by array", "lastupdatedate"=>"2011-06-10", "submissiondate"=>"2008-10-10", "experimentdesign"=>"unknown experiment type", "secondaryaccession"=>"GSE13155"	101	2016-10-08 18:35:13.119127+03	~	1
+37	"id"=>"3759", "name"=>"Transcription profiling of mouse placental labyrinth and human villus tree", "assays"=>"4", "samples"=>"4", "species"=>"Mus musculus", "organism"=>"Mus musculus", "accession"=>"E-GEOD-13155", "releasedate"=>"2009-06-22", "experimenttype"=>"transcription profiling by array", "lastupdatedate"=>"2011-06-10", "submissiondate"=>"2008-10-10", "experimentdesign"=>"unknown experiment type", "secondaryaccession"=>"GSE13155"	102	2016-10-08 19:31:31.769818+03	~	1
+37	"id"=>"3759", "name"=>"Transcription profiling of mouse placental labyrinth and human villus tree", "assays"=>"4", "samples"=>"4", "species"=>"Mus musculus", "organism"=>"Mus musculus", "accession"=>"E-GEOD-13155", "releasedate"=>"2009-06-22", "experimenttype"=>"transcription profiling by array", "lastupdatedate"=>"2011-06-10", "submissiondate"=>"2008-10-10", "experimentdesign"=>"unknown experiment type", "secondaryaccession"=>"GSE13155"	103	2016-10-08 19:36:58.610081+03	~	1
+36	"id"=>"536", "name"=>"Placental gene expression in severe preeclampsia", "assays"=>"43", "samples"=>"43", "species"=>"Homo sapiens", "organism"=>"Homo sapiens", "accession"=>"E-GEOD-10588", "releasedate"=>"2010-05-26", "experimenttype"=>"transcription profiling by array", "lastupdatedate"=>"2014-05-02", "submissiondate"=>"2008-02-20", "secondaryaccession"=>"GSE10588"	104	2016-10-08 19:40:20.622638+03	~	1
+36	"id"=>"536", "name"=>"Placental gene expression in severe preeclampsia", "assays"=>"43", "samples"=>"43", "species"=>"Homo sapiens", "organism"=>"Homo sapiens", "accession"=>"E-GEOD-10588", "releasedate"=>"2010-05-26", "experimenttype"=>"transcription profiling by array", "lastupdatedate"=>"2014-05-02", "submissiondate"=>"2008-02-20", "secondaryaccession"=>"GSE10588"	105	2016-10-08 20:41:56.955486+03	~	1
+36	"id"=>"536", "name"=>"Placental gene expression in severe preeclampsia", "assays"=>"43", "samples"=>"43", "species"=>"Homo sapiens", "organism"=>"Homo sapiens", "accession"=>"E-GEOD-10588", "mail sent"=>"true", "releasedate"=>"2010-05-26", "experimenttype"=>"transcription profiling by array", "lastupdatedate"=>"2014-05-02", "submissiondate"=>"2008-02-20", "secondaryaccession"=>"GSE10588"	106	2016-10-08 21:18:48.836505+03	~	1
+36	"id"=>"536", "name"=>"Placental gene expression in severe preeclampsia", "assays"=>"43", "samples"=>"43", "species"=>"Homo sapiens", "organism"=>"Homo sapiens", "accession"=>"E-GEOD-10588", "mail sent"=>"true", "releasedate"=>"2010-05-26", "experimenttype"=>"transcription profiling by array", "lastupdatedate"=>"2014-05-02", "submissiondate"=>"2008-02-20", "secondaryaccession"=>"GSE10588"	110	2016-10-08 21:49:07.7704+03	~	1
+36	"id"=>"536", "name"=>"Placental gene expression in severe preeclampsia", "assays"=>"43", "samples"=>"43", "species"=>"Homo sapiens", "organism"=>"Homo sapiens", "accession"=>"E-GEOD-10588", "mail sent"=>"true", "releasedate"=>"2010-05-26", "experimenttype"=>"transcription profiling by array", "lastupdatedate"=>"2014-05-02", "submissiondate"=>"2008-02-20", "secondaryaccession"=>"GSE10588"	111	2016-10-08 21:52:44.070404+03	~	1
+36	"id"=>"536", "name"=>"Placental gene expression in severe preeclampsia", "assays"=>"43", "samples"=>"43", "species"=>"Homo sapiens", "organism"=>"Homo sapiens", "accession"=>"E-GEOD-10588", "mail sent"=>"true", "releasedate"=>"2010-05-26", "experimenttype"=>"transcription profiling by array", "lastupdatedate"=>"2014-05-02", "submissiondate"=>"2008-02-20", "secondaryaccession"=>"GSE10588"	112	2016-10-08 21:59:55.920722+03	~	1
+35	"id"=>"37611", "name"=>"Gene expression profiling for placentas from pre-eclamptic, unexplained FGR and normal pregnancies", "assays"=>"24", "samples"=>"24", "species"=>"Homo sapiens", "organism"=>"Homo sapiens", "accession"=>"E-GEOD-24129", "releasedate"=>"2010-09-15", "experimenttype"=>"transcription profiling by array", "lastupdatedate"=>"2011-06-10", "secondaryaccession"=>"GSE24129"	113	2016-10-08 22:20:03.030623+03	~	1
+35	"id"=>"37611", "name"=>"Gene expression profiling for placentas from pre-eclamptic, unexplained FGR and normal pregnancies", "assays"=>"24", "samples"=>"24", "species"=>"Homo sapiens", "organism"=>"Homo sapiens", "accession"=>"E-GEOD-24129", "releasedate"=>"2010-09-15", "experimenttype"=>"transcription profiling by array", "lastupdatedate"=>"2011-06-10", "secondaryaccession"=>"GSE24129"	114	2016-10-08 22:20:58.040115+03	~	1
+35	"id"=>"37611", "name"=>"Gene expression profiling for placentas from pre-eclamptic, unexplained FGR and normal pregnancies", "assays"=>"24", "samples"=>"24", "species"=>"Homo sapiens", "organism"=>"Homo sapiens", "accession"=>"E-GEOD-24129", "releasedate"=>"2010-09-15", "experimenttype"=>"transcription profiling by array", "lastupdatedate"=>"2011-06-10", "secondaryaccession"=>"GSE24129"	115	2016-10-08 22:26:57.680369+03	~	1
+35	"id"=>"37611", "name"=>"Gene expression profiling for placentas from pre-eclamptic, unexplained FGR and normal pregnancies", "assays"=>"24", "samples"=>"24", "species"=>"Homo sapiens", "organism"=>"Homo sapiens", "accession"=>"E-GEOD-24129", "mail sent"=>"true", "releasedate"=>"2010-09-15", "experimenttype"=>"transcription profiling by array", "lastupdatedate"=>"2011-06-10", "secondaryaccession"=>"GSE24129"	116	2016-10-08 22:34:11.59229+03	~	1
+35	"id"=>"37611", "name"=>"Gene expression profiling for placentas from pre-eclamptic, unexplained FGR and normal pregnancies", "assays"=>"24", "samples"=>"24", "species"=>"Homo sapiens", "organism"=>"Homo sapiens", "accession"=>"E-GEOD-24129", "mail sent"=>"true", "releasedate"=>"2010-09-15", "experimenttype"=>"transcription profiling by array", "lastupdatedate"=>"2011-06-10", "secondaryaccession"=>"GSE24129"	117	2016-10-08 22:39:11.738286+03	~	1
+35	"id"=>"37611", "name"=>"Gene expression profiling for placentas from pre-eclamptic, unexplained FGR and normal pregnancies", "assays"=>"24", "samples"=>"24", "species"=>"Homo sapiens", "organism"=>"Homo sapiens", "accession"=>"E-GEOD-24129", "mail sent"=>"true", "releasedate"=>"2010-09-15", "experimenttype"=>"transcription profiling by array", "lastupdatedate"=>"2011-06-10", "secondaryaccession"=>"GSE24129"	118	2016-10-08 22:44:15.750798+03	~	1
+35	"id"=>"37611", "name"=>"Gene expression profiling for placentas from pre-eclamptic, unexplained FGR and normal pregnancies", "assays"=>"24", "samples"=>"24", "species"=>"Homo sapiens", "organism"=>"Homo sapiens", "accession"=>"E-GEOD-24129", "mail sent"=>"true", "releasedate"=>"2010-09-15", "experimenttype"=>"transcription profiling by array", "lastupdatedate"=>"2011-06-10", "secondaryaccession"=>"GSE24129"	119	2016-10-08 22:51:30.670694+03	~	1
+35	"id"=>"37611", "name"=>"Gene expression profiling for placentas from pre-eclamptic, unexplained FGR and normal pregnancies", "assays"=>"24", "samples"=>"24", "species"=>"Homo sapiens", "organism"=>"Homo sapiens", "accession"=>"E-GEOD-24129", "mail sent"=>"true", "releasedate"=>"2010-09-15", "experimenttype"=>"transcription profiling by array", "lastupdatedate"=>"2011-06-10", "secondaryaccession"=>"GSE24129"	120	2016-10-08 22:58:25.077512+03	~	1
+35	"id"=>"37611", "name"=>"Gene expression profiling for placentas from pre-eclamptic, unexplained FGR and normal pregnancies", "assays"=>"24", "samples"=>"24", "species"=>"Homo sapiens", "organism"=>"Homo sapiens", "accession"=>"E-GEOD-24129", "mail sent"=>"true", "releasedate"=>"2010-09-15", "experimenttype"=>"transcription profiling by array", "lastupdatedate"=>"2011-06-10", "secondaryaccession"=>"GSE24129"	121	2016-10-08 23:02:51.970033+03	~	1
+32	"id"=>"68272", "name"=>"Differential expression of microRNAs in the placentae of Chinese patients with severe pre-eclampsia", "assays"=>"8", "samples"=>"16", "species"=>"Homo sapiens", "organism"=>"Homo sapiens", "accession"=>"E-GEOD-15789", "mail sent"=>"true", "releasedate"=>"2011-04-14", "experimenttype"=>"transcription profiling by array", "lastupdatedate"=>"2014-05-03", "secondaryaccession"=>"GSE15789"	122	2016-10-08 23:27:46.811691+03	~	1
+32	"id"=>"68272", "name"=>"Differential expression of microRNAs in the placentae of Chinese patients with severe pre-eclampsia", "assays"=>"8", "samples"=>"16", "species"=>"Homo sapiens", "organism"=>"Homo sapiens", "accession"=>"E-GEOD-15789", "mail sent"=>"true", "releasedate"=>"2011-04-14", "experimenttype"=>"transcription profiling by array", "lastupdatedate"=>"2014-05-03", "secondaryaccession"=>"GSE15789"	123	2016-10-08 23:30:37.608301+03	~	1
+32	"id"=>"68272", "name"=>"Differential expression of microRNAs in the placentae of Chinese patients with severe pre-eclampsia", "assays"=>"8", "samples"=>"16", "species"=>"Homo sapiens", "organism"=>"Homo sapiens", "accession"=>"E-GEOD-15789", "mail sent"=>"true", "releasedate"=>"2011-04-14", "experimenttype"=>"transcription profiling by array", "lastupdatedate"=>"2014-05-03", "secondaryaccession"=>"GSE15789"	124	2016-10-08 23:31:20.140774+03	~	1
+31	"id"=>"88752", "name"=>"Genome-wide analysis of gene expression in placentas derived from patients with preeclampsia", "assays"=>"12", "samples"=>"12", "species"=>"Homo sapiens", "organism"=>"Homo sapiens", "accession"=>"E-GEOD-30186", "releasedate"=>"2011-06-24", "experimenttype"=>"transcription profiling by array", "lastupdatedate"=>"2011-07-08", "secondaryaccession"=>"GSE30186"	125	2016-10-08 23:37:04.127279+03	~	1
+31	"id"=>"88752", "name"=>"Genome-wide analysis of gene expression in placentas derived from patients with preeclampsia", "assays"=>"12", "samples"=>"12", "species"=>"Homo sapiens", "organism"=>"Homo sapiens", "accession"=>"E-GEOD-30186", "releasedate"=>"2011-06-24", "experimenttype"=>"transcription profiling by array", "lastupdatedate"=>"2011-07-08", "secondaryaccession"=>"GSE30186"	126	2016-10-08 23:38:49.649452+03	~	1
+31	"id"=>"88752", "name"=>"Genome-wide analysis of gene expression in placentas derived from patients with preeclampsia", "assays"=>"12", "samples"=>"12", "species"=>"Homo sapiens", "organism"=>"Homo sapiens", "accession"=>"E-GEOD-30186", "releasedate"=>"2011-06-24", "experimenttype"=>"transcription profiling by array", "lastupdatedate"=>"2011-07-08", "secondaryaccession"=>"GSE30186"	127	2016-10-08 23:44:23.771256+03	~	1
+31	"id"=>"88752", "name"=>"Genome-wide analysis of gene expression in placentas derived from patients with preeclampsia", "assays"=>"12", "samples"=>"12", "species"=>"Homo sapiens", "organism"=>"Homo sapiens", "accession"=>"E-GEOD-30186", "releasedate"=>"2011-06-24", "experimenttype"=>"transcription profiling by array", "lastupdatedate"=>"2011-07-08", "secondaryaccession"=>"GSE30186"	128	2016-10-08 23:44:46.368013+03	~	1
+31	"id"=>"88752", "name"=>"Genome-wide analysis of gene expression in placentas derived from patients with preeclampsia", "assays"=>"12", "samples"=>"12", "species"=>"Homo sapiens", "organism"=>"Homo sapiens", "accession"=>"E-GEOD-30186", "releasedate"=>"2011-06-24", "experimenttype"=>"transcription profiling by array", "lastupdatedate"=>"2011-07-08", "secondaryaccession"=>"GSE30186"	129	2016-10-08 23:46:59.680947+03	~	1
+31	"id"=>"88752", "name"=>"Genome-wide analysis of gene expression in placentas derived from patients with preeclampsia", "assays"=>"12", "samples"=>"12", "species"=>"Homo sapiens", "organism"=>"Homo sapiens", "accession"=>"E-GEOD-30186", "releasedate"=>"2011-06-24", "experimenttype"=>"transcription profiling by array", "lastupdatedate"=>"2011-07-08", "secondaryaccession"=>"GSE30186"	130	2016-10-08 23:48:24.426035+03	~	1
+\.
+
+
+--
+-- Name: articles_historicalexperiment_history_id_seq; Type: SEQUENCE SET; Schema: public; Owner: sashko
+--
+
+SELECT pg_catalog.setval('articles_historicalexperiment_history_id_seq', 130, true);
+
+
+--
 -- Data for Name: articles_microarray; Type: TABLE DATA; Schema: public; Owner: sashko
 --
 
@@ -1077,12 +1258,12 @@ COPY articles_microarray (id, data) FROM stdin;
 22	"id"=>"9595", "name"=>"Affymetrix GeneChip Human Gene 1.0 ST Array [HuGene-1_0-st-v1]", "count"=>"24", "accession"=>"A-AFFY-141", "legacy_id"=>"1759805535"
 24	"id"=>"11001", "name"=>"Affymetrix GeneChip Mouse Genome 430 2.0 [Mouse430_2]", "count"=>"2", "accession"=>"A-AFFY-45", "legacy_id"=>"417942717"
 17	"id"=>"13056", "name"=>"Illumina Human-6 v2 Expression BeadChip", "count"=>"104", "accession"=>"A-MEXP-930", "legacy_id"=>"1549852481"
+23	"id"=>"12224", "name"=>"Applied Biosystems Human Genome Survey Microarray v2.0", "count"=>"16", "accession"=>"A-MEXP-503", "legacy_id"=>"1198472815"
+27	"id"=>"29705", "name"=>"Agilent Whole Human Genome Oligo Microarray 012391 G4112A", "count"=>"14", "accession"=>"A-AGIL-11", "legacy_id"=>"376314681"
+28	"id"=>"10917", "name"=>"Affymetrix GeneChip Human Genome Focus Array [HG-Focus]", "count"=>"35", "accession"=>"A-AFFY-41", "legacy_id"=>"327974795"
+16	"id"=>"11119", "name"=>"Affymetrix GeneChip Human Genome U133 Plus 2.0 [HG-U133_Plus_2]", "count"=>"12", "accession"=>"A-AFFY-44", "legacy_id"=>"405156763"
 25	"id"=>"11043", "name"=>"Affymetrix GeneChip Human Genome HG-U133A [HG-U133A]", "count"=>"23", "accession"=>"A-AFFY-33", "legacy_id"=>"302382080"
 26	"id"=>"10982", "name"=>"Affymetrix GeneChip Human Genome HG-U133B [HG-U133B]", "count"=>"23", "accession"=>"A-AFFY-34", "legacy_id"=>"212395355"
-23	"id"=>"12224", "name"=>"Applied Biosystems Human Genome Survey Microarray v2.0", "count"=>"16", "accession"=>"A-MEXP-503", "legacy_id"=>"1198472815"
-16	"id"=>"11119", "name"=>"Affymetrix GeneChip Human Genome U133 Plus 2.0 [HG-U133_Plus_2]", "count"=>"2", "accession"=>"A-AFFY-44", "legacy_id"=>"405156763"
-28	"id"=>"10917", "name"=>"Affymetrix GeneChip Human Genome Focus Array [HG-Focus]", "count"=>"35", "accession"=>"A-AFFY-41", "legacy_id"=>"327974795"
-27	"id"=>"29705", "name"=>"Agilent Whole Human Genome Oligo Microarray 012391 G4112A", "count"=>"14", "accession"=>"A-AGIL-11", "legacy_id"=>"376314681"
 \.
 
 
@@ -2155,19 +2336,9 @@ COPY articles_sample (id, experiment_id) FROM stdin;
 1056	30
 1057	30
 1058	30
-1059	31
 1060	31
-1061	31
-1062	31
-1063	31
+1059	31
 1064	31
-1065	31
-1066	31
-1067	31
-1068	31
-1069	31
-1070	31
-1071	32
 1072	32
 1073	32
 1074	32
@@ -2231,7 +2402,7 @@ COPY articles_sample (id, experiment_id) FROM stdin;
 1132	34
 1133	34
 1134	34
-1135	35
+1144	35
 1136	35
 1137	35
 1138	35
@@ -2240,7 +2411,7 @@ COPY articles_sample (id, experiment_id) FROM stdin;
 1141	35
 1142	35
 1143	35
-1144	35
+1135	35
 1145	35
 1146	35
 1147	35
@@ -2248,15 +2419,15 @@ COPY articles_sample (id, experiment_id) FROM stdin;
 1149	35
 1150	35
 1151	35
-1152	35
+1071	32
 1153	35
 1154	35
 1155	35
 1156	35
 1157	35
 1158	35
-1159	36
 1160	36
+1152	35
 1161	36
 1162	36
 1163	36
@@ -2270,38 +2441,24 @@ COPY articles_sample (id, experiment_id) FROM stdin;
 1171	36
 1172	36
 1173	36
-1174	36
-1175	36
 1176	36
 1177	36
 1178	36
-1179	36
 1180	36
 1181	36
-1182	36
-1183	36
 1184	36
-1185	36
 1186	36
-1187	36
-1188	36
-1189	36
-1190	36
 1191	36
 1192	36
 1193	36
 1194	36
-1195	36
-1196	36
 1197	36
-1198	36
 1199	36
 1200	36
-1201	36
-1202	37
 1203	37
 1204	37
-1205	37
+1175	36
+1174	36
 1206	38
 1207	38
 1208	38
@@ -2406,72 +2563,36 @@ COPY articles_sample (id, experiment_id) FROM stdin;
 1307	38
 1308	38
 1309	38
-1310	39
-1311	39
-1312	39
-1313	39
-1314	39
-1315	39
-1316	39
-1317	39
-1318	39
-1319	39
-1320	39
-1321	39
-1322	39
-1323	39
-1324	39
-1325	39
-1326	39
-1327	39
-1328	39
-1329	39
-1330	39
-1331	39
-1332	39
-1333	39
-1334	39
-1335	39
-1336	39
-1337	39
-1338	39
-1339	39
-1340	39
-1341	39
-1342	39
-1343	39
-1344	39
-1345	39
-1346	39
-1347	39
-1348	39
-1349	39
-1350	39
-1351	39
-1352	39
-1353	39
-1354	39
-1355	39
-1356	40
-1357	40
-1358	40
-1359	40
 1360	40
 1361	40
 1362	40
 1363	40
-1364	40
-1365	40
-1366	40
-1367	40
 1368	41
-1369	41
 1380	42
 1381	42
 1382	42
 1383	42
 1384	42
 1385	42
+1434	47
+1435	47
+1436	47
+1437	47
+1438	47
+1439	47
+1440	47
+1441	47
+1442	47
+1443	47
+1444	47
+1445	47
+1369	41
+1446	47
+1447	47
+1448	47
+1449	47
+1450	47
+1451	47
 1386	43
 1387	43
 1388	43
@@ -2492,6 +2613,10 @@ COPY articles_sample (id, experiment_id) FROM stdin;
 1401	44
 1402	44
 1403	44
+1452	47
+1453	47
+1366	40
+1367	40
 1370	42
 1371	42
 1372	42
@@ -2502,41 +2627,19 @@ COPY articles_sample (id, experiment_id) FROM stdin;
 1377	42
 1378	42
 1379	42
-1434	47
-1435	47
-1436	47
-1437	47
-1438	47
-1439	47
-1440	47
-1441	47
-1442	47
-1443	47
-1444	47
-1445	47
-1446	47
-1447	47
-1448	47
-1449	47
-1450	47
-1451	47
-1452	47
-1453	47
-1454	47
-1455	47
-1456	47
-1457	47
-1458	47
-1459	47
-1460	47
-1461	47
-1462	47
-1463	47
-1464	47
-1465	47
-1466	47
-1467	47
-1468	47
+1356	40
+1364	40
+1357	40
+1358	40
+1359	40
+1365	40
+1061	31
+1062	31
+1063	31
+1065	31
+1066	31
+1067	31
+1068	31
 1408	46
 1410	46
 1411	46
@@ -2561,10 +2664,88 @@ COPY articles_sample (id, experiment_id) FROM stdin;
 1431	46
 1432	46
 1433	46
+1069	31
 1406	46
 1407	46
 1409	46
 1416	46
+1070	31
+1454	47
+1455	47
+1456	47
+1457	47
+1458	47
+1459	47
+1460	47
+1461	47
+1462	47
+1463	47
+1464	47
+1465	47
+1466	47
+1467	47
+1468	47
+1562	39
+1563	39
+1564	39
+1565	39
+1566	39
+1567	39
+1568	39
+1569	39
+1570	39
+1571	39
+1572	39
+1574	39
+1575	39
+1576	39
+1577	39
+1578	39
+1579	39
+1580	39
+1581	39
+1582	39
+1583	39
+1584	39
+1585	39
+1586	39
+1587	39
+1588	39
+1589	39
+1590	39
+1591	39
+1592	39
+1593	39
+1594	39
+1595	39
+1596	39
+1597	39
+1598	39
+1599	39
+1600	39
+1601	39
+1602	39
+1603	39
+1604	39
+1605	39
+1606	39
+1561	39
+1573	39
+1205	37
+1202	37
+1159	36
+1179	36
+1182	36
+1183	36
+1185	36
+1187	36
+1188	36
+1189	36
+1190	36
+1195	36
+1196	36
+1198	36
+1201	36
 \.
 
 
@@ -2572,7 +2753,7 @@ COPY articles_sample (id, experiment_id) FROM stdin;
 -- Name: articles_sample_id_seq; Type: SEQUENCE SET; Schema: public; Owner: sashko
 --
 
-SELECT pg_catalog.setval('articles_sample_id_seq', 1468, true);
+SELECT pg_catalog.setval('articles_sample_id_seq', 1606, true);
 
 
 --
@@ -9607,130 +9788,31 @@ COPY articles_sampleattribute (id, old_value, sample_id, unificated_value_id, un
 7025	PBS	1058	\N	\N	ligand
 7026	ng/ml	1058	\N	\N	unit
 7027	0	1058	\N	\N	dose
-7028	GSM747309 1	1059	\N	\N	name
-7029	normal placentas	1059	\N	\N	tissue
-7030	29 years	1059	\N	\N	age
-7031	Chinese	1059	\N	\N	ethnic group
-7032	Homo sapiens	1059	\N	\N	Organism
-7033	GSM747308 1	1060	\N	\N	name
-7034	normal placentas	1060	\N	\N	tissue
-7035	28 years	1060	\N	\N	age
-7036	Chinese	1060	\N	\N	ethnic group
-7037	Homo sapiens	1060	\N	\N	Organism
-7038	GSM747307 1	1061	\N	\N	name
-7039	normal placentas	1061	\N	\N	tissue
-7040	32 years	1061	\N	\N	age
-7041	Chinese	1061	\N	\N	ethnic group
-7042	Homo sapiens	1061	\N	\N	Organism
-7043	GSM747306 1	1062	\N	\N	name
-7044	normal placentas	1062	\N	\N	tissue
-7045	27 years	1062	\N	\N	age
-7046	Chinese	1062	\N	\N	ethnic group
-7047	Homo sapiens	1062	\N	\N	Organism
-7048	GSM747305 1	1063	\N	\N	name
-7049	normal placentas	1063	\N	\N	tissue
-7050	27 years	1063	\N	\N	age
-7051	Chinese	1063	\N	\N	ethnic group
-7052	Homo sapiens	1063	\N	\N	Organism
-7053	GSM747304 1	1064	\N	\N	name
-7054	normal placentas	1064	\N	\N	tissue
-7055	28 years	1064	\N	\N	age
-7056	Chinese	1064	\N	\N	ethnic group
-7057	Homo sapiens	1064	\N	\N	Organism
-7058	GSM747303 1	1065	\N	\N	name
-7059	placentas from preeclamptic pregnancies	1065	\N	\N	tissue
-7060	31 years	1065	\N	\N	age
-7061	Chinese	1065	\N	\N	ethnic group
-7062	Homo sapiens	1065	\N	\N	Organism
-7063	GSM747302 1	1066	\N	\N	name
-7064	placentas from preeclamptic pregnancies	1066	\N	\N	tissue
-7065	20 years	1066	\N	\N	age
-7066	Chinese	1066	\N	\N	ethnic group
-7067	Homo sapiens	1066	\N	\N	Organism
-7068	GSM747301 1	1067	\N	\N	name
-7069	placentas from preeclamptic pregnancies	1067	\N	\N	tissue
-7070	28 years	1067	\N	\N	age
-7071	Chinese	1067	\N	\N	ethnic group
-7072	Homo sapiens	1067	\N	\N	Organism
-7073	GSM747300 1	1068	\N	\N	name
-7074	placentas from preeclamptic pregnancies	1068	\N	\N	tissue
-7075	30 years	1068	\N	\N	age
-7076	Chinese	1068	\N	\N	ethnic group
-7077	Homo sapiens	1068	\N	\N	Organism
-7078	GSM747299 1	1069	\N	\N	name
-7079	placentas from preeclamptic pregnancies	1069	\N	\N	tissue
-7080	23 years	1069	\N	\N	age
-7081	Chinese	1069	\N	\N	ethnic group
-7082	Homo sapiens	1069	\N	\N	Organism
-7083	GSM747298 1	1070	\N	\N	name
-7084	placentas from preeclamptic pregnancies	1070	\N	\N	tissue
-7085	24 years	1070	\N	\N	age
-7086	Chinese	1070	\N	\N	ethnic group
-7087	Homo sapiens	1070	\N	\N	Organism
-7088	GSM396437 1	1071	\N	\N	name
-7089	severe pre-eclampsia	1071	\N	\N	phenotype
-7090	placentae	1071	\N	\N	tissue
-7091	Homo sapiens	1071	\N	\N	Organism
-7092	GSM396437 2	1072	\N	\N	name
-7093	normal	1072	\N	\N	phenotype
-7094	placentae	1072	\N	\N	tissue
-7095	Homo sapiens	1072	\N	\N	Organism
-7096	GSM396436 1	1073	\N	\N	name
-7097	severe pre-eclampsia	1073	\N	\N	phenotype
-7098	placentae	1073	\N	\N	tissue
-7099	Homo sapiens	1073	\N	\N	Organism
-7100	GSM396436 2	1074	\N	\N	name
-7101	normal	1074	\N	\N	phenotype
-7102	placentae	1074	\N	\N	tissue
-7103	Homo sapiens	1074	\N	\N	Organism
-7104	GSM396435 2	1075	\N	\N	name
-7105	normal	1075	\N	\N	phenotype
-7106	placentae	1075	\N	\N	tissue
-7107	Homo sapiens	1075	\N	\N	Organism
-7108	GSM396435 1	1076	\N	\N	name
-7109	severe pre-eclampsia	1076	\N	\N	phenotype
-7110	placentae	1076	\N	\N	tissue
-7111	Homo sapiens	1076	\N	\N	Organism
-7112	GSM396434 1	1077	\N	\N	name
-7113	severe pre-eclampsia	1077	\N	\N	phenotype
-7114	placentae	1077	\N	\N	tissue
-7115	Homo sapiens	1077	\N	\N	Organism
-7116	GSM396434 2	1078	\N	\N	name
-7117	normal	1078	\N	\N	phenotype
-7118	placentae	1078	\N	\N	tissue
-7119	Homo sapiens	1078	\N	\N	Organism
-7120	GSM396433 1	1079	\N	\N	name
-7121	severe pre-eclampsia	1079	\N	\N	phenotype
-7122	placentae	1079	\N	\N	tissue
-7123	Homo sapiens	1079	\N	\N	Organism
-7124	GSM396433 2	1080	\N	\N	name
-7125	normal	1080	\N	\N	phenotype
-7126	placentae	1080	\N	\N	tissue
-7127	Homo sapiens	1080	\N	\N	Organism
-7128	GSM396432 2	1081	\N	\N	name
-7129	normal	1081	\N	\N	phenotype
-7130	placentae	1081	\N	\N	tissue
-7131	Homo sapiens	1081	\N	\N	Organism
-7132	GSM396432 1	1082	\N	\N	name
-7133	severe pre-eclampsia	1082	\N	\N	phenotype
-7134	placentae	1082	\N	\N	tissue
-7135	Homo sapiens	1082	\N	\N	Organism
-7136	GSM396431 2	1083	\N	\N	name
-7137	normal	1083	\N	\N	phenotype
-7138	placentae	1083	\N	\N	tissue
-7139	Homo sapiens	1083	\N	\N	Organism
-7140	GSM396431 1	1084	\N	\N	name
-7141	severe pre-eclampsia	1084	\N	\N	phenotype
-7142	placentae	1084	\N	\N	tissue
-7143	Homo sapiens	1084	\N	\N	Organism
-7144	GSM396430 2	1085	\N	\N	name
-7145	normal	1085	\N	\N	phenotype
-7146	placentae	1085	\N	\N	tissue
-7147	Homo sapiens	1085	\N	\N	Organism
-7148	GSM396430 1	1086	\N	\N	name
-7149	severe pre-eclampsia	1086	\N	\N	phenotype
-7150	placentae	1086	\N	\N	tissue
-7151	Homo sapiens	1086	\N	\N	Organism
+7085	24	1070	6	6	age
+7064	placentas from preeclamptic pregnancies	1066	1	1	tissue
+7069	placentas from preeclamptic pregnancies	1067	1	1	tissue
+7074	placentas from preeclamptic pregnancies	1068	1	1	tissue
+7079	placentas from preeclamptic pregnancies	1069	1	1	tissue
+7084	placentas from preeclamptic pregnancies	1070	4	1	tissue
+7083	GSM747298 1	1070	5	5	name
+7078	GSM747299 1	1069	5	5	name
+7073	GSM747300 1	1068	5	5	name
+7068	GSM747301 1	1067	5	5	name
+7063	GSM747302 1	1066	5	5	name
+7086	Chinese	1070	12	7	ethnic group
+7081	Chinese	1069	12	7	ethnic group
+7076	Chinese	1068	12	7	ethnic group
+7071	Chinese	1067	12	7	ethnic group
+7066	Chinese	1066	12	7	ethnic group
+7087	Homo sapiens	1070	3	2	Organism
+7082	Homo sapiens	1069	3	2	Organism
+7077	Homo sapiens	1068	3	2	Organism
+7072	Homo sapiens	1067	3	2	Organism
+7067	Homo sapiens	1066	3	2	Organism
+7065	20	1066	6	6	age
+7070	28	1067	6	6	age
+7075	30	1068	6	6	age
+7080	23	1069	6	6	age
 7152	GSM396437 1	1087	\N	\N	name
 7153	placentae	1087	\N	\N	tissue
 7154	Homo sapiens	1087	\N	\N	Organism
@@ -9959,196 +10041,34 @@ COPY articles_sampleattribute (id, old_value, sample_id, unificated_value_id, un
 7377	37+0	1134	\N	\N	gestational age (w+d)
 7378	<empty>	1134	\N	\N	gestational age
 7379	Homo sapiens	1134	\N	\N	Organism
-7380	GSM594064 1	1135	\N	\N	name
-7381	preeclampsia	1135	\N	\N	disease state
-7382	placenta	1135	\N	\N	tissue
-7383	Homo sapiens	1135	\N	\N	Organism
-7384	GSM594063 1	1136	\N	\N	name
-7385	preeclampsia	1136	\N	\N	disease state
-7386	placenta	1136	\N	\N	tissue
-7387	Homo sapiens	1136	\N	\N	Organism
-7388	GSM594062 1	1137	\N	\N	name
-7389	preeclampsia	1137	\N	\N	disease state
-7390	placenta	1137	\N	\N	tissue
-7391	Homo sapiens	1137	\N	\N	Organism
-7392	GSM594061 1	1138	\N	\N	name
-7393	preeclampsia	1138	\N	\N	disease state
-7394	placenta	1138	\N	\N	tissue
-7395	Homo sapiens	1138	\N	\N	Organism
-7396	GSM594060 1	1139	\N	\N	name
-7397	preeclampsia	1139	\N	\N	disease state
-7398	placenta	1139	\N	\N	tissue
-7399	Homo sapiens	1139	\N	\N	Organism
-7400	GSM594059 1	1140	\N	\N	name
-7401	preeclampsia	1140	\N	\N	disease state
-7402	placenta	1140	\N	\N	tissue
-7403	Homo sapiens	1140	\N	\N	Organism
-7404	GSM594058 1	1141	\N	\N	name
-7405	preeclampsia	1141	\N	\N	disease state
-7406	placenta	1141	\N	\N	tissue
-7407	Homo sapiens	1141	\N	\N	Organism
-7408	GSM594057 1	1142	\N	\N	name
-7409	preeclampsia	1142	\N	\N	disease state
-7410	placenta	1142	\N	\N	tissue
-7411	Homo sapiens	1142	\N	\N	Organism
-7412	GSM594056 1	1143	\N	\N	name
-7413	Fetal growth restriction (FGR)	1143	\N	\N	disease state
-7414	placenta	1143	\N	\N	tissue
-7415	Homo sapiens	1143	\N	\N	Organism
-7416	GSM594055 1	1144	\N	\N	name
-7417	Fetal growth restriction (FGR)	1144	\N	\N	disease state
-7418	placenta	1144	\N	\N	tissue
-7419	Homo sapiens	1144	\N	\N	Organism
-7420	GSM594054 1	1145	\N	\N	name
-7421	Fetal growth restriction (FGR)	1145	\N	\N	disease state
-7422	placenta	1145	\N	\N	tissue
-7423	Homo sapiens	1145	\N	\N	Organism
-7424	GSM594053 1	1146	\N	\N	name
-7425	Fetal growth restriction (FGR)	1146	\N	\N	disease state
-7426	placenta	1146	\N	\N	tissue
-7427	Homo sapiens	1146	\N	\N	Organism
-7428	GSM594052 1	1147	\N	\N	name
-7429	Fetal growth restriction (FGR)	1147	\N	\N	disease state
-7430	placenta	1147	\N	\N	tissue
-7431	Homo sapiens	1147	\N	\N	Organism
-7432	GSM594051 1	1148	\N	\N	name
-7433	Fetal growth restriction (FGR)	1148	\N	\N	disease state
-7434	placenta	1148	\N	\N	tissue
-7435	Homo sapiens	1148	\N	\N	Organism
-7436	GSM594050 1	1149	\N	\N	name
-7437	Fetal growth restriction (FGR)	1149	\N	\N	disease state
-7438	placenta	1149	\N	\N	tissue
-7439	Homo sapiens	1149	\N	\N	Organism
-7440	GSM594049 1	1150	\N	\N	name
-7441	Fetal growth restriction (FGR)	1150	\N	\N	disease state
-7442	placenta	1150	\N	\N	tissue
-7443	Homo sapiens	1150	\N	\N	Organism
-7444	GSM594048 1	1151	\N	\N	name
-7445	Normotensive control pregnancy	1151	\N	\N	disease state
-7446	placenta	1151	\N	\N	tissue
-7447	Homo sapiens	1151	\N	\N	Organism
-7448	GSM594047 1	1152	\N	\N	name
-7449	Normotensive control pregnancy	1152	\N	\N	disease state
-7450	placenta	1152	\N	\N	tissue
-7451	Homo sapiens	1152	\N	\N	Organism
-7452	GSM594046 1	1153	\N	\N	name
-7453	Normotensive control pregnancy	1153	\N	\N	disease state
-7454	placenta	1153	\N	\N	tissue
-7455	Homo sapiens	1153	\N	\N	Organism
-7456	GSM594045 1	1154	\N	\N	name
-7457	Normotensive control pregnancy	1154	\N	\N	disease state
-7458	placenta	1154	\N	\N	tissue
-7459	Homo sapiens	1154	\N	\N	Organism
-7460	GSM594044 1	1155	\N	\N	name
-7461	Normotensive control pregnancy	1155	\N	\N	disease state
-7462	placenta	1155	\N	\N	tissue
-7463	Homo sapiens	1155	\N	\N	Organism
-7464	GSM594043 1	1156	\N	\N	name
-7465	Normotensive control pregnancy	1156	\N	\N	disease state
-7466	placenta	1156	\N	\N	tissue
-7467	Homo sapiens	1156	\N	\N	Organism
-7468	GSM594042 1	1157	\N	\N	name
-7469	Normotensive control pregnancy	1157	\N	\N	disease state
-7470	placenta	1157	\N	\N	tissue
-7471	Homo sapiens	1157	\N	\N	Organism
-7472	GSM594041 1	1158	\N	\N	name
-7473	Normotensive control pregnancy	1158	\N	\N	disease state
-7474	placenta	1158	\N	\N	tissue
-7475	Homo sapiens	1158	\N	\N	Organism
-7476	GSM225508 1	1159	\N	\N	name
-7477	Homo sapiens	1159	\N	\N	Organism
-7478	GSM225501 1	1160	\N	\N	name
-7479	Homo sapiens	1160	\N	\N	Organism
-7480	GSM225492 1	1161	\N	\N	name
-7481	Homo sapiens	1161	\N	\N	Organism
-7482	GSM225493 1	1162	\N	\N	name
-7483	Homo sapiens	1162	\N	\N	Organism
-7484	GSM225495 1	1163	\N	\N	name
-7485	Homo sapiens	1163	\N	\N	Organism
-7486	GSM225472 1	1164	\N	\N	name
-7487	Homo sapiens	1164	\N	\N	Organism
-7488	GSM225490 1	1165	\N	\N	name
-7489	Homo sapiens	1165	\N	\N	Organism
-7490	GSM225471 1	1166	\N	\N	name
-7491	Homo sapiens	1166	\N	\N	Organism
-7492	GSM225489 1	1167	\N	\N	name
-7493	Homo sapiens	1167	\N	\N	Organism
-7494	GSM225477 1	1168	\N	\N	name
-7495	Homo sapiens	1168	\N	\N	Organism
-7496	GSM225509 1	1169	\N	\N	name
-7497	Homo sapiens	1169	\N	\N	Organism
-7498	GSM225487 1	1170	\N	\N	name
-7499	Homo sapiens	1170	\N	\N	Organism
-7500	GSM225480 1	1171	\N	\N	name
-7501	Homo sapiens	1171	\N	\N	Organism
-7502	GSM225485 1	1172	\N	\N	name
-7503	Homo sapiens	1172	\N	\N	Organism
-7504	GSM225488 1	1173	\N	\N	name
-7505	Homo sapiens	1173	\N	\N	Organism
-7506	GSM225504 1	1174	\N	\N	name
-7507	Homo sapiens	1174	\N	\N	Organism
-7508	GSM225507 1	1175	\N	\N	name
-7509	Homo sapiens	1175	\N	\N	Organism
-7510	GSM225470 1	1176	\N	\N	name
-7511	Homo sapiens	1176	\N	\N	Organism
-7512	GSM225486 1	1177	\N	\N	name
-7513	Homo sapiens	1177	\N	\N	Organism
-7514	GSM225475 1	1178	\N	\N	name
-7515	Homo sapiens	1178	\N	\N	Organism
-7516	GSM225506 1	1179	\N	\N	name
-7517	Homo sapiens	1179	\N	\N	Organism
-7518	GSM225479 1	1180	\N	\N	name
-7519	Homo sapiens	1180	\N	\N	Organism
-7520	GSM225494 1	1181	\N	\N	name
-7521	Homo sapiens	1181	\N	\N	Organism
-7522	GSM225498 1	1182	\N	\N	name
-7523	Homo sapiens	1182	\N	\N	Organism
-7524	GSM225512 1	1183	\N	\N	name
-7525	Homo sapiens	1183	\N	\N	Organism
-7526	GSM225497 1	1184	\N	\N	name
-7527	Homo sapiens	1184	\N	\N	Organism
-7528	GSM225502 1	1185	\N	\N	name
-7529	Homo sapiens	1185	\N	\N	Organism
-7530	GSM225478 1	1186	\N	\N	name
-7531	Homo sapiens	1186	\N	\N	Organism
-7532	GSM225481 1	1187	\N	\N	name
-7533	Homo sapiens	1187	\N	\N	Organism
-7534	GSM225503 1	1188	\N	\N	name
-7535	Homo sapiens	1188	\N	\N	Organism
-7536	GSM225511 1	1189	\N	\N	name
-7537	Homo sapiens	1189	\N	\N	Organism
-7538	GSM225499 1	1190	\N	\N	name
-7539	Homo sapiens	1190	\N	\N	Organism
-7540	GSM225491 1	1191	\N	\N	name
-7541	Homo sapiens	1191	\N	\N	Organism
-7542	GSM225473 1	1192	\N	\N	name
-7543	Homo sapiens	1192	\N	\N	Organism
-7544	GSM225474 1	1193	\N	\N	name
-7545	Homo sapiens	1193	\N	\N	Organism
-7546	GSM225476 1	1194	\N	\N	name
-7547	Homo sapiens	1194	\N	\N	Organism
-7548	GSM225500 1	1195	\N	\N	name
-7549	Homo sapiens	1195	\N	\N	Organism
-7550	GSM225513 1	1196	\N	\N	name
-7551	Homo sapiens	1196	\N	\N	Organism
-7552	GSM225484 1	1197	\N	\N	name
-7553	Homo sapiens	1197	\N	\N	Organism
-7554	GSM225505 1	1198	\N	\N	name
-7555	Homo sapiens	1198	\N	\N	Organism
-7556	GSM225483 1	1199	\N	\N	name
-7557	Homo sapiens	1199	\N	\N	Organism
-7558	GSM225496 1	1200	\N	\N	name
-7559	Homo sapiens	1200	\N	\N	Organism
-7560	GSM225510 1	1201	\N	\N	name
-7561	Homo sapiens	1201	\N	\N	Organism
-7562	GSE13155GSM329336	1202	\N	\N	name
-7563	Mus musculus	1202	\N	\N	Organism
-7564	GSE13155GSM329337	1203	\N	\N	name
-7565	Mus musculus	1203	\N	\N	Organism
-7566	GSE13155GSM329338	1204	\N	\N	name
-7567	Homo sapiens	1204	\N	\N	Organism
-7568	GSE13155GSM329339	1205	\N	\N	name
-7569	Homo sapiens	1205	\N	\N	Organism
+7441	Fetal growth restriction (FGR)	1150	23	10	disease state
+7437	Fetal growth restriction (FGR)	1149	23	10	disease state
+7433	Fetal growth restriction (FGR)	1148	23	10	disease state
+7429	Fetal growth restriction (FGR)	1147	23	10	disease state
+7425	Fetal growth restriction (FGR)	1146	23	10	disease state
+7421	Fetal growth restriction (FGR)	1145	23	10	disease state
+7473	Normotensive control pregnancy	1158	10	10	disease state
+7469	Normotensive control pregnancy	1157	10	10	disease state
+7465	Normotensive control pregnancy	1156	10	10	disease state
+7461	Normotensive control pregnancy	1155	10	10	disease state
+7457	Normotensive control pregnancy	1154	10	10	disease state
+7453	Normotensive control pregnancy	1153	10	10	disease state
+7449	Normotensive control pregnancy	1152	10	10	disease state
+7445	Normotensive control pregnancy	1151	10	10	disease state
+7472	GSM594041 1	1158	5	5	name
+7468	GSM594042 1	1157	5	5	name
+7464	GSM594043 1	1156	5	5	name
+7460	GSM594044 1	1155	5	5	name
+7456	GSM594045 1	1154	5	5	name
+7452	GSM594046 1	1153	5	5	name
+7448	GSM594047 1	1152	5	5	name
+7444	GSM594048 1	1151	5	5	name
+7440	GSM594049 1	1150	5	5	name
+7436	GSM594050 1	1149	5	5	name
+7432	GSM594051 1	1148	5	5	name
+7428	GSM594052 1	1147	5	5	name
+7424	GSM594053 1	1146	5	5	name
+7420	GSM594054 1	1145	5	5	name
 7570	D01	1206	\N	\N	name
 7571	normal	1206	\N	\N	DiseaseState
 7572	Homo sapiens	1206	\N	\N	Organism
@@ -10669,232 +10589,165 @@ COPY articles_sampleattribute (id, old_value, sample_id, unificated_value_id, un
 8087	Homo sapiens	1309	\N	\N	Organism
 8088	Decidua basalis	1309	\N	\N	OrganismPart
 8089	Trondheim	1309	\N	\N	BioSourceProvider
-8090	GSM367826 1	1310	\N	\N	name
-8091	37.6wk preeclamptic	1310	\N	\N	condition
-8092	Homo sapiens	1310	\N	\N	Organism
-8093	GSM367825 1	1311	\N	\N	name
-8094	35.9wk preeclamptic	1311	\N	\N	condition
-8095	Homo sapiens	1311	\N	\N	Organism
-8096	GSM367824 1	1312	\N	\N	name
-8097	34.0wk preeclamptic	1312	\N	\N	condition
-8098	Homo sapiens	1312	\N	\N	Organism
-8099	GSM367823 1	1313	\N	\N	name
-8100	33.0wk preeclamptic	1313	\N	\N	condition
-8101	Homo sapiens	1313	\N	\N	Organism
-8102	GSM367822 1	1314	\N	\N	name
-8103	32.9wk preeclamptic	1314	\N	\N	condition
-8104	Homo sapiens	1314	\N	\N	Organism
-8105	GSM367821 1	1315	\N	\N	name
-8106	32.0wk preeclamptic	1315	\N	\N	condition
-8107	Homo sapiens	1315	\N	\N	Organism
-8108	GSM367820 1	1316	\N	\N	name
-8109	31.9wk preeclamptic	1316	\N	\N	condition
-8110	Homo sapiens	1316	\N	\N	Organism
-8111	GSM367819 1	1317	\N	\N	name
-8112	31.7wk preeclamptic	1317	\N	\N	condition
-8113	Homo sapiens	1317	\N	\N	Organism
-8114	GSM367818 1	1318	\N	\N	name
-8115	31.1wk preeclamptic	1318	\N	\N	condition
-8116	Homo sapiens	1318	\N	\N	Organism
-8117	GSM367817 1	1319	\N	\N	name
-8118	30.6wk preeclamptic	1319	\N	\N	condition
-8119	Homo sapiens	1319	\N	\N	Organism
-8120	GSM367816 1	1320	\N	\N	name
-8121	30.4wk preeclamptic	1320	\N	\N	condition
-8122	Homo sapiens	1320	\N	\N	Organism
-8123	GSM367815 1	1321	\N	\N	name
-8124	24.1wk preeclamptic	1321	\N	\N	condition
-8125	Homo sapiens	1321	\N	\N	Organism
-8126	GSM367814 1	1322	\N	\N	name
-8127	36.6wk preterm	1322	\N	\N	condition
-8128	Homo sapiens	1322	\N	\N	Organism
-8129	GSM367813 1	1323	\N	\N	name
-8130	35.9wk preterm	1323	\N	\N	condition
-8131	Homo sapiens	1323	\N	\N	Organism
-8132	GSM367812 1	1324	\N	\N	name
-8133	35.7wk preterm	1324	\N	\N	condition
-8134	Homo sapiens	1324	\N	\N	Organism
-8135	GSM367811 1	1325	\N	\N	name
-8136	33.9wk preterm	1325	\N	\N	condition
-8137	Homo sapiens	1325	\N	\N	Organism
-8138	GSM367810 1	1326	\N	\N	name
-8139	33.3wk preterm	1326	\N	\N	condition
-8140	Homo sapiens	1326	\N	\N	Organism
-8141	GSM367809 1	1327	\N	\N	name
-8142	33.0wk preterm	1327	\N	\N	condition
-8143	Homo sapiens	1327	\N	\N	Organism
-8144	GSM367808 1	1328	\N	\N	name
-8145	29.9wk preterm	1328	\N	\N	condition
-8146	Homo sapiens	1328	\N	\N	Organism
-8147	GSM367807 1	1329	\N	\N	name
-8148	27.1wk preterm	1329	\N	\N	condition
-8149	Homo sapiens	1329	\N	\N	Organism
-8150	GSM367806 1	1330	\N	\N	name
-8151	25.6wk preterm	1330	\N	\N	condition
-8152	Homo sapiens	1330	\N	\N	Organism
-8153	GSM367805 1	1331	\N	\N	name
-8154	25.4wk preterm	1331	\N	\N	condition
-8155	Homo sapiens	1331	\N	\N	Organism
-8156	GSM367804 1	1332	\N	\N	name
-8157	24.7wk preterm	1332	\N	\N	condition
-8158	Homo sapiens	1332	\N	\N	Organism
-8159	GSM367803 1	1333	\N	\N	name
-8160	37.6wk preeclamptic	1333	\N	\N	condition
-8161	Homo sapiens	1333	\N	\N	Organism
-8162	GSM367802 1	1334	\N	\N	name
-8163	35.9wk preeclamptic	1334	\N	\N	condition
-8164	Homo sapiens	1334	\N	\N	Organism
-8165	GSM367801 1	1335	\N	\N	name
-8166	34.0wk preeclamptic	1335	\N	\N	condition
-8167	Homo sapiens	1335	\N	\N	Organism
-8168	GSM367800 1	1336	\N	\N	name
-8169	33.0wk preeclamptic	1336	\N	\N	condition
-8170	Homo sapiens	1336	\N	\N	Organism
-8171	GSM367799 1	1337	\N	\N	name
-8172	32.9wk preeclamptic	1337	\N	\N	condition
-8173	Homo sapiens	1337	\N	\N	Organism
-8174	GSM367798 1	1338	\N	\N	name
-8175	32.0wk preeclamptic	1338	\N	\N	condition
-8176	Homo sapiens	1338	\N	\N	Organism
-8177	GSM367797 1	1339	\N	\N	name
-8178	31.9wk preeclamptic	1339	\N	\N	condition
-8179	Homo sapiens	1339	\N	\N	Organism
-8180	GSM367796 1	1340	\N	\N	name
-8181	31.7wk preeclamptic	1340	\N	\N	condition
-8182	Homo sapiens	1340	\N	\N	Organism
-8183	GSM367795 1	1341	\N	\N	name
-8184	31.1wk preeclamptic	1341	\N	\N	condition
-8185	Homo sapiens	1341	\N	\N	Organism
-8186	GSM367794 1	1342	\N	\N	name
-8187	30.6wk preeclamptic	1342	\N	\N	condition
-8188	Homo sapiens	1342	\N	\N	Organism
-8189	GSM367793 1	1343	\N	\N	name
-8190	30.4wk preeclamptic	1343	\N	\N	condition
-8191	Homo sapiens	1343	\N	\N	Organism
-8192	GSM367792 1	1344	\N	\N	name
-8193	24.1wk preeclamptic	1344	\N	\N	condition
-8194	Homo sapiens	1344	\N	\N	Organism
-8195	GSM367791 1	1345	\N	\N	name
-8196	36.6wk preterm	1345	\N	\N	condition
-8197	Homo sapiens	1345	\N	\N	Organism
-8198	GSM367790 1	1346	\N	\N	name
-8199	35.9wk preterm	1346	\N	\N	condition
-8200	Homo sapiens	1346	\N	\N	Organism
-8201	GSM367789 1	1347	\N	\N	name
-8202	35.7wk preterm	1347	\N	\N	condition
-8203	Homo sapiens	1347	\N	\N	Organism
-8204	GSM367788 1	1348	\N	\N	name
-8205	33.9wk preterm	1348	\N	\N	condition
-8206	Homo sapiens	1348	\N	\N	Organism
-8207	GSM367787 1	1349	\N	\N	name
-8208	33.3wk preterm	1349	\N	\N	condition
-8209	Homo sapiens	1349	\N	\N	Organism
-8210	GSM367786 1	1350	\N	\N	name
-8211	33.0wk preterm	1350	\N	\N	condition
-8212	Homo sapiens	1350	\N	\N	Organism
-8213	GSM367785 1	1351	\N	\N	name
-8214	29.9wk preterm	1351	\N	\N	condition
-8215	Homo sapiens	1351	\N	\N	Organism
-8216	GSM367784 1	1352	\N	\N	name
-8217	27.1wk preterm	1352	\N	\N	condition
-8218	Homo sapiens	1352	\N	\N	Organism
-8219	GSM367783 1	1353	\N	\N	name
-8220	25.6wk preterm	1353	\N	\N	condition
-8221	Homo sapiens	1353	\N	\N	Organism
-8222	GSM367782 1	1354	\N	\N	name
-8223	25.4wk preterm	1354	\N	\N	condition
-8224	Homo sapiens	1354	\N	\N	Organism
-8225	GSM367781 1	1355	\N	\N	name
-8226	24.7wk preterm	1355	\N	\N	condition
-8227	Homo sapiens	1355	\N	\N	Organism
-8228	GSE12767GSM320283	1356	\N	\N	name
-8229	Homo sapiens	1356	\N	\N	organism
-8230	preeclampsia	1356	\N	\N	disease
-8231	first trimester of pregnancy	1356	\N	\N	clinical information
-8232	Caucasian	1356	\N	\N	ethnicity
-8233	placenta	1356	\N	\N	organism part
-8234	wild type	1356	\N	\N	karyotype
-8235	GSE12767GSM320290	1357	\N	\N	name
-8236	Homo sapiens	1357	\N	\N	organism
-8237	normal	1357	\N	\N	disease
-8238	first trimester of pregnancy	1357	\N	\N	clinical information
-8239	Caucasian	1357	\N	\N	ethnicity
-8240	placenta	1357	\N	\N	organism part
-8241	wild type	1357	\N	\N	karyotype
-8242	GSE12767GSM320293	1358	\N	\N	name
-8243	Homo sapiens	1358	\N	\N	organism
-8244	normal	1358	\N	\N	disease
-8245	first trimester of pregnancy	1358	\N	\N	clinical information
-8246	Caucasian	1358	\N	\N	ethnicity
-8247	placenta	1358	\N	\N	organism part
-8248	wild type	1358	\N	\N	karyotype
-8249	GSE12767GSM320288	1359	\N	\N	name
-8250	Homo sapiens	1359	\N	\N	organism
-8251	preeclampsia	1359	\N	\N	disease
-8252	first trimester of pregnancy	1359	\N	\N	clinical information
-8253	Caucasian	1359	\N	\N	ethnicity
-8254	placenta	1359	\N	\N	organism part
-8255	wild type	1359	\N	\N	karyotype
-8256	GSE12767GSM320291	1360	\N	\N	name
-8257	Homo sapiens	1360	\N	\N	organism
-8258	normal	1360	\N	\N	disease
-8259	first trimester of pregnancy	1360	\N	\N	clinical information
-8260	Caucasian	1360	\N	\N	ethnicity
-8261	placenta	1360	\N	\N	organism part
-8262	wild type	1360	\N	\N	karyotype
-8263	GSE12767GSM320289	1361	\N	\N	name
-8264	Homo sapiens	1361	\N	\N	organism
-8265	normal	1361	\N	\N	disease
-8266	first trimester of pregnancy	1361	\N	\N	clinical information
-8267	Caucasian	1361	\N	\N	ethnicity
-8268	placenta	1361	\N	\N	organism part
-8269	wild type	1361	\N	\N	karyotype
-8270	GSE12767GSM320285	1362	\N	\N	name
-8271	Homo sapiens	1362	\N	\N	organism
-8272	normal	1362	\N	\N	disease
-8273	first trimester of pregnancy	1362	\N	\N	clinical information
-8274	Caucasian	1362	\N	\N	ethnicity
-8275	placenta	1362	\N	\N	organism part
-8276	wild type	1362	\N	\N	karyotype
-8277	GSE12767GSM320286	1363	\N	\N	name
-8278	Homo sapiens	1363	\N	\N	organism
-8279	normal	1363	\N	\N	disease
-8280	first trimester of pregnancy	1363	\N	\N	clinical information
-8281	Caucasian	1363	\N	\N	ethnicity
-8282	placenta	1363	\N	\N	organism part
-8283	wild type	1363	\N	\N	karyotype
-8284	GSE12767GSM320284	1364	\N	\N	name
-8285	Homo sapiens	1364	\N	\N	organism
-8286	preeclampsia	1364	\N	\N	disease
-8287	first trimester of pregnancy	1364	\N	\N	clinical information
-8288	Caucasian	1364	\N	\N	ethnicity
-8289	placenta	1364	\N	\N	organism part
-8290	wild type	1364	\N	\N	karyotype
-8291	GSE12767GSM320292	1365	\N	\N	name
-8292	Homo sapiens	1365	\N	\N	organism
-8293	preeclampsia	1365	\N	\N	disease
-8294	first trimester of pregnancy	1365	\N	\N	clinical information
-8295	Caucasian	1365	\N	\N	ethnicity
-8296	placenta	1365	\N	\N	organism part
-8297	wild type	1365	\N	\N	karyotype
-8298	GSE12767GSM320287	1366	\N	\N	name
-8299	Homo sapiens	1366	\N	\N	organism
-8300	normal	1366	\N	\N	disease
-8301	first trimester of pregnancy	1366	\N	\N	clinical information
-8302	Caucasian	1366	\N	\N	ethnicity
-8303	placenta	1366	\N	\N	organism part
-8304	wild type	1366	\N	\N	karyotype
-8305	GSE12767GSM320282	1367	\N	\N	name
-8306	Homo sapiens	1367	\N	\N	organism
-8307	normal	1367	\N	\N	disease
-8308	first trimester of pregnancy	1367	\N	\N	clinical information
-8309	Caucasian	1367	\N	\N	ethnicity
-8310	placenta	1367	\N	\N	organism part
-8311	wild type	1367	\N	\N	karyotype
-8312	GSE13475GSM339718	1368	\N	\N	name
-8313	Homo sapiens	1368	\N	\N	Organism
-8314	GSE13475GSM339719	1369	\N	\N	name
-8315	Homo sapiens	1369	\N	\N	Organism
+9488	GSM367819 1	1568	5	5	name
+9510	preterm	1574	10	10	diagnosis
+9514	preterm	1575	10	10	diagnosis
+9518	preterm	1576	10	10	diagnosis
+9522	preterm	1577	10	10	diagnosis
+9506	preterm	1573	10	10	diagnosis
+9525	33.0	1578	2	3	gestational age
+9529	29.9	1579	2	3	gestational age
+9533	27.1	1580	2	3	gestational age
+9830		1159	8	7	
+9831		1201	8	7	
+9832		1200	8	7	
+9833		1199	8	7	
+9526	preterm	1578	10	10	diagnosis
+9530	preterm	1579	10	10	diagnosis
+9534	preterm	1580	10	10	diagnosis
+9538	preterm	1581	10	10	diagnosis
+9542	preterm	1582	10	10	diagnosis
+9546	preterm	1583	10	10	diagnosis
+9598	preterm	1596	10	10	diagnosis
+9602	preterm	1597	10	10	diagnosis
+9606	preterm	1598	10	10	diagnosis
+9610	preterm	1599	10	10	diagnosis
+9614	preterm	1600	10	10	diagnosis
+9618	preterm	1601	10	10	diagnosis
+9622	preterm	1602	10	10	diagnosis
+9626	preterm	1603	10	10	diagnosis
+9630	preterm	1604	10	10	diagnosis
+9634	preterm	1605	10	10	diagnosis
+9638	preterm	1606	10	10	diagnosis
+7515	Homo sapiens	1178	3	2	Organism
+7517	Homo sapiens	1179	3	2	Organism
+7519	Homo sapiens	1180	3	2	Organism
+7521	Homo sapiens	1181	3	2	Organism
+7523	Homo sapiens	1182	3	2	Organism
+7525	Homo sapiens	1183	3	2	Organism
+7527	Homo sapiens	1184	3	2	Organism
+7529	Homo sapiens	1185	3	2	Organism
+7531	Homo sapiens	1186	3	2	Organism
+7533	Homo sapiens	1187	3	2	Organism
+7535	Homo sapiens	1188	3	2	Organism
+7537	Homo sapiens	1189	3	2	Organism
+7539	Homo sapiens	1190	3	2	Organism
+7541	Homo sapiens	1191	3	2	Organism
+7543	Homo sapiens	1192	3	2	Organism
+7545	Homo sapiens	1193	3	2	Organism
+7547	Homo sapiens	1194	3	2	Organism
+7549	Homo sapiens	1195	3	2	Organism
+7551	Homo sapiens	1196	3	2	Organism
+7553	Homo sapiens	1197	3	2	Organism
+7555	Homo sapiens	1198	3	2	Organism
+9834		1198	8	7	
+9835		1197	8	7	
+9836		1196	8	7	
+9837		1195	8	7	
+9838		1194	8	7	
+9839		1193	8	7	
+9840		1192	8	7	
+9841		1191	8	7	
+8234	wild type	1356	27	17	karyotype
+9842		1190	8	7	
+9843		1189	8	7	
+9844		1188	8	7	
+9845		1187	8	7	
+9846		1186	8	7	
+9847		1185	8	7	
+9848		1184	8	7	
+9849		1183	8	7	
+9850		1182	8	7	
+9851		1181	8	7	
+9852		1180	8	7	
+9853		1179	8	7	
+9854		1178	8	7	
+9855		1177	8	7	
+9856		1176	8	7	
+9857		1175	8	7	
+9858		1174	8	7	
+9859		1173	8	7	
+9860		1172	8	7	
+9861		1171	8	7	
+9862		1170	8	7	
+9863		1169	8	7	
+9864		1168	8	7	
+9865		1167	8	7	
+9866		1166	8	7	
+9867		1165	8	7	
+9868		1164	8	7	
+9869		1163	8	7	
+9870		1162	8	7	
+9871		1161	8	7	
+7148	GSM396430 1	1086	5	5	name
+7144	GSM396430 2	1085	5	5	name
+7140	GSM396431 1	1084	5	5	name
+7136	GSM396431 2	1083	5	5	name
+7132	GSM396432 1	1082	5	5	name
+7128	GSM396432 2	1081	5	5	name
+7124	GSM396433 2	1080	5	5	name
+9457	37.6	1561	2	3	gestational age
+7120	GSM396433 1	1079	5	5	name
+7116	GSM396434 2	1078	5	5	name
+9458	preeclamptic	1561	4	10	diagnosis
+7112	GSM396434 1	1077	5	5	name
+7108	GSM396435 1	1076	5	5	name
+9459	Homo sapiens	1561	3	2	Organism
+7104	GSM396435 2	1075	5	5	name
+7100	GSM396436 2	1074	5	5	name
+9460	GSM367826 1	1561	5	5	name
+7096	GSM396436 1	1073	5	5	name
+7092	GSM396437 2	1072	5	5	name
+7088	GSM396437 1	1071	5	5	name
+9641		1561	32	1	
+8311	wild type	1367	27	17	karyotype
+8304	wild type	1366	27	17	karyotype
+8297	wild type	1365	27	17	karyotype
+8290	wild type	1364	27	17	karyotype
+8283	wild type	1363	27	17	karyotype
+8276	wild type	1362	27	17	karyotype
+8269	wild type	1361	27	17	karyotype
+8262	wild type	1360	27	17	karyotype
+8255	wild type	1359	27	17	karyotype
+8248	wild type	1358	27	17	karyotype
+8241	wild type	1357	27	17	karyotype
+8305	GSE12767GSM320282	1367	5	5	name
+9872		1160	8	7	
+8298	GSE12767GSM320287	1366	5	5	name
+8291	GSE12767GSM320292	1365	5	5	name
+8284	GSE12767GSM320284	1364	5	5	name
+7149	severe pre-eclampsia	1086	37	10	phenotype
+7141	severe pre-eclampsia	1084	37	10	phenotype
+7133	severe pre-eclampsia	1082	37	10	phenotype
+7121	severe pre-eclampsia	1079	37	10	phenotype
+7113	severe pre-eclampsia	1077	37	10	phenotype
+7109	severe pre-eclampsia	1076	37	10	phenotype
+8277	GSE12767GSM320286	1363	5	5	name
+7097	severe pre-eclampsia	1073	37	10	phenotype
+7089	severe pre-eclampsia	1071	37	10	phenotype
+8270	GSE12767GSM320285	1362	5	5	name
+8263	GSE12767GSM320289	1361	5	5	name
+8256	GSE12767GSM320291	1360	5	5	name
+8249	GSE12767GSM320288	1359	5	5	name
+7145	normal	1085	10	10	phenotype
+7150	placentae	1086	1	1	tissue
+8242	GSE12767GSM320293	1358	5	5	name
+7137	normal	1083	10	10	phenotype
+8314	GSE13475GSM339719	1369	5	5	name
+7129	normal	1081	10	10	phenotype
+8312	GSE13475GSM339718	1368	5	5	name
+7125	normal	1080	10	10	phenotype
+7117	normal	1078	10	10	phenotype
+7105	normal	1075	10	10	phenotype
+7101	normal	1074	10	10	phenotype
+7093	normal	1072	10	10	phenotype
+8315	Homo sapiens	1369	3	1	Organism
+8313	Homo sapiens	1368	3	1	Organism
+8306	Homo sapiens	1367	3	2	organism
+8299	Homo sapiens	1366	3	2	organism
+8292	Homo sapiens	1365	3	2	organism
+8285	Homo sapiens	1364	3	2	organism
+8278	Homo sapiens	1363	3	2	organism
 8385	placenta	1401	1	1	Organism Part
 8381	placenta	1400	1	1	Organism Part
 8370	GSE9984GSM252355	1397	5	5	name
@@ -11157,7 +11010,6 @@ COPY articles_sampleattribute (id, old_value, sample_id, unificated_value_id, un
 8726	adult	1464	\N	\N	DevelopmentalStage
 8727	female	1464	\N	\N	Sex
 8728	<empty>	1464	\N	\N	DiseaseState
-8729	Case 58	1465	\N	\N	name
 8730	Homo sapiens	1465	\N	\N	Organism
 8731	frozen_sample	1465	\N	\N	BioSourceType
 8732	decidua	1465	\N	\N	OrganismPart
@@ -11221,6 +11073,51 @@ COPY articles_sampleattribute (id, old_value, sample_id, unificated_value_id, un
 8481	normal	1426	10	10	DiseaseState
 8501	early onset preeclampsia	1431	14	10	DiseaseState
 8485	early onset preeclampsia	1427	14	10	DiseaseState
+8729	Case 58	1465	\N	2	name
+9632	GSM367783 1	1604	5	5	name
+9636	GSM367782 1	1605	5	5	name
+9640	GSM367781 1	1606	5	5	name
+9873		1159	37	10	
+9874		1201	37	10	
+9875		1200	10	10	
+9876		1199	10	10	
+9877		1198	37	10	
+9878		1197	10	10	
+9879		1196	37	10	
+9880		1195	37	10	
+9881		1194	10	10	
+9882		1193	10	10	
+9883		1192	10	10	
+9884		1191	10	10	
+9885		1190	37	10	
+9886		1189	37	10	
+9887		1188	37	10	
+9888		1187	37	10	
+9889		1186	10	10	
+9890		1185	37	10	
+9891		1184	10	10	
+9892		1183	37	10	
+9893		1182	37	10	
+9894		1181	10	10	
+9895		1180	10	10	
+9896		1179	37	10	
+9897		1178	10	10	
+9898		1177	10	10	
+9899		1176	10	10	
+9900		1175	37	10	
+9901		1174	37	10	
+9902		1173	10	10	
+9903		1172	10	10	
+9904		1171	10	10	
+9905		1170	10	10	
+9906		1169	37	10	
+9907		1168	10	10	
+9908		1167	10	10	
+9909		1166	10	10	
+9910		1165	10	10	
+9911		1164	10	10	
+9912		1163	10	10	
+9913		1162	10	10	
 8402	placenta	1406	1	1	OrganismPart
 8510	placenta	1433	1	1	OrganismPart
 8506	placenta	1432	1	1	OrganismPart
@@ -11249,6 +11146,23 @@ COPY articles_sampleattribute (id, old_value, sample_id, unificated_value_id, un
 8414	placenta	1409	1	1	OrganismPart
 8410	placenta	1408	1	1	OrganismPart
 8406	placenta	1407	1	1	OrganismPart
+9914		1161	10	10	
+9915		1160	37	10	
+7146	placentae	1085	1	1	tissue
+7142	placentae	1084	1	1	tissue
+7138	placentae	1083	1	1	tissue
+7134	placentae	1082	1	1	tissue
+7130	placentae	1081	1	1	tissue
+7126	placentae	1080	1	1	tissue
+7122	placentae	1079	1	1	tissue
+7118	placentae	1078	1	1	tissue
+7114	placentae	1077	1	1	tissue
+7110	placentae	1076	1	1	tissue
+7106	placentae	1075	1	1	tissue
+7102	placentae	1074	1	1	tissue
+7098	placentae	1073	1	1	tissue
+7094	placentae	1072	1	1	tissue
+7090	placentae	1071	1	1	tissue
 8403	Homo sapiens	1406	3	2	Organism
 8511	Homo sapiens	1433	3	2	Organism
 8507	Homo sapiens	1432	3	2	Organism
@@ -11384,6 +11298,22 @@ COPY articles_sampleattribute (id, old_value, sample_id, unificated_value_id, un
 8818		1374	1	1	
 8817		1375	1	1	
 8810		1382	1	1	
+9477	32.0	1566	2	3	gestational age
+9461	35.9	1562	2	3	gestational age
+9465	34.0	1563	2	3	gestational age
+9469	33.0	1564	2	3	gestational age
+9473	32.9	1565	2	3	gestational age
+9481	31.9	1567	2	3	gestational age
+9485	31.7	1568	2	3	gestational age
+9489	31.1	1569	2	3	gestational age
+9493	30.6	1570	2	3	gestational age
+9497	30.4	1571	2	3	gestational age
+9501	24.1	1572	2	3	gestational age
+9505	36.6	1573	2	3	gestational age
+9509	35.9	1574	2	3	gestational age
+9513	35.7	1575	2	3	gestational age
+9517	33.9	1576	2	3	gestational age
+9521	33.3	1577	2	3	gestational age
 8823		1370	23	10	
 8838		1371	23	10	
 8837		1372	23	10	
@@ -11400,6 +11330,544 @@ COPY articles_sampleattribute (id, old_value, sample_id, unificated_value_id, un
 8826		1383	10	10	
 8825		1384	10	10	
 8824		1385	10	10	
+8840		1368	16	12	
+8841		1368	24	12	
+9537	25.6	1581	2	3	gestational age
+8308	first trimester of pregnancy	1367	20	14	clinical information
+8842		1368	25	16	
+8843		1369	16	12	
+8844		1369	24	12	
+8845		1369	26	16	
+9541	25.4	1582	2	3	gestational age
+9545	24.7	1583	2	3	gestational age
+8307	normal	1367	10	10	disease
+8300	normal	1366	10	10	disease
+8235	GSE12767GSM320290	1357	5	5	name
+8228	GSE12767GSM320283	1356	5	5	name
+8271	Homo sapiens	1362	3	2	organism
+8264	Homo sapiens	1361	3	2	organism
+8257	Homo sapiens	1360	3	2	organism
+8250	Homo sapiens	1359	3	2	organism
+8243	Homo sapiens	1358	3	2	organism
+8236	Homo sapiens	1357	3	2	organism
+8229	Homo sapiens	1356	3	2	organism
+9549	37.6	1584	2	3	gestational age
+9553	35.9	1585	2	3	gestational age
+9557	34.0	1586	2	3	gestational age
+9561	33.0	1587	2	3	gestational age
+9565	32.9	1588	2	3	gestational age
+9569	32.0	1589	2	3	gestational age
+8279	normal	1363	10	10	disease
+8293	preeclampsia	1365	4	10	disease
+8286	preeclampsia	1364	4	10	disease
+8251	preeclampsia	1359	4	10	disease
+8230	preeclampsia	1356	4	10	disease
+8301	first trimester of pregnancy	1366	20	14	clinical information
+8294	first trimester of pregnancy	1365	20	14	clinical information
+8287	first trimester of pregnancy	1364	20	14	clinical information
+8280	first trimester of pregnancy	1363	20	14	clinical information
+8273	first trimester of pregnancy	1362	20	14	clinical information
+8266	first trimester of pregnancy	1361	20	14	clinical information
+8259	first trimester of pregnancy	1360	20	14	clinical information
+8252	first trimester of pregnancy	1359	20	14	clinical information
+8245	first trimester of pregnancy	1358	20	14	clinical information
+8238	first trimester of pregnancy	1357	20	14	clinical information
+8231	first trimester of pregnancy	1356	20	14	clinical information
+8272	normal	1362	10	10	disease
+8309	Caucasian	1367	8	7	ethnicity
+8302	Caucasian	1366	8	7	ethnicity
+8295	Caucasian	1365	8	7	ethnicity
+8288	Caucasian	1364	8	7	ethnicity
+8281	Caucasian	1363	8	7	ethnicity
+8265	normal	1361	10	10	disease
+8258	normal	1360	10	10	disease
+8244	normal	1358	10	10	disease
+8237	normal	1357	10	10	disease
+8274	Caucasian	1362	8	7	ethnicity
+8267	Caucasian	1361	8	7	ethnicity
+8260	Caucasian	1360	8	7	ethnicity
+8253	Caucasian	1359	8	7	ethnicity
+8246	Caucasian	1358	8	7	ethnicity
+8239	Caucasian	1357	8	7	ethnicity
+8232	Caucasian	1356	8	7	ethnicity
+9573	31.9	1590	2	3	gestational age
+9577	31.7	1591	2	3	gestational age
+9581	31.1	1592	2	3	gestational age
+9585	30.6	1593	2	3	gestational age
+9589	30.4	1594	2	3	gestational age
+9593	24.1	1595	2	3	gestational age
+9597	36.6	1596	2	3	gestational age
+9601	35.9	1597	2	3	gestational age
+9605	35.7	1598	2	3	gestational age
+9609	33.9	1599	2	3	gestational age
+9613	33.3	1600	2	3	gestational age
+9617	33.0	1601	2	3	gestational age
+9621	29.9	1602	2	3	gestational age
+9625	27.1	1603	2	3	gestational age
+9629	25.6	1604	2	3	gestational age
+9633	25.4	1605	2	3	gestational age
+9637	24.7	1606	2	3	gestational age
+8310	placenta	1367	28	1	organism part
+8303	placenta	1366	28	1	organism part
+8296	placenta	1365	28	1	organism part
+8289	placenta	1364	28	1	organism part
+8282	placenta	1363	28	1	organism part
+8275	placenta	1362	28	1	organism part
+8268	placenta	1361	28	1	organism part
+8261	placenta	1360	28	1	organism part
+8254	placenta	1359	28	1	organism part
+8247	placenta	1358	28	1	organism part
+8240	placenta	1357	28	1	organism part
+8233	placenta	1356	28	1	organism part
+9594	preeclamptic	1595	4	10	diagnosis
+9590	preeclamptic	1594	4	10	diagnosis
+9586	preeclamptic	1593	4	10	diagnosis
+9582	preeclamptic	1592	4	10	diagnosis
+9578	preeclamptic	1591	4	10	diagnosis
+9574	preeclamptic	1590	4	10	diagnosis
+9570	preeclamptic	1589	4	10	diagnosis
+9566	preeclamptic	1588	4	10	diagnosis
+9562	preeclamptic	1587	4	10	diagnosis
+9558	preeclamptic	1586	4	10	diagnosis
+9554	preeclamptic	1585	4	10	diagnosis
+9550	preeclamptic	1584	4	10	diagnosis
+9502	preeclamptic	1572	4	10	diagnosis
+8890		1364	30	13	
+8848	37	1366	6	18	
+8847	37	1367	6	18	
+8857	37	1357	6	18	
+8856	37	1358	6	18	
+9498	preeclamptic	1571	4	10	diagnosis
+8854	37	1360	6	18	
+8853	37	1361	6	18	
+8852	37	1362	6	18	
+8851	37	1363	6	18	
+9494	preeclamptic	1570	4	10	diagnosis
+9490	preeclamptic	1569	4	10	diagnosis
+9486	preeclamptic	1568	4	10	diagnosis
+8885	36	1364	6	6	
+9482	preeclamptic	1567	4	10	diagnosis
+8886	2	1364	29	19	
+9478	preeclamptic	1566	4	10	diagnosis
+8887	0	1364	29	20	
+8888	35.7	1364	2	3	
+8889	12.4	1364	2	21	
+8882		1356	19	13	
+8879	37	1356	6	6	
+8880	2	1356	29	19	
+8881	0	1356	29	20	
+8883	38	1356	2	3	
+8884	11.4	1356	2	21	
+8896		1359	30	13	
+8902		1365	19	13	
+8891	36	1359	6	6	
+8892	1	1359	29	19	
+8893	0	1359	29	20	
+8894	41.3	1359	2	3	
+8895	10.7	1359	2	21	
+8897	37	1365	6	6	
+8898	1	1365	29	19	
+8899	0	1365	29	20	
+8900	34.9	1365	2	3	
+8901	11.0	1365	2	21	
+9474	preeclamptic	1565	4	10	diagnosis
+9470	preeclamptic	1564	4	10	diagnosis
+9466	preeclamptic	1563	4	10	diagnosis
+9462	preeclamptic	1562	4	10	diagnosis
+9467	Homo sapiens	1563	3	2	Organism
+9463	Homo sapiens	1562	3	2	Organism
+9471	Homo sapiens	1564	3	2	Organism
+9475	Homo sapiens	1565	3	2	Organism
+9479	Homo sapiens	1566	3	2	Organism
+9483	Homo sapiens	1567	3	2	Organism
+9487	Homo sapiens	1568	3	2	Organism
+9491	Homo sapiens	1569	3	2	Organism
+9495	Homo sapiens	1570	3	2	Organism
+9499	Homo sapiens	1571	3	2	Organism
+9503	Homo sapiens	1572	3	2	Organism
+9507	Homo sapiens	1573	3	2	Organism
+9511	Homo sapiens	1574	3	2	Organism
+9515	Homo sapiens	1575	3	2	Organism
+9519	Homo sapiens	1576	3	2	Organism
+9523	Homo sapiens	1577	3	2	Organism
+9527	Homo sapiens	1578	3	2	Organism
+9531	Homo sapiens	1579	3	2	Organism
+9535	Homo sapiens	1580	3	2	Organism
+9539	Homo sapiens	1581	3	2	Organism
+9543	Homo sapiens	1582	3	2	Organism
+9547	Homo sapiens	1583	3	2	Organism
+9551	Homo sapiens	1584	3	2	Organism
+9555	Homo sapiens	1585	3	2	Organism
+9559	Homo sapiens	1586	3	2	Organism
+9563	Homo sapiens	1587	3	2	Organism
+9567	Homo sapiens	1588	3	2	Organism
+9571	Homo sapiens	1589	3	2	Organism
+9575	Homo sapiens	1590	3	2	Organism
+9579	Homo sapiens	1591	3	2	Organism
+9583	Homo sapiens	1592	3	2	Organism
+9587	Homo sapiens	1593	3	2	Organism
+9591	Homo sapiens	1594	3	2	Organism
+9595	Homo sapiens	1595	3	2	Organism
+9599	Homo sapiens	1596	3	2	Organism
+9603	Homo sapiens	1597	3	2	Organism
+9607	Homo sapiens	1598	3	2	Organism
+9611	Homo sapiens	1599	3	2	Organism
+9615	Homo sapiens	1600	3	2	Organism
+9619	Homo sapiens	1601	3	2	Organism
+9623	Homo sapiens	1602	3	2	Organism
+9627	Homo sapiens	1603	3	2	Organism
+9631	Homo sapiens	1604	3	2	Organism
+9635	Homo sapiens	1605	3	2	Organism
+9639	Homo sapiens	1606	3	2	Organism
+9468	GSM367824 1	1563	5	5	name
+9464	GSM367825 1	1562	5	5	name
+9472	GSM367823 1	1564	5	5	name
+9476	GSM367822 1	1565	5	5	name
+9480	GSM367821 1	1566	5	5	name
+9484	GSM367820 1	1567	5	5	name
+9492	GSM367818 1	1569	5	5	name
+9496	GSM367817 1	1570	5	5	name
+9500	GSM367816 1	1571	5	5	name
+9504	GSM367815 1	1572	5	5	name
+9508	GSM367814 1	1573	5	5	name
+9512	GSM367813 1	1574	5	5	name
+9516	GSM367812 1	1575	5	5	name
+9520	GSM367811 1	1576	5	5	name
+9524	GSM367810 1	1577	5	5	name
+9528	GSM367809 1	1578	5	5	name
+9532	GSM367808 1	1579	5	5	name
+9536	GSM367807 1	1580	5	5	name
+9540	GSM367806 1	1581	5	5	name
+9544	GSM367805 1	1582	5	5	name
+9548	GSM367804 1	1583	5	5	name
+9552	GSM367803 1	1584	5	5	name
+9556	GSM367802 1	1585	5	5	name
+9560	GSM367801 1	1586	5	5	name
+9564	GSM367800 1	1587	5	5	name
+9568	GSM367799 1	1588	5	5	name
+9572	GSM367798 1	1589	5	5	name
+9576	GSM367797 1	1590	5	5	name
+9580	GSM367796 1	1591	5	5	name
+9584	GSM367795 1	1592	5	5	name
+9588	GSM367794 1	1593	5	5	name
+9592	GSM367793 1	1594	5	5	name
+9596	GSM367792 1	1595	5	5	name
+9600	GSM367791 1	1596	5	5	name
+9604	GSM367790 1	1597	5	5	name
+9608	GSM367789 1	1598	5	5	name
+9612	GSM367788 1	1599	5	5	name
+9616	GSM367787 1	1600	5	5	name
+9620	GSM367786 1	1601	5	5	name
+9624	GSM367785 1	1602	5	5	name
+9628	GSM367784 1	1603	5	5	name
+7416	GSM594055 1	1144	5	5	name
+7412	GSM594056 1	1143	5	5	name
+7408	GSM594057 1	1142	5	5	name
+7404	GSM594058 1	1141	5	5	name
+7400	GSM594059 1	1140	5	5	name
+7396	GSM594060 1	1139	5	5	name
+7392	GSM594061 1	1138	5	5	name
+7388	GSM594062 1	1137	5	5	name
+7384	GSM594063 1	1136	5	5	name
+7380	GSM594064 1	1135	5	5	name
+7417	Fetal growth restriction (FGR)	1144	23	10	disease state
+7474	placenta	1158	28	1	tissue
+7470	placenta	1157	28	1	tissue
+7466	placenta	1156	28	1	tissue
+7462	placenta	1155	28	1	tissue
+7458	placenta	1154	28	1	tissue
+7454	placenta	1153	28	1	tissue
+7450	placenta	1152	28	1	tissue
+7446	placenta	1151	28	1	tissue
+7442	placenta	1150	28	1	tissue
+7438	placenta	1149	28	1	tissue
+7434	placenta	1148	28	1	tissue
+7430	placenta	1147	28	1	tissue
+7426	placenta	1146	28	1	tissue
+7422	placenta	1145	28	1	tissue
+7418	placenta	1144	28	1	tissue
+7414	placenta	1143	28	1	tissue
+7410	placenta	1142	28	1	tissue
+7406	placenta	1141	28	1	tissue
+7402	placenta	1140	28	1	tissue
+7398	placenta	1139	28	1	tissue
+7413	Fetal growth restriction (FGR)	1143	23	10	disease state
+7409	preeclampsia	1142	37	10	disease state
+7405	preeclampsia	1141	37	10	disease state
+7401	preeclampsia	1140	37	10	disease state
+7397	preeclampsia	1139	37	10	disease state
+7393	preeclampsia	1138	37	10	disease state
+7389	preeclampsia	1137	37	10	disease state
+7385	preeclampsia	1136	37	10	disease state
+7381	preeclampsia	1135	37	10	disease state
+9642		1606	32	1	
+9643		1605	32	1	
+9644		1604	32	1	
+9645		1603	32	1	
+9646		1602	32	1	
+9647		1601	32	1	
+9648		1600	32	1	
+9649		1599	32	1	
+9650		1598	32	1	
+9651		1597	32	1	
+9652		1596	32	1	
+9653		1595	32	1	
+9654		1594	32	1	
+9655		1593	32	1	
+9656		1592	32	1	
+9657		1591	32	1	
+9658		1590	32	1	
+9659		1589	32	1	
+9660		1588	32	1	
+9661		1587	32	1	
+9662		1586	32	1	
+9663		1585	32	1	
+9664		1584	32	1	
+9665		1583	32	1	
+9666		1582	32	1	
+9667		1581	32	1	
+9668		1580	32	1	
+9669		1579	32	1	
+9670		1578	32	1	
+9671		1577	32	1	
+9672		1576	32	1	
+9673		1575	32	1	
+9674		1574	32	1	
+9675		1573	32	1	
+9676		1572	32	1	
+9677		1571	32	1	
+9678		1570	32	1	
+9679		1569	32	1	
+9680		1568	32	1	
+9681		1567	32	1	
+9682		1566	32	1	
+9683		1565	32	1	
+9684		1564	32	1	
+9685		1563	32	1	
+9686		1562	32	1	
+7394	placenta	1138	28	1	tissue
+7390	placenta	1137	28	1	tissue
+7386	placenta	1136	28	1	tissue
+7382	placenta	1135	28	1	tissue
+7562	GSE13155GSM329336	1202	5	5	name
+7568	GSE13155GSM329339	1205	5	5	name
+7566	GSE13155GSM329338	1204	5	5	name
+7564	GSE13155GSM329337	1203	5	5	name
+7569	Homo sapiens	1205	3	2	Organism
+7567	Homo sapiens	1204	3	2	Organism
+7563	Mus musculus	1202	34	2	Organism
+7565	Mus musculus	1203	34	2	Organism
+7151	Homo sapiens	1086	3	2	Organism
+7475	Homo sapiens	1158	3	2	Organism
+7471	Homo sapiens	1157	3	2	Organism
+7467	Homo sapiens	1156	3	2	Organism
+7463	Homo sapiens	1155	3	2	Organism
+7459	Homo sapiens	1154	3	2	Organism
+7455	Homo sapiens	1153	3	2	Organism
+7451	Homo sapiens	1152	3	2	Organism
+7447	Homo sapiens	1151	3	2	Organism
+7443	Homo sapiens	1150	3	2	Organism
+7439	Homo sapiens	1149	3	2	Organism
+7435	Homo sapiens	1148	3	2	Organism
+7431	Homo sapiens	1147	3	2	Organism
+7427	Homo sapiens	1146	3	2	Organism
+7423	Homo sapiens	1145	3	2	Organism
+7419	Homo sapiens	1144	3	2	Organism
+7415	Homo sapiens	1143	3	2	Organism
+7411	Homo sapiens	1142	3	2	Organism
+7407	Homo sapiens	1141	3	2	Organism
+7403	Homo sapiens	1140	3	2	Organism
+7399	Homo sapiens	1139	3	2	Organism
+7395	Homo sapiens	1138	3	2	Organism
+7391	Homo sapiens	1137	3	2	Organism
+7387	Homo sapiens	1136	3	2	Organism
+7383	Homo sapiens	1135	3	2	Organism
+7147	Homo sapiens	1085	3	2	Organism
+7143	Homo sapiens	1084	3	2	Organism
+7139	Homo sapiens	1083	3	2	Organism
+7135	Homo sapiens	1082	3	2	Organism
+7131	Homo sapiens	1081	3	2	Organism
+7127	Homo sapiens	1080	3	2	Organism
+7123	Homo sapiens	1079	3	2	Organism
+7119	Homo sapiens	1078	3	2	Organism
+7115	Homo sapiens	1077	3	2	Organism
+7111	Homo sapiens	1076	3	2	Organism
+7107	Homo sapiens	1075	3	2	Organism
+7103	Homo sapiens	1074	3	2	Organism
+7099	Homo sapiens	1073	3	2	Organism
+7095	Homo sapiens	1072	3	2	Organism
+7091	Homo sapiens	1071	3	2	Organism
+9689		1204	35	1	
+9690		1204	19	13	
+9691	38	1204	2	3	
+9692		1205	35	1	
+9693		1205	19	13	
+9694	38	1205	2	3	
+9688		1202	36	1	
+9917		1158	19	13	
+9918		1157	19	13	
+9919		1156	19	13	
+9920		1155	19	13	
+9921		1154	19	13	
+9922		1153	19	13	
+9923		1152	19	13	
+9924		1151	19	13	
+9925		1150	19	13	
+9926		1149	19	13	
+9927		1148	19	13	
+9928		1147	19	13	
+9929		1146	19	13	
+9930		1145	19	13	
+9931		1144	19	13	
+9932		1143	19	13	
+9933		1142	19	13	
+9934		1141	19	13	
+9935		1140	19	13	
+9936		1139	19	13	
+9937		1138	19	13	
+9938		1137	19	13	
+9939		1136	19	13	
+9916		1135	19	13	
+7058	GSM747303 1	1065	5	5	name
+7053	GSM747304 1	1064	5	5	name
+7048	GSM747305 1	1063	5	5	name
+7043	GSM747306 1	1062	5	5	name
+7038	GSM747307 1	1061	5	5	name
+7033	GSM747308 1	1060	5	5	name
+7028	GSM747309 1	1059	5	5	name
+7054	normal placentas	1064	1	1	tissue
+7049	normal placentas	1063	1	1	tissue
+7044	normal placentas	1062	1	1	tissue
+7039	normal placentas	1061	1	1	tissue
+7034	normal placentas	1060	1	1	tissue
+7029	normal placentas	1059	1	1	tissue
+7055	28 years	1064	6	6	age
+7035	28 years	1060	6	6	age
+7061	Chinese	1065	12	7	ethnic group
+7056	Chinese	1064	12	7	ethnic group
+7051	Chinese	1063	12	7	ethnic group
+7046	Chinese	1062	12	7	ethnic group
+7041	Chinese	1061	12	7	ethnic group
+7036	Chinese	1060	12	7	ethnic group
+7031	Chinese	1059	12	7	ethnic group
+7062	Homo sapiens	1065	3	2	Organism
+7057	Homo sapiens	1064	3	2	Organism
+7052	Homo sapiens	1063	3	2	Organism
+7047	Homo sapiens	1062	3	2	Organism
+7042	Homo sapiens	1061	3	2	Organism
+7037	Homo sapiens	1060	3	2	Organism
+7032	Homo sapiens	1059	3	2	Organism
+7030	29	1059	6	6	age
+7040	32	1061	6	6	age
+7045	27	1062	6	6	age
+7050	27	1063	6	6	age
+7060	31	1065	6	6	age
+7059	placentas from preeclamptic pregnancies	1065	1	1	tissue
+9695	17.5	1202	2	3	
+9696	17.5	1203	2	3	
+9697		1203	36	1	
+9820		1169	4	10	
+9941		1158	12	7	
+9942		1157	12	7	
+9943		1156	12	7	
+9944		1155	12	7	
+9945		1154	12	7	
+9946		1153	12	7	
+9947		1152	12	7	
+9948		1151	12	7	
+9949		1150	12	7	
+9950		1149	12	7	
+9951		1148	12	7	
+9952		1147	12	7	
+9953		1146	12	7	
+9954		1145	12	7	
+9955		1144	12	7	
+9956		1143	12	7	
+9957		1142	12	7	
+9958		1141	12	7	
+9959		1140	12	7	
+9960		1139	12	7	
+9961		1138	12	7	
+9962		1137	12	7	
+9963		1136	12	7	
+9940		1135	12	7	
+9964		1059	10	10	
+9971		1063	10	10	
+9972		1062	10	10	
+9973		1061	10	10	
+9974		1064	10	10	
+9975		1060	10	10	
+9970		1065	4	10	
+9969		1066	4	10	
+9968		1067	4	10	
+9967		1068	4	10	
+9966		1069	4	10	
+9965		1070	4	10	
+7478	GSM225501 1	1160	5	5	name
+7536	GSM225511 1	1189	5	5	name
+7538	GSM225499 1	1190	5	5	name
+7540	GSM225491 1	1191	5	5	name
+7542	GSM225473 1	1192	5	5	name
+7544	GSM225474 1	1193	5	5	name
+7546	GSM225476 1	1194	5	5	name
+7548	GSM225500 1	1195	5	5	name
+7550	GSM225513 1	1196	5	5	name
+7552	GSM225484 1	1197	5	5	name
+7554	GSM225505 1	1198	5	5	name
+7556	GSM225483 1	1199	5	5	name
+7480	GSM225492 1	1161	5	5	name
+7482	GSM225493 1	1162	5	5	name
+7484	GSM225495 1	1163	5	5	name
+7486	GSM225472 1	1164	5	5	name
+7488	GSM225490 1	1165	5	5	name
+7490	GSM225471 1	1166	5	5	name
+7492	GSM225489 1	1167	5	5	name
+7494	GSM225477 1	1168	5	5	name
+7496	GSM225509 1	1169	5	5	name
+7498	GSM225487 1	1170	5	5	name
+7500	GSM225480 1	1171	5	5	name
+7502	GSM225485 1	1172	5	5	name
+7504	GSM225488 1	1173	5	5	name
+7506	GSM225504 1	1174	5	5	name
+7508	GSM225507 1	1175	5	5	name
+7510	GSM225470 1	1176	5	5	name
+7512	GSM225486 1	1177	5	5	name
+7514	GSM225475 1	1178	5	5	name
+7516	GSM225506 1	1179	5	5	name
+7518	GSM225479 1	1180	5	5	name
+7520	GSM225494 1	1181	5	5	name
+7522	GSM225498 1	1182	5	5	name
+7524	GSM225512 1	1183	5	5	name
+7526	GSM225497 1	1184	5	5	name
+7528	GSM225502 1	1185	5	5	name
+7530	GSM225478 1	1186	5	5	name
+7532	GSM225481 1	1187	5	5	name
+7534	GSM225503 1	1188	5	5	name
+7558	GSM225496 1	1200	5	5	name
+7560	GSM225510 1	1201	5	5	name
+7476	GSM225508 1	1159	5	5	name
+7557	Homo sapiens	1199	3	2	Organism
+7559	Homo sapiens	1200	3	2	Organism
+7561	Homo sapiens	1201	3	2	Organism
+7477	Homo sapiens	1159	3	2	Organism
+7479	Homo sapiens	1160	3	2	Organism
+7481	Homo sapiens	1161	3	2	Organism
+7483	Homo sapiens	1162	3	2	Organism
+7485	Homo sapiens	1163	3	2	Organism
+7487	Homo sapiens	1164	3	2	Organism
+7489	Homo sapiens	1165	3	2	Organism
+7491	Homo sapiens	1166	3	2	Organism
+7493	Homo sapiens	1167	3	2	Organism
+7495	Homo sapiens	1168	3	2	Organism
+7497	Homo sapiens	1169	3	2	Organism
+7499	Homo sapiens	1170	3	2	Organism
+7501	Homo sapiens	1171	3	2	Organism
+7503	Homo sapiens	1172	3	2	Organism
+7505	Homo sapiens	1173	3	2	Organism
+7507	Homo sapiens	1174	3	2	Organism
+7509	Homo sapiens	1175	3	2	Organism
+7511	Homo sapiens	1176	3	2	Organism
+7513	Homo sapiens	1177	3	2	Organism
 \.
 
 
@@ -11407,7 +11875,7 @@ COPY articles_sampleattribute (id, old_value, sample_id, unificated_value_id, un
 -- Name: articles_sampleattributevalueinsample_id_seq; Type: SEQUENCE SET; Schema: public; Owner: sashko
 --
 
-SELECT pg_catalog.setval('articles_sampleattributevalueinsample_id_seq', 8839, true);
+SELECT pg_catalog.setval('articles_sampleattributevalueinsample_id_seq', 9975, true);
 
 
 --
@@ -11415,20 +11883,27 @@ SELECT pg_catalog.setval('articles_sampleattributevalueinsample_id_seq', 8839, t
 --
 
 COPY articles_unificatedsamplesattributename (id, name, additional_info) FROM stdin;
-5	name	"not a mesh term"=>""
-2	Classification	"mesh id"=>"Q000145"
-12	Cells, Cultured	"mesh id"=>"D002478"
-1	Organism Part	"link"=>"https://www.nlm.nih.gov/cgi/mesh/2016/MB_cgi", "not mesh"=>"", "alternative"=>"Embryonic Structures D004628"
+17	Karyotype	"mesh id"=>"D059785"
+19	Gravidity	"mesh id"=>"D020073"
+20	Parity	"mesh id"=>"D010298"
+21	Gestational Age at Experiment	"not mesh"=>""
 13	Labor, Obstetric	"mesh id"=>"D007743"
+5	name	"not a mesh term"=>""
+18	Average Maternal Age	"not mesh"=>""
 8	Common	"not mesh"=>""
-3	Gestational Age	"mesh id"=>"D005865"
-6	Maternal Age	"mesh id"=>"D008423"
-10	Diagnosis	"mesh id"=>"D003933"
+7	Race	"mesh id"=>"D044469"
+2	Classification	"mesh id"=>"Q000145"
 9	Ethnology	"mesh id"=>"D005007"
 4	Pathology	"mesh id"=>"D010336"
-7	Race	"mesh id"=>"D044469"
+6	Maternal Age	"mesh id"=>"D008423"
 11	Pre-Eclampsia Onset	""=>"", "link"=>"http://www.ncbi.nlm.nih.gov/pubmed/26105740", "description"=>"Gestational week at which Pre-Eclampsia symptoms found. Most investigators considered early-onset preeclampsia as that occurring before 34weeks."
+15	overexpressed protein	"not mesh"=>""
+12	Cells, Cultured	"mesh id"=>"D002478"
+16	Transfection	"mesh id"=>"D014162"
 14	Pregnancy Trimesters	"mesh id"=>"D011264"
+3	Gestational Age	"mesh id"=>"D005865"
+1	Organism Part	"link"=>"https://www.nlm.nih.gov/cgi/mesh/2016/MB_cgi", "not mesh"=>"", "alternative"=>"Embryonic Structures D004628"
+10	Diagnosis	"mesh id"=>"D003933"
 \.
 
 
@@ -11436,7 +11911,7 @@ COPY articles_unificatedsamplesattributename (id, name, additional_info) FROM st
 -- Name: articles_unificatedsamplesattributename_id_seq; Type: SEQUENCE SET; Schema: public; Owner: sashko
 --
 
-SELECT pg_catalog.setval('articles_unificatedsamplesattributename_id_seq', 14, true);
+SELECT pg_catalog.setval('articles_unificatedsamplesattributename_id_seq', 21, true);
 
 
 --
@@ -11447,6 +11922,8 @@ COPY articles_unificatedsamplesattributename_synonyms (id, from_unificatedsample
 1	7	9
 2	9	7
 3	4	10
+4	18	6
+5	21	3
 \.
 
 
@@ -11454,7 +11931,7 @@ COPY articles_unificatedsamplesattributename_synonyms (id, from_unificatedsample
 -- Name: articles_unificatedsamplesattributename_synonyms_id_seq; Type: SEQUENCE SET; Schema: public; Owner: sashko
 --
 
-SELECT pg_catalog.setval('articles_unificatedsamplesattributename_synonyms_id_seq', 3, true);
+SELECT pg_catalog.setval('articles_unificatedsamplesattributename_synonyms_id_seq', 5, true);
 
 
 --
@@ -11466,8 +11943,6 @@ COPY articles_unificatedsamplesattributevalue (id, value, unificated_name_id, ad
 3	Humans	2	
 4	Pre-Eclampsia	4	
 7	Other	7	"not mesh"=>""
-2	Number in weeks	8	"not a mesh term"=>""
-6	Number in years	8	
 5	Text Value	8	
 8	European Continental Ancestry Group	7	"mesh id"=>"D044465"
 9	African Americans	7	"mesh id"=>"D001741"
@@ -11485,6 +11960,22 @@ COPY articles_unificatedsamplesattributevalue (id, value, unificated_name_id, ad
 21	Pregnancy Trimester, Second	14	"mesh id"=>"D011262"
 22	Pregnancy Trimester, Third	14	"mesh id"=>"D011263"
 23	Fetal Growth Retardation	10	"mesh id"=>"D005317"
+24	Choriocarcinoma	12	"mesh id"=>"D002822"
+25	STOX1 protein, human	15	"mesh id"=>"C500784"
+26	mock-transfection	16	"link"=>"http://www.enzolifesciences.com/ALX-840-600/negative-control-cell-lysate-mock-transfected-cells/"
+27	wild type	17	"ontobee id"=>"SO:0000817"
+28	Chorionic Villi	1	""=>"", "mesh id"=>"D002824"
+29	Numeric	8	"not mesh"=>""
+6	Number in years	8	
+2	Number in weeks	8	"not a mesh term"=>""
+30	vaginal	13	"not mesh"=>""
+31	Obstetric Labor, Premature	13	"mesh id"=>"D007752"
+32	basal plate	1	"link"=>" http://www.merriam-webster.com/medical/basal%20plate", "not mesh"=>""
+33	Mice	2	"mesh id"=>"D051379"
+34	Mice, Inbred C57BL	2	"mesh id"=>"D008810"
+35	villous tree	1	"not mesh"=>""
+36	placental labyrinth villous	1	""=>"", "link"=>"http://www.ontobee.org/ontology/UBERON?iri=http://purl.obolibrary.org/obo/UBERON_0010005"
+37	severe preeclampsia	10	"link"=>"https://www.ncbi.nlm.nih.gov/pubmed/12094777", "not mesh"=>"", "explanation"=>"Severe preeclampsia was defined as blood pressure (BP) of at least 160 mmHg (systolic) and/or 110 mmHg (diastolic), with proteinuria 2þ on dipstick, measured on at least two occasions 6 h h apart while the patient was on bed rest, or hemolysis, elevated liver enzymes and low platelet (HELLP) syndrome, after the 20th week of gestation."
 \.
 
 
@@ -11492,7 +11983,7 @@ COPY articles_unificatedsamplesattributevalue (id, value, unificated_name_id, ad
 -- Name: articles_unificatedsamplesattributevalue_id_seq; Type: SEQUENCE SET; Schema: public; Owner: sashko
 --
 
-SELECT pg_catalog.setval('articles_unificatedsamplesattributevalue_id_seq', 23, true);
+SELECT pg_catalog.setval('articles_unificatedsamplesattributevalue_id_seq', 37, true);
 
 
 --
@@ -11502,6 +11993,17 @@ SELECT pg_catalog.setval('articles_unificatedsamplesattributevalue_id_seq', 23, 
 COPY articles_unificatedsamplesattributevalue_synonyms (id, from_unificatedsamplesattributevalue_id, to_unificatedsamplesattributevalue_id) FROM stdin;
 1	14	4
 2	15	4
+3	28	1
+4	6	29
+5	2	29
+6	30	10
+7	32	17
+8	32	16
+9	32	1
+10	34	33
+11	35	1
+12	36	1
+13	37	4
 \.
 
 
@@ -11509,7 +12011,7 @@ COPY articles_unificatedsamplesattributevalue_synonyms (id, from_unificatedsampl
 -- Name: articles_unificatedsamplesattributevalue_synonyms_id_seq; Type: SEQUENCE SET; Schema: public; Owner: sashko
 --
 
-SELECT pg_catalog.setval('articles_unificatedsamplesattributevalue_synonyms_id_seq', 2, true);
+SELECT pg_catalog.setval('articles_unificatedsamplesattributevalue_synonyms_id_seq', 13, true);
 
 
 --
@@ -11589,6 +12091,9 @@ COPY auth_permission (id, name, content_type_id, codename) FROM stdin;
 40	Can add unificated samples attribute value	14	add_unificatedsamplesattributevalue
 41	Can change unificated samples attribute value	14	change_unificatedsamplesattributevalue
 42	Can delete unificated samples attribute value	14	delete_unificatedsamplesattributevalue
+43	Can add historical experiment	15	add_historicalexperiment
+44	Can change historical experiment	15	change_historicalexperiment
+45	Can delete historical experiment	15	delete_historicalexperiment
 \.
 
 
@@ -11596,7 +12101,7 @@ COPY auth_permission (id, name, content_type_id, codename) FROM stdin;
 -- Name: auth_permission_id_seq; Type: SEQUENCE SET; Schema: public; Owner: sashko
 --
 
-SELECT pg_catalog.setval('auth_permission_id_seq', 42, true);
+SELECT pg_catalog.setval('auth_permission_id_seq', 45, true);
 
 
 --
@@ -11604,7 +12109,7 @@ SELECT pg_catalog.setval('auth_permission_id_seq', 42, true);
 --
 
 COPY auth_user (id, password, last_login, is_superuser, username, first_name, last_name, email, is_staff, is_active, date_joined) FROM stdin;
-1	pbkdf2_sha256$24000$2xHJgjS0DQxw$edJwFWWJNDQqmAtaZaYvTUBsAFJW0afqWwQ4Z+Lp2Gs=	2016-09-13 05:15:25.217213+03	t	sashko				t	t	2016-09-12 22:46:20.131809+03
+1	pbkdf2_sha256$24000$2xHJgjS0DQxw$edJwFWWJNDQqmAtaZaYvTUBsAFJW0afqWwQ4Z+Lp2Gs=	2016-10-07 20:57:30.172103+03	t	sashko				t	t	2016-09-12 22:46:20.131809+03
 \.
 
 
@@ -11701,6 +12206,7 @@ COPY django_admin_log (id, action_time, object_id, object_repr, action_flag, cha
 50	2016-09-13 17:09:44.285705+03	10	Diagnosis	1	Added.	9	1
 51	2016-09-13 17:10:27.661892+03	4	Pathology	2	Added from_unificatedsamplesattributename-to_unificatedsamplesattributename relationship "UnificatedSamplesAttributeName_synonyms object".	9	1
 52	2016-09-13 17:22:41.132866+03	13	Hispanic Americans	1	Added.	14	1
+107	2016-10-03 17:49:09.957916+03	44	44	2	Changed data.	10	1
 53	2016-09-13 17:25:34.269194+03	3	3	2	Changed  for sample "141". Changed unificated_value and value_for_each for sample attribute "Race Hispanic Americans".	10	1
 54	2016-09-13 17:27:57.147638+03	3	3	2	Changed data.	10	1
 55	2016-09-13 18:41:34.048796+03	47	47	2	Changed data.	10	1
@@ -11735,6 +12241,18 @@ COPY django_admin_log (id, action_time, object_id, object_repr, action_flag, cha
 84	2016-09-13 23:58:28.276501+03	44	44	2	No fields changed.	10	1
 85	2016-09-14 00:25:45.073816+03	43	43	2	Changed  for sample "1386". Changed unificated_name, name_for_each, unificated_value and value_for_each for sample attribute "name Text Value". Changed unificated_name, name_for_each, unificated_value and value_for_each for sample attribute "Classification Humans".	10	1
 86	2016-09-14 00:55:43.08225+03	43	43	2	Changed  for sample "1386". Added sample attribute "Organism Part None".	10	1
+108	2016-10-03 17:51:54.007949+03	43	43	2	Changed data.	10	1
+109	2016-10-03 17:56:29.621713+03	46	46	2	Changed data.	10	1
+110	2016-10-03 17:57:19.619387+03	46	46	2	Changed data.	10	1
+111	2016-10-03 18:01:48.489932+03	42	42	2	Changed data.	10	1
+112	2016-10-03 18:09:17.441025+03	40	40	2	Changed data.	10	1
+113	2016-10-03 19:27:14.174297+03	39	39	2	Changed data.	10	1
+114	2016-10-03 19:37:21.203847+03	39	39	2	Changed data.	10	1
+115	2016-10-04 21:45:34.118623+03	41	41	2	No fields changed.	10	1
+116	2016-10-06 16:06:34.841971+03	24	Choriocarcinoma	1	Added.	14	1
+117	2016-10-06 16:06:51.302555+03	41	41	2	Changed  for sample "1368". Added sample attribute "Cells, Cultured Trophoblasts". Added sample attribute "Cells, Cultured Choriocarcinoma".	10	1
+118	2016-10-06 16:17:08.45592+03	15	overexpressed protein	1	Added.	9	1
+119	2016-10-06 16:20:12.537129+03	25	STOX1 protein, human	1	Added.	14	1
 87	2016-09-14 00:57:05.342898+03	43	43	2	Changed  for sample "1386". Changed  for sample "1387". Changed  for sample "1388". Changed  for sample "1389". Changed  for sample "1390". Changed  for sample "1391". Changed  for sample "1393". Changed  for sample "1394". Changed  for sample "1395". Changed  for sample "1396". Changed  for sample "1397". Changed unificated_value for sample attribute "Organism Part Placenta". Deleted sample attribute "Organism Part None". Changed unificated_value for sample attribute "Organism Part Placenta". Changed unificated_value for sample attribute "Organism Part Placenta". Changed unificated_value for sample attribute "Organism Part Placenta". Changed unificated_value for sample attribute "Organism Part Placenta". Changed unificated_value for sample attribute "Organism Part Placenta". Changed unificated_value for sample attribute "Organism Part Placenta". Changed unificated_value for sample attribute "Organism Part Placenta". Changed unificated_value for sample attribute "Organism Part Placenta". Changed unificated_value for sample attribute "Organism Part Placenta". Changed unificated_value for sample attribute "Organism Part Placenta".	10	1
 88	2016-09-14 01:01:39.548524+03	14	Pregnancy Trimesters	1	Added.	9	1
 89	2016-09-14 01:01:54.832284+03	43	43	2	Changed  for sample "1386". Added sample attribute "Pregnancy Trimesters None".	10	1
@@ -11752,6 +12270,91 @@ COPY django_admin_log (id, action_time, object_id, object_repr, action_flag, cha
 101	2016-09-14 01:32:34.038348+03	42	42	2	Changed  for sample "1370". Added sample attribute "Diagnosis Fetal Growth Retardation".	10	1
 102	2016-09-14 01:34:46.223706+03	42	42	2	Changed  for sample "1370". Changed  for sample "1371". Changed  for sample "1372". Changed  for sample "1373". Changed  for sample "1374". Changed  for sample "1375". Changed  for sample "1376". Changed  for sample "1377". Changed  for sample "1378". Changed  for sample "1379". Deleted sample attribute "Diagnosis None". Changed unificated_value for sample attribute "Diagnosis Fetal Growth Retardation". Changed unificated_value for sample attribute "Diagnosis Fetal Growth Retardation". Changed unificated_value for sample attribute "Diagnosis Fetal Growth Retardation". Changed unificated_value for sample attribute "Diagnosis Fetal Growth Retardation". Changed unificated_value for sample attribute "Diagnosis Fetal Growth Retardation". Changed unificated_value for sample attribute "Diagnosis Fetal Growth Retardation". Changed unificated_value for sample attribute "Diagnosis Fetal Growth Retardation". Changed unificated_value for sample attribute "Diagnosis Health". Changed unificated_value for sample attribute "Diagnosis Health".	10	1
 103	2016-09-14 01:36:51.851114+03	42	42	2	Changed  for sample "1380". Changed  for sample "1381". Changed  for sample "1382". Changed  for sample "1383". Changed  for sample "1384". Changed  for sample "1385". Changed unificated_value for sample attribute "Diagnosis Health". Changed unificated_value for sample attribute "Diagnosis Health". Changed unificated_value for sample attribute "Diagnosis Health". Changed unificated_value for sample attribute "Diagnosis Health". Changed unificated_value for sample attribute "Diagnosis Health". Changed unificated_value for sample attribute "Diagnosis Health".	10	1
+104	2016-09-17 17:55:25.832728+03	1465	1465	2	Changed unificated_name for sample attribute "Classification None".	12	1
+105	2016-09-18 20:19:17.244232+03	47	47	2	No fields changed.	10	1
+106	2016-09-20 00:14:21.647192+03	47	47	2	Changed data.	10	1
+120	2016-10-06 16:31:38.439732+03	41	41	2	Changed  for sample "1368". Added sample attribute "overexpressed protein STOX1 protein, human". Changed unificated_name, name_for_each, unificated_value and value_for_each for sample attribute "name Text Value". Changed unificated_name, name_for_each, unificated_value and value_for_each for sample attribute "Organism Part Humans".	10	1
+121	2016-10-06 17:36:34.328177+03	16	Transfection	1	Added.	9	1
+122	2016-10-06 17:44:20.571304+03	26	mock-transfection	1	Added.	14	1
+123	2016-10-06 17:44:46.637677+03	41	41	2	Changed  for sample "1368". Changed  for sample "1369". Changed unificated_name for sample attribute "Transfection STOX1 protein, human". Added sample attribute "Cells, Cultured Trophoblasts". Added sample attribute "Cells, Cultured Choriocarcinoma". Added sample attribute "Transfection mock-transfection".	10	1
+124	2016-10-06 17:46:26.023241+03	40	40	2	Changed  for sample "1356". Changed unificated_name and name_for_each for sample attribute "name None".	10	1
+125	2016-10-06 17:50:39.817998+03	40	40	2	Changed  for sample "1356". Changed name_for_each, unificated_value and value_for_each for sample attribute "name Text Value". Changed unificated_name, name_for_each, unificated_value and value_for_each for sample attribute "Classification Humans". Changed unificated_name, name_for_each, unificated_value and value_for_each for sample attribute "Diagnosis Pre-Eclampsia". Changed unificated_name, name_for_each, unificated_value and value_for_each for sample attribute "Pregnancy Trimesters Pregnancy Trimester, First". Changed unificated_name, name_for_each, unificated_value and value_for_each for sample attribute "Race European Continental Ancestry Group". Changed unificated_name, name_for_each, unificated_value and value_for_each for sample attribute "Organism Part Placenta".	10	1
+126	2016-10-06 17:53:01.365561+03	40	40	2	Changed  for sample "1357". Changed unificated_value and value_for_each for sample attribute "Diagnosis Health".	10	1
+127	2016-10-06 18:05:52.331809+03	17	Karyotype	1	Added.	9	1
+128	2016-10-06 18:09:55.781221+03	27	wild type	1	Added.	14	1
+129	2016-10-06 18:16:03.533463+03	28	Chorionic Villi	1	Added. Added from_unificatedsamplesattributevalue-to_unificatedsamplesattributevalue relationship "UnificatedSamplesAttributeValue_synonyms object".	14	1
+130	2016-10-06 18:16:35.50969+03	40	40	2	Changed  for sample "1357". Changed unificated_value and value_for_each for sample attribute "Organism Part Chorionic Villi". Changed unificated_name and unificated_value for sample attribute "Karyotype wild type".	10	1
+131	2016-10-06 18:17:05.802658+03	40	40	2	Changed  for sample "1357". Changed value_for_each for sample attribute "Karyotype wild type".	10	1
+132	2016-10-06 18:17:54.849062+03	40	40	2	Changed  for sample "1357". Changed name_for_each for sample attribute "Karyotype wild type".	10	1
+133	2016-10-06 18:37:07.095147+03	18	Average Maternal Age	1	Added. Added from_unificatedsamplesattributename-to_unificatedsamplesattributename relationship "UnificatedSamplesAttributeName_synonyms object".	9	1
+134	2016-10-06 18:39:37.029618+03	40	40	2	Changed  for sample "1356". Added sample attribute "Average Maternal Age Number in years".	10	1
+135	2016-10-06 18:47:52.826446+03	40	40	2	Changed  for sample "1356". Changed  for sample "1357". Changed  for sample "1358". Changed  for sample "1359". Changed  for sample "1360". Changed  for sample "1361". Changed  for sample "1362". Changed  for sample "1363". Changed  for sample "1364". Changed  for sample "1365". Changed  for sample "1366". Changed  for sample "1367". Deleted sample attribute "Average Maternal Age None". Deleted sample attribute "Average Maternal Age None". Changed old_value for sample attribute "Average Maternal Age None". Deleted sample attribute "Average Maternal Age None". Changed old_value for sample attribute "Average Maternal Age None". Deleted sample attribute "Average Maternal Age None". Changed old_value for sample attribute "Average Maternal Age None". Deleted sample attribute "Average Maternal Age None". Changed old_value for sample attribute "Average Maternal Age None". Deleted sample attribute "Average Maternal Age None". Changed old_value for sample attribute "Average Maternal Age None". Deleted sample attribute "Average Maternal Age None". Changed old_value for sample attribute "Average Maternal Age None". Deleted sample attribute "Average Maternal Age None". Changed old_value for sample attribute "Average Maternal Age None". Deleted sample attribute "Average Maternal Age None". Changed old_value for sample attribute "Average Maternal Age None". Deleted sample attribute "None None". Changed old_value for sample attribute "Average Maternal Age None". Deleted sample attribute "Average Maternal Age None". Changed old_value and unificated_value for sample attribute "Average Maternal Age Number in years". Deleted sample attribute "Average Maternal Age None". Changed old_value and unificated_value for sample attribute "Average Maternal Age Number in years". Deleted sample attribute "Average Maternal Age None".	10	1
+136	2016-10-06 18:49:42.448956+03	40	40	2	Changed  for sample "1357". Changed  for sample "1358". Changed  for sample "1359". Changed  for sample "1360". Changed  for sample "1361". Changed  for sample "1362". Changed  for sample "1363". Changed  for sample "1364". Changed  for sample "1365". Changed unificated_value for sample attribute "Average Maternal Age Number in years". Changed unificated_value for sample attribute "Average Maternal Age Number in years". Changed unificated_value for sample attribute "Average Maternal Age Number in years". Changed unificated_value for sample attribute "Average Maternal Age Number in years". Changed unificated_value for sample attribute "Average Maternal Age Number in years". Changed unificated_value for sample attribute "Average Maternal Age Number in years". Changed unificated_value for sample attribute "Average Maternal Age Number in years". Changed unificated_value for sample attribute "Average Maternal Age Number in years". Changed unificated_value for sample attribute "Average Maternal Age Number in years".	10	1
+137	2016-10-06 19:29:50.964077+03	40	40	2	Changed data. Changed  for sample "1356". Deleted sample attribute "Average Maternal Age None".	10	1
+138	2016-10-07 13:33:27.621061+03	19	Gravidity	1	Added.	9	1
+139	2016-10-07 13:35:16.86211+03	29	Numeric	1	Added.	14	1
+140	2016-10-07 13:36:38.519024+03	6	Number in years	2	Added from_unificatedsamplesattributevalue-to_unificatedsamplesattributevalue relationship "UnificatedSamplesAttributeValue_synonyms object".	14	1
+141	2016-10-07 13:38:46.534279+03	20	Parity	1	Added.	9	1
+142	2016-10-07 13:40:28.184187+03	2	Number in weeks	2	Added from_unificatedsamplesattributevalue-to_unificatedsamplesattributevalue relationship "UnificatedSamplesAttributeValue_synonyms object".	14	1
+143	2016-10-07 14:39:23.487977+03	21	Gestational Age at Experiment	1	Added. Added from_unificatedsamplesattributename-to_unificatedsamplesattributename relationship "UnificatedSamplesAttributeName_synonyms object".	9	1
+144	2016-10-07 14:58:53.269786+03	40	40	2	Changed  for sample "1356". Changed  for sample "1364". Added sample attribute "Maternal Age Number in years". Added sample attribute "Gravidity Numeric". Added sample attribute "Parity Numeric". Added sample attribute "Labor, Obstetric Cesarean Section". Added sample attribute "Gestational Age Number in weeks". Added sample attribute "Gestational Age at Experiment Number in weeks". Deleted sample attribute "Average Maternal Age Number in years".	10	1
+145	2016-10-07 15:00:10.192164+03	40	40	2	Changed  for sample "1356". Changed old_value for sample attribute "Maternal Age Number in years". Changed old_value for sample attribute "Gravidity Numeric". Changed old_value for sample attribute "Parity Numeric". Changed old_value for sample attribute "Gestational Age Number in weeks". Changed old_value for sample attribute "Gestational Age at Experiment Number in weeks".	10	1
+146	2016-10-07 15:05:38.159435+03	30	vaginal	1	Added. Added from_unificatedsamplesattributevalue-to_unificatedsamplesattributevalue relationship "UnificatedSamplesAttributeValue_synonyms object".	14	1
+147	2016-10-07 15:06:11.248422+03	40	40	2	Changed  for sample "1364". Added sample attribute "Maternal Age Number in years". Added sample attribute "Gravidity Numeric". Added sample attribute "Parity Numeric". Added sample attribute "Gestational Age Number in weeks". Added sample attribute "Gestational Age at Experiment Number in weeks". Added sample attribute "Labor, Obstetric vaginal".	10	1
+148	2016-10-07 15:08:03.508477+03	40	40	2	Changed  for sample "1364". Changed old_value for sample attribute "Maternal Age Number in years". Changed old_value for sample attribute "Gravidity Numeric". Changed old_value for sample attribute "Parity Numeric". Changed old_value for sample attribute "Gestational Age Number in weeks". Changed old_value for sample attribute "Gestational Age at Experiment Number in weeks".	10	1
+149	2016-10-07 15:24:28.935806+03	40	40	2	Changed  for sample "1359". Changed  for sample "1365". Added sample attribute "Maternal Age Number in years". Added sample attribute "Gravidity Numeric". Added sample attribute "Parity Numeric". Added sample attribute "Gestational Age Number in weeks". Added sample attribute "Gestational Age at Experiment Number in weeks". Added sample attribute "Labor, Obstetric vaginal". Deleted sample attribute "Average Maternal Age Number in years". Added sample attribute "Maternal Age Number in years". Added sample attribute "Gravidity Numeric". Added sample attribute "Parity Numeric". Added sample attribute "Gestational Age Number in weeks". Added sample attribute "Gestational Age at Experiment Number in weeks". Added sample attribute "Labor, Obstetric Cesarean Section". Deleted sample attribute "Average Maternal Age Number in years".	10	1
+150	2016-10-07 15:32:34.764814+03	40	40	2	Changed  for sample "1359". Changed  for sample "1365". Changed old_value for sample attribute "Maternal Age Number in years". Changed old_value for sample attribute "Gravidity Numeric". Changed old_value for sample attribute "Parity Numeric". Changed old_value for sample attribute "Gestational Age Number in weeks". Changed old_value for sample attribute "Gestational Age at Experiment Number in weeks". Changed old_value for sample attribute "Maternal Age Number in years". Changed old_value for sample attribute "Gravidity Numeric". Changed old_value for sample attribute "Parity Numeric". Changed old_value for sample attribute "Gestational Age Number in weeks". Changed old_value for sample attribute "Gestational Age at Experiment Number in weeks".	10	1
+151	2016-10-07 18:24:46.420034+03	39	39	2	Changed  for sample "1515". Changed unificated_name, name_for_each, unificated_value and value_for_each for sample attribute "name Text Value". Changed unificated_name, name_for_each, unificated_value and value_for_each for sample attribute "Classification Humans". Changed unificated_name, name_for_each, unificated_value and value_for_each for sample attribute "Gestational Age Number in weeks". Changed unificated_name, name_for_each, unificated_value and value_for_each for sample attribute "Diagnosis Pre-Eclampsia".	10	1
+152	2016-10-07 18:28:45.93637+03	31	Obstetric Labor, Premature	1	Added.	14	1
+153	2016-10-07 18:31:13.7586+03	39	39	2	Changed  for sample "1529". Added sample attribute "Labor, Obstetric None". Changed unificated_value for sample attribute "Diagnosis Obstetric Labor, Premature".	10	1
+154	2016-10-07 19:25:38.77362+03	39	39	2	Changed  for sample "1515". Changed unificated_value and value_for_each for sample attribute "Labor, Obstetric Obstetric Labor, Premature".	10	1
+155	2016-10-07 19:28:30.394495+03	39	39	2	Changed  for sample "1515". Changed  for sample "1516". Changed  for sample "1517". Changed  for sample "1518". Changed  for sample "1519". Changed  for sample "1520". Changed  for sample "1521". Changed  for sample "1522". Changed  for sample "1523". Changed  for sample "1524". Changed  for sample "1525". Changed  for sample "1526". Changed  for sample "1527". Changed  for sample "1529". Deleted sample attribute "Labor, Obstetric Obstetric Labor, Premature". Deleted sample attribute "Labor, Obstetric Obstetric Labor, Premature". Deleted sample attribute "Labor, Obstetric Obstetric Labor, Premature". Deleted sample attribute "Labor, Obstetric Obstetric Labor, Premature". Deleted sample attribute "Labor, Obstetric Obstetric Labor, Premature". Deleted sample attribute "Labor, Obstetric Obstetric Labor, Premature". Deleted sample attribute "Labor, Obstetric Obstetric Labor, Premature". Deleted sample attribute "Labor, Obstetric Obstetric Labor, Premature". Deleted sample attribute "Labor, Obstetric Obstetric Labor, Premature". Deleted sample attribute "Labor, Obstetric Obstetric Labor, Premature". Deleted sample attribute "Labor, Obstetric Obstetric Labor, Premature". Deleted sample attribute "Labor, Obstetric Obstetric Labor, Premature". Deleted sample attribute "Labor, Obstetric Obstetric Labor, Premature". Changed unificated_value and value_for_each for sample attribute "Diagnosis Health".	10	1
+156	2016-10-07 19:35:40.292146+03	39	39	2	Changed  for sample "1528". Changed  for sample "1529". Changed  for sample "1530". Changed  for sample "1531". Changed  for sample "1532". Changed  for sample "1533". Changed  for sample "1534". Changed  for sample "1535". Changed  for sample "1536". Changed  for sample "1537". Changed  for sample "1538". Changed  for sample "1539". Changed  for sample "1540". Changed  for sample "1541". Changed  for sample "1542". Changed  for sample "1543". Changed  for sample "1544". Changed  for sample "1545". Changed  for sample "1546". Changed  for sample "1547". Changed  for sample "1548". Changed  for sample "1549". Changed  for sample "1550". Changed  for sample "1551". Changed  for sample "1552". Changed  for sample "1553". Changed  for sample "1554". Changed  for sample "1555". Changed  for sample "1556". Changed  for sample "1557". Changed  for sample "1558". Changed  for sample "1559". Changed  for sample "1560". Deleted sample attribute "Labor, Obstetric Obstetric Labor, Premature". Deleted sample attribute "Labor, Obstetric Obstetric Labor, Premature". Deleted sample attribute "Labor, Obstetric Obstetric Labor, Premature". Deleted sample attribute "Labor, Obstetric Obstetric Labor, Premature". Deleted sample attribute "Labor, Obstetric Obstetric Labor, Premature". Deleted sample attribute "Labor, Obstetric Obstetric Labor, Premature". Deleted sample attribute "Labor, Obstetric Obstetric Labor, Premature". Deleted sample attribute "Labor, Obstetric Obstetric Labor, Premature". Deleted sample attribute "Labor, Obstetric Obstetric Labor, Premature". Deleted sample attribute "Labor, Obstetric Obstetric Labor, Premature". Deleted sample attribute "Labor, Obstetric Obstetric Labor, Premature". Deleted sample attribute "Labor, Obstetric Obstetric Labor, Premature". Deleted sample attribute "Labor, Obstetric Obstetric Labor, Premature". Deleted sample attribute "Labor, Obstetric Obstetric Labor, Premature". Deleted sample attribute "Labor, Obstetric Obstetric Labor, Premature". Deleted sample attribute "Labor, Obstetric Obstetric Labor, Premature". Deleted sample attribute "Labor, Obstetric Obstetric Labor, Premature". Deleted sample attribute "Labor, Obstetric Obstetric Labor, Premature". Deleted sample attribute "Labor, Obstetric Obstetric Labor, Premature". Deleted sample attribute "Labor, Obstetric Obstetric Labor, Premature". Deleted sample attribute "Labor, Obstetric Obstetric Labor, Premature". Deleted sample attribute "Labor, Obstetric Obstetric Labor, Premature". Deleted sample attribute "Labor, Obstetric Obstetric Labor, Premature". Deleted sample attribute "Labor, Obstetric Obstetric Labor, Premature". Deleted sample attribute "Labor, Obstetric Obstetric Labor, Premature". Deleted sample attribute "Labor, Obstetric Obstetric Labor, Premature". Deleted sample attribute "Labor, Obstetric Obstetric Labor, Premature". Deleted sample attribute "Labor, Obstetric Obstetric Labor, Premature". Deleted sample attribute "Labor, Obstetric Obstetric Labor, Premature". Deleted sample attribute "Labor, Obstetric Obstetric Labor, Premature". Deleted sample attribute "Labor, Obstetric Obstetric Labor, Premature". Deleted sample attribute "Labor, Obstetric Obstetric Labor, Premature". Deleted sample attribute "Labor, Obstetric Obstetric Labor, Premature". Deleted sample attribute "Labor, Obstetric Obstetric Labor, Premature".	10	1
+157	2016-10-07 19:58:43.860792+03	39	39	2	Changed  for sample "1515". Added sample attribute "Organism Part None".	10	1
+158	2016-10-07 20:10:12.245273+03	32	basal plate	1	Added. Added from_unificatedsamplesattributevalue-to_unificatedsamplesattributevalue relationship "UnificatedSamplesAttributeValue_synonyms object". Added from_unificatedsamplesattributevalue-to_unificatedsamplesattributevalue relationship "UnificatedSamplesAttributeValue_synonyms object". Added from_unificatedsamplesattributevalue-to_unificatedsamplesattributevalue relationship "UnificatedSamplesAttributeValue_synonyms object".	14	1
+159	2016-10-07 20:10:28.279658+03	39	39	2	Changed  for sample "1561". Added sample attribute "Organism Part basal plate". Changed unificated_name for sample attribute "Gestational Age None". Changed unificated_name for sample attribute "Diagnosis None". Changed unificated_name for sample attribute "Classification None". Changed unificated_name for sample attribute "name None".	10	1
+160	2016-10-07 20:30:09.924941+03	39	39	2	Changed data. Changed  for sample "1561". Changed unificated_value and value_for_each for sample attribute "Gestational Age Number in weeks". Changed unificated_value and value_for_each for sample attribute "Diagnosis Pre-Eclampsia". Changed unificated_value and value_for_each for sample attribute "Classification Humans". Changed unificated_value and value_for_each for sample attribute "name Text Value".	10	1
+161	2016-10-07 20:35:26.140272+03	39	39	2	Changed  for sample "1561". Changed name_for_each and value_for_each for sample attribute "Gestational Age Number in weeks". Changed name_for_each and value_for_each for sample attribute "Diagnosis Pre-Eclampsia". Changed name_for_each and value_for_each for sample attribute "Classification Humans". Changed name_for_each and value_for_each for sample attribute "name Text Value".	10	1
+162	2016-10-07 20:44:56.918229+03	39	39	2	Changed  for sample "1561". Changed name_for_each for sample attribute "Organism Part basal plate".	10	1
+163	2016-10-07 20:50:29.524639+03	39	39	2	Changed  for sample "1561". Changed value_for_each for sample attribute "Organism Part basal plate". Deleted sample attribute "Organism Part None".	10	1
+164	2016-10-07 20:51:55.821189+03	39	39	2	Changed  for sample "1573". Changed unificated_value and value_for_each for sample attribute "Diagnosis Health".	10	1
+165	2016-10-08 17:51:20.023481+03	33	Mice	1	Added.	14	1
+166	2016-10-08 17:51:25.926082+03	37	37	2	Changed  for sample "1202". Changed unificated_name, name_for_each, unificated_value and value_for_each for sample attribute "name Text Value". Changed unificated_name, name_for_each and unificated_value for sample attribute "Classification Mice".	10	1
+167	2016-10-08 17:53:10.061561+03	37	37	2	Changed  for sample "1202". Changed  for sample "1204". Changed name_for_each and value_for_each for sample attribute "name Text Value". Changed name_for_each for sample attribute "Classification Mice". Changed unificated_value and value_for_each for sample attribute "Classification Humans".	10	1
+168	2016-10-08 18:13:47.848683+03	34	Mice, Inbred C57BL	1	Added. Added from_unificatedsamplesattributevalue-to_unificatedsamplesattributevalue relationship "UnificatedSamplesAttributeValue_synonyms object".	14	1
+169	2016-10-08 18:15:16.188597+03	37	37	2	Changed  for sample "1202". Changed  for sample "1203". Changed unificated_value for sample attribute "Classification Mice, Inbred C57BL". Changed unificated_value for sample attribute "Classification Mice, Inbred C57BL".	10	1
+170	2016-10-08 18:35:09.866994+03	37	37	2	No fields changed.	10	1
+171	2016-10-08 18:35:13.131197+03	37	37	2	No fields changed.	10	1
+172	2016-10-08 19:22:46.302955+03	35	villous tree	1	Added. Added from_unificatedsamplesattributevalue-to_unificatedsamplesattributevalue relationship "UnificatedSamplesAttributeValue_synonyms object".	14	1
+173	2016-10-08 19:31:31.893385+03	37	37	2	Changed  for sample "1202". Changed  for sample "1204". Changed  for sample "1205". Added sample attribute "Organism Part villous tree". Added sample attribute "Organism Part villous tree". Added sample attribute "Labor, Obstetric Cesarean Section". Added sample attribute "Gestational Age Number in weeks". Added sample attribute "Organism Part villous tree". Added sample attribute "Labor, Obstetric Cesarean Section". Added sample attribute "Gestational Age Number in weeks".	10	1
+174	2016-10-08 19:34:43.546326+03	36	placental labyrinth villous	1	Added. Added from_unificatedsamplesattributevalue-to_unificatedsamplesattributevalue relationship "UnificatedSamplesAttributeValue_synonyms object".	14	1
+175	2016-10-08 19:36:58.638236+03	37	37	2	Changed  for sample "1202". Changed  for sample "1203". Added sample attribute "Gestational Age Number in weeks". Changed unificated_value for sample attribute "Organism Part placental labyrinth villous". Added sample attribute "Gestational Age Number in weeks". Added sample attribute "Organism Part placental labyrinth villous".	10	1
+176	2016-10-08 19:40:21.208453+03	36	36	2	Changed  for sample "1159". Changed unificated_name, name_for_each, unificated_value and value_for_each for sample attribute "name Text Value". Changed unificated_name, name_for_each, unificated_value and value_for_each for sample attribute "Classification Humans".	10	1
+177	2016-10-08 20:41:57.01978+03	36	36	2	No fields changed.	10	1
+178	2016-10-08 21:18:48.933055+03	36	36	2	Changed data.	10	1
+179	2016-10-08 21:49:07.91115+03	36	36	2	Changed  for sample "1159". Added sample attribute "Race None".	10	1
+180	2016-10-08 21:52:00.768923+03	37	severe preeclampsia	1	Added. Added from_unificatedsamplesattributevalue-to_unificatedsamplesattributevalue relationship "UnificatedSamplesAttributeValue_synonyms object".	14	1
+181	2016-10-08 21:52:44.275716+03	36	36	2	Changed  for sample "1159". Changed unificated_value for sample attribute "Diagnosis severe preeclampsia". Changed unificated_value and value_for_each for sample attribute "Race European Continental Ancestry Group".	10	1
+182	2016-10-08 21:59:56.045777+03	36	36	2	Changed  for sample "1160". Changed  for sample "1174". Changed  for sample "1175". Changed  for sample "1179". Changed  for sample "1182". Changed  for sample "1183". Changed  for sample "1185". Changed  for sample "1187". Changed  for sample "1188". Changed  for sample "1189". Changed  for sample "1190". Changed  for sample "1195". Changed  for sample "1196". Changed  for sample "1198". Changed  for sample "1201". Deleted sample attribute "Diagnosis Pre-Eclampsia". Deleted sample attribute "Diagnosis Pre-Eclampsia". Deleted sample attribute "Diagnosis Pre-Eclampsia". Deleted sample attribute "Diagnosis Pre-Eclampsia". Deleted sample attribute "Diagnosis Pre-Eclampsia". Deleted sample attribute "Diagnosis Pre-Eclampsia". Deleted sample attribute "Diagnosis Pre-Eclampsia". Deleted sample attribute "Diagnosis Pre-Eclampsia". Deleted sample attribute "Diagnosis Pre-Eclampsia". Deleted sample attribute "Diagnosis Pre-Eclampsia". Deleted sample attribute "Diagnosis Pre-Eclampsia". Deleted sample attribute "Diagnosis Pre-Eclampsia". Deleted sample attribute "Diagnosis Pre-Eclampsia". Deleted sample attribute "Diagnosis Pre-Eclampsia". Deleted sample attribute "Diagnosis Pre-Eclampsia".	10	1
+183	2016-10-08 22:20:03.52134+03	35	35	2	Changed  for sample "1135". Changed unificated_name, name_for_each, unificated_value and value_for_each for sample attribute "name Text Value". Changed unificated_name, name_for_each, unificated_value and value_for_each for sample attribute "Diagnosis Pre-Eclampsia". Changed unificated_name, name_for_each, unificated_value and value_for_each for sample attribute "Organism Part Chorionic Villi". Changed unificated_name, name_for_each, unificated_value and value_for_each for sample attribute "Classification Humans".	10	1
+184	2016-10-08 22:20:58.283427+03	35	35	2	Changed  for sample "1135". Added sample attribute "Labor, Obstetric None".	10	1
+185	2016-10-08 22:26:57.790035+03	35	35	2	Changed  for sample "1135". Changed unificated_value and value_for_each for sample attribute "Labor, Obstetric Cesarean Section".	10	1
+186	2016-10-08 22:34:11.671758+03	35	35	2	Changed data. Changed  for sample "1144". Changed unificated_value and value_for_each for sample attribute "Diagnosis Fetal Growth Retardation".	10	1
+187	2016-10-08 22:38:41.632659+03	37	severe preeclampsia	2	Changed additional_info.	14	1
+188	2016-10-08 22:39:12.017638+03	35	35	2	Changed  for sample "1135". Changed unificated_value and value_for_each for sample attribute "Diagnosis severe preeclampsia".	10	1
+189	2016-10-08 22:44:15.852233+03	35	35	2	Changed  for sample "1135". Added sample attribute "Race None".	10	1
+190	2016-10-08 22:51:30.832732+03	35	35	2	Changed  for sample "1135". Changed unificated_value and value_for_each for sample attribute "Race Asian Continental Ancestry Group".	10	1
+191	2016-10-08 22:58:25.134396+03	35	35	2	No fields changed.	10	1
+192	2016-10-08 23:02:52.140989+03	35	35	2	Changed  for sample "1152". Changed unificated_value and value_for_each for sample attribute "Diagnosis Health".	10	1
+193	2016-10-08 23:27:47.176527+03	32	32	2	Changed data. Changed  for sample "1071". Changed unificated_name, name_for_each, unificated_value and value_for_each for sample attribute "name Text Value". Changed unificated_name, name_for_each, unificated_value and value_for_each for sample attribute "Diagnosis severe preeclampsia". Changed unificated_name, name_for_each, unificated_value and value_for_each for sample attribute "Organism Part Placenta". Changed unificated_name, name_for_each, unificated_value and value_for_each for sample attribute "Classification Humans".	10	1
+194	2016-10-08 23:30:37.854124+03	32	32	2	Changed  for sample "1072". Changed unificated_value and value_for_each for sample attribute "Diagnosis Health".	10	1
+195	2016-10-08 23:31:20.172142+03	32	32	2	No fields changed.	10	1
+196	2016-10-08 23:37:04.479274+03	31	31	2	Changed  for sample "1059". Changed unificated_name, name_for_each, unificated_value and value_for_each for sample attribute "name Text Value". Changed unificated_name, name_for_each, unificated_value and value_for_each for sample attribute "Organism Part Placenta". Changed unificated_name, name_for_each, unificated_value and value_for_each for sample attribute "Maternal Age Number in years". Changed unificated_name, name_for_each, unificated_value and value_for_each for sample attribute "Race Asian Continental Ancestry Group". Changed unificated_name, name_for_each, unificated_value and value_for_each for sample attribute "Classification Humans".	10	1
+197	2016-10-08 23:38:49.799135+03	31	31	2	Changed  for sample "1059". Changed  for sample "1061". Changed  for sample "1062". Changed  for sample "1063". Changed  for sample "1065". Changed  for sample "1066". Changed  for sample "1067". Changed  for sample "1068". Changed  for sample "1069". Changed  for sample "1070". Changed old_value for sample attribute "Maternal Age Number in years". Changed old_value for sample attribute "Maternal Age Number in years". Changed old_value for sample attribute "Maternal Age Number in years". Changed old_value for sample attribute "Maternal Age Number in years". Changed old_value for sample attribute "Maternal Age Number in years". Changed old_value for sample attribute "Maternal Age Number in years". Changed old_value for sample attribute "Maternal Age Number in years". Changed old_value for sample attribute "Maternal Age Number in years". Changed old_value for sample attribute "Maternal Age Number in years". Changed old_value for sample attribute "Maternal Age Number in years".	10	1
+198	2016-10-08 23:44:23.906199+03	31	31	2	Changed  for sample "1059". Added sample attribute "Diagnosis Health".	10	1
+199	2016-10-08 23:44:46.54101+03	31	31	2	Changed  for sample "1059". Changed value_for_each for sample attribute "Diagnosis Health".	10	1
+200	2016-10-08 23:46:59.841029+03	31	31	2	Changed  for sample "1065". Changed  for sample "1066". Changed  for sample "1067". Changed  for sample "1068". Changed  for sample "1069". Changed  for sample "1070". Changed unificated_value for sample attribute "Organism Part Placenta". Changed unificated_value for sample attribute "Diagnosis Pre-Eclampsia". Changed unificated_value for sample attribute "Organism Part Placenta". Changed unificated_value for sample attribute "Diagnosis Pre-Eclampsia". Changed unificated_value for sample attribute "Organism Part Placenta". Changed unificated_value for sample attribute "Diagnosis Pre-Eclampsia". Changed unificated_value for sample attribute "Organism Part Placenta". Changed unificated_value for sample attribute "Diagnosis Pre-Eclampsia". Changed unificated_value for sample attribute "Organism Part Placenta". Changed unificated_value for sample attribute "Organism Part Pre-Eclampsia".	10	1
+201	2016-10-08 23:48:24.549828+03	31	31	2	Changed  for sample "1069". Changed  for sample "1070". Changed unificated_value for sample attribute "Diagnosis Pre-Eclampsia". Changed unificated_value for sample attribute "Diagnosis Pre-Eclampsia".	10	1
 \.
 
 
@@ -11759,7 +12362,7 @@ COPY django_admin_log (id, action_time, object_id, object_repr, action_flag, cha
 -- Name: django_admin_log_id_seq; Type: SEQUENCE SET; Schema: public; Owner: sashko
 --
 
-SELECT pg_catalog.setval('django_admin_log_id_seq', 103, true);
+SELECT pg_catalog.setval('django_admin_log_id_seq', 201, true);
 
 
 --
@@ -11781,6 +12384,7 @@ COPY django_content_type (id, app_label, model) FROM stdin;
 12	articles	sample
 13	articles	sampleattribute
 14	articles	unificatedsamplesattributevalue
+15	articles	historicalexperiment
 \.
 
 
@@ -11788,7 +12392,7 @@ COPY django_content_type (id, app_label, model) FROM stdin;
 -- Name: django_content_type_id_seq; Type: SEQUENCE SET; Schema: public; Owner: sashko
 --
 
-SELECT pg_catalog.setval('django_content_type_id_seq', 14, true);
+SELECT pg_catalog.setval('django_content_type_id_seq', 15, true);
 
 
 --
@@ -11826,6 +12430,7 @@ COPY django_migrations (id, app, name, applied) FROM stdin;
 28	articles	0016_unificatedsamplesattributename_synonyms	2016-09-13 15:57:42.731818+03
 29	articles	0017_auto_20160913_1707	2016-09-13 17:08:07.79648+03
 30	articles	0018_auto_20160913_1942	2016-09-13 19:42:23.724728+03
+31	articles	0019_historicalexperiment	2016-09-21 03:55:22.995986+03
 \.
 
 
@@ -11833,7 +12438,7 @@ COPY django_migrations (id, app, name, applied) FROM stdin;
 -- Name: django_migrations_id_seq; Type: SEQUENCE SET; Schema: public; Owner: sashko
 --
 
-SELECT pg_catalog.setval('django_migrations_id_seq', 30, true);
+SELECT pg_catalog.setval('django_migrations_id_seq', 31, true);
 
 
 --
@@ -11843,6 +12448,13 @@ SELECT pg_catalog.setval('django_migrations_id_seq', 30, true);
 COPY django_session (session_key, session_data, expire_date) FROM stdin;
 be1tinaggc7tocyz1og8m1jyvf7r84zz	OThhZmQwNzE2M2E2OWE0NzNiNTBkNmMwMjZmODFiZGU1ZmQ4N2ZiZDp7Il9hdXRoX3VzZXJfaGFzaCI6ImRlMjlmZTBlMDI0ZWY0NjhiYWVkMjFlMGM0NzNlMzc0Y2Y0ZjgzOTEiLCJfYXV0aF91c2VyX2JhY2tlbmQiOiJkamFuZ28uY29udHJpYi5hdXRoLmJhY2tlbmRzLk1vZGVsQmFja2VuZCIsIl9hdXRoX3VzZXJfaWQiOiIxIn0=	2016-09-26 22:48:00.174489+03
 s53h3nkulpr208e76r5fjp6d4gfxjrk7	ZGE2ZmJmYmMzY2Y5ZTM5NzRmMmZjOGVmZDdhNmRiZTJmOTM2MjhiOTp7Il9hdXRoX3VzZXJfaGFzaCI6ImRlMjlmZTBlMDI0ZWY0NjhiYWVkMjFlMGM0NzNlMzc0Y2Y0ZjgzOTEiLCJfYXV0aF91c2VyX2lkIjoiMSIsIl9hdXRoX3VzZXJfYmFja2VuZCI6ImRqYW5nby5jb250cmliLmF1dGguYmFja2VuZHMuTW9kZWxCYWNrZW5kIn0=	2016-09-27 05:15:25.229537+03
+4wfyso8f6h6h5wcbfir0csumupb3nlio	MDRjNjI0N2Y4ZGYzMjhmODZhYWViYTM0ZDMzMTg0Y2QxNTk2NGMyZTp7Il9hdXRoX3VzZXJfYmFja2VuZCI6ImRqYW5nby5jb250cmliLmF1dGguYmFja2VuZHMuTW9kZWxCYWNrZW5kIiwiX2F1dGhfdXNlcl9oYXNoIjoiZGUyOWZlMGUwMjRlZjQ2OGJhZWQyMWUwYzQ3M2UzNzRjZjRmODM5MSIsIl9hdXRoX3VzZXJfaWQiOiIxIn0=	2016-09-28 03:43:42.034077+03
+1x00788wy80tg0k2057ux3onc2yd18gq	MDRjNjI0N2Y4ZGYzMjhmODZhYWViYTM0ZDMzMTg0Y2QxNTk2NGMyZTp7Il9hdXRoX3VzZXJfYmFja2VuZCI6ImRqYW5nby5jb250cmliLmF1dGguYmFja2VuZHMuTW9kZWxCYWNrZW5kIiwiX2F1dGhfdXNlcl9oYXNoIjoiZGUyOWZlMGUwMjRlZjQ2OGJhZWQyMWUwYzQ3M2UzNzRjZjRmODM5MSIsIl9hdXRoX3VzZXJfaWQiOiIxIn0=	2016-10-01 15:39:03.004423+03
+xm4sy86pccf63ynp4bo46w5qmbdfg78j	YzI1YzQzZTljZmZmYWFhYjg5N2QyODQ0ZGZiZjc0MzBiNGU5MThmNDp7Il9hdXRoX3VzZXJfaWQiOiIxIiwiX2F1dGhfdXNlcl9iYWNrZW5kIjoiZGphbmdvLmNvbnRyaWIuYXV0aC5iYWNrZW5kcy5Nb2RlbEJhY2tlbmQiLCJfYXV0aF91c2VyX2hhc2giOiJkZTI5ZmUwZTAyNGVmNDY4YmFlZDIxZTBjNDczZTM3NGNmNGY4MzkxIn0=	2016-10-01 16:35:09.418274+03
+j31r43gz21nsyjr59ubxs0s98hwdeq8m	NDE4NWJiYzBhNzVmOWVkZjY0YmVkNjdiNGY1N2E4MmUxNzUxZTI5Zjp7Il9hdXRoX3VzZXJfaWQiOiIxIiwiX2F1dGhfdXNlcl9oYXNoIjoiZGUyOWZlMGUwMjRlZjQ2OGJhZWQyMWUwYzQ3M2UzNzRjZjRmODM5MSIsIl9hdXRoX3VzZXJfYmFja2VuZCI6ImRqYW5nby5jb250cmliLmF1dGguYmFja2VuZHMuTW9kZWxCYWNrZW5kIn0=	2016-10-01 17:11:01.933577+03
+tjtes5oe1sk2omfv41aekfpgdbyxaykx	OThhZmQwNzE2M2E2OWE0NzNiNTBkNmMwMjZmODFiZGU1ZmQ4N2ZiZDp7Il9hdXRoX3VzZXJfaGFzaCI6ImRlMjlmZTBlMDI0ZWY0NjhiYWVkMjFlMGM0NzNlMzc0Y2Y0ZjgzOTEiLCJfYXV0aF91c2VyX2JhY2tlbmQiOiJkamFuZ28uY29udHJpYi5hdXRoLmJhY2tlbmRzLk1vZGVsQmFja2VuZCIsIl9hdXRoX3VzZXJfaWQiOiIxIn0=	2016-10-09 21:03:39.359228+03
+u47akb57vdmc4zy82yk8uwzah9trd205	YzI1YzQzZTljZmZmYWFhYjg5N2QyODQ0ZGZiZjc0MzBiNGU5MThmNDp7Il9hdXRoX3VzZXJfaWQiOiIxIiwiX2F1dGhfdXNlcl9iYWNrZW5kIjoiZGphbmdvLmNvbnRyaWIuYXV0aC5iYWNrZW5kcy5Nb2RlbEJhY2tlbmQiLCJfYXV0aF91c2VyX2hhc2giOiJkZTI5ZmUwZTAyNGVmNDY4YmFlZDIxZTBjNDczZTM3NGNmNGY4MzkxIn0=	2016-10-14 16:50:16.02538+03
+zf90nnw48x4fmbj6t7sm2pm6vunmst0u	MDJjYzc1OTBlNDVkNjdhMjRkMzNjMzdiYzJjNzYwNTBhN2E3Njg3ZTp7Il9hdXRoX3VzZXJfYmFja2VuZCI6ImRqYW5nby5jb250cmliLmF1dGguYmFja2VuZHMuTW9kZWxCYWNrZW5kIiwiX2F1dGhfdXNlcl9pZCI6IjEiLCJfYXV0aF91c2VyX2hhc2giOiJkZTI5ZmUwZTAyNGVmNDY4YmFlZDIxZTBjNDczZTM3NGNmNGY4MzkxIn0=	2016-10-21 20:57:30.183232+03
 \.
 
 
@@ -11892,6 +12504,14 @@ ALTER TABLE ONLY articles_experiment_microarrays
 
 ALTER TABLE ONLY articles_experiment
     ADD CONSTRAINT articles_experiment_pkey PRIMARY KEY (id);
+
+
+--
+-- Name: articles_historicalexperiment_pkey; Type: CONSTRAINT; Schema: public; Owner: sashko; Tablespace: 
+--
+
+ALTER TABLE ONLY articles_historicalexperiment
+    ADD CONSTRAINT articles_historicalexperiment_pkey PRIMARY KEY (history_id);
 
 
 --
@@ -12120,6 +12740,27 @@ CREATE INDEX articles_experiment_microarrays_70488be9 ON articles_experiment_mic
 --
 
 CREATE INDEX articles_experiment_microarrays_abd1812d ON articles_experiment_microarrays USING btree (experiment_id);
+
+
+--
+-- Name: articles_historicalexperiment_8d777f38; Type: INDEX; Schema: public; Owner: sashko; Tablespace: 
+--
+
+CREATE INDEX articles_historicalexperiment_8d777f38 ON articles_historicalexperiment USING btree (data);
+
+
+--
+-- Name: articles_historicalexperiment_b80bb774; Type: INDEX; Schema: public; Owner: sashko; Tablespace: 
+--
+
+CREATE INDEX articles_historicalexperiment_b80bb774 ON articles_historicalexperiment USING btree (id);
+
+
+--
+-- Name: articles_historicalexperiment_e7d5ef68; Type: INDEX; Schema: public; Owner: sashko; Tablespace: 
+--
+
+CREATE INDEX articles_historicalexperiment_e7d5ef68 ON articles_historicalexperiment USING btree (history_user_id);
 
 
 --
@@ -12367,6 +13008,14 @@ ALTER TABLE ONLY articles_experiment_microarrays
 
 ALTER TABLE ONLY articles_experiment_microarrays
     ADD CONSTRAINT articles_exper_microarray_id_9b6e7108_fk_articles_microarray_id FOREIGN KEY (microarray_id) REFERENCES articles_microarray(id) DEFERRABLE INITIALLY DEFERRED;
+
+
+--
+-- Name: articles_historicalexp_history_user_id_b2ef2d01_fk_auth_user_id; Type: FK CONSTRAINT; Schema: public; Owner: sashko
+--
+
+ALTER TABLE ONLY articles_historicalexperiment
+    ADD CONSTRAINT articles_historicalexp_history_user_id_b2ef2d01_fk_auth_user_id FOREIGN KEY (history_user_id) REFERENCES auth_user(id) DEFERRABLE INITIALLY DEFERRED;
 
 
 --

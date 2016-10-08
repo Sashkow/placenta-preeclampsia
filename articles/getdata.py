@@ -56,8 +56,8 @@ def get_experiment_samples_attributes(experiment_id):
     samples_xml = s.http_get(url, 'xml')
 
     samples_xml = s.easyXML(samples_xml)
-    # with open("samples_E-GEOD-74341.txt", "w") as text_file:
-    #     print(samples_xml.prettify(), file=text_file)
+    with open("samples_E-GEOD-74341.txt", "w") as text_file:
+        print(samples_xml.prettify(), file=text_file)
 
     samples_xml = samples_xml.getchildren()
     samples = []
@@ -257,7 +257,7 @@ def print_exp_array_title(accession):
 
 
 def main():
-    get_all_sample_attribute_names()
+    get_experiment_samples_attributes('E-GEOD-14722')
     
 
 if __name__ == '__main__':
