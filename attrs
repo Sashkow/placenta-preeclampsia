@@ -1,0 +1,14 @@
+Organism Part ['Chorionic Villi', 'Adipose Tissue', 'Decidua', 'Placenta']
+Maternal Age numeric
+Gravidity numeric
+Parity numeric
+Gestational Age numeric
+Gestational Age at time of Experiment numeric
+Diagnosis ['Health', 'Pre-Eclampsia', 'Fetal Growth Retardation']
+Pre-Eclampsia Onset ['Late Onset Pre-Eclampsia ( at gestational age >=31 weeks)', 'Early Onset Pre-Ecpampsia (at gestational age <31 weeks)']
+overexpressed protein ['STOX1 protein, human']
+Cells, Cultured ['Choriocarcinoma', 'Trophoblasts']
+Classification ['Humans']
+Pregnancy Trimesters ['Pregnancy Trimester, Third', 'Pregnancy Trimester, Second', 'Pregnancy Trimester, First']
+Race ['Hispanic Americans', 'Asian Continental Ancestry Group', 'Hispanic Americans', 'African Americans', 'European Continental Ancestry Group', 'Other']
+Labor, Obstetric ['Vaginal birth', 'Cesarean Section']

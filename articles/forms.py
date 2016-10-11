@@ -81,11 +81,11 @@ class SampleAttributeInlineForm(ModelForm):
         experiment = instance.sample.experiment
         old_name = instance.old_name
         samples_in_experiment = Sample.objects.filter(experiment=experiment)
-        
+        sample_attributes = SampleAttribute.objects.filter(
+          sample__in=samples_in_experiment)
 
         if old_name:
-            sample_attributes = SampleAttribute.objects.filter(
-              sample__in=samples_in_experiment,
+            sample_attributes = sample_attributes.filter(
               old_name=old_name)
             return sample_attributes
         else:
@@ -97,24 +97,24 @@ class SampleAttributeInlineForm(ModelForm):
 
     def _get_all_with_same_old_name_value(self, instance):
         experiment = instance.sample.experiment
-        if instance.unificated_value.unificated_name.name == 'Common':
-            sample_attributes = self._get_all_with_same_old_name(instance)
-            return sample_attributes
-        else:
-            if instance.old_value:
-                sample_attributes = \
-                  self._get_all_with_same_old_name(instance).filter(
-                    old_value=instance.old_value)
-                return sample_attributes
-            else:
-                samples_in_experiment = Sample.objects.filter(experiment=experiment)
+        samples_in_experiment = Sample.objects.filter(experiment=experiment)
+        if instance.unificated_value:
+            if instance.unificated_name:
                 sample_attributes = SampleAttribute.objects.filter(
                   sample__in=samples_in_experiment,
                   unificated_name=instance.unificated_name)
-                return sample_attributes
+            else:
+                sample_attributes = SampleAttribute.objects.filter(
+                  sample__in=samples_in_experiment,
+                  old_name=instance.old_name)
 
-
-
+            if instance.old_value and \
+              instance.unificated_value.unificated_name.name != 'Common':
+                sample_attributes = sample_attributes.filter(
+                  old_value=instance.old_value)
+            return sample_attributes
+        else:
+            return None
 
 
     def save(self, commit=True):

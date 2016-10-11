@@ -1,10 +1,10 @@
-age of donor -> maternal age
+age of donor
       18
       21
       23
       27
       26
-cd14 
+cd14
       NO
       YES
 karyotype
@@ -204,8 +204,8 @@ culture time hrs
       <empty>
       12
 matching
-      C
       B
+      C
       A
 urine protein
       _
@@ -401,8 +401,8 @@ name
       GSM1432413 1
       GSM1088634 1
       GSM1015080 1
-      GSM747304 1
       GSE4707GSM106249_Cy3
+      GSM747304 1
       GSM1015119 1
       GSM1015134 1
       GSM1917663 1
@@ -524,9 +524,9 @@ name
       GSM1480141 1
       GSM1089232 1
       GSM1015124 1
-      GSM786370 1
       GSM559356 1
       D29
+      GSM786370 1
       GSM1314439 1
       GSM948995 1
       GSM1229151 1
@@ -585,8 +585,8 @@ name
       GSM367811 1
       GSM1197689 1
       GSM1480160 1
-      GSM225473 1
       S07
+      GSM225473 1
       S25
       GSE4707GSM106274_Cy3
       GSE6573GSM151960
@@ -696,16 +696,16 @@ name
       T05
       GSM987978 1
       GSM1015113 1
-      GSM225478 1
       S39
+      GSM225478 1
       GSM1892044 1
       GSM1432411 1
       GSM559357 1
       T02
       06-656
       GSM1197688 1
-      GSM747308 1
       D09
+      GSM747308 1
       GSM1088640 1
       GSM1015139 1
       GSM1917673 1
@@ -727,8 +727,8 @@ name
       GSM1432424 1
       GSM1088622 1
       GSM1480164 1
-      GSE13155GSM329339
       D18
+      GSE13155GSM329339
       GSM1480136 1
       GSM1917665 1
       GSM594044 1
@@ -783,8 +783,8 @@ name
       GSM1388251 1
       GSM1015094 1
       GSM225486 1
-      GSM225488 1
       S57
+      GSM225488 1
       GSM1917681 2
       GSM1319977 1
       GSM1015095 1
@@ -885,8 +885,8 @@ name
       GSM1314448 1
       GSM1014952 1
       GSM987967 1
-      GSM307191 1
       Control 44
+      GSM307191 1
       GSM1088630 1
       GSM786385 1
       Sample 23
@@ -1064,8 +1064,8 @@ name
       GSM1177785 1
       GSM1015069 1
       GSM871050 1
-      GSM594062 1
       T12
+      GSM594062 1
       Case 50
       GSM1197663 1
       GSM1917669 1
@@ -1127,8 +1127,8 @@ name
       GSM871139 1
       GSM1432421 1
       GSM1015111 1
-      GSM225484 1
       Case 21
+      GSM225484 1
       GSE4707GSM106284_Cy3
       GSM1480121 1
       GSM396434 2
@@ -1228,8 +1228,8 @@ name
       GSM307186 1
       GSM1229152 1
       GSM396430 2
-      GSM367784 1
       GSE4707GSM106250_Cy5
+      GSM367784 1
       GSM1319972 1
       GSM987979 1
       GSE6573GSM151958
@@ -1378,8 +1378,8 @@ name
       GSM1314459 1
       GSM1480146 1
       GSM1229154 1
-      GSM786369 1
       D06
+      GSM786369 1
       GSM871086 1
       GSM1480100 1
       GSM1177792 1
@@ -1426,8 +1426,8 @@ name
       GSM1015092 1
       GSM1074805 1
       GSM1015081 1
-      GSM307197 1
       Control 72
+      GSM307197 1
       GSM1074813 1
       GSM1015057 1
       GSM871095 1
@@ -1442,12 +1442,12 @@ name
       GSM786382 1
       GSM1388269 1
       GSM1088615 1
-      GSM225475 1
       T22
+      GSM225475 1
       GSM1432445 1
       GSM987953 1
-      GSM594058 1
       D17
+      GSM594058 1
       GSM871055 1
       GSM1015074 1
       GSM1388247 1
@@ -1462,9 +1462,9 @@ name
       GSM871113 1
       GSM1197661 1
       GSM871081 1
-      GSM225491 1
       D20
       GSM367813 1
+      GSM225491 1
       GSM1892043 1
       GSM1480135 1
       Sample 15
@@ -1523,8 +1523,8 @@ name
       Control 12
       GSM987976 1
       GSM559354 1
-      GSM786365 1
       GSM786355 1
+      GSM786365 1
       GSM1319970 1
       D16
       GSM1177806 1
@@ -1603,8 +1603,8 @@ name
       GSM1314463 1
       GSM559363 2
       GSM1015110 1
-      GSM367792 1
       GSE4707GSM106285_Cy3
+      GSM367792 1
       GSM1480063 1
       GSM1917665 2
       GSM1015102 1
@@ -1961,6 +1961,7 @@ disease
       severe preeclampsia
 diagnosis
       <empty>
+      preterm
       normotensive
       preeclamptic
       preeclampsia
@@ -2008,34 +2009,55 @@ disease state
       Normotensive control pregnancy
       preeclampsia
 gestational age
-      18
+      25.6
       25
       <empty>
       38
-      17.3
       34
+      36.6
       28
-      26
       32
-      Hispanic
-      35
       30
-      41
+      32.0
       22
       term
       Caucasian
-      33
       40
-      37
-      18.8
       Asian
-      36
+      27.1
       27
       Other
+      31.1
+      African American
+      24.1
+      18
+      29.9
+      34.0
+      33.9
+      30.4
+      17.3
+      37.6
+      26
+      Hispanic
+      24.7
+      33.3
+      35
+      41
+      31.7
+      25.4
+      33
+      37
+      18.8
+      35.9
+      30.6
+      35.7
+      36
+      32.9
+      33.0
       17.1
       29
       39
-      African American
+      31.9
 jury
       4.1
       4.4
@@ -2054,8 +2076,8 @@ gestational classification
       Preterm
       Term
 disease status
-      preeclampsia
       healthy
+      preeclampsia
 pre-pregancy bmi
       21.08
       24.94
@@ -2104,100 +2126,85 @@ pre-pregancy bmi
       22.26
       23.22
 
-      
-condition
-      25.4wk preterm
-      35.7wk preterm
-      27.1wk preterm
-      31.1wk preeclamptic
-      24.1wk preeclamptic
-      control
-      34.0wk preeclamptic
-      31.9wk preeclamptic
-      Pre-Eclampsia
-      29.9wk preterm
-      25.6wk preterm
-      36.6wk preterm
-      EOPET
-      35.9wk preeclamptic
-      30.6wk preeclamptic
-      31.7wk preeclamptic
-      32.0wk preeclamptic
-      33.3wk preterm
-      33.0wk preterm
-      32.9wk preeclamptic
-      35.9wk preterm
-      30.4wk preeclamptic
-      33.0wk preeclamptic
-      33.9wk preterm
-      24.7wk preterm
-      37.6wk preeclamptic
-maternal age
-      25
+      2
+      11.0
+      34.9
+      10.7
       38
+      12.4
+      11.4
+      41.3
+      37
+      0
+      17.5
+      
+      35.7
+      36
+      1
+condition
+      EOPET
+      control
+      Pre-Eclampsia
+maternal age
+      33
+      37
+      25
+      24
+      19
+      38
+      36
       34
+      27
       28
       26
+      29
       32
       31
       30
       35
       20
       22
-      33
-      37
-      24
-      19
-      36
-      27
-      29
 age
       21
-      29 years
-      33
-      40
-      30 years
-      24 years
-      37
-      27 years
-      31
-      25
-      28 years
-      23 years
-      30
-      32 years
-      38
-      31 years
-      20 years
-      34
-      23
       28
       27
       26
       29
       43
+      33
+      40
       32
-race
-      38
-      34
-      28
-      32
-      Hispanic
+      37
+      31
+      25
+      24
+      28 years
       30
-      35
-      41
-      22
+      38
+      20
+      34
+      23
+race
       Caucasian
       33
       40
       37
       Asian
+      38
       36
+      34
       27
+      28
       Other
       29
       39
+      32
+      Hispanic
       African American
+      30
+      35
+      41
+      22
 dose
       400
       200
