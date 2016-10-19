@@ -9,5 +9,13 @@ class Command(BaseCommand):
         """
         command's hande method
         """        
-        sample_attribute_name_value()
+
+        samples_by_gestation_age()
+
+            
+        # samples = total_samples()
+        # for sample in samples:
+        #     sample_attributes = SampleAttributes.objects.filter(sample=sample)
+        #     csection = sample_attributes.filter(unificated_value__value='')
+
 

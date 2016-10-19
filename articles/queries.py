@@ -1,12 +1,46 @@
 from articles.models import *
+from prettytable import PrettyTable
 
+
+def show_experiment_samples():
+    exp_id = 'E-GEOD-44667'
+    exp = Experiment.objects.get(data__contains={'accession':exp_id})
+
+    samples = Sample.objects.filter(
+      experiment__data__contains={'accession':exp_id})
+    for sample in samples:
+        print(sample)
+        attributes = SampleAttribute.objects.filter(sample=sample)
+        for attribute in attributes:
+            print("    ",attribute.old_name,
+                  attribute.old_value,
+                  "    ",
+                  attribute.unificated_name,
+                  attribute.unificated_value)
+
+
+    # names = attributes.order_by().values_list(
+    #   'old_name', flat=True).distinct()
+    # for name in names:
+    #     print(name)
+    #     values = attributes.filter(sample__in=samples,
+    #       old_name=name).order_by().values_list('old_value', flat=True).distinct()
+    #     for value in values:
+    #         print("    ", value)
+    
 
 def sample_attribute_old_name_value():
     """
     for each sample attribute name print in which experiments it appears add
     which values it takes in those experiments
     """
-    attributes = SampleAttribute.objects.all()
+
+
+
+    samples_in_experinment = Sample.objects.filter(
+      experiment__data__contains={'accession':'E-GEOD-41336'})
+
+    attributes = SampleAttribute.objects.filter(sample__in=samples_in_experinment)
 
     names = attributes.order_by().values_list(
       'old_name', flat=True).distinct()
@@ -14,11 +48,15 @@ def sample_attribute_old_name_value():
     with open("names_values.txt", "w") as text_file:
         for name in names:
             print(name, file=text_file)
-            values = SampleAttribute.objects.filter(
+            print(name)
+
+            values = SampleAttribute.objects.filter(sample__in=samples_in_experinment,
               old_name=name).order_by().values_list(
                 'old_value', flat=True).distinct()
             for value in values:
                 print("     ", value, file=text_file)
+                print("     ", value)
+
 
 def sample_attribute_name_value():
     """
@@ -42,76 +80,40 @@ exp_ids = ['E-GEOD-31679', 'E-GEOD-30186', 'E-GEOD-15789',
 
 def total_samples():
     all_exps = Experiment.objects.all()
+    total = []
+    exps =[]
+    has_minimal = []
+    mail_sent = []
 
-    exps = []
     for exp in all_exps:
-        if exp.data['accession'] in exp_ids:
-            exps.append(exp)
+        if not exp.is_cell_line():
+            total.append(exp)
+            if exp.has_minimal():
+                has_minimal.append(exp)
+            if exp.is_unified():
+                exps.append(exp)
+            if 'mail sent' in exp.data:
+                mail_sent.append(exp)
+
+    # exps = []
+    # for exp in all_exps:
+    #     if exp.data['accession'] in exp_ids:
+    #         exps.append(exp)
 
     samples = Sample.objects.filter(experiment__in=exps)
-    print(len(samples))
-    #262
-    print(len(Sample.objects.all()))
+
+    print('total',len(Sample.objects.filter(experiment__in=total)))
+    print('unified',len(samples))
+    print('has_minimal',len(Sample.objects.filter(experiment__in=has_minimal)))
+    print('mail_sent',len(Sample.objects.filter(experiment__in=mail_sent)))
     return samples
 
-def preeclampsia_samples():
-    preeclampsia = UnificatedSamplesAttributeValue.objects.get(value='Pre-Eclampsia')
-    preeclampsia_syn = UnificatedSamplesAttributeValue.objects.filter(
-      synonyms__in=[preeclampsia])
-    pre_syn_lst = list(preeclampsia_syn)
-    pre_syn_lst.append(preeclampsia)
-    samples = total_samples()
-    pre_samples = []
-    for sample in samples:
-        #if the sample contains attribute value preeclampsia or synonym 
-        if SampleAttribute.objects.filter(
-          sample=sample,
-          unificated_value__in=pre_syn_lst).exists():
-            pre_samples.append(sample)
-    print(pre_samples)
-    print(len(pre_samples))
-    #80
 
-
-def health_samples():
-    diagnosis = UnificatedSamplesAttributeName.objects.get(name='Diagnosis')
-    health = UnificatedSamplesAttributeValue.objects.get(value='Health')
-    
-    samples = total_samples()
-    pre_samples = []
-    for sample in samples:
-        #if the sample contains attribute diagnosis with value health
-        if SampleAttribute.objects.filter(
-          sample=sample,
-          unificated_name=diagnosis,
-          unificated_value=health).exists():
-            pre_samples.append(sample)
-    print(pre_samples)
-    print(len(pre_samples))
-    #107
-
-def fgr_samples():
-    diagnosis = UnificatedSamplesAttributeName.objects.get(name='Diagnosis')
-    health = UnificatedSamplesAttributeValue.objects.get(value='Fetal Growth Retardation')
-    
-    samples = total_samples()
-    pre_samples = []
-    for sample in samples:
-        #if the sample contains attribute diagnosis with value health
-        if SampleAttribute.objects.filter(
-          sample=sample,
-          unificated_name=diagnosis,
-          unificated_value=health).exists():
-            pre_samples.append(sample)
-    print(pre_samples)
-    print(len(pre_samples))
 
 def samples_by_diagnosis():
     organism_part = UnificatedSamplesAttributeName.objects.get(name='Diagnosis')
     organism_parts = UnificatedSamplesAttributeValue.objects.filter(unificated_name=organism_part)
 
-
-    
     parts_dict = {}
     for part in organism_parts:
         parts_dict[part] = 0
@@ -126,8 +128,7 @@ def samples_by_diagnosis():
               unificated_name=organism_part).unificated_value
             parts_dict[organism_part_value]+=1
         else:
-            if not(SampleAttribute.objects.filter(sample=sample, unificated_name__name='Cells, Cultured').exists()):
-                print(sample.experiment.data['accession'], sample.id)
+            print(sample.experiment.data['accession'], sample.id)
             parts_dict["other"]+=1
 
     print(parts_dict)
@@ -151,9 +152,9 @@ def samples_by_organism_part():
           unificated_name=organism_part).exists():
             organism_part_value = SampleAttribute.objects.get(sample=sample, 
               unificated_name=organism_part).unificated_value
-            print(sample.experiment.data['accession'])
             parts_dict[organism_part_value]+=1
         else:
+            print(sample.experiment.data['accession'], sample.id)
             parts_dict["other"]+=1
 
     print(parts_dict)
@@ -217,36 +218,53 @@ def samples_by_trim():
 def samples_by_gestation_age():
     cells_cultured = UnificatedSamplesAttributeName.objects.get(name='Cells, Cultured')
     trim = UnificatedSamplesAttributeName.objects.get(name='Pregnancy Trimesters')
-    organism_part = UnificatedSamplesAttributeName.objects.get(name='Gestational Age')
-    organism_parts = UnificatedSamplesAttributeValue.objects.filter(unificated_name=organism_part)
+    age = UnificatedSamplesAttributeName.objects.get(name='Gestational Age')
+    
 
     
-    # parts_dict = {}
-    # for part in organism_parts:
-    #     parts_dict[part] = 0
-    # parts_dict["other"] = 0
+    parts_dict = {}
+    parts_dict['Age'] = 0
+    parts_dict['ApproximateAge'] = 0
+    parts_dict['Trimesters'] = 0
+    parts_dict['AtBirth'] = 0
+    parts_dict['Unknown'] = 0
+
+    at_birth_conditions = ['Caesarean Section', 'Labor, Obstetric', 'Delivery, Obstetric']
     total = 0
     tr = 0
     samples = total_samples()
     for sample in samples:
         if SampleAttribute.objects.filter(
           sample=sample,
-          unificated_name=organism_part).exists():
+          unificated_name=age).exists():
+            parts_dict['Age'] += 1
             # organism_part_value = SampleAttribute.objects.get(sample=sample, 
             #   unificated_name=organism_part).unificated_value
-            print(sample.experiment.data['accession'])
-            total+=1
+            
         elif SampleAttribute.objects.filter(
           sample=sample,
           unificated_name=trim).exists():
-            tr += 1
+            parts_dict['Trimesters'] += 1
         elif SampleAttribute.objects.filter(
           sample=sample,
           unificated_name=cells_cultured).exists():
             pass
+
+        elif SampleAttribute.objects.filter(
+          sample=sample,
+          unificated_name__name='Gestational Age Upper Bound').exists() or \
+             SampleAttribute.objects.filter(
+          sample=sample,
+          unificated_name__name='Gestational Age Lower Bound').exists():
+            parts_dict['ApproximateAge'] += 1
+        elif SampleAttribute.objects.filter(
+          sample=sample,
+          unificated_name__name__in=at_birth_conditions).exists():
+            parts_dict['AtBirth'] += 1
         else:
+            parts_dict['Unknown'] += 1
             print(sample.experiment.data['accession'], sample.id)
-    print(total,tr)
+    print(parts_dict)
 
 
 def samples_by_race():

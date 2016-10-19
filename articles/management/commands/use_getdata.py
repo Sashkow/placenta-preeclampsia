@@ -10,7 +10,7 @@ class Command(BaseCommand):
         command's hande method
         """        
         acc = "E-GEOD-74341"
-        get_experiment_attributes(acc)
+        read_xls()
 
 
 

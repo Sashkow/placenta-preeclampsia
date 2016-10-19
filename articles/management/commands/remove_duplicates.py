@@ -9,6 +9,8 @@ class Command(BaseCommand):
         """
         command's hande method
         """        
+        
+
         # samples = Sample.objects.all()
         # uns = UnificatedSamplesAttributeName.objects.all()
 

@@ -164,7 +164,7 @@ class ExperimentAdmin(SuperModelAdmin, SimpleHistoryAdmin):
     inlines = [MicroarrayInline, SampleInline]    
     list_display = _list_display(Experiment) + \
                    _experiment_microarrays_display() + \
-                   _experiment_unified_display() + \
+                   ['status'] + \
                    _extra_display(Experiment)
     exclude = ['microarrays']
     fields = ('data',)

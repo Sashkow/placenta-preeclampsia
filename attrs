@@ -1,4 +1,34 @@
-Organism Part ['Chorionic Villi', 'Adipose Tissue', 'Decidua', 'Placenta']
+Karyotype ['wild type']
+name []
+Cells, Cultured ['Swan 71', 'Choriocarcinoma', 'Trophoblasts']
+Average Maternal Age []
+Classification ['Mice, Inbred C57BL', 'Mice', 'Humans']
+Pathology []
+Gestational Age Lower Bound []
+Common ['Number in grams', 'True', 'False', 'Numeric', 'Text Value', 'Number in years', 'Number in weeks']
+Fetal Weight []
+Pre-Eclampsia Onset ['Late Onset Pre-Eclampsia ( at gestational age >=31 weeks)', 'Early Onset Pre-Ecpampsia (at gestational age <31 weeks)']
+Ethnology []
+overexpressed protein ['STOX1 protein, human']
+Race ['Hispanic Americans', 'Asian Continental Ancestry Group', 'Hispanic Americans', 'African Americans', 'European Continental Ancestry Group', 'Other']
+Transfection ['mock-transfection']
+Gestational Age []
+Maternal Age []
+Gravidity []
+Pregnancy Trimesters ['Pregnancy Trimester, Third', 'Pregnancy Trimester, Second', 'Pregnancy Trimester, First']
+Gestational Age at Experiment []
+Organism Part ['decidua basalis', 'mixed trophoblast and decidua', 'placental labyrinth villous', 'villous tree', 'basal plate', 'Chorionic Villi', 'Adipose Tissue', 'Decidua', 'Placenta']
+Delivery, Obstetric ['term', 'Premature Birth']
+Gestational Age Upper Bound []
+biosource provider []
+Caesarean Section []
+Average Fetal Weight []
+Labor, Obstetric ['None', 'Obstetric Labor, Premature', 'vaginal', 'Caesarean Section']
+Parity []
+
+
+
+Organism Part ['Chorionic Villi', 'Adipose Tissue', 'Decidua', 'Placenta', 'Trophoblasts']
 Maternal Age numeric
 Gravidity numeric
 Parity numeric
@@ -6,9 +36,10 @@ Gestational Age numeric
 Gestational Age at time of Experiment numeric
 Diagnosis ['Health', 'Pre-Eclampsia', 'Fetal Growth Retardation']
 Pre-Eclampsia Onset ['Late Onset Pre-Eclampsia ( at gestational age >=31 weeks)', 'Early Onset Pre-Ecpampsia (at gestational age <31 weeks)']
-overexpressed protein ['STOX1 protein, human']
-Cells, Cultured ['Choriocarcinoma', 'Trophoblasts']
-Classification ['Humans']
+Classification ['Humans', 'Mice']
 Pregnancy Trimesters ['Pregnancy Trimester, Third', 'Pregnancy Trimester, Second', 'Pregnancy Trimester, First']
-Race ['Hispanic Americans', 'Asian Continental Ancestry Group', 'Hispanic Americans', 'African Americans', 'European Continental Ancestry Group', 'Other']
-Labor, Obstetric ['Vaginal birth', 'Cesarean Section']
+Race ['Asian Continental Ancestry Group', 'Hispanic Americans', 'African Americans', 'European Continental Ancestry Group', 'Other']
+Labor, Obstetric ['vaginal', 'None']
+Delivery ['term', 'preterm']
+Caesarean Section ['True', 'False']
+

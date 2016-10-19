@@ -5,9 +5,6 @@ from articles.models import *
 from articles.getdata import *
 
 
-
-
-
 class Command(BaseCommand):
     """
     """
