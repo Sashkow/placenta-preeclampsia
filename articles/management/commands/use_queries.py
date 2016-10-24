@@ -10,7 +10,7 @@ class Command(BaseCommand):
         command's hande method
         """        
 
-        samples_by_gestation_age()
+        total_samples()
 
             
         # samples = total_samples()

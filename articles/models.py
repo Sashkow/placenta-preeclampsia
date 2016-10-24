@@ -199,6 +199,10 @@ class Sample(models.Model):
     def __str__(self):
         return self._show()
 
+    def attributes(self):
+        return SampleAttribute.objects.filter(sample=self)
+
+
     def has_old_name(self, old_name):
         sample_attributes = SampleAttribute.objects.filter(
                             sample=self)

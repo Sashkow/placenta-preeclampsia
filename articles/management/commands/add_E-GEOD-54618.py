@@ -134,17 +134,3 @@ class Command(BaseCommand):
                   sample=sample,
                   unificated_name=diagnosis,
                   unificated_value=health)
-
-
-
-
-
-
-
-
-
-
-
-
-
-

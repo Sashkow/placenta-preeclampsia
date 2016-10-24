@@ -1,9 +1,22 @@
 from articles.models import *
 from prettytable import PrettyTable
 
+def show_unfilled_samples():
+    exp_id = 'E-GEOD-15787'
+    exp = Experiment.objects.get(data__contains={'accession':exp_id})
+
+    samples = Sample.objects.filter(
+      experiment__data__contains={'accession':exp_id})
+    attrs = SampleAttribute.objects.filter(sample__in=samples)
+    for attr in attrs:
+        if attr.unificated_name==None or attr.unificated_value==None:
+            print(attr)
+    
+
+
 
 def show_experiment_samples():
-    exp_id = 'E-GEOD-44667'
+    exp_id = 'E-GEOD-74341'
     exp = Experiment.objects.get(data__contains={'accession':exp_id})
 
     samples = Sample.objects.filter(
@@ -38,7 +51,7 @@ def sample_attribute_old_name_value():
 
 
     samples_in_experinment = Sample.objects.filter(
-      experiment__data__contains={'accession':'E-GEOD-41336'})
+      experiment__data__contains={'accession':'E-GEOD-74341'})
 
     attributes = SampleAttribute.objects.filter(sample__in=samples_in_experinment)
 
@@ -80,32 +93,49 @@ exp_ids = ['E-GEOD-31679', 'E-GEOD-30186', 'E-GEOD-15789',
 
 def total_samples():
     all_exps = Experiment.objects.all()
+    total_total = []
     total = []
     exps =[]
     has_minimal = []
     mail_sent = []
+    mail_received=[]
 
     for exp in all_exps:
-        if not exp.is_cell_line():
-            total.append(exp)
-            if exp.has_minimal():
-                has_minimal.append(exp)
-            if exp.is_unified():
-                exps.append(exp)
+        if not ('excluded' in exp.data):
+            total_total.append(exp)
+            if not exp.is_cell_line():
+                total.append(exp)
+                if exp.has_minimal():
+                    has_minimal.append(exp)
+                if exp.is_unified():
+                    exps.append(exp)
             if 'mail sent' in exp.data:
                 mail_sent.append(exp)
+            if 'mail received' in exp.data:
+                mail_received.append(exp)
 
-    # exps = []
-    # for exp in all_exps:
-    #     if exp.data['accession'] in exp_ids:
-    #         exps.append(exp)
 
     samples = Sample.objects.filter(experiment__in=exps)
-
+    print('total exps with cell lines', len(total_total))
+    print('total exps', len(total))
     print('total',len(Sample.objects.filter(experiment__in=total)))
     print('unified',len(samples))
     print('has_minimal',len(Sample.objects.filter(experiment__in=has_minimal)))
-    print('mail_sent',len(Sample.objects.filter(experiment__in=mail_sent)))
+    print('mail_sent',len(mail_sent))
+    print('mail received',len(mail_received))
+    return samples
+
+def culture_samples():
+    all_exps = Experiment.objects.all()
+    culture = []
+
+    for exp in all_exps:
+        if exp.is_cell_line():
+            culture.append(exp)
+
+    samples = Sample.objects.filter(experiment__in=culture)
+    print('culture exps', len(culture))
+    print('culture samples',len(samples))
     return samples
 
 
@@ -128,7 +158,7 @@ def samples_by_diagnosis():
               unificated_name=organism_part).unificated_value
             parts_dict[organism_part_value]+=1
         else:
-            print(sample.experiment.data['accession'], sample.id)
+            # print(sample.experiment.data['accession'], sample.id)
             parts_dict["other"]+=1
 
     print(parts_dict)
@@ -169,7 +199,7 @@ def samples_by_cells_cultured():
         cultures_dict[culture] = 0
     cultures_dict["other"] = 0
     total = 0
-    samples = total_samples()
+    samples = culture_samples()
     for sample in samples:
         if SampleAttribute.objects.filter(
           sample=sample,
@@ -185,7 +215,7 @@ def samples_by_cells_cultured():
                 # print(sample.experiment.data['accession'], sample.id)
                 cultures_dict[culture_value]+=1
             else:
-                print(sample.experiment.data['accession'], sample.id)
+                # print(sample.experiment.data['accession'], sample.id)
                 cultures_dict["other"]+=1
 
     print(cultures_dict)
@@ -208,7 +238,7 @@ def samples_by_trim():
           unificated_name=organism_part).exists():
             organism_part_value = SampleAttribute.objects.get(sample=sample, 
               unificated_name=organism_part).unificated_value
-            print(sample.experiment.data['accession'])
+            # print(sample.experiment.data['accession'])
             parts_dict[organism_part_value]+=1
         else:
             parts_dict["other"]+=1
@@ -263,12 +293,12 @@ def samples_by_gestation_age():
             parts_dict['AtBirth'] += 1
         else:
             parts_dict['Unknown'] += 1
-            print(sample.experiment.data['accession'], sample.id)
+            # print(sample.experiment.data['accession'], sample.id)
     print(parts_dict)
 
 
 def samples_by_race():
-    organism_part = UnificatedSamplesAttributeName.objects.get(name='Race')
+    organism_part = UnificatedSamplesAttributeName.objects.get(name='Continental Population Groups')
     organism_parts = UnificatedSamplesAttributeValue.objects.filter(unificated_name=organism_part)
 
     
@@ -278,18 +308,34 @@ def samples_by_race():
     parts_dict["other"] = 0
 
     samples = total_samples()
+
     for sample in samples:
         if SampleAttribute.objects.filter(
           sample=sample,
           unificated_name=organism_part).exists():
             organism_part_value = SampleAttribute.objects.get(sample=sample, 
               unificated_name=organism_part).unificated_value
-            print(sample.experiment.data['accession'])
+            # print(sample.experiment.data['accession'])
             parts_dict[organism_part_value]+=1
         else:
             parts_dict["other"]+=1
 
     print(parts_dict)
+
+
+def stats():
+    print("Organism Part")
+    samples_by_organism_part()
+    print("Diagnosis")
+    samples_by_diagnosis()
+    print("Cultured Cells")
+    samples_by_cells_cultured()
+    print("Gestational Age")
+    samples_by_gestation_age()
+    print("Race")
+    samples_by_race()
+    
+
 
 
 
