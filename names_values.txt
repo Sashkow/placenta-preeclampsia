@@ -1,58 +1,5 @@
-None
-      None
 organism part
       placental tissue
-name
-      GSM1917664 1
-      GSM1917683 2
-      GSM1917676 2
-      GSM1917674 1
-      GSM1917661 1
-      GSM1917671 1
-      GSM1917673 1
-      GSM1917683 1
-      GSM1917681 2
-      GSM1917666 2
-      GSM1917663 1
-      GSM1917662 1
-      GSM1917670 1
-      GSM1917660 2
-      GSM1917668 1
-      GSM1917675 1
-      GSM1917680 2
-      GSM1917674 2
-      GSM1917665 2
-      GSM1917671 2
-      GSM1917675 2
-      GSM1917682 2
-      GSM1917679 2
-      GSM1917678 2
-      GSM1917679 1
-      GSM1917667 1
-      GSM1917677 2
-      GSM1917664 2
-      GSM1917665 1
-      GSM1917670 2
-      GSM1917682 1
-      GSM1917684 2
-      GSM1917673 2
-      GSM1917669 2
-      GSM1917663 2
-      GSM1917680 1
-      GSM1917660 1
-      GSM1917676 1
-      GSM1917667 2
-      GSM1917672 2
-      GSM1917684 1
-      GSM1917672 1
-      GSM1917681 1
-      GSM1917669 1
-      GSM1917668 2
-      GSM1917662 2
-      GSM1917661 2
-      GSM1917678 1
-      GSM1917677 1
-      GSM1917666 1
 organism
       Homo sapiens
 sample type
