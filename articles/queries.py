@@ -1,5 +1,58 @@
+
 from articles.models import *
 from prettytable import PrettyTable
+
+def show_exps_of_good_platforms():
+    good_platforms = ['GPL570','GPL6244','GPL10558']
+    # good_platforms = ['GPL10558',]
+
+    microarrays = []
+    for platform in good_platforms:
+        microarray = Microarray.objects.filter(data__contains=
+          {'secondaryaccession':platform}).first()
+        if microarray:
+            microarrays.append(microarray)
+    print(microarrays)
+
+    
+
+#     for exp in all_exps:
+#         if True in \
+# [True for microarray in microarrays if microarray in exp.microarrays.all()]:
+#             exps.append(exp)
+
+    exps = Experiment.objects.filter(microarrays__in=microarrays)
+    minimal_exps = [exp for exp in exps if exp.has_minimal()]
+    for exp in minimal_exps:
+        print(exp)
+
+    samples = Sample.objects.filter(experiment__in=minimal_exps)
+    human_health = []
+    for sample in samples:
+        is_human = SampleAttribute.objects.filter(
+          sample=sample,
+          unificated_name__name='Classification',
+          unificated_value__value='Humans').exists()
+        is_healthy = SampleAttribute.objects.filter(
+          sample=sample,
+          unificated_name__name='Diagnosis',
+          unificated_value__value='Health').exists()
+        if is_human and is_healthy:
+            human_health.append(sample)
+            age = SampleAttribute.objects.filter(
+              sample=sample,
+              unificated_name__name='Gestational Age').first().old_value
+            print(age)
+
+    for exp in minimal_exps:
+        print(exp.data['secondaryaccession'])
+        print(exp.microarrays.all())
+
+
+
+
+
+
 
 def show_unfilled_samples():
     exp_id = 'E-GEOD-15787'
@@ -11,26 +64,26 @@ def show_unfilled_samples():
     for attr in attrs:
         if attr.unificated_name==None or attr.unificated_value==None:
             print(attr)
-    
 
 
-
-def show_experiment_samples():
-    exp_id = 'E-GEOD-74341'
-    exp = Experiment.objects.get(data__contains={'accession':exp_id})
+def show_experiment_samples(exp):
+    # exp_id = 'E-GEOD-74341'
+    # exp = Experiment.objects.get(data__contains={'accession':exp_id})
 
     samples = Sample.objects.filter(
-      experiment__data__contains={'accession':exp_id})
+      experiment=exp)
     for sample in samples:
         print(sample)
         attributes = SampleAttribute.objects.filter(sample=sample)
         for attribute in attributes:
-            print("    ",attribute.old_name,
-                  attribute.old_value,
-                  "    ",
-                  attribute.unificated_name,
-                  attribute.unificated_value)
-
+            if attribute.unificated_value.unificated_name.name=='Common':
+                print("    ",
+                      attribute.unificated_name,
+                      attribute.old_value)
+            else:
+                print("    ",
+                      attribute.unificated_name,
+                      attribute.unificated_value)
 
     # names = attributes.order_by().values_list(
     #   'old_name', flat=True).distinct()

@@ -10,7 +10,7 @@ class Command(BaseCommand):
         command's hande method
         """        
 
-        total_samples()
+        show_exps_of_good_platforms()
 
             
         # samples = total_samples()

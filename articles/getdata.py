@@ -6,13 +6,6 @@ import pickle
 from bioservices.arrayexpress import ArrayExpress
 
 
-
-
-
-
-
-
-
 s = ArrayExpress()
 # res = s.queryExperiments(
 # keywords="pre-eclampsia+OR+preeclampsia+OR+pre-eclamptic+OR+preeclamptic",
