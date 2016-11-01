@@ -1,1 +1,1 @@
-web: gunicorn preeclampsia_db.wsgi --log-file -
+web: gunicorn preeclampsia_db.wsgi --timeout 15 --keep-alive 5 --log-level debug
