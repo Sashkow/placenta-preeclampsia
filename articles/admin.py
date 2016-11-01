@@ -164,12 +164,11 @@ class ExperimentAdmin(SuperModelAdmin, SimpleHistoryAdmin):
     inlines = [MicroarrayInline, SampleInline]    
     list_display = _list_display(Experiment) + \
                    _experiment_microarrays_display() + \
-                   # ['status'] + \
                    _extra_display(Experiment)
     exclude = ['microarrays']
     fields = ('data',)
 
-    
+                   # ['status'] + \    
     # def save_formset(self, request, form, formset, change):
     #     instances = formset.save(commit=False)
     #     for instance in instances: 
