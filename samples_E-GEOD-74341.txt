@@ -1,41 +1,97 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <experiment api-revision="091015" api-version="3" revision="091015" version="1.0">
  <accession>
-  E-GEOD-37901
+  E-MEXP-31
  </accession>
  <sample>
   <assay>
    <name>
-    GSM929670
+    SG2_u34a
    </name>
+   <comment>
+    <name>
+     Array Design URI
+    </name>
+    <value>
+     http://www.ebi.ac.uk/aerep/result?queryFor=PhysicalArrayDesign&amp;aAccession=A-AFFY-19
+    </value>
+   </comment>
   </assay>
+  <characteristic>
+   <category>
+    Age
+   </category>
+   <value>
+    9
+   </value>
+  </characteristic>
+  <characteristic>
+   <category>
+    TimeUnit
+   </category>
+   <value>
+    days
+   </value>
+  </characteristic>
+  <characteristic>
+   <category>
+    TargetedCellType
+   </category>
+   <value>
+    spermatogonia
+   </value>
+  </characteristic>
+  <characteristic>
+   <category>
+    OrganismPart
+   </category>
+   <value>
+    testis
+   </value>
+  </characteristic>
+  <characteristic>
+   <category>
+    Sex
+   </category>
+   <value>
+    male
+   </value>
+  </characteristic>
+  <characteristic>
+   <category>
+    DevelopmentalStage
+   </category>
+   <value>
+    pre-puberty
+   </value>
+  </characteristic>
+  <characteristic>
+   <category>
+    StrainOrLine
+   </category>
+   <value>
+    Sprague Dawley
+   </value>
+  </characteristic>
   <characteristic>
    <category>
     Organism
    </category>
    <value>
-    Homo sapiens
+    Rattus norvegicus
    </value>
   </characteristic>
   <characteristic>
    <category>
-    gestational age
+    BioSourceType
    </category>
    <value>
-    18.8
-   </value>
-  </characteristic>
-  <characteristic>
-   <category>
-    organism part
-   </category>
-   <value>
-    placenta
+    cells
    </value>
   </characteristic>
   <extract>
    <name>
-    GSM929670 extract 1
+    SG2
    </name>
   </extract>
   <file>
@@ -43,118 +99,147 @@
     data
    </type>
    <name>
-    GSM929670_16_8_MPG_18.8_280606.CEL
+    SG2_u34a.CEL
    </name>
    <url>
-    ftp://ftp.ebi.ac.uk/pub/databases/microarray/data/experiment/GEOD/E-GEOD-37901/E-GEOD-37901.raw.1.zip/GSM929670_16_8_MPG_18.8_280606.CEL
+    ftp://ftp.ebi.ac.uk/pub/databases/microarray/data/experiment/MEXP/E-MEXP-31/E-MEXP-31.raw.1.zip/SG2_u34a.CEL
    </url>
    <comment>
     <name>
      ArrayExpress FTP file
     </name>
     <value>
-     ftp://ftp.ebi.ac.uk/pub/databases/microarray/data/experiment/GEOD/E-GEOD-37901/E-GEOD-37901.raw.1.zip
+     ftp://ftp.ebi.ac.uk/pub/databases/microarray/data/experiment/MEXP/E-MEXP-31/E-MEXP-31.raw.1.zip
     </value>
    </comment>
   </file>
   <file>
    <type>
-    derived data
+    derived data matrix
    </type>
    <name>
-    GSM929670_sample_table.txt
+    E-MEXP-31-processed-data-2481281219.txt
    </name>
    <url>
-    ftp://ftp.ebi.ac.uk/pub/databases/microarray/data/experiment/GEOD/E-GEOD-37901/E-GEOD-37901.processed.1.zip/GSM929670_sample_table.txt
+    ftp://ftp.ebi.ac.uk/pub/databases/microarray/data/experiment/MEXP/E-MEXP-31/E-MEXP-31.processed.1.zip/E-MEXP-31-processed-data-2481281219.txt
    </url>
    <comment>
     <name>
      Derived ArrayExpress FTP file
     </name>
     <value>
-     ftp://ftp.ebi.ac.uk/pub/databases/microarray/data/experiment/GEOD/E-GEOD-37901/E-GEOD-37901.processed.1.zip
+     ftp://ftp.ebi.ac.uk/pub/databases/microarray/data/experiment/MEXP/E-MEXP-31/E-MEXP-31.processed.1.zip
     </value>
    </comment>
   </file>
   <labeled-extract>
    <name>
-    GSM929670 LE 1
+    SG2B
    </name>
    <label>
-    biotin
+    Biotin
    </label>
   </labeled-extract>
+  <scan>
+   <name>
+    SG2_u34a
+   </name>
+  </scan>
   <source>
    <name>
-    GSM929670 1
+    Rattus norvegicus
    </name>
-   <comment>
-    <name>
-     Sample_description
-    </name>
-    <value>
-     Gene expression data from mid-gestational placenta
-    </value>
-   </comment>
-   <comment>
-    <name>
-     Sample_source_name
-    </name>
-    <value>
-     placenta
-    </value>
-   </comment>
-   <comment>
-    <name>
-     Sample_title
-    </name>
-    <value>
-     16_8_MPG_18.8
-    </value>
-   </comment>
   </source>
-  <variable>
-   <name>
-    GESTATIONAL AGE
-   </name>
-   <value>
-    18.8
-   </value>
-  </variable>
  </sample>
  <sample>
   <assay>
    <name>
-    GSM929669
+    SC1_u34a
    </name>
+   <comment>
+    <name>
+     Array Design URI
+    </name>
+    <value>
+     http://www.ebi.ac.uk/aerep/result?queryFor=PhysicalArrayDesign&amp;aAccession=A-AFFY-18
+    </value>
+   </comment>
   </assay>
+  <characteristic>
+   <category>
+    Age
+   </category>
+   <value>
+    90
+   </value>
+  </characteristic>
+  <characteristic>
+   <category>
+    TimeUnit
+   </category>
+   <value>
+    days
+   </value>
+  </characteristic>
+  <characteristic>
+   <category>
+    TargetedCellType
+   </category>
+   <value>
+    spermatocytes
+   </value>
+  </characteristic>
+  <characteristic>
+   <category>
+    OrganismPart
+   </category>
+   <value>
+    testis
+   </value>
+  </characteristic>
+  <characteristic>
+   <category>
+    Sex
+   </category>
+   <value>
+    male
+   </value>
+  </characteristic>
+  <characteristic>
+   <category>
+    DevelopmentalStage
+   </category>
+   <value>
+    adult
+   </value>
+  </characteristic>
+  <characteristic>
+   <category>
+    StrainOrLine
+   </category>
+   <value>
+    Sprague Dawley
+   </value>
+  </characteristic>
   <characteristic>
    <category>
     Organism
    </category>
    <value>
-    Homo sapiens
+    Rattus norvegicus
    </value>
   </characteristic>
   <characteristic>
    <category>
-    gestational age
+    BioSourceType
    </category>
    <value>
-    17.3
-   </value>
-  </characteristic>
-  <characteristic>
-   <category>
-    organism part
-   </category>
-   <value>
-    placenta
+    cells
    </value>
   </characteristic>
   <extract>
    <name>
-    GSM929669 extract 1
+    SC1
    </name>
   </extract>
   <file>
@@ -162,118 +247,147 @@
     data
    </type>
    <name>
-    GSM929669_15_6_MPG_17.3_280606.CEL
+    SC1_u34a.CEL
    </name>
    <url>
-    ftp://ftp.ebi.ac.uk/pub/databases/microarray/data/experiment/GEOD/E-GEOD-37901/E-GEOD-37901.raw.1.zip/GSM929669_15_6_MPG_17.3_280606.CEL
+    ftp://ftp.ebi.ac.uk/pub/databases/microarray/data/experiment/MEXP/E-MEXP-31/E-MEXP-31.raw.1.zip/SC1_u34a.CEL
    </url>
    <comment>
     <name>
      ArrayExpress FTP file
     </name>
     <value>
-     ftp://ftp.ebi.ac.uk/pub/databases/microarray/data/experiment/GEOD/E-GEOD-37901/E-GEOD-37901.raw.1.zip
+     ftp://ftp.ebi.ac.uk/pub/databases/microarray/data/experiment/MEXP/E-MEXP-31/E-MEXP-31.raw.1.zip
     </value>
    </comment>
   </file>
   <file>
    <type>
-    derived data
+    derived data matrix
    </type>
    <name>
-    GSM929669_sample_table.txt
+    E-MEXP-31-processed-data-2481281219.txt
    </name>
    <url>
-    ftp://ftp.ebi.ac.uk/pub/databases/microarray/data/experiment/GEOD/E-GEOD-37901/E-GEOD-37901.processed.1.zip/GSM929669_sample_table.txt
+    ftp://ftp.ebi.ac.uk/pub/databases/microarray/data/experiment/MEXP/E-MEXP-31/E-MEXP-31.processed.1.zip/E-MEXP-31-processed-data-2481281219.txt
    </url>
    <comment>
     <name>
      Derived ArrayExpress FTP file
     </name>
     <value>
-     ftp://ftp.ebi.ac.uk/pub/databases/microarray/data/experiment/GEOD/E-GEOD-37901/E-GEOD-37901.processed.1.zip
+     ftp://ftp.ebi.ac.uk/pub/databases/microarray/data/experiment/MEXP/E-MEXP-31/E-MEXP-31.processed.1.zip
     </value>
    </comment>
   </file>
   <labeled-extract>
    <name>
-    GSM929669 LE 1
+    SC1A
    </name>
    <label>
-    biotin
+    Biotin
    </label>
   </labeled-extract>
+  <scan>
+   <name>
+    SC1_u34a
+   </name>
+  </scan>
   <source>
    <name>
-    GSM929669 1
+    Rattus norvegicus__S:BioSource:166482
    </name>
-   <comment>
-    <name>
-     Sample_description
-    </name>
-    <value>
-     Gene expression data from mid-gestational placenta
-    </value>
-   </comment>
-   <comment>
-    <name>
-     Sample_source_name
-    </name>
-    <value>
-     placenta
-    </value>
-   </comment>
-   <comment>
-    <name>
-     Sample_title
-    </name>
-    <value>
-     15_6_MPG_17.3
-    </value>
-   </comment>
   </source>
-  <variable>
-   <name>
-    GESTATIONAL AGE
-   </name>
-   <value>
-    17.3
-   </value>
-  </variable>
  </sample>
  <sample>
   <assay>
    <name>
-    GSM929668
+    ST2_u34b
    </name>
+   <comment>
+    <name>
+     Array Design URI
+    </name>
+    <value>
+     http://www.ebi.ac.uk/aerep/result?queryFor=PhysicalArrayDesign&amp;aAccession=A-AFFY-19
+    </value>
+   </comment>
   </assay>
+  <characteristic>
+   <category>
+    Age
+   </category>
+   <value>
+    90
+   </value>
+  </characteristic>
+  <characteristic>
+   <category>
+    TimeUnit
+   </category>
+   <value>
+    days
+   </value>
+  </characteristic>
+  <characteristic>
+   <category>
+    TargetedCellType
+   </category>
+   <value>
+    spermatides
+   </value>
+  </characteristic>
+  <characteristic>
+   <category>
+    OrganismPart
+   </category>
+   <value>
+    testis
+   </value>
+  </characteristic>
+  <characteristic>
+   <category>
+    Sex
+   </category>
+   <value>
+    male
+   </value>
+  </characteristic>
+  <characteristic>
+   <category>
+    DevelopmentalStage
+   </category>
+   <value>
+    adult
+   </value>
+  </characteristic>
+  <characteristic>
+   <category>
+    StrainOrLine
+   </category>
+   <value>
+    Sprague Dawley
+   </value>
+  </characteristic>
   <characteristic>
    <category>
     Organism
    </category>
    <value>
-    Homo sapiens
+    Rattus norvegicus
    </value>
   </characteristic>
   <characteristic>
    <category>
-    gestational age
+    BioSourceType
    </category>
    <value>
-    17.1
-   </value>
-  </characteristic>
-  <characteristic>
-   <category>
-    organism part
-   </category>
-   <value>
-    placenta
+    cells
    </value>
   </characteristic>
   <extract>
    <name>
-    GSM929668 extract 1
+    ST2
    </name>
   </extract>
   <file>
@@ -281,118 +395,147 @@
     data
    </type>
    <name>
-    GSM929668_14_5_MPG_17.1_280606.CEL
+    ST2_u34b.CEL
    </name>
    <url>
-    ftp://ftp.ebi.ac.uk/pub/databases/microarray/data/experiment/GEOD/E-GEOD-37901/E-GEOD-37901.raw.1.zip/GSM929668_14_5_MPG_17.1_280606.CEL
+    ftp://ftp.ebi.ac.uk/pub/databases/microarray/data/experiment/MEXP/E-MEXP-31/E-MEXP-31.raw.1.zip/ST2_u34b.CEL
    </url>
    <comment>
     <name>
      ArrayExpress FTP file
     </name>
     <value>
-     ftp://ftp.ebi.ac.uk/pub/databases/microarray/data/experiment/GEOD/E-GEOD-37901/E-GEOD-37901.raw.1.zip
+     ftp://ftp.ebi.ac.uk/pub/databases/microarray/data/experiment/MEXP/E-MEXP-31/E-MEXP-31.raw.1.zip
     </value>
    </comment>
   </file>
   <file>
    <type>
-    derived data
+    derived data matrix
    </type>
    <name>
-    GSM929668_sample_table.txt
+    E-MEXP-31-processed-data-2481281221.txt
    </name>
    <url>
-    ftp://ftp.ebi.ac.uk/pub/databases/microarray/data/experiment/GEOD/E-GEOD-37901/E-GEOD-37901.processed.1.zip/GSM929668_sample_table.txt
+    ftp://ftp.ebi.ac.uk/pub/databases/microarray/data/experiment/MEXP/E-MEXP-31/E-MEXP-31.processed.1.zip/E-MEXP-31-processed-data-2481281221.txt
    </url>
    <comment>
     <name>
      Derived ArrayExpress FTP file
     </name>
     <value>
-     ftp://ftp.ebi.ac.uk/pub/databases/microarray/data/experiment/GEOD/E-GEOD-37901/E-GEOD-37901.processed.1.zip
+     ftp://ftp.ebi.ac.uk/pub/databases/microarray/data/experiment/MEXP/E-MEXP-31/E-MEXP-31.processed.1.zip
     </value>
    </comment>
   </file>
   <labeled-extract>
    <name>
-    GSM929668 LE 1
+    ST2B
    </name>
    <label>
-    biotin
+    Biotin
    </label>
   </labeled-extract>
+  <scan>
+   <name>
+    ST2_u34b
+   </name>
+  </scan>
   <source>
    <name>
-    GSM929668 1
+    Rattus norvegicus__S:BioSource:166485
    </name>
-   <comment>
-    <name>
-     Sample_description
-    </name>
-    <value>
-     Gene expression data from mid-gestational placenta
-    </value>
-   </comment>
-   <comment>
-    <name>
-     Sample_source_name
-    </name>
-    <value>
-     placenta
-    </value>
-   </comment>
-   <comment>
-    <name>
-     Sample_title
-    </name>
-    <value>
-     14_5_MPG_17.1
-    </value>
-   </comment>
   </source>
-  <variable>
-   <name>
-    GESTATIONAL AGE
-   </name>
-   <value>
-    17.1
-   </value>
-  </variable>
  </sample>
  <sample>
   <assay>
    <name>
-    GSM929667
+    SE1_u34b
    </name>
+   <comment>
+    <name>
+     Array Design URI
+    </name>
+    <value>
+     http://www.ebi.ac.uk/aerep/result?queryFor=PhysicalArrayDesign&amp;aAccession=A-AFFY-19
+    </value>
+   </comment>
   </assay>
+  <characteristic>
+   <category>
+    Age
+   </category>
+   <value>
+    20
+   </value>
+  </characteristic>
+  <characteristic>
+   <category>
+    TimeUnit
+   </category>
+   <value>
+    days
+   </value>
+  </characteristic>
+  <characteristic>
+   <category>
+    TargetedCellType
+   </category>
+   <value>
+    Sertoli cells
+   </value>
+  </characteristic>
+  <characteristic>
+   <category>
+    OrganismPart
+   </category>
+   <value>
+    testis
+   </value>
+  </characteristic>
+  <characteristic>
+   <category>
+    Sex
+   </category>
+   <value>
+    male
+   </value>
+  </characteristic>
+  <characteristic>
+   <category>
+    DevelopmentalStage
+   </category>
+   <value>
+    adult
+   </value>
+  </characteristic>
+  <characteristic>
+   <category>
+    StrainOrLine
+   </category>
+   <value>
+    Sprague Dawley
+   </value>
+  </characteristic>
   <characteristic>
    <category>
     Organism
    </category>
    <value>
-    Homo sapiens
+    Rattus norvegicus
    </value>
   </characteristic>
   <characteristic>
    <category>
-    gestational age
+    BioSourceType
    </category>
    <value>
-    18
-   </value>
-  </characteristic>
-  <characteristic>
-   <category>
-    organism part
-   </category>
-   <value>
-    placenta
+    cells
    </value>
   </characteristic>
   <extract>
    <name>
-    GSM929667 extract 1
+    SE1
    </name>
   </extract>
   <file>
@@ -400,83 +543,2424 @@
     data
    </type>
    <name>
-    GSM929667_13_4_MPG_18_270606.CEL
+    SE1_u34b.CEL
    </name>
    <url>
-    ftp://ftp.ebi.ac.uk/pub/databases/microarray/data/experiment/GEOD/E-GEOD-37901/E-GEOD-37901.raw.1.zip/GSM929667_13_4_MPG_18_270606.CEL
+    ftp://ftp.ebi.ac.uk/pub/databases/microarray/data/experiment/MEXP/E-MEXP-31/E-MEXP-31.raw.1.zip/SE1_u34b.CEL
    </url>
    <comment>
     <name>
      ArrayExpress FTP file
     </name>
     <value>
-     ftp://ftp.ebi.ac.uk/pub/databases/microarray/data/experiment/GEOD/E-GEOD-37901/E-GEOD-37901.raw.1.zip
+     ftp://ftp.ebi.ac.uk/pub/databases/microarray/data/experiment/MEXP/E-MEXP-31/E-MEXP-31.raw.1.zip
     </value>
    </comment>
   </file>
   <file>
    <type>
-    derived data
+    derived data matrix
    </type>
    <name>
-    GSM929667_sample_table.txt
+    E-MEXP-31-processed-data-2481281221.txt
    </name>
    <url>
-    ftp://ftp.ebi.ac.uk/pub/databases/microarray/data/experiment/GEOD/E-GEOD-37901/E-GEOD-37901.processed.1.zip/GSM929667_sample_table.txt
+    ftp://ftp.ebi.ac.uk/pub/databases/microarray/data/experiment/MEXP/E-MEXP-31/E-MEXP-31.processed.1.zip/E-MEXP-31-processed-data-2481281221.txt
    </url>
    <comment>
     <name>
      Derived ArrayExpress FTP file
     </name>
     <value>
-     ftp://ftp.ebi.ac.uk/pub/databases/microarray/data/experiment/GEOD/E-GEOD-37901/E-GEOD-37901.processed.1.zip
+     ftp://ftp.ebi.ac.uk/pub/databases/microarray/data/experiment/MEXP/E-MEXP-31/E-MEXP-31.processed.1.zip
     </value>
    </comment>
   </file>
   <labeled-extract>
    <name>
-    GSM929667 LE 1
+    SE1B
    </name>
    <label>
-    biotin
+    Biotin
    </label>
   </labeled-extract>
+  <scan>
+   <name>
+    SE1_u34b
+   </name>
+  </scan>
   <source>
    <name>
-    GSM929667 1
+    Rattus norvegicus__S:BioSource:166478
    </name>
-   <comment>
-    <name>
-     Sample_description
-    </name>
-    <value>
-     Gene expression data from mid-gestational placenta
-    </value>
-   </comment>
-   <comment>
-    <name>
-     Sample_source_name
-    </name>
-    <value>
-     placenta
-    </value>
-   </comment>
-   <comment>
-    <name>
-     Sample_title
-    </name>
-    <value>
-     13_4_MPG_18
-    </value>
-   </comment>
   </source>
-  <variable>
+ </sample>
+ <sample>
+  <assay>
    <name>
-    GESTATIONAL AGE
+    ST2_u34a
    </name>
+   <comment>
+    <name>
+     Array Design URI
+    </name>
+    <value>
+     http://www.ebi.ac.uk/aerep/result?queryFor=PhysicalArrayDesign&amp;aAccession=A-AFFY-18
+    </value>
+   </comment>
+  </assay>
+  <characteristic>
+   <category>
+    Age
+   </category>
    <value>
-    18
+    90
    </value>
-  </variable>
+  </characteristic>
+  <characteristic>
+   <category>
+    TimeUnit
+   </category>
+   <value>
+    days
+   </value>
+  </characteristic>
+  <characteristic>
+   <category>
+    TargetedCellType
+   </category>
+   <value>
+    spermatides
+   </value>
+  </characteristic>
+  <characteristic>
+   <category>
+    OrganismPart
+   </category>
+   <value>
+    testis
+   </value>
+  </characteristic>
+  <characteristic>
+   <category>
+    Sex
+   </category>
+   <value>
+    male
+   </value>
+  </characteristic>
+  <characteristic>
+   <category>
+    DevelopmentalStage
+   </category>
+   <value>
+    adult
+   </value>
+  </characteristic>
+  <characteristic>
+   <category>
+    StrainOrLine
+   </category>
+   <value>
+    Sprague Dawley
+   </value>
+  </characteristic>
+  <characteristic>
+   <category>
+    Organism
+   </category>
+   <value>
+    Rattus norvegicus
+   </value>
+  </characteristic>
+  <characteristic>
+   <category>
+    BioSourceType
+   </category>
+   <value>
+    cells
+   </value>
+  </characteristic>
+  <extract>
+   <name>
+    ST2
+   </name>
+  </extract>
+  <file>
+   <type>
+    data
+   </type>
+   <name>
+    ST2_u34a.CEL
+   </name>
+   <url>
+    ftp://ftp.ebi.ac.uk/pub/databases/microarray/data/experiment/MEXP/E-MEXP-31/E-MEXP-31.raw.1.zip/ST2_u34a.CEL
+   </url>
+   <comment>
+    <name>
+     ArrayExpress FTP file
+    </name>
+    <value>
+     ftp://ftp.ebi.ac.uk/pub/databases/microarray/data/experiment/MEXP/E-MEXP-31/E-MEXP-31.raw.1.zip
+    </value>
+   </comment>
+  </file>
+  <file>
+   <type>
+    derived data matrix
+   </type>
+   <name>
+    E-MEXP-31-processed-data-2481281219.txt
+   </name>
+   <url>
+    ftp://ftp.ebi.ac.uk/pub/databases/microarray/data/experiment/MEXP/E-MEXP-31/E-MEXP-31.processed.1.zip/E-MEXP-31-processed-data-2481281219.txt
+   </url>
+   <comment>
+    <name>
+     Derived ArrayExpress FTP file
+    </name>
+    <value>
+     ftp://ftp.ebi.ac.uk/pub/databases/microarray/data/experiment/MEXP/E-MEXP-31/E-MEXP-31.processed.1.zip
+    </value>
+   </comment>
+  </file>
+  <labeled-extract>
+   <name>
+    ST2A
+   </name>
+   <label>
+    Biotin
+   </label>
+  </labeled-extract>
+  <scan>
+   <name>
+    ST2_u34a
+   </name>
+  </scan>
+  <source>
+   <name>
+    Rattus norvegicus__S:BioSource:166485
+   </name>
+  </source>
+ </sample>
+ <sample>
+  <assay>
+   <name>
+    SE2_u34a
+   </name>
+   <comment>
+    <name>
+     Array Design URI
+    </name>
+    <value>
+     http://www.ebi.ac.uk/aerep/result?queryFor=PhysicalArrayDesign&amp;aAccession=A-AFFY-18
+    </value>
+   </comment>
+  </assay>
+  <characteristic>
+   <category>
+    Age
+   </category>
+   <value>
+    20
+   </value>
+  </characteristic>
+  <characteristic>
+   <category>
+    TimeUnit
+   </category>
+   <value>
+    days
+   </value>
+  </characteristic>
+  <characteristic>
+   <category>
+    TargetedCellType
+   </category>
+   <value>
+    Sertoli cells
+   </value>
+  </characteristic>
+  <characteristic>
+   <category>
+    OrganismPart
+   </category>
+   <value>
+    testis
+   </value>
+  </characteristic>
+  <characteristic>
+   <category>
+    Sex
+   </category>
+   <value>
+    male
+   </value>
+  </characteristic>
+  <characteristic>
+   <category>
+    DevelopmentalStage
+   </category>
+   <value>
+    adult
+   </value>
+  </characteristic>
+  <characteristic>
+   <category>
+    StrainOrLine
+   </category>
+   <value>
+    Sprague Dawley
+   </value>
+  </characteristic>
+  <characteristic>
+   <category>
+    Organism
+   </category>
+   <value>
+    Rattus norvegicus
+   </value>
+  </characteristic>
+  <characteristic>
+   <category>
+    BioSourceType
+   </category>
+   <value>
+    cells
+   </value>
+  </characteristic>
+  <extract>
+   <name>
+    SE2
+   </name>
+  </extract>
+  <file>
+   <type>
+    data
+   </type>
+   <name>
+    SE2_u34a.CEL
+   </name>
+   <url>
+    ftp://ftp.ebi.ac.uk/pub/databases/microarray/data/experiment/MEXP/E-MEXP-31/E-MEXP-31.raw.1.zip/SE2_u34a.CEL
+   </url>
+   <comment>
+    <name>
+     ArrayExpress FTP file
+    </name>
+    <value>
+     ftp://ftp.ebi.ac.uk/pub/databases/microarray/data/experiment/MEXP/E-MEXP-31/E-MEXP-31.raw.1.zip
+    </value>
+   </comment>
+  </file>
+  <file>
+   <type>
+    derived data matrix
+   </type>
+   <name>
+    E-MEXP-31-processed-data-2481281219.txt
+   </name>
+   <url>
+    ftp://ftp.ebi.ac.uk/pub/databases/microarray/data/experiment/MEXP/E-MEXP-31/E-MEXP-31.processed.1.zip/E-MEXP-31-processed-data-2481281219.txt
+   </url>
+   <comment>
+    <name>
+     Derived ArrayExpress FTP file
+    </name>
+    <value>
+     ftp://ftp.ebi.ac.uk/pub/databases/microarray/data/experiment/MEXP/E-MEXP-31/E-MEXP-31.processed.1.zip
+    </value>
+   </comment>
+  </file>
+  <labeled-extract>
+   <name>
+    SE2A
+   </name>
+   <label>
+    Biotin
+   </label>
+  </labeled-extract>
+  <scan>
+   <name>
+    SE2_u34a
+   </name>
+  </scan>
+  <source>
+   <name>
+    Rattus norvegicus__S:BioSource:166479
+   </name>
+  </source>
+ </sample>
+ <sample>
+  <assay>
+   <name>
+    SE1_u34a
+   </name>
+   <comment>
+    <name>
+     Array Design URI
+    </name>
+    <value>
+     http://www.ebi.ac.uk/aerep/result?queryFor=PhysicalArrayDesign&amp;aAccession=A-AFFY-18
+    </value>
+   </comment>
+  </assay>
+  <characteristic>
+   <category>
+    Age
+   </category>
+   <value>
+    20
+   </value>
+  </characteristic>
+  <characteristic>
+   <category>
+    TimeUnit
+   </category>
+   <value>
+    days
+   </value>
+  </characteristic>
+  <characteristic>
+   <category>
+    TargetedCellType
+   </category>
+   <value>
+    Sertoli cells
+   </value>
+  </characteristic>
+  <characteristic>
+   <category>
+    OrganismPart
+   </category>
+   <value>
+    testis
+   </value>
+  </characteristic>
+  <characteristic>
+   <category>
+    Sex
+   </category>
+   <value>
+    male
+   </value>
+  </characteristic>
+  <characteristic>
+   <category>
+    DevelopmentalStage
+   </category>
+   <value>
+    adult
+   </value>
+  </characteristic>
+  <characteristic>
+   <category>
+    StrainOrLine
+   </category>
+   <value>
+    Sprague Dawley
+   </value>
+  </characteristic>
+  <characteristic>
+   <category>
+    Organism
+   </category>
+   <value>
+    Rattus norvegicus
+   </value>
+  </characteristic>
+  <characteristic>
+   <category>
+    BioSourceType
+   </category>
+   <value>
+    cells
+   </value>
+  </characteristic>
+  <extract>
+   <name>
+    SE1
+   </name>
+  </extract>
+  <file>
+   <type>
+    data
+   </type>
+   <name>
+    SE1_u34a.CEL
+   </name>
+   <url>
+    ftp://ftp.ebi.ac.uk/pub/databases/microarray/data/experiment/MEXP/E-MEXP-31/E-MEXP-31.raw.1.zip/SE1_u34a.CEL
+   </url>
+   <comment>
+    <name>
+     ArrayExpress FTP file
+    </name>
+    <value>
+     ftp://ftp.ebi.ac.uk/pub/databases/microarray/data/experiment/MEXP/E-MEXP-31/E-MEXP-31.raw.1.zip
+    </value>
+   </comment>
+  </file>
+  <file>
+   <type>
+    derived data matrix
+   </type>
+   <name>
+    E-MEXP-31-processed-data-2481281219.txt
+   </name>
+   <url>
+    ftp://ftp.ebi.ac.uk/pub/databases/microarray/data/experiment/MEXP/E-MEXP-31/E-MEXP-31.processed.1.zip/E-MEXP-31-processed-data-2481281219.txt
+   </url>
+   <comment>
+    <name>
+     Derived ArrayExpress FTP file
+    </name>
+    <value>
+     ftp://ftp.ebi.ac.uk/pub/databases/microarray/data/experiment/MEXP/E-MEXP-31/E-MEXP-31.processed.1.zip
+    </value>
+   </comment>
+  </file>
+  <labeled-extract>
+   <name>
+    SE1A
+   </name>
+   <label>
+    Biotin
+   </label>
+  </labeled-extract>
+  <scan>
+   <name>
+    SE1_u34a
+   </name>
+  </scan>
+  <source>
+   <name>
+    Rattus norvegicus__S:BioSource:166478
+   </name>
+  </source>
+ </sample>
+ <sample>
+  <assay>
+   <name>
+    TT2_u34b
+   </name>
+   <comment>
+    <name>
+     Array Design URI
+    </name>
+    <value>
+     http://www.ebi.ac.uk/aerep/result?queryFor=PhysicalArrayDesign&amp;aAccession=A-AFFY-19
+    </value>
+   </comment>
+  </assay>
+  <characteristic>
+   <category>
+    Age
+   </category>
+   <value>
+    90
+   </value>
+  </characteristic>
+  <characteristic>
+   <category>
+    TimeUnit
+   </category>
+   <value>
+    days
+   </value>
+  </characteristic>
+  <characteristic>
+   <category>
+    TargetedCellType
+   </category>
+   <value>
+    total testis
+   </value>
+  </characteristic>
+  <characteristic>
+   <category>
+    OrganismPart
+   </category>
+   <value>
+    testis
+   </value>
+  </characteristic>
+  <characteristic>
+   <category>
+    Sex
+   </category>
+   <value>
+    male
+   </value>
+  </characteristic>
+  <characteristic>
+   <category>
+    DevelopmentalStage
+   </category>
+   <value>
+    adult
+   </value>
+  </characteristic>
+  <characteristic>
+   <category>
+    StrainOrLine
+   </category>
+   <value>
+    Sprague Dawley
+   </value>
+  </characteristic>
+  <characteristic>
+   <category>
+    Organism
+   </category>
+   <value>
+    Rattus norvegicus
+   </value>
+  </characteristic>
+  <characteristic>
+   <category>
+    BioSourceType
+   </category>
+   <value>
+    cells
+   </value>
+  </characteristic>
+  <extract>
+   <name>
+    TT2
+   </name>
+  </extract>
+  <file>
+   <type>
+    data
+   </type>
+   <name>
+    TT2_u34b.CEL
+   </name>
+   <url>
+    ftp://ftp.ebi.ac.uk/pub/databases/microarray/data/experiment/MEXP/E-MEXP-31/E-MEXP-31.raw.1.zip/TT2_u34b.CEL
+   </url>
+   <comment>
+    <name>
+     ArrayExpress FTP file
+    </name>
+    <value>
+     ftp://ftp.ebi.ac.uk/pub/databases/microarray/data/experiment/MEXP/E-MEXP-31/E-MEXP-31.raw.1.zip
+    </value>
+   </comment>
+  </file>
+  <file>
+   <type>
+    derived data matrix
+   </type>
+   <name>
+    E-MEXP-31-processed-data-2481281221.txt
+   </name>
+   <url>
+    ftp://ftp.ebi.ac.uk/pub/databases/microarray/data/experiment/MEXP/E-MEXP-31/E-MEXP-31.processed.1.zip/E-MEXP-31-processed-data-2481281221.txt
+   </url>
+   <comment>
+    <name>
+     Derived ArrayExpress FTP file
+    </name>
+    <value>
+     ftp://ftp.ebi.ac.uk/pub/databases/microarray/data/experiment/MEXP/E-MEXP-31/E-MEXP-31.processed.1.zip
+    </value>
+   </comment>
+  </file>
+  <labeled-extract>
+   <name>
+    TT2B
+   </name>
+   <label>
+    Biotin
+   </label>
+  </labeled-extract>
+  <scan>
+   <name>
+    TT2_u34b
+   </name>
+  </scan>
+  <source>
+   <name>
+    Rattus norvegicus__S:BioSource:166487
+   </name>
+  </source>
+ </sample>
+ <sample>
+  <assay>
+   <name>
+    TT2_u34a
+   </name>
+   <comment>
+    <name>
+     Array Design URI
+    </name>
+    <value>
+     http://www.ebi.ac.uk/aerep/result?queryFor=PhysicalArrayDesign&amp;aAccession=A-AFFY-18
+    </value>
+   </comment>
+  </assay>
+  <characteristic>
+   <category>
+    Age
+   </category>
+   <value>
+    90
+   </value>
+  </characteristic>
+  <characteristic>
+   <category>
+    TimeUnit
+   </category>
+   <value>
+    days
+   </value>
+  </characteristic>
+  <characteristic>
+   <category>
+    TargetedCellType
+   </category>
+   <value>
+    total testis
+   </value>
+  </characteristic>
+  <characteristic>
+   <category>
+    OrganismPart
+   </category>
+   <value>
+    testis
+   </value>
+  </characteristic>
+  <characteristic>
+   <category>
+    Sex
+   </category>
+   <value>
+    male
+   </value>
+  </characteristic>
+  <characteristic>
+   <category>
+    DevelopmentalStage
+   </category>
+   <value>
+    adult
+   </value>
+  </characteristic>
+  <characteristic>
+   <category>
+    StrainOrLine
+   </category>
+   <value>
+    Sprague Dawley
+   </value>
+  </characteristic>
+  <characteristic>
+   <category>
+    Organism
+   </category>
+   <value>
+    Rattus norvegicus
+   </value>
+  </characteristic>
+  <characteristic>
+   <category>
+    BioSourceType
+   </category>
+   <value>
+    cells
+   </value>
+  </characteristic>
+  <extract>
+   <name>
+    TT2
+   </name>
+  </extract>
+  <file>
+   <type>
+    data
+   </type>
+   <name>
+    TT2_u34a.CEL
+   </name>
+   <url>
+    ftp://ftp.ebi.ac.uk/pub/databases/microarray/data/experiment/MEXP/E-MEXP-31/E-MEXP-31.raw.1.zip/TT2_u34a.CEL
+   </url>
+   <comment>
+    <name>
+     ArrayExpress FTP file
+    </name>
+    <value>
+     ftp://ftp.ebi.ac.uk/pub/databases/microarray/data/experiment/MEXP/E-MEXP-31/E-MEXP-31.raw.1.zip
+    </value>
+   </comment>
+  </file>
+  <file>
+   <type>
+    derived data matrix
+   </type>
+   <name>
+    E-MEXP-31-processed-data-2481281219.txt
+   </name>
+   <url>
+    ftp://ftp.ebi.ac.uk/pub/databases/microarray/data/experiment/MEXP/E-MEXP-31/E-MEXP-31.processed.1.zip/E-MEXP-31-processed-data-2481281219.txt
+   </url>
+   <comment>
+    <name>
+     Derived ArrayExpress FTP file
+    </name>
+    <value>
+     ftp://ftp.ebi.ac.uk/pub/databases/microarray/data/experiment/MEXP/E-MEXP-31/E-MEXP-31.processed.1.zip
+    </value>
+   </comment>
+  </file>
+  <labeled-extract>
+   <name>
+    TT2A
+   </name>
+   <label>
+    Biotin
+   </label>
+  </labeled-extract>
+  <scan>
+   <name>
+    TT2_u34a
+   </name>
+  </scan>
+  <source>
+   <name>
+    Rattus norvegicus__S:BioSource:166487
+   </name>
+  </source>
+ </sample>
+ <sample>
+  <assay>
+   <name>
+    SE2_u34b
+   </name>
+   <comment>
+    <name>
+     Array Design URI
+    </name>
+    <value>
+     http://www.ebi.ac.uk/aerep/result?queryFor=PhysicalArrayDesign&amp;aAccession=A-AFFY-19
+    </value>
+   </comment>
+  </assay>
+  <characteristic>
+   <category>
+    Age
+   </category>
+   <value>
+    20
+   </value>
+  </characteristic>
+  <characteristic>
+   <category>
+    TimeUnit
+   </category>
+   <value>
+    days
+   </value>
+  </characteristic>
+  <characteristic>
+   <category>
+    TargetedCellType
+   </category>
+   <value>
+    Sertoli cells
+   </value>
+  </characteristic>
+  <characteristic>
+   <category>
+    OrganismPart
+   </category>
+   <value>
+    testis
+   </value>
+  </characteristic>
+  <characteristic>
+   <category>
+    Sex
+   </category>
+   <value>
+    male
+   </value>
+  </characteristic>
+  <characteristic>
+   <category>
+    DevelopmentalStage
+   </category>
+   <value>
+    adult
+   </value>
+  </characteristic>
+  <characteristic>
+   <category>
+    StrainOrLine
+   </category>
+   <value>
+    Sprague Dawley
+   </value>
+  </characteristic>
+  <characteristic>
+   <category>
+    Organism
+   </category>
+   <value>
+    Rattus norvegicus
+   </value>
+  </characteristic>
+  <characteristic>
+   <category>
+    BioSourceType
+   </category>
+   <value>
+    cells
+   </value>
+  </characteristic>
+  <extract>
+   <name>
+    SE2
+   </name>
+  </extract>
+  <file>
+   <type>
+    data
+   </type>
+   <name>
+    SE2_u34b.CEL
+   </name>
+   <url>
+    ftp://ftp.ebi.ac.uk/pub/databases/microarray/data/experiment/MEXP/E-MEXP-31/E-MEXP-31.raw.1.zip/SE2_u34b.CEL
+   </url>
+   <comment>
+    <name>
+     ArrayExpress FTP file
+    </name>
+    <value>
+     ftp://ftp.ebi.ac.uk/pub/databases/microarray/data/experiment/MEXP/E-MEXP-31/E-MEXP-31.raw.1.zip
+    </value>
+   </comment>
+  </file>
+  <file>
+   <type>
+    derived data matrix
+   </type>
+   <name>
+    E-MEXP-31-processed-data-2481281221.txt
+   </name>
+   <url>
+    ftp://ftp.ebi.ac.uk/pub/databases/microarray/data/experiment/MEXP/E-MEXP-31/E-MEXP-31.processed.1.zip/E-MEXP-31-processed-data-2481281221.txt
+   </url>
+   <comment>
+    <name>
+     Derived ArrayExpress FTP file
+    </name>
+    <value>
+     ftp://ftp.ebi.ac.uk/pub/databases/microarray/data/experiment/MEXP/E-MEXP-31/E-MEXP-31.processed.1.zip
+    </value>
+   </comment>
+  </file>
+  <labeled-extract>
+   <name>
+    SE2B
+   </name>
+   <label>
+    Biotin
+   </label>
+  </labeled-extract>
+  <scan>
+   <name>
+    SE2_u34b
+   </name>
+  </scan>
+  <source>
+   <name>
+    Rattus norvegicus__S:BioSource:166479
+   </name>
+  </source>
+ </sample>
+ <sample>
+  <assay>
+   <name>
+    SG2_u34b
+   </name>
+   <comment>
+    <name>
+     Array Design URI
+    </name>
+    <value>
+     http://www.ebi.ac.uk/aerep/result?queryFor=PhysicalArrayDesign&amp;aAccession=A-AFFY-19
+    </value>
+   </comment>
+  </assay>
+  <characteristic>
+   <category>
+    Age
+   </category>
+   <value>
+    9
+   </value>
+  </characteristic>
+  <characteristic>
+   <category>
+    TimeUnit
+   </category>
+   <value>
+    days
+   </value>
+  </characteristic>
+  <characteristic>
+   <category>
+    TargetedCellType
+   </category>
+   <value>
+    spermatogonia
+   </value>
+  </characteristic>
+  <characteristic>
+   <category>
+    OrganismPart
+   </category>
+   <value>
+    testis
+   </value>
+  </characteristic>
+  <characteristic>
+   <category>
+    Sex
+   </category>
+   <value>
+    male
+   </value>
+  </characteristic>
+  <characteristic>
+   <category>
+    DevelopmentalStage
+   </category>
+   <value>
+    pre-puberty
+   </value>
+  </characteristic>
+  <characteristic>
+   <category>
+    StrainOrLine
+   </category>
+   <value>
+    Sprague Dawley
+   </value>
+  </characteristic>
+  <characteristic>
+   <category>
+    Organism
+   </category>
+   <value>
+    Rattus norvegicus
+   </value>
+  </characteristic>
+  <characteristic>
+   <category>
+    BioSourceType
+   </category>
+   <value>
+    cells
+   </value>
+  </characteristic>
+  <extract>
+   <name>
+    SG1
+   </name>
+  </extract>
+  <file>
+   <type>
+    data
+   </type>
+   <name>
+    SG2_u34b.CEL
+   </name>
+   <url>
+    ftp://ftp.ebi.ac.uk/pub/databases/microarray/data/experiment/MEXP/E-MEXP-31/E-MEXP-31.raw.1.zip/SG2_u34b.CEL
+   </url>
+   <comment>
+    <name>
+     ArrayExpress FTP file
+    </name>
+    <value>
+     ftp://ftp.ebi.ac.uk/pub/databases/microarray/data/experiment/MEXP/E-MEXP-31/E-MEXP-31.raw.1.zip
+    </value>
+   </comment>
+  </file>
+  <file>
+   <type>
+    derived data matrix
+   </type>
+   <name>
+    E-MEXP-31-processed-data-2481281221.txt
+   </name>
+   <url>
+    ftp://ftp.ebi.ac.uk/pub/databases/microarray/data/experiment/MEXP/E-MEXP-31/E-MEXP-31.processed.1.zip/E-MEXP-31-processed-data-2481281221.txt
+   </url>
+   <comment>
+    <name>
+     Derived ArrayExpress FTP file
+    </name>
+    <value>
+     ftp://ftp.ebi.ac.uk/pub/databases/microarray/data/experiment/MEXP/E-MEXP-31/E-MEXP-31.processed.1.zip
+    </value>
+   </comment>
+  </file>
+  <labeled-extract>
+   <name>
+    SG1B
+   </name>
+   <label>
+    Biotin
+   </label>
+  </labeled-extract>
+  <scan>
+   <name>
+    SG2_u34b
+   </name>
+  </scan>
+  <source>
+   <name>
+    Rattus norvegicus__S:BioSource:166480
+   </name>
+  </source>
+ </sample>
+ <sample>
+  <assay>
+   <name>
+    SG1_u34b
+   </name>
+   <comment>
+    <name>
+     Array Design URI
+    </name>
+    <value>
+     http://www.ebi.ac.uk/aerep/result?queryFor=PhysicalArrayDesign&amp;aAccession=A-AFFY-18
+    </value>
+   </comment>
+  </assay>
+  <characteristic>
+   <category>
+    Age
+   </category>
+   <value>
+    9
+   </value>
+  </characteristic>
+  <characteristic>
+   <category>
+    TimeUnit
+   </category>
+   <value>
+    days
+   </value>
+  </characteristic>
+  <characteristic>
+   <category>
+    TargetedCellType
+   </category>
+   <value>
+    spermatogonia
+   </value>
+  </characteristic>
+  <characteristic>
+   <category>
+    OrganismPart
+   </category>
+   <value>
+    testis
+   </value>
+  </characteristic>
+  <characteristic>
+   <category>
+    Sex
+   </category>
+   <value>
+    male
+   </value>
+  </characteristic>
+  <characteristic>
+   <category>
+    DevelopmentalStage
+   </category>
+   <value>
+    pre-puberty
+   </value>
+  </characteristic>
+  <characteristic>
+   <category>
+    StrainOrLine
+   </category>
+   <value>
+    Sprague Dawley
+   </value>
+  </characteristic>
+  <characteristic>
+   <category>
+    Organism
+   </category>
+   <value>
+    Rattus norvegicus
+   </value>
+  </characteristic>
+  <characteristic>
+   <category>
+    BioSourceType
+   </category>
+   <value>
+    cells
+   </value>
+  </characteristic>
+  <extract>
+   <name>
+    SG2
+   </name>
+  </extract>
+  <file>
+   <type>
+    data
+   </type>
+   <name>
+    SG1_u34b.CEL
+   </name>
+   <url>
+    ftp://ftp.ebi.ac.uk/pub/databases/microarray/data/experiment/MEXP/E-MEXP-31/E-MEXP-31.raw.1.zip/SG1_u34b.CEL
+   </url>
+   <comment>
+    <name>
+     ArrayExpress FTP file
+    </name>
+    <value>
+     ftp://ftp.ebi.ac.uk/pub/databases/microarray/data/experiment/MEXP/E-MEXP-31/E-MEXP-31.raw.1.zip
+    </value>
+   </comment>
+  </file>
+  <file>
+   <type>
+    derived data matrix
+   </type>
+   <name>
+    E-MEXP-31-processed-data-2481281221.txt
+   </name>
+   <url>
+    ftp://ftp.ebi.ac.uk/pub/databases/microarray/data/experiment/MEXP/E-MEXP-31/E-MEXP-31.processed.1.zip/E-MEXP-31-processed-data-2481281221.txt
+   </url>
+   <comment>
+    <name>
+     Derived ArrayExpress FTP file
+    </name>
+    <value>
+     ftp://ftp.ebi.ac.uk/pub/databases/microarray/data/experiment/MEXP/E-MEXP-31/E-MEXP-31.processed.1.zip
+    </value>
+   </comment>
+  </file>
+  <labeled-extract>
+   <name>
+    SG2A
+   </name>
+   <label>
+    Biotin
+   </label>
+  </labeled-extract>
+  <scan>
+   <name>
+    SG1_u34b
+   </name>
+  </scan>
+  <source>
+   <name>
+    Rattus norvegicus
+   </name>
+  </source>
+ </sample>
+ <sample>
+  <assay>
+   <name>
+    SG1_u34a
+   </name>
+   <comment>
+    <name>
+     Array Design URI
+    </name>
+    <value>
+     http://www.ebi.ac.uk/aerep/result?queryFor=PhysicalArrayDesign&amp;aAccession=A-AFFY-18
+    </value>
+   </comment>
+  </assay>
+  <characteristic>
+   <category>
+    Age
+   </category>
+   <value>
+    9
+   </value>
+  </characteristic>
+  <characteristic>
+   <category>
+    TimeUnit
+   </category>
+   <value>
+    days
+   </value>
+  </characteristic>
+  <characteristic>
+   <category>
+    TargetedCellType
+   </category>
+   <value>
+    spermatogonia
+   </value>
+  </characteristic>
+  <characteristic>
+   <category>
+    OrganismPart
+   </category>
+   <value>
+    testis
+   </value>
+  </characteristic>
+  <characteristic>
+   <category>
+    Sex
+   </category>
+   <value>
+    male
+   </value>
+  </characteristic>
+  <characteristic>
+   <category>
+    DevelopmentalStage
+   </category>
+   <value>
+    pre-puberty
+   </value>
+  </characteristic>
+  <characteristic>
+   <category>
+    StrainOrLine
+   </category>
+   <value>
+    Sprague Dawley
+   </value>
+  </characteristic>
+  <characteristic>
+   <category>
+    Organism
+   </category>
+   <value>
+    Rattus norvegicus
+   </value>
+  </characteristic>
+  <characteristic>
+   <category>
+    BioSourceType
+   </category>
+   <value>
+    cells
+   </value>
+  </characteristic>
+  <extract>
+   <name>
+    SG1
+   </name>
+  </extract>
+  <file>
+   <type>
+    data
+   </type>
+   <name>
+    SG1_u34a.CEL
+   </name>
+   <url>
+    ftp://ftp.ebi.ac.uk/pub/databases/microarray/data/experiment/MEXP/E-MEXP-31/E-MEXP-31.raw.1.zip/SG1_u34a.CEL
+   </url>
+   <comment>
+    <name>
+     ArrayExpress FTP file
+    </name>
+    <value>
+     ftp://ftp.ebi.ac.uk/pub/databases/microarray/data/experiment/MEXP/E-MEXP-31/E-MEXP-31.raw.1.zip
+    </value>
+   </comment>
+  </file>
+  <file>
+   <type>
+    derived data matrix
+   </type>
+   <name>
+    E-MEXP-31-processed-data-2481281219.txt
+   </name>
+   <url>
+    ftp://ftp.ebi.ac.uk/pub/databases/microarray/data/experiment/MEXP/E-MEXP-31/E-MEXP-31.processed.1.zip/E-MEXP-31-processed-data-2481281219.txt
+   </url>
+   <comment>
+    <name>
+     Derived ArrayExpress FTP file
+    </name>
+    <value>
+     ftp://ftp.ebi.ac.uk/pub/databases/microarray/data/experiment/MEXP/E-MEXP-31/E-MEXP-31.processed.1.zip
+    </value>
+   </comment>
+  </file>
+  <labeled-extract>
+   <name>
+    SG1A
+   </name>
+   <label>
+    Biotin
+   </label>
+  </labeled-extract>
+  <scan>
+   <name>
+    SG1_u34a
+   </name>
+  </scan>
+  <source>
+   <name>
+    Rattus norvegicus__S:BioSource:166480
+   </name>
+  </source>
+ </sample>
+ <sample>
+  <assay>
+   <name>
+    TT1_u34b
+   </name>
+   <comment>
+    <name>
+     Array Design URI
+    </name>
+    <value>
+     http://www.ebi.ac.uk/aerep/result?queryFor=PhysicalArrayDesign&amp;aAccession=A-AFFY-19
+    </value>
+   </comment>
+  </assay>
+  <characteristic>
+   <category>
+    Age
+   </category>
+   <value>
+    90
+   </value>
+  </characteristic>
+  <characteristic>
+   <category>
+    TimeUnit
+   </category>
+   <value>
+    days
+   </value>
+  </characteristic>
+  <characteristic>
+   <category>
+    TargetedCellType
+   </category>
+   <value>
+    total testis
+   </value>
+  </characteristic>
+  <characteristic>
+   <category>
+    OrganismPart
+   </category>
+   <value>
+    testis
+   </value>
+  </characteristic>
+  <characteristic>
+   <category>
+    Sex
+   </category>
+   <value>
+    male
+   </value>
+  </characteristic>
+  <characteristic>
+   <category>
+    DevelopmentalStage
+   </category>
+   <value>
+    adult
+   </value>
+  </characteristic>
+  <characteristic>
+   <category>
+    StrainOrLine
+   </category>
+   <value>
+    Sprague Dawley
+   </value>
+  </characteristic>
+  <characteristic>
+   <category>
+    Organism
+   </category>
+   <value>
+    Rattus norvegicus
+   </value>
+  </characteristic>
+  <characteristic>
+   <category>
+    BioSourceType
+   </category>
+   <value>
+    cells
+   </value>
+  </characteristic>
+  <extract>
+   <name>
+    TT1
+   </name>
+  </extract>
+  <file>
+   <type>
+    data
+   </type>
+   <name>
+    TT1_u34b.CEL
+   </name>
+   <url>
+    ftp://ftp.ebi.ac.uk/pub/databases/microarray/data/experiment/MEXP/E-MEXP-31/E-MEXP-31.raw.1.zip/TT1_u34b.CEL
+   </url>
+   <comment>
+    <name>
+     ArrayExpress FTP file
+    </name>
+    <value>
+     ftp://ftp.ebi.ac.uk/pub/databases/microarray/data/experiment/MEXP/E-MEXP-31/E-MEXP-31.raw.1.zip
+    </value>
+   </comment>
+  </file>
+  <file>
+   <type>
+    derived data matrix
+   </type>
+   <name>
+    E-MEXP-31-processed-data-2481281221.txt
+   </name>
+   <url>
+    ftp://ftp.ebi.ac.uk/pub/databases/microarray/data/experiment/MEXP/E-MEXP-31/E-MEXP-31.processed.1.zip/E-MEXP-31-processed-data-2481281221.txt
+   </url>
+   <comment>
+    <name>
+     Derived ArrayExpress FTP file
+    </name>
+    <value>
+     ftp://ftp.ebi.ac.uk/pub/databases/microarray/data/experiment/MEXP/E-MEXP-31/E-MEXP-31.processed.1.zip
+    </value>
+   </comment>
+  </file>
+  <labeled-extract>
+   <name>
+    TT1B
+   </name>
+   <label>
+    Biotin
+   </label>
+  </labeled-extract>
+  <scan>
+   <name>
+    TT1_u34b
+   </name>
+  </scan>
+  <source>
+   <name>
+    Rattus norvegicus__S:BioSource:166486
+   </name>
+  </source>
+ </sample>
+ <sample>
+  <assay>
+   <name>
+    SC2_u34b
+   </name>
+   <comment>
+    <name>
+     Array Design URI
+    </name>
+    <value>
+     http://www.ebi.ac.uk/aerep/result?queryFor=PhysicalArrayDesign&amp;aAccession=A-AFFY-19
+    </value>
+   </comment>
+  </assay>
+  <characteristic>
+   <category>
+    Age
+   </category>
+   <value>
+    90
+   </value>
+  </characteristic>
+  <characteristic>
+   <category>
+    TimeUnit
+   </category>
+   <value>
+    days
+   </value>
+  </characteristic>
+  <characteristic>
+   <category>
+    TargetedCellType
+   </category>
+   <value>
+    spermatocytes
+   </value>
+  </characteristic>
+  <characteristic>
+   <category>
+    OrganismPart
+   </category>
+   <value>
+    testis
+   </value>
+  </characteristic>
+  <characteristic>
+   <category>
+    Sex
+   </category>
+   <value>
+    male
+   </value>
+  </characteristic>
+  <characteristic>
+   <category>
+    DevelopmentalStage
+   </category>
+   <value>
+    adult
+   </value>
+  </characteristic>
+  <characteristic>
+   <category>
+    StrainOrLine
+   </category>
+   <value>
+    Sprague Dawley
+   </value>
+  </characteristic>
+  <characteristic>
+   <category>
+    Organism
+   </category>
+   <value>
+    Rattus norvegicus
+   </value>
+  </characteristic>
+  <characteristic>
+   <category>
+    BioSourceType
+   </category>
+   <value>
+    cells
+   </value>
+  </characteristic>
+  <extract>
+   <name>
+    SC2
+   </name>
+  </extract>
+  <file>
+   <type>
+    data
+   </type>
+   <name>
+    SC2_u34b.CEL
+   </name>
+   <url>
+    ftp://ftp.ebi.ac.uk/pub/databases/microarray/data/experiment/MEXP/E-MEXP-31/E-MEXP-31.raw.1.zip/SC2_u34b.CEL
+   </url>
+   <comment>
+    <name>
+     ArrayExpress FTP file
+    </name>
+    <value>
+     ftp://ftp.ebi.ac.uk/pub/databases/microarray/data/experiment/MEXP/E-MEXP-31/E-MEXP-31.raw.1.zip
+    </value>
+   </comment>
+  </file>
+  <file>
+   <type>
+    derived data matrix
+   </type>
+   <name>
+    E-MEXP-31-processed-data-2481281221.txt
+   </name>
+   <url>
+    ftp://ftp.ebi.ac.uk/pub/databases/microarray/data/experiment/MEXP/E-MEXP-31/E-MEXP-31.processed.1.zip/E-MEXP-31-processed-data-2481281221.txt
+   </url>
+   <comment>
+    <name>
+     Derived ArrayExpress FTP file
+    </name>
+    <value>
+     ftp://ftp.ebi.ac.uk/pub/databases/microarray/data/experiment/MEXP/E-MEXP-31/E-MEXP-31.processed.1.zip
+    </value>
+   </comment>
+  </file>
+  <labeled-extract>
+   <name>
+    SC2B
+   </name>
+   <label>
+    Biotin
+   </label>
+  </labeled-extract>
+  <scan>
+   <name>
+    SC2_u34b
+   </name>
+  </scan>
+  <source>
+   <name>
+    Rattus norvegicus__S:BioSource:166483
+   </name>
+  </source>
+ </sample>
+ <sample>
+  <assay>
+   <name>
+    ST1_u34a
+   </name>
+   <comment>
+    <name>
+     Array Design URI
+    </name>
+    <value>
+     http://www.ebi.ac.uk/aerep/result?queryFor=PhysicalArrayDesign&amp;aAccession=A-AFFY-18
+    </value>
+   </comment>
+  </assay>
+  <characteristic>
+   <category>
+    Age
+   </category>
+   <value>
+    90
+   </value>
+  </characteristic>
+  <characteristic>
+   <category>
+    TimeUnit
+   </category>
+   <value>
+    days
+   </value>
+  </characteristic>
+  <characteristic>
+   <category>
+    TargetedCellType
+   </category>
+   <value>
+    spermatides
+   </value>
+  </characteristic>
+  <characteristic>
+   <category>
+    OrganismPart
+   </category>
+   <value>
+    testis
+   </value>
+  </characteristic>
+  <characteristic>
+   <category>
+    Sex
+   </category>
+   <value>
+    male
+   </value>
+  </characteristic>
+  <characteristic>
+   <category>
+    DevelopmentalStage
+   </category>
+   <value>
+    adult
+   </value>
+  </characteristic>
+  <characteristic>
+   <category>
+    StrainOrLine
+   </category>
+   <value>
+    Sprague Dawley
+   </value>
+  </characteristic>
+  <characteristic>
+   <category>
+    Organism
+   </category>
+   <value>
+    Rattus norvegicus
+   </value>
+  </characteristic>
+  <characteristic>
+   <category>
+    BioSourceType
+   </category>
+   <value>
+    cells
+   </value>
+  </characteristic>
+  <extract>
+   <name>
+    ST1
+   </name>
+  </extract>
+  <file>
+   <type>
+    data
+   </type>
+   <name>
+    ST1_u34a.CEL
+   </name>
+   <url>
+    ftp://ftp.ebi.ac.uk/pub/databases/microarray/data/experiment/MEXP/E-MEXP-31/E-MEXP-31.raw.1.zip/ST1_u34a.CEL
+   </url>
+   <comment>
+    <name>
+     ArrayExpress FTP file
+    </name>
+    <value>
+     ftp://ftp.ebi.ac.uk/pub/databases/microarray/data/experiment/MEXP/E-MEXP-31/E-MEXP-31.raw.1.zip
+    </value>
+   </comment>
+  </file>
+  <file>
+   <type>
+    derived data matrix
+   </type>
+   <name>
+    E-MEXP-31-processed-data-2481281219.txt
+   </name>
+   <url>
+    ftp://ftp.ebi.ac.uk/pub/databases/microarray/data/experiment/MEXP/E-MEXP-31/E-MEXP-31.processed.1.zip/E-MEXP-31-processed-data-2481281219.txt
+   </url>
+   <comment>
+    <name>
+     Derived ArrayExpress FTP file
+    </name>
+    <value>
+     ftp://ftp.ebi.ac.uk/pub/databases/microarray/data/experiment/MEXP/E-MEXP-31/E-MEXP-31.processed.1.zip
+    </value>
+   </comment>
+  </file>
+  <labeled-extract>
+   <name>
+    ST1A
+   </name>
+   <label>
+    Biotin
+   </label>
+  </labeled-extract>
+  <scan>
+   <name>
+    ST1_u34a
+   </name>
+  </scan>
+  <source>
+   <name>
+    Rattus norvegicus__S:BioSource:166484
+   </name>
+  </source>
+ </sample>
+ <sample>
+  <assay>
+   <name>
+    TT1_u34a
+   </name>
+   <comment>
+    <name>
+     Array Design URI
+    </name>
+    <value>
+     http://www.ebi.ac.uk/aerep/result?queryFor=PhysicalArrayDesign&amp;aAccession=A-AFFY-18
+    </value>
+   </comment>
+  </assay>
+  <characteristic>
+   <category>
+    Age
+   </category>
+   <value>
+    90
+   </value>
+  </characteristic>
+  <characteristic>
+   <category>
+    TimeUnit
+   </category>
+   <value>
+    days
+   </value>
+  </characteristic>
+  <characteristic>
+   <category>
+    TargetedCellType
+   </category>
+   <value>
+    total testis
+   </value>
+  </characteristic>
+  <characteristic>
+   <category>
+    OrganismPart
+   </category>
+   <value>
+    testis
+   </value>
+  </characteristic>
+  <characteristic>
+   <category>
+    Sex
+   </category>
+   <value>
+    male
+   </value>
+  </characteristic>
+  <characteristic>
+   <category>
+    DevelopmentalStage
+   </category>
+   <value>
+    adult
+   </value>
+  </characteristic>
+  <characteristic>
+   <category>
+    StrainOrLine
+   </category>
+   <value>
+    Sprague Dawley
+   </value>
+  </characteristic>
+  <characteristic>
+   <category>
+    Organism
+   </category>
+   <value>
+    Rattus norvegicus
+   </value>
+  </characteristic>
+  <characteristic>
+   <category>
+    BioSourceType
+   </category>
+   <value>
+    cells
+   </value>
+  </characteristic>
+  <extract>
+   <name>
+    TT1
+   </name>
+  </extract>
+  <file>
+   <type>
+    data
+   </type>
+   <name>
+    TT1_u34a.CEL
+   </name>
+   <url>
+    ftp://ftp.ebi.ac.uk/pub/databases/microarray/data/experiment/MEXP/E-MEXP-31/E-MEXP-31.raw.1.zip/TT1_u34a.CEL
+   </url>
+   <comment>
+    <name>
+     ArrayExpress FTP file
+    </name>
+    <value>
+     ftp://ftp.ebi.ac.uk/pub/databases/microarray/data/experiment/MEXP/E-MEXP-31/E-MEXP-31.raw.1.zip
+    </value>
+   </comment>
+  </file>
+  <file>
+   <type>
+    derived data matrix
+   </type>
+   <name>
+    E-MEXP-31-processed-data-2481281219.txt
+   </name>
+   <url>
+    ftp://ftp.ebi.ac.uk/pub/databases/microarray/data/experiment/MEXP/E-MEXP-31/E-MEXP-31.processed.1.zip/E-MEXP-31-processed-data-2481281219.txt
+   </url>
+   <comment>
+    <name>
+     Derived ArrayExpress FTP file
+    </name>
+    <value>
+     ftp://ftp.ebi.ac.uk/pub/databases/microarray/data/experiment/MEXP/E-MEXP-31/E-MEXP-31.processed.1.zip
+    </value>
+   </comment>
+  </file>
+  <labeled-extract>
+   <name>
+    TT1A
+   </name>
+   <label>
+    Biotin
+   </label>
+  </labeled-extract>
+  <scan>
+   <name>
+    TT1_u34a
+   </name>
+  </scan>
+  <source>
+   <name>
+    Rattus norvegicus__S:BioSource:166486
+   </name>
+  </source>
+ </sample>
+ <sample>
+  <assay>
+   <name>
+    ST1_u34b
+   </name>
+   <comment>
+    <name>
+     Array Design URI
+    </name>
+    <value>
+     http://www.ebi.ac.uk/aerep/result?queryFor=PhysicalArrayDesign&amp;aAccession=A-AFFY-19
+    </value>
+   </comment>
+  </assay>
+  <characteristic>
+   <category>
+    Age
+   </category>
+   <value>
+    90
+   </value>
+  </characteristic>
+  <characteristic>
+   <category>
+    TimeUnit
+   </category>
+   <value>
+    days
+   </value>
+  </characteristic>
+  <characteristic>
+   <category>
+    TargetedCellType
+   </category>
+   <value>
+    spermatides
+   </value>
+  </characteristic>
+  <characteristic>
+   <category>
+    OrganismPart
+   </category>
+   <value>
+    testis
+   </value>
+  </characteristic>
+  <characteristic>
+   <category>
+    Sex
+   </category>
+   <value>
+    male
+   </value>
+  </characteristic>
+  <characteristic>
+   <category>
+    DevelopmentalStage
+   </category>
+   <value>
+    adult
+   </value>
+  </characteristic>
+  <characteristic>
+   <category>
+    StrainOrLine
+   </category>
+   <value>
+    Sprague Dawley
+   </value>
+  </characteristic>
+  <characteristic>
+   <category>
+    Organism
+   </category>
+   <value>
+    Rattus norvegicus
+   </value>
+  </characteristic>
+  <characteristic>
+   <category>
+    BioSourceType
+   </category>
+   <value>
+    cells
+   </value>
+  </characteristic>
+  <extract>
+   <name>
+    ST1
+   </name>
+  </extract>
+  <file>
+   <type>
+    data
+   </type>
+   <name>
+    ST1_u34b.CEL
+   </name>
+   <url>
+    ftp://ftp.ebi.ac.uk/pub/databases/microarray/data/experiment/MEXP/E-MEXP-31/E-MEXP-31.raw.1.zip/ST1_u34b.CEL
+   </url>
+   <comment>
+    <name>
+     ArrayExpress FTP file
+    </name>
+    <value>
+     ftp://ftp.ebi.ac.uk/pub/databases/microarray/data/experiment/MEXP/E-MEXP-31/E-MEXP-31.raw.1.zip
+    </value>
+   </comment>
+  </file>
+  <file>
+   <type>
+    derived data matrix
+   </type>
+   <name>
+    E-MEXP-31-processed-data-2481281221.txt
+   </name>
+   <url>
+    ftp://ftp.ebi.ac.uk/pub/databases/microarray/data/experiment/MEXP/E-MEXP-31/E-MEXP-31.processed.1.zip/E-MEXP-31-processed-data-2481281221.txt
+   </url>
+   <comment>
+    <name>
+     Derived ArrayExpress FTP file
+    </name>
+    <value>
+     ftp://ftp.ebi.ac.uk/pub/databases/microarray/data/experiment/MEXP/E-MEXP-31/E-MEXP-31.processed.1.zip
+    </value>
+   </comment>
+  </file>
+  <labeled-extract>
+   <name>
+    ST1B
+   </name>
+   <label>
+    Biotin
+   </label>
+  </labeled-extract>
+  <scan>
+   <name>
+    ST1_u34b
+   </name>
+  </scan>
+  <source>
+   <name>
+    Rattus norvegicus__S:BioSource:166484
+   </name>
+  </source>
+ </sample>
+ <sample>
+  <assay>
+   <name>
+    SC1_u34b
+   </name>
+   <comment>
+    <name>
+     Array Design URI
+    </name>
+    <value>
+     http://www.ebi.ac.uk/aerep/result?queryFor=PhysicalArrayDesign&amp;aAccession=A-AFFY-19
+    </value>
+   </comment>
+  </assay>
+  <characteristic>
+   <category>
+    Age
+   </category>
+   <value>
+    90
+   </value>
+  </characteristic>
+  <characteristic>
+   <category>
+    TimeUnit
+   </category>
+   <value>
+    days
+   </value>
+  </characteristic>
+  <characteristic>
+   <category>
+    TargetedCellType
+   </category>
+   <value>
+    spermatocytes
+   </value>
+  </characteristic>
+  <characteristic>
+   <category>
+    OrganismPart
+   </category>
+   <value>
+    testis
+   </value>
+  </characteristic>
+  <characteristic>
+   <category>
+    Sex
+   </category>
+   <value>
+    male
+   </value>
+  </characteristic>
+  <characteristic>
+   <category>
+    DevelopmentalStage
+   </category>
+   <value>
+    adult
+   </value>
+  </characteristic>
+  <characteristic>
+   <category>
+    StrainOrLine
+   </category>
+   <value>
+    Sprague Dawley
+   </value>
+  </characteristic>
+  <characteristic>
+   <category>
+    Organism
+   </category>
+   <value>
+    Rattus norvegicus
+   </value>
+  </characteristic>
+  <characteristic>
+   <category>
+    BioSourceType
+   </category>
+   <value>
+    cells
+   </value>
+  </characteristic>
+  <extract>
+   <name>
+    SC1
+   </name>
+  </extract>
+  <file>
+   <type>
+    data
+   </type>
+   <name>
+    SC1_u34b.CEL
+   </name>
+   <url>
+    ftp://ftp.ebi.ac.uk/pub/databases/microarray/data/experiment/MEXP/E-MEXP-31/E-MEXP-31.raw.1.zip/SC1_u34b.CEL
+   </url>
+   <comment>
+    <name>
+     ArrayExpress FTP file
+    </name>
+    <value>
+     ftp://ftp.ebi.ac.uk/pub/databases/microarray/data/experiment/MEXP/E-MEXP-31/E-MEXP-31.raw.1.zip
+    </value>
+   </comment>
+  </file>
+  <file>
+   <type>
+    derived data matrix
+   </type>
+   <name>
+    E-MEXP-31-processed-data-2481281221.txt
+   </name>
+   <url>
+    ftp://ftp.ebi.ac.uk/pub/databases/microarray/data/experiment/MEXP/E-MEXP-31/E-MEXP-31.processed.1.zip/E-MEXP-31-processed-data-2481281221.txt
+   </url>
+   <comment>
+    <name>
+     Derived ArrayExpress FTP file
+    </name>
+    <value>
+     ftp://ftp.ebi.ac.uk/pub/databases/microarray/data/experiment/MEXP/E-MEXP-31/E-MEXP-31.processed.1.zip
+    </value>
+   </comment>
+  </file>
+  <labeled-extract>
+   <name>
+    SC1B
+   </name>
+   <label>
+    Biotin
+   </label>
+  </labeled-extract>
+  <scan>
+   <name>
+    SC1_u34b
+   </name>
+  </scan>
+  <source>
+   <name>
+    Rattus norvegicus__S:BioSource:166482
+   </name>
+  </source>
+ </sample>
+ <sample>
+  <assay>
+   <name>
+    SC2_u34a
+   </name>
+   <comment>
+    <name>
+     Array Design URI
+    </name>
+    <value>
+     http://www.ebi.ac.uk/aerep/result?queryFor=PhysicalArrayDesign&amp;aAccession=A-AFFY-18
+    </value>
+   </comment>
+  </assay>
+  <characteristic>
+   <category>
+    Age
+   </category>
+   <value>
+    90
+   </value>
+  </characteristic>
+  <characteristic>
+   <category>
+    TimeUnit
+   </category>
+   <value>
+    days
+   </value>
+  </characteristic>
+  <characteristic>
+   <category>
+    TargetedCellType
+   </category>
+   <value>
+    spermatocytes
+   </value>
+  </characteristic>
+  <characteristic>
+   <category>
+    OrganismPart
+   </category>
+   <value>
+    testis
+   </value>
+  </characteristic>
+  <characteristic>
+   <category>
+    Sex
+   </category>
+   <value>
+    male
+   </value>
+  </characteristic>
+  <characteristic>
+   <category>
+    DevelopmentalStage
+   </category>
+   <value>
+    adult
+   </value>
+  </characteristic>
+  <characteristic>
+   <category>
+    StrainOrLine
+   </category>
+   <value>
+    Sprague Dawley
+   </value>
+  </characteristic>
+  <characteristic>
+   <category>
+    Organism
+   </category>
+   <value>
+    Rattus norvegicus
+   </value>
+  </characteristic>
+  <characteristic>
+   <category>
+    BioSourceType
+   </category>
+   <value>
+    cells
+   </value>
+  </characteristic>
+  <extract>
+   <name>
+    SC2
+   </name>
+  </extract>
+  <file>
+   <type>
+    data
+   </type>
+   <name>
+    SC2_u34a.CEL
+   </name>
+   <url>
+    ftp://ftp.ebi.ac.uk/pub/databases/microarray/data/experiment/MEXP/E-MEXP-31/E-MEXP-31.raw.1.zip/SC2_u34a.CEL
+   </url>
+   <comment>
+    <name>
+     ArrayExpress FTP file
+    </name>
+    <value>
+     ftp://ftp.ebi.ac.uk/pub/databases/microarray/data/experiment/MEXP/E-MEXP-31/E-MEXP-31.raw.1.zip
+    </value>
+   </comment>
+  </file>
+  <file>
+   <type>
+    derived data matrix
+   </type>
+   <name>
+    E-MEXP-31-processed-data-2481281219.txt
+   </name>
+   <url>
+    ftp://ftp.ebi.ac.uk/pub/databases/microarray/data/experiment/MEXP/E-MEXP-31/E-MEXP-31.processed.1.zip/E-MEXP-31-processed-data-2481281219.txt
+   </url>
+   <comment>
+    <name>
+     Derived ArrayExpress FTP file
+    </name>
+    <value>
+     ftp://ftp.ebi.ac.uk/pub/databases/microarray/data/experiment/MEXP/E-MEXP-31/E-MEXP-31.processed.1.zip
+    </value>
+   </comment>
+  </file>
+  <labeled-extract>
+   <name>
+    SC2A
+   </name>
+   <label>
+    Biotin
+   </label>
+  </labeled-extract>
+  <scan>
+   <name>
+    SC2_u34a
+   </name>
+  </scan>
+  <source>
+   <name>
+    Rattus norvegicus__S:BioSource:166483
+   </name>
+  </source>
  </sample>
 </experiment>

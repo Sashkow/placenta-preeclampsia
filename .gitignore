@@ -1,5 +1,7 @@
 *.pyc
 __pycache__
+env
+/env
 env3
 /env3
 db.sqlite3
