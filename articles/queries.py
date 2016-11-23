@@ -1,6 +1,6 @@
 
 from articles.models import *
-from prettytable import PrettyTable
+# from prettytable import PrettyTable
 
 def show_exps_of_good_platforms():
     good_platforms = ['GPL570','GPL6244','GPL10558']
@@ -66,9 +66,9 @@ def show_unfilled_samples():
             print(attr)
 
 
-def show_experiment_samples(exp):
+def show_experiment_samples(exp_id):
     # exp_id = 'E-GEOD-74341'
-    # exp = Experiment.objects.get(data__contains={'accession':exp_id})
+    exp = Experiment.objects.get(data__contains={'accession':exp_id})
 
     samples = Sample.objects.filter(
       experiment=exp)

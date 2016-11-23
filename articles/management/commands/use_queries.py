@@ -10,7 +10,12 @@ class Command(BaseCommand):
         command's hande method
         """        
 
-        show_exps_of_good_platforms()
+        # show_exps_of_good_platforms()
+
+        exp_id = "E-GEOD-12767"
+        exp = Experiment.objects.get(data__contains={'accession':exp_id})
+        exp.has_minimal()
+        
 
             
         # samples = total_samples()

@@ -131,7 +131,8 @@ class Experiment(models.Model):
             if not(attributes.filter(
               unificated_name__name="Organism Part").exists() and \
                attributes.filter(unificated_name__name="Gestational Age").exists()):
-                return False
+                print(sample)
+                # return False
         return True
 
     def is_cell_line(self):
