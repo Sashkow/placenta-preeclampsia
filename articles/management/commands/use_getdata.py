@@ -2,6 +2,8 @@ from django.core.management.base import BaseCommand, CommandError
 from articles.getdata import *
 from articles.models import Experiment, Microarray
 
+
+
 class Command(BaseCommand):
     """
     """
@@ -10,14 +12,40 @@ class Command(BaseCommand):
         command's hande method
         """        
         acc = "E-GEOD-74341"
-        read_xls()
-
-
-
-        # for obj in Microarray.objects.all():
-        #     if 'name' in obj.data:
-        #         print(obj.data['name'])
-        #     else:
-        #         print(None)
         
+
+        # count = 0
+        # for exp in Experiment.objects.all():
+        #     if not 'Excluded' in exp.status() and not exp.is_cell_line():
+        #         count += 1
+        #         if 'secondaryaccession' in exp.data:
+        #             geo = exp.data['secondaryaccession']
+        #         else:
+        #             geo = "-"
+
+        #         print(exp.data['accession'], geo)
+        # print(count)
+    
+    
+
+    
+
+    # py.sign_in('username', 'api_key')
+    # plotly.tools.set_credentials_file(username='lykhenko.olexandr', api_key='rCWQFhYQQNErBAVxXJPf')
+    
+    
+
+    # trace0 = Scatter(
+    #     x=[1, 2, 3, 4],
+    #     y=[10, 15, 13, 17]
+    # )
+    # trace1 = Scatter(
+    #     x=[1, 2, 3, 4],
+    #     y=[16, 5, 11, 9]
+    # )
+    # data = Data([trace0, trace1])
+
+    # py.plot(data, filename = 'basic-line')
+
+                
 

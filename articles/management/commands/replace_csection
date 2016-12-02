@@ -1,0 +1,12 @@
+from django.core.management.base import BaseCommand, CommandError
+from articles.queries import *
+from articles.models import *
+
+def replace_csection():
+    """
+    find all Samples that contain SampleAttributes with both
+    Caesarean Section (True) and and Labor, Obstetric (None)
+    delete Caesarean section, replace None with Caesarean Section
+    """
+
+    for sample in 

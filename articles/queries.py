@@ -2,6 +2,46 @@
 from articles.models import *
 # from prettytable import PrettyTable
 
+from django.db.models import Q
+
+from plotly.graph_objs import *
+import plotly.plotly as py
+import plotly.graph_objs as go
+import plotly
+
+import numpy as np
+
+
+def list_old_names_values_with_unified():
+    """
+    uniqe rows:
+        old_name old_value unificated_name unificated_value
+    """
+
+    mappings = SampleAttribute.objects.filter(
+      unificated_value__unificated_name__name='Common'
+        ).values('old_name','unificated_name').distinct().order_by('unificated_name')
+
+    count = 0
+    for mapping in mappings:
+        if mapping['old_name'] != 'name':
+            
+            if not (mapping['unificated_name']==None and mapping['unificated_value']==None):
+                count += 1
+                print(UnificatedSamplesAttributeName.objects.get(id=mapping['unificated_name']),
+                      # UnificatedSamplesAttributeValue.objects.get(id=mapping['unificated_value']),
+                      mapping['old_name'],
+                      # mapping['old_value'],
+                      # mapping['sample']
+                      )
+    print(count)
+
+    print(Sample.objects.get(id = 1059).experiment.data['accession'])
+
+
+
+
+
 def show_exps_of_good_platforms():
     good_platforms = ['GPL570','GPL6244','GPL10558']
     # good_platforms = ['GPL10558',]
@@ -199,7 +239,7 @@ def samples_by_diagnosis():
 
     parts_dict = {}
     for part in organism_parts:
-        parts_dict[part] = 0
+        parts_dict[part.value] = 0
     parts_dict["other"] = 0
 
     samples = total_samples()
@@ -208,13 +248,14 @@ def samples_by_diagnosis():
           sample=sample,
           unificated_name=organism_part).exists():
             organism_part_value = SampleAttribute.objects.get(sample=sample, 
-              unificated_name=organism_part).unificated_value
+              unificated_name=organism_part).unificated_value.value
             parts_dict[organism_part_value]+=1
         else:
             # print(sample.experiment.data['accession'], sample.id)
             parts_dict["other"]+=1
 
     print(parts_dict)
+    return parts_dict
 
 
 
@@ -225,7 +266,7 @@ def samples_by_organism_part():
     
     parts_dict = {}
     for part in organism_parts:
-        parts_dict[part] = 0
+        parts_dict[part.value] = 0
     parts_dict["other"] = 0
 
     samples = total_samples()
@@ -234,13 +275,15 @@ def samples_by_organism_part():
           sample=sample,
           unificated_name=organism_part).exists():
             organism_part_value = SampleAttribute.objects.get(sample=sample, 
-              unificated_name=organism_part).unificated_value
+              unificated_name=organism_part).unificated_value.value
             parts_dict[organism_part_value]+=1
         else:
             print(sample.experiment.data['accession'], sample.id)
             parts_dict["other"]+=1
 
     print(parts_dict)
+    return parts_dict
+
 
 def samples_by_cells_cultured():
     organism_part = UnificatedSamplesAttributeName.objects.get(name='Organism Part')
@@ -249,7 +292,7 @@ def samples_by_cells_cultured():
 
     cultures_dict = {}
     for culture in cells_cultures:
-        cultures_dict[culture] = 0
+        cultures_dict[culture.value] = 0
     cultures_dict["other"] = 0
     total = 0
     samples = culture_samples()
@@ -264,7 +307,7 @@ def samples_by_cells_cultured():
               sample=sample,
               unificated_name=cells_cultured).exists():
                 culture_value = SampleAttribute.objects.filter(sample=sample, 
-                  unificated_name=cells_cultured)[0].unificated_value
+                  unificated_name=cells_cultured)[0].unificated_value.value
                 # print(sample.experiment.data['accession'], sample.id)
                 cultures_dict[culture_value]+=1
             else:
@@ -273,6 +316,8 @@ def samples_by_cells_cultured():
 
     print(cultures_dict)
     print('total',total)
+    return cultures_dict
+
 
 def samples_by_trim():
     organism_part = UnificatedSamplesAttributeName.objects.get(name='Pregnancy Trimesters')
@@ -281,7 +326,7 @@ def samples_by_trim():
     
     parts_dict = {}
     for part in organism_parts:
-        parts_dict[part] = 0
+        parts_dict[part.value] = 0
     parts_dict["other"] = 0
 
     samples = total_samples()
@@ -290,13 +335,14 @@ def samples_by_trim():
           sample=sample,
           unificated_name=organism_part).exists():
             organism_part_value = SampleAttribute.objects.get(sample=sample, 
-              unificated_name=organism_part).unificated_value
+              unificated_name=organism_part).unificated_value.value
             # print(sample.experiment.data['accession'])
             parts_dict[organism_part_value]+=1
         else:
             parts_dict["other"]+=1
 
     print(parts_dict)
+    return parts_dict
 
 def samples_by_gestation_age():
     cells_cultured = UnificatedSamplesAttributeName.objects.get(name='Cells, Cultured')
@@ -348,6 +394,7 @@ def samples_by_gestation_age():
             parts_dict['Unknown'] += 1
             # print(sample.experiment.data['accession'], sample.id)
     print(parts_dict)
+    return parts_dict
 
 
 def samples_by_race():
@@ -357,7 +404,7 @@ def samples_by_race():
     
     parts_dict = {}
     for part in organism_parts:
-        parts_dict[part] = 0
+        parts_dict[part.value] = 0
     parts_dict["other"] = 0
 
     samples = total_samples()
@@ -367,26 +414,81 @@ def samples_by_race():
           sample=sample,
           unificated_name=organism_part).exists():
             organism_part_value = SampleAttribute.objects.get(sample=sample, 
-              unificated_name=organism_part).unificated_value
+              unificated_name=organism_part).unificated_value.value
             # print(sample.experiment.data['accession'])
             parts_dict[organism_part_value]+=1
         else:
             parts_dict["other"]+=1
 
     print(parts_dict)
+    return parts_dict
+
+def gestational_age_distribution():
+    samples = total_samples()
+    ages = []
+    for sample in samples:
+        age = sample.get_gestational_age()
+        if age:
+            ages.append(age)
+    ages = [float(age) for age in ages]
+    print(ages)
+    print(len(ages))
+    title = 'Gestational Age Distribution'
+
+    layout = go.Layout(
+    title=title,
+    xaxis=dict(
+        title='Gestational Age'
+    ),
+    yaxis=dict(
+        title='Amount of Samples for Gestational Age'
+    ),
+    )
+
+    data = [go.Histogram(
+        x=ages,
+        xbins=dict(start=np.min(ages), size=1, end= np.max(ages))
+    )]
+    fig = go.Figure(data=data, layout=layout)
+    py.plot(fig, filename=title, fileopt='overwrite')
 
 
-def stats():
-    print("Organism Part")
-    samples_by_organism_part()
-    print("Diagnosis")
-    samples_by_diagnosis()
-    print("Cultured Cells")
-    samples_by_cells_cultured()
-    print("Gestational Age")
-    samples_by_gestation_age()
-    print("Race")
-    samples_by_race()
+def stats(plots=True):
+    if plots:
+        plot(samples_by_organism_part(),"Organism Part")
+        plot(samples_by_diagnosis(),"Diagnosis")
+        plot(samples_by_cells_cultured(),"Cultured Cells")
+        plot(samples_by_gestation_age(),"Gestational Age")
+        plot(samples_by_race(),"Race")
+    else:
+        print("Organism Part")
+        samples_by_organism_part()
+        print("Diagnosis")
+        samples_by_diagnosis()
+        print("Cultured Cells")
+        samples_by_cells_cultured()
+        print("Gestational Age")
+        samples_by_gestation_age()
+        print("Race")
+        samples_by_race()
+
+def plot(labels_values, title):
+    fig = {
+        'data': [{'labels': list(labels_values.keys()),
+                  'values': list(labels_values.values()),
+                  'type': 'pie'}],
+        'layout': {'title': title,
+                   'legend':{'font':{'size':24}}
+            
+         }
+    }
+
+    py.plot(fig, filename=title, fileopt='overwrite', auto_open=False)
+
+
+
+
+
     
 
 

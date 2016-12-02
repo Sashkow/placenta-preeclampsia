@@ -72,6 +72,7 @@ class UnificatedSamplesAttributeValue(ShowModel):
 
 
 class Experiment(models.Model):
+
     must_have_attributes = ['accession', 'secondaryaccession',
      'name', 'experimenttype', 'releasedate', 'lastupdatedate',
     'samples']
@@ -79,6 +80,7 @@ class Experiment(models.Model):
     data = hstore.DictionaryField(db_index=True)
     objects = hstore.HStoreManager()
     history = HistoricalRecords()
+    
     microarrays = models.ManyToManyField('Microarray')
 
     def samples(self):
@@ -106,6 +108,11 @@ class Experiment(models.Model):
         obj.save()
         return obj
 
+    def get_microarrays_lst(self):
+        lst = [m.data['name'] for m in self.microarrays.all()]
+        return ', '.join(lst)
+
+
     def is_unified(self):
         exp_samples = self.samples()
         has_empty_name = SampleAttribute.objects.filter(
@@ -128,11 +135,12 @@ class Experiment(models.Model):
         samples = self.samples()
         for sample in samples:
             attributes = SampleAttribute.objects.filter(sample=sample)
-            if not(attributes.filter(
-              unificated_name__name="Organism Part").exists() and \
-               attributes.filter(unificated_name__name="Gestational Age").exists()):
-                print(sample)
-                # return False
+            if not( attributes.filter(unificated_name__name="Organism Part").exists() and \
+               (attributes.filter(unificated_name__name="Gestational Age").exists() or \
+                attributes.filter(unificated_name__name="Gestational Age at Experiment").exists() or \
+                attributes.filter(unificated_name__name="Average Gestational Age").exists())):
+                
+                return False
         return True
 
     def is_cell_line(self):
@@ -220,19 +228,37 @@ class Sample(models.Model):
         else:
             return None
 
-    def add_or_replace(experiment, data):
-        sample_obj = None
-        if 'name' in data:
-            samples_in_experiment = Sample.objects.filter(
-                                      experiment=experiment)
-            for sample in samples_in_experiment:
-                if sample.has_old_name('name'):
-                    if sample.get_old_value('name')==data['name']:
-                        sample_obj = sample
-        if sample_obj == None:
-            sample_obj = Sample.objects.create(experiment=experiment)
-        sample_obj.save()
-        return sample_obj
+    def get_gestational_age(self):
+        age = self.attributes().filter(
+          unificated_name__name='Gestational Age at Experiment')
+        if age.exists():
+            return age[0].old_value
+
+        age = self.attributes().filter(
+          unificated_name__name='Gestational Age')
+        if age.exists():
+            return age[0].old_value
+
+        return None
+
+
+
+
+
+
+    # def add_or_replace(experiment, data):
+    #     sample_obj = None
+    #     if 'name' in data:
+    #         samples_in_experiment = Sample.objects.filter(
+    #                                   experiment=experiment)
+    #         for sample in samples_in_experiment:
+    #             if sample.has_old_name('name'):
+    #                 if sample.get_old_value('name')==data['name']:
+    #                     sample_obj = sample
+    #     if sample_obj == None:
+    #         sample_obj = Sample.objects.create(experiment=experiment)
+    #     sample_obj.save()
+    #     return sample_obj
 
     # def _show(self):
     #     to_print = 'name'
@@ -260,7 +286,7 @@ class SampleAttribute(models.Model):
     sample = models.ForeignKey('Sample')
 
     def _show(self):
-        return " ".join((
+        return " | ".join((
                         str(self.old_name),
                         str(self.old_value),
                         str(self.unificated_name),
