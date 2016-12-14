@@ -10,19 +10,35 @@ class Command(BaseCommand):
         """
         command's handle method
         """
-        list_old_names_values_with_unified()
-        
-        # exp_id = "E-GEOD-12767"
-        # exp = Experiment.objects.get(data__contains={'accession':exp_id})# exp.has_minimal()
+        # list_old_names_values_with_unified()
+
+        exp = Experiment.objects.get(data__contains={'accession':'E-GEOD-4707'})
+
+        samples = Sample.objects.filter(experiment=exp)
+
+        for sample in samples:
+            sample.
+
+        diagnosis = UnificatedSamplesAttributeName.objects.get(name='Diagnosis')
+
+        # attributes = SampleAttribute.objects.filter(sample__in=samples, unificated_name=diagnosis)
+
+        attributes = SampleAttribute.objects.filter(sample__in=samples)
 
 
-            
-        # samples = total_samples()
-        # for sample in Sample.objects.all():
-        #     sample_attributes = SampleAttribute.objects.filter(sample=sample)
-        #     for sample_attribute in sample_attributes:
-        #         if sample_attribute.old_value:
-        #             if 'basal' in sample_attribute.old_value:
-        #                 print(sample_attribute.old_value, sample.experiment)
+        for attribute in attributes:
+            if 
+            SampleAttribute.objects.create()
+
+        """
+        для кожного семпла з екперимента: Якщо в семплі ще не має потрібного атрибута тоді створити новий, інакше додати в той, що є     """
+
+
+
+
+
+
+
+  
 
 

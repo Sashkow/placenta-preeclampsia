@@ -73,65 +73,65 @@ def get_values(unificated_name):
 
 
 
-def list_old_names_values_with_unified():
-    """
-    uniqe rows:
-        old_name old_value unificated_name unificated_value
-    names = {
-                    "unificated_name":[["old_name", "old_name",...,], structure2],
-                    "unificated_name":[["old_name", "old_name",...,], structure2],
-                    ...
-                 }
+# def list_old_names_values_with_unified():
+#     """
+#     uniqe rows:
+#         old_name old_value unificated_name unificated_value
+#     names = {
+#                     "unificated_name":[["old_name", "old_name",...,], structure2],
+#                     "unificated_name":[["old_name", "old_name",...,], structure2],
+#                     ...
+#                  }
 
-    values = {
-                    "unificated_value":["old_value", "old_value",...],
-                    "unificated_value":["old_value", "old_value",...],
-                    ...
-                 }
+#     values = {
+#                     "unificated_value":["old_value", "old_value",...],
+#                     "unificated_value":["old_value", "old_value",...],
+#                     ...
+#                  }
     
                     
-    """
-    unificated_names = UnificatedSamplesAttributeName.objects.filter(~Q(name='name'))
+#     """
+#     unificated_names = UnificatedSamplesAttributeName.objects.filter(~Q(name='name'))
 
-    attributes = SampleAttribute.objects.filter(~Q(unificated_name=None))
-    names = {}
+#     attributes = SampleAttribute.objects.filter(~Q(unificated_name=None))
+#     names = {}
 
-    for attribute in attributes:
-        if attribute.unificated_name and attribute.unificated_value:
-            name = attribute.unificated_name.name
-            old_name = attribute.old_name
-            if name in names:
-                names[name][0].append(old_name)
-            else:
-                values = get_values(attribute.unificated_name)
-                names[name] = [[old_name,], values]
+#     for attribute in attributes:
+#         if attribute.unificated_name and attribute.unificated_value:
+#             name = attribute.unificated_name.name
+#             old_name = attribute.old_name
+#             if name in names:
+#                 names[name][0].append(old_name)
+#             else:
+#                 values = get_values(attribute.unificated_name)
+#                 names[name] = [[old_name,], values]
 
-    for name in names:
-        print(name, names[name][0])
-        for value in names[name][1]:
-            print(value, names[name][1][value])
-
-
+#     for name in names:
+#         print(name, names[name][0])
+#         for value in names[name][1]:
+#             print(value, names[name][1][value])
 
 
 
-    mappings = SampleAttribute.objects.filter(
-      unificated_value__unificated_name__name='Common'
-        ).values('old_name','unificated_name').distinct().order_by('unificated_name')
 
-    count = 0
-    for mapping in mappings:
-        if mapping['old_name'] != 'name':
+
+#     mappings = SampleAttribute.objects.filter(
+#       unificated_value__unificated_name__name='Common'
+#         ).values('old_name','unificated_name').distinct().order_by('unificated_name')
+
+#     count = 0
+#     for mapping in mappings:
+#         if mapping['old_name'] != 'name':
             
-            if mapping['unificated_name'] and mapping['unificated_value']:
-                count += 1
-                print(UnificatedSamplesAttributeName.objects.get(id=mapping['unificated_name']),
-                      # UnificatedSamplesAttributeValue.objects.get(id=mapping['unificated_value']),
-                      mapping['old_name'],
-                      # mapping['old_value'],
-                      # mapping['sample']
-                      )
-    print(count)
+#             if mapping['unificated_name'] and mapping['unificated_value']:
+#                 count += 1
+#                 print(UnificatedSamplesAttributeName.objects.get(id=mapping['unificated_name']),
+#                       # UnificatedSamplesAttributeValue.objects.get(id=mapping['unificated_value']),
+#                       mapping['old_name'],
+#                       # mapping['old_value'],
+#                       # mapping['sample']
+#                       )
+#     print(count)
 
 
 def show_exps_of_good_platforms():
