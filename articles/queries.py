@@ -12,11 +12,108 @@ import plotly
 import numpy as np
 
 
+def coverage():
+    """
+    for each UnificatedSampleAttributeName print amount of saples that contain it
+    :return:
+    """
+    samples = total_samples()
+    total = len(samples)
+    attributes = SampleAttribute.objects.filter(sample__in=samples)
+    lst = []
+    names = UnificatedSamplesAttributeName.objects.all()
+    for name in names:
+        count = attributes.filter(
+          unificated_name=name).values('sample').distinct().count()
+        if count:
+            lst.append((name.name, round(float(count)/total, 2)))
+    lst = sorted(lst, key=lambda nme: nme[1], reverse=True)
+    for item in lst:
+        print(item[0],item[1],sep='\t')
+
+
+
+
+# def list_old_names_values_with_unified():
+#     """
+#     uniqe rows:
+#         old_name old_value unificated_name unificated_value
+#     """
+
+#     mappings = SampleAttribute.objects.filter(
+#       unificated_value__unificated_name__name='Common'
+#         ).values('old_name','unificated_name').distinct().order_by('unificated_name')
+
+#     count = 0
+#     for mapping in mappings:
+#         if mapping['old_name'] != 'name':
+            
+#             if mapping['unificated_name'] and mapping['unificated_value']:
+#                 count += 1
+#                 print(UnificatedSamplesAttributeName.objects.get(id=mapping['unificated_name']),
+#                       # UnificatedSamplesAttributeValue.objects.get(id=mapping['unificated_value']),
+#                       mapping['old_name'],
+#                       # mapping['old_value'],
+#                       # mapping['sample']
+#                       )
+#     print(count)
+
+def get_values(unificated_name):
+    attributes = SampleAttribute.objects.filter(unificated_name=unificated_name)
+    values = {}
+    for attribute in attributes:
+        if attribute.unificated_value:
+            value = attribute.unificated_value.value
+            old_value = attribute.old_value
+            if value in values:
+                values[value].append(old_value)
+            else:
+                values[value] = [old_value,]
+    return values
+
+
+
 def list_old_names_values_with_unified():
     """
     uniqe rows:
         old_name old_value unificated_name unificated_value
+    names = {
+                    "unificated_name":[["old_name", "old_name",...,], structure2],
+                    "unificated_name":[["old_name", "old_name",...,], structure2],
+                    ...
+                 }
+
+    values = {
+                    "unificated_value":["old_value", "old_value",...],
+                    "unificated_value":["old_value", "old_value",...],
+                    ...
+                 }
+    
+                    
     """
+    unificated_names = UnificatedSamplesAttributeName.objects.filter(~Q(name='name'))
+
+    attributes = SampleAttribute.objects.filter(~Q(unificated_name=None))
+    names = {}
+
+    for attribute in attributes:
+        if attribute.unificated_name and attribute.unificated_value:
+            name = attribute.unificated_name.name
+            old_name = attribute.old_name
+            if name in names:
+                names[name][0].append(old_name)
+            else:
+                values = get_values(attribute.unificated_name)
+                names[name] = [[old_name,], values]
+
+    for name in names:
+        print(name, names[name][0])
+        for value in names[name][1]:
+            print(value, names[name][1][value])
+
+
+
+
 
     mappings = SampleAttribute.objects.filter(
       unificated_value__unificated_name__name='Common'
@@ -26,7 +123,7 @@ def list_old_names_values_with_unified():
     for mapping in mappings:
         if mapping['old_name'] != 'name':
             
-            if not (mapping['unificated_name']==None and mapping['unificated_value']==None):
+            if mapping['unificated_name'] and mapping['unificated_value']:
                 count += 1
                 print(UnificatedSamplesAttributeName.objects.get(id=mapping['unificated_name']),
                       # UnificatedSamplesAttributeValue.objects.get(id=mapping['unificated_value']),
@@ -35,11 +132,6 @@ def list_old_names_values_with_unified():
                       # mapping['sample']
                       )
     print(count)
-
-    print(Sample.objects.get(id = 1059).experiment.data['accession'])
-
-
-
 
 
 def show_exps_of_good_platforms():
@@ -89,11 +181,6 @@ def show_exps_of_good_platforms():
         print(exp.microarrays.all())
 
 
-
-
-
-
-
 def show_unfilled_samples():
     exp_id = 'E-GEOD-15787'
     exp = Experiment.objects.get(data__contains={'accession':exp_id})
@@ -140,13 +227,9 @@ def sample_attribute_old_name_value():
     for each sample attribute name print in which experiments it appears add
     which values it takes in those experiments
     """
+    samples = total_samples()
 
-
-
-    samples_in_experinment = Sample.objects.filter(
-      experiment__data__contains={'accession':'E-GEOD-74341'})
-
-    attributes = SampleAttribute.objects.filter(sample__in=samples_in_experinment)
+    attributes = SampleAttribute.objects.filter(sample__in=samples)
 
     names = attributes.order_by().values_list(
       'old_name', flat=True).distinct()
@@ -156,7 +239,7 @@ def sample_attribute_old_name_value():
             print(name, file=text_file)
             print(name)
 
-            values = SampleAttribute.objects.filter(sample__in=samples_in_experinment,
+            values = SampleAttribute.objects.filter(sample__in=samples,
               old_name=name).order_by().values_list(
                 'old_value', flat=True).distinct()
             for value in values:
@@ -178,11 +261,11 @@ def sample_attribute_name_value():
         print(unificated_name.name, unificated_values_values)
 
 
-          
 exp_ids = ['E-GEOD-31679', 'E-GEOD-30186', 'E-GEOD-15789', 
            'E-GEOD-24129', 'E-GEOD-10588', 'E-GEOD-13155',
            'E-GEOD-14722', 'E-GEOD-12767', 'E-GEOD-13475', 'E-GEOD-12216',
            'E-GEOD-9984', 'E-GEOD-6573', 'E-GEOD-4100', 'E-GEOD-4707', 'E-GEOD-73375']
+
 
 def total_samples():
     all_exps = Experiment.objects.all()
@@ -218,6 +301,7 @@ def total_samples():
     print('mail received',len(mail_received))
     return samples
 
+
 def culture_samples():
     all_exps = Experiment.objects.all()
     culture = []
@@ -230,7 +314,6 @@ def culture_samples():
     print('culture exps', len(culture))
     print('culture samples',len(samples))
     return samples
-
 
 
 def samples_by_diagnosis():
@@ -256,7 +339,6 @@ def samples_by_diagnosis():
 
     print(parts_dict)
     return parts_dict
-
 
 
 def samples_by_organism_part():
@@ -344,6 +426,7 @@ def samples_by_trim():
     print(parts_dict)
     return parts_dict
 
+
 def samples_by_gestation_age():
     cells_cultured = UnificatedSamplesAttributeName.objects.get(name='Cells, Cultured')
     trim = UnificatedSamplesAttributeName.objects.get(name='Pregnancy Trimesters')
@@ -423,6 +506,7 @@ def samples_by_race():
     print(parts_dict)
     return parts_dict
 
+
 def gestational_age_distribution():
     samples = total_samples()
     ages = []
@@ -472,6 +556,7 @@ def stats(plots=True):
         print("Race")
         samples_by_race()
 
+
 def plot(labels_values, title):
     fig = {
         'data': [{'labels': list(labels_values.keys()),
@@ -484,28 +569,3 @@ def plot(labels_values, title):
     }
 
     py.plot(fig, filename=title, fileopt='overwrite', auto_open=False)
-
-
-
-
-
-    
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-            
-

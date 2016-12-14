@@ -89,8 +89,8 @@ WSGI_APPLICATION = 'preeclampsia_db.wsgi.application'
 # https://docs.djangoproject.com/en/1.9/ref/settings/#databases
 
 # Parse database configuration from $DATABASE_URL
-
-
+#
+#
 # DATABASES = {
 #     'default': {
 #         'ENGINE': 'django.db.backends.postgresql_psycopg2',

@@ -6,7 +6,11 @@ from simple_history.models import HistoricalRecords
 
 
 class ShowModel(models.Model):
+    """
+    Abstract class that overrides standard printed value for Model classes
+    """
     to_show = 'name'
+
     def _show(self):
             if hasattr(self,self.to_show):
                 return str(getattr(self, self.to_show))
@@ -41,20 +45,19 @@ class Attribute(ShowModel):
     attribute_value = models.CharField(blank=True, max_length=200)
     to_show = 'attribute_name'
 
-    
+
 class UnificatedSamplesAttributeName(ShowModel):
+    """
+
+    """
     name = models.CharField(max_length=255)
     additional_info = hstore.DictionaryField(db_index=True, blank=True, null=True)
     synonyms = models.ManyToManyField('self', symmetrical=False)
     to_show = 'name'
 
-
-
-
     @staticmethod
     def autocomplete_search_fields():
         return ("id__iexact", "name__icontains",)
-
 
 
 class UnificatedSamplesAttributeValue(ShowModel):
@@ -68,7 +71,7 @@ class UnificatedSamplesAttributeValue(ShowModel):
 
     @staticmethod
     def autocomplete_search_fields():
-        return ("id__iexact", "value__icontains",)
+        return "id__iexact", "value__icontains"
 
 
 class Experiment(models.Model):
@@ -112,7 +115,6 @@ class Experiment(models.Model):
         lst = [m.data['name'] for m in self.microarrays.all()]
         return ', '.join(lst)
 
-
     def is_unified(self):
         exp_samples = self.samples()
         has_empty_name = SampleAttribute.objects.filter(
@@ -135,9 +137,10 @@ class Experiment(models.Model):
         samples = self.samples()
         for sample in samples:
             attributes = SampleAttribute.objects.filter(sample=sample)
-            if not( attributes.filter(unificated_name__name="Organism Part").exists() and \
-               (attributes.filter(unificated_name__name="Gestational Age").exists() or \
-                attributes.filter(unificated_name__name="Gestational Age at Experiment").exists() or \
+            if not( attributes.filter(unificated_name__name="Organism Part").exists() and
+                    attributes.filter(unificated_name__name="Diagnosis").exists() and
+               (attributes.filter(unificated_name__name="Gestational Age").exists() or
+                attributes.filter(unificated_name__name="Gestational Age at Experiment").exists() or
                 attributes.filter(unificated_name__name="Average Gestational Age").exists())):
                 
                 return False
@@ -149,7 +152,6 @@ class Experiment(models.Model):
           unificated_name__name="Cells, Cultured").exists():
             return True
         return False
-
         
     def status(self):
         status = []
@@ -273,6 +275,7 @@ class Sample(models.Model):
     # def __str__(self):
     #     return self._show()
 
+
 class SampleAttribute(models.Model):
     old_name = models.CharField(max_length=255, blank=True, null=True)
     old_value = models.CharField(max_length=255, blank=True, null=True) 
@@ -350,11 +353,6 @@ class SampleAttribute(models.Model):
         else:
             # print("no such attribute",sample,old_name,old_value)
             return
-
-
-
-
-
 
     def add_or_replace(sample,
                        old_name=None,

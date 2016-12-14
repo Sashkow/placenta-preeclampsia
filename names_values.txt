@@ -1,12 +1,1833 @@
+None
+      None
+      Early Onset Pre-Ecpampsia (at gestational age <31 weeks)
+karyotype
+      wild type
+gestational age at delivery weeks
+      39.29
+      32.57
+      38.00
+      38.86
+      39.57
+      37.86
+      40.86
+      34.43
+      29.29
+      40.14
+      41.43
+      37.29
+      39.86
+      35.00
+      31.43
+      40.00
+      27.71
+      37.14
+      33.71
+      39.71
+      39.00
+      36.57
+      39.43
+      37.57
+      41.14
+      28.14
+      33.29
+      37.71
+      29.71
+      36.86
+      38.29
+      40.71
+      40.57
+      39.14
+      34.71
+systolic bp at delivery mmhg
+      140
+      152
+      164
+      144
+      158
+      139
+      146
+      98
+      129
+      121
+      102
+      128
+      142
+      137
+      159
+      134
+      118
+      122
+      162
+      110
+      157
+      156
+      154
+      147
+      138
+      153
+      160
+      130
+      133
+      141
+      124
+      115
+      168
+      114
+      117
+maternal age years
+      31.69
+      32.45
+      20.34
+      23.04
+      29.16
+      37.62
+      19.63
+      32.65
+      26.26
+      25.88
+      35.43
+      28.33
+      33.49
+      26.46
+      31.30
+      29.94
+      25.95
+      36.81
+      31.83
+      28.62
+      33.17
+      27.78
+      30.74
+      32.87
+      17.77
+      19.33
+      32.31
+      27.30
+      27.49
+      30.10
+      31.92
+      33.02
+      18.78
+      39.31
+      19.61
+      35.10
+      17.88
+      21.84
+      32.84
+      33.31
+      43.11
+      20.53
+      35.93
+      18.71
+      19.22
+      22.00
+      37.32
+gender
+      m
+      f
+infant sex
+      female
+      male
+severity
+      S
+      NA
+      NS
+diastolic bp at delivery mmhg
+      115
+      113
+      80
+      64
+      86
+      72
+      97
+      94
+      108
+      98
+      87
+      102
+      85
+      99
+      74
+      70
+      66
+      61
+      63
+      67
+      95
+      68
+      71
+      96
+      100
+      65
+      88
+      92
+      76
+      91
 organism part
       placental tissue
+      blood
+      placenta
+      placental chorionic villus
+      villous tissue
+      placental vilous
+      Chorionic Villi
+      decidua basalis
+Organism Part
+      placenta
+      decidua
+      abdominal fat
+parity
+      2
+      4
+      3
+      1
+matching
+      B
+      C
+      A
+urine protein
+      2+
+      _
+      3+
+ethnic group
+      Chinese
+uric acid mg/dl
+      5.6
+      4.9
+      n/a
+      5.9
+      2.59999990463257
+      5
+      5.8
+      6.6
+      7.1
+      6.4
+      6
+      4
+      7.8
+      5.69999980926514
+      3.09999990463257
+      5.5
+      8.2
+phenotype
+      severe pre-eclampsia
+      normal
+      preeclampsia
+DiseaseState
+      early onset preeclampsia
+      normal
+      preeclampsia+infant SGA
+      late onset preeclampsia
+      infant SGA
+      preeclampsia
+Organism
+      Mus musculus
+      Homo sapiens
+maternal age yrs
+      18
+      46
+      21
+      33
+      40
+      37
+      24
+      25
+      19
+      38
+      36
+      23
+      34
+      28
+      27
+      26
+      29
+      39
+      47
+      32
+      31
+      30
+      35
+      41
+      22
+      20
+      42
+diastolic bp <20 weeks mmhg
+      n/a
+      80
+      58
+      72
+      64
+      78
+      60
+      65
+      79
+      na
+      75
+      73
+      69
+      76
+      84
+      62
+      66
+      70
+      77
+      61
+      67
+      63
+      68
+      71
+gestational age weeks
+      18
+      8
+      9
+      37.28
+      31.42
+      32.56
+      25
+      38
+      33.72
+      34
+      23
+      28
+      26
+      24.86
+      5
+      32
+      31
+      35
+      31.7
+      33.4
+      32.7
+      33.56
+      33
+      16
+      33.86
+      40
+      37
+      32.28
+      26.86
+      6
+      36.42
+      10
+      36
+      25.42
+      28.56
+      33.7
+      32.43
+      27
+      29
+      36.57
+      39
+      32.42
+      7
+      32.86
+baby weight
+      1440
+      2865
+      2630
+      NA
+      1685
+      1849
+      605
+      1331
+      758
+      595
+      1400
+      2230?
+      1728
+      3470
+      1700
+      2230.0
+      2220
+      1245
+      2295
+      820
+      1840
+      1650
+      2025
+      2040
+      1795
+      440
+      545
+      1200
+      3170
+      1455
+      3685
+      1305
+      1480
+      1560
+      1095
+      2495
+      1810
+      1160
+      2100
+      978
+name
+      GSM1892038 1
+      GSM1088609 1
+      T03
+      GSM1088634 1
+      GSM1432427 1
+      GSM1432413 1
+      GSM871073 1
+      GSE4707GSM106249_Cy3
+      GSM747304 1
+      GSM1891996 1
+      D28
+      GSM1892020 1
+      GSM1177779 1
+      GSM1177786 1
+      GSM1917663 1
+      GSM307192 1
+      S27
+      GSM871107 1
+      GSM1388267 1
+      S32
+      GSM1480065 1
+      GSM1892052 1
+      GSM367803 1
+      GSM1917680 2
+      GSM1319964 1
+      GSM871082 1
+      GSE4707GSM106279_Cy3
+      D25
+      T28
+      GSM1319974 1
+      GSM1892019 1
+      GSM871125 1
+      T06
+      GSM1892014 1
+      GSM1197680 1
+      GSM871110 1
+      GSM1432432 1
+      S14
+      GSM1319970 1
+      GSM1197690 1
+      D16
+      GSM1177806 1
+      GSM1177804 1
+      GSM1891998 1
+      GSM1319968 1
+      GSM1088628 1
+      GSM367790 1
+      GSM1177797 1
+      GSM1088607 1
+      GSM1088636 1
+      GSM1480062 1
+      GSM1388255 1
+      T32
+      GSM1480060 1
+      S46
+      GSM367820 1
+      GSM225490 1
+      GSM1432437 1
+      GSM1319965 1
+      GSM1197682 1
+      GSM1892008 1
+      GSM1388231 1
+      GSM1177801 1
+      GSM1480049 1
+      GSM1388232 1
+      T07
+      GSM871074 1
+      GSM871046 1
+      GSM1480108 1
+      GSM1432406 1
+      D04
+      GSM1917661 1
+      20-621
+      GSM307189 1
+      GSM1917683 1
+      GSM1480165 1
+      GSM1432443 1
+      GSM367787 1
+      GSM1480099 1
+      GSM1917668 1
+      GSE13155GSM329336
+      GSM1480104 1
+      GSM871052 1
+      GSM1319969 1
+      GSM1074814 1
+      GSM1480128 1
+      GSM871089 1
+      GSM929670 1
+      GSM1388258 1
+      GSM307190 1
+      GSM1432414 1
+      GSM1480059 1
+      GSM1432419 1
+      GSM1432412 1
+      GSM1319967 1
+      GSM1388245 1
+      GSM1197673 1
+      GSM871106 1
+      GSM1177783 1
+      GSM1480075 1
+      GSM1088632 1
+      GSM1892057 1
+      GSM1892025 1
+      GSM1892004 1
+      GSM1088620 1
+      GSM1892056 1
+      GSM1088603 1
+      GSE13155GSM329338
+      GSM225492 1
+      GSM225470 1
+      GSM871132 1
+      GSM367785 1
+      GSM1432416 1
+      GSM1892005 1
+      S59
+      GSM871075 1
+      GSM871098 1
+      S17
+      GSM1892007 1
+      GSM1432430 1
+      GSM225493 1
+      D10
+      GSE9984GSM252350
+      GSM1197666 1
+      GSM1917679 2
+      GSM1197684 1
+      GSM1319979 1
+      GSM1229155 1
+      GSM225513 1
+      GSM871135 1
+      S12
+      GSE9984GSM252352
+      GSM1480119 1
+      GSM1480101 1
+      GSE9984GSM252357
+      GSM871134 1
+      GSM1432405 1
+      GSM1177784 1
+      GSM396431 2
+      GSM1074806 1
+      D30
+      GSM871120 1
+      GSM1480043 1
+      GSM225483 1
+      GSE9984GSM252356
+      S37
+      S49
+      GSM367818 1
+      GSM1177809 1
+      GSE4707GSM106285_Cy3
+      GSM367792 1
+      GSM1480063 1
+      GSM1432418 1
+      GSM1892006 1
+      GSM1480163 1
+      GSM1917665 2
+      GSM1892059 1
+      GSM367806 1
+      GSM1891991 1
+      GSM1074807 1
+      GSM1480069 1
+      GSM1177781 1
+      GSM1319980 1
+      S38
+      GSM1388271 1
+      GSM1074808 1
+      GSM396436 1
+      GSM1197665 1
+      GSE12767GSM320289
+      GSM1373744 1
+      GSM367804 1
+      GSE12767GSM320291
+      07-618
+      GSM1891997 1
+      GSM1892041 1
+      GSM871065 1
+      GSM880868 1
+      GSM367782 1
+      GSM367821 1
+      GSM1480142 1
+      GSM871101 1
+      GSM307193 1
+      GSM1388261 1
+      GSM1480096 1
+      GSM1388230 1
+      GSM1480141 1
+      GSM1089232 1
+      D29
+      GSM871128 1
+      GSM1229151 1
+      13-661
+      GSM1480125 1
+      12-697
+      GSM1319973 1
+      GSM1088602 1
+      GSM1388237 1
+      GSM871071 1
+      S56
+      GSM1088639 1
+      GSM1088616 1
+      S05
+      GSM1480139 1
+      D23
+      GSM1480088 1
+      21-664
+      GSM396436 2
+      GSM871083 1
+      S47
+      GSM1480111 1
+      GSM1177780 1
+      GSM367824 1
+      GSM367816 1
+      GSM1432417 1
+      GSM1177808 1
+      GSM367796 1
+      GSM1480145 1
+      GSM1917666 2
+      GSM367799 1
+      T30
+      GSM871127 1
+      GSM871102 1
+      T04
+      GSM1480081 1
+      GSM871123 1
+      GSM871099 1
+      S54
+      GSM396435 2
+      GSM1088631 1
+      GSM747300 1
+      T38
+      GSM871133 1
+      GSM1480110 1
+      GSM1089234 1
+      GSM1388240 1
+      D22
+      GSM871103 1
+      GSM1089231 1
+      GSM1917680 1
+      GSM1197683 1
+      GSM871108 1
+      S35
+      GSM1146437 1
+      GSM871076 1
+      S55
+      GSM1432447 1
+      GSM1480124 1
+      GSM307201 1
+      GSM367795 1
+      GSM1480080 1
+      GSM1229156 1
+      S16
+      GSM871119 1
+      D11
+      GSM1388239 1
+      GSM1432425 1
+      GSM1197675 1
+      GSM1432408 1
+      GSM1480126 1
+      GSM225505 1
+      GSM367798 1
+      GSM1892046 1
+      GSM871130 1
+      GSM1088613 1
+      GSM1892017 1
+      GSE4707GSM106283_Cy3
+      GSM1892009 1
+      GSM1146434 1
+      GSM1917677 2
+      GSM1917667 1
+      GSM871112 1
+      GSM1388263 1
+      GSM1480166 1
+      GSM1480087 1
+      GSM1892035 1
+      S26
+      GSM367811 1
+      GSE12767GSM320290
+      GSM1197689 1
+      GSM1480160 1
+      GSM225474 1
+      GSM1432431 1
+      GSM1432423 1
+      GSM1229160 1
+      GSM1373741 1
+      S07
+      GSM225473 1
+      S25
+      GSM1388246 1
+      GSE4707GSM106274_Cy3
+      GSM225485 1
+      S02
+      GSM367794 1
+      GSM871104 1
+      GSE6573GSM151960
+      GSM747306 1
+      GSM1480089 1
+      GSM1197677 1
+      GSM1480150 1
+      GSE4707GSM106281_Cy5
+      GSM1074810 1
+      GSM1088619 1
+      GSM1088633 1
+      GSM871067 1
+      GSM1917682 1
+      GSM1146437 2
+      GSM1388272 1
+      GSM1480093 1
+      GSM367812 1
+      GSM871116 1
+      GSM1892031 1
+      GSM871092 1
+      GSM1197662 1
+      GSM880866 1
+      GSM1089240 1
+      GSM307200 1
+      GSM1177793 1
+      GSM871056 1
+      GSM1917672 2
+      GSM367807 1
+      GSM1480151 1
+      19-623
+      GSE9984GSM252353
+      GSM871059 1
+      GSM1146435 1
+      GSM1480091 1
+      03-684
+      GSM1480113 1
+      GSM367788 1
+      GSM1891994 1
+      GSM1917683 2
+      GSM1480117 1
+      18-669
+      GSM1917674 1
+      GSM1892037 1
+      GSM1088629 1
+      GSM1088612 1
+      GSE4707GSM106249_Cy5
+      GSM307199 1
+      GSM1480133 1
+      GSM1892040 1
+      GSM1892055 1
+      GSM1177799 1
+      GSM1319986 1
+      GSM1892018 1
+      GSM1388249 1
+      GSM1388248 1
+      GSM1229161 1
+      GSM367800 1
+      GSM1480118 1
+      GSM225489 1
+      14-619
+      T25
+      GSM1480094 1
+      D07
+      GSM1319984 1
+      GSM1480137 1
+      GSM871115 1
+      GSM871060 1
+      GSM1480147 1
+      GSM871090 1
+      GSM396432 2
+      GSM1917677 1
+      GSM1917666 1
+      S45
+      GSM307195 1
+      T13
+      GSE4707GSM106283_Cy5
+      GSM1480084 1
+      GSM1089235 1
+      T40
+      GSM871085 1
+      GSM1177795 1
+      GSM367825 1
+      GSM1480064 1
+      GSM1480052 1
+      GSM225476 1
+      S41
+      S51
+      GSM1388242 1
+      GSM1319983 1
+      T05
+      S39
+      GSM225478 1
+      GSM1892044 1
+      GSM1432411 1
+      T02
+      06-656
+      D09
+      GSM747308 1
+      GSM1197688 1
+      GSM1088640 1
+      GSM1917673 1
+      GSM367801 1
+      GSM1480055 1
+      GSM871072 1
+      S42
+      GSM871049 1
+      GSM1892012 1
+      GSM1319966 1
+      GSM1432407 1
+      GSM1388236 1
+      GSM1088622 1
+      GSM1432424 1
+      GSM1480164 1
+      D18
+      GSE13155GSM329339
+      GSM1917665 1
+      GSM1917673 2
+      S15
+      GSM225479 1
+      GSM1197670 1
+      GSM1319985 1
+      GSM1177811 1
+      GSM1388235 1
+      GSM1480116 1
+      GSM1229157 1
+      GSM1197686 1
+      GSM1373742 1
+      GSM1388243 1
+      GSM367819 1
+      GSM1480131 1
+      GSM871097 1
+      GSM1480105 1
+      GSM1480149 1
+      GSM1480167 1
+      GSM1146434 2
+      GSM1088618 1
+      GSM1892033 1
+      S34
+      S40
+      GSM1432439 1
+      GSM396433 2
+      GSE4707GSM106275_Cy3
+      GSM871077 1
+      GSM1480098 1
+      GSM1088617 1
+      GSM1480152 1
+      GSE12767GSM320282
+      GSM871054 1
+      GSM1480102 1
+      GSM225498 1
+      GSM1388266 1
+      17-668
+      GSM1480109 1
+      D24
+      GSM1432438 1
+      GSM1388270 1
+      GSM1388251 1
+      GSM225486 1
+      S57
+      GSM225488 1
+      GSM1917681 2
+      GSM1319977 1
+      GSM307197 1
+      GSM1074805 1
+      GSE4707GSM106282_Cy3
+      GSM871095 1
+      GSM1074813 1
+      T10
+      S19
+      GSM1177807 1
+      D12
+      GSE4707GSM106277_Cy5
+      GSM1480061 1
+      GSM1892030 1
+      GSM871105 1
+      GSM1319987 1
+      GSM1917682 2
+      GSM1432435 1
+      GSM1088615 1
+      GSM1388269 1
+      T22
+      GSM225475 1
+      GSM1432445 1
+      GSM1432434 1
+      D17
+      GSM1432420 1
+      S48
+      GSM871055 1
+      GSM1388233 1
+      GSM1373740 1
+      GSM871137 1
+      GSM1388247 1
+      GSM1917664 2
+      GSM1388241 1
+      GSM1197668 1
+      S10
+      GSM1388265 1
+      GSM871109 1
+      GSM871113 1
+      GSM1074812 1
+      GSM1088637 1
+      GSE9984GSM252349
+      GSM1432422 1
+      GSM871122 1
+      GSE9984GSM252355
+      GSM1197661 1
+      S62
+      GSE4707GSM106281_Cy3
+      GSM871111 1
+      GSM1388264 1
+      GSM307196 1
+      GSM1480077 1
+      GSM871081 1
+      GSM367813 1
+      D20
+      GSM225491 1
+      GSM1892043 1
+      GSM1480135 1
+      GSM1089229 1
+      GSM225480 1
+      GSE4707GSM106279_Cy5
+      GSM871136 1
+      GSM1917668 2
+      GSM1480086 1
+      GSM1146436 1
+      GSM396432 1
+      GSM871070 1
+      GSM1197664 1
+      GSM396430 1
+      GSE4707GSM106277_Cy3
+      GSE9984GSM252358
+      GSM1892002 1
+      GSM1074803 1
+      GSM1432444 1
+      GSM1480127 1
+      GSM871078 1
+      GSE12767GSM320292
+      GSE4707GSM106278_Cy3
+      GSM1432446 1
+      GSM1480085 1
+      GSM871080 1
+      GSM1480159 1
+      GSM1177778 1
+      GSM1088624 1
+      GSM1432442 1
+      GSM1388238 1
+      GSM1089244 1
+      02-683
+      GSM1917670 2
+      D05
+      GSM1892023 1
+      T21
+      GSM1197687 1
+      GSM1917684 2
+      GSM307194 1
+      GSM1892036 1
+      11-689
+      T19
+      GSM871117 1
+      GSM1480130 1
+      S29
+      GSM1432449 1
+      GSM1480158 1
+      GSM1088623 1
+      GSM1388252 1
+      GSM1432436 1
+      GSM880871 1
+      GSE12767GSM320293
+      GSE9984GSM252359
+      GSM929669 1
+      GSM1177803 1
+      GSM1146435 2
+      GSE4707GSM106280_Cy5
+      GSM1480070 1
+      GSM871138 1
+      GSM1480056 1
+      GSM1388268 1
+      GSM1432415 1
+      GSM1480114 1
+      GSM307191 1
+      GSM1088630 1
+      GSE4707GSM106282_Cy5
+      GSM1177776 1
+      GSE6573GSM151959
+      GSM1892054 1
+      T24
+      GSM880870 1
+      GSM1177800 1
+      GSM1480106 1
+      T37
+      S52
+      GSM225512 1
+      GSM396437 1
+      GSM1480054 1
+      GSM225504 1
+      GSM871129 1
+      GSM225503 1
+      D13
+      GSM1177789 1
+      GSM367797 1
+      GSM1917661 2
+      GSM1891995 1
+      GSM1177787 1
+      GSM1891999 1
+      GSM1388244 1
+      GSE9984GSM252354
+      GSM871121 1
+      GSM1197681 1
+      04-691
+      GSM871124 1
+      GSM1089243 1
+      GSM1892039 1
+      GSM1892032 1
+      GSM1917660 1
+      GSE12767GSM320285
+      GSE4707GSM106274_Cy5
+      GSM1319978 1
+      GSE4707GSM106276_Cy5
+      GSM1074804 1
+      GSM1480092 1
+      GSM1891993 1
+      T09
+      GSM1089241 1
+      GSM367823 1
+      GSM225509 1
+      GSM225494 1
+      GSM1089230 1
+      GSM1388254 1
+      GSM747305 1
+      GSM871057 1
+      GSM1197667 1
+      GSM1432448 1
+      GSM747298 1
+      GSM1177810 1
+      GSM1480071 1
+      GSM1373743 1
+      GSM1891989 1
+      GSM1917676 1
+      GSM1892022 1
+      GSM1892029 1
+      GSM1892048 1
+      GSM225501 1
+      GSM1480115 1
+      GSM1088614 1
+      GSM871114 1
+      GSM1892026 1
+      GSM1892003 1
+      GSM1480048 1
+      GSM1432402 1
+      GSM871048 1
+      16-655
+      GSM1480090 1
+      GSM1917681 1
+      GSM1917662 2
+      GSM307188 1
+      GSM1480129 1
+      GSM1892013 1
+      GSM396437 2
+      GSM1480072 1
+      GSM1892010 1
+      GSM1089233 1
+      GSM1177791 1
+      GSM1177790 1
+      GSM1146436 2
+      GSM1892058 1
+      GSM871118 1
+      GSM871053 1
+      GSM1088604 1
+      GSM871068 1
+      GSE12767GSM320286
+      GSM225495 1
+      T39
+      GSM1388253 1
+      08-699
+      GSM747307 1
+      GSM1480134 1
+      S61
+      GSM1917670 1
+      GSM1480148 1
+      GSM1917675 1
+      GSM1480074 1
+      GSM1480083 1
+      GSM1892027 1
+      GSE9984GSM252360
+      GSM1480076 1
+      GSM1319982 1
+      GSM367815 1
+      GSE12767GSM320283
+      GSM1480073 1
+      GSM367793 1
+      GSM1480097 1
+      GSM225487 1
+      GSM1432429 1
+      GSM1373746 1
+      GSM1480162 1
+      GSM1088635 1
+      GSM871088 1
+      GSM747301 1
+      GSM225506 1
+      GSM1480143 1
+      GSM1917667 2
+      GSM1177785 1
+      GSM871050 1
+      T12
+      GSM1197663 1
+      GSM1917669 1
+      GSM1146438 2
+      GSM1177782 1
+      GSM1388259 1
+      GSE12767GSM320288
+      GSM1480107 1
+      GSM1917675 2
+      GSM1480051 1
+      05-629
+      GSM225500 1
+      GSM367808 1
+      GSM1432433 1
+      GSM871079 1
+      GSM225499 1
+      T01
+      GSM1480156 1
+      GSM1892015 1
+      GSM1088606 1
+      GSE4707GSM106285_Cy5
+      GSM1388234 1
+      10-687
+      GSM1892060 1
+      GSM1917671 1
+      GSM1197685 1
+      GSM396431 1
+      GSM1480154 1
+      GSM225502 1
+      GSM871131 1
+      GSM1197669 1
+      GSM225472 1
+      GSM1917674 2
+      15-620
+      T16
+      GSE4707GSM106250_Cy3
+      GSM871091 1
+      GSM1480047 1
+      GSM1088605 1
+      S08
+      GSM871062 1
+      GSE6573GSM151955
+      GSM871139 1
+      GSM225484 1
+      GSM1432421 1
+      GSE4707GSM106284_Cy3
+      GSM1480121 1
+      GSM396434 2
+      GSM1480122 1
+      GSM1480045 1
+      GSE6573GSM151961
+      GSM1480161 1
+      GSM871084 1
+      GSM1480112 1
+      D19
+      GSM307198 1
+      GSM1146438 1
+      GSM1432404 1
+      GSM1892049 1
+      GSM1892011 1
+      S44
+      GSM1480079 1
+      GSM1319976 1
+      GSM1917684 1
+      D01
+      GSM367809 1
+      GSM1892034 1
+      GSM871063 1
+      D14
+      GSM1388250 1
+      GSM367786 1
+      GSM1480057 1
+      GSM1917678 1
+      GSM747309 1
+      GSM1089239 1
+      GSM1088621 1
+      GSM871047 1
+      GSM1089238 1
+      GSM1088611 1
+      GSM871094 1
+      GSM1177796 1
+      GSM1480103 1
+      S33
+      GSM367789 1
+      GSM1892045 1
+      GSM1089242 1
+      S09
+      GSM1480050 1
+      GSM1388256 1
+      GSM1088638 1
+      GSM1917662 1
+      GSM1197674 1
+      GSM1917660 2
+      GSM747303 1
+      S63
+      GSM1088625 1
+      S03
+      GSM1480138 1
+      GSM1373738 1
+      GSM1177794 1
+      GSM367802 1
+      S23
+      GSE12767GSM320287
+      GSM1197678 1
+      GSM1892050 1
+      GSM871087 1
+      GSM225477 1
+      GSM1197676 1
+      GSM1388260 1
+      GSM225471 1
+      GSM1074809 1
+      GSM1892016 1
+      GSM396435 1
+      GSM1892024 1
+      GSM225496 1
+      GSM1229158 1
+      GSM1373747 1
+      GSM307186 1
+      GSM1229152 1
+      GSM396430 2
+      GSE4707GSM106250_Cy5
+      GSM367784 1
+      GSM1319972 1
+      GSE6573GSM151958
+      GSE13155GSM329337
+      GSM1319975 1
+      GSM871093 1
+      GSM1229153 1
+      D02
+      GSM1432428 1
+      GSM396433 1
+      GSM1480044 1
+      GSM1088610 1
+      GSM367791 1
+      GSM1388273 1
+      GSM1892051 1
+      GSM1088626 1
+      GSM1917676 2
+      GSM225511 1
+      GSM1432403 1
+      GSM1480132 1
+      GSM871064 1
+      GSM1432410 1
+      GSM1892001 1
+      GSM367822 1
+      GSM1892047 1
+      GSM880869 1
+      GSM1892000 1
+      GSM1891992 1
+      GSM1480157 1
+      GSM1480066 1
+      GSM1480120 1
+      GSM880867 1
+      GSM1480153 1
+      09-677
+      GSM1088641 1
+      GSM1388257 1
+      GSE4707GSM106280_Cy3
+      GSM1480078 1
+      GSM367781 1
+      S30
+      GSM367783 1
+      GSM929668 1
+      GSM1917663 2
+      GSM1432440 1
+      GSM1480067 1
+      GSM1480095 1
+      GSM1480082 1
+      GSM1388274 1
+      GSE4707GSM106275_Cy5
+      GSM1480053 1
+      GSM871051 1
+      GSM1480123 1
+      GSM1892053 1
+      GSM1917672 1
+      GSE4707GSM106276_Cy3
+      GSM1373739 1
+      GSE9984GSM252351
+      GSM929667 1
+      GSM225481 1
+      GSM1388262 1
+      01-674
+      GSM1089237 1
+      GSM871061 1
+      GSM1892021 1
+      GSM1480058 1
+      GSM367817 1
+      GSM1917671 2
+      22-657
+      T11
+      D03
+      GSM1229159 1
+      GSM1177777 1
+      GSM747299 1
+      GSM367826 1
+      GSM1917679 1
+      GSM1480140 1
+      GSM1319981 1
+      GSM1917669 2
+      GSM1892042 1
+      GSM1917664 1
+      GSM367810 1
+      GSE4707GSM106284_Cy5
+      GSM1432441 1
+      GSE12767GSM320284
+      GSM1373745 1
+      GSM1177798 1
+      D21
+      GSM747302 1
+      GSM1432426 1
+      S43
+      GSM1480068 1
+      GSM871069 1
+      GSM225507 1
+      GSM1892028 1
+      S58
+      GSM367814 1
+      GSM1319971 1
+      T23
+      S01
+      GSM1088627 1
+      GSM1197671 1
+      GSM1197679 1
+      GSM1480144 1
+      S21
+      GSM1480046 1
+      GSM225508 1
+      GSM307187 1
+      GSM1480155 1
+      GSM1177805 1
+      GSM871096 1
+      GSM225497 1
+      GSM871100 1
+      GSM1089236 1
+      GSM871126 1
+      GSM1432409 1
+      GSM871066 1
+      GSM1480146 1
+      GSM1229154 1
+      D06
+      GSM871086 1
+      GSM1480100 1
+      GSM1177792 1
+      GSM367805 1
+      GSM1074811 1
+      D26
+      GSM1197672 1
+      GSM871058 1
+      GSM225510 1
+      GSM1177788 1
+      GSM1177802 1
+      GSM1088608 1
+      GSE6573GSM151957
+      GSM1917678 2
+      S60
+      S20
+      GSE4707GSM106278_Cy5
+      GSM1891990 1
+      GSM396434 1
+induction of labor
+      induced
+      spontaneous
+gestational age wks
+      33
+      40
+      37
+      25
+      38
+      36
+      34
+      27
+      28
+      26
+      29
+      39
+      32
+      31
+      30
+      35
+      41
+      42
+clinical history
+      low risk of developing placental complications
+      high risk of developing placental complications
+systolic bp <20 weeks mmhg
+      103
+      124
+      126
+      n/a
+      113
+      115
+      120
+      125
+      114
+      135
+      105
+      112
+      104
+      108
+      na
+      109
+      123
+      107
+      133
+      134
+      119
+      118
+      122
+      101
+      110
+      127
+      100
 organism
       Homo sapiens
+infant weight g
+      1122
+      4310
+      3978
+      3786
+      3108
+      3490
+      1340
+      1970
+      2635
+      3395
+      850
+      3125
+      1100
+      1590
+      1081
+      3130
+      3935
+      1250
+      3240
+      732
+      3760
+      3365
+      3690
+      1420
+      2110
+      2825
+      3400
+      3245
+      2938
+      4212
+      2712
+      2195
+      4598
+      2535
+      1556
+      1648
+      3554
+      3450
+      3325
+      2920
+      3808
+      1640
+      2880
+      3258
+      1190
+      3468
+      3875
+      3095
+      3692
+      4365
+      886
+      3566
+      1120
+      425
+      4415
+      3034
+      1000
+      635
+      831
+      1360
+      3830
+      3315
+      650
+      3618
+      3585
+      3620
+      3050
+      835
+      3110
+      2990
+      1510
+      659
+      1720
+      2838
+      3465
+      3126
+      516
+      3670
+      3155
+      3461
+      3645
+      2935
+      3415
+      1845
+      990
+      3060
+      3420
+      2190
+      1125
+      940
+      665
+      1850
+      3822
+      2706
+      3332
+      3480
+      1525
+      1292
+      1735
+      1955
+      3580
+      730
+      3105
+      3306
+      2700
+      3336
+      3145
+      1740
+      1365
+      3445
+      3785
+      3635
+      1470
+      720
+      3385
+      2870
+      3576
+      2740
+group
+      preeclamptic
+      normal
+nulliparous
+      1
+      0
+gestation
+      8.1
+      8
+      8.5
+OrganismPart
+      placenta
+      Decidua basalis
+Sex
+      N/A
+      female
+      male
+mean arterial pressure mmhg
+      113
+      131
+      121.7
+      101
+      84.3
+      120.7
+      129.7
+      89.3
+      86.7
+tissue
+      placentae
+      placentas from preeclamptic pregnancies
+      normal placentas
+      placenta
+maternal race
+      Nat Amer
+      Black
+      White
 sample type
-      pooled-sample reference
       <empty>
+      pooled-sample reference
+disease
+      normal
+      preeclampsia
+diagnosis
+      preterm
+      normotensive
+      preeclamptic
+clinical information
+      first trimester of pregnancy
+BioSourceProvider
+      Trondheim
+      Bergen
+      Tissue obtained with informed consent following elective termination of pregnancy.
+ethnicity
+      Caucasian
+Disease State
+      Preeclampsia after 20 weeks of gestation to 140/90 mm Hg, excretion of 0.3 g protein in 2 urine samples
+      normal
+      preeclampsia
+classification
+      PE
+      IUGR
+      control
+genotype
+      confined placental mosaicism
+      trisomy 16
+      control
+disease state
+      normal
+      preeclampsia
+gestational age
+      25.6
+      25
+      38
+      39.4
+      30.3
+      36.7
+      34
+      36.6
+      28
+      34.6
+      32
+      30
+      32.0
+      22
+      28.1
+      Caucasian
+      40.1
+      38.7
+      40
+      Asian
+      27.1
+      30.7
+      27
+      Other
+      40.0
+      28.6
+      36.4
+      31.1
+      African American
+      38.0
+      31.4
+      24.1
+      34.1
+      18
+      29.9
+      29.1
+      26.3
+      34.7
+      34.0
+      33.9
+      30.4
+      33.1
+      17.3
+      37.6
+      26
+      35.4
+      Hispanic
+      24.7
+      33.3
+      35
+      41
+      31.7
+      25.4
+      33
+      37
+      39.3
+      18.8
+      35.9
+      30.6
+      35.7
+      36
+      32.9
+      33.0
+      17.1
+      29
+      39
+      31.9
+jury
+      6
+      4
+      4.3
+      4.1
+      4.5
+      4.4
+fetal sex
+      female
+      male
+fetus gender
+      Female
+      <empty>
+      female
+      Male
+      male
+gestational classification
+      Term
+      Preterm
+disease status
+      healthy
+      preeclampsia
+pre-pregancy bmi
+      21.08
+      24.94
+      28.21
+      24.99
+      23.77
+      25.85
+      18.28
+      32.56
+      19.78
+      25.92
+      20.40
+      21.30
+      26.68
+      25.88
+      23.22
+      28.30
+      20.64
+      22.19
+      23.45
+      21.79
+      20.47
+      35.94
+      21.99
+      31.13
+      27.86
+      21.68
+      25.74
+      21.03
+      26.85
+      21.28
+      21.34
+      25.01
+      32.52
+      29.24
+      30.18
+      21.46
+      22.72
+      24.33
+      24.50
+      36.39
+      25.11
+      23.08
+      19.65
+      20.53
+      28.85
+      22.26
+
+      None
+      2
+      30.13
+      38
+      12.4
+      30.3
+      32.3
+      11.4
+      40.9
+      16.4
+      5.6
+      1472
+      35
+      41
+      1735
+      39.2
+      37
+      17.5
+      
+      11
+      35.7
+      36
+      29
+      39.9
+      15.6
+      11.0
+      34.9
+      6.4
+      10.7
+      10.4
+      28
+      41.3
+      3433
+      38.1
+      40
+      8.4
+      38.4
+      12
+      3
+      33
+      3972
+      11.2
+      0
+      11.6
+      37.1
+      32.9
+      44
+      39
+      1
+condition
+      EOPET
+      control
+      Health
+      pre-eclampsia and fgr
+      Pre-Eclampsia
+maternal age
+      33
+      37
+      24
+      25
+      19
+      38
+      36
+      34
+      27
+      28
+      26
+      29
+      32
+      31
+      35
+      30
+      20
+      22
+age
+      21
+      27
+      28
+      26
+      29
+      43
+      33
+      32
+      40
+      37
+      31
+      25
+      24
+      28 years
+      30
+      38
+      20
+      23
+      34
+race
+      Caucasian
+      33
+      40
+      37
+      Asian
+      38
+      36
+      34
+      27
+      28
+      Other
+      29
+      39
+      32
+      Hispanic
+      African American
+      30
+      35
+      41
+      22
+batch
+      B
+      A
+gravidity
+      8
+      2
+      6
+      4
+      5
+      3
+      1
 subject status
-      patients with late-onset (>36 weeks) preeclampsia (LOPE)
       controls who delivered preterm (<34 weeks)
-      controls who delivered at term (>36 weeks)
       patients with early-onset (<34 weeks) preeclampsia (EOPE)
+      controls who delivered at term (>36 weeks)
+      pre-eclamptic patient
+      normotensive control patient
+      patients with late-onset (>36 weeks) preeclampsia (LOPE)
