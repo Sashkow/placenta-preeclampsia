@@ -104,25 +104,25 @@ WSGI_APPLICATION = 'preeclampsia_db.wsgi.application'
 
 
 
-# DATABASES = {
-#     'default': {
-#         'ENGINE': 'django.db.backends.postgresql_psycopg2',
-#         'NAME': 'test_db1',
-#         'USER': 'postgres',
-#         'PASSWORD': '1q2w3e4r',
-#         'HOST': 'localhost',
-#         'PORT': '24174',
-#     }
-# }
+DATABASES = {
+    'default': {
+        'ENGINE': 'django.db.backends.postgresql_psycopg2',
+        'NAME': 'test_db1',
+        'USER': 'postgres',
+        'PASSWORD': '1q2w3e4r',
+        'HOST': 'localhost',
+        'PORT': '24174',
+    }
+}
 
 # import dj_database_url
 # default_config = dj_database_url.config(default='postgres://yzjhlayqnripvc:KUzahGPnEFY8W9eU0Pu5Y0QzcT@ec2-54-235-104-63.compute-1.amazonaws.com:5432/d5sk8mi5cjc97v')
 # DATABASES = {'default': default_config}
 
 
-import dj_database_url
-default_config = dj_database_url.config(default='postgres://postgres:1q2w3e4r@194.44.31.241:24174/test_db1')
-DATABASES = {'default': default_config}
+# import dj_database_url
+# default_config = dj_database_url.config(default='postgres://postgres:1q2w3e4r@194.44.31.241:24174/test_db1')
+# DATABASES = {'default': default_config}
 
 
 # GRANT ALL PRIVILEGES ON DATABASE d5sk8mi5cjc97v for user yzjhlayqnripvc;
