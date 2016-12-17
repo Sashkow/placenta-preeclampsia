@@ -12,6 +12,27 @@ import plotly
 import numpy as np
 
 
+
+
+
+
+
+
+
+def experiments_with_no_gestation_age():
+    exps = Experiment.objects.all()
+    needed_exps = []
+    for exp in exps:
+        if not (exp.has_minimal() or 
+                exp.is_cell_line() or 
+                exp.is_excluded()):
+            needed_exps.append(exp)
+    for exp in needed_exps:
+        print(exp, end=", ")
+    print(len(needed_exps))
+    return needed_exps
+
+
 def coverage():
     """
     for each UnificatedSampleAttributeName print amount of saples that contain it
@@ -437,9 +458,6 @@ def samples_by_gestation_age():
     parts_dict = {}
     parts_dict['Age'] = 0
     parts_dict['ApproximateAge'] = 0
-    parts_dict['Trimesters'] = 0
-    parts_dict['AtBirth'] = 0
-    parts_dict['Unknown'] = 0
 
     at_birth_conditions = ['Caesarean Section', 'Labor, Obstetric', 'Delivery, Obstetric']
     total = 0
@@ -452,31 +470,33 @@ def samples_by_gestation_age():
             parts_dict['Age'] += 1
             # organism_part_value = SampleAttribute.objects.get(sample=sample, 
             #   unificated_name=organism_part).unificated_value
-            
-        elif SampleAttribute.objects.filter(
-          sample=sample,
-          unificated_name=trim).exists():
-            parts_dict['Trimesters'] += 1
-        elif SampleAttribute.objects.filter(
-          sample=sample,
-          unificated_name=cells_cultured).exists():
-            pass
-
-        elif SampleAttribute.objects.filter(
-          sample=sample,
-          unificated_name__name='Gestational Age Upper Bound').exists() or \
-             SampleAttribute.objects.filter(
-          sample=sample,
-          unificated_name__name='Gestational Age Lower Bound').exists():
-            parts_dict['ApproximateAge'] += 1
-        elif SampleAttribute.objects.filter(
-          sample=sample,
-          unificated_name__name__in=at_birth_conditions).exists():
-            parts_dict['AtBirth'] += 1
         else:
-            parts_dict['Unknown'] += 1
-            # print(sample.experiment.data['accession'], sample.id)
-    print(parts_dict)
+            parts_dict['ApproximateAge'] += 1
+            
+    #     elif SampleAttribute.objects.filter(
+    #       sample=sample,
+    #       unificated_name=trim).exists():
+    #         parts_dict['Trimesters'] += 1
+    #     elif SampleAttribute.objects.filter(
+    #       sample=sample,
+    #       unificated_name=cells_cultured).exists():
+    #         pass
+
+    #     elif SampleAttribute.objects.filter(
+    #       sample=sample,
+    #       unificated_name__name='Gestational Age Upper Bound').exists() or \
+    #          SampleAttribute.objects.filter(
+    #       sample=sample,
+    #       unificated_name__name='Gestational Age Lower Bound').exists():
+    #         parts_dict['ApproximateAge'] += 1
+    #     elif SampleAttribute.objects.filter(
+    #       sample=sample,
+    #       unificated_name__name__in=at_birth_conditions).exists():
+    #         parts_dict['AtBirth'] += 1
+    #     else:
+    #         parts_dict['Unknown'] += 1
+    #         # print(sample.experiment.data['accession'], sample.id)
+    # print(parts_dict)
     return parts_dict
 
 

@@ -115,6 +115,12 @@ class Experiment(models.Model):
         lst = [m.data['name'] for m in self.microarrays.all()]
         return ', '.join(lst)
 
+    def is_excluded(self):
+        return 'excluded' in self.data
+
+    def is_mail_received():
+        return 'mail received' in self.data
+
     def is_unified(self):
         exp_samples = self.samples()
         has_empty_name = SampleAttribute.objects.filter(
@@ -137,11 +143,10 @@ class Experiment(models.Model):
         samples = self.samples()
         for sample in samples:
             attributes = SampleAttribute.objects.filter(sample=sample)
-            if not( attributes.filter(unificated_name__name="Organism Part").exists() and
+            if not( attributes.filter(unificated_name__name="Biological Specimen").exists() and
                     attributes.filter(unificated_name__name="Diagnosis").exists() and
                (attributes.filter(unificated_name__name="Gestational Age").exists() or
-                attributes.filter(unificated_name__name="Gestational Age at Experiment").exists() or
-                attributes.filter(unificated_name__name="Average Gestational Age").exists())):
+                attributes.filter(unificated_name__name="Gestational Age at Experiment").exists())):
                 
                 return False
         return True
@@ -187,6 +192,9 @@ class Microarray(models.Model):
         return self._show()
         
     def __str__(self):
+        return self._show()
+
+    def __repr__(self):
         return self._show()
 
     def add_or_replace(data):
@@ -386,3 +394,21 @@ class SampleAttribute(models.Model):
             attribute_obj = SampleAttribute.objects.create(**create)
         attribute_obj.save()
         return attribute_obj
+
+    def add_or_replace_numeric(sample, unificated_name, unificated_value, old_value):
+
+        attribute = SampleAttribute.objects.filter(sample=sample,
+                                                   unificated_name=unificated_name)
+        if attribute.exists():
+            attribute_obj = attribute[0]
+            attribute_obj.old_value = old_value
+
+        else:
+            attribute_obj = SampleAttribute.objects.create(sample=sample,
+                                                           unificated_name=unificated_name,
+                                                           unificated_value=unificated_value,
+                                                           old_value=old_value)
+        attribute_obj.save()
+
+
+
