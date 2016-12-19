@@ -10,4 +10,11 @@ class Command(BaseCommand):
         """
         command's handle method
         """
+<<<<<<< Updated upstream
         pass
+=======
+        # samples_by_diagnosis()
+
+
+     
+>>>>>>> Stashed changes
