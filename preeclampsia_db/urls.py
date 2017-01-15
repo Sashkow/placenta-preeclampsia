@@ -14,24 +14,40 @@ Including another URLconf
     2. Import the include() function: from django.conf.urls import url, include
     3. Add a URL to urlpatterns:  url(r'^blog/', include(blog_urls))
 """
-from django.conf.urls import url
-from django.contrib import admin
-from django.conf.urls import patterns
-from django.conf import settings
 
+# import articles
+"""
+this is file with urls you can see line with admin/
+ that describes all url for admin
+"""
+
+
+""" Default urlconf for config """
+
+from django.conf.urls import include, url
 from django.contrib import admin
-admin.autodiscover()
+
+
+from django.conf import settings
+from django.contrib.auth.views import logout
+from django.views.static import serve
 
 from grappelli import urls as grappelli_urls
 
-from django.conf.urls import include
-
-
+admin.autodiscover()
 
 
 urlpatterns = [
+    # Examples:
+    # url(r'^$', 'config.views.home', name='home'),
+    # url(r'^blog/', include('blog.urls')),
     url(r'^grappelli/', include('grappelli.urls')), # grappelli URLS
-    url(r'^admin/', admin.site.urls), # admin site
+
     url(r'^static/(?P<path>.*)$', 'django.views.static.serve', 
-    	{'document_root': settings.STATIC_ROOT}),
+        {'document_root': settings.STATIC_ROOT}),
+    url(r'', include('articles.urls')), # means include urls that are in urls.py file in atricles app
+
+
+    url(r'^admin/', admin.site.urls)
+    
 ]

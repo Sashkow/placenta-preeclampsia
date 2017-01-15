@@ -3,6 +3,8 @@ from articles.queries import *
 from articles.models import *
 
 
+
+
 class Command(BaseCommand):
     """
     """
@@ -10,4 +12,7 @@ class Command(BaseCommand):
         """
         command's handle method
         """
-        pass
+       
+
+
+        Sample.to_dict()

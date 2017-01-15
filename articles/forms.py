@@ -142,3 +142,7 @@ class SampleAttributeInlineForm(ModelForm):
         instance.unificated_name.save()
 
         return instance
+
+
+class SampleFilterForm():
+    pass

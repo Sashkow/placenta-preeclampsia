@@ -1,0 +1,89 @@
+{% load staticfiles %}
+
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+
+    <link href="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.0/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="{% static 'css/customstyles.css' %}">
+
+     
+    <script src="http://code.jquery.com/jquery-1.11.1.min.js"></script>
+    <script src="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.0/js/bootstrap.min.js"></script>
+		
+	</head>
+	<body>
+		<div class="row" style="margin-bottom:70px">
+			<div class="col-md-12">
+					<!-- Navigation -->
+			    <nav class="navbar navbar-fixed-top navbar-inverse" role="navigation">
+					<div class="container-fluid">
+
+						<!-- Brand and toggle get grouped for better m
+						obile display -->
+						<div class="navbar-header">
+							<button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
+								<span class="sr-only">Toggle navigation</span>
+								<span class="icon-bar"></span>
+								<span class="icon-bar"></span>
+								<span class="icon-bar"></span>
+							</button>
+							<a class="navbar-brand" href="{% url "home" %}">PlacentaDB</a>
+						</div>
+						<!-- /.navbar-header -->
+
+						<!-- Collect the nav links, forms, and other content for toggling -->
+						<div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+							<ul class="nav navbar-nav">
+								<li><a href="#">Overview</a></li>
+								<li><a href="{% url "samples" %}">Samples</a></li>
+								<li><a href="{% url "experiments" %}">Experiments</a></li>
+								<li><a href="#">Microarrays</a></li>
+							</ul>
+						</div>
+						<!-- /.navbar-collapse -->
+					</div>
+				</nav>
+			<!-- /.navbar -->
+			</div>
+		</div>
+		<!-- Search -->
+		<!-- <div class="row">
+			<div class="col-md-12">
+			
+				<div class="well">
+					<h4 class="margin-t-0">Search</h4>
+					<form action="#">
+						<div class="input-group">
+							<label class="sr-only" for="search-form">Search the site</label>
+							<input type="text" class="form-control" id="search-form">
+							<span class="input-group-btn">
+								<button class="btn btn-default" type="button">
+									<span class="glyphicon glyphicon-search"></span>
+									<span class="sr-only">Search</span>
+								</button>
+							</span>
+						</div>
+					</form>
+				</div>
+			</div>
+
+		</div> -->
+
+		<!-- <div class="row">
+			<div class="col-md-12" style="text-align:center;">
+				<h1 >
+				{% block content_title %}
+					PlacentaDB
+				{% endblock %}
+				</h1>
+		</div> -->
+{% block content %}
+	content
+{% endblock %}
+
+
+		
+  </body>
+</html>
+

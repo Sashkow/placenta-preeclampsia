@@ -11,12 +11,96 @@ import plotly
 
 import numpy as np
 
+def fullfill_column_order_with_defaluts():
+    names = UnificatedSamplesAttributeName.objects.all()
+    ordered_names = ColumnOrder.objects.all().values_list("unificated_name", flat=True)
+
+    for name in names:
+        if not (name in ordered_names):
+            ColumnOrder.objects.create(unificated_name=name)
 
 
+def set_has_minimal():
+    for exp in Experiment.objects.all():
+        exp.set_has_minimal()
 
 
+def cluster_samples():
+    # """
+    # split samples into classes of equivalence based on Diagnosis,
+    # Gestational Age and Biological Specimen
+    # """
+    samples = total_samples()
+    diagnosis = UnificatedSamplesAttributeName.objects.get(name="Diagnosis")
+    
+    specimen = UnificatedSamplesAttributeName.objects.get(name="Biological Specimen")
 
 
+    diagnosis_values = UnificatedSamplesAttributeValue.objects.filter(
+            unificated_name=diagnosis) #.values_list('value', flat=True).order_by()
+
+    geatation_values = [
+            "First Trimester",
+            "Second Trimester",
+            "Early Preterm",
+            "Late Preterm",
+            "Term"
+                ]
+
+    specimen_values = UnificatedSamplesAttributeValue.objects.filter(
+            unificated_name=specimen) #.values_list('value', flat=True).order_by()
+
+    groups = {}
+
+    print("start:")
+
+    for diagnosis_value in diagnosis_values:
+        for specimen_value in specimen_values:
+            for gestation_value in geatation_values:
+                group_name = " ".join([str(diagnosis_value.value),
+                                       str(specimen_value.value),
+                                       str(gestation_value)
+                                        ])
+
+                if not group_name in groups:
+                    groups[group_name] = [[], 0]
+
+    print("mapping:")
+
+    for sample in samples:
+        diag = sample.get_attribute_value(diagnosis)
+        gest = sample.get_gestational_age_category()
+        spec = sample.get_attribute_value(specimen)
+
+        group_name = " ".join([str(diag),
+                               str(spec),
+                               str(gest),
+                                ])
+        if group_name in groups:
+            if not (str(sample.experiment) in groups[group_name][0]):
+                groups[group_name][0].append(str(sample.experiment))
+            groups[group_name][1] += 1
+        else:
+            print(group_name, sample.experiment)
+
+    import pickle
+
+    with open('mapping.txt', 'wb') as f:
+        pickle.dump(groups, f)
+
+    # with open('mapping.txt', 'rb') as f:
+    #     groups = pickle.load(f)
+
+    summ = 0
+    merged_list = []
+
+    for group in sorted(groups):
+        if groups[group][1] > 0:
+            if "Healthy" in group and not "Adipose" in group and not "Blood" in group:
+                current_list = [str(item) for item in groups[group][0]]  
+                merged_list = merged_list + list(set(current_list) - set(merged_list))
+    print(merged_list)
+    print(len(merged_list))
 
 
 def experiments_with_no_gestation_age():
@@ -35,7 +119,7 @@ def experiments_with_no_gestation_age():
 
 def coverage():
     """
-    for each UnificatedSampleAttributeName print amount of saples that contain it
+    for each UnificatedSampleAttributeName print amount of sapmles that contain it
     :return:
     """
     samples = total_samples()
@@ -268,18 +352,38 @@ def sample_attribute_old_name_value():
                 print("     ", value)
 
 
-def sample_attribute_name_value():
+def sample_attribute_name_value_qulalitative():
     """
-    for each sample attribute name print in which experiments it appears add
-    which values it takes in those experiments
+    returns {unificated_name: [unificated_values]} dict
     """
-    unificated_names = UnificatedSamplesAttributeName.objects.all()
+    unificated_values = UnificatedSamplesAttributeValue.objects.all(
+            ).select_related("unificated_name")
 
-    for unificated_name in unificated_names:
-        unificated_values = UnificatedSamplesAttributeValue.objects.filter(
-          unificated_name=unificated_name)
-        unificated_values_values = list([item.value for item in unificated_values])
-        print(unificated_name.name, unificated_values_values)
+    name_values = {} 
+
+    for unificated_value in unificated_values:
+        name = unificated_value.unificated_name.name
+        value = unificated_value.value
+        if name in name_values:
+            name_values[name].append(value)
+        else:
+            name_values[name] = [value]
+
+    # for name in name_values:
+    #     print(name, ":", name_values[name])
+
+    return name_values
+
+
+
+
+    # for unificated_name in unificated_names:
+    #     name = unificated_name.name
+    #     unificated_values = UnificatedSamplesAttributeValue.objects.filter(
+    #       unificated_name=unificated_name)
+
+    #     unificated_values_values = list([item.value for item in unificated_values])
+    #     print(unificated_name.name, unificated_values_values)
 
 
 exp_ids = ['E-GEOD-31679', 'E-GEOD-30186', 'E-GEOD-15789', 
@@ -302,24 +406,26 @@ def total_samples():
             total_total.append(exp)
             if not exp.is_cell_line():
                 total.append(exp)
-                if exp.has_minimal():
-                    has_minimal.append(exp)
-                if exp.is_unified():
-                    exps.append(exp)
-            if 'mail sent' in exp.data:
-                mail_sent.append(exp)
-            if 'mail received' in exp.data:
-                mail_received.append(exp)
+
+            #     if exp.has_minimal():
+            #         has_minimal.append(exp)
+            #     if exp.is_unified():
+            #         exps.append(exp)
+            # if 'mail sent' in exp.data:
+            #     mail_sent.append(exp)
+            # if 'mail received' in exp.data:
+            #     mail_received.append(exp)
 
 
-    samples = Sample.objects.filter(experiment__in=exps)
+    samples = Sample.objects.filter(experiment__in=total)
     print('total exps with cell lines', len(total_total))
     print('total exps', len(total))
-    print('total',len(Sample.objects.filter(experiment__in=total)))
-    print('unified',len(samples))
-    print('has_minimal',len(Sample.objects.filter(experiment__in=has_minimal)))
-    print('mail_sent',len(mail_sent))
-    print('mail received',len(mail_received))
+
+    # print('total',len(Sample.objects.filter(experiment__in=total)))
+    # print('unified',len(samples))
+    # print('has_minimal',len(Sample.objects.filter(experiment__in=has_minimal)))
+    # print('mail_sent',len(mail_sent))
+    # print('mail received',len(mail_received))
     return samples
 
 
@@ -358,12 +464,13 @@ def samples_by_diagnosis():
             # print(sample.experiment.data['accession'], sample.id)
             parts_dict["other"]+=1
 
-    print(parts_dict)
+    for part in parts_dict:
+        print(part, parts_dict[part])
     return parts_dict
 
 
 def samples_by_organism_part():
-    organism_part = UnificatedSamplesAttributeName.objects.get(name='Organism Part')
+    organism_part = UnificatedSamplesAttributeName.objects.get(name='Biological Specimen')
     organism_parts = UnificatedSamplesAttributeValue.objects.filter(unificated_name=organism_part)
 
     
@@ -384,7 +491,8 @@ def samples_by_organism_part():
             print(sample.experiment.data['accession'], sample.id)
             parts_dict["other"]+=1
 
-    print(parts_dict)
+    for part in parts_dict:
+        print(part, parts_dict[part])
     return parts_dict
 
 

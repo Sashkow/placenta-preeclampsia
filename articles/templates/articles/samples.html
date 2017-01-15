@@ -1,0 +1,16 @@
+{% extends "articles/base.html" %}
+<!-- {% load render_table from django_tables2 %} -->
+{% block content %}
+<div class="row">			
+	
+	<div class="col-md-3">			
+		{% include "articles/searchfilter.html" %}
+	</div>
+
+	<div class="col-md-9">			
+		{% include "articles/table.html"%}
+	</div>
+	
+</div>
+{% endblock %}
+

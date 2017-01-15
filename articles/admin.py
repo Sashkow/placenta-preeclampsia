@@ -108,9 +108,17 @@ def _experiment_microarrays_display():
     f.short_description = 'platform'
     return [f]
 
+def _status_display():
+    def f(obj):
+        print(dir(obj))
+        return obj._status_display
+
+    f.short_description = 'status'
+    return [f]
+
 def _experiment_unified_display():
     def f(obj):
-        exp_samples = obj.samples()
+        get_experiment_samples_attributes = obj.samples()
         has_empty_name = SampleAttribute.objects.filter(
           sample__in=exp_samples,
           unificated_name=None).exists()
@@ -142,7 +150,7 @@ class SampleAttributeInline(SuperInlineModelAdmin, admin.TabularInline):
 
     extra = 0
 
-
+        
     def formfield_for_dbfield(self, db_field, **kwargs):
         
         formfield = super(SampleAttributeInline, self).formfield_for_dbfield(db_field, **kwargs)
@@ -164,7 +172,7 @@ class ExperimentAdmin(SuperModelAdmin, SimpleHistoryAdmin):
     inlines = [MicroarrayInline, SampleInline]    
     list_display = _list_display(Experiment) + \
                    _experiment_microarrays_display() + \
-                   ['status'] + \
+                   _status_display() + \
                    _extra_display(Experiment)
     exclude = ['microarrays']
     fields = ('data',)
@@ -230,6 +238,13 @@ class SampleAttributeAdmin(ModelAdmin):
     }
 
 
+class ColumnOrderAdmin(ModelAdmin):
+    list_display = ['id','unificated_name','column_order','show_by_default']
+    list_editable = ['unificated_name','column_order','show_by_default']
+    raw_id_fields = ('unificated_name',)
+    autocomplete_lookup_fields = {'fk': ['unificated_name',]}
+
+
 
 class UnificatedSamplesAttributeNameAdminInline(admin.TabularInline):
     model = UnificatedSamplesAttributeName.synonyms.through
@@ -259,5 +274,9 @@ admin.site.register(Sample, SampleAdmin)
 admin.site.register(UnificatedSamplesAttributeName, UnificatedSamplesAttributeNameAdmin)
 admin.site.register(UnificatedSamplesAttributeValue, UnificatedSamplesAttributeValueAdmin)
 
-admin.site.register(SampleAttribute,SampleAttributeAdmin)
+admin.site.register(SampleAttribute, SampleAttributeAdmin)
+
+admin.site.register(ColumnOrder, ColumnOrderAdmin)
+
+
 

@@ -1,0 +1,15 @@
+{% extends "articles/base.html" %}
+{% load render_table from django_tables2 %}
+{% block form %}
+	experiment form
+{% endblock %}
+
+
+{% block content %}
+<div class="row">			
+	
+		<div class="col-md-12">			
+			{% include "articles/table.html"%}
+		</div>
+</div>
+{% endblock %}

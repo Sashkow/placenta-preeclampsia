@@ -11,7 +11,11 @@ class Command(BaseCommand):
         """
         command's hande method
         """        
-        acc = "E-GEOD-74341"
+        
+
+
+
+        get_expression_matrix()
         
 
         # count = 0

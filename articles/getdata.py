@@ -15,7 +15,25 @@ s = ArrayExpress()
 # children = res.getchildren()
 # for exp in children:
 #     if exp.find("accession").text in exclude:
-#         children.remove(exp)
+#         children.remove(exp
+
+def get_expression_matrix():
+    exps = ['E-GEOD-14722', 'E-GEOD-54618', 'E-GEOD-44711', 'E-GEOD-9984',
+            'E-GEOD-4707', 'E-GEOD-12216', 'E-GEOD-30186', 'E-GEOD-10588', 
+            'E-GEOD-13155', 'E-GEOD-24129', 'E-GEOD-12767', 'E-GEOD-60438',
+            'E-GEOD-6573', 'E-GEOD-35574', 'E-GEOD-36083', 'E-GEOD-74341',
+            'E-GEOD-73374', 'E-GEOD-47187', 'E-GEOD-37901', 'E-GEOD-15789',
+            'E-GEOD-43942']
+    for exp in exps:
+        arrays = Experiment.objects.get(data__contains={"accession":exp}).microarrays.all()
+        arrays = [str(array) for array in arrays]
+        print(exp, arrays)
+        res = s.retrieveExperiment(exp)
+        exp = res.getchildren()[0]
+        files = [x.getchildren() for x in exp.getchildren() if x.tag == "files"]
+        for x in files[0]:
+            print("     ", x.get("name"))
+        
 
 
     
