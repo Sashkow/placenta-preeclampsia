@@ -168,75 +168,109 @@ def get_values(unificated_name):
     values = {}
     for attribute in attributes:
         if attribute.unificated_value:
+
             value = attribute.unificated_value.value
+            
             old_value = attribute.old_value
             if value in values:
-                values[value].append(old_value)
+                old_values = values[value]
+                if not (old_value in old_values):
+                    old_values.append(old_value)
+                    print("     ", value, old_value)
             else:
                 values[value] = [old_value,]
     return values
 
+def coma(lst):
+    return ", ".join(lst)
 
 
-# def list_old_names_values_with_unified():
-#     """
-#     uniqe rows:
-#         old_name old_value unificated_name unificated_value
-#     names = {
-#                     "unificated_name":[["old_name", "old_name",...,], structure2],
-#                     "unificated_name":[["old_name", "old_name",...,], structure2],
-#                     ...
-#                  }
+def list_old_names_values_with_unified():
+    """
+    uniqe rows:
+        old_name old_value unificated_name unificated_value
+    names = {
+                    "unificated_name":[["old_name", "old_name",...,], structure2],
+                    "unificated_name":[["old_name", "old_name",...,], structure2],
+                    ...
+                 }
 
-#     values = {
-#                     "unificated_value":["old_value", "old_value",...],
-#                     "unificated_value":["old_value", "old_value",...],
-#                     ...
-#                  }
+    values = {
+                    "unificated_value":["old_value", "old_value",...],
+                    "unificated_value":["old_value", "old_value",...],
+                    ...
+                 }
     
                     
-#     """
-#     unificated_names = UnificatedSamplesAttributeName.objects.filter(~Q(name='name'))
+    """
+    unificated_names = UnificatedSamplesAttributeName.objects.filter(~Q(name='name'))
 
-#     attributes = SampleAttribute.objects.filter(~Q(unificated_name=None))
-#     names = {}
+    attributes = SampleAttribute.objects.filter(~Q(unificated_name=None), unificated_value__unificated_name__name='Common')
+    names = {}
 
-#     for attribute in attributes:
-#         if attribute.unificated_name and attribute.unificated_value:
-#             name = attribute.unificated_name.name
-#             old_name = attribute.old_name
-#             if name in names:
-#                 names[name][0].append(old_name)
-#             else:
-#                 values = get_values(attribute.unificated_name)
-#                 names[name] = [[old_name,], values]
-
-#     for name in names:
-#         print(name, names[name][0])
-#         for value in names[name][1]:
-#             print(value, names[name][1][value])
-
-
-
-
-
-#     mappings = SampleAttribute.objects.filter(
-#       unificated_value__unificated_name__name='Common'
-#         ).values('old_name','unificated_name').distinct().order_by('unificated_name')
-
-#     count = 0
-#     for mapping in mappings:
-#         if mapping['old_name'] != 'name':
+    for attribute in attributes:
+        if attribute.unificated_name and attribute.unificated_value:
+            name = attribute.unificated_name.name
+            old_name = attribute.old_name
             
-#             if mapping['unificated_name'] and mapping['unificated_value']:
-#                 count += 1
-#                 print(UnificatedSamplesAttributeName.objects.get(id=mapping['unificated_name']),
-#                       # UnificatedSamplesAttributeValue.objects.get(id=mapping['unificated_value']),
-#                       mapping['old_name'],
-#                       # mapping['old_value'],
-#                       # mapping['sample']
-#                       )
-#     print(count)
+            if name in names:
+                old_names = names[name][0] 
+                if not (old_name in old_names):
+                    old_names.append(old_name)
+                    print(name, old_name)
+
+            else:
+                # values = get_values(attribute.unificated_name)
+                values = 0
+                names[name] = [[old_name,], values]
+
+        
+    import pickle
+    
+    file = open('dump.txt', 'wb')
+    pickle.dump(names, file)
+    file.close()
+    # import pickle 
+    # file = open('dump.txt', 'rb')
+    # names = pickle.load(file)
+
+    for name in names:
+        old_names = names[name][0]
+        old_names = [str(item) for item in old_names if item]
+        if old_names:
+            print(name, "("+", ".join(old_names)+')')
+        else:
+            print(name)
+        # values = names[name][1]
+        # for value in values:
+        #     old_values = values[value]
+        #     old_values = [str(item) for item in old_values if item]
+        #     if old_values:
+        #         print("    ", value, "("+", ".join(old_values)+')')
+        #     else:
+        #         print("    ", value)
+
+
+
+
+
+    # mappings = SampleAttribute.objects.filter(
+    #   unificated_value__unificated_name__name='Common'
+    #     ).values('old_name','unificated_name').distinct().order_by('unificated_name')
+
+    # count = 0
+    # for mapping in mappings:
+    #     if mapping['old_name'] != 'name':
+            
+    #         if mapping['unificated_name'] and mapping['unificated_value']:
+    #             count += 1
+    #             print(UnificatedSamplesAttributeName.objects.get(id=mapping['unificated_name']),
+    #                   # UnificatedSamplesAttributeValue.objects.get(id=mapping['unificated_value']),
+    #                   mapping['old_name'],
+    #                   # mapping['old_value'],
+    #                   # mapping['sample']
+    #                   )
+    # print(count)
 
 
 def show_exps_of_good_platforms():
@@ -477,7 +511,7 @@ def samples_by_organism_part():
     parts_dict = {}
     for part in organism_parts:
         parts_dict[part.value] = 0
-    parts_dict["other"] = 0
+    parts_dict["Unknown"] = 0
 
     samples = total_samples()
     for sample in samples:
@@ -489,7 +523,7 @@ def samples_by_organism_part():
             parts_dict[organism_part_value]+=1
         else:
             print(sample.experiment.data['accession'], sample.id)
-            parts_dict["other"]+=1
+            parts_dict["Unknown"]+=1
 
     for part in parts_dict:
         print(part, parts_dict[part])
@@ -566,6 +600,12 @@ def samples_by_gestation_age():
     parts_dict = {}
     parts_dict['Age'] = 0
     parts_dict['ApproximateAge'] = 0
+<<<<<<< Updated upstream
+=======
+    # parts_dict['Trimesters'] = 0
+    # parts_dict['AtBirth'] = 0
+    # parts_dict['Unknown'] = 0
+>>>>>>> Stashed changes
 
     at_birth_conditions = ['Caesarean Section', 'Labor, Obstetric', 'Delivery, Obstetric']
     total = 0
@@ -576,8 +616,11 @@ def samples_by_gestation_age():
           sample=sample,
           unificated_name=age).exists():
             parts_dict['Age'] += 1
+        else:
+            parts_dict['ApproximateAge'] += 1
             # organism_part_value = SampleAttribute.objects.get(sample=sample, 
             #   unificated_name=organism_part).unificated_value
+<<<<<<< Updated upstream
         else:
             parts_dict['ApproximateAge'] += 1
             
@@ -605,6 +648,33 @@ def samples_by_gestation_age():
     #         parts_dict['Unknown'] += 1
     #         # print(sample.experiment.data['accession'], sample.id)
     # print(parts_dict)
+=======
+            
+        # elif SampleAttribute.objects.filter(
+        #   sample=sample,
+        #   unificated_name=trim).exists():
+        #     parts_dict['Trimesters'] += 1
+        # elif SampleAttribute.objects.filter(
+        #   sample=sample,
+        #   unificated_name=cells_cultured).exists():
+        #     pass
+
+        # elif SampleAttribute.objects.filter(
+        #   sample=sample,
+        #   unificated_name__name='Gestational Age Upper Bound').exists() or \
+        #      SampleAttribute.objects.filter(
+        #   sample=sample,
+        #   unificated_name__name='Gestational Age Lower Bound').exists():
+        #     parts_dict['ApproximateAge'] += 1
+        # elif SampleAttribute.objects.filter(
+        #   sample=sample,
+        #   unificated_name__name__in=at_birth_conditions).exists():
+        #     parts_dict['AtBirth'] += 1
+        # else:
+        #     parts_dict['Unknown'] += 1
+        #     # print(sample.experiment.data['accession'], sample.id)
+    print(parts_dict)
+>>>>>>> Stashed changes
     return parts_dict
 
 

@@ -12,7 +12,9 @@ class Command(BaseCommand):
         """
         command's handle method
         """
-       
+        pass
+
+        # samples_by_diagnosis()
 
 
-        Sample.to_dict()
+ 

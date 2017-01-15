@@ -41,7 +41,8 @@ def build_sample_table(request):
             if not attribute in cols:
                 cols[attribute] = tables.Column()
 
-    sorted(cols, lkey=lambda name: student[2]ambda:)
+    ColumnOrder.objects.all().values("unificated_name__name", "")
+    # sorted(cols, key=lambda : student[2]ambda:)
 
     col_sequence = (
             'experiment', 
