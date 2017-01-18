@@ -1,6 +1,7 @@
-# Project Title
+# PlacentaDB
 
-One Paragraph of project description goes here
+This is a web-based tool for storage and analysis of gene expression data.
+
 
 ## Getting Started
 
