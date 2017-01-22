@@ -3,6 +3,10 @@ html, body {
    overflow-x: hidden;
 }
 
+.container{
+	max-width: 100%;
+}
+
 
 /** {
 border: 1px solid blue !important;
@@ -24,7 +28,8 @@ color: blue
 	border-left:0px;
 }
 .behclick-panel .list-group-item:last-child{
-	border-bottom-right-radius:0px;
+	border-bottom-right-radi
+	us:0px;
 	border-bottom-left-radius:0px;
 }
 .behclick-panel .list-group-item {
@@ -49,7 +54,7 @@ color: blue
 }
 .behclick-panel .radio, .checkbox {
 	margin: 0px;
-	padding-left: 10px;
+	padding-let: 10px;
 }
 .behclick-panel .panel-title > a, .panel-title > small, .panel-title > .small, .panel-title > small > a, .panel-title > .small > a {
 	outline: none;
