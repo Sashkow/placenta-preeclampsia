@@ -34,7 +34,7 @@
     <div class="row" style="margin-bottom:70px"> 
       <div class="col-md-12">
           <!-- Navigation -->
-          <nav class="navbar navbar-fixed-top navbar-inverse" style="background:#16b4cf;" role="navigation">
+          <nav class="navbar navbar-fixed-top" style="background:#16b4cf;" role="navigation">
           <div class="container-fluid">
 
             <!-- Brand and toggle get grouped for better m
@@ -46,16 +46,16 @@
                 <span class="icon-bar"></span>
                 <span class="icon-bar"></span>
               </button>
-              <img  style="min-height:40px;" href="{% url "home" %}" src="{% static 'img/logo.png' %}">
+              <img  style="height:50px;" href="{% url "home" %}" src="{% static 'img/logo.png' %}">
             </div>
             <!-- /.navbar-header -->
 
             <!-- Collect the nav links, forms, and other content for toggling -->
             <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
               <ul class="nav navbar-nav">
-                <li><a href="{% url "samples" %}">Samples</a></li>
-                <li><a href="{% url "experiments" %}">Experiments</a></li>
-                <li><a href="#">Microarrays</a></li>
+                <li><a href="{% url "samples" %}" style="color:white;">Samples</a></li>
+                <li><a href="{% url "experiments" %}" style="color:white;">Experiments</a></li>
+                <li><a href="#" style="color:white;">Microarrays</a></li>
               </ul>
             </div>
             <!-- /.navbar-collapse -->
