@@ -600,12 +600,7 @@ def samples_by_gestation_age():
     parts_dict = {}
     parts_dict['Age'] = 0
     parts_dict['ApproximateAge'] = 0
-<<<<<<< Updated upstream
-=======
-    # parts_dict['Trimesters'] = 0
-    # parts_dict['AtBirth'] = 0
-    # parts_dict['Unknown'] = 0
->>>>>>> Stashed changes
+
 
     at_birth_conditions = ['Caesarean Section', 'Labor, Obstetric', 'Delivery, Obstetric']
     total = 0
@@ -620,9 +615,7 @@ def samples_by_gestation_age():
             parts_dict['ApproximateAge'] += 1
             # organism_part_value = SampleAttribute.objects.get(sample=sample, 
             #   unificated_name=organism_part).unificated_value
-<<<<<<< Updated upstream
-        else:
-            parts_dict['ApproximateAge'] += 1
+
             
     #     elif SampleAttribute.objects.filter(
     #       sample=sample,
@@ -648,7 +641,7 @@ def samples_by_gestation_age():
     #         parts_dict['Unknown'] += 1
     #         # print(sample.experiment.data['accession'], sample.id)
     # print(parts_dict)
-=======
+
             
         # elif SampleAttribute.objects.filter(
         #   sample=sample,
@@ -674,7 +667,7 @@ def samples_by_gestation_age():
         #     parts_dict['Unknown'] += 1
         #     # print(sample.experiment.data['accession'], sample.id)
     print(parts_dict)
->>>>>>> Stashed changes
+
     return parts_dict
 
 

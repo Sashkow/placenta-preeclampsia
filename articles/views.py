@@ -41,7 +41,7 @@ def build_sample_table(request):
             if not attribute in cols:
                 cols[attribute] = tables.Column()
 
-    ColumnOrder.objects.all().values("unificated_name__name", "")
+    # ColumnOrder.objects.all().values("unificated_name__name", "")
     # sorted(cols, key=lambda : student[2]ambda:)
 
     col_sequence = (
@@ -56,7 +56,7 @@ def build_sample_table(request):
 
 
     # cols = {col:tables.Column() for col in col_sequence}
-    cols['name'].verbose_name = 'Sample Name'
+    # cols['name'].verbose_name = 'Sample Name'
 
 
     SampleTable = type('SampleTable', (tables.Table,), cols)
@@ -96,6 +96,16 @@ def samples(request):
     """
     table = build_sample_table(request)
     print("table")
+
+    table_display = (
+            'Experiment', 
+            'Sample Name', 
+            'Biological Specimen', 
+            'Diagnosis', 
+            'Gestational Age', 
+            'Fetus Sex',
+            'Maternal Age',
+            'Cells, Cultured')
 
     for column in table.columns:
         if str(column.header) in table_display:

@@ -1,89 +1,212 @@
 {% load staticfiles %}
 
-<!DOCTYPE html>
+<!DOCTYPE html>s
 <html lang="en">
-	<head>
+  <head>
+
+  <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta name="description" content="">
+    <meta name="author" content="">
+    <link rel="icon" href="{% static 'img/icon.png' %}">
+
+  <title>IGEA: web-based tool for integrative gene expression analysis</title>
 
     <link href="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.0/css/bootstrap.min.css" rel="stylesheet">
+    <!-- <link rel="stylesheet" href="{% static 'css/bootstrap.min.css' %}"> -->
+
     <link rel="stylesheet" href="{% static 'css/customstyles.css' %}">
+
+    <!-- <link href="{% static 'css/carousel.css' %}" rel="stylesheet"> -->
 
      
     <script src="http://code.jquery.com/jquery-1.11.1.min.js"></script>
     <script src="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.0/js/bootstrap.min.js"></script>
-		
-	</head>
-	<body>
-		<div class="row" style="margin-bottom:70px">
-			<div class="col-md-12">
-					<!-- Navigation -->
-			    <nav class="navbar navbar-fixed-top navbar-inverse" role="navigation">
-					<div class="container-fluid">
 
-						<!-- Brand and toggle get grouped for better m
-						obile display -->
-						<div class="navbar-header">
-							<button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
-								<span class="sr-only">Toggle navigation</span>
-								<span class="icon-bar"></span>
-								<span class="icon-bar"></span>
-								<span class="icon-bar"></span>
-							</button>
-							<a class="navbar-brand" href="{% url "home" %}">PlacentaDB</a>
-						</div>
-						<!-- /.navbar-header -->
 
-						<!-- Collect the nav links, forms, and other content for toggling -->
-						<div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
-							<ul class="nav navbar-nav">
-								<li><a href="#">Overview</a></li>
-								<li><a href="{% url "samples" %}">Samples</a></li>
-								<li><a href="{% url "experiments" %}">Experiments</a></li>
-								<li><a href="#">Microarrays</a></li>
-							</ul>
-						</div>
-						<!-- /.navbar-collapse -->
-					</div>
-				</nav>
-			<!-- /.navbar -->
-			</div>
-		</div>
-		<!-- Search -->
-		<!-- <div class="row">
-			<div class="col-md-12">
-			
-				<div class="well">
-					<h4 class="margin-t-0">Search</h4>
-					<form action="#">
-						<div class="input-group">
-							<label class="sr-only" for="search-form">Search the site</label>
-							<input type="text" class="form-control" id="search-form">
-							<span class="input-group-btn">
-								<button class="btn btn-default" type="button">
-									<span class="glyphicon glyphicon-search"></span>
-									<span class="sr-only">Search</span>
-								</button>
-							</span>
-						</div>
-					</form>
-				</div>
-			</div>
+    
 
-		</div> -->
+   
+    
+  </head>
+  <body>
+    <div class="row" style="margin-bottom:70px"> 
+      <div class="col-md-12">
+          <!-- Navigation -->
+          <nav class="navbar navbar-fixed-top navbar-inverse" role="navigation">
+          <div class="container-fluid">
 
-		<!-- <div class="row">
-			<div class="col-md-12" style="text-align:center;">
-				<h1 >
-				{% block content_title %}
-					PlacentaDB
-				{% endblock %}
-				</h1>
-		</div> -->
+            <!-- Brand and toggle get grouped for better m
+            obile display -->
+            <div class="navbar-header">
+              <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
+                <span class="sr-only">Toggle navigation</span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+              </button>
+              <img  style="min-height:40px;" href="{% url "home" %}" src="{% static 'img/logo.png' %}">
+            </div>
+            <!-- /.navbar-header -->
+
+            <!-- Collect the nav links, forms, and other content for toggling -->
+            <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+              <ul class="nav navbar-nav">
+                <li><a href="{% url "samples" %}">Samples</a></li>
+                <li><a href="{% url "experiments" %}">Experiments</a></li>
+                <li><a href="#">Microarrays</a></li>
+              </ul>
+            </div>
+            <!-- /.navbar-collapse -->
+          </div>
+        </nav>
+      <!-- /.navbar -->
+      </div>
+    </div>
+    <!-- Search -->
+    <!-- <div class="row">
+      <div class="col-md-12">
+      
+        <div class="well">
+          <h4 class="margin-t-0">Search</h4>
+          <form action="#">
+            <div class="input-group">
+              <label class="sr-only" for="search-form">Search the site</label>
+              <input type="text" class="form-control" id="search-form">
+              <span class="input-group-btn">
+                <button class="btn btn-default" type="button">
+                  <span class="glyphicon glyphicon-search"></span>
+                  <span class="sr-only">Search</span>
+                </button>
+              </span>
+            </div>
+          </form>
+        </div>
+      </div>
+
+    </div> -->
+
+    <!-- <div class="row">
+      <div class="col-md-12" style="text-align:center;">
+        <h1 >
+        {% block content_title %}
+          PlacentaDB
+        {% endblock %}
+        </h1>
+    </div> -->
 {% block content %}
-	content
+<div style="width: 980px; margin: 0 auto">
+    <div class="row">
+      <div class="col-md-12"> 
+        <h1 style="text-align:center;margin-bottom:30px">
+        
+          IGEA is a web-based tool for integrative gene expression analysis
+        
+        </h1>
+        <h4 style="margin-bottom:60px">
+          If you are investigating gene expression in case of a particular medical condition and you have found a bunch of microarray expeiment datasets on your topic with probably just a few biological samples in each one and you want merge these data to conduct a one large-scale analysis we are here to do that for you.
+        </h4>
+
+    </div>
+    
+
+    <!-- Marketing messaging and featurettes
+    ================================================== -->
+    <!-- Wrap the rest of the page in another container to center all the content. -->
+
+    <div class="container marketing">
+
+      <!-- Three columns of text below the carousel -->
+      <div class="row">
+        <div class="col-md-4">
+          <img class="rounded-circle" src="data:image/gif;base64,R0lGODlhAQABAIAAAHd3dwAAACH5BAAAAAAALAAAAAABAAEAAAICRAEAOw==" alt="Generic placeholder image" width="140" height="140">
+          <h2>Samples</h2>
+          <p>Take a look at clinical and other metadata for the samples we have already processed. <a class="btn btn-secondary" href="{% url "samples" %}" role="button">View details »</a> </p>
+
+
+          
+        </div><!-- /.col-lg-4 -->
+        <div class="col-md-4">
+          <img class="rounded-circle" src="data:image/gif;base64,R0lGODlhAQABAIAAAHd3dwAAACH5BAAAAAAALAAAAAABAAEAAAICRAEAOw==" alt="Generic placeholder image" width="140" height="140">
+
+          <h2>Experiments</h2>
+          <p>Here is a desctiption of gene expression experiments we are to integrate data of. These are taken primarily form ArrayExpress and GEO. <a class="btn btn-secondary" href="{% url "experiments" %}" role="button">View details »</a></p>
+          
+        </div><!-- /.col-lg-4 -->
+        <div class="col-md-4">
+          <img class="rounded-circle" src="data:image/gif;base64,R0lGODlhAQABAIAAAHd3dwAAACH5BAAAAAAALAAAAAABAAEAAAICRAEAOw==" alt="Generic placeholder image" width="140" height="140">
+          <h2>Microarrays </h2>
+          <p>We are currently considering gene expression profiles obtained using cDNA microarray platforms. See the whole list of microarray platforms we are using.</p>
+          <p><a class="btn btn-secondary" href="#" role="button">View details »</a></p>
+        </div><!-- /.col-lg-4 -->
+      </div><!-- /.row -->
+
+
+      <!-- START THE FEATURETTES -->
+
+
+
+      <hr class="featurette-divider">
+
+      <div class="row featurette">
+        <div class="col-md-6">
+          <h2 class="featurette-heading">A use-case: human placenta under condition of pre-eclampsia </h2>
+          <p class="lead">Current version of database contains quality tested, normalized and annotated gene expression profiles of preeclampsia-affected human placenta based on microarrays raw data from ArrayExpress public repository. We also provide manually standardized​ (using relevant ontologies such as Medical Subject Heading, MeSH) and extended​ (based on data from corresponding articles and authors personally) sample-wise placenta clinical metadata such as tissue type, diagnosis or gestational age. See our <a href="http://biorxiv.org/content/early/2017/01/21/102012">article</a> for details. 
+</p>
+        </div>
+        <div class="col-md-6">
+          <img class="featurette-image img-fluid mx-auto" data-src="holder.js/500x500/auto" alt="500x500" style="width: 500px; height: 500px;" src="{% static 'img/1.png' %}" data-holder-rendered="true">
+        </div>
+      </div>
+
+      <hr class="featurette-divider">
+
+      <div class="row featurette">
+        
+        <div class="col-md-8 pull-md-7">
+          <img class="featurette-image img-fluid mx-auto" data-src="holder.js/500x500/auto" alt="500x500" style="max-width: 600px" src="{% static 'img/2.png' %}" data-holder-rendered="true">
+        </div>
+        <div class="col-md-4 push-md-5">
+          <h2 class="featurette-heading">Key attributes</h2>
+          <p class="lead">For this use-case only the samples of the same tissue at the same stage of the placental development under similar conditions can be put into the same study group whenever search for differentially expressed genes between control and deviation groups is to be performed.</p>
+        </div>
+      </div>
+
+      <hr class="featurette-divider">
+
+      <div class="row featurette">
+        <div class="col-md-4">
+          <h2 class="featurette-heading">Our database structure </h2>
+          <p class="lead">We itended our database to be designed for varying amount of sample attributes, reverse compatability with originally downloaded data, keeping names used in sample annotation standardized​ according to popular ontologies (MeSH, EFO) and for ability for further expansion of analysis to other platforms and omics (genome, metabolome, transcriptome). Checkout our <a href="http://biorxiv.org/content/early/2017/01/20/101956">database aricle</a>. </p>
+        </div>
+        <div class="col-md-8">
+          <img class="featurette-image img-fluid mx-auto" data-src="holder.js/500x500/auto" alt="500x500" style="max-width: 650px;" src="{% static 'img/3.jpeg' %}" data-holder-rendered="true">
+        </div>
+      </div>
+
+      <hr class="featurette-divider">
+
+      <!-- /END THE FEATURETTES -->
+
+
+      <!-- FOOTER -->
+      <footer>
+        <p class="float-right"><a href="http://v4-alpha.getbootstrap.com/examples/carousel/#">Back to top</a></p>
+        <p>(CC) 2017 IGEA. · <a href="https://www.gnu.org/licenses/gpl-3.0.en.html">Licence GPL 3.0</a> ·
+      </footer>
+
+    </div><!-- /.container -->
+
+  
+
+<svg xmlns="http://www.w3.org/2000/svg" width="500" height="500" viewBox="0 0 500 500" preserveAspectRatio="none" style="display: none; visibility: hidden; position: absolute; top: -100%; left: -100%;"><defs><style type="text/css"></style></defs><text x="0" y="25" style="font-weight:bold;font-size:25pt;font-family:Arial, Helvetica, Open Sans, sans-serif">500x500</text></svg>
+
+</div>
 {% endblock %}
 
 
-		
+    
   </body>
 </html>
 
