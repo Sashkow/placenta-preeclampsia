@@ -11,21 +11,21 @@ IGEA is a web-based tool for integrative analysis of gene expression data.
 	- [X] Store additional info on sample attribute standard names and values: link to ontologies (MeSh, EFO), explanation, synonyms
 	- [ ] [MOSTLY DONE] store and update in background Experiment status: standardized; mail sent, mail received, has minimal data for integration, is excluded etc.
 
-- [X] [DONE]Automate downloading metadata form ArrayExpress
+- [X] [DONE] Automate downloading metadata form ArrayExpress
 
-- [X] [DOING]Admin interface 
+- [X] [DOING] Admin interface 
 	- [X] autocomplete lookup fields and "for each" checkboxes for easier input
 	- [ ] reduce loading form loading time
 	- [ ] samples metadata standardization form 
 	- [ ] samples attribute add or replace form
 	- [ ] test data for duplicate entities
 
-- [] [DOING] Deployment
+- [ ] [DOING] Deployment
 	- [X] Deploy to Heroku hosting service; suspended due to exeeded space limit for a free account
 	- [X] Deploy to the server at Institute of Molecular Biology and Genetics; accessible at http://194.44.31.241:24173/
 	- [ ] deploy to a server at European Grid Infrastructure 
 
-- [X] [DONE]Data plots
+- [X] [DONE] Data plots
 
 - [ ] [DOING] User interface
 	- [X] Basic interface with header nav bar
@@ -45,7 +45,7 @@ IGEA is a web-based tool for integrative analysis of gene expression data.
 - [ ] Construct study groups based on metadata 
 	- [ ] send study groups' meta- and expression data to Inmex
 
-- [ ] Automate downloading and processing sample expression data
+- [ ] Automate downloading and processing sample expression data from ArrayExpress
 
 - [ ] Integrate sample expression data for study groups
 
