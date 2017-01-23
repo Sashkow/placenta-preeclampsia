@@ -20,6 +20,11 @@ IGEA is a web-based tool for integrative analysis of gene expression data.
 	- [ ] samples attribute add or replace form
 	- [ ] test data for duplicate entities
 
+- [] [DOING] Deployment
+	- [X] Deploy to Heroku hosting service; suspended due to exeeded space limit for a free account
+	- [X] Deploy to the server at Institute of Molecular Biology and Genetics; accessible at http://194.44.31.241:24173/
+	- [ ] deploy to a server at European Grid Infrastructure 
+
 - [X] [DONE]Data plots
 
 - [ ] [DOING] User interface
@@ -46,9 +51,9 @@ IGEA is a web-based tool for integrative analysis of gene expression data.
 
 - [ ] Search for differentially expressed genes.
 
-- [ ] Embed earlier developed BNFinder tool for gene regulatory networks construction
+- [ ] Embed earlier developed BNFinder tool for gene regulatory networks construction https://github.com/sysbio-vo/bnfinder/
 
-- [ ] Embed Telegram bot featured for automated solving bioinformatican's minor problems, which is under development
+- [ ] Embed Telegram bot featured for automated solving bioinformatican's minor problems, which is under development https://github.com/Dantistnfs/telegram-genetic-bot
 
 - [ ] Specialized blog to quickly post new analysis results to IGEA site and to social media 
 
