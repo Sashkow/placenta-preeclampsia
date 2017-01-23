@@ -25,6 +25,14 @@ html, body {
 	border-radius: 50%;
 }
 
+.row {
+	max-width: 100%;
+}
+
+float-right {
+    float: right!important;
+}
+
 /** {
 border: 1px solid blue !important;
 }

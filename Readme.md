@@ -1,6 +1,64 @@
-# PlacentaDB
+# IGEA
 
-This is a web-based tool for storage and analysis of gene expression data.
+IGEA is a web-based tool for integrative analysis of gene expression data.
+
+
+## Development progress
+
+- [X] [DONE] Database
+	- [X] schema to store Eperiment, Sample and Microarray metadata
+	- [X] schema to store additional info on sample attribute names and values
+	- [X] Store additional info on sample attribute standard names and values: link to ontologies (MeSh, EFO), explanation, synonyms
+	- [ ] [MOSTLY DONE] store and update in background Experiment status: standardized; mail sent, mail received, has minimal data for integration, is excluded etc.
+
+- [X] [DONE]Automate downloading metadata form ArrayExpress
+
+- [X] [DOING]Admin interface 
+	- [X] autocomplete lookup fields and "for each" checkboxes for easier input
+	- [ ] reduce loading form loading time
+	- [ ] samples metadata standardization form 
+	- [ ] samples attribute add or replace form
+	- [ ] test data for duplicate entities
+
+- [X] [DONE]Data plots
+
+- [ ] [DOING] User interface
+	- [X] Basic interface with header nav bar
+	- [X] Experiments page with basic table of experiments
+	- [X] Samples page with basic table of samples
+	- [X] Upd tables with filter rows by column value
+	- [ ] [DOING] Side bar for Samples table to show/hide certain columns and rows with certain values
+	- [X] Intro page
+	- [X] Logo
+	- [X] Downlowdable BibTex citations on nav bar
+	- [ ] Order columns properly 
+	- [ ] Download Experiments, Samples tables as TSV files
+	- [ ] Upload Experiment, Sample metadata from TSV files provided by user
+	- [ ] Slider widgets to Samples side bar as search filters for numeric columns
+	- [ ] Exclude rows with empty values option
+
+- [ ] Construct study groups based on metadata 
+	- [ ] send study groups' meta- and expression data to Inmex
+
+- [ ] Automate downloading and processing sample expression data
+
+- [ ] Integrate sample expression data for study groups
+
+- [ ] Search for differentially expressed genes.
+
+- [ ] Embed earlier developed BNFinder tool for gene regulatory networks construction
+
+- [ ] Embed Telegram bot featured for automated solving bioinformatican's minor problems, which is under development
+
+- [ ] Specialized blog to quickly post new analysis results to IGEA site and to social media 
+
+
+
+
+
+
+
+
 
 <!-- 
 ## Getting Started
