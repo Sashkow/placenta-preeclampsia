@@ -27,7 +27,7 @@ IGEA is a web-based tool for integrative analysis of gene expression data.
 
 - [X] [DONE] Data plots
 
-- [ ] [DOING] User interface
+- [ ] [DOING] Data access user interface
 	- [X] Basic interface with header nav bar
 	- [X] Experiments page with basic table of experiments
 	- [X] Samples page with basic table of samples
@@ -44,7 +44,7 @@ IGEA is a web-based tool for integrative analysis of gene expression data.
 
 - [ ] Construct study groups based on metadata 
 	- [ ] send study groups' meta- and expression data to Inmex
-
+	
 - [ ] Automate downloading and processing sample expression data from ArrayExpress
 
 - [ ] Integrate sample expression data for study groups
@@ -52,6 +52,8 @@ IGEA is a web-based tool for integrative analysis of gene expression data.
 - [ ] Search for differentially expressed genes.
 
 - [ ] Embed earlier developed BNFinder tool for gene regulatory networks construction https://github.com/sysbio-vo/bnfinder/
+
+- [ ] Data analysis user interface
 
 - [ ] Embed Telegram bot featured for automated solving bioinformatican's minor problems, which is under development https://github.com/Dantistnfs/telegram-genetic-bot
 

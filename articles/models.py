@@ -351,21 +351,20 @@ class Sample(models.Model):
                     {'experiment':str(sample.experiment)}
             
 
-        for attribute in attributes:
-            
-            
+        for attribute in attributes:          
             sample = str(attribute[0])  
+            # quantitative
             if attribute[1] == "Common":
                 sample_dicts[sample].update(
                         {attribute[2] : \
                             str(attribute[4]) })
+            # qualitative
             else:
                 sample_dicts[sample].update(
                         {attribute[2] : 
                         str(attribute[3])})
 
     
-
         list_of_dicts = []
         for sample_dict in sorted(sample_dicts):
             list_of_dicts.append(sample_dicts[sample_dict])

@@ -13,6 +13,9 @@ from articles.queries import sample_attribute_name_value_qulalitative
 
 #not a view
 def build_exp_table(request):
+    """
+
+    """
     cols = {Experiment.must_have_attributes_map[attr] : tables.Column() 
                 for attr in Experiment.must_have_attributes
             }
@@ -63,11 +66,27 @@ def build_sample_table(request):
     # print(dir(SampleTable.base_columns))
     
     SampleTable._meta.attrs = {'class':'table table-hover'}
+    
 
     table = SampleTable(sample_dicts)
     table.name = 'Biological Samples'
 
     RequestConfig(request,  paginate={'per_page': 2000}).configure(table)
+
+    cols = ColumnOrder.objects.filter(
+            show_by_default=True).select_related("unificated_name")
+
+    
+
+
+
+    for column in table.columns:
+        if str(column.header) in table_display:
+            column.display = True
+        else:
+            column.display = False
+
+
     return table
 
 
@@ -97,21 +116,6 @@ def samples(request):
     table = build_sample_table(request)
     print("table")
 
-    table_display = (
-            'Experiment', 
-            'Sample Name', 
-            'Biological Specimen', 
-            'Diagnosis', 
-            'Gestational Age', 
-            'Fetus Sex',
-            'Maternal Age',
-            'Cells, Cultured')
-
-    for column in table.columns:
-        if str(column.header) in table_display:
-            column.display = True
-        else:
-            column.display = False
 
     search = sample_attribute_name_value_qulalitative()
     print("search")
@@ -129,8 +133,8 @@ def samples(request):
             'articles/samples.html',
             {
                 'table': table,
-                'search': search,
-                'search_checked': search_checked
+                # 'search': search,
+                # 'search_checked': search_checked
             }
     )
 

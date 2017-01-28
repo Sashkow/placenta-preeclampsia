@@ -136,7 +136,7 @@
       <!-- Three columns of text below the carousel -->
       <div class="row">
         <div class="col-md-4">
-          <img class="rounded-circle" src="data:image/gif;base64,R0lGODlhAQABAIAAAHd3dwAAACH5BAAAAAAALAAAAAABAAEAAAICRAEAOw==" alt="Generic placeholder image" width="140" height="140">
+          <a style="text-decoration:none" href="{% url "samples" %}"><div class="numberCircle"><div>1012</div></div></a>
           <h2>Samples</h2>
           <p>Take a look at clinical and other metadata for the samples we have already processed. <br> <a href="{% url "samples" %}">View details »</a> </p>
 
@@ -144,14 +144,14 @@
           
         </div><!-- /.col-lg-4 -->
         <div class="col-md-4">
-          <img class="rounded-circle" src="data:image/gif;base64,R0lGODlhAQABAIAAAHd3dwAAACH5BAAAAAAALAAAAAABAAEAAAICRAEAOw==" alt="Generic placeholder image" width="140" height="140">
+          <a style="text-decoration:none" href="{% url "experiments" %}"><div class="numberCircle"><div>32</div></div></a>
 
           <h2>Experiments</h2>
           <p>Here is a desctiption of gene expression experiments we are to integrate data of. These are taken primarily form ArrayExpress and GEO. <br><a href="{% url "experiments" %}">View details »</a></p>
           
         </div><!-- /.col-lg-4 -->
         <div class="col-md-4">
-          <img class="rounded-circle" src="data:image/gif;base64,R0lGODlhAQABAIAAAHd3dwAAACH5BAAAAAAALAAAAAABAAEAAAICRAEAOw==" alt="Generic placeholder image" width="140" height="140">
+          <a style="text-decoration:none" href="#"><div class="numberCircle"><div>22</div></div></a>
           <h2>Microarrays </h2>
           <p>We are currently considering gene expression profiles obtained using cDNA microarray platforms. See the whole list of microarray platforms we are using.<br><a href="#">View details »</a></p>
         </div><!-- /.col-lg-4 -->
@@ -184,7 +184,7 @@
         </div>
         <div class="col-md-4 push-md-5">
           <h2 class="featurette-heading">Key attributes</h2>
-          <p class="lead">For this use-case only the samples of the same tissue at the same stage of the placental development under similar conditions can be put into the same study group whenever search for differentially expressed genes between control and deviation groups is to be performed.</p>
+          <p class="lead">For this use-case only those samples of the same tissue at the same stage of the placental development under similar conditions can be put into the same study group whenever search for differentially expressed genes between control and deviation groups is to be performed.</p>
         </div>
       </div>
 
