@@ -139,5 +139,13 @@ def samples(request):
     )
 
 def home(request):
-    return render(request,'articles/base.html')
+
+    return render(
+            request,
+            'articles/base.html',
+            {
+                'samples': len(Sample.objects.all()),
+                'experiments': len(Experiment.objects.all()),
+                'microarrays': len(Microarray.objects.all()),
+            })
 

@@ -136,7 +136,7 @@
       <!-- Three columns of text below the carousel -->
       <div class="row">
         <div class="col-md-4">
-          <a style="text-decoration:none" href="{% url "samples" %}"><div class="numberCircle"><div>1012</div></div></a>
+          <a style="text-decoration:none" href="{% url "samples" %}"><div class="numberCircle"><div>{{ samples }}</div></div></a>
           <h2>Samples</h2>
           <p>Take a look at clinical and other metadata for the samples we have already processed. <br> <a href="{% url "samples" %}">View details »</a> </p>
 
@@ -144,14 +144,14 @@
           
         </div><!-- /.col-lg-4 -->
         <div class="col-md-4">
-          <a style="text-decoration:none" href="{% url "experiments" %}"><div class="numberCircle"><div>32</div></div></a>
+          <a style="text-decoration:none" href="{% url "experiments" %}"><div class="numberCircle"><div>{{ experiments }}</div></div></a>
 
           <h2>Experiments</h2>
           <p>Here is a desctiption of gene expression experiments we are to integrate data of. These are taken primarily form ArrayExpress and GEO. <br><a href="{% url "experiments" %}">View details »</a></p>
           
         </div><!-- /.col-lg-4 -->
         <div class="col-md-4">
-          <a style="text-decoration:none" href="#"><div class="numberCircle"><div>22</div></div></a>
+          <a style="text-decoration:none" href="#"><div class="numberCircle"><div>{{ microarrays }}</div></div></a>
           <h2>Microarrays </h2>
           <p>We are currently considering gene expression profiles obtained using cDNA microarray platforms. See the whole list of microarray platforms we are using.<br><a href="#">View details »</a></p>
         </div><!-- /.col-lg-4 -->
