@@ -1,3 +1,7 @@
+.adjustabletext {
+    font-size: 4vw;
+}
+
 html, body {
    max-width: 100%;
    overflow-x: hidden;
@@ -23,6 +27,37 @@ html, body {
 
 .rounded-circle {
 	border-radius: 50%;
+
+}
+
+.numberCircle{
+  font-size: 5rem;
+  width: 14rem;
+  height: 14rem;
+
+  background-color: #16b4cf;
+  color: white;
+  padding: 1rem;
+  display: inline-flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 50%;
+
+  font-weight: bold;
+
+}
+
+.circle-a{
+	text-decoration: none;
+}
+
+
+.row {
+	max-width: 100%;
+}
+
+float-right {
+    float: right!important;
 }
 
 /** {
