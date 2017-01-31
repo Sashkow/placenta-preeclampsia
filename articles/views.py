@@ -37,6 +37,17 @@ def build_exp_table(request):
 #not a view
 def build_sample_table(request):
     # sample_dicts = [sample.to_dict() for sample in Sample.objects.all()]
+    all_col_orders = ColumnOrder.objects.all()
+    ordered_cols = list(all_col_orders.values_list(
+            "unificated_name__name",
+            flat=True))
+
+    # ordered_cols = sorted(
+    #         ordered_cols, 
+    #         key=lambda name: int(all_col_orders.get(
+    #                 unificated_name__name=name).column_order))
+
+
     sample_dicts = Sample.to_dict()
     cols = {}
     for sample_dict in sample_dicts:
@@ -47,15 +58,15 @@ def build_sample_table(request):
     # ColumnOrder.objects.all().values("unificated_name__name", "")
     # sorted(cols, key=lambda : student[2]ambda:)
 
-    col_sequence = (
-            'experiment', 
-            'name', 
-            'Biological Specimen', 
-            'Diagnosis', 
-            'Gestational Age', 
-            'Fetus Sex',
-            'Maternal Age',
-            'Cells, Cultured')
+    # col_sequence = (
+    #         'experiment', 
+    #         'name', 
+    #         'Biological Specimen', 
+    #         'Diagnosis', 
+    #         'Gestational Age', 
+    #         'Fetus Sex',
+    #         'Maternal Age',
+    #         'Cells, Cultured')
 
 
     # cols = {col:tables.Column() for col in col_sequence}
@@ -73,18 +84,27 @@ def build_sample_table(request):
 
     RequestConfig(request,  paginate={'per_page': 2000}).configure(table)
 
-    cols = ColumnOrder.objects.filter(
-            show_by_default=True).select_related("unificated_name")
 
-    
+    # choose those columns to display by default
+    shown_col_orders = ColumnOrder.objects.filter(show_by_default=True)
+    cols = list(shown_col_orders.values_list(
+            "unificated_name__name",
+            flat=True))
 
-
+    # cols = sorted(cols, key=lambda name: int(shown_col_orders.get(
+    #                 unificated_name__name=name).column_order))
+    cols = ['Experiment'] + cols
 
     for column in table.columns:
-        if str(column.header) in table_display:
+        if str(column.header) in cols:
             column.display = True
         else:
             column.display = False
+
+    # set column display order
+    print(cols)
+    table._meta.sequence = tuple(cols)
+
 
 
     return table
@@ -121,12 +141,6 @@ def samples(request):
     print("search")
     # for item in search:
     #     print(item,search[item])
-
-    search_checked = (
-        'Biological Specimen', 
-        'Diagnosis', 
-        'Fetus Sex'
-    )
 
     return render(
             request,

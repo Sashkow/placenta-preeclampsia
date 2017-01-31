@@ -88,7 +88,7 @@ class UnificatedSamplesAttributeValue(ShowModel):
 class Experiment(models.Model):
 
     must_have_attributes = ['accession', 'secondaryaccession',
-     'name', 'experimenttype', 'releasedate', 'lastupdatedate',
+     'name', 'releasedate', 'lastupdatedate',
     'samples']
 
     must_have_attributes_map = {

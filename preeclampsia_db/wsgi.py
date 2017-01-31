@@ -15,7 +15,6 @@ os.environ.setdefault("DJANGO_SETTINGS_MODULE", "preeclampsia_db.settings")
 
 application = get_wsgi_application()
 
-
 # def application(environ, start_response):
 #     if environ['mod_wsgi.process_group'] != '': 
 #         import signal
@@ -31,3 +30,4 @@ application = get_wsgi_application()
 #     start_response(status, response_headers)
 
 #     return [output]
+
