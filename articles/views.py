@@ -36,7 +36,7 @@ def build_exp_table(request):
     exps_dicts = [exp.to_dict() for exp in Experiment.objects.all()]
 
     table = ExpTable(exps_dicts)
-    RequestConfig(request,  paginate={'per_page': 100}).configure(table)
+    tables.RequestConfig(request,  paginate={'per_page': 100}).configure(table)
     table.name = 'Experiments'
     return table
 
@@ -81,8 +81,8 @@ def build_sample_table(request):
     # cols = {col:tables.Column() for col in col_sequence}
     # cols['name'].verbose_name = 'Sample Name'
 
-    for col in cols:
-        print("    ",col,cols[col])
+    # for col in cols:
+    #     print("    ",col,cols[col])
 
 
     SampleTable = type('SampleTable', (tables.Table,), cols)
@@ -94,7 +94,15 @@ def build_sample_table(request):
     table = SampleTable(sample_dicts)
     table.name = 'Biological Samples'
 
-    tables.RequestConfig(request,  paginate={'per_page': 2000}).configure(table)
+    print("request", request.GET)
+    if 'per_page' in request.GET:
+        per_page = int(request.GET['per_page'])
+        tables.RequestConfig(request,  paginate={'per_page': per_page}).configure(table)
+    else:
+        tables.RequestConfig(request,  paginate={'per_page': 50}).configure(table)
+
+    # print(dir(table.per_page_field))
+
 
 
     # choose those columns to display by default
@@ -114,7 +122,7 @@ def build_sample_table(request):
             column.display = False
 
     # set column display order
-    print(cols)
+    # print(cols)
     table._meta.sequence = tuple(cols)
 
     return table
