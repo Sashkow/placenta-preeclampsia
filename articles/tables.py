@@ -1,8 +1,9 @@
 # tutorial/tables.py
-import django_tables2 as tables
-from articles.models import *
+from django_tables2 import Table
+from articles.models import Experiment
 
-class ExperimentTable(tables.Table):
+
+class ExperimentTable(Table):
     class Meta:
         model = Experiment
         # add class="paleblue" to <table> tag

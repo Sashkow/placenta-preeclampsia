@@ -108,6 +108,7 @@ def _experiment_microarrays_display():
     f.short_description = 'platform'
     return [f]
 
+
 def _status_display():
     def f(obj):
         print(dir(obj))
@@ -115,6 +116,7 @@ def _status_display():
 
     f.short_description = 'status'
     return [f]
+
 
 def _experiment_unified_display():
     def f(obj):
@@ -138,6 +140,7 @@ def _experiment_unified_display():
 class MicroarrayInline(SuperInlineModelAdmin, admin.TabularInline):
     model = Experiment.microarrays.through
     extra = 0
+
 
 class SampleAttributeInline(SuperInlineModelAdmin, admin.TabularInline):
     model = SampleAttribute

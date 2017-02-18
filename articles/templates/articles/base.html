@@ -5,7 +5,7 @@
   <head>
 
   <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
-    
+
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
     <meta name="description" content="">
     <meta name="author" content="">
@@ -20,12 +20,12 @@
 
     <!-- <link href="{% static 'css/carousel.css' %}" rel="stylesheet"> -->
 
-     
+
     <script src="http://code.jquery.com/jquery-1.11.1.min.js"></script>
     <script src="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.0/js/bootstrap.min.js"></script>
 
 
-    
+
 <!-- Google analytics -->
 <script>
   (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
@@ -37,11 +37,11 @@
   ga('send', 'pageview');
 
 </script>
-   
-    
+
+
   </head>
   <body>
-    <div class="row" style="margin-bottom:70px"> 
+    <div class="row" style="margin-bottom:70px">
       <div class="col-md-12">
           <!-- Navigation -->
           <nav class="navbar navbar-fixed-top" style="background:#16b4cf;" role="navigation">
@@ -51,7 +51,7 @@
             obile display -->
 
             <div class="navbar-header">
-              <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
+              <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#main_menu">
                 <span class="sr-only">Toggle navigation</span>
                 <span class="icon-bar"></span>
                 <span class="icon-bar"></span>
@@ -62,14 +62,14 @@
             <!-- /.navbar-header -->
 
             <!-- Collect the nav links, forms, and other content for toggling -->
-            <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
-              
+            <div class="collapse navbar-collapse" id="main_menu">
+
               <ul class="nav navbar-nav col-md-10">
-                <li><a href="{% url "samples" %}" style="color:white;">Samples</a></li>
-                <li><a href="{% url "experiments" %}" style="color:white;">Experiments</a></li>
-                <li><a href="#" style="color:white;">Microarrays</a></li>
-                <li style="float:right"><a href="{% static 'bib/igea-citations.bib' %}" download style="color:white;">How to cite (BibTex file)</a></li>
-                
+                <li><a href="{% url "samples" %}">Samples</a></li>
+                <li><a href="{% url "experiments" %}">Experiments</a></li>
+                <li><a href="#">Microarrays</a></li>
+                <li style="float:right"><a href="{% static 'bib/igea-citations.bib' %}" download>How to cite (BibTex file)</a></li>
+
               </ul>
 
 
@@ -83,7 +83,7 @@
     <!-- Search -->
     <!-- <div class="row">
       <div class="col-md-12">
-      
+
         <div class="well">
           <h4 class="margin-t-0">Search</h4>
           <form action="#">
@@ -114,18 +114,18 @@
 {% block content %}
 <div style="width: 980px; margin: 0 auto">
     <div class="row">
-      <div class="col-md-12"> 
+      <div class="col-md-12">
         <h1 style="text-align:center;margin-bottom:30px">
-        
+
           IGEA is a web-based tool for integrative gene  <br>  expression analysis
-        
+
         </h1>
         <h4 style="margin-bottom:60px">
-          If you are investigating gene expression in case of a particular medical condition and you have found a bunch of microarray expeiment datasets on your topic with probably just a few biological samples in each one and you want merge these data to conduct a one large-scale analysis we are here to do that for you.
+          If you are investigating gene expression in case of a particular medical condition and you have found a bunch of microarray experiment datasets on your topic with probably just a few biological samples in each one and you want to merge these data to conduct a one large-scale analysis we are here to do that for you.
         </h4>
 
     </div>
-    
+
 
     <!-- Marketing messaging and featurettes
     ================================================== -->
@@ -136,19 +136,19 @@
       <!-- Three columns of text below the carousel -->
       <div class="row">
         <div class="col-md-4">
-          <a style="text-decoration:none" href="{% url "samples" %}"><div class="numberCircle"><div>{{ samples }}</div></div></a>
+          <a style="text-decoration:none" href="{% url "samples" %}"><div class="numberCircle"><div {% if samples|length > 3 %}style="font-size:{% widthratio samples|length 5 0.5 %}"{% endif %}> {{ samples }}</div></div></a>
           <h2>Samples</h2>
           <p>Take a look at clinical and other metadata for the samples we have already processed. <br> <a href="{% url "samples" %}">View details »</a> </p>
 
 
-          
+
         </div><!-- /.col-lg-4 -->
         <div class="col-md-4">
           <a style="text-decoration:none" href="{% url "experiments" %}"><div class="numberCircle"><div>{{ experiments }}</div></div></a>
 
           <h2>Experiments</h2>
           <p>Here is a desctiption of gene expression experiments we are to integrate data of. These are taken primarily form ArrayExpress and GEO. <br><a href="{% url "experiments" %}">View details »</a></p>
-          
+
         </div><!-- /.col-lg-4 -->
         <div class="col-md-4">
           <a style="text-decoration:none" href="#"><div class="numberCircle"><div>{{ microarrays }}</div></div></a>
@@ -167,7 +167,7 @@
       <div class="row featurette">
         <div class="col-md-5">
           <h2 class="featurette-heading">A use-case: human placenta under condition of pre-eclampsia </h2>
-          <p class="lead">Current version of database contains quality tested, normalized and annotated gene expression profiles of preeclampsia-affected human placenta based on microarrays raw data from ArrayExpress public repository. We also provide manually standardized​ (using relevant ontologies such as Medical Subject Heading, MeSH) and extended​ (based on data from corresponding articles and authors personally) sample-wise placenta clinical metadata such as tissue type, diagnosis or gestational age. See our <a href="http://biorxiv.org/content/early/2017/01/21/102012">article</a> for details. 
+          <p class="lead">Current version of database contains quality tested, normalized and annotated gene expression profiles of preeclampsia-affected human placenta based on microarrays raw data from ArrayExpress public repository. We also provide manually standardized​ (using relevant ontologies such as Medical Subject Heading, MeSH) and extended​ (based on data from corresponding articles and authors personally) sample-wise placenta clinical metadata such as tissue type, diagnosis or gestational age. See our <a href="http://biorxiv.org/content/early/2017/01/21/102012">article</a> for details.
 </p>
         </div>
         <div class="col-md-7">
@@ -178,7 +178,7 @@
       <hr class="featurette-divider">
 
       <div class="row featurette">
-        
+
         <div class="col-md-8 pull-md-7">
           <img class="featurette-image img-fluid mx-auto" data-src="holder.js/500x500/auto" alt="500x500" style="max-width: 650px" src="{% static 'img/2.png' %}" data-holder-rendered="true">
         </div>
@@ -205,9 +205,9 @@
       <!-- /END THE FEATURETTES -->
 
 
-      
 
-  
+
+
 
 <!-- <svg xmlns="http://www.w3.org/2000/svg" width="500" height="500" viewBox="0 0 500 500" preserveAspectRatio="none" style="display: none; visibility: hidden; position: absolute; top: -100%; left: -100%;"><defs><style type="text/css"></style></defs><text x="0" y="25" style="font-weight:bold;font-size:25pt;font-family:Arial, Helvetica, Open Sans, sans-serif">500x500</text></svg> -->
 
@@ -222,16 +222,16 @@
             Licence GPL 3.0</a> ·
           </div class="col-md-1">
           <div>
-            <p><a href="#">Back to top</a></p>  
+            <p><a href="#">Back to top</a></p>
           </div>
-          
+
         </row>
       </footer>
 
     </div><!-- /.container -->
 
 
-    
+
   </body>
 </html>
 
