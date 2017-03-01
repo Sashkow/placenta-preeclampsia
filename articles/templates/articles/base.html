@@ -67,7 +67,7 @@
               <ul class="nav navbar-nav col-md-10">
                 <li><a href="{% url "samples" %}">Samples</a></li>
                 <li><a href="{% url "experiments" %}">Experiments</a></li>
-                <li><a href="#">Microarrays</a></li>
+                <li><a href="{% url "microarrays" %}">Microarrays</a></li>
                 <li style="float:right"><a href="{% static 'bib/igea-citations.bib' %}" download>How to cite (BibTex file)</a></li>
 
               </ul>
@@ -136,7 +136,7 @@
       <!-- Three columns of text below the carousel -->
       <div class="row">
         <div class="col-md-4">
-          <a style="text-decoration:none" href="{% url "samples" %}"><div class="numberCircle"><div {% if samples|length > 3 %}style="font-size:{% widthratio samples|length 5 0.5 %}"{% endif %}> {{ samples }}</div></div></a>
+          <a style="text-decoration:none" href="{% url "samples" %}"><div class="numberCircle">{{ samples }}</div></a>
           <h2>Samples</h2>
           <p>Take a look at clinical and other metadata for the samples we have already processed. <br> <a href="{% url "samples" %}">View details »</a> </p>
 

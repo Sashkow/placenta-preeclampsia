@@ -65,9 +65,10 @@ class UnificatedSamplesAttributeName(ShowModel):
         return ("id__iexact", "name__icontains",)
 
     def save(self, *args, **kwargs):
+        super(UnificatedSamplesAttributeName, self).save(*args, **kwargs)
         if not(ColumnOrder.objects.filter(unificated_name=self).exists()):
             ColumnOrder.objects.create(unificated_name=self)
-        super(Model, self).save(*args, **kwargs)
+        
 
 
 
@@ -303,6 +304,12 @@ class Microarray(models.Model):
         obj.save()
         return obj
 
+    def to_dict(self):
+        d = {}
+        for item in Microarray.must_have_attributes:
+            d[item] = str(self.data[item])
+        return d 
+
 
 class Sample(models.Model):
     must_have_attributes = ['name']
@@ -348,7 +355,7 @@ class Sample(models.Model):
         for sample in samples:
             
             sample_dicts[str(sample.id)] = \
-                    {'experiment':str(sample.experiment)}
+                    {'Experiment':str(sample.experiment)}
             
 
         for attribute in attributes:          
@@ -369,16 +376,16 @@ class Sample(models.Model):
         for sample_dict in sorted(sample_dicts):
             list_of_dicts.append(sample_dicts[sample_dict])
 
-        # merge average gestational age +- deviation 
-        # into gestational age
-        for sample in list_of_dicts:
-            if not 'Gestational Age' in sample:
-                if 'Average Gestational Age' in sample and \
-                        'Deviation Gestational Age' in sample:
-                    sample['Gestational Age'] = \
-                            sample['Average Gestational Age'] + \
-                            '+-' + \
-                            sample['Deviation Gestational Age']
+        # # merge average gestational age +- deviation 
+        # # into gestational age
+        # for sample in list_of_dicts:
+        #     if not 'Gestational Age' in sample:
+        #         if 'Average Gestational Age' in sample and \
+        #                 'Deviation Gestational Age' in sample:
+        #             sample['Gestational Age'] = \
+        #                     sample['Average Gestational Age'] + \
+        #                     '+-' + \
+        #                     sample['Deviation Gestational Age']
 
 
 
@@ -396,9 +403,6 @@ class Sample(models.Model):
 
         short_list_of_dicts=[]
         # for d in list_of_dicts:
-
-                
-                    
 
         return list_of_dicts
 

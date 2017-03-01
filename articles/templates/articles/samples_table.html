@@ -1,0 +1,7 @@
+{% extends "articles/table.html" %}
+
+{% load staticfiles %}
+
+{% block download %}
+	 <a href="{% static 'tsv/samples.tsv' %}" download><button class="btn btn-default btn-xs"><span class="glyphicon glyphicon-download-alt"></span> Download all as .tsv </button></a>
+{% endblock %}

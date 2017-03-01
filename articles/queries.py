@@ -11,6 +11,63 @@ import plotly
 
 import numpy as np
 
+def all_samples_to_tsv():
+    samples = Sample.to_dict()
+    column_names = ColumnOrder.objects.all().order_by(
+            'column_order').values_list('unificated_name__name', flat=True)
+
+    with open('articles/static/tsv/samples.tsv','w') as tsv:
+        tsv.write('\t'.join(column_names)+'\n')
+        for sample in samples:
+            row = []
+            for column_name in column_names:
+                if column_name in sample:
+                    row.append(sample[column_name])
+                else:
+                    row.append("_")
+            tsv.write("\t".join(row)+'\n')
+
+
+def all_experiments_to_tsv():
+    mapp = Experiment.must_have_attributes_map
+    must_have = [mapp[item] for item in Experiment.must_have_attributes]
+    extra = Experiment.extra_attributes
+
+    column_names = must_have + extra
+
+    experiments = [exp.to_dict() for exp in Experiment.objects.all()]
+
+    with open('articles/static/tsv/experiments.tsv','w') as tsv:
+        tsv.write('\t'.join(column_names)+'\n')
+        for exp in experiments:
+            row = []
+            for column_name in column_names:
+                if column_name in exp:
+                    row.append(exp[column_name])
+                else:
+                    row.append("_")
+            tsv.write("\t".join(row)+'\n')
+
+def all_microarrays_to_tsv():
+    column_names = Microarray.must_have_attributes
+
+    microarrays = [item.to_dict() for item in Microarray.objects.all()]
+
+    with open('articles/static/tsv/microarrays.tsv','w') as tsv:
+        tsv.write('\t'.join(column_names)+'\n')
+        for microarray in microarrays:
+            row = []
+            for column_name in column_names:
+                if column_name in microarray:
+                    row.append(microarray[column_name])
+                else:
+                    row.append("_")
+            tsv.write("\t".join(row)+'\n')
+
+
+
+
+
 def fullfill_column_order_with_defaluts():
     names = UnificatedSamplesAttributeName.objects.all()
     ordered_names = ColumnOrder.objects.all().values_list("unificated_name", flat=True)

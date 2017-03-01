@@ -1,5 +1,11 @@
+
+
 .adjustabletext {
     font-size: 4vw;
+}
+
+.dimmed{
+	color: gray;
 }
 
 html, body {
@@ -52,6 +58,8 @@ html, body {
 }
 
 
+
+
 .row {
 	max-width: 100%;
 }
@@ -93,6 +101,7 @@ color: blue
 	border-top-right-radius: 0px;
 	border-top-left-radius: 0px;
 	border-bottom: 1px solid darkslategrey;
+	
 }
 .behclick-panel .panel-heading:last-child{
 	/* border-bottom: 0px; */
@@ -113,6 +122,8 @@ color: blue
 }
 .behclick-panel .panel-body > .panel-heading{
 	padding:10px 10px;
+	background: #16b4cf;
+
 }
 .behclick-panel .panel-body {
 	padding: 0px;
@@ -135,4 +146,14 @@ color: blue
 /* selected link */
 .behclick-panel a:active {
     text-decoration:none;
+}
+
+#main_menu .nav li a {
+	color: white;
+}
+
+#main_menu .nav li a:hover,
+#main_menu .nav li a:active,
+#main_menu .nav li a:focus {
+	color: #16b4cf;
 }
