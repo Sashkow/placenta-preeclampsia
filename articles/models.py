@@ -670,5 +670,7 @@ class ColumnOrder(models.Model):
     unificated_name = models.ForeignKey('UnificatedSamplesAttributeName')
     column_order = models.IntegerField(default=99)
     show_by_default = models.BooleanField(default=False)
+    show_at_all = models.BooleanField(default=True)
+
 
 

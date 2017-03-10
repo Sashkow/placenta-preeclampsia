@@ -1,3 +1,4 @@
+import collections
 # from django.shortcuts import render, render_to_response, HttpResponseRedirect
 # import django
 
@@ -11,7 +12,7 @@ import django_tables2 as tables
 
 from articles.models import Sample, Experiment, Microarray, ColumnOrder
 
-# from articles.queries import sample_attribute_name_value_qulalitative
+from articles.queries import sample_attribute_name_value
 
 
 #not a view
@@ -30,7 +31,7 @@ def build_exp_table(request):
             tables.Column()
             for attr in Experiment.extra_attributes
     })
-    
+
     ExpTable = type('ExpTable', (tables.Table,), cols)
     ExpTable._meta.attrs = {'class':'table table-hover'}
 
@@ -207,10 +208,19 @@ def samples(request):
 
 
 
-    # search = sample_attribute_name_value_qulalitative()
+
+    search = sample_attribute_name_value()
+
+    # print(search)
+
+    # search = collections.OrderedDict()
     # print("search")
     # for item in search:
     #     print(item,search[item])
+
+    search_checked = ColumnOrder.objects.filter(
+            show_by_default=True).values_list('unificated_name__name', flat=True)
+
 
 
     return render(
@@ -218,8 +228,8 @@ def samples(request):
             'articles/samples.html',
             {
                 'table': table,
-                # 'search': search,
-                # 'search_checked': search_checked
+                'search': search,
+                'search_checked': search_checked
             }
     )
 

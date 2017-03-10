@@ -11,6 +11,7 @@ https://docs.djangoproject.com/en/1.9/ref/settings/
 """
 
 import os
+from preeclampsia_db.settings_db import *
 
 
 # Build paths inside the project like this: os.path.join(BASE_DIR, ...)
@@ -29,9 +30,9 @@ BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 #     line = f.readline().rstrip('\n')
 #     SECRET_KEY = line
 
-with open('env.env','r') as f:
-    line = f.readline().rstrip('\n')
-    SECRET_KEY = line
+# with open('env.env','r') as f:
+#     line = f.readline().rstrip('\n')
+#     SECRET_KEY = line
 
 
 # secret_KEY=os.environ.get("SECRET_KEY")

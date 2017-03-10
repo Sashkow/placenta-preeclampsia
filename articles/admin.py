@@ -242,8 +242,8 @@ class SampleAttributeAdmin(ModelAdmin):
 
 
 class ColumnOrderAdmin(ModelAdmin):
-    list_display = ['id','unificated_name','column_order','show_by_default']
-    list_editable = ['unificated_name','column_order','show_by_default']
+    list_display = ['id','unificated_name','column_order','show_by_default', 'show_at_all']
+    list_editable = ['unificated_name','column_order','show_by_default', 'show_at_all']
     raw_id_fields = ('unificated_name',)
     autocomplete_lookup_fields = {'fk': ['unificated_name',]}
 

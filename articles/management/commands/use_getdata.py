@@ -10,12 +10,11 @@ class Command(BaseCommand):
     def handle(self, *args, **options):
         """
         command's hande method
-        """        
-        
+        """  
+        use_getdata()   
 
 
-
-        get_expression_matrix()
+        # get_expression_matrix()
         
 
         # count = 0

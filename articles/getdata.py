@@ -5,6 +5,8 @@ import pickle
 #start
 from bioservices.arrayexpress import ArrayExpress
 
+from Bio.Affy import CelFile
+
 
 s = ArrayExpress()
 # res = s.queryExperiments(
@@ -275,6 +277,11 @@ def print_exp_array_title(accession):
             for array_attr in item.getchildren():
                 if array_attr.tag == 'name':
                     print("     " + array_attr.text)
+
+
+def read_cell_file(file_path):
+    print(os.getwd())
+
 
 
 def main():

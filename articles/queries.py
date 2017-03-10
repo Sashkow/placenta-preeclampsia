@@ -1,4 +1,4 @@
-
+import collections
 from articles.models import *
 # from prettytable import PrettyTable
 
@@ -47,6 +47,7 @@ def all_experiments_to_tsv():
                 else:
                     row.append("_")
             tsv.write("\t".join(row)+'\n')
+
 
 def all_microarrays_to_tsv():
     column_names = Microarray.must_have_attributes
@@ -443,25 +444,38 @@ def sample_attribute_old_name_value():
                 print("     ", value)
 
 
-def sample_attribute_name_value_qulalitative():
+def sample_attribute_name_value():
     """
     returns {unificated_name: [unificated_values]} dict
     """
+
     unificated_values = UnificatedSamplesAttributeValue.objects.all(
             ).select_related("unificated_name")
 
-    name_values = {} 
+    all_col_orders = ColumnOrder.objects.filter(show_at_all=True)
+
+    ordered_names = all_col_orders.order_by('column_order').values_list(
+            "unificated_name__name", flat=True)
+
+
+
+
+    name_values = collections.OrderedDict()
+
+    for name in ordered_names:
+        name_values[name] = []
 
     for unificated_value in unificated_values:
         name = unificated_value.unificated_name.name
         value = unificated_value.value
         if name in name_values:
             name_values[name].append(value)
-        else:
-            name_values[name] = [value]
 
     # for name in name_values:
     #     print(name, ":", name_values[name])
+
+
+
 
     return name_values
 

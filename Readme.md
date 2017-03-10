@@ -36,8 +36,8 @@ IGEA is a web-based tool for integrative analysis of gene expression data.
 	- [X] Intro page
 	- [X] Logo
 	- [X] Downlowdable BibTex citations on nav bar
-	- [ ] Order columns properly 
-	- [ ] Download Experiments, Samples tables as TSV files
+	- [Х] Order columns properly 
+	- [Х] Download Experiments, Samples tables as TSV files
 	- [ ] Upload Experiment, Sample metadata from TSV files provided by user
 	- [ ] Slider widgets to Samples side bar as search filters for numeric columns
 	- [ ] Exclude rows with empty values option

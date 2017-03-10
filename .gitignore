@@ -17,3 +17,6 @@ db.sqlite3
 !.elasticbeanstalk/*.global.yml
 
 env.env
+preeclamsia_db/settings_db.py
+
+articles/data/*
