@@ -111,8 +111,13 @@ def _experiment_microarrays_display():
 
 def _status_display():
     def f(obj):
-        print(dir(obj))
-        return obj._status_display
+        print(str(obj))
+        exists = Experiment.objects.filter(data__contains={'accession', str(obj)}).exists()
+        if exists:
+            exp = Experiment.objects.get(data__contains={'accession', str(obj)})
+            return exp.status()
+        return ""
+
 
     f.short_description = 'status'
     return [f]

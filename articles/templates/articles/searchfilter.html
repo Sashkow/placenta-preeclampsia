@@ -65,7 +65,9 @@ $('#accordion').on('shown.bs.collapse', toggleChevron);
 $('.name-check-box').change(function() {
     // this will contain a reference to the checkbox   
     
-    var name = $(this).parent().text().trim().split(' ')[0];
+    var name = $(this).parent().text().trim().split(' ').join('_').split(',').join('_');
+    console.log(name)
+
 
     if (this.checked) {
         $('.filterable').find('.' + name).show();

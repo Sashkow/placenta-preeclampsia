@@ -15,6 +15,30 @@ from articles.models import Sample, Experiment, Microarray, ColumnOrder
 from articles.queries import sample_attribute_name_value
 
 
+def get_column_class_names(self, classes_set, bound_column):
+    '''
+    An override. Returns a set of HTML class names for cells (both td and th) of a
+    **bound column** in this table.
+    By default this returns the column class names defined in the table's
+    attributes, and additionally the bound column's name.
+    This method can be overridden to change the default behavior, for
+    example to simply `return classes_set`.
+    Arguments:
+        classes_set(set of string): a set of class names to be added
+          to the cell, retrieved from the column's attributes. In the case
+          of a header cell (th), this also includes ordering classes.
+          To set the classes for a column, see `.Column`.
+          To configure ordering classes, see :ref:`ordering-class-name`
+        bound_column(`.BoundColumn`): the bound column the class names are
+          determined for. Useful for accessing `bound_column.name`.
+    Returns:
+        A set of class names to be added to cells of this column
+    '''
+    joined_column_name = bound_column.name.replace(' ', '_').replace(',', '_')
+    classes_set.add(joined_column_name)
+    return classes_set
+
+
 #not a view
 def build_exp_table(request):
     """
@@ -103,7 +127,11 @@ def build_sample_table(request):
     #         'Cells, Cultured')
 
 
-    cols = {col:tables.Column() for col in ordered_cols}
+    # cols = {col:tables.Column() for col in ordered_cols}
+
+    cols = {}
+    for col in ordered_cols:
+        cols[col] = tables.Column()
     # cols['name'].verbose_name = 'Sample Name'
 
     # for col in cols:
@@ -111,6 +139,9 @@ def build_sample_table(request):
 
 
     SampleTable = type('SampleTable', (tables.Table,), cols)
+
+    SampleTable.get_column_class_names = get_column_class_names
+
     
 
     SampleTable._meta.attrs = {'class':'table table-hover'}
@@ -126,6 +157,8 @@ def build_sample_table(request):
 
     table = SampleTable(sample_dicts)
     table.name = 'Biological Samples'
+
+    print(dir(table))
 
 
     if 'per_page' in request.GET:
@@ -227,6 +260,7 @@ def samples(request):
             request,
             'articles/samples.html',
             {
+                # 'column_classes': column_classes,
                 'table': table,
                 'search': search,
                 'search_checked': search_checked
