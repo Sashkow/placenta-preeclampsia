@@ -12,7 +12,7 @@ class Command(BaseCommand):
         """
         command's handle method
         """
-        all_microarrays_to_tsv()
+        get_exp_status()
 
         # samples_by_diagnosis()
 

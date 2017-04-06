@@ -8,6 +8,11 @@ from bioservices.arrayexpress import ArrayExpress
 from Bio.Affy import CelFile
 
 
+from django.db.models import Q
+
+import datetime
+
+
 s = ArrayExpress()
 # res = s.queryExperiments(
 # keywords="pre-eclampsia+OR+preeclampsia+OR+pre-eclamptic+OR+preeclamptic",
@@ -17,7 +22,7 @@ s = ArrayExpress()
 # children = res.getchildren()
 # for exp in children:
 #     if exp.find("accession").text in exclude:
-#         children.remove(exp
+#         children.remove(exp)
 
 def get_expression_matrix():
     exps = ['E-GEOD-14722', 'E-GEOD-54618', 'E-GEOD-44711', 'E-GEOD-9984',
@@ -38,7 +43,89 @@ def get_expression_matrix():
         
 
 
+def get_sample_attributes_with_no_old_name():
+    """
+    12%
+    """
+    all_exps = Experiment.objects.all()
+    exps = []
+    for exp in all_exps:
+        if not ('excluded' in exp.data):
+            exps.append(exp)
+    print("exps", len(exps))
+
+    samples = Sample.objects.filter(experiment__in=exps)
+    print("samples", len(samples))
+    attributes = SampleAttribute.objects.filter(sample__in=samples)
+
+    all_attributes_amnt = len(attributes)
+    none_attrs = attributes.filter(old_name=None)
+    none_samples_amnt = len(set(none_attrs.values_list('sample', flat=True)))
+    print("None samples", none_samples_amnt)
+    attributes_amnt = len(none_attrs)
+    print(all_attributes_amnt, attributes_amnt, float(attributes_amnt)/all_attributes_amnt)
+
+
+def get_studies_with_no_secondary_accession():
+    exps = Experiment.objects.filter(~Q(data__contains='excluded'))
+   
+    geo_exps = exps.filter(data__contains='secondaryaccession')
     
+    geo_years = [datetime.datetime.strptime(exp.data['releasedate'], "%Y-%m-%d").date() for exp in geo_exps]
+    geo_avg_year = sum(geo_years)/len(geo_years)
+    print(geo_years, geo_avg_year)
+    geo_samples= Sample.objects.filter(experiment__in=geo_exps)
+    geo_attrs = SampleAttribute.objects.filter(Q(sample__in=geo_samples) & ~Q(old_name=None))
+    geo_attrs_per_sample = len(geo_attrs)/len(geo_samples)
+    print("geo",len(geo_attrs), len(geo_samples), geo_attrs_per_sample)
+
+
+
+    arr_exps = exps.filter(~Q(data__contains='secondaryaccession'))
+    arr_years = [int(exp.data['releasedate'].split('-')[0]) for exp in arr_exps]
+    arr_avg_year = sum(arr_years)/len(arr_years)
+    print(arr_years, arr_avg_year)
+    arr_samples= Sample.objects.filter(experiment__in=arr_exps)
+    arr_attrs = SampleAttribute.objects.filter(Q(sample__in=arr_samples) & ~Q(old_name=None))
+    arr_attrs_per_sample = len(arr_attrs)/len(arr_samples)
+    print("arr:",len(arr_attrs), len(arr_samples), arr_attrs_per_sample)
+
+
+def plot_annual_attrs_per_sample():
+    exps = Experiment.objects.filter(~Q(data__contains='excluded'))
+    exp_samples_attributes = {}
+    for exp in exps:
+        samples = exp.samples()
+        attributes = SampleAttribute.objects.filter(Q(sample__in=samples) & ~Q(old_name=None))
+        year = int(exp.data['releasedate'].split('-')[0])
+        exp_samples_attributes[exp] = (year, len(samples), len(attributes))
+
+    year_atributes_per_sample = {}
+
+    for exp, ysa in exp_samples_attributes.items():
+        if ysa[0] not in year_atributes_per_sample:
+            year_atributes_per_sample[ysa[0]] = [ysa[1], ysa[2], 1]
+        else:
+            year_atributes_per_sample[ysa[0]][0]+=ysa[1]
+            year_atributes_per_sample[ysa[0]][1]+=ysa[2]
+            year_atributes_per_sample[ysa[0]][2]+=1
+
+    for year in year_atributes_per_sample:
+        atributes_per_sample = float(year_atributes_per_sample[year][1])/year_atributes_per_sample[year][0]
+        samples_per_experiment = float(year_atributes_per_sample[year][0])/year_atributes_per_sample[year][2]
+        year_atributes_per_sample[year] = [atributes_per_sample, samples_per_experiment, year_atributes_per_sample[year][2]]
+
+
+    for year in sorted(year_atributes_per_sample):
+        print(
+                year,
+                round(year_atributes_per_sample[year][0], 2),
+                round(year_atributes_per_sample[year][1], 2),
+                year_atributes_per_sample[year][2]
+        )
+
+def plot_
+
 
 def get_experiment_attributes(experiment_id):
     """

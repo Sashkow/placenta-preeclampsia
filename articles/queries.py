@@ -11,6 +11,12 @@ import plotly
 
 import numpy as np
 
+def get_exp_status():
+    exp = Experiment.objects.filter(data__contains ={'accession':'E-GEOD-25906'}).exists()
+    print(exp)
+
+
+
 def all_samples_to_tsv():
     samples = Sample.to_dict()
     column_names = ColumnOrder.objects.all().order_by(
@@ -185,6 +191,7 @@ def coverage():
     attributes = SampleAttribute.objects.filter(sample__in=samples)
     lst = []
     names = UnificatedSamplesAttributeName.objects.all()
+    
     for name in names:
         count = attributes.filter(
           unificated_name=name).values('sample').distinct().count()

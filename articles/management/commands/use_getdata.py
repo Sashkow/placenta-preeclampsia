@@ -11,7 +11,7 @@ class Command(BaseCommand):
         """
         command's hande method
         """  
-        use_getdata()   
+        plot_annual_attrs_per_sample()   
 
 
         # get_expression_matrix()
