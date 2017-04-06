@@ -124,16 +124,16 @@ WSGI_APPLICATION = 'preeclampsia_db.wsgi.application'
 # Parse database configuration from $DATABASE_URL
 #
 
-# DATABASES = {
-#     'default': {
-#         'ENGINE': 'django.db.backends.postgresql_psycopg2',
-#         'NAME': 'test_db1',
-#         'USER': 'sashko',
-#         'PASSWORD': 'poland',
-#         'HOST': 'localhost',
-#         'PORT': '5433',
-#     }
-# }
+DATABASES = {
+    'default': {
+        'ENGINE': 'django.db.backends.postgresql_psycopg2',
+        'NAME': 'test_db1',
+        'USER': 'sashko',
+        'PASSWORD': 'poland',
+        'HOST': 'localhost',
+        'PORT': '5433',
+    }
+}
 
 
 
