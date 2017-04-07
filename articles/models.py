@@ -155,6 +155,8 @@ class Experiment(models.Model):
         lst = [m.data['name'] for m in self.microarrays.all()]
         return ', '.join(lst)
 
+
+
     def is_excluded(self):
         return 'excluded' in self.data
 
@@ -503,14 +505,6 @@ class Sample(models.Model):
     #     if 'name' in data:
     #         samples_in_experiment = Sample.objects.filter(
     #                                   experiment=experiment) "там де аттрибут experiment дорівнює значенню локальгої змінної experiment так буває а у нас будет sample=self але це підказка  "
-    #         for sample in samples_in_experiment:
-    #             if sample.has_old_name('name'):
-    #                 if sample.get_old_value('name')==data['name']:
-    #                     sample_obj = sample
-    #     if sample_obj == None:
-    #         sample_obj = Sample.objects.create(experiment=experiment) 
-    #     sample_obj.save()
-    #     return sample_obj
 
     # def _show(self):
     #     to_print = 'name'

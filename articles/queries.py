@@ -338,6 +338,72 @@ def list_old_names_values_with_unified():
     # print(count)
 
 
+from django.db.models import Q
+
+
+def list_old_names_values_with_unified():
+    """
+    uniqe rows:
+        old_name old_value unificated_name unificated_value
+    """
+
+    mappings = SampleAttribute.objects.filter(
+      unificated_value__unificated_name__name='Common'
+        ).values('old_name','unificated_name').distinct().order_by('unificated_name')
+
+    count = 0
+    for mapping in mappings:
+        if mapping['old_name'] != 'name':
+            
+            if not (mapping['unificated_name']==None and mapping['unificated_value']==None):
+                count += 1
+                print(UnificatedSamplesAttributeName.objects.get(id=mapping['unificated_name']),
+                      # UnificatedSamplesAttributeValue.objects.get(id=mapping['unificated_value']),
+                      mapping['old_name'],
+                      # mapping['old_value'],
+                      # mapping['sample']
+                      )
+    print(count)
+
+    print(Sample.objects.get(id = 1059).experiment.data['accession'])
+
+
+
+
+
+from django.db.models import Q
+
+
+def list_old_names_values_with_unified():
+    """
+    uniqe rows:
+        old_name old_value unificated_name unificated_value
+    """
+
+    mappings = SampleAttribute.objects.filter(
+      unificated_value__unificated_name__name='Common'
+        ).values('old_name','unificated_name').distinct().order_by('unificated_name')
+
+    count = 0
+    for mapping in mappings:
+        if mapping['old_name'] != 'name':
+            
+            if not (mapping['unificated_name']==None and mapping['unificated_value']==None):
+                count += 1
+                print(UnificatedSamplesAttributeName.objects.get(id=mapping['unificated_name']),
+                      # UnificatedSamplesAttributeValue.objects.get(id=mapping['unificated_value']),
+                      mapping['old_name'],
+                      # mapping['old_value'],
+                      # mapping['sample']
+                      )
+    print(count)
+
+    print(Sample.objects.get(id = 1059).experiment.data['accession'])
+
+
+
+
+
 def show_exps_of_good_platforms():
     good_platforms = ['GPL570','GPL6244','GPL10558']
     # good_platforms = ['GPL10558',]

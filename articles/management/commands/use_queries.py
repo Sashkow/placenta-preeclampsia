@@ -10,9 +10,21 @@ class Command(BaseCommand):
     """
     def handle(self, *args, **options):
         """
+<<<<<<< Updated upstream
         command's handle method
         """
         get_exp_status()
+=======
+        command's hande method
+        """        
+
+        list_old_names_values_with_unified()
+    
+
+<<<<<<< Updated upstream
+>>>>>>> Stashed changes
+=======
+>>>>>>> Stashed changes
 
         # samples_by_diagnosis()
 

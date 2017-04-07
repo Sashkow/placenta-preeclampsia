@@ -124,7 +124,34 @@ def plot_annual_attrs_per_sample():
                 year_atributes_per_sample[year][2]
         )
 
-def plot_
+def get_attrs_per_sample_in_experiment(experiment):
+    samples = Sample.objects.filter(experiment=experiment)
+    attributes = SampleAttribute.objects.filter(sample__in=samples)
+    return float(len(attributes))/len(samples)
+
+def plot_annual_attrs_per_sample2():
+    exps = Experiment.objects.filter(~Q(data__contains='excluded'))
+    exp_year_samples_per_attribute = {}
+    for exp in exps:
+        year = int(exp.data['releasedate'].split('-')[0])
+        samples_per_attribute = get_attrs_per_sample_in_experiment(exp)
+        exp_year_samples_per_attribute[exp] = (year, samples_per_attribute)
+
+    year_atributes_per_sample = {}
+    for exp, data in exp_year_samples_per_attribute.items():
+        if data[0] not in year_atributes_per_sample:
+            year_atributes_per_sample[data[0]] = [data[1], 1]
+        else:
+            year_atributes_per_sample[data[0]][0] += data[1]
+            year_atributes_per_sample[data[0]][1] += 1
+    
+
+    for year, data in sorted(year_atributes_per_sample.items()):
+        print(year, float(data[0])/data[1])
+
+
+
+
 
 
 def get_experiment_attributes(experiment_id):
@@ -188,10 +215,6 @@ def get_experiment_samples_attributes(experiment_id):
                     if first_tag.tag == 'name':
                         # print('Took name from sample xml <source> section',first_tag.tag,first_tag.text)
                         sample[first_tag.tag] = first_tag.text
-                        
-
-
-
 
             samples.append(sample)
     return samples
@@ -292,6 +315,20 @@ def get_preeclampsia_accession():
     return res
 
 
+def get_placenta_accession():
+    # retu E-GEOD-59126
+
+    return s.queryAE(
+            keywords="placenta",
+            exptype="*array*",
+            species="homo+sapiens"
+    )
+    
+
+
+
+
+
 def samples_total():
     samples_total = 0
     for exp in res.getchildren():
@@ -368,6 +405,34 @@ def print_exp_array_title(accession):
 
 def read_cell_file(file_path):
     print(os.getwd())
+
+
+def annual_attributes_per_sample_in_placenta():
+    exps = get_placenta_accession() 
+    exps = exps[exps.index('E-GEOD-59126')+1:]  
+
+    exp_year_samples_per_attribute = {}
+    for exp in exps:
+        year = int(get_experiment_attributes(exp)[0]['releasedate'].split('-')[0])
+        samples = get_experiment_samples_attributes(exp)
+        samples_per_attribute = len(samples[0])
+        exp_year_samples_per_attribute[exp] = (year, samples_per_attribute)
+        print(exp, year, samples_per_attribute)
+
+    year_atributes_per_sample = {}
+    for exp, data in exp_year_samples_per_attribute.items():
+        if data[0] not in year_atributes_per_sample:
+            year_atributes_per_sample[data[0]] = [data[1], 1]
+        else:
+            year_atributes_per_sample[data[0]][0] += data[1]
+            year_atributes_per_sample[data[0]][1] += 1
+    
+
+    for year, data in sorted(year_atributes_per_sample.items()):
+        print(year, float(data[0])/data[1], data[1])
+
+
+
 
 
 
