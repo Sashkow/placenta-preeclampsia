@@ -16,6 +16,10 @@ from django.core.urlresolvers import reverse
 
 from simple_history.admin import SimpleHistoryAdmin
 
+from import_export.resources import ModelResource
+from import_export.admin import ImportExportModelAdmin
+
+
 def _lookup_f(ModelClass, attr_name):
         def f(obj):
             if ModelClass.objects.filter(id=obj.id, data__contains=[attr_name]).exists():
@@ -221,8 +225,15 @@ class ExperimentAdmin(SuperModelAdmin, SimpleHistoryAdmin):
 admin.site.register(Experiment, ExperimentAdmin)
 
 
+class MicroarrayResource(ModelResource):
 
-class MicroarrayAdmin(ModelAdmin):
+    class Meta:
+        model = Microarray
+
+class MicroarrayAdmin(ImportExportModelAdmin):
+    resource_class = MicroarrayResource
+
+
     list_display = _list_display(Microarray)
 
 

@@ -279,7 +279,7 @@ class Experiment(models.Model):
 
 
 class Microarray(models.Model):
-    must_have_attributes = ['accession', 'name']
+    must_have_attributes = ['accession', 'name', 'short']
     data = hstore.DictionaryField(db_index=True, blank=True)
     objects = hstore.HStoreManager()
 

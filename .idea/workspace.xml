@@ -3,9 +3,9 @@
   <component name="ChangeListManager">
     <list default="true" id="93a00d0c-8fdd-4565-b313-9599ba83cdde" name="Default" comment="">
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/articles/admin.py" afterPath="$PROJECT_DIR$/articles/admin.py" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/articles/templates/articles/searchfilter.html" afterPath="$PROJECT_DIR$/articles/templates/articles/searchfilter.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/articles/views.py" afterPath="$PROJECT_DIR$/articles/views.py" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/articles/getdata.py" afterPath="$PROJECT_DIR$/articles/getdata.py" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/articles/management/commands/use_getdata.py" afterPath="$PROJECT_DIR$/articles/management/commands/use_getdata.py" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/articles/retrievedata.py" afterPath="$PROJECT_DIR$/articles/retrievedata.py" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/preeclampsia_db/settings.py" afterPath="$PROJECT_DIR$/preeclampsia_db/settings.py" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -67,7 +67,7 @@
       <file leaf-file-name="utils.py" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/env3/lib/python3.5/site-packages/django_tables2/utils.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="18">
+            <state relative-caret-position="7308">
               <caret line="414" column="88" lean-forward="false" selection-start-line="414" selection-start-column="79" selection-end-line="414" selection-end-column="88" />
               <folding />
             </state>
@@ -77,9 +77,11 @@
       <file leaf-file-name="admin.py" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/articles/admin.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="18">
+            <state relative-caret-position="1134">
               <caret line="79" column="0" lean-forward="false" selection-start-line="79" selection-start-column="0" selection-end-line="79" selection-end-column="0" />
-              <folding />
+              <folding>
+                <marker date="1491512909689" expanded="true" signature="3165:3357" ph="..." />
+              </folding>
             </state>
           </provider>
         </entry>
@@ -87,8 +89,8 @@
       <file leaf-file-name="models.py" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/articles/models.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="575">
-              <caret line="48" column="16" lean-forward="false" selection-start-line="48" selection-start-column="16" selection-end-line="48" selection-end-column="16" />
+            <state relative-caret-position="198">
+              <caret line="85" column="9" lean-forward="true" selection-start-line="85" selection-start-column="9" selection-end-line="85" selection-end-column="9" />
               <folding />
             </state>
           </provider>
@@ -97,8 +99,8 @@
       <file leaf-file-name="views.py" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/articles/views.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="179">
-              <caret line="40" column="0" lean-forward="true" selection-start-line="40" selection-start-column="0" selection-end-line="40" selection-end-column="0" />
+            <state relative-caret-position="468">
+              <caret line="40" column="0" lean-forward="false" selection-start-line="40" selection-start-column="0" selection-end-line="40" selection-end-column="0" />
               <folding>
                 <element signature="e#0#18#0" expanded="true" />
               </folding>
@@ -137,18 +139,19 @@
         <option value="$PROJECT_DIR$/preeclampsia_db/settings.py" />
         <option value="$PROJECT_DIR$/articles/queries.py" />
         <option value="$PROJECT_DIR$/articles/todo" />
-        <option value="$PROJECT_DIR$/articles/models.py" />
         <option value="$PROJECT_DIR$/articles/admin.py" />
         <option value="$PROJECT_DIR$/articles/templates/articles/table.html" />
         <option value="$PROJECT_DIR$/env3/lib/python3.5/site-packages/django_tables2/views.py" />
         <option value="$PROJECT_DIR$/articles/views.py" />
+        <option value="$PROJECT_DIR$/articles/models.py" />
       </list>
     </option>
   </component>
   <component name="ProjectFrameBounds">
-    <option name="x" value="42" />
-    <option name="width" value="1324" />
-    <option name="height" value="768" />
+    <option name="x" value="59" />
+    <option name="y" value="24" />
+    <option name="width" value="1307" />
+    <option name="height" value="744" />
   </component>
   <component name="ProjectInspectionProfilesVisibleTreeState">
     <entry key="Project Default">
@@ -187,7 +190,6 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
-      <pane id="Scratches" />
       <pane id="ProjectPane">
         <subPane>
           <PATH>
@@ -217,6 +219,7 @@
         </subPane>
       </pane>
       <pane id="Scope" />
+      <pane id="Scratches" />
     </panes>
   </component>
   <component name="PropertiesComponent">
@@ -424,10 +427,10 @@
     </todo-panel>
   </component>
   <component name="ToolWindowManager">
-    <frame x="42" y="0" width="1324" height="768" extended-state="6" />
+    <frame x="59" y="24" width="1307" height="744" extended-state="6" />
     <editor active="false" />
     <layout>
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.17448117" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.17394696" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32972136" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="true" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32972136" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
@@ -759,7 +762,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="203">
           <caret line="4255" column="8" lean-forward="false" selection-start-line="4255" selection-start-column="8" selection-end-line="4255" selection-end-column="8" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -780,8 +782,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/articles/views.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="179">
-          <caret line="40" column="0" lean-forward="true" selection-start-line="40" selection-start-column="0" selection-end-line="40" selection-end-column="0" />
+        <state relative-caret-position="468">
+          <caret line="40" column="0" lean-forward="false" selection-start-line="40" selection-start-column="0" selection-end-line="40" selection-end-column="0" />
           <folding>
             <element signature="e#0#18#0" expanded="true" />
           </folding>
@@ -792,15 +794,12 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="575">
           <caret line="182" column="0" lean-forward="false" selection-start-line="182" selection-start-column="0" selection-end-line="182" selection-end-column="0" />
-          <folding>
-            <element signature="e#16#55#0" expanded="true" />
-          </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/env3/lib/python3.5/site-packages/django_tables2/utils.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="18">
+        <state relative-caret-position="7308">
           <caret line="414" column="88" lean-forward="false" selection-start-line="414" selection-start-column="79" selection-end-line="414" selection-end-column="88" />
           <folding />
         </state>
@@ -808,16 +807,18 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/articles/admin.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="18">
+        <state relative-caret-position="1134">
           <caret line="79" column="0" lean-forward="false" selection-start-line="79" selection-start-column="0" selection-end-line="79" selection-end-column="0" />
-          <folding />
+          <folding>
+            <marker date="1491512909689" expanded="true" signature="3165:3357" ph="..." />
+          </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/articles/models.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="575">
-          <caret line="48" column="16" lean-forward="false" selection-start-line="48" selection-start-column="16" selection-end-line="48" selection-end-column="16" />
+        <state relative-caret-position="198">
+          <caret line="85" column="9" lean-forward="true" selection-start-line="85" selection-start-column="9" selection-end-line="85" selection-end-column="9" />
           <folding />
         </state>
       </provider>

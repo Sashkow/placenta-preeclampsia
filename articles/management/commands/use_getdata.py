@@ -10,7 +10,8 @@ class Command(BaseCommand):
     def handle(self, *args, **options):
         """
         """
-        annual_attributes_per_sample_in_placenta()
+        print_exp_accession_microarrays_platform_name()
+        
         # lst = get_placenta_accession()
         # experiment_id = lst[0]
         # # get_experiment_attributes(experiment_id)

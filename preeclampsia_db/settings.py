@@ -66,6 +66,7 @@ INSTALLED_APPS = [
     'django.contrib.messages',
     'django.contrib.staticfiles',
 
+
     # 'django_extensions',
     # 'debug_toolbar',
     # 'compressor',
@@ -77,6 +78,7 @@ INSTALLED_APPS = [
     'articles',
     'django_hstore',
     'django_tables2',
+    'import_export',
 
     
     
@@ -158,7 +160,7 @@ default_config = dj_database_url.config(default='postgres://postgres:1q2w3e4r@19
 DATABASES = {'default': default_config}
 
 
-# GRANT ALL PRIVILEGES ON DATABASE d5sk8mi5cjc97v for user yzjhlayqnripvc;
+# GRANT ALL PRIVILEGES onN DATABASE d5sk8mi5cjc97v for user yzjhlayqnripvc;
 
 # DATABASES = {
 #     'default': {
