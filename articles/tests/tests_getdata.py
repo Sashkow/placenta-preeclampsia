@@ -28,11 +28,7 @@ class TestGetData(TestCase):
     def tearDown(self):
         self.s.session.close()
 
-    def test_get_experiment_acc_lst(self):
-        res = get_experiment_acc_lst()
-        self.assertTrue(res)
-        for item in res:
-            self.assertTrue(isinstance(item, str))
+   
 
     def test_get_experiment_attributes(self): 
         """

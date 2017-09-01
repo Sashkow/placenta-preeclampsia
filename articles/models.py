@@ -500,11 +500,11 @@ class Sample(models.Model):
 
 
 
-    # def add_or_replace(experiment, data): 
-    #     sample_obj = None
-    #     if 'name' in data:
-    #         samples_in_experiment = Sample.objects.filter(
-    #                                   experiment=experiment) "там де аттрибут experiment дорівнює значенню локальгої змінної experiment так буває а у нас будет sample=self але це підказка  "
+    def add_or_replace(experiment, data): 
+        sample_obj = None
+        if 'name' in data:
+            samples_in_experiment = Sample.objects.filter(
+                                      experiment=experiment) 
 
     # def _show(self):
     #     to_print = 'name'

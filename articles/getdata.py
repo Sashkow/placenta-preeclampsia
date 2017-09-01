@@ -1,4 +1,3 @@
-import os
 from articles.models import Experiment, Microarray, Sample, SampleAttribute
 
 from lxml import etree
@@ -12,12 +11,7 @@ from Bio.Affy import CelFile
 from django.db.models import Q
 
 import datetime
-import numpy
 
-import requests
-
-import glob
-import collections
 
 s = ArrayExpress()
 # res = s.queryExperiments(
@@ -29,66 +23,6 @@ s = ArrayExpress()
 # for exp in children:
 #     if exp.find("accession").text in exclude:
 #         children.remove(exp)
-from past.translation import install_hooks, remove_hooks
-install_hooks(['pyaffy'])
-import pyaffy
-remove_hooks()
-
-
-def cel_to_expression_matrix():
-    cdf = os.getcwd()+'/downloads/E-GEOD-6573.raw.1/HG-U133_Plus_2.cdf'
-    celpath = os.getcwd()+'/downloads/E-GEOD-6573.raw.1'
-    path_pattern = os.path.join(celpath, '*.gz')
-    files = glob.glob(path_pattern, recursive=True)
-    print(files)
-
-    cels = {fpath.split('/')[-1]:fpath for fpath in files}
-    cels = collections.OrderedDict(cels)
-
-    print(pyaffy.rma(cdf, cels))
-
-
-    
-    
-
-
-    
-def download_exp_file(experiment, filename):
-    downloadsfolder = 'downloads'
-    url = 'https://www.ebi.ac.uk/arrayexpress/files/' + experiment + "/" + filename
-    print(url)
-    local_filename = url.split('/')[-1]
-    r = requests.get(url, stream=True)
-    f = open(os.path.join(os.getcwd(),downloadsfolder,local_filename), 'wb')
-    i = 0
-    for chunk in r.iter_content(chunk_size=1024*1024): 
-        if chunk: # filter out keep-alive new chunks
-            print(i)
-            f.write(chunk)
-            i+=1
-
-    f.close()
-    return
-
-def print_exp_accession_microarrays_platform_name():
-    exps = ['E-GEOD-14722', 'E-GEOD-54618', 'E-GEOD-44711', 'E-GEOD-9984',
-            'E-GEOD-4707', 'E-GEOD-12216', 'E-GEOD-30186', 'E-GEOD-10588', 
-            'E-GEOD-13155', 'E-GEOD-24129', 'E-GEOD-12767', 'E-GEOD-60438',
-            'E-GEOD-6573', 'E-GEOD-35574', 'E-GEOD-36083', 'E-GEOD-74341',
-            'E-GEOD-73374', 'E-GEOD-47187', 'E-GEOD-37901', 'E-GEOD-15789',
-            'E-GEOD-43942']
-    i = 1
-    for exp in exps:
-        experiment = Experiment.objects.get(data__contains={"accession":exp})
-        arrays = experiment.microarrays.all()
-        for array in arrays:
-            name = array.data['name']
-            if 'Affy' in name:
-                print('\t'.join([str(i), experiment.data['secondaryaccession'], name]))
-                i += 1
-
-
-
 
 def get_expression_matrix():
     exps = ['E-GEOD-14722', 'E-GEOD-54618', 'E-GEOD-44711', 'E-GEOD-9984',
@@ -97,148 +31,18 @@ def get_expression_matrix():
             'E-GEOD-6573', 'E-GEOD-35574', 'E-GEOD-36083', 'E-GEOD-74341',
             'E-GEOD-73374', 'E-GEOD-47187', 'E-GEOD-37901', 'E-GEOD-15789',
             'E-GEOD-43942']
-    # lumi
-    # exps = ['E-GEOD-54618', 'E-GEOD-44711', 'E-GEOD-4707', 'E-GEOD-30186', 'E-GEOD-60438', 'E-GEOD-35574']
-    noraw = []
     for exp in exps:
         arrays = Experiment.objects.get(data__contains={"accession":exp}).microarrays.all()
         arrays = [str(array) for array in arrays]
         print(exp, arrays)
         res = s.retrieveExperiment(exp)
-        experiment = res.getchildren()[0]
-        files = [x.getchildren() for x in experiment.getchildren() if x.tag == "files"]
-        hasraw = False
-        
+        exp = res.getchildren()[0]
+        files = [x.getchildren() for x in exp.getchildren() if x.tag == "files"]
         for x in files[0]:
-            filename = x.get('name')
-            print('     ', filename)
-    
-            if 'processed' in filename:
-                print('   ', filename)
-                hasraw = True
-                download_exp_file(exp, filename)
-        # if not hasraw:
-        #     noraw.append(exp)
-        #     print("!", exp)
-
-    # print(noraw)
+            print("     ", x.get("name"))
+        
 
 
-
-
-def get_sample_attributes_with_no_old_name():
-    """
-    12%
-    """
-
-    all_exps = Experiment.objects.all()
-    exps = []
-    for exp in all_exps:
-        if not ('excluded' in exp.data):
-            exps.append(exp)
-
-    samples = Sample.objects.filter(experiment__in=exps)
-    print("samples", len(samples))
-    attributes = SampleAttribute.objects.filter(sample__in=samples)
-
-    print("exps", len(exps))
-    exp_data = {}
-    for exp in exps:
-        exp_samples = samples.filter(experiment=exp)
-        exp_attributes = attributes.filter(sample__in=exp_samples)
-        exp_data[str(exp)] = [
-                len(exp_samples),
-                len(exp_attributes),
-                float(len(exp_attributes)/len(exp_samples))]
-
-    print(exp_data)
-    lst = [exp_data[exp][2] for exp in exp_data]
-    print(lst, numpy.mean(lst), numpy.std(lst))
-
-
-
-def get_studies_with_no_secondary_accession():
-    exps = Experiment.objects.filter(~Q(data__contains='excluded'))
-   
-    geo_exps = exps.filter(data__contains='secondaryaccession')
-    
-    geo_years = [datetime.datetime.strptime(exp.data['releasedate'], "%Y-%m-%d").date() for exp in geo_exps]
-    geo_avg_year = sum(geo_years)/len(geo_years)
-    print(geo_years, geo_avg_year)
-    geo_samples= Sample.objects.filter(experiment__in=geo_exps)
-    geo_attrs = SampleAttribute.objects.filter(Q(sample__in=geo_samples) & ~Q(old_name=None))
-    geo_attrs_per_sample = len(geo_attrs)/len(geo_samples)
-    print("geo",len(geo_attrs), len(geo_samples), geo_attrs_per_sample)
-
-
-
-    arr_exps = exps.filter(~Q(data__contains='secondaryaccession'))
-    arr_years = [int(exp.data['releasedate'].split('-')[0]) for exp in arr_exps]
-    arr_avg_year = sum(arr_years)/len(arr_years)
-    print(arr_years, arr_avg_year)
-    arr_samples= Sample.objects.filter(experiment__in=arr_exps)
-    arr_attrs = SampleAttribute.objects.filter(Q(sample__in=arr_samples) & ~Q(old_name=None))
-    arr_attrs_per_sample = len(arr_attrs)/len(arr_samples)
-    print("arr:",len(arr_attrs), len(arr_samples), arr_attrs_per_sample)
-
-
-def plot_annual_attrs_per_sample():
-    exps = Experiment.objects.filter(~Q(data__contains='excluded'))
-    exp_samples_attributes = {}
-    for exp in exps:
-        samples = exp.samples()
-        attributes = SampleAttribute.objects.filter(Q(sample__in=samples) & ~Q(old_name=None))
-        year = int(exp.data['releasedate'].split('-')[0])
-        exp_samples_attributes[exp] = (year, len(samples), len(attributes))
-
-    year_atributes_per_sample = {}
-
-    for exp, ysa in exp_samples_attributes.items():
-        if ysa[0] not in year_atributes_per_sample:
-            year_atributes_per_sample[ysa[0]] = [ysa[1], ysa[2], 1]
-        else:
-            year_atributes_per_sample[ysa[0]][0]+=ysa[1]
-            year_atributes_per_sample[ysa[0]][1]+=ysa[2]
-            year_atributes_per_sample[ysa[0]][2]+=1
-
-    for year in year_atributes_per_sample:
-        atributes_per_sample = float(year_atributes_per_sample[year][1])/year_atributes_per_sample[year][0]
-        samples_per_experiment = float(year_atributes_per_sample[year][0])/year_atributes_per_sample[year][2]
-        year_atributes_per_sample[year] = [atributes_per_sample, samples_per_experiment, year_atributes_per_sample[year][2]]
-
-
-    for year in sorted(year_atributes_per_sample):
-        print(
-                year,
-                round(year_atributes_per_sample[year][0], 2),
-                round(year_atributes_per_sample[year][1], 2),
-                year_atributes_per_sample[year][2]
-        )
-
-def get_attrs_per_sample_in_experiment(experiment):
-    samples = Sample.objects.filter(experiment=experiment)
-    attributes = SampleAttribute.objects.filter(sample__in=samples)
-    return float(len(attributes))/len(samples)
-
-def plot_annual_attrs_per_sample2():
-    exps = Experiment.objects.filter(~Q(data__contains='excluded'))
-    exp_year_samples_per_attribute = {}
-    for exp in exps:
-        year = int(exp.data['releasedate'].split('-')[0])
-        samples_per_attribute = get_attrs_per_sample_in_experiment(exp)
-        exp_year_samples_per_attribute[exp] = (year, samples_per_attribute)
-
-    year_atributes_per_sample = {}
-    for exp, data in exp_year_samples_per_attribute.items():
-        if data[0] not in year_atributes_per_sample:
-            year_atributes_per_sample[data[0]] = [data[1], 1]
-        else:
-            year_atributes_per_sample[data[0]][0] += data[1]
-            year_atributes_per_sample[data[0]][1] += 1
-    
-
-    for year, data in sorted(year_atributes_per_sample.items()):
-        print(year, float(data[0])/data[1])
 
 def get_experiment_attributes(experiment_id):
     """
@@ -305,12 +109,70 @@ def get_experiment_samples_attributes(experiment_id):
             samples.append(sample)
     return samples
 
+def get_experiment_attributes(experiment_id):
+    """
+    get attributes from experiment xml object
+
+    returns dictionary attribute:value
+    """
+    
+    exp = s.retrieveExperiment(experiment_id)
+    # pass top level of xml 
+    exp = exp.getchildren()[0]
+    # exp = self.s.retrieveExperiment("E-GEOD-74341").getchildren()[0]
+    exp_attrs = []
+    exp_data = {}
+    arrays_data = []  # list of dicts, one dict per microarray
+    # add all attributes that are "leaves" of the xml tree
+    for item in exp.getchildren():
+      
+        if item.text != None:
+            exp_attrs.append(item.tag)
+            exp_data[item.tag] = item.text
+        else:
+            if item.tag == 'arraydesign':
+                array_data = {}            
+                for array_attr in item.getchildren():
+                    if array_attr.text != None:
+                        array_data[array_attr.tag] = array_attr.text
+                arrays_data.append(array_data)
+    return exp_data, arrays_data
 
 
+def get_experiment_samples_attributes(experiment_id):
+    url ='xml/v3/experiments/'+experiment_id+'/samples'
+    samples_xml = s.http_get(url, 'xml')
 
+    samples_xml = s.easyXML(samples_xml)
+    with open("samples_E-GEOD-74341.txt", "w") as text_file:
+        print(samples_xml.prettify(), file=text_file)
 
+    samples_xml = samples_xml.getchildren()
+    samples = []
+    for sample_xml in samples_xml:
+        if sample_xml.tag == 'sample':
+            sample = {}
+            for characteristic in sample_xml.getchildren():
+                if characteristic.tag == 'assay':
+                    for item in characteristic.getchildren():
+                        sample[item.tag] = item.text
+                elif characteristic.tag == 'characteristic':
+                    category_value = characteristic.getchildren()
+                    if category_value[0].tag == 'category' and \
+                       category_value[1].tag == 'value':
+                        sample[category_value[0].text] = category_value[1].text
+                    else:
+                        print("Error while processing sample")
+                elif characteristic.tag == 'source': 
+                    # sometimes <name> tag which is under <assay>
+                    # tag is absent or not unique 
+                    first_tag = characteristic.getchildren()[0]
+                    if first_tag.tag == 'name':
+                        # print('Took name from sample xml <source> section',first_tag.tag,first_tag.text)
+                        sample[first_tag.tag] = first_tag.text
 
-
+            samples.append(sample)
+    return samples
 
 def exp_to_db(experiment_id):
     """
@@ -339,33 +201,6 @@ def exp_to_db(experiment_id):
             else:
                 SampleAttribute.add_or_replace(sample_obj, old_name, old_value)
 
-        
-
-
-
-
-def get_some():
-    # get some experiment
-    acc = "E-GEOD-74341"
-    path ='xml/v3/experiments/E-GEOD-74341/samples'
-    res = s.http_get(path,'xml')
-    res = s.easyXML(res)
-
-
-
-    # for item in lst:
-    #     # print(item)
-    #     s.retrieveFile(acc, item)
-
-    with open("samples_E-GEOD-74341.txt", "w") as text_file:
-        print(res.prettify(), file=text_file)
-
-    # exp = res.getchildren()[0]
-    # for thing in exp.findall("pre-eclampsia"):
-    #   print("here", thing.text)
-
-    # for x in res.getchildren():
-    #     print(x.tag, x.text)
 
 def get_all_unique_experiment_attributes_tag_names():
     acc = "E-GEOD-74341"
@@ -395,7 +230,7 @@ def get_preeclampsia_accession():
            'E-GEOD-41336', 'E-GEOD-41331', 'E-GEOD-40182', 'E-GEOD-37901',
            'E-GEOD-36083', 'E-GEOD-35574', 'E-GEOD-31679', 'E-GEOD-30186',
            'E-GEOD-15789', 'E-GEOD-15787', 'E-GEOD-22526', 
-           'E-GEOD-24129', 'E-GEOD-10588', 'E-GEOD-13155', 'E-TABM-682',
+              'E-GEOD-24129', 'E-GEOD-10588', 'E-GEOD-13155', 'E-TABM-682',
            'E-GEOD-14722', 'E-GEOD-12767', 'E-GEOD-13475', 'E-GEOD-12216',
            'E-GEOD-9984', 'E-GEOD-6573', 'E-GEOD-4100', 'E-GEOD-4707',
             'E-MEXP-1050']
@@ -406,40 +241,14 @@ def get_preeclampsia_accession():
     return res
 
 
+def get_placenta_accession():
+    # retu E-GEOD-59126
 
-
-
-
-
-
-def samples_total():
-    samples_total = 0
-    for exp in res.getchildren():
-        is_tag=False
-        for x in exp.getchildren():
-            if x.tag == 'samples' and int(x.text) < 100:
-                print(int(x.text))
-                samples_total+=int(x.text)
-                is_tag = True
-        if is_tag==False:
-            print("no tag")
-    print(samples_total) 
-
-
-def get_exps_with_lots_samples():
-    acc = []
-    res = s.queryExperiments(
-keywords="pre-eclampsia+OR+preeclampsia+OR+pre-eclamptic+OR+preeclamptic+AND+NOT+E-MTAB-3732",
-                             exptype="*array*",
-                             species="homo+sapiens")
-
-    # for exp in res.getchildren():
-    #   for x in exp.getchildren():
-    #       if x.tag == 'samples':
-    #           if int(x.text) > 100:
-    #               print(exp.find("accession").text,
-    #                     exp.find("samples").text)
-
+    return s.queryAE(
+            keywords="placenta",
+            exptype="*array*",
+            species="homo+sapiens"
+    )
 
 def get_all_sample_attribute_names():
     """get all sample attribute names from ArrayExpress db"""
@@ -492,15 +301,40 @@ def read_cell_file(file_path):
 
 
 
+def annual_attributes_per_sample_in_placenta():
+    exps = get_placenta_accession() 
+    # exps = exps[exps.index('E-GEOD-59126')+1:]
+    exps = exps[exps.index('E-GEOD-19649')+1:]
+    with open('annual_output', 'w') as f:
+
+        exp_year_samples_per_attribute = {}
+        for exp in exps:
+            year = int(get_experiment_attributes(exp)[0]['releasedate'].split('-')[0])
+            samples = get_experiment_samples_attributes(exp)
+            samples_per_attribute = len(samples[0])
+            exp_year_samples_per_attribute[exp] = (year, samples_per_attribute)
+            print(exp, year, samples_per_attribute)
+            print(exp, year, samples_per_attribute, file=f)
+
+        year_atributes_per_sample = {}
+        for exp, data in exp_year_samples_per_attribute.items():
+            if data[0] not in year_atributes_per_sample:
+                year_atributes_per_sample[data[0]] = [data[1], 1]
+            else:
+                year_atributes_per_sample[data[0]][0] += data[1]
+                year_atributes_per_sample[data[0]][1] += 1
+        
+
+        for year, data in sorted(year_atributes_per_sample.items()):
+            print(year, float(data[0])/data[1], data[1])
+
+
 
 
 
 
 def main():
     pass
-    # get_sample_attributes_with_no_old_name()
-    # get_experiment_samples_attributes('E-GEOD-14722')
-    
 
 if __name__ == '__main__':
     main()

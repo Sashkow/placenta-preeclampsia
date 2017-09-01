@@ -1,25 +1,17 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <experiment api-revision="091015" api-version="3" revision="091015" version="1.0">
  <accession>
-  E-GEOD-59126
+  E-GEOD-19649
  </accession>
  <sample>
   <assay>
    <name>
-    GSM1428990
+    GSM490137
    </name>
   </assay>
   <characteristic>
    <category>
-    cell type
-   </category>
-   <value>
-    cytotrophoblasts
-   </value>
-  </characteristic>
-  <characteristic>
-   <category>
-    organism
+    Organism
    </category>
    <value>
     Homo sapiens
@@ -27,7 +19,7 @@
   </characteristic>
   <characteristic>
    <category>
-    organism part
+    tissue
    </category>
    <value>
     placenta
@@ -35,50 +27,31 @@
   </characteristic>
   <extract>
    <name>
-    GSM1428990 extract 1
+    GSM490137 extract 1
    </name>
   </extract>
-  <file>
-   <type>
-    data
-   </type>
-   <name>
-    GSM1428990_FT3.CEL
-   </name>
-   <url>
-    ftp://ftp.ebi.ac.uk/pub/databases/microarray/data/experiment/GEOD/E-GEOD-59126/E-GEOD-59126.raw.1.zip/GSM1428990_FT3.CEL
-   </url>
-   <comment>
-    <name>
-     ArrayExpress FTP file
-    </name>
-    <value>
-     ftp://ftp.ebi.ac.uk/pub/databases/microarray/data/experiment/GEOD/E-GEOD-59126/E-GEOD-59126.raw.1.zip
-    </value>
-   </comment>
-  </file>
   <file>
    <type>
     derived data
    </type>
    <name>
-    GSM1428990_sample_table.txt
+    GSM490137_sample_table.txt
    </name>
    <url>
-    ftp://ftp.ebi.ac.uk/pub/databases/microarray/data/experiment/GEOD/E-GEOD-59126/E-GEOD-59126.processed.1.zip/GSM1428990_sample_table.txt
+    ftp://ftp.ebi.ac.uk/pub/databases/microarray/data/experiment/GEOD/E-GEOD-19649/E-GEOD-19649.processed.1.zip/GSM490137_sample_table.txt
    </url>
    <comment>
     <name>
      Derived ArrayExpress FTP file
     </name>
     <value>
-     ftp://ftp.ebi.ac.uk/pub/databases/microarray/data/experiment/GEOD/E-GEOD-59126/E-GEOD-59126.processed.1.zip
+     ftp://ftp.ebi.ac.uk/pub/databases/microarray/data/experiment/GEOD/E-GEOD-19649/E-GEOD-19649.processed.1.zip
     </value>
    </comment>
   </file>
   <labeled-extract>
    <name>
-    GSM1428990 LE 1
+    GSM490137 LE 1
    </name>
    <label>
     biotin
@@ -86,14 +59,14 @@
   </labeled-extract>
   <source>
    <name>
-    GSM1428990 1
+    GSM490137 1
    </name>
    <comment>
     <name>
      Sample_description
     </name>
     <value>
-     total RNA
+     n/a
     </value>
    </comment>
    <comment>
@@ -101,44 +74,28 @@
      Sample_source_name
     </name>
     <value>
-     Isolated and in vitro cultured placental trophoblasts
-    </value>
-   </comment>
-   <comment>
-    <name>
-     Sample_title
-    </name>
-    <value>
-     FT3
+     non-GDM placenta tissues
     </value>
    </comment>
   </source>
   <variable>
    <name>
-    cell type
+    TISSUE
    </name>
    <value>
-    cytotrophoblasts
+    placenta
    </value>
   </variable>
  </sample>
  <sample>
   <assay>
    <name>
-    GSM1428989
+    GSM490136
    </name>
   </assay>
   <characteristic>
    <category>
-    cell type
-   </category>
-   <value>
-    cytotrophoblasts
-   </value>
-  </characteristic>
-  <characteristic>
-   <category>
-    organism
+    Organism
    </category>
    <value>
     Homo sapiens
@@ -146,7 +103,7 @@
   </characteristic>
   <characteristic>
    <category>
-    organism part
+    tissue
    </category>
    <value>
     placenta
@@ -154,50 +111,31 @@
   </characteristic>
   <extract>
    <name>
-    GSM1428989 extract 1
+    GSM490136 extract 1
    </name>
   </extract>
-  <file>
-   <type>
-    data
-   </type>
-   <name>
-    GSM1428989_FT2.CEL
-   </name>
-   <url>
-    ftp://ftp.ebi.ac.uk/pub/databases/microarray/data/experiment/GEOD/E-GEOD-59126/E-GEOD-59126.raw.1.zip/GSM1428989_FT2.CEL
-   </url>
-   <comment>
-    <name>
-     ArrayExpress FTP file
-    </name>
-    <value>
-     ftp://ftp.ebi.ac.uk/pub/databases/microarray/data/experiment/GEOD/E-GEOD-59126/E-GEOD-59126.raw.1.zip
-    </value>
-   </comment>
-  </file>
   <file>
    <type>
     derived data
    </type>
    <name>
-    GSM1428989_sample_table.txt
+    GSM490136_sample_table.txt
    </name>
    <url>
-    ftp://ftp.ebi.ac.uk/pub/databases/microarray/data/experiment/GEOD/E-GEOD-59126/E-GEOD-59126.processed.1.zip/GSM1428989_sample_table.txt
+    ftp://ftp.ebi.ac.uk/pub/databases/microarray/data/experiment/GEOD/E-GEOD-19649/E-GEOD-19649.processed.1.zip/GSM490136_sample_table.txt
    </url>
    <comment>
     <name>
      Derived ArrayExpress FTP file
     </name>
     <value>
-     ftp://ftp.ebi.ac.uk/pub/databases/microarray/data/experiment/GEOD/E-GEOD-59126/E-GEOD-59126.processed.1.zip
+     ftp://ftp.ebi.ac.uk/pub/databases/microarray/data/experiment/GEOD/E-GEOD-19649/E-GEOD-19649.processed.1.zip
     </value>
    </comment>
   </file>
   <labeled-extract>
    <name>
-    GSM1428989 LE 1
+    GSM490136 LE 1
    </name>
    <label>
     biotin
@@ -205,14 +143,14 @@
   </labeled-extract>
   <source>
    <name>
-    GSM1428989 1
+    GSM490136 1
    </name>
    <comment>
     <name>
      Sample_description
     </name>
     <value>
-     total RNA
+     n/a
     </value>
    </comment>
    <comment>
@@ -220,44 +158,28 @@
      Sample_source_name
     </name>
     <value>
-     Isolated and in vitro cultured placental trophoblasts
-    </value>
-   </comment>
-   <comment>
-    <name>
-     Sample_title
-    </name>
-    <value>
-     FT2
+     GDM placenta tissues
     </value>
    </comment>
   </source>
   <variable>
    <name>
-    cell type
+    TISSUE
    </name>
    <value>
-    cytotrophoblasts
+    placenta
    </value>
   </variable>
  </sample>
  <sample>
   <assay>
    <name>
-    GSM1428988
+    GSM490135
    </name>
   </assay>
   <characteristic>
    <category>
-    cell type
-   </category>
-   <value>
-    cytotrophoblasts
-   </value>
-  </characteristic>
-  <characteristic>
-   <category>
-    organism
+    Organism
    </category>
    <value>
     Homo sapiens
@@ -265,58 +187,39 @@
   </characteristic>
   <characteristic>
    <category>
-    organism part
+    tissue
    </category>
    <value>
-    placenta
+    blood
    </value>
   </characteristic>
   <extract>
    <name>
-    GSM1428988 extract 1
+    GSM490135 extract 1
    </name>
   </extract>
-  <file>
-   <type>
-    data
-   </type>
-   <name>
-    GSM1428988_FT1.CEL
-   </name>
-   <url>
-    ftp://ftp.ebi.ac.uk/pub/databases/microarray/data/experiment/GEOD/E-GEOD-59126/E-GEOD-59126.raw.1.zip/GSM1428988_FT1.CEL
-   </url>
-   <comment>
-    <name>
-     ArrayExpress FTP file
-    </name>
-    <value>
-     ftp://ftp.ebi.ac.uk/pub/databases/microarray/data/experiment/GEOD/E-GEOD-59126/E-GEOD-59126.raw.1.zip
-    </value>
-   </comment>
-  </file>
   <file>
    <type>
     derived data
    </type>
    <name>
-    GSM1428988_sample_table.txt
+    GSM490135_sample_table.txt
    </name>
    <url>
-    ftp://ftp.ebi.ac.uk/pub/databases/microarray/data/experiment/GEOD/E-GEOD-59126/E-GEOD-59126.processed.1.zip/GSM1428988_sample_table.txt
+    ftp://ftp.ebi.ac.uk/pub/databases/microarray/data/experiment/GEOD/E-GEOD-19649/E-GEOD-19649.processed.1.zip/GSM490135_sample_table.txt
    </url>
    <comment>
     <name>
      Derived ArrayExpress FTP file
     </name>
     <value>
-     ftp://ftp.ebi.ac.uk/pub/databases/microarray/data/experiment/GEOD/E-GEOD-59126/E-GEOD-59126.processed.1.zip
+     ftp://ftp.ebi.ac.uk/pub/databases/microarray/data/experiment/GEOD/E-GEOD-19649/E-GEOD-19649.processed.1.zip
     </value>
    </comment>
   </file>
   <labeled-extract>
    <name>
-    GSM1428988 LE 1
+    GSM490135 LE 1
    </name>
    <label>
     biotin
@@ -324,14 +227,14 @@
   </labeled-extract>
   <source>
    <name>
-    GSM1428988 1
+    GSM490135 1
    </name>
    <comment>
     <name>
      Sample_description
     </name>
     <value>
-     total RNA
+     n/a
     </value>
    </comment>
    <comment>
@@ -339,44 +242,28 @@
      Sample_source_name
     </name>
     <value>
-     Isolated and in vitro cultured placental trophoblasts
-    </value>
-   </comment>
-   <comment>
-    <name>
-     Sample_title
-    </name>
-    <value>
-     FT1
+     non-GDM blood tissue
     </value>
    </comment>
   </source>
   <variable>
    <name>
-    cell type
+    TISSUE
    </name>
    <value>
-    cytotrophoblasts
+    blood
    </value>
   </variable>
  </sample>
  <sample>
   <assay>
    <name>
-    GSM1428987
+    GSM490134
    </name>
   </assay>
   <characteristic>
    <category>
-    cell type
-   </category>
-   <value>
-    endothelial cell
-   </value>
-  </characteristic>
-  <characteristic>
-   <category>
-    organism
+    Organism
    </category>
    <value>
     Homo sapiens
@@ -384,58 +271,39 @@
   </characteristic>
   <characteristic>
    <category>
-    organism part
+    tissue
    </category>
    <value>
-    placenta
+    blood
    </value>
   </characteristic>
   <extract>
    <name>
-    GSM1428987 extract 1
+    GSM490134 extract 1
    </name>
   </extract>
-  <file>
-   <type>
-    data
-   </type>
-   <name>
-    GSM1428987_EC3.CEL
-   </name>
-   <url>
-    ftp://ftp.ebi.ac.uk/pub/databases/microarray/data/experiment/GEOD/E-GEOD-59126/E-GEOD-59126.raw.1.zip/GSM1428987_EC3.CEL
-   </url>
-   <comment>
-    <name>
-     ArrayExpress FTP file
-    </name>
-    <value>
-     ftp://ftp.ebi.ac.uk/pub/databases/microarray/data/experiment/GEOD/E-GEOD-59126/E-GEOD-59126.raw.1.zip
-    </value>
-   </comment>
-  </file>
   <file>
    <type>
     derived data
    </type>
    <name>
-    GSM1428987_sample_table.txt
+    GSM490134_sample_table.txt
    </name>
    <url>
-    ftp://ftp.ebi.ac.uk/pub/databases/microarray/data/experiment/GEOD/E-GEOD-59126/E-GEOD-59126.processed.1.zip/GSM1428987_sample_table.txt
+    ftp://ftp.ebi.ac.uk/pub/databases/microarray/data/experiment/GEOD/E-GEOD-19649/E-GEOD-19649.processed.1.zip/GSM490134_sample_table.txt
    </url>
    <comment>
     <name>
      Derived ArrayExpress FTP file
     </name>
     <value>
-     ftp://ftp.ebi.ac.uk/pub/databases/microarray/data/experiment/GEOD/E-GEOD-59126/E-GEOD-59126.processed.1.zip
+     ftp://ftp.ebi.ac.uk/pub/databases/microarray/data/experiment/GEOD/E-GEOD-19649/E-GEOD-19649.processed.1.zip
     </value>
    </comment>
   </file>
   <labeled-extract>
    <name>
-    GSM1428987 LE 1
+    GSM490134 LE 1
    </name>
    <label>
     biotin
@@ -443,14 +311,14 @@
   </labeled-extract>
   <source>
    <name>
-    GSM1428987 1
+    GSM490134 1
    </name>
    <comment>
     <name>
      Sample_description
     </name>
     <value>
-     total RNA
+     n/a
     </value>
    </comment>
    <comment>
@@ -458,44 +326,28 @@
      Sample_source_name
     </name>
     <value>
-     Isolated and in vitro cultured placental endothelial cells
-    </value>
-   </comment>
-   <comment>
-    <name>
-     Sample_title
-    </name>
-    <value>
-     EC3
+     GDM blood tissue
     </value>
    </comment>
   </source>
   <variable>
    <name>
-    cell type
+    TISSUE
    </name>
    <value>
-    endothelial cell
+    blood
    </value>
   </variable>
  </sample>
  <sample>
   <assay>
    <name>
-    GSM1428986
+    GSM490133
    </name>
   </assay>
   <characteristic>
    <category>
-    cell type
-   </category>
-   <value>
-    endothelial cell
-   </value>
-  </characteristic>
-  <characteristic>
-   <category>
-    organism
+    Organism
    </category>
    <value>
     Homo sapiens
@@ -503,58 +355,39 @@
   </characteristic>
   <characteristic>
    <category>
-    organism part
+    tissue
    </category>
    <value>
-    placenta
+    blood
    </value>
   </characteristic>
   <extract>
    <name>
-    GSM1428986 extract 1
+    GSM490133 extract 1
    </name>
   </extract>
-  <file>
-   <type>
-    data
-   </type>
-   <name>
-    GSM1428986_EC2.CEL
-   </name>
-   <url>
-    ftp://ftp.ebi.ac.uk/pub/databases/microarray/data/experiment/GEOD/E-GEOD-59126/E-GEOD-59126.raw.1.zip/GSM1428986_EC2.CEL
-   </url>
-   <comment>
-    <name>
-     ArrayExpress FTP file
-    </name>
-    <value>
-     ftp://ftp.ebi.ac.uk/pub/databases/microarray/data/experiment/GEOD/E-GEOD-59126/E-GEOD-59126.raw.1.zip
-    </value>
-   </comment>
-  </file>
   <file>
    <type>
     derived data
    </type>
    <name>
-    GSM1428986_sample_table.txt
+    GSM490133_sample_table.txt
    </name>
    <url>
-    ftp://ftp.ebi.ac.uk/pub/databases/microarray/data/experiment/GEOD/E-GEOD-59126/E-GEOD-59126.processed.1.zip/GSM1428986_sample_table.txt
+    ftp://ftp.ebi.ac.uk/pub/databases/microarray/data/experiment/GEOD/E-GEOD-19649/E-GEOD-19649.processed.1.zip/GSM490133_sample_table.txt
    </url>
    <comment>
     <name>
      Derived ArrayExpress FTP file
     </name>
     <value>
-     ftp://ftp.ebi.ac.uk/pub/databases/microarray/data/experiment/GEOD/E-GEOD-59126/E-GEOD-59126.processed.1.zip
+     ftp://ftp.ebi.ac.uk/pub/databases/microarray/data/experiment/GEOD/E-GEOD-19649/E-GEOD-19649.processed.1.zip
     </value>
    </comment>
   </file>
   <labeled-extract>
    <name>
-    GSM1428986 LE 1
+    GSM490133 LE 1
    </name>
    <label>
     biotin
@@ -562,14 +395,14 @@
   </labeled-extract>
   <source>
    <name>
-    GSM1428986 1
+    GSM490133 1
    </name>
    <comment>
     <name>
      Sample_description
     </name>
     <value>
-     total RNA
+     n/a
     </value>
    </comment>
    <comment>
@@ -577,143 +410,16 @@
      Sample_source_name
     </name>
     <value>
-     Isolated and in vitro cultured placental endothelial cells
-    </value>
-   </comment>
-   <comment>
-    <name>
-     Sample_title
-    </name>
-    <value>
-     EC2
+     GDM blood tissue
     </value>
    </comment>
   </source>
   <variable>
    <name>
-    cell type
+    TISSUE
    </name>
    <value>
-    endothelial cell
-   </value>
-  </variable>
- </sample>
- <sample>
-  <assay>
-   <name>
-    GSM1428985
-   </name>
-  </assay>
-  <characteristic>
-   <category>
-    cell type
-   </category>
-   <value>
-    endothelial cell
-   </value>
-  </characteristic>
-  <characteristic>
-   <category>
-    organism
-   </category>
-   <value>
-    Homo sapiens
-   </value>
-  </characteristic>
-  <characteristic>
-   <category>
-    organism part
-   </category>
-   <value>
-    placenta
-   </value>
-  </characteristic>
-  <extract>
-   <name>
-    GSM1428985 extract 1
-   </name>
-  </extract>
-  <file>
-   <type>
-    data
-   </type>
-   <name>
-    GSM1428985_EC1.CEL
-   </name>
-   <url>
-    ftp://ftp.ebi.ac.uk/pub/databases/microarray/data/experiment/GEOD/E-GEOD-59126/E-GEOD-59126.raw.1.zip/GSM1428985_EC1.CEL
-   </url>
-   <comment>
-    <name>
-     ArrayExpress FTP file
-    </name>
-    <value>
-     ftp://ftp.ebi.ac.uk/pub/databases/microarray/data/experiment/GEOD/E-GEOD-59126/E-GEOD-59126.raw.1.zip
-    </value>
-   </comment>
-  </file>
-  <file>
-   <type>
-    derived data
-   </type>
-   <name>
-    GSM1428985_sample_table.txt
-   </name>
-   <url>
-    ftp://ftp.ebi.ac.uk/pub/databases/microarray/data/experiment/GEOD/E-GEOD-59126/E-GEOD-59126.processed.1.zip/GSM1428985_sample_table.txt
-   </url>
-   <comment>
-    <name>
-     Derived ArrayExpress FTP file
-    </name>
-    <value>
-     ftp://ftp.ebi.ac.uk/pub/databases/microarray/data/experiment/GEOD/E-GEOD-59126/E-GEOD-59126.processed.1.zip
-    </value>
-   </comment>
-  </file>
-  <labeled-extract>
-   <name>
-    GSM1428985 LE 1
-   </name>
-   <label>
-    biotin
-   </label>
-  </labeled-extract>
-  <source>
-   <name>
-    GSM1428985 1
-   </name>
-   <comment>
-    <name>
-     Sample_description
-    </name>
-    <value>
-     total RNA
-    </value>
-   </comment>
-   <comment>
-    <name>
-     Sample_source_name
-    </name>
-    <value>
-     Isolated and in vitro cultured placental endothelial cells
-    </value>
-   </comment>
-   <comment>
-    <name>
-     Sample_title
-    </name>
-    <value>
-     EC1
-    </value>
-   </comment>
-  </source>
-  <variable>
-   <name>
-    cell type
-   </name>
-   <value>
-    endothelial cell
+    blood
    </value>
   </variable>
  </sample>
