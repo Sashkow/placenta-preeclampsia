@@ -14,40 +14,49 @@ from articles.models import Experiment
 import os
 os.chdir(os.path.dirname(__file__))
 
-class TestGetData(TestCase):
+# class TestGetData(TestCase):
 
-    def setUp(self):
-        self.s = ArrayExpress()
-        self.acc_lst = []
-        # with open("acc_lst.testdata", "wb") as afile:
-        #     pickle.dump(self.acc_lst, afile)
+#     def setUp(self):
+#         self.s = ArrayExpress()
+#         self.acc_lst = []
+#         # with open("acc_lst.testdata", "wb") as afile:
+#         #     pickle.dump(self.acc_lst, afile)
         
-        with open("acc_lst.testdata", "rb") as afile:
-            self.acc_lst = pickle.load(afile)
+#         with open("acc_lst.testdata", "rb") as afile:
+#             self.acc_lst = pickle.load(afile)
 
-    def tearDown(self):
-        self.s.session.close()
+#     def tearDown(self):
+#         self.s.session.close()
 
+<<<<<<< Updated upstream
    
+=======
+#     def test_get_experiment_acc_lst(self):
+#         res = get_experiment_acc_lst()
+#         self.assertTrue(res)
+#         for item in res:
+#             self.assertTrue(isinstance(item, str))
+>>>>>>> Stashed changes
 
-    def test_get_experiment_attributes(self): 
-        """
+    # def test_get_experiment_attributes(self): 
+    #     """
 
-        """   
-        exp_data = get_experiment_attributes("E-GEOD-74341")
+    #     """   
+    #     exp_data = get_experiment_attributes("E-GEOD-74341")
 
-        self.assertTrue(isinstance(exp_data, tuple))
-        self.assertTrue(len(exp_data), 2)
-        print(exp_data[0], exp_data[1])
-        self.assertTrue(isinstance(exp_data[0],dict))
-        self.assertTrue(isinstance(exp_data[1],dict))
+    #     self.assertTrue(isinstance(exp_data, tuple))
+    #     self.assertTrue(len(exp_data), 2)
+    #     print(exp_data[0], exp_data[1])
+    #     self.assertTrue(isinstance(exp_data[0],dict))
+    #     self.assertTrue(isinstance(exp_data[1],dict))
 
-        experiment_must_have = ['species', 'id', 'accession', 'secondaryaccession',
-         'name', 'experimenttype', 'releasedate', 'lastupdatedate',
-        'samples', 'assays', 'organism']
+    #     experiment_must_have = ['species', 'id', 'accession', 'secondaryaccession',
+    #      'name', 'experimenttype', 'releasedate', 'lastupdatedate',
+    #     'samples', 'assays', 'organism']
 
-        self.assertTrue(set(experiment_must_have).
-                            issubset(set(exp_data[0].keys())))
+       
+    #     self.assertTrue(set(experiment_must_have).
+    #                         issubset(set(exp_data[0].keys())))
 
 
     
@@ -67,6 +76,16 @@ class GetExperimentDataTestCase(TestCase):
         self.assertEquals(len(exp_in_db), 1)
 
 
+class PdataTestCase(TestCase):
+    def test_generate_pdata(self):
+        source = '/home/sashko/a/python/placenta-preeclampsia/downloads'
+        destination = ''
+        secondaryaccession = 'somegeo'
+        generate_pdata(source, secondaryaccession, destination)
 
-# if __name__ == '__main__':
-    # unittest.main()
+
+
+
+
+if __name__ == '__main__':
+    unittest.main()

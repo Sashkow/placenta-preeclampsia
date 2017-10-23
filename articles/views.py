@@ -59,7 +59,10 @@ def build_exp_table(request):
     ExpTable = type('ExpTable', (tables.Table,), cols)
     ExpTable._meta.attrs = {'class':'table table-hover'}
 
+
+    # print("all", Experiment.objects.all())
     exps_dicts = [exp.to_dict() for exp in Experiment.objects.all()]
+
 
     table = ExpTable(exps_dicts)
     tables.RequestConfig(request,  paginate={'per_page': 100}).configure(table)

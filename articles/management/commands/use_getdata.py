@@ -11,6 +11,7 @@ class Command(BaseCommand):
         """
         """
         print_exp_accession_microarrays_platform_name()
+
         
         # lst = get_placenta_accession()
         # experiment_id = lst[0]

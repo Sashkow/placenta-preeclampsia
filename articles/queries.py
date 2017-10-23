@@ -9,7 +9,40 @@ import plotly.plotly as py
 import plotly.graph_objs as go
 import plotly
 
+
+
 import numpy as np
+
+
+def get_healthy_term():
+    """
+    get all exps that are term
+    """
+    exps = []
+    samples = total_samples()
+    term_samples = []
+
+    for sample in samples:
+        if sample.get_gestational_age_category() == "Term" and sample.get_attribute_value('Diagnosis') == 'Healthy':
+            print(sample)
+            term_samples.append(sample.get_attribute_value('Sample Name'))
+    #         exp = str(sample.experiment)
+    #         if not exp in exps:
+    #             exps.append(exp)
+
+    # print(len(exps), exps)
+    # for exp in exps:
+    #     print(exp)
+
+    print(term_samples)
+    print(len(term_samples))
+
+
+ 
+
+
+
+
 
 def get_exp_status():
     exp = Experiment.objects.filter(data__contains ={'accession':'E-GEOD-25906'}).exists()
@@ -94,77 +127,84 @@ def cluster_samples():
     # split samples into classes of equivalence based on Diagnosis,
     # Gestational Age and Biological Specimen
     # """
-    samples = total_samples()
-    diagnosis = UnificatedSamplesAttributeName.objects.get(name="Diagnosis")
+
+    # samples = total_samples()
+
+    # diagnosis = UnificatedSamplesAttributeName.objects.get(name="Diagnosis")
     
-    specimen = UnificatedSamplesAttributeName.objects.get(name="Biological Specimen")
+    # specimen = UnificatedSamplesAttributeName.objects.get(name="Biological Specimen")
 
 
-    diagnosis_values = UnificatedSamplesAttributeValue.objects.filter(
-            unificated_name=diagnosis) #.values_list('value', flat=True).order_by()
+    # diagnosis_values = UnificatedSamplesAttributeValue.objects.filter(
+    #         unificated_name=diagnosis) #.values_list('value', flat=True).order_by()
 
-    geatation_values = [
-            "First Trimester",
-            "Second Trimester",
-            "Early Preterm",
-            "Late Preterm",
-            "Term"
-                ]
+    # geatation_values = [
+    #         "First Trimester",
+    #         "Second Trimester",
+    #         "Early Preterm",
+    #         "Late Preterm",
+    #         "Term"
+    #             ]
 
-    specimen_values = UnificatedSamplesAttributeValue.objects.filter(
-            unificated_name=specimen) #.values_list('value', flat=True).order_by()
+    # specimen_values = UnificatedSamplesAttributeValue.objects.filter(
+    #         unificated_name=specimen) #.values_list('value', flat=True).order_by()
 
-    groups = {}
+    # groups = {}
 
-    print("start:")
+    # print("start:")
 
-    for diagnosis_value in diagnosis_values:
-        for specimen_value in specimen_values:
-            for gestation_value in geatation_values:
-                group_name = " ".join([str(diagnosis_value.value),
-                                       str(specimen_value.value),
-                                       str(gestation_value)
-                                        ])
+    # for diagnosis_value in diagnosis_values:
+    #     for specimen_value in specimen_values:
+    #         for gestation_value in geatation_values:
+    #             group_name = " ".join([str(diagnosis_value.value),
+    #                                    str(specimen_value.value),
+    #                                    str(gestation_value)
+    #                                     ])
 
-                if not group_name in groups:
-                    groups[group_name] = [[], 0]
+    #             if not group_name in groups:
+    #                 groups[group_name] = [[], 0]
 
-    print("mapping:")
+    # print("mapping:")
 
-    for sample in samples:
-        diag = sample.get_attribute_value(diagnosis)
-        gest = sample.get_gestational_age_category()
-        spec = sample.get_attribute_value(specimen)
+    # for sample in samples:
+    #     diag = sample.get_attribute_value(diagnosis)
+    #     gest = sample.get_gestational_age_category()
+    #     spec = sample.get_attribute_value(specimen)
 
-        group_name = " ".join([str(diag),
-                               str(spec),
-                               str(gest),
-                                ])
-        if group_name in groups:
-            if not (str(sample.experiment) in groups[group_name][0]):
-                groups[group_name][0].append(str(sample.experiment))
-            groups[group_name][1] += 1
-        else:
-            print(group_name, sample.experiment)
+    #     group_name = " ".join([str(diag),
+    #                            str(spec),
+    #                            str(gest),
+    #                             ])
+    #     if group_name in groups:
+    #         if not (str(sample.experiment) in groups[group_name][0]):
+    #             groups[group_name][0].append(str(sample.experiment))
+    #         groups[group_name][1] += 1
+    #     else:
+    #         print(group_name, sample.experiment)
 
     import pickle
+    # with open('mapping.txt', 'wb') as f:
+    #     pickle.dump(groups, f)
 
-    with open('mapping.txt', 'wb') as f:
-        pickle.dump(groups, f)
-
-    # with open('mapping.txt', 'rb') as f:
-    #     groups = pickle.load(f)
+    with open('mapping.txt', 'rb') as f:
+        groups = pickle.load(f)
 
     summ = 0
     merged_list = []
 
     for group in sorted(groups):
-        if groups[group][1] > 0:
-            if "Healthy" in group and not "Adipose" in group and not "Blood" in group:
-                current_list = [str(item) for item in groups[group][0]]  
-                merged_list = merged_list + list(set(current_list) - set(merged_list))
-    print(merged_list)
-    print(len(merged_list))
+        if groups[group][1] > 0 and not "Adipose" in group and not "Blood" in group:
+            print(group, groups[group])
+
+
+
+
+    #     if groups[group][1] > 0:
+    #         # if "Healthy" in group and not "Adipose" in group and not "Blood" in group:
+    #         current_list = [str(item) for item in groups[group][0]]  
+    #         merged_list = merged_list + list(set(current_list) - set(merged_list))
+    # print(merged_list)
+    # print(len(merged_list))
 
 
 def experiments_with_no_gestation_age():
@@ -583,7 +623,7 @@ def total_samples():
         if not ('excluded' in exp.data):
             total_total.append(exp)
             if not exp.is_cell_line():
-                total.append(exp)
+                total.append(exp) 
 
             #     if exp.has_minimal():
             #         has_minimal.append(exp)

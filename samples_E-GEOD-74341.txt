@@ -1,17 +1,17 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <experiment api-revision="091015" api-version="3" revision="091015" version="1.0">
  <accession>
-  E-GEOD-19649
+  E-GEOD-74341
  </accession>
  <sample>
   <assay>
    <name>
-    GSM490137
+    GSM1917684
    </name>
   </assay>
   <characteristic>
    <category>
-    Organism
+    organism
    </category>
    <value>
     Homo sapiens
@@ -19,54 +19,89 @@
   </characteristic>
   <characteristic>
    <category>
-    tissue
+    organism part
    </category>
    <value>
-    placenta
+    placental tissue
+   </value>
+  </characteristic>
+  <characteristic>
+   <category>
+    sample type
+   </category>
+   <value>
+    pooled-sample reference
+   </value>
+  </characteristic>
+  <characteristic>
+   <category>
+    subject status
+   </category>
+   <value>
+    controls who delivered at term (&gt;36 weeks)
    </value>
   </characteristic>
   <extract>
    <name>
-    GSM490137 extract 1
+    GSM1917684 extract 1
    </name>
   </extract>
+  <file>
+   <type>
+    data
+   </type>
+   <name>
+    GSM1917684_S03_1_3.txt
+   </name>
+   <url>
+    ftp://ftp.ebi.ac.uk/pub/databases/microarray/data/experiment/GEOD/E-GEOD-74341/E-GEOD-74341.raw.1.zip/GSM1917684_S03_1_3.txt
+   </url>
+   <comment>
+    <name>
+     ArrayExpress FTP file
+    </name>
+    <value>
+     ftp://ftp.ebi.ac.uk/pub/databases/microarray/data/experiment/GEOD/E-GEOD-74341/E-GEOD-74341.raw.1.zip
+    </value>
+   </comment>
+  </file>
   <file>
    <type>
     derived data
    </type>
    <name>
-    GSM490137_sample_table.txt
+    GSM1917684_sample_table.txt
    </name>
    <url>
-    ftp://ftp.ebi.ac.uk/pub/databases/microarray/data/experiment/GEOD/E-GEOD-19649/E-GEOD-19649.processed.1.zip/GSM490137_sample_table.txt
+    ftp://ftp.ebi.ac.uk/pub/databases/microarray/data/experiment/GEOD/E-GEOD-74341/E-GEOD-74341.processed.1.zip/GSM1917684_sample_table.txt
    </url>
    <comment>
     <name>
      Derived ArrayExpress FTP file
     </name>
     <value>
-     ftp://ftp.ebi.ac.uk/pub/databases/microarray/data/experiment/GEOD/E-GEOD-19649/E-GEOD-19649.processed.1.zip
+     ftp://ftp.ebi.ac.uk/pub/databases/microarray/data/experiment/GEOD/E-GEOD-74341/E-GEOD-74341.processed.1.zip
     </value>
    </comment>
   </file>
   <labeled-extract>
    <name>
-    GSM490137 LE 1
+    GSM1917684 LE 1
    </name>
    <label>
-    biotin
+    Cy5
    </label>
   </labeled-extract>
   <source>
    <name>
-    GSM490137 1
+    GSM1917684 1
    </name>
    <comment>
     <name>
      Sample_description
     </name>
     <value>
-     n/a
+     P3_1_3
     </value>
    </comment>
    <comment>
@@ -74,28 +109,36 @@
      Sample_source_name
     </name>
     <value>
-     non-GDM placenta tissues
+     pooled controls who delivered at term
+    </value>
+   </comment>
+   <comment>
+    <name>
+     Sample_title
+    </name>
+    <value>
+     preterm_rep5
     </value>
    </comment>
   </source>
   <variable>
    <name>
-    TISSUE
+    subject status
    </name>
    <value>
-    placenta
+    controls who delivered at term (&gt;36 weeks)
    </value>
   </variable>
  </sample>
  <sample>
   <assay>
    <name>
-    GSM490136
+    GSM1917684
    </name>
   </assay>
   <characteristic>
    <category>
-    Organism
+    organism
    </category>
    <value>
     Homo sapiens
@@ -103,54 +146,88 @@
   </characteristic>
   <characteristic>
    <category>
-    tissue
+    organism part
    </category>
    <value>
-    placenta
+    placental tissue
+   </value>
+  </characteristic>
+  <characteristic>
+   <category>
+    sample type
+   </category>
+   <value>
+   </value>
+  </characteristic>
+  <characteristic>
+   <category>
+    subject status
+   </category>
+   <value>
+    controls who delivered preterm (&lt;34 weeks)
    </value>
   </characteristic>
   <extract>
    <name>
-    GSM490136 extract 1
+    GSM1917684 extract 2
    </name>
   </extract>
+  <file>
+   <type>
+    data
+   </type>
+   <name>
+    GSM1917684_S03_1_3.txt
+   </name>
+   <url>
+    ftp://ftp.ebi.ac.uk/pub/databases/microarray/data/experiment/GEOD/E-GEOD-74341/E-GEOD-74341.raw.1.zip/GSM1917684_S03_1_3.txt
+   </url>
+   <comment>
+    <name>
+     ArrayExpress FTP file
+    </name>
+    <value>
+     ftp://ftp.ebi.ac.uk/pub/databases/microarray/data/experiment/GEOD/E-GEOD-74341/E-GEOD-74341.raw.1.zip
+    </value>
+   </comment>
+  </file>
   <file>
    <type>
     derived data
    </type>
    <name>
-    GSM490136_sample_table.txt
+    GSM1917684_sample_table.txt
    </name>
    <url>
-    ftp://ftp.ebi.ac.uk/pub/databases/microarray/data/experiment/GEOD/E-GEOD-19649/E-GEOD-19649.processed.1.zip/GSM490136_sample_table.txt
+    ftp://ftp.ebi.ac.uk/pub/databases/microarray/data/experiment/GEOD/E-GEOD-74341/E-GEOD-74341.processed.1.zip/GSM1917684_sample_table.txt
    </url>
    <comment>
     <name>
      Derived ArrayExpress FTP file
     </name>
     <value>
-     ftp://ftp.ebi.ac.uk/pub/databases/microarray/data/experiment/GEOD/E-GEOD-19649/E-GEOD-19649.processed.1.zip
+     ftp://ftp.ebi.ac.uk/pub/databases/microarray/data/experiment/GEOD/E-GEOD-74341/E-GEOD-74341.processed.1.zip
     </value>
    </comment>
   </file>
   <labeled-extract>
    <name>
-    GSM490136 LE 1
+    GSM1917684 LE 2
    </name>
    <label>
-    biotin
+    Cy3
    </label>
   </labeled-extract>
   <source>
    <name>
-    GSM490136 1
+    GSM1917684 2
    </name>
    <comment>
     <name>
      Sample_description
     </name>
     <value>
-     n/a
+     P3_1_3
     </value>
    </comment>
    <comment>
@@ -158,28 +235,36 @@
      Sample_source_name
     </name>
     <value>
-     GDM placenta tissues
+     delivery at preterm_placental tissue
+    </value>
+   </comment>
+   <comment>
+    <name>
+     Sample_title
+    </name>
+    <value>
+     preterm_rep5
     </value>
    </comment>
   </source>
   <variable>
    <name>
-    TISSUE
+    subject status
    </name>
    <value>
-    placenta
+    controls who delivered preterm (&lt;34 weeks)
    </value>
   </variable>
  </sample>
  <sample>
   <assay>
    <name>
-    GSM490135
+    GSM1917683
    </name>
   </assay>
   <characteristic>
    <category>
-    Organism
+    organism
    </category>
    <value>
     Homo sapiens
@@ -187,54 +272,88 @@
   </characteristic>
   <characteristic>
    <category>
-    tissue
+    organism part
    </category>
    <value>
-    blood
+    placental tissue
+   </value>
+  </characteristic>
+  <characteristic>
+   <category>
+    sample type
+   </category>
+   <value>
+   </value>
+  </characteristic>
+  <characteristic>
+   <category>
+    subject status
+   </category>
+   <value>
+    controls who delivered preterm (&lt;34 weeks)
    </value>
   </characteristic>
   <extract>
    <name>
-    GSM490135 extract 1
+    GSM1917683 extract 2
    </name>
   </extract>
+  <file>
+   <type>
+    data
+   </type>
+   <name>
+    GSM1917683_S02_1_4.txt
+   </name>
+   <url>
+    ftp://ftp.ebi.ac.uk/pub/databases/microarray/data/experiment/GEOD/E-GEOD-74341/E-GEOD-74341.raw.1.zip/GSM1917683_S02_1_4.txt
+   </url>
+   <comment>
+    <name>
+     ArrayExpress FTP file
+    </name>
+    <value>
+     ftp://ftp.ebi.ac.uk/pub/databases/microarray/data/experiment/GEOD/E-GEOD-74341/E-GEOD-74341.raw.1.zip
+    </value>
+   </comment>
+  </file>
   <file>
    <type>
     derived data
    </type>
    <name>
-    GSM490135_sample_table.txt
+    GSM1917683_sample_table.txt
    </name>
    <url>
-    ftp://ftp.ebi.ac.uk/pub/databases/microarray/data/experiment/GEOD/E-GEOD-19649/E-GEOD-19649.processed.1.zip/GSM490135_sample_table.txt
+    ftp://ftp.ebi.ac.uk/pub/databases/microarray/data/experiment/GEOD/E-GEOD-74341/E-GEOD-74341.processed.1.zip/GSM1917683_sample_table.txt
    </url>
    <comment>
     <name>
      Derived ArrayExpress FTP file
     </name>
     <value>
-     ftp://ftp.ebi.ac.uk/pub/databases/microarray/data/experiment/GEOD/E-GEOD-19649/E-GEOD-19649.processed.1.zip
+     ftp://ftp.ebi.ac.uk/pub/databases/microarray/data/experiment/GEOD/E-GEOD-74341/E-GEOD-74341.processed.1.zip
     </value>
    </comment>
   </file>
   <labeled-extract>
    <name>
-    GSM490135 LE 1
+    GSM1917683 LE 2
    </name>
    <label>
-    biotin
+    Cy3
    </label>
   </labeled-extract>
   <source>
    <name>
-    GSM490135 1
+    GSM1917683 2
    </name>
    <comment>
     <name>
      Sample_description
     </name>
     <value>
-     n/a
+     P2_1_4
     </value>
    </comment>
    <comment>
@@ -242,28 +361,36 @@
      Sample_source_name
     </name>
     <value>
-     non-GDM blood tissue
+     delivery at preterm_placental tissue
+    </value>
+   </comment>
+   <comment>
+    <name>
+     Sample_title
+    </name>
+    <value>
+     preterm_rep4
     </value>
    </comment>
   </source>
   <variable>
    <name>
-    TISSUE
+    subject status
    </name>
    <value>
-    blood
+    controls who delivered preterm (&lt;34 weeks)
    </value>
   </variable>
  </sample>
  <sample>
   <assay>
    <name>
-    GSM490134
+    GSM1917683
    </name>
   </assay>
   <characteristic>
    <category>
-    Organism
+    organism
    </category>
    <value>
     Homo sapiens
@@ -271,54 +398,89 @@
   </characteristic>
   <characteristic>
    <category>
-    tissue
+    organism part
    </category>
    <value>
-    blood
+    placental tissue
+   </value>
+  </characteristic>
+  <characteristic>
+   <category>
+    sample type
+   </category>
+   <value>
+    pooled-sample reference
+   </value>
+  </characteristic>
+  <characteristic>
+   <category>
+    subject status
+   </category>
+   <value>
+    controls who delivered at term (&gt;36 weeks)
    </value>
   </characteristic>
   <extract>
    <name>
-    GSM490134 extract 1
+    GSM1917683 extract 1
    </name>
   </extract>
+  <file>
+   <type>
+    data
+   </type>
+   <name>
+    GSM1917683_S02_1_4.txt
+   </name>
+   <url>
+    ftp://ftp.ebi.ac.uk/pub/databases/microarray/data/experiment/GEOD/E-GEOD-74341/E-GEOD-74341.raw.1.zip/GSM1917683_S02_1_4.txt
+   </url>
+   <comment>
+    <name>
+     ArrayExpress FTP file
+    </name>
+    <value>
+     ftp://ftp.ebi.ac.uk/pub/databases/microarray/data/experiment/GEOD/E-GEOD-74341/E-GEOD-74341.raw.1.zip
+    </value>
+   </comment>
+  </file>
   <file>
    <type>
     derived data
    </type>
    <name>
-    GSM490134_sample_table.txt
+    GSM1917683_sample_table.txt
    </name>
    <url>
-    ftp://ftp.ebi.ac.uk/pub/databases/microarray/data/experiment/GEOD/E-GEOD-19649/E-GEOD-19649.processed.1.zip/GSM490134_sample_table.txt
+    ftp://ftp.ebi.ac.uk/pub/databases/microarray/data/experiment/GEOD/E-GEOD-74341/E-GEOD-74341.processed.1.zip/GSM1917683_sample_table.txt
    </url>
    <comment>
     <name>
      Derived ArrayExpress FTP file
     </name>
     <value>
-     ftp://ftp.ebi.ac.uk/pub/databases/microarray/data/experiment/GEOD/E-GEOD-19649/E-GEOD-19649.processed.1.zip
+     ftp://ftp.ebi.ac.uk/pub/databases/microarray/data/experiment/GEOD/E-GEOD-74341/E-GEOD-74341.processed.1.zip
     </value>
    </comment>
   </file>
   <labeled-extract>
    <name>
-    GSM490134 LE 1
+    GSM1917683 LE 1
    </name>
    <label>
-    biotin
+    Cy5
    </label>
   </labeled-extract>
   <source>
    <name>
-    GSM490134 1
+    GSM1917683 1
    </name>
    <comment>
     <name>
      Sample_description
     </name>
     <value>
-     n/a
+     P2_1_4
     </value>
    </comment>
    <comment>
@@ -326,28 +488,36 @@
      Sample_source_name
     </name>
     <value>
-     GDM blood tissue
+     pooled controls who delivered at term
+    </value>
+   </comment>
+   <comment>
+    <name>
+     Sample_title
+    </name>
+    <value>
+     preterm_rep4
     </value>
    </comment>
   </source>
   <variable>
    <name>
-    TISSUE
+    subject status
    </name>
    <value>
-    blood
+    controls who delivered at term (&gt;36 weeks)
    </value>
   </variable>
  </sample>
  <sample>
   <assay>
    <name>
-    GSM490133
+    GSM1917682
    </name>
   </assay>
   <characteristic>
    <category>
-    Organism
+    organism
    </category>
    <value>
     Homo sapiens
@@ -355,54 +525,89 @@
   </characteristic>
   <characteristic>
    <category>
-    tissue
+    organism part
    </category>
    <value>
-    blood
+    placental tissue
+   </value>
+  </characteristic>
+  <characteristic>
+   <category>
+    sample type
+   </category>
+   <value>
+    pooled-sample reference
+   </value>
+  </characteristic>
+  <characteristic>
+   <category>
+    subject status
+   </category>
+   <value>
+    controls who delivered at term (&gt;36 weeks)
    </value>
   </characteristic>
   <extract>
    <name>
-    GSM490133 extract 1
+    GSM1917682 extract 1
    </name>
   </extract>
+  <file>
+   <type>
+    data
+   </type>
+   <name>
+    GSM1917682_S02_1_3.txt
+   </name>
+   <url>
+    ftp://ftp.ebi.ac.uk/pub/databases/microarray/data/experiment/GEOD/E-GEOD-74341/E-GEOD-74341.raw.1.zip/GSM1917682_S02_1_3.txt
+   </url>
+   <comment>
+    <name>
+     ArrayExpress FTP file
+    </name>
+    <value>
+     ftp://ftp.ebi.ac.uk/pub/databases/microarray/data/experiment/GEOD/E-GEOD-74341/E-GEOD-74341.raw.1.zip
+    </value>
+   </comment>
+  </file>
   <file>
    <type>
     derived data
    </type>
    <name>
-    GSM490133_sample_table.txt
+    GSM1917682_sample_table.txt
    </name>
    <url>
-    ftp://ftp.ebi.ac.uk/pub/databases/microarray/data/experiment/GEOD/E-GEOD-19649/E-GEOD-19649.processed.1.zip/GSM490133_sample_table.txt
+    ftp://ftp.ebi.ac.uk/pub/databases/microarray/data/experiment/GEOD/E-GEOD-74341/E-GEOD-74341.processed.1.zip/GSM1917682_sample_table.txt
    </url>
    <comment>
     <name>
      Derived ArrayExpress FTP file
     </name>
     <value>
-     ftp://ftp.ebi.ac.uk/pub/databases/microarray/data/experiment/GEOD/E-GEOD-19649/E-GEOD-19649.processed.1.zip
+     ftp://ftp.ebi.ac.uk/pub/databases/microarray/data/experiment/GEOD/E-GEOD-74341/E-GEOD-74341.processed.1.zip
     </value>
    </comment>
   </file>
   <labeled-extract>
    <name>
-    GSM490133 LE 1
+    GSM1917682 LE 1
    </name>
    <label>
-    biotin
+    Cy5
    </label>
   </labeled-extract>
   <source>
    <name>
-    GSM490133 1
+    GSM1917682 1
    </name>
    <comment>
     <name>
      Sample_description
     </name>
     <value>
-     n/a
+     P2_1_3
     </value>
    </comment>
    <comment>
@@ -410,16 +615,5716 @@
      Sample_source_name
     </name>
     <value>
-     GDM blood tissue
+     pooled controls who delivered at term
+    </value>
+   </comment>
+   <comment>
+    <name>
+     Sample_title
+    </name>
+    <value>
+     preterm_rep3
     </value>
    </comment>
   </source>
   <variable>
    <name>
-    TISSUE
+    subject status
    </name>
    <value>
-    blood
+    controls who delivered at term (&gt;36 weeks)
+   </value>
+  </variable>
+ </sample>
+ <sample>
+  <assay>
+   <name>
+    GSM1917682
+   </name>
+  </assay>
+  <characteristic>
+   <category>
+    organism
+   </category>
+   <value>
+    Homo sapiens
+   </value>
+  </characteristic>
+  <characteristic>
+   <category>
+    organism part
+   </category>
+   <value>
+    placental tissue
+   </value>
+  </characteristic>
+  <characteristic>
+   <category>
+    sample type
+   </category>
+   <value>
+   </value>
+  </characteristic>
+  <characteristic>
+   <category>
+    subject status
+   </category>
+   <value>
+    controls who delivered preterm (&lt;34 weeks)
+   </value>
+  </characteristic>
+  <extract>
+   <name>
+    GSM1917682 extract 2
+   </name>
+  </extract>
+  <file>
+   <type>
+    data
+   </type>
+   <name>
+    GSM1917682_S02_1_3.txt
+   </name>
+   <url>
+    ftp://ftp.ebi.ac.uk/pub/databases/microarray/data/experiment/GEOD/E-GEOD-74341/E-GEOD-74341.raw.1.zip/GSM1917682_S02_1_3.txt
+   </url>
+   <comment>
+    <name>
+     ArrayExpress FTP file
+    </name>
+    <value>
+     ftp://ftp.ebi.ac.uk/pub/databases/microarray/data/experiment/GEOD/E-GEOD-74341/E-GEOD-74341.raw.1.zip
+    </value>
+   </comment>
+  </file>
+  <file>
+   <type>
+    derived data
+   </type>
+   <name>
+    GSM1917682_sample_table.txt
+   </name>
+   <url>
+    ftp://ftp.ebi.ac.uk/pub/databases/microarray/data/experiment/GEOD/E-GEOD-74341/E-GEOD-74341.processed.1.zip/GSM1917682_sample_table.txt
+   </url>
+   <comment>
+    <name>
+     Derived ArrayExpress FTP file
+    </name>
+    <value>
+     ftp://ftp.ebi.ac.uk/pub/databases/microarray/data/experiment/GEOD/E-GEOD-74341/E-GEOD-74341.processed.1.zip
+    </value>
+   </comment>
+  </file>
+  <labeled-extract>
+   <name>
+    GSM1917682 LE 2
+   </name>
+   <label>
+    Cy3
+   </label>
+  </labeled-extract>
+  <source>
+   <name>
+    GSM1917682 2
+   </name>
+   <comment>
+    <name>
+     Sample_description
+    </name>
+    <value>
+     P2_1_3
+    </value>
+   </comment>
+   <comment>
+    <name>
+     Sample_source_name
+    </name>
+    <value>
+     delivery at preterm_placental tissue
+    </value>
+   </comment>
+   <comment>
+    <name>
+     Sample_title
+    </name>
+    <value>
+     preterm_rep3
+    </value>
+   </comment>
+  </source>
+  <variable>
+   <name>
+    subject status
+   </name>
+   <value>
+    controls who delivered preterm (&lt;34 weeks)
+   </value>
+  </variable>
+ </sample>
+ <sample>
+  <assay>
+   <name>
+    GSM1917681
+   </name>
+  </assay>
+  <characteristic>
+   <category>
+    organism
+   </category>
+   <value>
+    Homo sapiens
+   </value>
+  </characteristic>
+  <characteristic>
+   <category>
+    organism part
+   </category>
+   <value>
+    placental tissue
+   </value>
+  </characteristic>
+  <characteristic>
+   <category>
+    sample type
+   </category>
+   <value>
+    pooled-sample reference
+   </value>
+  </characteristic>
+  <characteristic>
+   <category>
+    subject status
+   </category>
+   <value>
+    controls who delivered at term (&gt;36 weeks)
+   </value>
+  </characteristic>
+  <extract>
+   <name>
+    GSM1917681 extract 1
+   </name>
+  </extract>
+  <file>
+   <type>
+    data
+   </type>
+   <name>
+    GSM1917681_S02_1_2.txt
+   </name>
+   <url>
+    ftp://ftp.ebi.ac.uk/pub/databases/microarray/data/experiment/GEOD/E-GEOD-74341/E-GEOD-74341.raw.1.zip/GSM1917681_S02_1_2.txt
+   </url>
+   <comment>
+    <name>
+     ArrayExpress FTP file
+    </name>
+    <value>
+     ftp://ftp.ebi.ac.uk/pub/databases/microarray/data/experiment/GEOD/E-GEOD-74341/E-GEOD-74341.raw.1.zip
+    </value>
+   </comment>
+  </file>
+  <file>
+   <type>
+    derived data
+   </type>
+   <name>
+    GSM1917681_sample_table.txt
+   </name>
+   <url>
+    ftp://ftp.ebi.ac.uk/pub/databases/microarray/data/experiment/GEOD/E-GEOD-74341/E-GEOD-74341.processed.1.zip/GSM1917681_sample_table.txt
+   </url>
+   <comment>
+    <name>
+     Derived ArrayExpress FTP file
+    </name>
+    <value>
+     ftp://ftp.ebi.ac.uk/pub/databases/microarray/data/experiment/GEOD/E-GEOD-74341/E-GEOD-74341.processed.1.zip
+    </value>
+   </comment>
+  </file>
+  <labeled-extract>
+   <name>
+    GSM1917681 LE 1
+   </name>
+   <label>
+    Cy5
+   </label>
+  </labeled-extract>
+  <source>
+   <name>
+    GSM1917681 1
+   </name>
+   <comment>
+    <name>
+     Sample_description
+    </name>
+    <value>
+     P2_1_2
+    </value>
+   </comment>
+   <comment>
+    <name>
+     Sample_source_name
+    </name>
+    <value>
+     pooled controls who delivered at term
+    </value>
+   </comment>
+   <comment>
+    <name>
+     Sample_title
+    </name>
+    <value>
+     preterm_rep2
+    </value>
+   </comment>
+  </source>
+  <variable>
+   <name>
+    subject status
+   </name>
+   <value>
+    controls who delivered at term (&gt;36 weeks)
+   </value>
+  </variable>
+ </sample>
+ <sample>
+  <assay>
+   <name>
+    GSM1917681
+   </name>
+  </assay>
+  <characteristic>
+   <category>
+    organism
+   </category>
+   <value>
+    Homo sapiens
+   </value>
+  </characteristic>
+  <characteristic>
+   <category>
+    organism part
+   </category>
+   <value>
+    placental tissue
+   </value>
+  </characteristic>
+  <characteristic>
+   <category>
+    sample type
+   </category>
+   <value>
+   </value>
+  </characteristic>
+  <characteristic>
+   <category>
+    subject status
+   </category>
+   <value>
+    controls who delivered preterm (&lt;34 weeks)
+   </value>
+  </characteristic>
+  <extract>
+   <name>
+    GSM1917681 extract 2
+   </name>
+  </extract>
+  <file>
+   <type>
+    data
+   </type>
+   <name>
+    GSM1917681_S02_1_2.txt
+   </name>
+   <url>
+    ftp://ftp.ebi.ac.uk/pub/databases/microarray/data/experiment/GEOD/E-GEOD-74341/E-GEOD-74341.raw.1.zip/GSM1917681_S02_1_2.txt
+   </url>
+   <comment>
+    <name>
+     ArrayExpress FTP file
+    </name>
+    <value>
+     ftp://ftp.ebi.ac.uk/pub/databases/microarray/data/experiment/GEOD/E-GEOD-74341/E-GEOD-74341.raw.1.zip
+    </value>
+   </comment>
+  </file>
+  <file>
+   <type>
+    derived data
+   </type>
+   <name>
+    GSM1917681_sample_table.txt
+   </name>
+   <url>
+    ftp://ftp.ebi.ac.uk/pub/databases/microarray/data/experiment/GEOD/E-GEOD-74341/E-GEOD-74341.processed.1.zip/GSM1917681_sample_table.txt
+   </url>
+   <comment>
+    <name>
+     Derived ArrayExpress FTP file
+    </name>
+    <value>
+     ftp://ftp.ebi.ac.uk/pub/databases/microarray/data/experiment/GEOD/E-GEOD-74341/E-GEOD-74341.processed.1.zip
+    </value>
+   </comment>
+  </file>
+  <labeled-extract>
+   <name>
+    GSM1917681 LE 2
+   </name>
+   <label>
+    Cy3
+   </label>
+  </labeled-extract>
+  <source>
+   <name>
+    GSM1917681 2
+   </name>
+   <comment>
+    <name>
+     Sample_description
+    </name>
+    <value>
+     P2_1_2
+    </value>
+   </comment>
+   <comment>
+    <name>
+     Sample_source_name
+    </name>
+    <value>
+     delivery at preterm_placental tissue
+    </value>
+   </comment>
+   <comment>
+    <name>
+     Sample_title
+    </name>
+    <value>
+     preterm_rep2
+    </value>
+   </comment>
+  </source>
+  <variable>
+   <name>
+    subject status
+   </name>
+   <value>
+    controls who delivered preterm (&lt;34 weeks)
+   </value>
+  </variable>
+ </sample>
+ <sample>
+  <assay>
+   <name>
+    GSM1917680
+   </name>
+  </assay>
+  <characteristic>
+   <category>
+    organism
+   </category>
+   <value>
+    Homo sapiens
+   </value>
+  </characteristic>
+  <characteristic>
+   <category>
+    organism part
+   </category>
+   <value>
+    placental tissue
+   </value>
+  </characteristic>
+  <characteristic>
+   <category>
+    sample type
+   </category>
+   <value>
+    pooled-sample reference
+   </value>
+  </characteristic>
+  <characteristic>
+   <category>
+    subject status
+   </category>
+   <value>
+    controls who delivered at term (&gt;36 weeks)
+   </value>
+  </characteristic>
+  <extract>
+   <name>
+    GSM1917680 extract 1
+   </name>
+  </extract>
+  <file>
+   <type>
+    data
+   </type>
+   <name>
+    GSM1917680_S02_1_1.txt
+   </name>
+   <url>
+    ftp://ftp.ebi.ac.uk/pub/databases/microarray/data/experiment/GEOD/E-GEOD-74341/E-GEOD-74341.raw.1.zip/GSM1917680_S02_1_1.txt
+   </url>
+   <comment>
+    <name>
+     ArrayExpress FTP file
+    </name>
+    <value>
+     ftp://ftp.ebi.ac.uk/pub/databases/microarray/data/experiment/GEOD/E-GEOD-74341/E-GEOD-74341.raw.1.zip
+    </value>
+   </comment>
+  </file>
+  <file>
+   <type>
+    derived data
+   </type>
+   <name>
+    GSM1917680_sample_table.txt
+   </name>
+   <url>
+    ftp://ftp.ebi.ac.uk/pub/databases/microarray/data/experiment/GEOD/E-GEOD-74341/E-GEOD-74341.processed.1.zip/GSM1917680_sample_table.txt
+   </url>
+   <comment>
+    <name>
+     Derived ArrayExpress FTP file
+    </name>
+    <value>
+     ftp://ftp.ebi.ac.uk/pub/databases/microarray/data/experiment/GEOD/E-GEOD-74341/E-GEOD-74341.processed.1.zip
+    </value>
+   </comment>
+  </file>
+  <labeled-extract>
+   <name>
+    GSM1917680 LE 1
+   </name>
+   <label>
+    Cy5
+   </label>
+  </labeled-extract>
+  <source>
+   <name>
+    GSM1917680 1
+   </name>
+   <comment>
+    <name>
+     Sample_description
+    </name>
+    <value>
+     P2_1_1
+    </value>
+   </comment>
+   <comment>
+    <name>
+     Sample_source_name
+    </name>
+    <value>
+     pooled controls who delivered at term
+    </value>
+   </comment>
+   <comment>
+    <name>
+     Sample_title
+    </name>
+    <value>
+     preterm_rep1
+    </value>
+   </comment>
+  </source>
+  <variable>
+   <name>
+    subject status
+   </name>
+   <value>
+    controls who delivered at term (&gt;36 weeks)
+   </value>
+  </variable>
+ </sample>
+ <sample>
+  <assay>
+   <name>
+    GSM1917680
+   </name>
+  </assay>
+  <characteristic>
+   <category>
+    organism
+   </category>
+   <value>
+    Homo sapiens
+   </value>
+  </characteristic>
+  <characteristic>
+   <category>
+    organism part
+   </category>
+   <value>
+    placental tissue
+   </value>
+  </characteristic>
+  <characteristic>
+   <category>
+    sample type
+   </category>
+   <value>
+   </value>
+  </characteristic>
+  <characteristic>
+   <category>
+    subject status
+   </category>
+   <value>
+    controls who delivered preterm (&lt;34 weeks)
+   </value>
+  </characteristic>
+  <extract>
+   <name>
+    GSM1917680 extract 2
+   </name>
+  </extract>
+  <file>
+   <type>
+    data
+   </type>
+   <name>
+    GSM1917680_S02_1_1.txt
+   </name>
+   <url>
+    ftp://ftp.ebi.ac.uk/pub/databases/microarray/data/experiment/GEOD/E-GEOD-74341/E-GEOD-74341.raw.1.zip/GSM1917680_S02_1_1.txt
+   </url>
+   <comment>
+    <name>
+     ArrayExpress FTP file
+    </name>
+    <value>
+     ftp://ftp.ebi.ac.uk/pub/databases/microarray/data/experiment/GEOD/E-GEOD-74341/E-GEOD-74341.raw.1.zip
+    </value>
+   </comment>
+  </file>
+  <file>
+   <type>
+    derived data
+   </type>
+   <name>
+    GSM1917680_sample_table.txt
+   </name>
+   <url>
+    ftp://ftp.ebi.ac.uk/pub/databases/microarray/data/experiment/GEOD/E-GEOD-74341/E-GEOD-74341.processed.1.zip/GSM1917680_sample_table.txt
+   </url>
+   <comment>
+    <name>
+     Derived ArrayExpress FTP file
+    </name>
+    <value>
+     ftp://ftp.ebi.ac.uk/pub/databases/microarray/data/experiment/GEOD/E-GEOD-74341/E-GEOD-74341.processed.1.zip
+    </value>
+   </comment>
+  </file>
+  <labeled-extract>
+   <name>
+    GSM1917680 LE 2
+   </name>
+   <label>
+    Cy3
+   </label>
+  </labeled-extract>
+  <source>
+   <name>
+    GSM1917680 2
+   </name>
+   <comment>
+    <name>
+     Sample_description
+    </name>
+    <value>
+     P2_1_1
+    </value>
+   </comment>
+   <comment>
+    <name>
+     Sample_source_name
+    </name>
+    <value>
+     delivery at preterm_placental tissue
+    </value>
+   </comment>
+   <comment>
+    <name>
+     Sample_title
+    </name>
+    <value>
+     preterm_rep1
+    </value>
+   </comment>
+  </source>
+  <variable>
+   <name>
+    subject status
+   </name>
+   <value>
+    controls who delivered preterm (&lt;34 weeks)
+   </value>
+  </variable>
+ </sample>
+ <sample>
+  <assay>
+   <name>
+    GSM1917679
+   </name>
+  </assay>
+  <characteristic>
+   <category>
+    organism
+   </category>
+   <value>
+    Homo sapiens
+   </value>
+  </characteristic>
+  <characteristic>
+   <category>
+    organism part
+   </category>
+   <value>
+    placental tissue
+   </value>
+  </characteristic>
+  <characteristic>
+   <category>
+    sample type
+   </category>
+   <value>
+    pooled-sample reference
+   </value>
+  </characteristic>
+  <characteristic>
+   <category>
+    subject status
+   </category>
+   <value>
+    controls who delivered at term (&gt;36 weeks)
+   </value>
+  </characteristic>
+  <extract>
+   <name>
+    GSM1917679 extract 1
+   </name>
+  </extract>
+  <file>
+   <type>
+    data
+   </type>
+   <name>
+    GSM1917679_S03_2_4.txt
+   </name>
+   <url>
+    ftp://ftp.ebi.ac.uk/pub/databases/microarray/data/experiment/GEOD/E-GEOD-74341/E-GEOD-74341.raw.1.zip/GSM1917679_S03_2_4.txt
+   </url>
+   <comment>
+    <name>
+     ArrayExpress FTP file
+    </name>
+    <value>
+     ftp://ftp.ebi.ac.uk/pub/databases/microarray/data/experiment/GEOD/E-GEOD-74341/E-GEOD-74341.raw.1.zip
+    </value>
+   </comment>
+  </file>
+  <file>
+   <type>
+    derived data
+   </type>
+   <name>
+    GSM1917679_sample_table.txt
+   </name>
+   <url>
+    ftp://ftp.ebi.ac.uk/pub/databases/microarray/data/experiment/GEOD/E-GEOD-74341/E-GEOD-74341.processed.1.zip/GSM1917679_sample_table.txt
+   </url>
+   <comment>
+    <name>
+     Derived ArrayExpress FTP file
+    </name>
+    <value>
+     ftp://ftp.ebi.ac.uk/pub/databases/microarray/data/experiment/GEOD/E-GEOD-74341/E-GEOD-74341.processed.1.zip
+    </value>
+   </comment>
+  </file>
+  <labeled-extract>
+   <name>
+    GSM1917679 LE 1
+   </name>
+   <label>
+    Cy5
+   </label>
+  </labeled-extract>
+  <source>
+   <name>
+    GSM1917679 1
+   </name>
+   <comment>
+    <name>
+     Sample_description
+    </name>
+    <value>
+     N3_2_4
+    </value>
+   </comment>
+   <comment>
+    <name>
+     Sample_source_name
+    </name>
+    <value>
+     pooled controls who delivered at term
+    </value>
+   </comment>
+   <comment>
+    <name>
+     Sample_title
+    </name>
+    <value>
+     at_term_rep5
+    </value>
+   </comment>
+  </source>
+  <variable>
+   <name>
+    subject status
+   </name>
+   <value>
+    controls who delivered at term (&gt;36 weeks)
+   </value>
+  </variable>
+ </sample>
+ <sample>
+  <assay>
+   <name>
+    GSM1917679
+   </name>
+  </assay>
+  <characteristic>
+   <category>
+    organism
+   </category>
+   <value>
+    Homo sapiens
+   </value>
+  </characteristic>
+  <characteristic>
+   <category>
+    organism part
+   </category>
+   <value>
+    placental tissue
+   </value>
+  </characteristic>
+  <characteristic>
+   <category>
+    sample type
+   </category>
+   <value>
+   </value>
+  </characteristic>
+  <characteristic>
+   <category>
+    subject status
+   </category>
+   <value>
+    controls who delivered at term (&gt;36 weeks)
+   </value>
+  </characteristic>
+  <extract>
+   <name>
+    GSM1917679 extract 2
+   </name>
+  </extract>
+  <file>
+   <type>
+    data
+   </type>
+   <name>
+    GSM1917679_S03_2_4.txt
+   </name>
+   <url>
+    ftp://ftp.ebi.ac.uk/pub/databases/microarray/data/experiment/GEOD/E-GEOD-74341/E-GEOD-74341.raw.1.zip/GSM1917679_S03_2_4.txt
+   </url>
+   <comment>
+    <name>
+     ArrayExpress FTP file
+    </name>
+    <value>
+     ftp://ftp.ebi.ac.uk/pub/databases/microarray/data/experiment/GEOD/E-GEOD-74341/E-GEOD-74341.raw.1.zip
+    </value>
+   </comment>
+  </file>
+  <file>
+   <type>
+    derived data
+   </type>
+   <name>
+    GSM1917679_sample_table.txt
+   </name>
+   <url>
+    ftp://ftp.ebi.ac.uk/pub/databases/microarray/data/experiment/GEOD/E-GEOD-74341/E-GEOD-74341.processed.1.zip/GSM1917679_sample_table.txt
+   </url>
+   <comment>
+    <name>
+     Derived ArrayExpress FTP file
+    </name>
+    <value>
+     ftp://ftp.ebi.ac.uk/pub/databases/microarray/data/experiment/GEOD/E-GEOD-74341/E-GEOD-74341.processed.1.zip
+    </value>
+   </comment>
+  </file>
+  <labeled-extract>
+   <name>
+    GSM1917679 LE 2
+   </name>
+   <label>
+    Cy3
+   </label>
+  </labeled-extract>
+  <source>
+   <name>
+    GSM1917679 2
+   </name>
+   <comment>
+    <name>
+     Sample_description
+    </name>
+    <value>
+     N3_2_4
+    </value>
+   </comment>
+   <comment>
+    <name>
+     Sample_source_name
+    </name>
+    <value>
+     delivery at term_placental tissue
+    </value>
+   </comment>
+   <comment>
+    <name>
+     Sample_title
+    </name>
+    <value>
+     at_term_rep5
+    </value>
+   </comment>
+  </source>
+  <variable>
+   <name>
+    subject status
+   </name>
+   <value>
+    controls who delivered at term (&gt;36 weeks)
+   </value>
+  </variable>
+ </sample>
+ <sample>
+  <assay>
+   <name>
+    GSM1917678
+   </name>
+  </assay>
+  <characteristic>
+   <category>
+    organism
+   </category>
+   <value>
+    Homo sapiens
+   </value>
+  </characteristic>
+  <characteristic>
+   <category>
+    organism part
+   </category>
+   <value>
+    placental tissue
+   </value>
+  </characteristic>
+  <characteristic>
+   <category>
+    sample type
+   </category>
+   <value>
+    pooled-sample reference
+   </value>
+  </characteristic>
+  <characteristic>
+   <category>
+    subject status
+   </category>
+   <value>
+    controls who delivered at term (&gt;36 weeks)
+   </value>
+  </characteristic>
+  <extract>
+   <name>
+    GSM1917678 extract 1
+   </name>
+  </extract>
+  <file>
+   <type>
+    data
+   </type>
+   <name>
+    GSM1917678_S03_2_3.txt
+   </name>
+   <url>
+    ftp://ftp.ebi.ac.uk/pub/databases/microarray/data/experiment/GEOD/E-GEOD-74341/E-GEOD-74341.raw.1.zip/GSM1917678_S03_2_3.txt
+   </url>
+   <comment>
+    <name>
+     ArrayExpress FTP file
+    </name>
+    <value>
+     ftp://ftp.ebi.ac.uk/pub/databases/microarray/data/experiment/GEOD/E-GEOD-74341/E-GEOD-74341.raw.1.zip
+    </value>
+   </comment>
+  </file>
+  <file>
+   <type>
+    derived data
+   </type>
+   <name>
+    GSM1917678_sample_table.txt
+   </name>
+   <url>
+    ftp://ftp.ebi.ac.uk/pub/databases/microarray/data/experiment/GEOD/E-GEOD-74341/E-GEOD-74341.processed.1.zip/GSM1917678_sample_table.txt
+   </url>
+   <comment>
+    <name>
+     Derived ArrayExpress FTP file
+    </name>
+    <value>
+     ftp://ftp.ebi.ac.uk/pub/databases/microarray/data/experiment/GEOD/E-GEOD-74341/E-GEOD-74341.processed.1.zip
+    </value>
+   </comment>
+  </file>
+  <labeled-extract>
+   <name>
+    GSM1917678 LE 1
+   </name>
+   <label>
+    Cy5
+   </label>
+  </labeled-extract>
+  <source>
+   <name>
+    GSM1917678 1
+   </name>
+   <comment>
+    <name>
+     Sample_description
+    </name>
+    <value>
+     N3_2_3
+    </value>
+   </comment>
+   <comment>
+    <name>
+     Sample_source_name
+    </name>
+    <value>
+     pooled controls who delivered at term
+    </value>
+   </comment>
+   <comment>
+    <name>
+     Sample_title
+    </name>
+    <value>
+     at_term_rep4
+    </value>
+   </comment>
+  </source>
+  <variable>
+   <name>
+    subject status
+   </name>
+   <value>
+    controls who delivered at term (&gt;36 weeks)
+   </value>
+  </variable>
+ </sample>
+ <sample>
+  <assay>
+   <name>
+    GSM1917678
+   </name>
+  </assay>
+  <characteristic>
+   <category>
+    organism
+   </category>
+   <value>
+    Homo sapiens
+   </value>
+  </characteristic>
+  <characteristic>
+   <category>
+    organism part
+   </category>
+   <value>
+    placental tissue
+   </value>
+  </characteristic>
+  <characteristic>
+   <category>
+    sample type
+   </category>
+   <value>
+   </value>
+  </characteristic>
+  <characteristic>
+   <category>
+    subject status
+   </category>
+   <value>
+    controls who delivered at term (&gt;36 weeks)
+   </value>
+  </characteristic>
+  <extract>
+   <name>
+    GSM1917678 extract 2
+   </name>
+  </extract>
+  <file>
+   <type>
+    data
+   </type>
+   <name>
+    GSM1917678_S03_2_3.txt
+   </name>
+   <url>
+    ftp://ftp.ebi.ac.uk/pub/databases/microarray/data/experiment/GEOD/E-GEOD-74341/E-GEOD-74341.raw.1.zip/GSM1917678_S03_2_3.txt
+   </url>
+   <comment>
+    <name>
+     ArrayExpress FTP file
+    </name>
+    <value>
+     ftp://ftp.ebi.ac.uk/pub/databases/microarray/data/experiment/GEOD/E-GEOD-74341/E-GEOD-74341.raw.1.zip
+    </value>
+   </comment>
+  </file>
+  <file>
+   <type>
+    derived data
+   </type>
+   <name>
+    GSM1917678_sample_table.txt
+   </name>
+   <url>
+    ftp://ftp.ebi.ac.uk/pub/databases/microarray/data/experiment/GEOD/E-GEOD-74341/E-GEOD-74341.processed.1.zip/GSM1917678_sample_table.txt
+   </url>
+   <comment>
+    <name>
+     Derived ArrayExpress FTP file
+    </name>
+    <value>
+     ftp://ftp.ebi.ac.uk/pub/databases/microarray/data/experiment/GEOD/E-GEOD-74341/E-GEOD-74341.processed.1.zip
+    </value>
+   </comment>
+  </file>
+  <labeled-extract>
+   <name>
+    GSM1917678 LE 2
+   </name>
+   <label>
+    Cy3
+   </label>
+  </labeled-extract>
+  <source>
+   <name>
+    GSM1917678 2
+   </name>
+   <comment>
+    <name>
+     Sample_description
+    </name>
+    <value>
+     N3_2_3
+    </value>
+   </comment>
+   <comment>
+    <name>
+     Sample_source_name
+    </name>
+    <value>
+     delivery at term_placental tissue
+    </value>
+   </comment>
+   <comment>
+    <name>
+     Sample_title
+    </name>
+    <value>
+     at_term_rep4
+    </value>
+   </comment>
+  </source>
+  <variable>
+   <name>
+    subject status
+   </name>
+   <value>
+    controls who delivered at term (&gt;36 weeks)
+   </value>
+  </variable>
+ </sample>
+ <sample>
+  <assay>
+   <name>
+    GSM1917677
+   </name>
+  </assay>
+  <characteristic>
+   <category>
+    organism
+   </category>
+   <value>
+    Homo sapiens
+   </value>
+  </characteristic>
+  <characteristic>
+   <category>
+    organism part
+   </category>
+   <value>
+    placental tissue
+   </value>
+  </characteristic>
+  <characteristic>
+   <category>
+    sample type
+   </category>
+   <value>
+    pooled-sample reference
+   </value>
+  </characteristic>
+  <characteristic>
+   <category>
+    subject status
+   </category>
+   <value>
+    controls who delivered at term (&gt;36 weeks)
+   </value>
+  </characteristic>
+  <extract>
+   <name>
+    GSM1917677 extract 1
+   </name>
+  </extract>
+  <file>
+   <type>
+    data
+   </type>
+   <name>
+    GSM1917677_S03_2_2.txt
+   </name>
+   <url>
+    ftp://ftp.ebi.ac.uk/pub/databases/microarray/data/experiment/GEOD/E-GEOD-74341/E-GEOD-74341.raw.1.zip/GSM1917677_S03_2_2.txt
+   </url>
+   <comment>
+    <name>
+     ArrayExpress FTP file
+    </name>
+    <value>
+     ftp://ftp.ebi.ac.uk/pub/databases/microarray/data/experiment/GEOD/E-GEOD-74341/E-GEOD-74341.raw.1.zip
+    </value>
+   </comment>
+  </file>
+  <file>
+   <type>
+    derived data
+   </type>
+   <name>
+    GSM1917677_sample_table.txt
+   </name>
+   <url>
+    ftp://ftp.ebi.ac.uk/pub/databases/microarray/data/experiment/GEOD/E-GEOD-74341/E-GEOD-74341.processed.1.zip/GSM1917677_sample_table.txt
+   </url>
+   <comment>
+    <name>
+     Derived ArrayExpress FTP file
+    </name>
+    <value>
+     ftp://ftp.ebi.ac.uk/pub/databases/microarray/data/experiment/GEOD/E-GEOD-74341/E-GEOD-74341.processed.1.zip
+    </value>
+   </comment>
+  </file>
+  <labeled-extract>
+   <name>
+    GSM1917677 LE 1
+   </name>
+   <label>
+    Cy5
+   </label>
+  </labeled-extract>
+  <source>
+   <name>
+    GSM1917677 1
+   </name>
+   <comment>
+    <name>
+     Sample_description
+    </name>
+    <value>
+     N3_2_2
+    </value>
+   </comment>
+   <comment>
+    <name>
+     Sample_source_name
+    </name>
+    <value>
+     pooled controls who delivered at term
+    </value>
+   </comment>
+   <comment>
+    <name>
+     Sample_title
+    </name>
+    <value>
+     at_term_rep3
+    </value>
+   </comment>
+  </source>
+  <variable>
+   <name>
+    subject status
+   </name>
+   <value>
+    controls who delivered at term (&gt;36 weeks)
+   </value>
+  </variable>
+ </sample>
+ <sample>
+  <assay>
+   <name>
+    GSM1917677
+   </name>
+  </assay>
+  <characteristic>
+   <category>
+    organism
+   </category>
+   <value>
+    Homo sapiens
+   </value>
+  </characteristic>
+  <characteristic>
+   <category>
+    organism part
+   </category>
+   <value>
+    placental tissue
+   </value>
+  </characteristic>
+  <characteristic>
+   <category>
+    sample type
+   </category>
+   <value>
+   </value>
+  </characteristic>
+  <characteristic>
+   <category>
+    subject status
+   </category>
+   <value>
+    controls who delivered at term (&gt;36 weeks)
+   </value>
+  </characteristic>
+  <extract>
+   <name>
+    GSM1917677 extract 2
+   </name>
+  </extract>
+  <file>
+   <type>
+    data
+   </type>
+   <name>
+    GSM1917677_S03_2_2.txt
+   </name>
+   <url>
+    ftp://ftp.ebi.ac.uk/pub/databases/microarray/data/experiment/GEOD/E-GEOD-74341/E-GEOD-74341.raw.1.zip/GSM1917677_S03_2_2.txt
+   </url>
+   <comment>
+    <name>
+     ArrayExpress FTP file
+    </name>
+    <value>
+     ftp://ftp.ebi.ac.uk/pub/databases/microarray/data/experiment/GEOD/E-GEOD-74341/E-GEOD-74341.raw.1.zip
+    </value>
+   </comment>
+  </file>
+  <file>
+   <type>
+    derived data
+   </type>
+   <name>
+    GSM1917677_sample_table.txt
+   </name>
+   <url>
+    ftp://ftp.ebi.ac.uk/pub/databases/microarray/data/experiment/GEOD/E-GEOD-74341/E-GEOD-74341.processed.1.zip/GSM1917677_sample_table.txt
+   </url>
+   <comment>
+    <name>
+     Derived ArrayExpress FTP file
+    </name>
+    <value>
+     ftp://ftp.ebi.ac.uk/pub/databases/microarray/data/experiment/GEOD/E-GEOD-74341/E-GEOD-74341.processed.1.zip
+    </value>
+   </comment>
+  </file>
+  <labeled-extract>
+   <name>
+    GSM1917677 LE 2
+   </name>
+   <label>
+    Cy3
+   </label>
+  </labeled-extract>
+  <source>
+   <name>
+    GSM1917677 2
+   </name>
+   <comment>
+    <name>
+     Sample_description
+    </name>
+    <value>
+     N3_2_2
+    </value>
+   </comment>
+   <comment>
+    <name>
+     Sample_source_name
+    </name>
+    <value>
+     delivery at term_placental tissue
+    </value>
+   </comment>
+   <comment>
+    <name>
+     Sample_title
+    </name>
+    <value>
+     at_term_rep3
+    </value>
+   </comment>
+  </source>
+  <variable>
+   <name>
+    subject status
+   </name>
+   <value>
+    controls who delivered at term (&gt;36 weeks)
+   </value>
+  </variable>
+ </sample>
+ <sample>
+  <assay>
+   <name>
+    GSM1917676
+   </name>
+  </assay>
+  <characteristic>
+   <category>
+    organism
+   </category>
+   <value>
+    Homo sapiens
+   </value>
+  </characteristic>
+  <characteristic>
+   <category>
+    organism part
+   </category>
+   <value>
+    placental tissue
+   </value>
+  </characteristic>
+  <characteristic>
+   <category>
+    sample type
+   </category>
+   <value>
+    pooled-sample reference
+   </value>
+  </characteristic>
+  <characteristic>
+   <category>
+    subject status
+   </category>
+   <value>
+    controls who delivered at term (&gt;36 weeks)
+   </value>
+  </characteristic>
+  <extract>
+   <name>
+    GSM1917676 extract 1
+   </name>
+  </extract>
+  <file>
+   <type>
+    data
+   </type>
+   <name>
+    GSM1917676_S03_2_1.txt
+   </name>
+   <url>
+    ftp://ftp.ebi.ac.uk/pub/databases/microarray/data/experiment/GEOD/E-GEOD-74341/E-GEOD-74341.raw.1.zip/GSM1917676_S03_2_1.txt
+   </url>
+   <comment>
+    <name>
+     ArrayExpress FTP file
+    </name>
+    <value>
+     ftp://ftp.ebi.ac.uk/pub/databases/microarray/data/experiment/GEOD/E-GEOD-74341/E-GEOD-74341.raw.1.zip
+    </value>
+   </comment>
+  </file>
+  <file>
+   <type>
+    derived data
+   </type>
+   <name>
+    GSM1917676_sample_table.txt
+   </name>
+   <url>
+    ftp://ftp.ebi.ac.uk/pub/databases/microarray/data/experiment/GEOD/E-GEOD-74341/E-GEOD-74341.processed.1.zip/GSM1917676_sample_table.txt
+   </url>
+   <comment>
+    <name>
+     Derived ArrayExpress FTP file
+    </name>
+    <value>
+     ftp://ftp.ebi.ac.uk/pub/databases/microarray/data/experiment/GEOD/E-GEOD-74341/E-GEOD-74341.processed.1.zip
+    </value>
+   </comment>
+  </file>
+  <labeled-extract>
+   <name>
+    GSM1917676 LE 1
+   </name>
+   <label>
+    Cy5
+   </label>
+  </labeled-extract>
+  <source>
+   <name>
+    GSM1917676 1
+   </name>
+   <comment>
+    <name>
+     Sample_description
+    </name>
+    <value>
+     N3_2_1
+    </value>
+   </comment>
+   <comment>
+    <name>
+     Sample_source_name
+    </name>
+    <value>
+     pooled controls who delivered at term
+    </value>
+   </comment>
+   <comment>
+    <name>
+     Sample_title
+    </name>
+    <value>
+     at_term_rep2
+    </value>
+   </comment>
+  </source>
+  <variable>
+   <name>
+    subject status
+   </name>
+   <value>
+    controls who delivered at term (&gt;36 weeks)
+   </value>
+  </variable>
+ </sample>
+ <sample>
+  <assay>
+   <name>
+    GSM1917676
+   </name>
+  </assay>
+  <characteristic>
+   <category>
+    organism
+   </category>
+   <value>
+    Homo sapiens
+   </value>
+  </characteristic>
+  <characteristic>
+   <category>
+    organism part
+   </category>
+   <value>
+    placental tissue
+   </value>
+  </characteristic>
+  <characteristic>
+   <category>
+    sample type
+   </category>
+   <value>
+   </value>
+  </characteristic>
+  <characteristic>
+   <category>
+    subject status
+   </category>
+   <value>
+    controls who delivered at term (&gt;36 weeks)
+   </value>
+  </characteristic>
+  <extract>
+   <name>
+    GSM1917676 extract 2
+   </name>
+  </extract>
+  <file>
+   <type>
+    data
+   </type>
+   <name>
+    GSM1917676_S03_2_1.txt
+   </name>
+   <url>
+    ftp://ftp.ebi.ac.uk/pub/databases/microarray/data/experiment/GEOD/E-GEOD-74341/E-GEOD-74341.raw.1.zip/GSM1917676_S03_2_1.txt
+   </url>
+   <comment>
+    <name>
+     ArrayExpress FTP file
+    </name>
+    <value>
+     ftp://ftp.ebi.ac.uk/pub/databases/microarray/data/experiment/GEOD/E-GEOD-74341/E-GEOD-74341.raw.1.zip
+    </value>
+   </comment>
+  </file>
+  <file>
+   <type>
+    derived data
+   </type>
+   <name>
+    GSM1917676_sample_table.txt
+   </name>
+   <url>
+    ftp://ftp.ebi.ac.uk/pub/databases/microarray/data/experiment/GEOD/E-GEOD-74341/E-GEOD-74341.processed.1.zip/GSM1917676_sample_table.txt
+   </url>
+   <comment>
+    <name>
+     Derived ArrayExpress FTP file
+    </name>
+    <value>
+     ftp://ftp.ebi.ac.uk/pub/databases/microarray/data/experiment/GEOD/E-GEOD-74341/E-GEOD-74341.processed.1.zip
+    </value>
+   </comment>
+  </file>
+  <labeled-extract>
+   <name>
+    GSM1917676 LE 2
+   </name>
+   <label>
+    Cy3
+   </label>
+  </labeled-extract>
+  <source>
+   <name>
+    GSM1917676 2
+   </name>
+   <comment>
+    <name>
+     Sample_description
+    </name>
+    <value>
+     N3_2_1
+    </value>
+   </comment>
+   <comment>
+    <name>
+     Sample_source_name
+    </name>
+    <value>
+     delivery at term_placental tissue
+    </value>
+   </comment>
+   <comment>
+    <name>
+     Sample_title
+    </name>
+    <value>
+     at_term_rep2
+    </value>
+   </comment>
+  </source>
+  <variable>
+   <name>
+    subject status
+   </name>
+   <value>
+    controls who delivered at term (&gt;36 weeks)
+   </value>
+  </variable>
+ </sample>
+ <sample>
+  <assay>
+   <name>
+    GSM1917675
+   </name>
+  </assay>
+  <characteristic>
+   <category>
+    organism
+   </category>
+   <value>
+    Homo sapiens
+   </value>
+  </characteristic>
+  <characteristic>
+   <category>
+    organism part
+   </category>
+   <value>
+    placental tissue
+   </value>
+  </characteristic>
+  <characteristic>
+   <category>
+    sample type
+   </category>
+   <value>
+   </value>
+  </characteristic>
+  <characteristic>
+   <category>
+    subject status
+   </category>
+   <value>
+    controls who delivered at term (&gt;36 weeks)
+   </value>
+  </characteristic>
+  <extract>
+   <name>
+    GSM1917675 extract 2
+   </name>
+  </extract>
+  <file>
+   <type>
+    data
+   </type>
+   <name>
+    GSM1917675_S03_1_4.txt
+   </name>
+   <url>
+    ftp://ftp.ebi.ac.uk/pub/databases/microarray/data/experiment/GEOD/E-GEOD-74341/E-GEOD-74341.raw.1.zip/GSM1917675_S03_1_4.txt
+   </url>
+   <comment>
+    <name>
+     ArrayExpress FTP file
+    </name>
+    <value>
+     ftp://ftp.ebi.ac.uk/pub/databases/microarray/data/experiment/GEOD/E-GEOD-74341/E-GEOD-74341.raw.1.zip
+    </value>
+   </comment>
+  </file>
+  <file>
+   <type>
+    derived data
+   </type>
+   <name>
+    GSM1917675_sample_table.txt
+   </name>
+   <url>
+    ftp://ftp.ebi.ac.uk/pub/databases/microarray/data/experiment/GEOD/E-GEOD-74341/E-GEOD-74341.processed.1.zip/GSM1917675_sample_table.txt
+   </url>
+   <comment>
+    <name>
+     Derived ArrayExpress FTP file
+    </name>
+    <value>
+     ftp://ftp.ebi.ac.uk/pub/databases/microarray/data/experiment/GEOD/E-GEOD-74341/E-GEOD-74341.processed.1.zip
+    </value>
+   </comment>
+  </file>
+  <labeled-extract>
+   <name>
+    GSM1917675 LE 2
+   </name>
+   <label>
+    Cy3
+   </label>
+  </labeled-extract>
+  <source>
+   <name>
+    GSM1917675 2
+   </name>
+   <comment>
+    <name>
+     Sample_description
+    </name>
+    <value>
+     N3_1_4
+    </value>
+   </comment>
+   <comment>
+    <name>
+     Sample_source_name
+    </name>
+    <value>
+     delivery at term_placental tissue
+    </value>
+   </comment>
+   <comment>
+    <name>
+     Sample_title
+    </name>
+    <value>
+     at_term_rep1
+    </value>
+   </comment>
+  </source>
+  <variable>
+   <name>
+    subject status
+   </name>
+   <value>
+    controls who delivered at term (&gt;36 weeks)
+   </value>
+  </variable>
+ </sample>
+ <sample>
+  <assay>
+   <name>
+    GSM1917675
+   </name>
+  </assay>
+  <characteristic>
+   <category>
+    organism
+   </category>
+   <value>
+    Homo sapiens
+   </value>
+  </characteristic>
+  <characteristic>
+   <category>
+    organism part
+   </category>
+   <value>
+    placental tissue
+   </value>
+  </characteristic>
+  <characteristic>
+   <category>
+    sample type
+   </category>
+   <value>
+    pooled-sample reference
+   </value>
+  </characteristic>
+  <characteristic>
+   <category>
+    subject status
+   </category>
+   <value>
+    controls who delivered at term (&gt;36 weeks)
+   </value>
+  </characteristic>
+  <extract>
+   <name>
+    GSM1917675 extract 1
+   </name>
+  </extract>
+  <file>
+   <type>
+    data
+   </type>
+   <name>
+    GSM1917675_S03_1_4.txt
+   </name>
+   <url>
+    ftp://ftp.ebi.ac.uk/pub/databases/microarray/data/experiment/GEOD/E-GEOD-74341/E-GEOD-74341.raw.1.zip/GSM1917675_S03_1_4.txt
+   </url>
+   <comment>
+    <name>
+     ArrayExpress FTP file
+    </name>
+    <value>
+     ftp://ftp.ebi.ac.uk/pub/databases/microarray/data/experiment/GEOD/E-GEOD-74341/E-GEOD-74341.raw.1.zip
+    </value>
+   </comment>
+  </file>
+  <file>
+   <type>
+    derived data
+   </type>
+   <name>
+    GSM1917675_sample_table.txt
+   </name>
+   <url>
+    ftp://ftp.ebi.ac.uk/pub/databases/microarray/data/experiment/GEOD/E-GEOD-74341/E-GEOD-74341.processed.1.zip/GSM1917675_sample_table.txt
+   </url>
+   <comment>
+    <name>
+     Derived ArrayExpress FTP file
+    </name>
+    <value>
+     ftp://ftp.ebi.ac.uk/pub/databases/microarray/data/experiment/GEOD/E-GEOD-74341/E-GEOD-74341.processed.1.zip
+    </value>
+   </comment>
+  </file>
+  <labeled-extract>
+   <name>
+    GSM1917675 LE 1
+   </name>
+   <label>
+    Cy5
+   </label>
+  </labeled-extract>
+  <source>
+   <name>
+    GSM1917675 1
+   </name>
+   <comment>
+    <name>
+     Sample_description
+    </name>
+    <value>
+     N3_1_4
+    </value>
+   </comment>
+   <comment>
+    <name>
+     Sample_source_name
+    </name>
+    <value>
+     pooled controls who delivered at term
+    </value>
+   </comment>
+   <comment>
+    <name>
+     Sample_title
+    </name>
+    <value>
+     at_term_rep1
+    </value>
+   </comment>
+  </source>
+  <variable>
+   <name>
+    subject status
+   </name>
+   <value>
+    controls who delivered at term (&gt;36 weeks)
+   </value>
+  </variable>
+ </sample>
+ <sample>
+  <assay>
+   <name>
+    GSM1917674
+   </name>
+  </assay>
+  <characteristic>
+   <category>
+    organism
+   </category>
+   <value>
+    Homo sapiens
+   </value>
+  </characteristic>
+  <characteristic>
+   <category>
+    organism part
+   </category>
+   <value>
+    placental tissue
+   </value>
+  </characteristic>
+  <characteristic>
+   <category>
+    sample type
+   </category>
+   <value>
+    pooled-sample reference
+   </value>
+  </characteristic>
+  <characteristic>
+   <category>
+    subject status
+   </category>
+   <value>
+    controls who delivered at term (&gt;36 weeks)
+   </value>
+  </characteristic>
+  <extract>
+   <name>
+    GSM1917674 extract 1
+   </name>
+  </extract>
+  <file>
+   <type>
+    data
+   </type>
+   <name>
+    GSM1917674_S04_1_4.txt
+   </name>
+   <url>
+    ftp://ftp.ebi.ac.uk/pub/databases/microarray/data/experiment/GEOD/E-GEOD-74341/E-GEOD-74341.raw.1.zip/GSM1917674_S04_1_4.txt
+   </url>
+   <comment>
+    <name>
+     ArrayExpress FTP file
+    </name>
+    <value>
+     ftp://ftp.ebi.ac.uk/pub/databases/microarray/data/experiment/GEOD/E-GEOD-74341/E-GEOD-74341.raw.1.zip
+    </value>
+   </comment>
+  </file>
+  <file>
+   <type>
+    derived data
+   </type>
+   <name>
+    GSM1917674_sample_table.txt
+   </name>
+   <url>
+    ftp://ftp.ebi.ac.uk/pub/databases/microarray/data/experiment/GEOD/E-GEOD-74341/E-GEOD-74341.processed.1.zip/GSM1917674_sample_table.txt
+   </url>
+   <comment>
+    <name>
+     Derived ArrayExpress FTP file
+    </name>
+    <value>
+     ftp://ftp.ebi.ac.uk/pub/databases/microarray/data/experiment/GEOD/E-GEOD-74341/E-GEOD-74341.processed.1.zip
+    </value>
+   </comment>
+  </file>
+  <labeled-extract>
+   <name>
+    GSM1917674 LE 1
+   </name>
+   <label>
+    Cy5
+   </label>
+  </labeled-extract>
+  <source>
+   <name>
+    GSM1917674 1
+   </name>
+   <comment>
+    <name>
+     Sample_description
+    </name>
+    <value>
+     L4_1_4
+    </value>
+   </comment>
+   <comment>
+    <name>
+     Sample_source_name
+    </name>
+    <value>
+     pooled controls who delivered at term
+    </value>
+   </comment>
+   <comment>
+    <name>
+     Sample_title
+    </name>
+    <value>
+     LOPE_rep8
+    </value>
+   </comment>
+  </source>
+  <variable>
+   <name>
+    subject status
+   </name>
+   <value>
+    controls who delivered at term (&gt;36 weeks)
+   </value>
+  </variable>
+ </sample>
+ <sample>
+  <assay>
+   <name>
+    GSM1917674
+   </name>
+  </assay>
+  <characteristic>
+   <category>
+    organism
+   </category>
+   <value>
+    Homo sapiens
+   </value>
+  </characteristic>
+  <characteristic>
+   <category>
+    organism part
+   </category>
+   <value>
+    placental tissue
+   </value>
+  </characteristic>
+  <characteristic>
+   <category>
+    sample type
+   </category>
+   <value>
+   </value>
+  </characteristic>
+  <characteristic>
+   <category>
+    subject status
+   </category>
+   <value>
+    patients with late-onset (&gt;36 weeks) preeclampsia (LOPE)
+   </value>
+  </characteristic>
+  <extract>
+   <name>
+    GSM1917674 extract 2
+   </name>
+  </extract>
+  <file>
+   <type>
+    data
+   </type>
+   <name>
+    GSM1917674_S04_1_4.txt
+   </name>
+   <url>
+    ftp://ftp.ebi.ac.uk/pub/databases/microarray/data/experiment/GEOD/E-GEOD-74341/E-GEOD-74341.raw.1.zip/GSM1917674_S04_1_4.txt
+   </url>
+   <comment>
+    <name>
+     ArrayExpress FTP file
+    </name>
+    <value>
+     ftp://ftp.ebi.ac.uk/pub/databases/microarray/data/experiment/GEOD/E-GEOD-74341/E-GEOD-74341.raw.1.zip
+    </value>
+   </comment>
+  </file>
+  <file>
+   <type>
+    derived data
+   </type>
+   <name>
+    GSM1917674_sample_table.txt
+   </name>
+   <url>
+    ftp://ftp.ebi.ac.uk/pub/databases/microarray/data/experiment/GEOD/E-GEOD-74341/E-GEOD-74341.processed.1.zip/GSM1917674_sample_table.txt
+   </url>
+   <comment>
+    <name>
+     Derived ArrayExpress FTP file
+    </name>
+    <value>
+     ftp://ftp.ebi.ac.uk/pub/databases/microarray/data/experiment/GEOD/E-GEOD-74341/E-GEOD-74341.processed.1.zip
+    </value>
+   </comment>
+  </file>
+  <labeled-extract>
+   <name>
+    GSM1917674 LE 2
+   </name>
+   <label>
+    Cy3
+   </label>
+  </labeled-extract>
+  <source>
+   <name>
+    GSM1917674 2
+   </name>
+   <comment>
+    <name>
+     Sample_description
+    </name>
+    <value>
+     L4_1_4
+    </value>
+   </comment>
+   <comment>
+    <name>
+     Sample_source_name
+    </name>
+    <value>
+     LOPE_placental tissue
+    </value>
+   </comment>
+   <comment>
+    <name>
+     Sample_title
+    </name>
+    <value>
+     LOPE_rep8
+    </value>
+   </comment>
+  </source>
+  <variable>
+   <name>
+    subject status
+   </name>
+   <value>
+    patients with late-onset (&gt;36 weeks) preeclampsia (LOPE)
+   </value>
+  </variable>
+ </sample>
+ <sample>
+  <assay>
+   <name>
+    GSM1917673
+   </name>
+  </assay>
+  <characteristic>
+   <category>
+    organism
+   </category>
+   <value>
+    Homo sapiens
+   </value>
+  </characteristic>
+  <characteristic>
+   <category>
+    organism part
+   </category>
+   <value>
+    placental tissue
+   </value>
+  </characteristic>
+  <characteristic>
+   <category>
+    sample type
+   </category>
+   <value>
+   </value>
+  </characteristic>
+  <characteristic>
+   <category>
+    subject status
+   </category>
+   <value>
+    patients with late-onset (&gt;36 weeks) preeclampsia (LOPE)
+   </value>
+  </characteristic>
+  <extract>
+   <name>
+    GSM1917673 extract 2
+   </name>
+  </extract>
+  <file>
+   <type>
+    data
+   </type>
+   <name>
+    GSM1917673_S04_1_1.txt
+   </name>
+   <url>
+    ftp://ftp.ebi.ac.uk/pub/databases/microarray/data/experiment/GEOD/E-GEOD-74341/E-GEOD-74341.raw.1.zip/GSM1917673_S04_1_1.txt
+   </url>
+   <comment>
+    <name>
+     ArrayExpress FTP file
+    </name>
+    <value>
+     ftp://ftp.ebi.ac.uk/pub/databases/microarray/data/experiment/GEOD/E-GEOD-74341/E-GEOD-74341.raw.1.zip
+    </value>
+   </comment>
+  </file>
+  <file>
+   <type>
+    derived data
+   </type>
+   <name>
+    GSM1917673_sample_table.txt
+   </name>
+   <url>
+    ftp://ftp.ebi.ac.uk/pub/databases/microarray/data/experiment/GEOD/E-GEOD-74341/E-GEOD-74341.processed.1.zip/GSM1917673_sample_table.txt
+   </url>
+   <comment>
+    <name>
+     Derived ArrayExpress FTP file
+    </name>
+    <value>
+     ftp://ftp.ebi.ac.uk/pub/databases/microarray/data/experiment/GEOD/E-GEOD-74341/E-GEOD-74341.processed.1.zip
+    </value>
+   </comment>
+  </file>
+  <labeled-extract>
+   <name>
+    GSM1917673 LE 2
+   </name>
+   <label>
+    Cy3
+   </label>
+  </labeled-extract>
+  <source>
+   <name>
+    GSM1917673 2
+   </name>
+   <comment>
+    <name>
+     Sample_description
+    </name>
+    <value>
+     L4_1_1
+    </value>
+   </comment>
+   <comment>
+    <name>
+     Sample_source_name
+    </name>
+    <value>
+     LOPE_placental tissue
+    </value>
+   </comment>
+   <comment>
+    <name>
+     Sample_title
+    </name>
+    <value>
+     LOPE_rep7
+    </value>
+   </comment>
+  </source>
+  <variable>
+   <name>
+    subject status
+   </name>
+   <value>
+    patients with late-onset (&gt;36 weeks) preeclampsia (LOPE)
+   </value>
+  </variable>
+ </sample>
+ <sample>
+  <assay>
+   <name>
+    GSM1917673
+   </name>
+  </assay>
+  <characteristic>
+   <category>
+    organism
+   </category>
+   <value>
+    Homo sapiens
+   </value>
+  </characteristic>
+  <characteristic>
+   <category>
+    organism part
+   </category>
+   <value>
+    placental tissue
+   </value>
+  </characteristic>
+  <characteristic>
+   <category>
+    sample type
+   </category>
+   <value>
+    pooled-sample reference
+   </value>
+  </characteristic>
+  <characteristic>
+   <category>
+    subject status
+   </category>
+   <value>
+    controls who delivered at term (&gt;36 weeks)
+   </value>
+  </characteristic>
+  <extract>
+   <name>
+    GSM1917673 extract 1
+   </name>
+  </extract>
+  <file>
+   <type>
+    data
+   </type>
+   <name>
+    GSM1917673_S04_1_1.txt
+   </name>
+   <url>
+    ftp://ftp.ebi.ac.uk/pub/databases/microarray/data/experiment/GEOD/E-GEOD-74341/E-GEOD-74341.raw.1.zip/GSM1917673_S04_1_1.txt
+   </url>
+   <comment>
+    <name>
+     ArrayExpress FTP file
+    </name>
+    <value>
+     ftp://ftp.ebi.ac.uk/pub/databases/microarray/data/experiment/GEOD/E-GEOD-74341/E-GEOD-74341.raw.1.zip
+    </value>
+   </comment>
+  </file>
+  <file>
+   <type>
+    derived data
+   </type>
+   <name>
+    GSM1917673_sample_table.txt
+   </name>
+   <url>
+    ftp://ftp.ebi.ac.uk/pub/databases/microarray/data/experiment/GEOD/E-GEOD-74341/E-GEOD-74341.processed.1.zip/GSM1917673_sample_table.txt
+   </url>
+   <comment>
+    <name>
+     Derived ArrayExpress FTP file
+    </name>
+    <value>
+     ftp://ftp.ebi.ac.uk/pub/databases/microarray/data/experiment/GEOD/E-GEOD-74341/E-GEOD-74341.processed.1.zip
+    </value>
+   </comment>
+  </file>
+  <labeled-extract>
+   <name>
+    GSM1917673 LE 1
+   </name>
+   <label>
+    Cy5
+   </label>
+  </labeled-extract>
+  <source>
+   <name>
+    GSM1917673 1
+   </name>
+   <comment>
+    <name>
+     Sample_description
+    </name>
+    <value>
+     L4_1_1
+    </value>
+   </comment>
+   <comment>
+    <name>
+     Sample_source_name
+    </name>
+    <value>
+     pooled controls who delivered at term
+    </value>
+   </comment>
+   <comment>
+    <name>
+     Sample_title
+    </name>
+    <value>
+     LOPE_rep7
+    </value>
+   </comment>
+  </source>
+  <variable>
+   <name>
+    subject status
+   </name>
+   <value>
+    controls who delivered at term (&gt;36 weeks)
+   </value>
+  </variable>
+ </sample>
+ <sample>
+  <assay>
+   <name>
+    GSM1917672
+   </name>
+  </assay>
+  <characteristic>
+   <category>
+    organism
+   </category>
+   <value>
+    Homo sapiens
+   </value>
+  </characteristic>
+  <characteristic>
+   <category>
+    organism part
+   </category>
+   <value>
+    placental tissue
+   </value>
+  </characteristic>
+  <characteristic>
+   <category>
+    sample type
+   </category>
+   <value>
+   </value>
+  </characteristic>
+  <characteristic>
+   <category>
+    subject status
+   </category>
+   <value>
+    patients with late-onset (&gt;36 weeks) preeclampsia (LOPE)
+   </value>
+  </characteristic>
+  <extract>
+   <name>
+    GSM1917672 extract 2
+   </name>
+  </extract>
+  <file>
+   <type>
+    data
+   </type>
+   <name>
+    GSM1917672_S03_1_1.txt
+   </name>
+   <url>
+    ftp://ftp.ebi.ac.uk/pub/databases/microarray/data/experiment/GEOD/E-GEOD-74341/E-GEOD-74341.raw.1.zip/GSM1917672_S03_1_1.txt
+   </url>
+   <comment>
+    <name>
+     ArrayExpress FTP file
+    </name>
+    <value>
+     ftp://ftp.ebi.ac.uk/pub/databases/microarray/data/experiment/GEOD/E-GEOD-74341/E-GEOD-74341.raw.1.zip
+    </value>
+   </comment>
+  </file>
+  <file>
+   <type>
+    derived data
+   </type>
+   <name>
+    GSM1917672_sample_table.txt
+   </name>
+   <url>
+    ftp://ftp.ebi.ac.uk/pub/databases/microarray/data/experiment/GEOD/E-GEOD-74341/E-GEOD-74341.processed.1.zip/GSM1917672_sample_table.txt
+   </url>
+   <comment>
+    <name>
+     Derived ArrayExpress FTP file
+    </name>
+    <value>
+     ftp://ftp.ebi.ac.uk/pub/databases/microarray/data/experiment/GEOD/E-GEOD-74341/E-GEOD-74341.processed.1.zip
+    </value>
+   </comment>
+  </file>
+  <labeled-extract>
+   <name>
+    GSM1917672 LE 2
+   </name>
+   <label>
+    Cy3
+   </label>
+  </labeled-extract>
+  <source>
+   <name>
+    GSM1917672 2
+   </name>
+   <comment>
+    <name>
+     Sample_description
+    </name>
+    <value>
+     L3_1_1
+    </value>
+   </comment>
+   <comment>
+    <name>
+     Sample_source_name
+    </name>
+    <value>
+     LOPE_placental tissue
+    </value>
+   </comment>
+   <comment>
+    <name>
+     Sample_title
+    </name>
+    <value>
+     LOPE_rep6
+    </value>
+   </comment>
+  </source>
+  <variable>
+   <name>
+    subject status
+   </name>
+   <value>
+    patients with late-onset (&gt;36 weeks) preeclampsia (LOPE)
+   </value>
+  </variable>
+ </sample>
+ <sample>
+  <assay>
+   <name>
+    GSM1917672
+   </name>
+  </assay>
+  <characteristic>
+   <category>
+    organism
+   </category>
+   <value>
+    Homo sapiens
+   </value>
+  </characteristic>
+  <characteristic>
+   <category>
+    organism part
+   </category>
+   <value>
+    placental tissue
+   </value>
+  </characteristic>
+  <characteristic>
+   <category>
+    sample type
+   </category>
+   <value>
+    pooled-sample reference
+   </value>
+  </characteristic>
+  <characteristic>
+   <category>
+    subject status
+   </category>
+   <value>
+    controls who delivered at term (&gt;36 weeks)
+   </value>
+  </characteristic>
+  <extract>
+   <name>
+    GSM1917672 extract 1
+   </name>
+  </extract>
+  <file>
+   <type>
+    data
+   </type>
+   <name>
+    GSM1917672_S03_1_1.txt
+   </name>
+   <url>
+    ftp://ftp.ebi.ac.uk/pub/databases/microarray/data/experiment/GEOD/E-GEOD-74341/E-GEOD-74341.raw.1.zip/GSM1917672_S03_1_1.txt
+   </url>
+   <comment>
+    <name>
+     ArrayExpress FTP file
+    </name>
+    <value>
+     ftp://ftp.ebi.ac.uk/pub/databases/microarray/data/experiment/GEOD/E-GEOD-74341/E-GEOD-74341.raw.1.zip
+    </value>
+   </comment>
+  </file>
+  <file>
+   <type>
+    derived data
+   </type>
+   <name>
+    GSM1917672_sample_table.txt
+   </name>
+   <url>
+    ftp://ftp.ebi.ac.uk/pub/databases/microarray/data/experiment/GEOD/E-GEOD-74341/E-GEOD-74341.processed.1.zip/GSM1917672_sample_table.txt
+   </url>
+   <comment>
+    <name>
+     Derived ArrayExpress FTP file
+    </name>
+    <value>
+     ftp://ftp.ebi.ac.uk/pub/databases/microarray/data/experiment/GEOD/E-GEOD-74341/E-GEOD-74341.processed.1.zip
+    </value>
+   </comment>
+  </file>
+  <labeled-extract>
+   <name>
+    GSM1917672 LE 1
+   </name>
+   <label>
+    Cy5
+   </label>
+  </labeled-extract>
+  <source>
+   <name>
+    GSM1917672 1
+   </name>
+   <comment>
+    <name>
+     Sample_description
+    </name>
+    <value>
+     L3_1_1
+    </value>
+   </comment>
+   <comment>
+    <name>
+     Sample_source_name
+    </name>
+    <value>
+     pooled controls who delivered at term
+    </value>
+   </comment>
+   <comment>
+    <name>
+     Sample_title
+    </name>
+    <value>
+     LOPE_rep6
+    </value>
+   </comment>
+  </source>
+  <variable>
+   <name>
+    subject status
+   </name>
+   <value>
+    controls who delivered at term (&gt;36 weeks)
+   </value>
+  </variable>
+ </sample>
+ <sample>
+  <assay>
+   <name>
+    GSM1917671
+   </name>
+  </assay>
+  <characteristic>
+   <category>
+    organism
+   </category>
+   <value>
+    Homo sapiens
+   </value>
+  </characteristic>
+  <characteristic>
+   <category>
+    organism part
+   </category>
+   <value>
+    placental tissue
+   </value>
+  </characteristic>
+  <characteristic>
+   <category>
+    sample type
+   </category>
+   <value>
+    pooled-sample reference
+   </value>
+  </characteristic>
+  <characteristic>
+   <category>
+    subject status
+   </category>
+   <value>
+    controls who delivered at term (&gt;36 weeks)
+   </value>
+  </characteristic>
+  <extract>
+   <name>
+    GSM1917671 extract 1
+   </name>
+  </extract>
+  <file>
+   <type>
+    data
+   </type>
+   <name>
+    GSM1917671_S02_2_4.txt
+   </name>
+   <url>
+    ftp://ftp.ebi.ac.uk/pub/databases/microarray/data/experiment/GEOD/E-GEOD-74341/E-GEOD-74341.raw.1.zip/GSM1917671_S02_2_4.txt
+   </url>
+   <comment>
+    <name>
+     ArrayExpress FTP file
+    </name>
+    <value>
+     ftp://ftp.ebi.ac.uk/pub/databases/microarray/data/experiment/GEOD/E-GEOD-74341/E-GEOD-74341.raw.1.zip
+    </value>
+   </comment>
+  </file>
+  <file>
+   <type>
+    derived data
+   </type>
+   <name>
+    GSM1917671_sample_table.txt
+   </name>
+   <url>
+    ftp://ftp.ebi.ac.uk/pub/databases/microarray/data/experiment/GEOD/E-GEOD-74341/E-GEOD-74341.processed.1.zip/GSM1917671_sample_table.txt
+   </url>
+   <comment>
+    <name>
+     Derived ArrayExpress FTP file
+    </name>
+    <value>
+     ftp://ftp.ebi.ac.uk/pub/databases/microarray/data/experiment/GEOD/E-GEOD-74341/E-GEOD-74341.processed.1.zip
+    </value>
+   </comment>
+  </file>
+  <labeled-extract>
+   <name>
+    GSM1917671 LE 1
+   </name>
+   <label>
+    Cy5
+   </label>
+  </labeled-extract>
+  <source>
+   <name>
+    GSM1917671 1
+   </name>
+   <comment>
+    <name>
+     Sample_description
+    </name>
+    <value>
+     L2_2_4
+    </value>
+   </comment>
+   <comment>
+    <name>
+     Sample_source_name
+    </name>
+    <value>
+     pooled controls who delivered at term
+    </value>
+   </comment>
+   <comment>
+    <name>
+     Sample_title
+    </name>
+    <value>
+     LOPE_rep5
+    </value>
+   </comment>
+  </source>
+  <variable>
+   <name>
+    subject status
+   </name>
+   <value>
+    controls who delivered at term (&gt;36 weeks)
+   </value>
+  </variable>
+ </sample>
+ <sample>
+  <assay>
+   <name>
+    GSM1917671
+   </name>
+  </assay>
+  <characteristic>
+   <category>
+    organism
+   </category>
+   <value>
+    Homo sapiens
+   </value>
+  </characteristic>
+  <characteristic>
+   <category>
+    organism part
+   </category>
+   <value>
+    placental tissue
+   </value>
+  </characteristic>
+  <characteristic>
+   <category>
+    sample type
+   </category>
+   <value>
+   </value>
+  </characteristic>
+  <characteristic>
+   <category>
+    subject status
+   </category>
+   <value>
+    patients with late-onset (&gt;36 weeks) preeclampsia (LOPE)
+   </value>
+  </characteristic>
+  <extract>
+   <name>
+    GSM1917671 extract 2
+   </name>
+  </extract>
+  <file>
+   <type>
+    data
+   </type>
+   <name>
+    GSM1917671_S02_2_4.txt
+   </name>
+   <url>
+    ftp://ftp.ebi.ac.uk/pub/databases/microarray/data/experiment/GEOD/E-GEOD-74341/E-GEOD-74341.raw.1.zip/GSM1917671_S02_2_4.txt
+   </url>
+   <comment>
+    <name>
+     ArrayExpress FTP file
+    </name>
+    <value>
+     ftp://ftp.ebi.ac.uk/pub/databases/microarray/data/experiment/GEOD/E-GEOD-74341/E-GEOD-74341.raw.1.zip
+    </value>
+   </comment>
+  </file>
+  <file>
+   <type>
+    derived data
+   </type>
+   <name>
+    GSM1917671_sample_table.txt
+   </name>
+   <url>
+    ftp://ftp.ebi.ac.uk/pub/databases/microarray/data/experiment/GEOD/E-GEOD-74341/E-GEOD-74341.processed.1.zip/GSM1917671_sample_table.txt
+   </url>
+   <comment>
+    <name>
+     Derived ArrayExpress FTP file
+    </name>
+    <value>
+     ftp://ftp.ebi.ac.uk/pub/databases/microarray/data/experiment/GEOD/E-GEOD-74341/E-GEOD-74341.processed.1.zip
+    </value>
+   </comment>
+  </file>
+  <labeled-extract>
+   <name>
+    GSM1917671 LE 2
+   </name>
+   <label>
+    Cy3
+   </label>
+  </labeled-extract>
+  <source>
+   <name>
+    GSM1917671 2
+   </name>
+   <comment>
+    <name>
+     Sample_description
+    </name>
+    <value>
+     L2_2_4
+    </value>
+   </comment>
+   <comment>
+    <name>
+     Sample_source_name
+    </name>
+    <value>
+     LOPE_placental tissue
+    </value>
+   </comment>
+   <comment>
+    <name>
+     Sample_title
+    </name>
+    <value>
+     LOPE_rep5
+    </value>
+   </comment>
+  </source>
+  <variable>
+   <name>
+    subject status
+   </name>
+   <value>
+    patients with late-onset (&gt;36 weeks) preeclampsia (LOPE)
+   </value>
+  </variable>
+ </sample>
+ <sample>
+  <assay>
+   <name>
+    GSM1917670
+   </name>
+  </assay>
+  <characteristic>
+   <category>
+    organism
+   </category>
+   <value>
+    Homo sapiens
+   </value>
+  </characteristic>
+  <characteristic>
+   <category>
+    organism part
+   </category>
+   <value>
+    placental tissue
+   </value>
+  </characteristic>
+  <characteristic>
+   <category>
+    sample type
+   </category>
+   <value>
+    pooled-sample reference
+   </value>
+  </characteristic>
+  <characteristic>
+   <category>
+    subject status
+   </category>
+   <value>
+    controls who delivered at term (&gt;36 weeks)
+   </value>
+  </characteristic>
+  <extract>
+   <name>
+    GSM1917670 extract 1
+   </name>
+  </extract>
+  <file>
+   <type>
+    data
+   </type>
+   <name>
+    GSM1917670_S02_2_3.txt
+   </name>
+   <url>
+    ftp://ftp.ebi.ac.uk/pub/databases/microarray/data/experiment/GEOD/E-GEOD-74341/E-GEOD-74341.raw.1.zip/GSM1917670_S02_2_3.txt
+   </url>
+   <comment>
+    <name>
+     ArrayExpress FTP file
+    </name>
+    <value>
+     ftp://ftp.ebi.ac.uk/pub/databases/microarray/data/experiment/GEOD/E-GEOD-74341/E-GEOD-74341.raw.1.zip
+    </value>
+   </comment>
+  </file>
+  <file>
+   <type>
+    derived data
+   </type>
+   <name>
+    GSM1917670_sample_table.txt
+   </name>
+   <url>
+    ftp://ftp.ebi.ac.uk/pub/databases/microarray/data/experiment/GEOD/E-GEOD-74341/E-GEOD-74341.processed.1.zip/GSM1917670_sample_table.txt
+   </url>
+   <comment>
+    <name>
+     Derived ArrayExpress FTP file
+    </name>
+    <value>
+     ftp://ftp.ebi.ac.uk/pub/databases/microarray/data/experiment/GEOD/E-GEOD-74341/E-GEOD-74341.processed.1.zip
+    </value>
+   </comment>
+  </file>
+  <labeled-extract>
+   <name>
+    GSM1917670 LE 1
+   </name>
+   <label>
+    Cy5
+   </label>
+  </labeled-extract>
+  <source>
+   <name>
+    GSM1917670 1
+   </name>
+   <comment>
+    <name>
+     Sample_description
+    </name>
+    <value>
+     L2_2_3
+    </value>
+   </comment>
+   <comment>
+    <name>
+     Sample_source_name
+    </name>
+    <value>
+     pooled controls who delivered at term
+    </value>
+   </comment>
+   <comment>
+    <name>
+     Sample_title
+    </name>
+    <value>
+     LOPE_rep4
+    </value>
+   </comment>
+  </source>
+  <variable>
+   <name>
+    subject status
+   </name>
+   <value>
+    controls who delivered at term (&gt;36 weeks)
+   </value>
+  </variable>
+ </sample>
+ <sample>
+  <assay>
+   <name>
+    GSM1917670
+   </name>
+  </assay>
+  <characteristic>
+   <category>
+    organism
+   </category>
+   <value>
+    Homo sapiens
+   </value>
+  </characteristic>
+  <characteristic>
+   <category>
+    organism part
+   </category>
+   <value>
+    placental tissue
+   </value>
+  </characteristic>
+  <characteristic>
+   <category>
+    sample type
+   </category>
+   <value>
+   </value>
+  </characteristic>
+  <characteristic>
+   <category>
+    subject status
+   </category>
+   <value>
+    patients with late-onset (&gt;36 weeks) preeclampsia (LOPE)
+   </value>
+  </characteristic>
+  <extract>
+   <name>
+    GSM1917670 extract 2
+   </name>
+  </extract>
+  <file>
+   <type>
+    data
+   </type>
+   <name>
+    GSM1917670_S02_2_3.txt
+   </name>
+   <url>
+    ftp://ftp.ebi.ac.uk/pub/databases/microarray/data/experiment/GEOD/E-GEOD-74341/E-GEOD-74341.raw.1.zip/GSM1917670_S02_2_3.txt
+   </url>
+   <comment>
+    <name>
+     ArrayExpress FTP file
+    </name>
+    <value>
+     ftp://ftp.ebi.ac.uk/pub/databases/microarray/data/experiment/GEOD/E-GEOD-74341/E-GEOD-74341.raw.1.zip
+    </value>
+   </comment>
+  </file>
+  <file>
+   <type>
+    derived data
+   </type>
+   <name>
+    GSM1917670_sample_table.txt
+   </name>
+   <url>
+    ftp://ftp.ebi.ac.uk/pub/databases/microarray/data/experiment/GEOD/E-GEOD-74341/E-GEOD-74341.processed.1.zip/GSM1917670_sample_table.txt
+   </url>
+   <comment>
+    <name>
+     Derived ArrayExpress FTP file
+    </name>
+    <value>
+     ftp://ftp.ebi.ac.uk/pub/databases/microarray/data/experiment/GEOD/E-GEOD-74341/E-GEOD-74341.processed.1.zip
+    </value>
+   </comment>
+  </file>
+  <labeled-extract>
+   <name>
+    GSM1917670 LE 2
+   </name>
+   <label>
+    Cy3
+   </label>
+  </labeled-extract>
+  <source>
+   <name>
+    GSM1917670 2
+   </name>
+   <comment>
+    <name>
+     Sample_description
+    </name>
+    <value>
+     L2_2_3
+    </value>
+   </comment>
+   <comment>
+    <name>
+     Sample_source_name
+    </name>
+    <value>
+     LOPE_placental tissue
+    </value>
+   </comment>
+   <comment>
+    <name>
+     Sample_title
+    </name>
+    <value>
+     LOPE_rep4
+    </value>
+   </comment>
+  </source>
+  <variable>
+   <name>
+    subject status
+   </name>
+   <value>
+    patients with late-onset (&gt;36 weeks) preeclampsia (LOPE)
+   </value>
+  </variable>
+ </sample>
+ <sample>
+  <assay>
+   <name>
+    GSM1917669
+   </name>
+  </assay>
+  <characteristic>
+   <category>
+    organism
+   </category>
+   <value>
+    Homo sapiens
+   </value>
+  </characteristic>
+  <characteristic>
+   <category>
+    organism part
+   </category>
+   <value>
+    placental tissue
+   </value>
+  </characteristic>
+  <characteristic>
+   <category>
+    sample type
+   </category>
+   <value>
+   </value>
+  </characteristic>
+  <characteristic>
+   <category>
+    subject status
+   </category>
+   <value>
+    patients with late-onset (&gt;36 weeks) preeclampsia (LOPE)
+   </value>
+  </characteristic>
+  <extract>
+   <name>
+    GSM1917669 extract 2
+   </name>
+  </extract>
+  <file>
+   <type>
+    data
+   </type>
+   <name>
+    GSM1917669_S02_2_1.txt
+   </name>
+   <url>
+    ftp://ftp.ebi.ac.uk/pub/databases/microarray/data/experiment/GEOD/E-GEOD-74341/E-GEOD-74341.raw.1.zip/GSM1917669_S02_2_1.txt
+   </url>
+   <comment>
+    <name>
+     ArrayExpress FTP file
+    </name>
+    <value>
+     ftp://ftp.ebi.ac.uk/pub/databases/microarray/data/experiment/GEOD/E-GEOD-74341/E-GEOD-74341.raw.1.zip
+    </value>
+   </comment>
+  </file>
+  <file>
+   <type>
+    derived data
+   </type>
+   <name>
+    GSM1917669_sample_table.txt
+   </name>
+   <url>
+    ftp://ftp.ebi.ac.uk/pub/databases/microarray/data/experiment/GEOD/E-GEOD-74341/E-GEOD-74341.processed.1.zip/GSM1917669_sample_table.txt
+   </url>
+   <comment>
+    <name>
+     Derived ArrayExpress FTP file
+    </name>
+    <value>
+     ftp://ftp.ebi.ac.uk/pub/databases/microarray/data/experiment/GEOD/E-GEOD-74341/E-GEOD-74341.processed.1.zip
+    </value>
+   </comment>
+  </file>
+  <labeled-extract>
+   <name>
+    GSM1917669 LE 2
+   </name>
+   <label>
+    Cy3
+   </label>
+  </labeled-extract>
+  <source>
+   <name>
+    GSM1917669 2
+   </name>
+   <comment>
+    <name>
+     Sample_description
+    </name>
+    <value>
+     L2_2_1
+    </value>
+   </comment>
+   <comment>
+    <name>
+     Sample_source_name
+    </name>
+    <value>
+     LOPE_placental tissue
+    </value>
+   </comment>
+   <comment>
+    <name>
+     Sample_title
+    </name>
+    <value>
+     LOPE_rep3
+    </value>
+   </comment>
+  </source>
+  <variable>
+   <name>
+    subject status
+   </name>
+   <value>
+    patients with late-onset (&gt;36 weeks) preeclampsia (LOPE)
+   </value>
+  </variable>
+ </sample>
+ <sample>
+  <assay>
+   <name>
+    GSM1917669
+   </name>
+  </assay>
+  <characteristic>
+   <category>
+    organism
+   </category>
+   <value>
+    Homo sapiens
+   </value>
+  </characteristic>
+  <characteristic>
+   <category>
+    organism part
+   </category>
+   <value>
+    placental tissue
+   </value>
+  </characteristic>
+  <characteristic>
+   <category>
+    sample type
+   </category>
+   <value>
+    pooled-sample reference
+   </value>
+  </characteristic>
+  <characteristic>
+   <category>
+    subject status
+   </category>
+   <value>
+    controls who delivered at term (&gt;36 weeks)
+   </value>
+  </characteristic>
+  <extract>
+   <name>
+    GSM1917669 extract 1
+   </name>
+  </extract>
+  <file>
+   <type>
+    data
+   </type>
+   <name>
+    GSM1917669_S02_2_1.txt
+   </name>
+   <url>
+    ftp://ftp.ebi.ac.uk/pub/databases/microarray/data/experiment/GEOD/E-GEOD-74341/E-GEOD-74341.raw.1.zip/GSM1917669_S02_2_1.txt
+   </url>
+   <comment>
+    <name>
+     ArrayExpress FTP file
+    </name>
+    <value>
+     ftp://ftp.ebi.ac.uk/pub/databases/microarray/data/experiment/GEOD/E-GEOD-74341/E-GEOD-74341.raw.1.zip
+    </value>
+   </comment>
+  </file>
+  <file>
+   <type>
+    derived data
+   </type>
+   <name>
+    GSM1917669_sample_table.txt
+   </name>
+   <url>
+    ftp://ftp.ebi.ac.uk/pub/databases/microarray/data/experiment/GEOD/E-GEOD-74341/E-GEOD-74341.processed.1.zip/GSM1917669_sample_table.txt
+   </url>
+   <comment>
+    <name>
+     Derived ArrayExpress FTP file
+    </name>
+    <value>
+     ftp://ftp.ebi.ac.uk/pub/databases/microarray/data/experiment/GEOD/E-GEOD-74341/E-GEOD-74341.processed.1.zip
+    </value>
+   </comment>
+  </file>
+  <labeled-extract>
+   <name>
+    GSM1917669 LE 1
+   </name>
+   <label>
+    Cy5
+   </label>
+  </labeled-extract>
+  <source>
+   <name>
+    GSM1917669 1
+   </name>
+   <comment>
+    <name>
+     Sample_description
+    </name>
+    <value>
+     L2_2_1
+    </value>
+   </comment>
+   <comment>
+    <name>
+     Sample_source_name
+    </name>
+    <value>
+     pooled controls who delivered at term
+    </value>
+   </comment>
+   <comment>
+    <name>
+     Sample_title
+    </name>
+    <value>
+     LOPE_rep3
+    </value>
+   </comment>
+  </source>
+  <variable>
+   <name>
+    subject status
+   </name>
+   <value>
+    controls who delivered at term (&gt;36 weeks)
+   </value>
+  </variable>
+ </sample>
+ <sample>
+  <assay>
+   <name>
+    GSM1917668
+   </name>
+  </assay>
+  <characteristic>
+   <category>
+    organism
+   </category>
+   <value>
+    Homo sapiens
+   </value>
+  </characteristic>
+  <characteristic>
+   <category>
+    organism part
+   </category>
+   <value>
+    placental tissue
+   </value>
+  </characteristic>
+  <characteristic>
+   <category>
+    sample type
+   </category>
+   <value>
+   </value>
+  </characteristic>
+  <characteristic>
+   <category>
+    subject status
+   </category>
+   <value>
+    patients with late-onset (&gt;36 weeks) preeclampsia (LOPE)
+   </value>
+  </characteristic>
+  <extract>
+   <name>
+    GSM1917668 extract 2
+   </name>
+  </extract>
+  <file>
+   <type>
+    data
+   </type>
+   <name>
+    GSM1917668_S01_2_3.txt
+   </name>
+   <url>
+    ftp://ftp.ebi.ac.uk/pub/databases/microarray/data/experiment/GEOD/E-GEOD-74341/E-GEOD-74341.raw.1.zip/GSM1917668_S01_2_3.txt
+   </url>
+   <comment>
+    <name>
+     ArrayExpress FTP file
+    </name>
+    <value>
+     ftp://ftp.ebi.ac.uk/pub/databases/microarray/data/experiment/GEOD/E-GEOD-74341/E-GEOD-74341.raw.1.zip
+    </value>
+   </comment>
+  </file>
+  <file>
+   <type>
+    derived data
+   </type>
+   <name>
+    GSM1917668_sample_table.txt
+   </name>
+   <url>
+    ftp://ftp.ebi.ac.uk/pub/databases/microarray/data/experiment/GEOD/E-GEOD-74341/E-GEOD-74341.processed.1.zip/GSM1917668_sample_table.txt
+   </url>
+   <comment>
+    <name>
+     Derived ArrayExpress FTP file
+    </name>
+    <value>
+     ftp://ftp.ebi.ac.uk/pub/databases/microarray/data/experiment/GEOD/E-GEOD-74341/E-GEOD-74341.processed.1.zip
+    </value>
+   </comment>
+  </file>
+  <labeled-extract>
+   <name>
+    GSM1917668 LE 2
+   </name>
+   <label>
+    Cy3
+   </label>
+  </labeled-extract>
+  <source>
+   <name>
+    GSM1917668 2
+   </name>
+   <comment>
+    <name>
+     Sample_description
+    </name>
+    <value>
+     L1_2_3
+    </value>
+   </comment>
+   <comment>
+    <name>
+     Sample_source_name
+    </name>
+    <value>
+     LOPE_placental tissue
+    </value>
+   </comment>
+   <comment>
+    <name>
+     Sample_title
+    </name>
+    <value>
+     LOPE_rep2
+    </value>
+   </comment>
+  </source>
+  <variable>
+   <name>
+    subject status
+   </name>
+   <value>
+    patients with late-onset (&gt;36 weeks) preeclampsia (LOPE)
+   </value>
+  </variable>
+ </sample>
+ <sample>
+  <assay>
+   <name>
+    GSM1917668
+   </name>
+  </assay>
+  <characteristic>
+   <category>
+    organism
+   </category>
+   <value>
+    Homo sapiens
+   </value>
+  </characteristic>
+  <characteristic>
+   <category>
+    organism part
+   </category>
+   <value>
+    placental tissue
+   </value>
+  </characteristic>
+  <characteristic>
+   <category>
+    sample type
+   </category>
+   <value>
+    pooled-sample reference
+   </value>
+  </characteristic>
+  <characteristic>
+   <category>
+    subject status
+   </category>
+   <value>
+    controls who delivered at term (&gt;36 weeks)
+   </value>
+  </characteristic>
+  <extract>
+   <name>
+    GSM1917668 extract 1
+   </name>
+  </extract>
+  <file>
+   <type>
+    data
+   </type>
+   <name>
+    GSM1917668_S01_2_3.txt
+   </name>
+   <url>
+    ftp://ftp.ebi.ac.uk/pub/databases/microarray/data/experiment/GEOD/E-GEOD-74341/E-GEOD-74341.raw.1.zip/GSM1917668_S01_2_3.txt
+   </url>
+   <comment>
+    <name>
+     ArrayExpress FTP file
+    </name>
+    <value>
+     ftp://ftp.ebi.ac.uk/pub/databases/microarray/data/experiment/GEOD/E-GEOD-74341/E-GEOD-74341.raw.1.zip
+    </value>
+   </comment>
+  </file>
+  <file>
+   <type>
+    derived data
+   </type>
+   <name>
+    GSM1917668_sample_table.txt
+   </name>
+   <url>
+    ftp://ftp.ebi.ac.uk/pub/databases/microarray/data/experiment/GEOD/E-GEOD-74341/E-GEOD-74341.processed.1.zip/GSM1917668_sample_table.txt
+   </url>
+   <comment>
+    <name>
+     Derived ArrayExpress FTP file
+    </name>
+    <value>
+     ftp://ftp.ebi.ac.uk/pub/databases/microarray/data/experiment/GEOD/E-GEOD-74341/E-GEOD-74341.processed.1.zip
+    </value>
+   </comment>
+  </file>
+  <labeled-extract>
+   <name>
+    GSM1917668 LE 1
+   </name>
+   <label>
+    Cy5
+   </label>
+  </labeled-extract>
+  <source>
+   <name>
+    GSM1917668 1
+   </name>
+   <comment>
+    <name>
+     Sample_description
+    </name>
+    <value>
+     L1_2_3
+    </value>
+   </comment>
+   <comment>
+    <name>
+     Sample_source_name
+    </name>
+    <value>
+     pooled controls who delivered at term
+    </value>
+   </comment>
+   <comment>
+    <name>
+     Sample_title
+    </name>
+    <value>
+     LOPE_rep2
+    </value>
+   </comment>
+  </source>
+  <variable>
+   <name>
+    subject status
+   </name>
+   <value>
+    controls who delivered at term (&gt;36 weeks)
+   </value>
+  </variable>
+ </sample>
+ <sample>
+  <assay>
+   <name>
+    GSM1917667
+   </name>
+  </assay>
+  <characteristic>
+   <category>
+    organism
+   </category>
+   <value>
+    Homo sapiens
+   </value>
+  </characteristic>
+  <characteristic>
+   <category>
+    organism part
+   </category>
+   <value>
+    placental tissue
+   </value>
+  </characteristic>
+  <characteristic>
+   <category>
+    sample type
+   </category>
+   <value>
+   </value>
+  </characteristic>
+  <characteristic>
+   <category>
+    subject status
+   </category>
+   <value>
+    patients with late-onset (&gt;36 weeks) preeclampsia (LOPE)
+   </value>
+  </characteristic>
+  <extract>
+   <name>
+    GSM1917667 extract 2
+   </name>
+  </extract>
+  <file>
+   <type>
+    data
+   </type>
+   <name>
+    GSM1917667_S01_2_1.txt
+   </name>
+   <url>
+    ftp://ftp.ebi.ac.uk/pub/databases/microarray/data/experiment/GEOD/E-GEOD-74341/E-GEOD-74341.raw.1.zip/GSM1917667_S01_2_1.txt
+   </url>
+   <comment>
+    <name>
+     ArrayExpress FTP file
+    </name>
+    <value>
+     ftp://ftp.ebi.ac.uk/pub/databases/microarray/data/experiment/GEOD/E-GEOD-74341/E-GEOD-74341.raw.1.zip
+    </value>
+   </comment>
+  </file>
+  <file>
+   <type>
+    derived data
+   </type>
+   <name>
+    GSM1917667_sample_table.txt
+   </name>
+   <url>
+    ftp://ftp.ebi.ac.uk/pub/databases/microarray/data/experiment/GEOD/E-GEOD-74341/E-GEOD-74341.processed.1.zip/GSM1917667_sample_table.txt
+   </url>
+   <comment>
+    <name>
+     Derived ArrayExpress FTP file
+    </name>
+    <value>
+     ftp://ftp.ebi.ac.uk/pub/databases/microarray/data/experiment/GEOD/E-GEOD-74341/E-GEOD-74341.processed.1.zip
+    </value>
+   </comment>
+  </file>
+  <labeled-extract>
+   <name>
+    GSM1917667 LE 2
+   </name>
+   <label>
+    Cy3
+   </label>
+  </labeled-extract>
+  <source>
+   <name>
+    GSM1917667 2
+   </name>
+   <comment>
+    <name>
+     Sample_description
+    </name>
+    <value>
+     L1_2_1
+    </value>
+   </comment>
+   <comment>
+    <name>
+     Sample_source_name
+    </name>
+    <value>
+     LOPE_placental tissue
+    </value>
+   </comment>
+   <comment>
+    <name>
+     Sample_title
+    </name>
+    <value>
+     LOPE_rep1
+    </value>
+   </comment>
+  </source>
+  <variable>
+   <name>
+    subject status
+   </name>
+   <value>
+    patients with late-onset (&gt;36 weeks) preeclampsia (LOPE)
+   </value>
+  </variable>
+ </sample>
+ <sample>
+  <assay>
+   <name>
+    GSM1917667
+   </name>
+  </assay>
+  <characteristic>
+   <category>
+    organism
+   </category>
+   <value>
+    Homo sapiens
+   </value>
+  </characteristic>
+  <characteristic>
+   <category>
+    organism part
+   </category>
+   <value>
+    placental tissue
+   </value>
+  </characteristic>
+  <characteristic>
+   <category>
+    sample type
+   </category>
+   <value>
+    pooled-sample reference
+   </value>
+  </characteristic>
+  <characteristic>
+   <category>
+    subject status
+   </category>
+   <value>
+    controls who delivered at term (&gt;36 weeks)
+   </value>
+  </characteristic>
+  <extract>
+   <name>
+    GSM1917667 extract 1
+   </name>
+  </extract>
+  <file>
+   <type>
+    data
+   </type>
+   <name>
+    GSM1917667_S01_2_1.txt
+   </name>
+   <url>
+    ftp://ftp.ebi.ac.uk/pub/databases/microarray/data/experiment/GEOD/E-GEOD-74341/E-GEOD-74341.raw.1.zip/GSM1917667_S01_2_1.txt
+   </url>
+   <comment>
+    <name>
+     ArrayExpress FTP file
+    </name>
+    <value>
+     ftp://ftp.ebi.ac.uk/pub/databases/microarray/data/experiment/GEOD/E-GEOD-74341/E-GEOD-74341.raw.1.zip
+    </value>
+   </comment>
+  </file>
+  <file>
+   <type>
+    derived data
+   </type>
+   <name>
+    GSM1917667_sample_table.txt
+   </name>
+   <url>
+    ftp://ftp.ebi.ac.uk/pub/databases/microarray/data/experiment/GEOD/E-GEOD-74341/E-GEOD-74341.processed.1.zip/GSM1917667_sample_table.txt
+   </url>
+   <comment>
+    <name>
+     Derived ArrayExpress FTP file
+    </name>
+    <value>
+     ftp://ftp.ebi.ac.uk/pub/databases/microarray/data/experiment/GEOD/E-GEOD-74341/E-GEOD-74341.processed.1.zip
+    </value>
+   </comment>
+  </file>
+  <labeled-extract>
+   <name>
+    GSM1917667 LE 1
+   </name>
+   <label>
+    Cy5
+   </label>
+  </labeled-extract>
+  <source>
+   <name>
+    GSM1917667 1
+   </name>
+   <comment>
+    <name>
+     Sample_description
+    </name>
+    <value>
+     L1_2_1
+    </value>
+   </comment>
+   <comment>
+    <name>
+     Sample_source_name
+    </name>
+    <value>
+     pooled controls who delivered at term
+    </value>
+   </comment>
+   <comment>
+    <name>
+     Sample_title
+    </name>
+    <value>
+     LOPE_rep1
+    </value>
+   </comment>
+  </source>
+  <variable>
+   <name>
+    subject status
+   </name>
+   <value>
+    controls who delivered at term (&gt;36 weeks)
+   </value>
+  </variable>
+ </sample>
+ <sample>
+  <assay>
+   <name>
+    GSM1917666
+   </name>
+  </assay>
+  <characteristic>
+   <category>
+    organism
+   </category>
+   <value>
+    Homo sapiens
+   </value>
+  </characteristic>
+  <characteristic>
+   <category>
+    organism part
+   </category>
+   <value>
+    placental tissue
+   </value>
+  </characteristic>
+  <characteristic>
+   <category>
+    sample type
+   </category>
+   <value>
+    pooled-sample reference
+   </value>
+  </characteristic>
+  <characteristic>
+   <category>
+    subject status
+   </category>
+   <value>
+    controls who delivered at term (&gt;36 weeks)
+   </value>
+  </characteristic>
+  <extract>
+   <name>
+    GSM1917666 extract 1
+   </name>
+  </extract>
+  <file>
+   <type>
+    data
+   </type>
+   <name>
+    GSM1917666_S04_2_4.txt
+   </name>
+   <url>
+    ftp://ftp.ebi.ac.uk/pub/databases/microarray/data/experiment/GEOD/E-GEOD-74341/E-GEOD-74341.raw.1.zip/GSM1917666_S04_2_4.txt
+   </url>
+   <comment>
+    <name>
+     ArrayExpress FTP file
+    </name>
+    <value>
+     ftp://ftp.ebi.ac.uk/pub/databases/microarray/data/experiment/GEOD/E-GEOD-74341/E-GEOD-74341.raw.1.zip
+    </value>
+   </comment>
+  </file>
+  <file>
+   <type>
+    derived data
+   </type>
+   <name>
+    GSM1917666_sample_table.txt
+   </name>
+   <url>
+    ftp://ftp.ebi.ac.uk/pub/databases/microarray/data/experiment/GEOD/E-GEOD-74341/E-GEOD-74341.processed.1.zip/GSM1917666_sample_table.txt
+   </url>
+   <comment>
+    <name>
+     Derived ArrayExpress FTP file
+    </name>
+    <value>
+     ftp://ftp.ebi.ac.uk/pub/databases/microarray/data/experiment/GEOD/E-GEOD-74341/E-GEOD-74341.processed.1.zip
+    </value>
+   </comment>
+  </file>
+  <labeled-extract>
+   <name>
+    GSM1917666 LE 1
+   </name>
+   <label>
+    Cy5
+   </label>
+  </labeled-extract>
+  <source>
+   <name>
+    GSM1917666 1
+   </name>
+   <comment>
+    <name>
+     Sample_description
+    </name>
+    <value>
+     E4_2_4
+    </value>
+   </comment>
+   <comment>
+    <name>
+     Sample_source_name
+    </name>
+    <value>
+     pooled controls who delivered at term
+    </value>
+   </comment>
+   <comment>
+    <name>
+     Sample_title
+    </name>
+    <value>
+     EOPE_rep7
+    </value>
+   </comment>
+  </source>
+  <variable>
+   <name>
+    subject status
+   </name>
+   <value>
+    controls who delivered at term (&gt;36 weeks)
+   </value>
+  </variable>
+ </sample>
+ <sample>
+  <assay>
+   <name>
+    GSM1917666
+   </name>
+  </assay>
+  <characteristic>
+   <category>
+    organism
+   </category>
+   <value>
+    Homo sapiens
+   </value>
+  </characteristic>
+  <characteristic>
+   <category>
+    organism part
+   </category>
+   <value>
+    placental tissue
+   </value>
+  </characteristic>
+  <characteristic>
+   <category>
+    sample type
+   </category>
+   <value>
+   </value>
+  </characteristic>
+  <characteristic>
+   <category>
+    subject status
+   </category>
+   <value>
+    patients with early-onset (&lt;34 weeks) preeclampsia (EOPE)
+   </value>
+  </characteristic>
+  <extract>
+   <name>
+    GSM1917666 extract 2
+   </name>
+  </extract>
+  <file>
+   <type>
+    data
+   </type>
+   <name>
+    GSM1917666_S04_2_4.txt
+   </name>
+   <url>
+    ftp://ftp.ebi.ac.uk/pub/databases/microarray/data/experiment/GEOD/E-GEOD-74341/E-GEOD-74341.raw.1.zip/GSM1917666_S04_2_4.txt
+   </url>
+   <comment>
+    <name>
+     ArrayExpress FTP file
+    </name>
+    <value>
+     ftp://ftp.ebi.ac.uk/pub/databases/microarray/data/experiment/GEOD/E-GEOD-74341/E-GEOD-74341.raw.1.zip
+    </value>
+   </comment>
+  </file>
+  <file>
+   <type>
+    derived data
+   </type>
+   <name>
+    GSM1917666_sample_table.txt
+   </name>
+   <url>
+    ftp://ftp.ebi.ac.uk/pub/databases/microarray/data/experiment/GEOD/E-GEOD-74341/E-GEOD-74341.processed.1.zip/GSM1917666_sample_table.txt
+   </url>
+   <comment>
+    <name>
+     Derived ArrayExpress FTP file
+    </name>
+    <value>
+     ftp://ftp.ebi.ac.uk/pub/databases/microarray/data/experiment/GEOD/E-GEOD-74341/E-GEOD-74341.processed.1.zip
+    </value>
+   </comment>
+  </file>
+  <labeled-extract>
+   <name>
+    GSM1917666 LE 2
+   </name>
+   <label>
+    Cy3
+   </label>
+  </labeled-extract>
+  <source>
+   <name>
+    GSM1917666 2
+   </name>
+   <comment>
+    <name>
+     Sample_description
+    </name>
+    <value>
+     E4_2_4
+    </value>
+   </comment>
+   <comment>
+    <name>
+     Sample_source_name
+    </name>
+    <value>
+     EOPE_placental tissue
+    </value>
+   </comment>
+   <comment>
+    <name>
+     Sample_title
+    </name>
+    <value>
+     EOPE_rep7
+    </value>
+   </comment>
+  </source>
+  <variable>
+   <name>
+    subject status
+   </name>
+   <value>
+    patients with early-onset (&lt;34 weeks) preeclampsia (EOPE)
+   </value>
+  </variable>
+ </sample>
+ <sample>
+  <assay>
+   <name>
+    GSM1917665
+   </name>
+  </assay>
+  <characteristic>
+   <category>
+    organism
+   </category>
+   <value>
+    Homo sapiens
+   </value>
+  </characteristic>
+  <characteristic>
+   <category>
+    organism part
+   </category>
+   <value>
+    placental tissue
+   </value>
+  </characteristic>
+  <characteristic>
+   <category>
+    sample type
+   </category>
+   <value>
+   </value>
+  </characteristic>
+  <characteristic>
+   <category>
+    subject status
+   </category>
+   <value>
+    patients with early-onset (&lt;34 weeks) preeclampsia (EOPE)
+   </value>
+  </characteristic>
+  <extract>
+   <name>
+    GSM1917665 extract 2
+   </name>
+  </extract>
+  <file>
+   <type>
+    data
+   </type>
+   <name>
+    GSM1917665_S04_2_3.txt
+   </name>
+   <url>
+    ftp://ftp.ebi.ac.uk/pub/databases/microarray/data/experiment/GEOD/E-GEOD-74341/E-GEOD-74341.raw.1.zip/GSM1917665_S04_2_3.txt
+   </url>
+   <comment>
+    <name>
+     ArrayExpress FTP file
+    </name>
+    <value>
+     ftp://ftp.ebi.ac.uk/pub/databases/microarray/data/experiment/GEOD/E-GEOD-74341/E-GEOD-74341.raw.1.zip
+    </value>
+   </comment>
+  </file>
+  <file>
+   <type>
+    derived data
+   </type>
+   <name>
+    GSM1917665_sample_table.txt
+   </name>
+   <url>
+    ftp://ftp.ebi.ac.uk/pub/databases/microarray/data/experiment/GEOD/E-GEOD-74341/E-GEOD-74341.processed.1.zip/GSM1917665_sample_table.txt
+   </url>
+   <comment>
+    <name>
+     Derived ArrayExpress FTP file
+    </name>
+    <value>
+     ftp://ftp.ebi.ac.uk/pub/databases/microarray/data/experiment/GEOD/E-GEOD-74341/E-GEOD-74341.processed.1.zip
+    </value>
+   </comment>
+  </file>
+  <labeled-extract>
+   <name>
+    GSM1917665 LE 2
+   </name>
+   <label>
+    Cy3
+   </label>
+  </labeled-extract>
+  <source>
+   <name>
+    GSM1917665 2
+   </name>
+   <comment>
+    <name>
+     Sample_description
+    </name>
+    <value>
+     E4_2_3
+    </value>
+   </comment>
+   <comment>
+    <name>
+     Sample_source_name
+    </name>
+    <value>
+     EOPE_placental tissue
+    </value>
+   </comment>
+   <comment>
+    <name>
+     Sample_title
+    </name>
+    <value>
+     EOPE_rep6
+    </value>
+   </comment>
+  </source>
+  <variable>
+   <name>
+    subject status
+   </name>
+   <value>
+    patients with early-onset (&lt;34 weeks) preeclampsia (EOPE)
+   </value>
+  </variable>
+ </sample>
+ <sample>
+  <assay>
+   <name>
+    GSM1917665
+   </name>
+  </assay>
+  <characteristic>
+   <category>
+    organism
+   </category>
+   <value>
+    Homo sapiens
+   </value>
+  </characteristic>
+  <characteristic>
+   <category>
+    organism part
+   </category>
+   <value>
+    placental tissue
+   </value>
+  </characteristic>
+  <characteristic>
+   <category>
+    sample type
+   </category>
+   <value>
+    pooled-sample reference
+   </value>
+  </characteristic>
+  <characteristic>
+   <category>
+    subject status
+   </category>
+   <value>
+    controls who delivered at term (&gt;36 weeks)
+   </value>
+  </characteristic>
+  <extract>
+   <name>
+    GSM1917665 extract 1
+   </name>
+  </extract>
+  <file>
+   <type>
+    data
+   </type>
+   <name>
+    GSM1917665_S04_2_3.txt
+   </name>
+   <url>
+    ftp://ftp.ebi.ac.uk/pub/databases/microarray/data/experiment/GEOD/E-GEOD-74341/E-GEOD-74341.raw.1.zip/GSM1917665_S04_2_3.txt
+   </url>
+   <comment>
+    <name>
+     ArrayExpress FTP file
+    </name>
+    <value>
+     ftp://ftp.ebi.ac.uk/pub/databases/microarray/data/experiment/GEOD/E-GEOD-74341/E-GEOD-74341.raw.1.zip
+    </value>
+   </comment>
+  </file>
+  <file>
+   <type>
+    derived data
+   </type>
+   <name>
+    GSM1917665_sample_table.txt
+   </name>
+   <url>
+    ftp://ftp.ebi.ac.uk/pub/databases/microarray/data/experiment/GEOD/E-GEOD-74341/E-GEOD-74341.processed.1.zip/GSM1917665_sample_table.txt
+   </url>
+   <comment>
+    <name>
+     Derived ArrayExpress FTP file
+    </name>
+    <value>
+     ftp://ftp.ebi.ac.uk/pub/databases/microarray/data/experiment/GEOD/E-GEOD-74341/E-GEOD-74341.processed.1.zip
+    </value>
+   </comment>
+  </file>
+  <labeled-extract>
+   <name>
+    GSM1917665 LE 1
+   </name>
+   <label>
+    Cy5
+   </label>
+  </labeled-extract>
+  <source>
+   <name>
+    GSM1917665 1
+   </name>
+   <comment>
+    <name>
+     Sample_description
+    </name>
+    <value>
+     E4_2_3
+    </value>
+   </comment>
+   <comment>
+    <name>
+     Sample_source_name
+    </name>
+    <value>
+     pooled controls who delivered at term
+    </value>
+   </comment>
+   <comment>
+    <name>
+     Sample_title
+    </name>
+    <value>
+     EOPE_rep6
+    </value>
+   </comment>
+  </source>
+  <variable>
+   <name>
+    subject status
+   </name>
+   <value>
+    controls who delivered at term (&gt;36 weeks)
+   </value>
+  </variable>
+ </sample>
+ <sample>
+  <assay>
+   <name>
+    GSM1917664
+   </name>
+  </assay>
+  <characteristic>
+   <category>
+    organism
+   </category>
+   <value>
+    Homo sapiens
+   </value>
+  </characteristic>
+  <characteristic>
+   <category>
+    organism part
+   </category>
+   <value>
+    placental tissue
+   </value>
+  </characteristic>
+  <characteristic>
+   <category>
+    sample type
+   </category>
+   <value>
+   </value>
+  </characteristic>
+  <characteristic>
+   <category>
+    subject status
+   </category>
+   <value>
+    patients with early-onset (&lt;34 weeks) preeclampsia (EOPE)
+   </value>
+  </characteristic>
+  <extract>
+   <name>
+    GSM1917664 extract 2
+   </name>
+  </extract>
+  <file>
+   <type>
+    data
+   </type>
+   <name>
+    GSM1917664_S04_2_2.txt
+   </name>
+   <url>
+    ftp://ftp.ebi.ac.uk/pub/databases/microarray/data/experiment/GEOD/E-GEOD-74341/E-GEOD-74341.raw.1.zip/GSM1917664_S04_2_2.txt
+   </url>
+   <comment>
+    <name>
+     ArrayExpress FTP file
+    </name>
+    <value>
+     ftp://ftp.ebi.ac.uk/pub/databases/microarray/data/experiment/GEOD/E-GEOD-74341/E-GEOD-74341.raw.1.zip
+    </value>
+   </comment>
+  </file>
+  <file>
+   <type>
+    derived data
+   </type>
+   <name>
+    GSM1917664_sample_table.txt
+   </name>
+   <url>
+    ftp://ftp.ebi.ac.uk/pub/databases/microarray/data/experiment/GEOD/E-GEOD-74341/E-GEOD-74341.processed.1.zip/GSM1917664_sample_table.txt
+   </url>
+   <comment>
+    <name>
+     Derived ArrayExpress FTP file
+    </name>
+    <value>
+     ftp://ftp.ebi.ac.uk/pub/databases/microarray/data/experiment/GEOD/E-GEOD-74341/E-GEOD-74341.processed.1.zip
+    </value>
+   </comment>
+  </file>
+  <labeled-extract>
+   <name>
+    GSM1917664 LE 2
+   </name>
+   <label>
+    Cy3
+   </label>
+  </labeled-extract>
+  <source>
+   <name>
+    GSM1917664 2
+   </name>
+   <comment>
+    <name>
+     Sample_description
+    </name>
+    <value>
+     E4_2_2
+    </value>
+   </comment>
+   <comment>
+    <name>
+     Sample_source_name
+    </name>
+    <value>
+     EOPE_placental tissue
+    </value>
+   </comment>
+   <comment>
+    <name>
+     Sample_title
+    </name>
+    <value>
+     EOPE_rep5
+    </value>
+   </comment>
+  </source>
+  <variable>
+   <name>
+    subject status
+   </name>
+   <value>
+    patients with early-onset (&lt;34 weeks) preeclampsia (EOPE)
+   </value>
+  </variable>
+ </sample>
+ <sample>
+  <assay>
+   <name>
+    GSM1917664
+   </name>
+  </assay>
+  <characteristic>
+   <category>
+    organism
+   </category>
+   <value>
+    Homo sapiens
+   </value>
+  </characteristic>
+  <characteristic>
+   <category>
+    organism part
+   </category>
+   <value>
+    placental tissue
+   </value>
+  </characteristic>
+  <characteristic>
+   <category>
+    sample type
+   </category>
+   <value>
+    pooled-sample reference
+   </value>
+  </characteristic>
+  <characteristic>
+   <category>
+    subject status
+   </category>
+   <value>
+    controls who delivered at term (&gt;36 weeks)
+   </value>
+  </characteristic>
+  <extract>
+   <name>
+    GSM1917664 extract 1
+   </name>
+  </extract>
+  <file>
+   <type>
+    data
+   </type>
+   <name>
+    GSM1917664_S04_2_2.txt
+   </name>
+   <url>
+    ftp://ftp.ebi.ac.uk/pub/databases/microarray/data/experiment/GEOD/E-GEOD-74341/E-GEOD-74341.raw.1.zip/GSM1917664_S04_2_2.txt
+   </url>
+   <comment>
+    <name>
+     ArrayExpress FTP file
+    </name>
+    <value>
+     ftp://ftp.ebi.ac.uk/pub/databases/microarray/data/experiment/GEOD/E-GEOD-74341/E-GEOD-74341.raw.1.zip
+    </value>
+   </comment>
+  </file>
+  <file>
+   <type>
+    derived data
+   </type>
+   <name>
+    GSM1917664_sample_table.txt
+   </name>
+   <url>
+    ftp://ftp.ebi.ac.uk/pub/databases/microarray/data/experiment/GEOD/E-GEOD-74341/E-GEOD-74341.processed.1.zip/GSM1917664_sample_table.txt
+   </url>
+   <comment>
+    <name>
+     Derived ArrayExpress FTP file
+    </name>
+    <value>
+     ftp://ftp.ebi.ac.uk/pub/databases/microarray/data/experiment/GEOD/E-GEOD-74341/E-GEOD-74341.processed.1.zip
+    </value>
+   </comment>
+  </file>
+  <labeled-extract>
+   <name>
+    GSM1917664 LE 1
+   </name>
+   <label>
+    Cy5
+   </label>
+  </labeled-extract>
+  <source>
+   <name>
+    GSM1917664 1
+   </name>
+   <comment>
+    <name>
+     Sample_description
+    </name>
+    <value>
+     E4_2_2
+    </value>
+   </comment>
+   <comment>
+    <name>
+     Sample_source_name
+    </name>
+    <value>
+     pooled controls who delivered at term
+    </value>
+   </comment>
+   <comment>
+    <name>
+     Sample_title
+    </name>
+    <value>
+     EOPE_rep5
+    </value>
+   </comment>
+  </source>
+  <variable>
+   <name>
+    subject status
+   </name>
+   <value>
+    controls who delivered at term (&gt;36 weeks)
+   </value>
+  </variable>
+ </sample>
+ <sample>
+  <assay>
+   <name>
+    GSM1917663
+   </name>
+  </assay>
+  <characteristic>
+   <category>
+    organism
+   </category>
+   <value>
+    Homo sapiens
+   </value>
+  </characteristic>
+  <characteristic>
+   <category>
+    organism part
+   </category>
+   <value>
+    placental tissue
+   </value>
+  </characteristic>
+  <characteristic>
+   <category>
+    sample type
+   </category>
+   <value>
+   </value>
+  </characteristic>
+  <characteristic>
+   <category>
+    subject status
+   </category>
+   <value>
+    patients with early-onset (&lt;34 weeks) preeclampsia (EOPE)
+   </value>
+  </characteristic>
+  <extract>
+   <name>
+    GSM1917663 extract 2
+   </name>
+  </extract>
+  <file>
+   <type>
+    data
+   </type>
+   <name>
+    GSM1917663_S04_2_1.txt
+   </name>
+   <url>
+    ftp://ftp.ebi.ac.uk/pub/databases/microarray/data/experiment/GEOD/E-GEOD-74341/E-GEOD-74341.raw.1.zip/GSM1917663_S04_2_1.txt
+   </url>
+   <comment>
+    <name>
+     ArrayExpress FTP file
+    </name>
+    <value>
+     ftp://ftp.ebi.ac.uk/pub/databases/microarray/data/experiment/GEOD/E-GEOD-74341/E-GEOD-74341.raw.1.zip
+    </value>
+   </comment>
+  </file>
+  <file>
+   <type>
+    derived data
+   </type>
+   <name>
+    GSM1917663_sample_table.txt
+   </name>
+   <url>
+    ftp://ftp.ebi.ac.uk/pub/databases/microarray/data/experiment/GEOD/E-GEOD-74341/E-GEOD-74341.processed.1.zip/GSM1917663_sample_table.txt
+   </url>
+   <comment>
+    <name>
+     Derived ArrayExpress FTP file
+    </name>
+    <value>
+     ftp://ftp.ebi.ac.uk/pub/databases/microarray/data/experiment/GEOD/E-GEOD-74341/E-GEOD-74341.processed.1.zip
+    </value>
+   </comment>
+  </file>
+  <labeled-extract>
+   <name>
+    GSM1917663 LE 2
+   </name>
+   <label>
+    Cy3
+   </label>
+  </labeled-extract>
+  <source>
+   <name>
+    GSM1917663 2
+   </name>
+   <comment>
+    <name>
+     Sample_description
+    </name>
+    <value>
+     E4_2_1
+    </value>
+   </comment>
+   <comment>
+    <name>
+     Sample_source_name
+    </name>
+    <value>
+     EOPE_placental tissue
+    </value>
+   </comment>
+   <comment>
+    <name>
+     Sample_title
+    </name>
+    <value>
+     EOPE_rep4
+    </value>
+   </comment>
+  </source>
+  <variable>
+   <name>
+    subject status
+   </name>
+   <value>
+    patients with early-onset (&lt;34 weeks) preeclampsia (EOPE)
+   </value>
+  </variable>
+ </sample>
+ <sample>
+  <assay>
+   <name>
+    GSM1917663
+   </name>
+  </assay>
+  <characteristic>
+   <category>
+    organism
+   </category>
+   <value>
+    Homo sapiens
+   </value>
+  </characteristic>
+  <characteristic>
+   <category>
+    organism part
+   </category>
+   <value>
+    placental tissue
+   </value>
+  </characteristic>
+  <characteristic>
+   <category>
+    sample type
+   </category>
+   <value>
+    pooled-sample reference
+   </value>
+  </characteristic>
+  <characteristic>
+   <category>
+    subject status
+   </category>
+   <value>
+    controls who delivered at term (&gt;36 weeks)
+   </value>
+  </characteristic>
+  <extract>
+   <name>
+    GSM1917663 extract 1
+   </name>
+  </extract>
+  <file>
+   <type>
+    data
+   </type>
+   <name>
+    GSM1917663_S04_2_1.txt
+   </name>
+   <url>
+    ftp://ftp.ebi.ac.uk/pub/databases/microarray/data/experiment/GEOD/E-GEOD-74341/E-GEOD-74341.raw.1.zip/GSM1917663_S04_2_1.txt
+   </url>
+   <comment>
+    <name>
+     ArrayExpress FTP file
+    </name>
+    <value>
+     ftp://ftp.ebi.ac.uk/pub/databases/microarray/data/experiment/GEOD/E-GEOD-74341/E-GEOD-74341.raw.1.zip
+    </value>
+   </comment>
+  </file>
+  <file>
+   <type>
+    derived data
+   </type>
+   <name>
+    GSM1917663_sample_table.txt
+   </name>
+   <url>
+    ftp://ftp.ebi.ac.uk/pub/databases/microarray/data/experiment/GEOD/E-GEOD-74341/E-GEOD-74341.processed.1.zip/GSM1917663_sample_table.txt
+   </url>
+   <comment>
+    <name>
+     Derived ArrayExpress FTP file
+    </name>
+    <value>
+     ftp://ftp.ebi.ac.uk/pub/databases/microarray/data/experiment/GEOD/E-GEOD-74341/E-GEOD-74341.processed.1.zip
+    </value>
+   </comment>
+  </file>
+  <labeled-extract>
+   <name>
+    GSM1917663 LE 1
+   </name>
+   <label>
+    Cy5
+   </label>
+  </labeled-extract>
+  <source>
+   <name>
+    GSM1917663 1
+   </name>
+   <comment>
+    <name>
+     Sample_description
+    </name>
+    <value>
+     E4_2_1
+    </value>
+   </comment>
+   <comment>
+    <name>
+     Sample_source_name
+    </name>
+    <value>
+     pooled controls who delivered at term
+    </value>
+   </comment>
+   <comment>
+    <name>
+     Sample_title
+    </name>
+    <value>
+     EOPE_rep4
+    </value>
+   </comment>
+  </source>
+  <variable>
+   <name>
+    subject status
+   </name>
+   <value>
+    controls who delivered at term (&gt;36 weeks)
+   </value>
+  </variable>
+ </sample>
+ <sample>
+  <assay>
+   <name>
+    GSM1917662
+   </name>
+  </assay>
+  <characteristic>
+   <category>
+    organism
+   </category>
+   <value>
+    Homo sapiens
+   </value>
+  </characteristic>
+  <characteristic>
+   <category>
+    organism part
+   </category>
+   <value>
+    placental tissue
+   </value>
+  </characteristic>
+  <characteristic>
+   <category>
+    sample type
+   </category>
+   <value>
+   </value>
+  </characteristic>
+  <characteristic>
+   <category>
+    subject status
+   </category>
+   <value>
+    patients with early-onset (&lt;34 weeks) preeclampsia (EOPE)
+   </value>
+  </characteristic>
+  <extract>
+   <name>
+    GSM1917662 extract 2
+   </name>
+  </extract>
+  <file>
+   <type>
+    data
+   </type>
+   <name>
+    GSM1917662_S03_1_2.txt
+   </name>
+   <url>
+    ftp://ftp.ebi.ac.uk/pub/databases/microarray/data/experiment/GEOD/E-GEOD-74341/E-GEOD-74341.raw.1.zip/GSM1917662_S03_1_2.txt
+   </url>
+   <comment>
+    <name>
+     ArrayExpress FTP file
+    </name>
+    <value>
+     ftp://ftp.ebi.ac.uk/pub/databases/microarray/data/experiment/GEOD/E-GEOD-74341/E-GEOD-74341.raw.1.zip
+    </value>
+   </comment>
+  </file>
+  <file>
+   <type>
+    derived data
+   </type>
+   <name>
+    GSM1917662_sample_table.txt
+   </name>
+   <url>
+    ftp://ftp.ebi.ac.uk/pub/databases/microarray/data/experiment/GEOD/E-GEOD-74341/E-GEOD-74341.processed.1.zip/GSM1917662_sample_table.txt
+   </url>
+   <comment>
+    <name>
+     Derived ArrayExpress FTP file
+    </name>
+    <value>
+     ftp://ftp.ebi.ac.uk/pub/databases/microarray/data/experiment/GEOD/E-GEOD-74341/E-GEOD-74341.processed.1.zip
+    </value>
+   </comment>
+  </file>
+  <labeled-extract>
+   <name>
+    GSM1917662 LE 2
+   </name>
+   <label>
+    Cy3
+   </label>
+  </labeled-extract>
+  <source>
+   <name>
+    GSM1917662 2
+   </name>
+   <comment>
+    <name>
+     Sample_description
+    </name>
+    <value>
+     E3_1_2
+    </value>
+   </comment>
+   <comment>
+    <name>
+     Sample_source_name
+    </name>
+    <value>
+     EOPE_placental tissue
+    </value>
+   </comment>
+   <comment>
+    <name>
+     Sample_title
+    </name>
+    <value>
+     EOPE_rep3
+    </value>
+   </comment>
+  </source>
+  <variable>
+   <name>
+    subject status
+   </name>
+   <value>
+    patients with early-onset (&lt;34 weeks) preeclampsia (EOPE)
+   </value>
+  </variable>
+ </sample>
+ <sample>
+  <assay>
+   <name>
+    GSM1917662
+   </name>
+  </assay>
+  <characteristic>
+   <category>
+    organism
+   </category>
+   <value>
+    Homo sapiens
+   </value>
+  </characteristic>
+  <characteristic>
+   <category>
+    organism part
+   </category>
+   <value>
+    placental tissue
+   </value>
+  </characteristic>
+  <characteristic>
+   <category>
+    sample type
+   </category>
+   <value>
+    pooled-sample reference
+   </value>
+  </characteristic>
+  <characteristic>
+   <category>
+    subject status
+   </category>
+   <value>
+    controls who delivered at term (&gt;36 weeks)
+   </value>
+  </characteristic>
+  <extract>
+   <name>
+    GSM1917662 extract 1
+   </name>
+  </extract>
+  <file>
+   <type>
+    data
+   </type>
+   <name>
+    GSM1917662_S03_1_2.txt
+   </name>
+   <url>
+    ftp://ftp.ebi.ac.uk/pub/databases/microarray/data/experiment/GEOD/E-GEOD-74341/E-GEOD-74341.raw.1.zip/GSM1917662_S03_1_2.txt
+   </url>
+   <comment>
+    <name>
+     ArrayExpress FTP file
+    </name>
+    <value>
+     ftp://ftp.ebi.ac.uk/pub/databases/microarray/data/experiment/GEOD/E-GEOD-74341/E-GEOD-74341.raw.1.zip
+    </value>
+   </comment>
+  </file>
+  <file>
+   <type>
+    derived data
+   </type>
+   <name>
+    GSM1917662_sample_table.txt
+   </name>
+   <url>
+    ftp://ftp.ebi.ac.uk/pub/databases/microarray/data/experiment/GEOD/E-GEOD-74341/E-GEOD-74341.processed.1.zip/GSM1917662_sample_table.txt
+   </url>
+   <comment>
+    <name>
+     Derived ArrayExpress FTP file
+    </name>
+    <value>
+     ftp://ftp.ebi.ac.uk/pub/databases/microarray/data/experiment/GEOD/E-GEOD-74341/E-GEOD-74341.processed.1.zip
+    </value>
+   </comment>
+  </file>
+  <labeled-extract>
+   <name>
+    GSM1917662 LE 1
+   </name>
+   <label>
+    Cy5
+   </label>
+  </labeled-extract>
+  <source>
+   <name>
+    GSM1917662 1
+   </name>
+   <comment>
+    <name>
+     Sample_description
+    </name>
+    <value>
+     E3_1_2
+    </value>
+   </comment>
+   <comment>
+    <name>
+     Sample_source_name
+    </name>
+    <value>
+     pooled controls who delivered at term
+    </value>
+   </comment>
+   <comment>
+    <name>
+     Sample_title
+    </name>
+    <value>
+     EOPE_rep3
+    </value>
+   </comment>
+  </source>
+  <variable>
+   <name>
+    subject status
+   </name>
+   <value>
+    controls who delivered at term (&gt;36 weeks)
+   </value>
+  </variable>
+ </sample>
+ <sample>
+  <assay>
+   <name>
+    GSM1917661
+   </name>
+  </assay>
+  <characteristic>
+   <category>
+    organism
+   </category>
+   <value>
+    Homo sapiens
+   </value>
+  </characteristic>
+  <characteristic>
+   <category>
+    organism part
+   </category>
+   <value>
+    placental tissue
+   </value>
+  </characteristic>
+  <characteristic>
+   <category>
+    sample type
+   </category>
+   <value>
+   </value>
+  </characteristic>
+  <characteristic>
+   <category>
+    subject status
+   </category>
+   <value>
+    patients with early-onset (&lt;34 weeks) preeclampsia (EOPE)
+   </value>
+  </characteristic>
+  <extract>
+   <name>
+    GSM1917661 extract 2
+   </name>
+  </extract>
+  <file>
+   <type>
+    data
+   </type>
+   <name>
+    GSM1917661_S01_1_2.txt
+   </name>
+   <url>
+    ftp://ftp.ebi.ac.uk/pub/databases/microarray/data/experiment/GEOD/E-GEOD-74341/E-GEOD-74341.raw.1.zip/GSM1917661_S01_1_2.txt
+   </url>
+   <comment>
+    <name>
+     ArrayExpress FTP file
+    </name>
+    <value>
+     ftp://ftp.ebi.ac.uk/pub/databases/microarray/data/experiment/GEOD/E-GEOD-74341/E-GEOD-74341.raw.1.zip
+    </value>
+   </comment>
+  </file>
+  <file>
+   <type>
+    derived data
+   </type>
+   <name>
+    GSM1917661_sample_table.txt
+   </name>
+   <url>
+    ftp://ftp.ebi.ac.uk/pub/databases/microarray/data/experiment/GEOD/E-GEOD-74341/E-GEOD-74341.processed.1.zip/GSM1917661_sample_table.txt
+   </url>
+   <comment>
+    <name>
+     Derived ArrayExpress FTP file
+    </name>
+    <value>
+     ftp://ftp.ebi.ac.uk/pub/databases/microarray/data/experiment/GEOD/E-GEOD-74341/E-GEOD-74341.processed.1.zip
+    </value>
+   </comment>
+  </file>
+  <labeled-extract>
+   <name>
+    GSM1917661 LE 2
+   </name>
+   <label>
+    Cy3
+   </label>
+  </labeled-extract>
+  <source>
+   <name>
+    GSM1917661 2
+   </name>
+   <comment>
+    <name>
+     Sample_description
+    </name>
+    <value>
+     E1_1_2
+    </value>
+   </comment>
+   <comment>
+    <name>
+     Sample_source_name
+    </name>
+    <value>
+     EOPE_placental tissue
+    </value>
+   </comment>
+   <comment>
+    <name>
+     Sample_title
+    </name>
+    <value>
+     EOPE_rep2
+    </value>
+   </comment>
+  </source>
+  <variable>
+   <name>
+    subject status
+   </name>
+   <value>
+    patients with early-onset (&lt;34 weeks) preeclampsia (EOPE)
+   </value>
+  </variable>
+ </sample>
+ <sample>
+  <assay>
+   <name>
+    GSM1917661
+   </name>
+  </assay>
+  <characteristic>
+   <category>
+    organism
+   </category>
+   <value>
+    Homo sapiens
+   </value>
+  </characteristic>
+  <characteristic>
+   <category>
+    organism part
+   </category>
+   <value>
+    placental tissue
+   </value>
+  </characteristic>
+  <characteristic>
+   <category>
+    sample type
+   </category>
+   <value>
+    pooled-sample reference
+   </value>
+  </characteristic>
+  <characteristic>
+   <category>
+    subject status
+   </category>
+   <value>
+    controls who delivered at term (&gt;36 weeks)
+   </value>
+  </characteristic>
+  <extract>
+   <name>
+    GSM1917661 extract 1
+   </name>
+  </extract>
+  <file>
+   <type>
+    data
+   </type>
+   <name>
+    GSM1917661_S01_1_2.txt
+   </name>
+   <url>
+    ftp://ftp.ebi.ac.uk/pub/databases/microarray/data/experiment/GEOD/E-GEOD-74341/E-GEOD-74341.raw.1.zip/GSM1917661_S01_1_2.txt
+   </url>
+   <comment>
+    <name>
+     ArrayExpress FTP file
+    </name>
+    <value>
+     ftp://ftp.ebi.ac.uk/pub/databases/microarray/data/experiment/GEOD/E-GEOD-74341/E-GEOD-74341.raw.1.zip
+    </value>
+   </comment>
+  </file>
+  <file>
+   <type>
+    derived data
+   </type>
+   <name>
+    GSM1917661_sample_table.txt
+   </name>
+   <url>
+    ftp://ftp.ebi.ac.uk/pub/databases/microarray/data/experiment/GEOD/E-GEOD-74341/E-GEOD-74341.processed.1.zip/GSM1917661_sample_table.txt
+   </url>
+   <comment>
+    <name>
+     Derived ArrayExpress FTP file
+    </name>
+    <value>
+     ftp://ftp.ebi.ac.uk/pub/databases/microarray/data/experiment/GEOD/E-GEOD-74341/E-GEOD-74341.processed.1.zip
+    </value>
+   </comment>
+  </file>
+  <labeled-extract>
+   <name>
+    GSM1917661 LE 1
+   </name>
+   <label>
+    Cy5
+   </label>
+  </labeled-extract>
+  <source>
+   <name>
+    GSM1917661 1
+   </name>
+   <comment>
+    <name>
+     Sample_description
+    </name>
+    <value>
+     E1_1_2
+    </value>
+   </comment>
+   <comment>
+    <name>
+     Sample_source_name
+    </name>
+    <value>
+     pooled controls who delivered at term
+    </value>
+   </comment>
+   <comment>
+    <name>
+     Sample_title
+    </name>
+    <value>
+     EOPE_rep2
+    </value>
+   </comment>
+  </source>
+  <variable>
+   <name>
+    subject status
+   </name>
+   <value>
+    controls who delivered at term (&gt;36 weeks)
+   </value>
+  </variable>
+ </sample>
+ <sample>
+  <assay>
+   <name>
+    GSM1917660
+   </name>
+  </assay>
+  <characteristic>
+   <category>
+    organism
+   </category>
+   <value>
+    Homo sapiens
+   </value>
+  </characteristic>
+  <characteristic>
+   <category>
+    organism part
+   </category>
+   <value>
+    placental tissue
+   </value>
+  </characteristic>
+  <characteristic>
+   <category>
+    sample type
+   </category>
+   <value>
+    pooled-sample reference
+   </value>
+  </characteristic>
+  <characteristic>
+   <category>
+    subject status
+   </category>
+   <value>
+    controls who delivered at term (&gt;36 weeks)
+   </value>
+  </characteristic>
+  <extract>
+   <name>
+    GSM1917660 extract 1
+   </name>
+  </extract>
+  <file>
+   <type>
+    data
+   </type>
+   <name>
+    GSM1917660_S01_1_1.txt
+   </name>
+   <url>
+    ftp://ftp.ebi.ac.uk/pub/databases/microarray/data/experiment/GEOD/E-GEOD-74341/E-GEOD-74341.raw.1.zip/GSM1917660_S01_1_1.txt
+   </url>
+   <comment>
+    <name>
+     ArrayExpress FTP file
+    </name>
+    <value>
+     ftp://ftp.ebi.ac.uk/pub/databases/microarray/data/experiment/GEOD/E-GEOD-74341/E-GEOD-74341.raw.1.zip
+    </value>
+   </comment>
+  </file>
+  <file>
+   <type>
+    derived data
+   </type>
+   <name>
+    GSM1917660_sample_table.txt
+   </name>
+   <url>
+    ftp://ftp.ebi.ac.uk/pub/databases/microarray/data/experiment/GEOD/E-GEOD-74341/E-GEOD-74341.processed.1.zip/GSM1917660_sample_table.txt
+   </url>
+   <comment>
+    <name>
+     Derived ArrayExpress FTP file
+    </name>
+    <value>
+     ftp://ftp.ebi.ac.uk/pub/databases/microarray/data/experiment/GEOD/E-GEOD-74341/E-GEOD-74341.processed.1.zip
+    </value>
+   </comment>
+  </file>
+  <labeled-extract>
+   <name>
+    GSM1917660 LE 1
+   </name>
+   <label>
+    Cy5
+   </label>
+  </labeled-extract>
+  <source>
+   <name>
+    GSM1917660 1
+   </name>
+   <comment>
+    <name>
+     Sample_description
+    </name>
+    <value>
+     E1_1_1
+    </value>
+   </comment>
+   <comment>
+    <name>
+     Sample_source_name
+    </name>
+    <value>
+     pooled controls who delivered at term
+    </value>
+   </comment>
+   <comment>
+    <name>
+     Sample_title
+    </name>
+    <value>
+     EOPE_rep1
+    </value>
+   </comment>
+  </source>
+  <variable>
+   <name>
+    subject status
+   </name>
+   <value>
+    controls who delivered at term (&gt;36 weeks)
+   </value>
+  </variable>
+ </sample>
+ <sample>
+  <assay>
+   <name>
+    GSM1917660
+   </name>
+  </assay>
+  <characteristic>
+   <category>
+    organism
+   </category>
+   <value>
+    Homo sapiens
+   </value>
+  </characteristic>
+  <characteristic>
+   <category>
+    organism part
+   </category>
+   <value>
+    placental tissue
+   </value>
+  </characteristic>
+  <characteristic>
+   <category>
+    sample type
+   </category>
+   <value>
+   </value>
+  </characteristic>
+  <characteristic>
+   <category>
+    subject status
+   </category>
+   <value>
+    patients with early-onset (&lt;34 weeks) preeclampsia (EOPE)
+   </value>
+  </characteristic>
+  <extract>
+   <name>
+    GSM1917660 extract 2
+   </name>
+  </extract>
+  <file>
+   <type>
+    data
+   </type>
+   <name>
+    GSM1917660_S01_1_1.txt
+   </name>
+   <url>
+    ftp://ftp.ebi.ac.uk/pub/databases/microarray/data/experiment/GEOD/E-GEOD-74341/E-GEOD-74341.raw.1.zip/GSM1917660_S01_1_1.txt
+   </url>
+   <comment>
+    <name>
+     ArrayExpress FTP file
+    </name>
+    <value>
+     ftp://ftp.ebi.ac.uk/pub/databases/microarray/data/experiment/GEOD/E-GEOD-74341/E-GEOD-74341.raw.1.zip
+    </value>
+   </comment>
+  </file>
+  <file>
+   <type>
+    derived data
+   </type>
+   <name>
+    GSM1917660_sample_table.txt
+   </name>
+   <url>
+    ftp://ftp.ebi.ac.uk/pub/databases/microarray/data/experiment/GEOD/E-GEOD-74341/E-GEOD-74341.processed.1.zip/GSM1917660_sample_table.txt
+   </url>
+   <comment>
+    <name>
+     Derived ArrayExpress FTP file
+    </name>
+    <value>
+     ftp://ftp.ebi.ac.uk/pub/databases/microarray/data/experiment/GEOD/E-GEOD-74341/E-GEOD-74341.processed.1.zip
+    </value>
+   </comment>
+  </file>
+  <labeled-extract>
+   <name>
+    GSM1917660 LE 2
+   </name>
+   <label>
+    Cy3
+   </label>
+  </labeled-extract>
+  <source>
+   <name>
+    GSM1917660 2
+   </name>
+   <comment>
+    <name>
+     Sample_description
+    </name>
+    <value>
+     E1_1_1
+    </value>
+   </comment>
+   <comment>
+    <name>
+     Sample_source_name
+    </name>
+    <value>
+     EOPE_placental tissue
+    </value>
+   </comment>
+   <comment>
+    <name>
+     Sample_title
+    </name>
+    <value>
+     EOPE_rep1
+    </value>
+   </comment>
+  </source>
+  <variable>
+   <name>
+    subject status
+   </name>
+   <value>
+    patients with early-onset (&lt;34 weeks) preeclampsia (EOPE)
    </value>
   </variable>
  </sample>

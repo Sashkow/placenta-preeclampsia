@@ -16,8 +16,8 @@ from django.core.urlresolvers import reverse
 
 from simple_history.admin import SimpleHistoryAdmin
 
-from import_export.resources import ModelResource
-from import_export.admin import ImportExportModelAdmin
+# from import_export.resources import ModelResource
+# from import_export.admin import ImportExportModelAdmin
 
 
 def _lookup_f(ModelClass, attr_name):
@@ -225,13 +225,13 @@ class ExperimentAdmin(SuperModelAdmin, SimpleHistoryAdmin):
 admin.site.register(Experiment, ExperimentAdmin)
 
 
-class MicroarrayResource(ModelResource):
+# class MicroarrayResource(ModelResource):
 
-    class Meta:
-        model = Microarray
+#     class Meta:
+#         model = Microarray
 
-class MicroarrayAdmin(ImportExportModelAdmin):
-    resource_class = MicroarrayResource
+class MicroarrayAdmin(ModelAdmin):
+    # resource_class = MicroarrayResource
 
 
     list_display = _list_display(Microarray)

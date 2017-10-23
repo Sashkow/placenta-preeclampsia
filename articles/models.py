@@ -124,6 +124,7 @@ class Experiment(models.Model):
     def __str__(self):
         to_print = 'accession'
         if to_print in self.data:
+            # print("self data",type(self.data))
             return self.data[to_print]
         else:
             return 'some experiment'
@@ -436,7 +437,7 @@ class Sample(models.Model):
         attributes = self.attributes()
 
         age = attributes.filter(
-          unificated_name__name='Gestational Age at Experiment')
+          unificated_name__name='Gestational Age at Time of Sampling')
         if age.exists():
             return age[0].old_value
 
@@ -480,31 +481,67 @@ class Sample(models.Model):
         
         age = self.get_gestational_age()
 
+
         if age:
             age = float(age)
+            # print('gestational age:', age)
 
             for category in categories:
 
                 if categories[category][0] <= age <= categories[category][1]:
                     return category
-    
-        return "Unknown Age Category"
+
+        return "Term"
 
     def get_attribute_value(self, unificated_name):
         if SampleAttribute.objects.filter(
                 sample=self,
-                unificated_name=unificated_name).exists():
-            return SampleAttribute.objects.get(
+                unificated_name__name=unificated_name).exists():
+            attribute = SampleAttribute.objects.get(
                 sample=self,
-                unificated_name=unificated_name).unificated_value.value
+                unificated_name__name=unificated_name
+            )
+            if attribute.unificated_value.unificated_name.name == "Common":
+                return attribute.old_value
+            else:
+                return attribute.unificated_value.value
 
 
 
     def add_or_replace(experiment, data): 
+        """
+        add or replace sample with given data in an experiment 
+        """
+
         sample_obj = None
         if 'name' in data:
             samples_in_experiment = Sample.objects.filter(
-                                      experiment=experiment) 
+                                      experiment=experiment)
+            name_attribute = SampleAttribute.objects.filter(
+                    sample__in=samples_in_experiment,
+                    old_name='name',
+                    old_value=data['name'])
+
+            if len(name_attribute) > 1:
+                print("Multiple instances of", data['name'], "in", experiment)
+                return
+
+            elif len(name_attribute) == 1:
+                the_sample = name_attribute[0].sample
+            elif not name_attribute:
+                the_sample = Sample.objects.create(experiment=experiment)
+
+            for name, value in data.items():
+                if not value:
+                    value = '_'
+                    SampleAttribute.add_or_replace(
+                            the_sample,
+                            old_name=name,
+                            old_value=value)
+
+            the_sample.save()
+            return the_sample
+
 
     # def _show(self):
     #     to_print = 'name'
@@ -623,6 +660,7 @@ class SampleAttribute(models.Model):
             create['unificated_value'] = unificated_value
             value_name = "unificated_value"
             value = unificated_value
+
             
 
         attribute = SampleAttribute.objects.filter(**search)
@@ -631,6 +669,7 @@ class SampleAttribute(models.Model):
             attribute_obj = attribute[0]
             setattr(attribute_obj, value_name, value)
         else:
+            
             attribute_obj = SampleAttribute.objects.create(**create)
         attribute_obj.save()
         return attribute_obj
@@ -665,6 +704,7 @@ class ColumnOrder(models.Model):
     column_order = models.IntegerField(default=99)
     show_by_default = models.BooleanField(default=False)
     show_at_all = models.BooleanField(default=True)
+
 
 
 
