@@ -14,6 +14,8 @@ from articles.models import Sample, Experiment, Microarray, ColumnOrder
 
 from articles.queries import sample_attribute_name_value
 
+import datetime
+
 
 def get_column_class_names(self, classes_set, bound_column):
     '''
@@ -103,13 +105,11 @@ def build_sample_table(request):
     col_order = sorted(col_order, key=lambda item:item[1])
     
     ordered_cols = [item[0] for item in col_order]
-    
-    
-
+    print(datetime.datetime.now().time())
 
     
     sample_dicts = Sample.to_dict()
-    
+    print(datetime.datetime.now().time())
 
     # for sample_dict in sample_dicts:
     #     for attribute in sample_dict:

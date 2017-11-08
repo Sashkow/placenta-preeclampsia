@@ -9,9 +9,71 @@ import plotly.plotly as py
 import plotly.graph_objs as go
 import plotly
 
+import numpy as n
 
 
-import numpy as np
+def gestetional_age_category_to_db():
+    samples = Sample.objects.all()
+    gestational_age_category_name = UnificatedSamplesAttributeName.objects.get(name = 'Gestational Age Category')
+
+    for sample in samples:
+        SampleAttribute.add_or_replace(
+                sample,
+                unificated_name = gestational_age_category_name,
+                unificated_value = sample.get_gestational_age_category()
+        )
+
+def all_to_tsv():
+    """
+    experiments to tsv
+    samples to tsv
+    compute gestational age category
+    join by accession
+    """
+    experiments = Experiment.to_list_of_dicts(pretty_attributes = False)
+    samples = Sample.to_dict()
+    for sample in samples:
+        if 'Experiment' in sample:
+            accession = sample['Experiment']
+            exp = list(filter(lambda exp: exp['accession'] == accession, experiments))[0]
+            if exp:
+                for attribute in exp:
+                    sample[attribute] = exp[attribute]
+
+    exp_column_names = Experiment.must_have_attributes + Experiment.extra_attributes
+    sample_column_names = ColumnOrder.objects.all().order_by(
+            'column_order').values_list('unificated_name__name', flat=True)
+    column_names = exp_column_names + list(sample_column_names)
+
+    with open('articles/test/tsv/samples.tsv','w') as tsv:
+        tsv.write('\t'.join(column_names)+'\n')
+        for sample in samples:
+            row = []
+            for column_name in column_names:
+                if column_name in sample:
+                    row.append(sample[column_name])
+                else:
+                    row.append("_")
+            tsv.write("\t".join(row)+'\n')
+ 
+
+def merge_experiments_microarrays(a, b, by='Experiment'):
+    """
+    """
+    pass
+
+
+def print_exp_platfrm():
+    exps = ['E-GEOD-74341', 'E-GEOD-73374', 'E-GEOD-60438', 'E-MTAB-3265', 'E-GEOD-48424',
+            'E-GEOD-57050', 'E-GEOD-54618', 'E-GEOD-43942', 'E-GEOD-35574', 'E-GEOD-30186',
+            'E-GEOD-24129', 'E-GEOD-10588', 'E-GEOD-13155', 'E-TABM-682', 'E-GEOD-12216', 'E-GEOD-9984', 'E-GEOD-6573']
+
+    allexperiments = Experiment.objects.all()
+
+    experiments = [exp for exp in allexperiments if exp.data['accession'] in exps]
+
+    for exp in experiments:
+        print(str(exp), '\t', exp.get_microarrays_lst())
 
 
 def get_healthy_term():
@@ -21,11 +83,19 @@ def get_healthy_term():
     exps = []
     samples = total_samples()
     term_samples = []
+    experiments = []
+
 
     for sample in samples:
         if sample.get_gestational_age_category() == "Term" and sample.get_attribute_value('Diagnosis') == 'Healthy':
             print(sample)
             term_samples.append(sample.get_attribute_value('Sample Name'))
+            if sample.experiment not in experiments:
+                experiments.append(sample.experiment)
+
+    print(experiments)
+    for exp in experiments:
+        print(str(exp), exp.get_microarrays_lst)
     #         exp = str(sample.experiment)
     #         if not exp in exps:
     #             exps.append(exp)
@@ -54,6 +124,7 @@ def all_samples_to_tsv():
     samples = Sample.to_dict()
     column_names = ColumnOrder.objects.all().order_by(
             'column_order').values_list('unificated_name__name', flat=True)
+    print(column_names)
 
     with open('articles/static/tsv/samples.tsv','w') as tsv:
         tsv.write('\t'.join(column_names)+'\n')
@@ -571,8 +642,6 @@ def sample_attribute_name_value():
             "unificated_name__name", flat=True)
 
 
-
-
     name_values = collections.OrderedDict()
 
     for name in ordered_names:
@@ -587,28 +656,7 @@ def sample_attribute_name_value():
     # for name in name_values:
     #     print(name, ":", name_values[name])
 
-
-
-
     return name_values
-
-
-
-
-    # for unificated_name in unificated_names:
-    #     name = unificated_name.name
-    #     unificated_values = UnificatedSamplesAttributeValue.objects.filter(
-    #       unificated_name=unificated_name)
-
-    #     unificated_values_values = list([item.value for item in unificated_values])
-    #     print(unificated_name.name, unificated_values_values)
-
-
-exp_ids = ['E-GEOD-31679', 'E-GEOD-30186', 'E-GEOD-15789', 
-           'E-GEOD-24129', 'E-GEOD-10588', 'E-GEOD-13155',
-           'E-GEOD-14722', 'E-GEOD-12767', 'E-GEOD-13475', 'E-GEOD-12216',
-           'E-GEOD-9984', 'E-GEOD-6573', 'E-GEOD-4100', 'E-GEOD-4707', 'E-GEOD-73375']
-
 
 def total_samples():
     all_exps = Experiment.objects.all()
@@ -660,287 +708,3 @@ def culture_samples():
     print('culture samples',len(samples))
     return samples
 
-
-def samples_by_diagnosis():
-    organism_part = UnificatedSamplesAttributeName.objects.get(name='Diagnosis')
-    organism_parts = UnificatedSamplesAttributeValue.objects.filter(unificated_name=organism_part)
-
-    parts_dict = {}
-    for part in organism_parts:
-        parts_dict[part.value] = 0
-    parts_dict["other"] = 0
-
-    samples = total_samples()
-    for sample in samples:
-        if SampleAttribute.objects.filter(
-          sample=sample,
-          unificated_name=organism_part).exists():
-            organism_part_value = SampleAttribute.objects.get(sample=sample, 
-              unificated_name=organism_part).unificated_value.value
-            parts_dict[organism_part_value]+=1
-        else:
-            # print(sample.experiment.data['accession'], sample.id)
-            parts_dict["other"]+=1
-
-    for part in parts_dict:
-        print(part, parts_dict[part])
-    return parts_dict
-
-
-def samples_by_organism_part():
-    organism_part = UnificatedSamplesAttributeName.objects.get(name='Biological Specimen')
-    organism_parts = UnificatedSamplesAttributeValue.objects.filter(unificated_name=organism_part)
-
-    
-    parts_dict = {}
-    for part in organism_parts:
-        parts_dict[part.value] = 0
-    parts_dict["Unknown"] = 0
-
-    samples = total_samples()
-    for sample in samples:
-        if SampleAttribute.objects.filter(
-          sample=sample,
-          unificated_name=organism_part).exists():
-            organism_part_value = SampleAttribute.objects.get(sample=sample, 
-              unificated_name=organism_part).unificated_value.value
-            parts_dict[organism_part_value]+=1
-        else:
-            print(sample.experiment.data['accession'], sample.id)
-            parts_dict["Unknown"]+=1
-
-    for part in parts_dict:
-        print(part, parts_dict[part])
-    return parts_dict
-
-
-def samples_by_cells_cultured():
-    organism_part = UnificatedSamplesAttributeName.objects.get(name='Organism Part')
-    cells_cultured = UnificatedSamplesAttributeName.objects.get(name='Cells, Cultured')
-    cells_cultures = UnificatedSamplesAttributeValue.objects.filter(unificated_name=cells_cultured)
-
-    cultures_dict = {}
-    for culture in cells_cultures:
-        cultures_dict[culture.value] = 0
-    cultures_dict["other"] = 0
-    total = 0
-    samples = culture_samples()
-    for sample in samples:
-        if SampleAttribute.objects.filter(
-          sample=sample,
-          unificated_name=organism_part).exists():
-            pass
-        else:
-            total+=1
-            if SampleAttribute.objects.filter(
-              sample=sample,
-              unificated_name=cells_cultured).exists():
-                culture_value = SampleAttribute.objects.filter(sample=sample, 
-                  unificated_name=cells_cultured)[0].unificated_value.value
-                # print(sample.experiment.data['accession'], sample.id)
-                cultures_dict[culture_value]+=1
-            else:
-                # print(sample.experiment.data['accession'], sample.id)
-                cultures_dict["other"]+=1
-
-    print(cultures_dict)
-    print('total',total)
-    return cultures_dict
-
-
-def samples_by_trim():
-    organism_part = UnificatedSamplesAttributeName.objects.get(name='Pregnancy Trimesters')
-    organism_parts = UnificatedSamplesAttributeValue.objects.filter(unificated_name=organism_part)
-
-    
-    parts_dict = {}
-    for part in organism_parts:
-        parts_dict[part.value] = 0
-    parts_dict["other"] = 0
-
-    samples = total_samples()
-    for sample in samples:
-        if SampleAttribute.objects.filter(
-          sample=sample,
-          unificated_name=organism_part).exists():
-            organism_part_value = SampleAttribute.objects.get(sample=sample, 
-              unificated_name=organism_part).unificated_value.value
-            # print(sample.experiment.data['accession'])
-            parts_dict[organism_part_value]+=1
-        else:
-            parts_dict["other"]+=1
-
-    print(parts_dict)
-    return parts_dict
-
-
-def samples_by_gestation_age():
-    cells_cultured = UnificatedSamplesAttributeName.objects.get(name='Cells, Cultured')
-    trim = UnificatedSamplesAttributeName.objects.get(name='Pregnancy Trimesters')
-    age = UnificatedSamplesAttributeName.objects.get(name='Gestational Age')
-    
-
-    
-    parts_dict = {}
-    parts_dict['Age'] = 0
-    parts_dict['ApproximateAge'] = 0
-
-
-    at_birth_conditions = ['Caesarean Section', 'Labor, Obstetric', 'Delivery, Obstetric']
-    total = 0
-    tr = 0
-    samples = total_samples()
-    for sample in samples:
-        if SampleAttribute.objects.filter(
-          sample=sample,
-          unificated_name=age).exists():
-            parts_dict['Age'] += 1
-        else:
-            parts_dict['ApproximateAge'] += 1
-            # organism_part_value = SampleAttribute.objects.get(sample=sample, 
-            #   unificated_name=organism_part).unificated_value
-
-            
-    #     elif SampleAttribute.objects.filter(
-    #       sample=sample,
-    #       unificated_name=trim).exists():
-    #         parts_dict['Trimesters'] += 1
-    #     elif SampleAttribute.objects.filter(
-    #       sample=sample,
-    #       unificated_name=cells_cultured).exists():
-    #         pass
-
-    #     elif SampleAttribute.objects.filter(
-    #       sample=sample,
-    #       unificated_name__name='Gestational Age Upper Bound').exists() or \
-    #          SampleAttribute.objects.filter(
-    #       sample=sample,
-    #       unificated_name__name='Gestational Age Lower Bound').exists():
-    #         parts_dict['ApproximateAge'] += 1
-    #     elif SampleAttribute.objects.filter(
-    #       sample=sample,
-    #       unificated_name__name__in=at_birth_conditions).exists():
-    #         parts_dict['AtBirth'] += 1
-    #     else:
-    #         parts_dict['Unknown'] += 1
-    #         # print(sample.experiment.data['accession'], sample.id)
-    # print(parts_dict)
-
-            
-        # elif SampleAttribute.objects.filter(
-        #   sample=sample,
-        #   unificated_name=trim).exists():
-        #     parts_dict['Trimesters'] += 1
-        # elif SampleAttribute.objects.filter(
-        #   sample=sample,
-        #   unificated_name=cells_cultured).exists():
-        #     pass
-
-        # elif SampleAttribute.objects.filter(
-        #   sample=sample,
-        #   unificated_name__name='Gestational Age Upper Bound').exists() or \
-        #      SampleAttribute.objects.filter(
-        #   sample=sample,
-        #   unificated_name__name='Gestational Age Lower Bound').exists():
-        #     parts_dict['ApproximateAge'] += 1
-        # elif SampleAttribute.objects.filter(
-        #   sample=sample,
-        #   unificated_name__name__in=at_birth_conditions).exists():
-        #     parts_dict['AtBirth'] += 1
-        # else:
-        #     parts_dict['Unknown'] += 1
-        #     # print(sample.experiment.data['accession'], sample.id)
-    print(parts_dict)
-
-    return parts_dict
-
-
-def samples_by_race():
-    organism_part = UnificatedSamplesAttributeName.objects.get(name='Continental Population Groups')
-    organism_parts = UnificatedSamplesAttributeValue.objects.filter(unificated_name=organism_part)
-
-    
-    parts_dict = {}
-    for part in organism_parts:
-        parts_dict[part.value] = 0
-    parts_dict["other"] = 0
-
-    samples = total_samples()
-
-    for sample in samples:
-        if SampleAttribute.objects.filter(
-          sample=sample,
-          unificated_name=organism_part).exists():
-            organism_part_value = SampleAttribute.objects.get(sample=sample, 
-              unificated_name=organism_part).unificated_value.value
-            # print(sample.experiment.data['accession'])
-            parts_dict[organism_part_value]+=1
-        else:
-            parts_dict["other"]+=1
-
-    print(parts_dict)
-    return parts_dict
-
-
-def gestational_age_distribution():
-    samples = total_samples()
-    ages = []
-    for sample in samples:
-        age = sample.get_gestational_age()
-        if age:
-            ages.append(age)
-    ages = [float(age) for age in ages]
-    print(ages)
-    print(len(ages))
-    title = 'Gestational Age Distribution'
-
-    layout = go.Layout(
-    title=title,
-    xaxis=dict(
-        title='Gestational Age'
-    ),
-    yaxis=dict(
-        title='Amount of Samples for Gestational Age'
-    ),
-    )
-
-    data = [go.Histogram(
-        x=ages,
-        xbins=dict(start=np.min(ages), size=1, end= np.max(ages))
-    )]
-    fig = go.Figure(data=data, layout=layout)
-    py.plot(fig, filename=title, fileopt='overwrite')
-
-
-def stats(plots=True):
-    if plots:
-        plot(samples_by_organism_part(),"Organism Part")
-        plot(samples_by_diagnosis(),"Diagnosis")
-        plot(samples_by_cells_cultured(),"Cultured Cells")
-        plot(samples_by_gestation_age(),"Gestational Age")
-        plot(samples_by_race(),"Race")
-    else:
-        print("Organism Part")
-        samples_by_organism_part()
-        print("Diagnosis")
-        samples_by_diagnosis()
-        print("Cultured Cells")
-        samples_by_cells_cultured()
-        print("Gestational Age")
-        samples_by_gestation_age()
-        print("Race")
-        samples_by_race()
-
-
-def plot(labels_values, title):
-    fig = {
-        'data': [{'labels': list(labels_values.keys()),
-                  'values': list(labels_values.values()),
-                  'type': 'pie'}],
-        'layout': {'title': title,
-                   'legend':{'font':{'size':24}}
-            
-         }
-    }
-
-    py.plot(fig, filename=title, fileopt='overwrite', auto_open=False)

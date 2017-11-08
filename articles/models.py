@@ -129,19 +129,32 @@ class Experiment(models.Model):
         else:
             return 'some experiment'
 
-    def to_dict(self):
+    def to_dict(self, pretty_attributes = True):
         """
         Create dict of all meaningful characteristics of the Experiment
         """
         attributes = {}
         for attribute in self.must_have_attributes:
             if attribute in self.data:
-                attributes[self.must_have_attributes_map[attribute]] = \
-                        self.data[attribute]
+                if pretty_attributes:
+                    attributes[self.must_have_attributes_map[attribute]] = \
+                            self.data[attribute]
+                else:
+                    attributes[attribute] = self.data[attribute]
         attributes['microarrays'] = self.get_microarrays_lst()
         attributes['status'] = self.status
+
         
         return attributes
+
+    def to_list_of_dicts(pretty_attributes = True):
+        exps = Experiment.objects.all()
+        list_of_dicts = []
+        for exp in exps:
+            list_of_dicts.append(exp.to_dict(pretty_attributes))
+        return list_of_dicts
+
+
 
 
     def add_or_replace(data):
@@ -280,7 +293,7 @@ class Experiment(models.Model):
 
 
 class Microarray(models.Model):
-    must_have_attributes = ['accession', 'name', 'short']
+    must_have_attributes = ['accession', 'name']
     data = hstore.DictionaryField(db_index=True, blank=True)
     objects = hstore.HStoreManager()
 
@@ -313,6 +326,17 @@ class Microarray(models.Model):
             d[item] = str(self.data[item])
         return d 
 
+    def to_list_of_dicts():
+        arrays = Microarray.objects.all()
+        list_of_dicts = []
+        for array in arrays:
+            list_of_dicts.append(array.to_dict())
+        return list_of_dicts
+
+
+
+
+
 
 class Sample(models.Model):
     must_have_attributes = ['name']
@@ -329,12 +353,8 @@ class Sample(models.Model):
 
     def to_dict():
         """
-        
+        creates list of dicts for samples and sample attributes respectively
         """
-        # experiments
-        # for exp in exps:
-        #     e
-        # print(exps)
 
         exps = Experiment.objects.all()
         exps = [exp for exp in exps if not exp.is_excluded()]
@@ -356,9 +376,15 @@ class Sample(models.Model):
         sample_dicts = {}
 
         for sample in samples:
-            
             sample_dicts[str(sample.id)] = \
                     {'Experiment':str(sample.experiment)}
+
+        # for sample in samples:
+        #     sample_attributes = attributes.filter(sample=sample)
+        #     print(sample_attributes)
+        #     sample_dicts[str(sample.id)]['Gestational Age Category'] = \
+        #             str(sample.get_gestational_age_category())
+
             
 
         for attribute in attributes:          
@@ -406,6 +432,8 @@ class Sample(models.Model):
 
         short_list_of_dicts=[]
         # for d in list_of_dicts:
+
+
 
         return list_of_dicts
 
@@ -476,22 +504,22 @@ class Sample(models.Model):
             "Term":             [37,42],
         }
         #get attributes for this sample
-        atributes = SampleAttribute.objects.filter(sample=self)
+        # atributes = SampleAttribute.objects.filter(sample=self)
         # if exact age exists get exact age into variable
-        
         age = self.get_gestational_age()
-
 
         if age:
             age = float(age)
             # print('gestational age:', age)
-
             for category in categories:
-
                 if categories[category][0] <= age <= categories[category][1]:
-                    return category
+                    return UnificatedSamplesAttributeValue.objects.get(value=category)
+        else:
+            self.get_attribute_value
 
-        return "Term"
+
+        return UnificatedSamplesAttributeValue.objects.get(
+                    value="Unknown Gestational Category")
 
     def get_attribute_value(self, unificated_name):
         if SampleAttribute.objects.filter(
@@ -644,24 +672,30 @@ class SampleAttribute(models.Model):
                        old_value=None,
                        unificated_name=None,
                        unificated_value=None):
+        """
+        sample - sample object
+        """
+        if not (old_name or unificated_name) or not (old_value or unificated_value):
+            print("Not enough data for attribute add_or_replace")
+            return
 
-        if old_name and old_value:
+        if old_name:
             search = {'sample':sample,
                       'old_name':old_name}
             create = search.copy()
-            create['old_value'] = old_value
-            value_name = "old_value"
-            value = old_value
-
-        elif unificated_name and unificated_value:
+        elif unificated_name:
             search = {'sample':sample,
                       'unificated_name':unificated_name}
             create = search.copy()
+
+        if old_value:
+            create['old_value'] = old_value
+            value_name = "old_value"
+            value = old_value
+        elif unificated_value:
             create['unificated_value'] = unificated_value
             value_name = "unificated_value"
             value = unificated_value
-
-            
 
         attribute = SampleAttribute.objects.filter(**search)
         
@@ -669,12 +703,11 @@ class SampleAttribute(models.Model):
             attribute_obj = attribute[0]
             setattr(attribute_obj, value_name, value)
         else:
-            
             attribute_obj = SampleAttribute.objects.create(**create)
         attribute_obj.save()
         return attribute_obj
 
-    # we are in models.py
+
     def add_or_replace_numeric(sample, unificated_name, unificated_value, old_value):
         """
         add or replace quantitative attributes for a given sample
@@ -690,7 +723,7 @@ class SampleAttribute(models.Model):
             attribute_obj.old_value = old_value
 
         else:
-            # if not found, create new attribure of given properties
+            # if not found, create new attribute of given properties
             attribute_obj = SampleAttribute.objects.create(
                     sample=sample,
                     unificated_name=unificated_name,

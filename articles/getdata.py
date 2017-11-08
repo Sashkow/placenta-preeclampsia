@@ -32,15 +32,6 @@ def generate_pdata(source, secondaryaccession, destination):
     for f in files:
         print(f)
 
-
-    
-
-
-
-
-
-
-
 s = ArrayExpress()
 # res = s.queryExperiments(
 # keywords="pre-eclampsia+OR+preeclampsia+OR+pre-eclamptic+OR+preeclamptic",
@@ -69,11 +60,6 @@ def cel_to_expression_matrix():
     cels = collections.OrderedDict(cels)
 
     print(pyaffy.rma(cdf, cels))
-
-
-    
-    
-
 
     
 def download_exp_file(experiment, filename):
@@ -148,8 +134,6 @@ def get_expression_matrix():
     # print(noraw)
 
 
-
-
 def get_sample_attributes_with_no_old_name():
     """
     12%
@@ -178,7 +162,6 @@ def get_sample_attributes_with_no_old_name():
     print(exp_data)
     lst = [exp_data[exp][2] for exp in exp_data]
     print(lst, numpy.mean(lst), numpy.std(lst))
-
 
 
 def get_studies_with_no_secondary_accession():
@@ -514,6 +497,15 @@ def print_exp_array_title(accession):
 
 def read_cell_file(file_path):
     print(os.getwd())
+
+
+# get all unique name value pairs for exp
+# to tsv
+# manually add standard names, values
+# save
+# read tsv to SampleAttribute table of the database
+def unify_exp(exp):
+    pass
 
 
 
