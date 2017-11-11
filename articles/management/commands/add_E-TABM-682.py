@@ -33,24 +33,24 @@ class Command(BaseCommand):
         exp.data['mail sent']= 'true'
         exp.save()
 
-        organism = UnificatedSamplesAttributeName.objects.get(name='Classification')
-        organism_part = UnificatedSamplesAttributeName.objects.get(name='Organism Part')
-        diagnosis = UnificatedSamplesAttributeName.objects.get(name='Diagnosis')
-        onset = UnificatedSamplesAttributeName.objects.get(name='Pre-Eclampsia Onset')
-        biosource = UnificatedSamplesAttributeName.objects.get(name='biosource provider')
+        organism = StandardName.objects.get(name='Classification')
+        organism_part = StandardName.objects.get(name='Organism Part')
+        diagnosis = StandardName.objects.get(name='Diagnosis')
+        onset = StandardName.objects.get(name='Pre-Eclampsia Onset')
+        biosource = StandardName.objects.get(name='biosource provider')
 
-        humans = UnificatedSamplesAttributeValue.objects.get(value='Humans')
-        mice = UnificatedSamplesAttributeValue.objects.get(value='Mice')
-        pre_eclampsia = UnificatedSamplesAttributeValue.objects.get(value='Pre-Eclampsia')
-        health = UnificatedSamplesAttributeValue.objects.get(value='Health')
-        early_onset = UnificatedSamplesAttributeValue.objects.get(value='Early Onset Pre-Ecpampsia (at gestational age <31 weeks)')
-        late_onset =  UnificatedSamplesAttributeValue.objects.get(value='Late Onset Pre-Eclampsia ( at gestational age >=31 weeks)')
-        fgr = UnificatedSamplesAttributeValue.objects.get(value='Fetal Growth Retardation')
-        pre_fgr = UnificatedSamplesAttributeValue.objects.get(value='pre-eclampsia and fgr')
-        text = UnificatedSamplesAttributeValue.objects.get(value='Text Value')
+        humans = StandardValue.objects.get(value='Humans')
+        mice = StandardValue.objects.get(value='Mice')
+        pre_eclampsia = StandardValue.objects.get(value='Pre-Eclampsia')
+        health = StandardValue.objects.get(value='Health')
+        early_onset = StandardValue.objects.get(value='Early Onset Pre-Ecpampsia (at gestational age <31 weeks)')
+        late_onset =  StandardValue.objects.get(value='Late Onset Pre-Eclampsia ( at gestational age >=31 weeks)')
+        fgr = StandardValue.objects.get(value='Fetal Growth Retardation')
+        pre_fgr = StandardValue.objects.get(value='pre-eclampsia and fgr')
+        text = StandardValue.objects.get(value='Text Value')
 
-        decidua = UnificatedSamplesAttributeValue.objects.get(value='Decidua')
-        placenta = UnificatedSamplesAttributeValue.objects.get(value='Placenta')
+        decidua = StandardValue.objects.get(value='Decidua')
+        placenta = StandardValue.objects.get(value='Placenta')
 
 
         for sample in Sample.objects.filter(experiment=exp):
@@ -138,9 +138,9 @@ class Command(BaseCommand):
 
             SampleAttribute.add_or_replace(
               sample=sample,
-              unificated_name=UnificatedSamplesAttributeName.objects.get(
+              unificated_name=StandardName.objects.get(
                 name='Labor, Obstetric'),
-              unificated_value=UnificatedSamplesAttributeValue.objects.get(
+              unificated_value=StandardValue.objects.get(
                 value='None'))
 
             if SampleAttribute.objects.filter(
@@ -149,24 +149,24 @@ class Command(BaseCommand):
               unificated_value=health).exists():
                 SampleAttribute.add_or_replace(
                   sample=sample,
-                  unificated_name=UnificatedSamplesAttributeName.objects.get(
+                  unificated_name=StandardName.objects.get(
                     name='Delivery, Obstetric'),
-                  unificated_value=UnificatedSamplesAttributeValue.objects.get(
+                  unificated_value=StandardValue.objects.get(
                     value='term'))
             else:
                 SampleAttribute.add_or_replace(
                   sample=sample,
-                  unificated_name=UnificatedSamplesAttributeName.objects.get(
+                  unificated_name=StandardName.objects.get(
                     name='Delivery, Obstetric'),
-                  unificated_value=UnificatedSamplesAttributeValue.objects.get(
+                  unificated_value=StandardValue.objects.get(
                     value='Premature Birth'))
 
 
             SampleAttribute.add_or_replace(
               sample=sample,
-              unificated_name=UnificatedSamplesAttributeName.objects.get(
+              unificated_name=StandardName.objects.get(
                 name='Caesarean Section'),
-              unificated_value=UnificatedSamplesAttributeValue.objects.get(
+              unificated_value=StandardValue.objects.get(
                 value='True'))
 
 

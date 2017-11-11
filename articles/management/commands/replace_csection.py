@@ -8,11 +8,11 @@ def replace_csection():
     Caesarean Section (True) and and Labor, Obstetric (None)
     delete Caesarean section, replace None with Caesarean Section
     """
-    csection = UnificatedSamplesAttributeName.objects.get(name='Caesarean Section')
-    csection_val = UnificatedSamplesAttributeValue.objects.get(value='Caesarean Section')
-    tru = UnificatedSamplesAttributeValue.objects.get(value='True')
-    labor = UnificatedSamplesAttributeName.objects.get(name='Labor, Obstetric')
-    non = UnificatedSamplesAttributeValue.objects.get(value='None')
+    csection = StandardName.objects.get(name='Caesarean Section')
+    csection_val = StandardValue.objects.get(value='Caesarean Section')
+    tru = StandardValue.objects.get(value='True')
+    labor = StandardName.objects.get(name='Labor, Obstetric')
+    non = StandardValue.objects.get(value='None')
     count = 0
     for sample in Sample.objects.all():
         attributes = sample.attributes()
@@ -33,11 +33,11 @@ def replace_csection2():
     """
     almost as replace_csection
     """
-    csection = UnificatedSamplesAttributeName.objects.get(name='Caesarean Section')
-    csection_val = UnificatedSamplesAttributeValue.objects.get(value='Caesarean Section')
-    tru = UnificatedSamplesAttributeValue.objects.get(value='True')
-    labor = UnificatedSamplesAttributeName.objects.get(name='Labor, Obstetric')
-    non = UnificatedSamplesAttributeValue.objects.get(value='None')
+    csection = StandardName.objects.get(name='Caesarean Section')
+    csection_val = StandardValue.objects.get(value='Caesarean Section')
+    tru = StandardValue.objects.get(value='True')
+    labor = StandardName.objects.get(name='Labor, Obstetric')
+    non = StandardValue.objects.get(value='None')
     count = 0
     for sample in Sample.objects.all():
         attributes = sample.attributes()

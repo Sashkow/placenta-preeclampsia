@@ -14,20 +14,20 @@ class Migration(migrations.Migration):
 
     operations = [
         migrations.RemoveField(
-            model_name='unificatedsamplesattributename',
+            model_name='standardname',
             name='mesh_id',
         ),
         migrations.RemoveField(
-            model_name='unificatedsamplesattributevalue',
+            model_name='standardvalue',
             name='mesh_id',
         ),
         migrations.AddField(
-            model_name='unificatedsamplesattributename',
+            model_name='standardname',
             name='additional_info',
             field=django_hstore.fields.DictionaryField(blank=True, db_index=True, null=True),
         ),
         migrations.AddField(
-            model_name='unificatedsamplesattributevalue',
+            model_name='standardvalue',
             name='additional_info',
             field=django_hstore.fields.DictionaryField(blank=True, db_index=True, null=True),
         ),

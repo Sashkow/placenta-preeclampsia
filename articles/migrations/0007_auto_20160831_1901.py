@@ -17,6 +17,6 @@ class Migration(migrations.Migration):
             name='unificated_name',
         ),
         migrations.DeleteModel(
-            name='UnificatedSamplesAttributeName',
+            name='StandardName',
         ),
     ]

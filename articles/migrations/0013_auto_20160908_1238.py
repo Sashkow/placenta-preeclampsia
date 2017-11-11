@@ -21,11 +21,11 @@ class Migration(migrations.Migration):
         migrations.AlterField(
             model_name='sampleattribute',
             name='unificated_value',
-            field=models.ForeignKey(blank=True, null=True, on_delete=django.db.models.deletion.CASCADE, to='articles.UnificatedSamplesAttributeValue'),
+            field=models.ForeignKey(blank=True, null=True, on_delete=django.db.models.deletion.CASCADE, to='articles.StandardValue'),
         ),
         migrations.AlterField(
             model_name='samplesattributenameinexperiment',
             name='unificated_name',
-            field=models.ForeignKey(blank=True, null=True, on_delete=django.db.models.deletion.CASCADE, to='articles.UnificatedSamplesAttributeName'),
+            field=models.ForeignKey(blank=True, null=True, on_delete=django.db.models.deletion.CASCADE, to='articles.StandardName'),
         ),
     ]

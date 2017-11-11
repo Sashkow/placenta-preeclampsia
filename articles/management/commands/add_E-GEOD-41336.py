@@ -22,41 +22,41 @@ class Command(BaseCommand):
         # exp.data['mail sent']
         # exp.save()
 
-        organism = UnificatedSamplesAttributeName.objects.get(name='Classification')
-        organism_part = UnificatedSamplesAttributeName.objects.get(name='Organism Part')
-        diagnosis = UnificatedSamplesAttributeName.objects.get(name='Diagnosis')
-        onset = UnificatedSamplesAttributeName.objects.get(name='Pre-Eclampsia Onset')
-        biosource = UnificatedSamplesAttributeName.objects.get(name='biosource provider')
-        sex = UnificatedSamplesAttributeName.objects.get(name='Sex')
-        labor = UnificatedSamplesAttributeName.objects.get(name='Labor, Obstetric')
-        batch = UnificatedSamplesAttributeName.objects.get(name='batch')
-        age = UnificatedSamplesAttributeName.objects.get(name='Gestational Age')
-        cultured = UnificatedSamplesAttributeName.objects.get(name='Cells, Cultured')
+        organism = StandardName.objects.get(name='Classification')
+        organism_part = StandardName.objects.get(name='Organism Part')
+        diagnosis = StandardName.objects.get(name='Diagnosis')
+        onset = StandardName.objects.get(name='Pre-Eclampsia Onset')
+        biosource = StandardName.objects.get(name='biosource provider')
+        sex = StandardName.objects.get(name='Sex')
+        labor = StandardName.objects.get(name='Labor, Obstetric')
+        batch = StandardName.objects.get(name='batch')
+        age = StandardName.objects.get(name='Gestational Age')
+        cultured = StandardName.objects.get(name='Cells, Cultured')
 
 
-        humans = UnificatedSamplesAttributeValue.objects.get(value='Humans')
-        mice = UnificatedSamplesAttributeValue.objects.get(value='Mice')
-        pre_eclampsia = UnificatedSamplesAttributeValue.objects.get(value='Pre-Eclampsia')
-        health = UnificatedSamplesAttributeValue.objects.get(value='Health')
-        early_onset = UnificatedSamplesAttributeValue.objects.get(value='Early Onset Pre-Ecpampsia (at gestational age <31 weeks)')
-        late_onset =  UnificatedSamplesAttributeValue.objects.get(value='Late Onset Pre-Eclampsia ( at gestational age >=31 weeks)')
-        fgr = UnificatedSamplesAttributeValue.objects.get(value='Fetal Growth Retardation')
-        pre_fgr = UnificatedSamplesAttributeValue.objects.get(value='pre-eclampsia and fgr')
-        text = UnificatedSamplesAttributeValue.objects.get(value='Text Value')
-        cytotrophoblast = UnificatedSamplesAttributeValue.objects.get(value='Cytotrophoblasts')
-        syncitiotrophoblast = UnificatedSamplesAttributeValue.objects.get(value='Syncitiotrophoblasts')
+        humans = StandardValue.objects.get(value='Humans')
+        mice = StandardValue.objects.get(value='Mice')
+        pre_eclampsia = StandardValue.objects.get(value='Pre-Eclampsia')
+        health = StandardValue.objects.get(value='Health')
+        early_onset = StandardValue.objects.get(value='Early Onset Pre-Ecpampsia (at gestational age <31 weeks)')
+        late_onset =  StandardValue.objects.get(value='Late Onset Pre-Eclampsia ( at gestational age >=31 weeks)')
+        fgr = StandardValue.objects.get(value='Fetal Growth Retardation')
+        pre_fgr = StandardValue.objects.get(value='pre-eclampsia and fgr')
+        text = StandardValue.objects.get(value='Text Value')
+        cytotrophoblast = StandardValue.objects.get(value='Cytotrophoblasts')
+        syncitiotrophoblast = StandardValue.objects.get(value='Syncitiotrophoblasts')
 
 
 
-        decidua = UnificatedSamplesAttributeValue.objects.get(value='Decidua')
-        placenta = UnificatedSamplesAttributeValue.objects.get(value='Placenta')
+        decidua = StandardValue.objects.get(value='Decidua')
+        placenta = StandardValue.objects.get(value='Placenta')
 
-        female = UnificatedSamplesAttributeValue.objects.get(value='Female')
-        male = UnificatedSamplesAttributeValue.objects.get(value='Male')
+        female = StandardValue.objects.get(value='Female')
+        male = StandardValue.objects.get(value='Male')
 
-        spontaneous= UnificatedSamplesAttributeValue.objects.get(value='spontaneous')
-        induced= UnificatedSamplesAttributeValue.objects.get(value='Labor, Induced')
-        weeks = UnificatedSamplesAttributeValue.objects.get(value='Number in weeks')
+        spontaneous= StandardValue.objects.get(value='spontaneous')
+        induced= StandardValue.objects.get(value='Labor, Induced')
+        weeks = StandardValue.objects.get(value='Number in weeks')
 
 
         for sample in Sample.objects.filter(experiment=exp):
@@ -90,24 +90,24 @@ class Command(BaseCommand):
             #   unificated_value=health).exists():
             #     SampleAttribute.add_or_replace(
             #       sample=sample,
-            #       unificated_name=UnificatedSamplesAttributeName.objects.get(
+            #       unificated_name=StandardName.objects.get(
             #         name='Delivery, Obstetric'),
-            #       unificated_value=UnificatedSamplesAttributeValue.objects.get(
+            #       unificated_value=StandardValue.objects.get(
             #         value='term'))
             # else:
             #     SampleAttribute.add_or_replace(
             #       sample=sample,
-            #       unificated_name=UnificatedSamplesAttributeName.objects.get(
+            #       unificated_name=StandardName.objects.get(
             #         name='Delivery, Obstetric'),
-            #       unificated_value=UnificatedSamplesAttributeValue.objects.get(
+            #       unificated_value=StandardValue.objects.get(
             #         value='Premature Birth'))
 
 
             # SampleAttribute.add_or_replace(
             #   sample=sample,
-            #   unificated_name=UnificatedSamplesAttributeName.objects.get(
+            #   unificated_name=StandardName.objects.get(
             #     name='Caesarean Section'),
-            #   unificated_value=UnificatedSamplesAttributeValue.objects.get(
+            #   unificated_value=StandardValue.objects.get(
             #     value='True'))
 
 

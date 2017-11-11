@@ -132,11 +132,11 @@ WSGI_APPLICATION = 'preeclampsia_db.wsgi.application'
 # DATABASES = {
 #     'default': {
 #         'ENGINE': 'django.db.backends.postgresql_psycopg2',
-#         'NAME': 'test_db1',
-#         'USER': 'sashko',
-#         'PASSWORD': 'poland',
+#         'NAME': 'igea',
+#         'USER': 'postgres',
+#         'PASSWORD': 'polander',
 #         'HOST': 'localhost',
-#         'PORT': '5433',
+#         'PORT': '',
 #     }
 # }
 

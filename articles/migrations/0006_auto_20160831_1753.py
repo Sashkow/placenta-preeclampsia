@@ -19,7 +19,7 @@ class Migration(migrations.Migration):
                 ('id', models.AutoField(auto_created=True, primary_key=True, serialize=False, verbose_name='ID')),
                 ('old_value', models.CharField(max_length=255)),
                 ('sample', models.ForeignKey(on_delete=django.db.models.deletion.CASCADE, to='articles.Sample')),
-                ('unificated_value', models.ForeignKey(on_delete=django.db.models.deletion.CASCADE, to='articles.UnificatedSamplesAttributeValue')),
+                ('unificated_value', models.ForeignKey(on_delete=django.db.models.deletion.CASCADE, to='articles.StandardValue')),
             ],
         ),
         migrations.RemoveField(

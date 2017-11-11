@@ -13,9 +13,9 @@ class Migration(migrations.Migration):
 
     operations = [
         migrations.AddField(
-            model_name='unificatedsamplesattributevalue',
+            model_name='standardvalue',
             name='synonyms',
-            field=models.ManyToManyField(to='articles.UnificatedSamplesAttributeValue'),
+            field=models.ManyToManyField(to='articles.StandardValue'),
         ),
         migrations.AlterField(
             model_name='sampleattribute',
@@ -28,8 +28,8 @@ class Migration(migrations.Migration):
             field=models.CharField(blank=True, max_length=255),
         ),
         migrations.AlterField(
-            model_name='unificatedsamplesattributename',
+            model_name='standardname',
             name='synonyms',
-            field=models.ManyToManyField(to='articles.UnificatedSamplesAttributeName'),
+            field=models.ManyToManyField(to='articles.StandardName'),
         ),
     ]

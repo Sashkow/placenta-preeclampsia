@@ -17,9 +17,9 @@ class Command(BaseCommand):
         health_samples = ['GSM'+str(item) for item in health_range]
         pre_eclampsia_samples = ['GSM'+str(item) for item in pre_eclampsia_range]
 
-        diagnosis = UnificatedSamplesAttributeName.objects.get(name='Diagnosis')
-        pre_eclampsia = UnificatedSamplesAttributeValue.objects.get(value='severe preeclampsia')
-        health = UnificatedSamplesAttributeValue.objects.get(value='Health')
+        diagnosis = StandardName.objects.get(name='Diagnosis')
+        pre_eclampsia = StandardValue.objects.get(value='severe preeclampsia')
+        health = StandardValue.objects.get(value='Health')
 
         samples_in_experiment= Sample.objects.filter(experiment=exp)
 

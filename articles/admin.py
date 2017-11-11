@@ -120,7 +120,7 @@ def _status_display():
 
         if exists:
             exp = Experiment.objects.get(id=obj.id)
-            return exp.status
+            return exp.data['status']
         return ""
 
 
@@ -267,8 +267,8 @@ class ColumnOrderAdmin(ModelAdmin):
 
 
 class UnificatedSamplesAttributeNameAdminInline(admin.TabularInline):
-    model = UnificatedSamplesAttributeName.synonyms.through
-    fk_name = 'from_unificatedsamplesattributename'
+    model = StandardName.synonyms.through
+    fk_name = 'from_standardname'
     extra = 0
 
 class UnificatedSamplesAttributeNameAdmin(ModelAdmin):
@@ -277,8 +277,8 @@ class UnificatedSamplesAttributeNameAdmin(ModelAdmin):
 
 
 class UnificatedSamplesAttributeValueAdminInline(admin.TabularInline):
-    model = UnificatedSamplesAttributeValue.synonyms.through
-    fk_name = 'from_unificatedsamplesattributevalue'
+    model = StandardValue.synonyms.through
+    fk_name = 'from_standardvalue'
     extra = 0
 
 class UnificatedSamplesAttributeValueAdmin(ModelAdmin):
@@ -291,8 +291,8 @@ admin.site.register(Microarray, MicroarrayAdmin)
 admin.site.register(Sample, SampleAdmin)
 
 
-admin.site.register(UnificatedSamplesAttributeName, UnificatedSamplesAttributeNameAdmin)
-admin.site.register(UnificatedSamplesAttributeValue, UnificatedSamplesAttributeValueAdmin)
+admin.site.register(StandardName, UnificatedSamplesAttributeNameAdmin)
+admin.site.register(StandardValue, UnificatedSamplesAttributeValueAdmin)
 
 admin.site.register(SampleAttribute, SampleAttributeAdmin)
 

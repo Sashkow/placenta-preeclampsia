@@ -13,8 +13,8 @@ class Migration(migrations.Migration):
 
     operations = [
         migrations.AlterField(
-            model_name='unificatedsamplesattributename',
+            model_name='standardname',
             name='synonyms',
-            field=models.ManyToManyField(related_name='_unificatedsamplesattributename_synonyms_+', to='articles.UnificatedSamplesAttributeName'),
+            field=models.ManyToManyField(related_name='_unificatedsamplesattributename_synonyms_+', to='articles.StandardName'),
         ),
     ]

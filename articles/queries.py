@@ -14,9 +14,10 @@ import numpy as n
 
 def gestetional_age_category_to_db():
     samples = Sample.objects.all()
-    gestational_age_category_name = UnificatedSamplesAttributeName.objects.get(name = 'Gestational Age Category')
+    gestational_age_category_name = StandardName.objects.get(name ='Gestational Age Category')
 
     for sample in samples:
+        print('Adding or replacing', gestational_age_category_name, 'in', sample)
         SampleAttribute.add_or_replace(
                 sample,
                 unificated_name = gestational_age_category_name,
@@ -32,6 +33,8 @@ def all_to_tsv():
     """
     experiments = Experiment.to_list_of_dicts(pretty_attributes = False)
     samples = Sample.to_dict()
+
+
     for sample in samples:
         if 'Experiment' in sample:
             accession = sample['Experiment']
@@ -180,7 +183,7 @@ def all_microarrays_to_tsv():
 
 
 def fullfill_column_order_with_defaluts():
-    names = UnificatedSamplesAttributeName.objects.all()
+    names = StandardName.objects.all()
     ordered_names = ColumnOrder.objects.all().values_list("unificated_name", flat=True)
 
     for name in names:
@@ -201,12 +204,12 @@ def cluster_samples():
 
     # samples = total_samples()
 
-    # diagnosis = UnificatedSamplesAttributeName.objects.get(name="Diagnosis")
+    # diagnosis = StandardName.objects.get(name="Diagnosis")
     
-    # specimen = UnificatedSamplesAttributeName.objects.get(name="Biological Specimen")
+    # specimen = StandardName.objects.get(name="Biological Specimen")
 
 
-    # diagnosis_values = UnificatedSamplesAttributeValue.objects.filter(
+    # diagnosis_values = StandardValue.objects.filter(
     #         unificated_name=diagnosis) #.values_list('value', flat=True).order_by()
 
     # geatation_values = [
@@ -217,7 +220,7 @@ def cluster_samples():
     #         "Term"
     #             ]
 
-    # specimen_values = UnificatedSamplesAttributeValue.objects.filter(
+    # specimen_values = StandardValue.objects.filter(
     #         unificated_name=specimen) #.values_list('value', flat=True).order_by()
 
     # groups = {}
@@ -301,7 +304,7 @@ def coverage():
     total = len(samples)
     attributes = SampleAttribute.objects.filter(sample__in=samples)
     lst = []
-    names = UnificatedSamplesAttributeName.objects.all()
+    names = StandardName.objects.all()
     
     for name in names:
         count = attributes.filter(
@@ -331,8 +334,8 @@ def coverage():
             
 #             if mapping['unificated_name'] and mapping['unificated_value']:
 #                 count += 1
-#                 print(UnificatedSamplesAttributeName.objects.get(id=mapping['unificated_name']),
-#                       # UnificatedSamplesAttributeValue.objects.get(id=mapping['unificated_value']),
+#                 print(StandardName.objects.get(id=mapping['unificated_name']),
+#                       # StandardValue.objects.get(id=mapping['unificated_value']),
 #                       mapping['old_name'],
 #                       # mapping['old_value'],
 #                       # mapping['sample']
@@ -379,7 +382,7 @@ def list_old_names_values_with_unified():
     
                     
     """
-    unificated_names = UnificatedSamplesAttributeName.objects.filter(~Q(name='name'))
+    unificated_names = StandardName.objects.filter(~Q(name='name'))
 
     attributes = SampleAttribute.objects.filter(~Q(unificated_name=None), unificated_value__unificated_name__name='Common')
     names = {}
@@ -440,8 +443,8 @@ def list_old_names_values_with_unified():
             
     #         if mapping['unificated_name'] and mapping['unificated_value']:
     #             count += 1
-    #             print(UnificatedSamplesAttributeName.objects.get(id=mapping['unificated_name']),
-    #                   # UnificatedSamplesAttributeValue.objects.get(id=mapping['unificated_value']),
+    #             print(StandardName.objects.get(id=mapping['unificated_name']),
+    #                   # StandardValue.objects.get(id=mapping['unificated_value']),
     #                   mapping['old_name'],
     #                   # mapping['old_value'],
     #                   # mapping['sample']
@@ -468,8 +471,8 @@ def list_old_names_values_with_unified():
             
             if not (mapping['unificated_name']==None and mapping['unificated_value']==None):
                 count += 1
-                print(UnificatedSamplesAttributeName.objects.get(id=mapping['unificated_name']),
-                      # UnificatedSamplesAttributeValue.objects.get(id=mapping['unificated_value']),
+                print(StandardName.objects.get(id=mapping['unificated_name']),
+                      # StandardValue.objects.get(id=mapping['unificated_value']),
                       mapping['old_name'],
                       # mapping['old_value'],
                       # mapping['sample']
@@ -501,8 +504,8 @@ def list_old_names_values_with_unified():
             
             if not (mapping['unificated_name']==None and mapping['unificated_value']==None):
                 count += 1
-                print(UnificatedSamplesAttributeName.objects.get(id=mapping['unificated_name']),
-                      # UnificatedSamplesAttributeValue.objects.get(id=mapping['unificated_value']),
+                print(StandardName.objects.get(id=mapping['unificated_name']),
+                      # StandardValue.objects.get(id=mapping['unificated_value']),
                       mapping['old_name'],
                       # mapping['old_value'],
                       # mapping['sample']
@@ -633,7 +636,7 @@ def sample_attribute_name_value():
     returns {unificated_name: [unificated_values]} dict
     """
 
-    unificated_values = UnificatedSamplesAttributeValue.objects.all(
+    unificated_values = StandardValue.objects.all(
             ).select_related("unificated_name")
 
     all_col_orders = ColumnOrder.objects.filter(show_at_all=True)

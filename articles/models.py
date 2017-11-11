@@ -51,7 +51,7 @@ class Attribute(ShowModel):
     to_show = 'attribute_name'
 
 
-class UnificatedSamplesAttributeName(ShowModel):
+class StandardName(ShowModel):
     """
 
     """
@@ -65,15 +65,15 @@ class UnificatedSamplesAttributeName(ShowModel):
         return ("id__iexact", "name__icontains",)
 
     def save(self, *args, **kwargs):
-        super(UnificatedSamplesAttributeName, self).save(*args, **kwargs)
+        super(StandardName, self).save(*args, **kwargs)
         if not(ColumnOrder.objects.filter(unificated_name=self).exists()):
             ColumnOrder.objects.create(unificated_name=self)
         
 
 
 
-class UnificatedSamplesAttributeValue(ShowModel):
-    unificated_name = models.ForeignKey('UnificatedSamplesAttributeName')
+class StandardValue(ShowModel):
+    unificated_name = models.ForeignKey('StandardName')
     value = models.CharField(max_length=255)
     additional_info = hstore.DictionaryField(db_index=True, blank=True, null=True)
     synonyms = models.ManyToManyField('self', symmetrical=False)
@@ -104,15 +104,27 @@ class Experiment(models.Model):
 
 
     extra_attributes = ['microarrays','status']
-    
+
     data = hstore.DictionaryField(db_index=True)
     objects = hstore.HStoreManager()
     history = HistoricalRecords()
-    
+
     microarrays = models.ManyToManyField('Microarray')
+
+    def find(exp):
+        return Experiment.objects.filter(data__contains={'accession':exp}).first()
 
     def samples(self):
         return Sample.objects.filter(experiment=self)
+
+    def sample_attributes(self):
+        """get all attributes for all samples in experiment"""
+        return SampleAttribute.objects.filter(sample__experiment=self)
+
+
+
+
+
 
     def __unicode__(self):
         to_print = 'accession'
@@ -142,9 +154,9 @@ class Experiment(models.Model):
                 else:
                     attributes[attribute] = self.data[attribute]
         attributes['microarrays'] = self.get_microarrays_lst()
-        attributes['status'] = self.status
+        attributes['status'] = self.data['status']
 
-        
+
         return attributes
 
     def to_list_of_dicts(pretty_attributes = True):
@@ -207,7 +219,7 @@ class Experiment(models.Model):
                 return False
         return False
 
-    
+
     def has_minimal(self):
         """
         check whether experiment has minimal sample data,
@@ -216,11 +228,11 @@ class Experiment(models.Model):
         # import time
         # timestart = time.time()
         print(self, "start")
-        bspecimen = UnificatedSamplesAttributeName.objects.get(name="Biological Specimen").id
-        diagnosis = UnificatedSamplesAttributeName.objects.get(name="Diagnosis").id
-        age = UnificatedSamplesAttributeName.objects.get(name="Gestational Age").id
-        age_exp = UnificatedSamplesAttributeName.objects.get(name="Gestational Age at Experiment").id
-        age_avg = UnificatedSamplesAttributeName.objects.get(name="Average Gestational Age").id
+        bspecimen = StandardName.objects.get(name="Biological Specimen").id
+        diagnosis = StandardName.objects.get(name="Diagnosis").id
+        age = StandardName.objects.get(name="Gestational Age").id
+        age_exp = StandardName.objects.get(name="Gestational Age at Experiment").id
+        age_avg = StandardName.objects.get(name="Average Gestational Age").id
 
 
         attributes = SampleAttribute.objects.filter(
@@ -250,7 +262,7 @@ class Experiment(models.Model):
                     age_exp in sample_attributes or \
                     age_avg in sample_attributes)):
                 for attr in sample_attributes:
-                    print(UnificatedSamplesAttributeName.objects.get(id=attr))
+                    print(StandardName.objects.get(id=attr))
                 # timeq3 = time.time()
                 # print(timeq3-timestart)
                 # print("end-")
@@ -260,7 +272,7 @@ class Experiment(models.Model):
         # print(timeq3-timestart)
         # print("end+")
 
-        
+
         return True
 
 
@@ -271,11 +283,11 @@ class Experiment(models.Model):
             return True
         return False
 
-    @cached_property
+
     def status(self):
         status = []
-        if 'status' in self.data:
-            status.append(self.data['status'])
+        # if 'status' in self.data:
+        #     status.append(self.data['status'])
         if self.is_unified():
             status.append('Unified')
         if 'mail sent' in self.data:
@@ -284,12 +296,16 @@ class Experiment(models.Model):
             status.append('Mail Received')
         if self.is_cell_line():
             status.append('Cell Сulture')
-        
+
         if self.get_has_minimal():
             status.append('Has minimal sample data')
         if 'excluded' in self.data:
             status.append('Excluded')
         return ", ".join(status)
+
+    def update_status(self):
+        self.data['status'] = self.status()
+        self.save()
 
 
 class Microarray(models.Model):
@@ -306,7 +322,7 @@ class Microarray(models.Model):
 
     def __unicode__(self):
         return self._show()
-        
+
     def __str__(self):
         return self._show()
 
@@ -324,7 +340,7 @@ class Microarray(models.Model):
         d = {}
         for item in Microarray.must_have_attributes:
             d[item] = str(self.data[item])
-        return d 
+        return d
 
     def to_list_of_dicts():
         arrays = Microarray.objects.all()
@@ -332,10 +348,6 @@ class Microarray(models.Model):
         for array in arrays:
             list_of_dicts.append(array.to_dict())
         return list_of_dicts
-
-
-
-
 
 
 class Sample(models.Model):
@@ -347,7 +359,7 @@ class Sample(models.Model):
 
     def __unicode__(self):
         return self._show()
-        
+
     def __str__(self):
         return self._show()
 
@@ -369,6 +381,7 @@ class Sample(models.Model):
                 'old_value')
 
 
+
         # print(attributes)
         # print(samples)
 
@@ -385,27 +398,27 @@ class Sample(models.Model):
         #     sample_dicts[str(sample.id)]['Gestational Age Category'] = \
         #             str(sample.get_gestational_age_category())
 
-            
 
-        for attribute in attributes:          
-            sample = str(attribute[0])  
+
+        for attribute in attributes:
+            sample = str(attribute[0])
             # quantitative
-            if attribute[1] == "Common":
+            if attribute[1] == "Common" and attribute[3]!='True' and attribute[3]!='False':
                 sample_dicts[sample].update(
                         {attribute[2] : \
                             str(attribute[4]) })
             # qualitative
             else:
                 sample_dicts[sample].update(
-                        {attribute[2] : 
+                        {attribute[2] :
                         str(attribute[3])})
 
-    
+
         list_of_dicts = []
         for sample_dict in sorted(sample_dicts):
             list_of_dicts.append(sample_dicts[sample_dict])
 
-        # # merge average gestational age +- deviation 
+        # # merge average gestational age +- deviation
         # # into gestational age
         # for sample in list_of_dicts:
         #     if not 'Gestational Age' in sample:
@@ -460,7 +473,7 @@ class Sample(models.Model):
     def get_gestational_age(self):
 
         """
-        
+
         """
         attributes = self.attributes()
 
@@ -484,7 +497,7 @@ class Sample(models.Model):
     def get_gestational_age_category(self):
         """
         since not all samples have exact Gestational Age value
-        but sometimes only approximate ones it makes sence to 
+        but sometimes only approximate ones it makes sence to
         introduce Age Category attribute of 5 possible values
             first Trimester
             second Trimester
@@ -492,9 +505,9 @@ class Sample(models.Model):
             late preterm
             term
         since existing data on Gestational age suggests that
-        """ 
+        """
 
-        
+
         # 0 5 15 20 30 37 45 categories["Late Preterm"][0]
         categories = {
             "First Trimester":  [0,12],
@@ -513,12 +526,20 @@ class Sample(models.Model):
             # print('gestational age:', age)
             for category in categories:
                 if categories[category][0] <= age <= categories[category][1]:
-                    return UnificatedSamplesAttributeValue.objects.get(value=category)
+                    return StandardValue.objects.get(value=category)
         else:
-            self.get_attribute_value
+            attributes = self.attributes()
+            gestation = attributes.filter(unificated_name__name = 'Gestation').first()
+            if gestation:
+                gestation_value = gestation.unificated_value.value
+                if gestation_value == 'Premature Birth':
+                    return StandardValue.objects.get(value='Late Preterm')
+                else:
+                    return StandardValue.objects.get(value='Term')
 
 
-        return UnificatedSamplesAttributeValue.objects.get(
+
+        return StandardValue.objects.get(
                     value="Unknown Gestational Category")
 
     def get_attribute_value(self, unificated_name):
@@ -536,14 +557,14 @@ class Sample(models.Model):
 
 
 
-    def add_or_replace(experiment, data): 
+    def add_or_replace(experiment, data):
         """
-        add or replace sample with given data in an experiment 
+        add or replace sample with given data in an experiment
         """
 
         sample_obj = None
         if 'name' in data:
-            samples_in_experiment = Sample.objects.filter(
+            samplesamples_in_experiment = Sample.objects.filter(
                                       experiment=experiment)
             name_attribute = SampleAttribute.objects.filter(
                     sample__in=samples_in_experiment,
@@ -580,21 +601,21 @@ class Sample(models.Model):
 
     # def __unicode__(self):
     #     return self._show()
-        
+
     # def __str__(self):
     #     return self._show()
 
 
 class SampleAttribute(models.Model):
     old_name = models.CharField(max_length=255, blank=True, null=True)
-    old_value = models.CharField(max_length=255, blank=True, null=True) 
-    
+    old_value = models.CharField(max_length=255, blank=True, null=True)
+
     # standard attribute name according to MeSH terms or other ontologies
-    unificated_name = models.ForeignKey('UnificatedSamplesAttributeName',
+    unificated_name = models.ForeignKey('StandardName',
                                         blank=True,
                                         null=True,
                                         db_index=True)
-    unificated_value = models.ForeignKey('UnificatedSamplesAttributeValue', 
+    unificated_value = models.ForeignKey('StandardValue',
                                          blank=True,
                                          null=True)
     sample = models.ForeignKey('Sample', db_index=True)
@@ -605,11 +626,11 @@ class SampleAttribute(models.Model):
                         str(self.old_value),
                         str(self.unificated_name),
                         str(self.unificated_value),
-                        ))   
+                        ))
 
     def __unicode__(self):
         return self._show()
-        
+
     def __str__(self):
         return self._show()
 
@@ -659,9 +680,9 @@ class SampleAttribute(models.Model):
                 return
             attribute = attribute[0]
             attribute.unificated_name =  \
-                    UnificatedSamplesAttributeName.objects.get(name='name')
+                    StandardName.objects.get(name='name')
             attribute.unificated_value = \
-                    UnificatedSamplesAttributeValue.objects.get(value='Text Value')
+                    StandardValue.objects.get(value='Text Value')
             attribute.save()
         else:
             # print("no such attribute",sample,old_name,old_value)
@@ -698,10 +719,14 @@ class SampleAttribute(models.Model):
             value = unificated_value
 
         attribute = SampleAttribute.objects.filter(**search)
-        
+
         if attribute.exists():
-            attribute_obj = attribute[0]
-            setattr(attribute_obj, value_name, value)
+            if len(attribute) == 1:
+                attribute_obj = attribute[0]
+                setattr(attribute_obj, value_name, value)
+            else:
+                print("Multiple replace spots in", sample, "Retrun None")
+                return
         else:
             attribute_obj = SampleAttribute.objects.create(**create)
         attribute_obj.save()
@@ -733,7 +758,7 @@ class SampleAttribute(models.Model):
 
 
 class ColumnOrder(models.Model):
-    unificated_name = models.ForeignKey('UnificatedSamplesAttributeName')
+    unificated_name = models.ForeignKey('StandardName')
     column_order = models.IntegerField(default=99)
     show_by_default = models.BooleanField(default=False)
     show_at_all = models.BooleanField(default=True)

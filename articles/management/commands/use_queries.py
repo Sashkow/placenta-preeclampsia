@@ -10,11 +10,24 @@ class Command(BaseCommand):
     """
     def handle(self, *args, **options):
         # all_samples_to_tsv()
-        print("here")
+        print("Receiving incomming transmission...")
         # for exp in Experiment.to_list_of_dicts():
         #     print(exp.keys())
 
-        all_samples_to_tsv()
+        # for exp in Experiment.objects.all():
+        #     # exp.update_status()
+        #     print(exp, exp.data['status'])
+
+
+        gestetional_age_category_to_db()
+
+
+        # sample = SampleAttribute.objects.get(old_value = "GSM1900950 1").sample
+        # for attr in SampleAttribute.objects.filter(sample=sample):
+        #     print(attr)
+
+
+            
 
         # exps = ['E-GEOD-74341', 'E-GEOD-48424', 'E-GEOD-43942', 'E-GEOD-15789',
         #  'E-GEOD-10588', 'E-GEOD-13155', 'E-GEOD-12216'] 

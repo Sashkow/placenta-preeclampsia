@@ -20,7 +20,7 @@ class TestShowModel(TestCase):
     def test_to_show_in_showmodel(self):
         # sh = ShowModel()
         # self.assertTrue(hasattr(sh,'to_show'))
-        us = UnificatedSamplesAttributeName()
+        us = StandardName()
         us.name = 'hi'
         self.assertTrue(hasattr(us,'_show'))
         self.assertTrue(hasattr(us,'to_show'))

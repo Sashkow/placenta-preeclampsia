@@ -1,5 +1,5 @@
 import os
-from articles.models import Experiment, Microarray, Sample, SampleAttribute
+from articles.models import Experiment, Microarray, Sample, SampleAttribute, StandardName, StandardValue
 
 from lxml import etree
 import pickle 
@@ -19,6 +19,7 @@ import requests
 import glob
 import collections
 
+import csv
 
 
 
@@ -323,12 +324,13 @@ def get_experiment_samples_attributes(experiment_id):
 
 def exp_to_db(experiment_id):
     """
-    retreive experiment data and add it to db
+    retreive experiment data from ArrayExpress and add it to db
     """
 
     experiment, microarrays = get_experiment_attributes(experiment_id)
     samples = get_experiment_samples_attributes(experiment_id)
     experiment_obj = Experiment.add_or_replace(data=experiment)
+    print("Created:", experiment_obj)
 
 
     for microarray in microarrays:
@@ -336,6 +338,7 @@ def exp_to_db(experiment_id):
         if not(experiment_obj.microarrays.filter(id=microarray_obj.id).exists()):
             experiment_obj.microarrays.add(microarray_obj)
             experiment_obj.save()
+            print("Added microarray:", microarray_obj, "to", experiment_obj)
 
     for sample in samples:  
         sample_obj = Sample.add_or_replace(experiment=experiment_obj,
@@ -347,6 +350,15 @@ def exp_to_db(experiment_id):
                 SampleAttribute.add_or_replace(sample_obj, old_name, '<empty>')
             else:
                 SampleAttribute.add_or_replace(sample_obj, old_name, old_value)
+
+
+def sample_to_db(experiment_id, sample_data):
+    """
+
+    :param experiment_id: string of experiment ArrayExpress accession number
+    :param sample_data: dict
+    :return:
+    """
 
         
 
@@ -504,10 +516,100 @@ def read_cell_file(file_path):
 # manually add standard names, values
 # save
 # read tsv to SampleAttribute table of the database
+
 def unify_exp(exp):
-    pass
+    """
 
+    """
+    experiment = Experiment.find(exp)
+    attributes = experiment.sample_attributes()
+    # pairs = ["\t".join([str(attribute.old_name), str(attribute.old_value)])
+    #         for attribute 
+    #         in attributes]
 
+    # for pair in sorted(set(pairs)):
+    #     print(pair)
+    
+    # print(len(attributes))
+    # for attribute in apttributes:
+    #     print(attribute)
+    with open('articles/temp/standardize_E-GEOD-73685_full.tsv') as tsvin:
+        rows = csv.reader(tsvin, delimiter='\t')
+        for row in rows:
+            print(row)
+            row = [item for item in row if item]
+            sample_attributes = attributes.filter(old_name=row[0],old_value = row[1])
+            samples = sample_attributes
+            for sample_attribute in sample_attributes:
+
+                unificated_name = StandardName.objects.get(name = row[2])
+                unificated_value = StandardValue.objects.get(value = row[3])
+                sample_attribute.unificated_name = unificated_name
+                sample_attribute.unificated_value = unificated_value
+                print("Modified!", sample_attribute, end='')
+                sample_attribute.save()
+                print(".. and saved!")
+                
+
+                for pair in range(4, len(row), 2): # if row length = 8 then [4,6]
+                    unificated_name = StandardName.objects.get(name = row[pair])
+                    unificated_value = StandardValue.objects.get(value = row[pair + 1])
+                    new_sa = SampleAttribute.objects.create(
+                            sample=sample_attribute.sample,
+                            old_name = sample_attribute.old_name,
+                            old_value = sample_attribute.old_value,
+                            unificated_name = unificated_name,
+                            unificated_value = unificated_value)
+                    
+                    print("Created!", new_sa, end='')
+                    new_sa.save()
+                    print(".. and saved!")
+
+def tsv_to_db():
+    # with open('articles/temp/vsevolod.tsv') as tsvin:
+    #     rows = list(csv.reader(tsvin, delimiter='\t'))
+    #     pairs = []
+    #     rownames = rows[0]
+    #     for rowid in range(1,len(rows)):
+    #         sample_name = rows[rowid][1]
+    #         if sample_name:
+    #             for colid in range(len(rows[rowid])):
+    #                 if rows[rowid][colid]:
+    #                     pairs.append('\t'.join([sample_name, rownames[colid], rows[rowid][colid]]))
+    #
+    #     with open('articles/temp/three_cols_vsevolod.tsv', 'w') as tsv:
+    #         for pair in pairs:
+    #             tsv.write(pair+'\n')
+
+        with open('articles/temp/three_cols_vsevolod.tsv', 'r') as tsv:
+            rows = list(csv.reader(tsv, delimiter='\t'))
+            for row in rows:
+                sample = SampleAttribute.objects.filter(
+                        unificated_name__name='Sample Name',
+                        old_value=row[0]).first()
+                
+                if sample:
+                    sample = sample.sample
+                    unificated_name = StandardName.objects.filter(name=row[1]).first()
+                    if unificated_name:
+                        unificated_value = StandardValue.objects.filter(value=row[2]).first()
+                        if unificated_value:
+                            if SampleAttribute.objects.filter(
+                                    sample,
+                                    unificated_name=unificated_name,
+                                    unificated_value=unificated_value):
+                                print("Exists", sample, unificated_name, unificated_value)
+                            else:
+                                print("Not Exist", sample, unificated_name, unificated_value)
+                        else:
+                            
+                            if SampleAttribute.objects.filter(
+                                    sample=sample,
+                                    unificated_name=unificated_name,
+                                    old_value=row[2]):
+                                print("Exists", sample, unificated_name, row[2])
+                            else:
+                                print("Not Exist", sample, unificated_name, row[2])
 
 
 

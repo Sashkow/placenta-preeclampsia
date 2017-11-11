@@ -14,8 +14,8 @@ def add74341():
     samples = Sample.objects.filter(experiment=exp)
     
     # get standard names, the rest are in the bottom
-    age_avg = UnificatedSamplesAttributeName.objects.get(name="Average Gestational Age")
-    age_dev = UnificatedSamplesAttributeName.objects.get(name="Deviation Gestational Age") 
+    age_avg = StandardName.objects.get(name="Average Gestational Age")
+    age_dev = StandardName.objects.get(name="Deviation Gestational Age")
 
 
     # 284.4 (267-321) 40.63  +- 5.23 
@@ -84,8 +84,8 @@ def add30186():
     exp = Experiment.objects.get(data__contains={'accession':exp_id})
     samples = Sample.objects.filter(experiment=exp)
     
-    age_avg = UnificatedSamplesAttributeName.objects.get(name="Average Gestational Age")
-    age_dev = UnificatedSamplesAttributeName.objects.get(name="Deviation Gestational Age") 
+    age_avg = StandardName.objects.get(name="Average Gestational Age")
+    age_dev = StandardName.objects.get(name="Deviation Gestational Age")
 
 
     # 273 5
@@ -114,8 +114,8 @@ def add4707():
     exp = Experiment.objects.get(data__contains={'accession':exp_id})
     samples = Sample.objects.filter(experiment=exp)
     
-    age_avg = UnificatedSamplesAttributeName.objects.get(name="Average Gestational Age")
-    age_dev = UnificatedSamplesAttributeName.objects.get(name="Deviation Gestational Age") 
+    age_avg = StandardName.objects.get(name="Average Gestational Age")
+    age_dev = StandardName.objects.get(name="Deviation Gestational Age")
 
     # 32.9  5.6
     # 32.9  4.0
@@ -147,8 +147,8 @@ def add12216():
     exp = Experiment.objects.get(data__contains={'accession':exp_id})
     samples = Sample.objects.filter(experiment=exp)
     
-    age_avg = UnificatedSamplesAttributeName.objects.get(name="Average Gestational Age")
-    age_dev = UnificatedSamplesAttributeName.objects.get(name="Deviation Gestational Age") 
+    age_avg = StandardName.objects.get(name="Average Gestational Age")
+    age_dev = StandardName.objects.get(name="Deviation Gestational Age")
 
     # 236 + 24
     # 274 + 5
@@ -184,66 +184,66 @@ class Command(BaseCommand):
 
         """
         
-        # organism = UnificatedSamplesAttributeName.objects.get(name='Classification')
-        # organism_part = UnificatedSamplesAttributeName.objects.get(name='Organism Part')
-        diagnosis = UnificatedSamplesAttributeName.objects.get(name='Diagnosis')
-        # delivery = UnificatedSamplesAttributeName.objects.get(name='Delivery, Obstetric')
-        onset = UnificatedSamplesAttributeName.objects.get(name='Pre-Eclampsia Onset')
-        # biosource = UnificatedSamplesAttributeName.objects.get(name='biosource provider')
-        sex = UnificatedSamplesAttributeName.objects.get(name='Fetus Sex')
-        labor = UnificatedSamplesAttributeName.objects.get(name='Labor, Obstetric')
-        batch = UnificatedSamplesAttributeName.objects.get(name='Batch')
-        age = UnificatedSamplesAttributeName.objects.get(name='Gestational Age')
-        cultured = UnificatedSamplesAttributeName.objects.get(name='Cells, Cultured')
-        fetal_weight = UnificatedSamplesAttributeName.objects.get(name='Fetal Weight')
-        ancestry = UnificatedSamplesAttributeName.objects.get(name='Continental Population Groups')
-        parity = UnificatedSamplesAttributeName.objects.get(name='Parity')
-        gravidity = UnificatedSamplesAttributeName.objects.get(name='Gravidity')
-        maternal_age =UnificatedSamplesAttributeName.objects.get(name='Maternal Age')
-        excluded_name =UnificatedSamplesAttributeName.objects.get(name='(excluded)')
+        # organism = StandardName.objects.get(name='Classification')
+        # organism_part = StandardName.objects.get(name='Organism Part')
+        diagnosis = StandardName.objects.get(name='Diagnosis')
+        # delivery = StandardName.objects.get(name='Delivery, Obstetric')
+        onset = StandardName.objects.get(name='Pre-Eclampsia Onset')
+        # biosource = StandardName.objects.get(name='biosource provider')
+        sex = StandardName.objects.get(name='Fetus Sex')
+        labor = StandardName.objects.get(name='Labor, Obstetric')
+        batch = StandardName.objects.get(name='Batch')
+        age = StandardName.objects.get(name='Gestational Age')
+        cultured = StandardName.objects.get(name='Cells, Cultured')
+        fetal_weight = StandardName.objects.get(name='Fetal Weight')
+        ancestry = StandardName.objects.get(name='Continental Population Groups')
+        parity = StandardName.objects.get(name='Parity')
+        gravidity = StandardName.objects.get(name='Gravidity')
+        maternal_age =StandardName.objects.get(name='Maternal Age')
+        excluded_name =StandardName.objects.get(name='(excluded)')
 
-        trim =UnificatedSamplesAttributeName.objects.get(name='Pregnancy Trimesters')
+        trim =StandardName.objects.get(name='Pregnancy Trimesters')
 
-        term_preterm =UnificatedSamplesAttributeName.objects.get(name='Gestation')
+        term_preterm =StandardName.objects.get(name='Gestation')
 
 
-        humans = UnificatedSamplesAttributeValue.objects.get(value='Humans')
-        # mice = UnificatedSamplesAttributeValue.objects.get(value='Mice')
-        pre_eclampsia = UnificatedSamplesAttributeValue.objects.get(value='Pre-Eclampsia')
-        pre_severe = UnificatedSamplesAttributeValue.objects.get(value='Severe Pre-Eclampsia')
-        health = UnificatedSamplesAttributeValue.objects.get(value='Healthy')
-        early_onset = UnificatedSamplesAttributeValue.objects.get(value='Early Onset Pre-Ecpampsia (at gestational age <31 weeks)')
-        late_onset =  UnificatedSamplesAttributeValue.objects.get(value='Late Onset Pre-Eclampsia ( at gestational age >=31 weeks)')
-        fgr = UnificatedSamplesAttributeValue.objects.get(value='Fetal Growth Retardation')
+        humans = StandardValue.objects.get(value='Humans')
+        # mice = StandardValue.objects.get(value='Mice')
+        pre_eclampsia = StandardValue.objects.get(value='Pre-Eclampsia')
+        pre_severe = StandardValue.objects.get(value='Severe Pre-Eclampsia')
+        health = StandardValue.objects.get(value='Healthy')
+        early_onset = StandardValue.objects.get(value='Early Onset Pre-Ecpampsia (at gestational age <31 weeks)')
+        late_onset =  StandardValue.objects.get(value='Late Onset Pre-Eclampsia ( at gestational age >=31 weeks)')
+        fgr = StandardValue.objects.get(value='Fetal Growth Retardation')
         
-        text = UnificatedSamplesAttributeValue.objects.get(value='Text Value')
-        cytotrophoblast = UnificatedSamplesAttributeValue.objects.get(value='Cytotrophoblasts')
-        syncitiotrophoblast = UnificatedSamplesAttributeValue.objects.get(value='Syncitiotrophoblasts')
-        african = UnificatedSamplesAttributeValue.objects.get(value='African Continental Ancestry Group')
-        american = UnificatedSamplesAttributeValue.objects.get(value='American Native Continental Ancestry Group')
-        european = UnificatedSamplesAttributeValue.objects.get(value='European Continental Ancestry Group')
-        asian = UnificatedSamplesAttributeValue.objects.get(value='Asian Continental Ancestry Group')
-        hispanic = UnificatedSamplesAttributeValue.objects.get(value='Hispanic Americans')
+        text = StandardValue.objects.get(value='Text Value')
+        cytotrophoblast = StandardValue.objects.get(value='Cytotrophoblasts')
+        syncitiotrophoblast = StandardValue.objects.get(value='Syncitiotrophoblasts')
+        african = StandardValue.objects.get(value='African Continental Ancestry Group')
+        american = StandardValue.objects.get(value='American Native Continental Ancestry Group')
+        european = StandardValue.objects.get(value='European Continental Ancestry Group')
+        asian = StandardValue.objects.get(value='Asian Continental Ancestry Group')
+        hispanic = StandardValue.objects.get(value='Hispanic Americans')
         
-        excluded_value = UnificatedSamplesAttributeValue.objects.get(value='(excluded)')
+        excluded_value = StandardValue.objects.get(value='(excluded)')
         
-        decidua = UnificatedSamplesAttributeValue.objects.get(value='Decidua')
-        placenta = UnificatedSamplesAttributeValue.objects.get(value='Placenta')
+        decidua = StandardValue.objects.get(value='Decidua')
+        placenta = StandardValue.objects.get(value='Placenta')
 
-        female = UnificatedSamplesAttributeValue.objects.get(value='Female')
-        male = UnificatedSamplesAttributeValue.objects.get(value='Male')
+        female = StandardValue.objects.get(value='Female')
+        male = StandardValue.objects.get(value='Male')
 
-        weeks = UnificatedSamplesAttributeValue.objects.get(value='Number in weeks')
-        grams = UnificatedSamplesAttributeValue.objects.get(value='Number in grams')
-        years = UnificatedSamplesAttributeValue.objects.get(value='Number in years')
-        numeric = UnificatedSamplesAttributeValue.objects.get(value='Numeric')
+        weeks = StandardValue.objects.get(value='Number in weeks')
+        grams = StandardValue.objects.get(value='Number in grams')
+        years = StandardValue.objects.get(value='Number in years')
+        numeric = StandardValue.objects.get(value='Numeric')
 
-        trim1 = UnificatedSamplesAttributeValue.objects.get(value='Pregnancy Trimester, First')
-        trim2 = UnificatedSamplesAttributeValue.objects.get(value='Pregnancy Trimester, Second')
-        trim3 = UnificatedSamplesAttributeValue.objects.get(value='Pregnancy Trimester, Third')
+        trim1 = StandardValue.objects.get(value='Pregnancy Trimester, First')
+        trim2 = StandardValue.objects.get(value='Pregnancy Trimester, Second')
+        trim3 = StandardValue.objects.get(value='Pregnancy Trimester, Third')
 
-        term = UnificatedSamplesAttributeValue.objects.get(value='Term Birth')
-        preterm = UnificatedSamplesAttributeValue.objects.get(value='Premature Birth')
+        term = StandardValue.objects.get(value='Term Birth')
+        preterm = StandardValue.objects.get(value='Premature Birth')
 
         
         # Healthy - 38.6 (35–41)
@@ -279,8 +279,8 @@ class Command(BaseCommand):
         samples = Sample.objects.filter(experiment=exp)
         
         # get standard names, the rest are in the bottom
-        age_avg = UnificatedSamplesAttributeName.objects.get(name="Average Gestational Age")
-        age_dev = UnificatedSamplesAttributeName.objects.get(name="Deviation Gestational Age") 
+        age_avg = StandardName.objects.get(name="Average Gestational Age")
+        age_dev = StandardName.objects.get(name="Deviation Gestational Age")
 
 
 

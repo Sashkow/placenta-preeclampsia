@@ -14,7 +14,7 @@ class Migration(migrations.Migration):
 
     operations = [
         migrations.CreateModel(
-            name='UnificatedSamplesAttributeName',
+            name='StandardName',
             fields=[
                 ('id', models.AutoField(auto_created=True, primary_key=True, serialize=False, verbose_name='ID')),
                 ('name', models.CharField(max_length=255)),
@@ -29,7 +29,7 @@ class Migration(migrations.Migration):
         migrations.AddField(
             model_name='samplesattributenameinexperiment',
             name='unificated_name',
-            field=models.ForeignKey(default=None, on_delete=django.db.models.deletion.CASCADE, to='articles.UnificatedSamplesAttributeName'),
+            field=models.ForeignKey(default=None, on_delete=django.db.models.deletion.CASCADE, to='articles.StandardName'),
             preserve_default=False,
         ),
     ]
