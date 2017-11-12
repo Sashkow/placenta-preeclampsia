@@ -1,413 +1,411 @@
-Experiment	Sample Name	Оrganism	Biological Specimen	Cells, Cultured	culture time	Diagnosis	Gestational Age	Average Gestational Age	Gestational Age Upper Bound	Gestational Age Lower Bound	Deviation Gestational Age	Gestational Age at Experiment	Maternal Age	Average Maternal Age	Parity	Labor Induction	Batch	Caesarean Section	Fetus Sex	Fetal Weight	Average Fetal Weight	Placenta Weight	Pregnancy Trimesters	Systolic Pressure	Diastolic Pressure	Systolic Pressure at < 20 week	Diastolic Pressure at < 20 week	Urine Protein Concentration	Pre-Eclampsia Onset	Biosource Provider	Continental Population Groups	(excluded)	reference 
-E-GEOD-57050																																	
-E-GEOD-60438																																	
-E-GEOD-73374	GSM1892024 1					Pre-Eclampsia																		140	90			300					https://www.ncbi.nlm.nih.gov/pmc/articles/PMC4624949/
-E-GEOD-73374	GSM1892023 1					Pre-Eclampsia																		140	90			300					https://www.ncbi.nlm.nih.gov/pmc/articles/PMC4624949/
-E-GEOD-73374	GSM1892022 1					Pre-Eclampsia																		140	90			300					https://www.ncbi.nlm.nih.gov/pmc/articles/PMC4624949/
-E-GEOD-73374	GSM1892021 1					Pre-Eclampsia																		140	90			300					https://www.ncbi.nlm.nih.gov/pmc/articles/PMC4624949/
-E-GEOD-73374	GSM1892020 1					Pre-Eclampsia																		140	90			300					https://www.ncbi.nlm.nih.gov/pmc/articles/PMC4624949/
-E-GEOD-73374	GSM1892019 1					Pre-Eclampsia																		140	90			300					https://www.ncbi.nlm.nih.gov/pmc/articles/PMC4624949/
-E-GEOD-73374	GSM1892018 1					Pre-Eclampsia																		140	90			300					https://www.ncbi.nlm.nih.gov/pmc/articles/PMC4624949/
-E-GEOD-73374	GSM1892017 1					Pre-Eclampsia																		140	90			300					https://www.ncbi.nlm.nih.gov/pmc/articles/PMC4624949/
-E-GEOD-73374	GSM1892016 1					Pre-Eclampsia																		140	90			300					https://www.ncbi.nlm.nih.gov/pmc/articles/PMC4624949/
-E-GEOD-73374	GSM1892015 1					Pre-Eclampsia																		140	90			300					https://www.ncbi.nlm.nih.gov/pmc/articles/PMC4624949/
-E-GEOD-73374	GSM1892014 1					Pre-Eclampsia																		140	90			300					https://www.ncbi.nlm.nih.gov/pmc/articles/PMC4624949/
-E-GEOD-73374	GSM1892013 1					Pre-Eclampsia																		140	90			300					https://www.ncbi.nlm.nih.gov/pmc/articles/PMC4624949/
-E-GEOD-73374	GSM1892012 1					Pre-Eclampsia																		140	90			300					https://www.ncbi.nlm.nih.gov/pmc/articles/PMC4624949/
-E-GEOD-73374	GSM1892011 1					Pre-Eclampsia																		140	90			300					https://www.ncbi.nlm.nih.gov/pmc/articles/PMC4624949/
-E-GEOD-73374	GSM1892010 1					Pre-Eclampsia																		140	90			300					https://www.ncbi.nlm.nih.gov/pmc/articles/PMC4624949/
-E-GEOD-73374	GSM1892009 1					Pre-Eclampsia																		140	90			300					https://www.ncbi.nlm.nih.gov/pmc/articles/PMC4624949/
-E-GEOD-73374	GSM1892008 1					Pre-Eclampsia																		140	90			300					https://www.ncbi.nlm.nih.gov/pmc/articles/PMC4624949/
-E-GEOD-73374	GSM1892007 1					Healthy																											https://www.ncbi.nlm.nih.gov/pmc/articles/PMC4624949/
-E-GEOD-73374	GSM1892006 1					Healthy																											https://www.ncbi.nlm.nih.gov/pmc/articles/PMC4624949/
-E-GEOD-73374	GSM1892005 1					Healthy																											https://www.ncbi.nlm.nih.gov/pmc/articles/PMC4624949/
-E-GEOD-73374	GSM1892004 1					Healthy																											https://www.ncbi.nlm.nih.gov/pmc/articles/PMC4624949/
-E-GEOD-73374	GSM1892003 1					Healthy																											https://www.ncbi.nlm.nih.gov/pmc/articles/PMC4624949/
-E-GEOD-73374	GSM1892002 1					Healthy																											https://www.ncbi.nlm.nih.gov/pmc/articles/PMC4624949/
-E-GEOD-73374	GSM1892001 1					Healthy																											https://www.ncbi.nlm.nih.gov/pmc/articles/PMC4624949/
-E-GEOD-73374	GSM1892000 1					Healthy																											https://www.ncbi.nlm.nih.gov/pmc/articles/PMC4624949/
-E-GEOD-73374	GSM1891999 1					Healthy																											https://www.ncbi.nlm.nih.gov/pmc/articles/PMC4624949/
-E-GEOD-73374	GSM1891998 1					Healthy																											https://www.ncbi.nlm.nih.gov/pmc/articles/PMC4624949/
-E-GEOD-73374	GSM1891997 1					Healthy																											https://www.ncbi.nlm.nih.gov/pmc/articles/PMC4624949/
-E-GEOD-73374	GSM1891996 1					Healthy																											https://www.ncbi.nlm.nih.gov/pmc/articles/PMC4624949/
-E-GEOD-73374	GSM1891995 1					Healthy																											https://www.ncbi.nlm.nih.gov/pmc/articles/PMC4624949/
-E-GEOD-73374	GSM1891994 1					Healthy																											https://www.ncbi.nlm.nih.gov/pmc/articles/PMC4624949/
-E-GEOD-73374	GSM1891993 1					Healthy																											https://www.ncbi.nlm.nih.gov/pmc/articles/PMC4624949/
-E-GEOD-73374	GSM1891992 1					Healthy																											https://www.ncbi.nlm.nih.gov/pmc/articles/PMC4624949/
-E-GEOD-73374	GSM1891991 1					Pre-Eclampsia																		140	90			300					https://www.ncbi.nlm.nih.gov/pmc/articles/PMC4624949/
-E-GEOD-73374	GSM1891990 1					Pre-Eclampsia																		140	90			300					https://www.ncbi.nlm.nih.gov/pmc/articles/PMC4624949/
-E-GEOD-73374	GSM1891989 1					Healthy																											https://www.ncbi.nlm.nih.gov/pmc/articles/PMC4624949/
-E-GEOD-35574	GSM871065 1					Fetal Growth Retardation									1.1 ± 1.6							329.8 ± 114.7											https://www.ncbi.nlm.nih.gov/pmc/articles/PMC3677766/
-E-GEOD-35574	GSM871064 1					Healthy									2.4 ± 1.7							491.1 ± 141.3											https://www.ncbi.nlm.nih.gov/pmc/articles/PMC3677766/
-E-GEOD-35574	GSM871063 1					Fetal Growth Retardation									1.1 ± 1.6							329.8 ± 114.7											https://www.ncbi.nlm.nih.gov/pmc/articles/PMC3677766/
-E-GEOD-35574	GSM871062 1					Fetal Growth Retardation									1.1 ± 1.6							329.8 ± 114.7											https://www.ncbi.nlm.nih.gov/pmc/articles/PMC3677766/
-E-GEOD-35574	GSM871061 1					Fetal Growth Retardation									1.1 ± 1.6							329.8 ± 114.7											https://www.ncbi.nlm.nih.gov/pmc/articles/PMC3677766/
-E-GEOD-35574	GSM871060 1					Healthy									2.4 ± 1.7							491.1 ± 141.3											https://www.ncbi.nlm.nih.gov/pmc/articles/PMC3677766/
-E-GEOD-35574	GSM871059 1					Healthy									2.4 ± 1.7							491.1 ± 141.3											https://www.ncbi.nlm.nih.gov/pmc/articles/PMC3677766/
-E-GEOD-35574	GSM871058 1					Healthy									2.4 ± 1.7							491.1 ± 141.3											https://www.ncbi.nlm.nih.gov/pmc/articles/PMC3677766/
-E-GEOD-35574	GSM871057 1					Fetal Growth Retardation									1.1 ± 1.6							329.8 ± 114.7											https://www.ncbi.nlm.nih.gov/pmc/articles/PMC3677766/
-E-GEOD-35574	GSM871056 1					Healthy									2.4 ± 1.7							491.1 ± 141.3											https://www.ncbi.nlm.nih.gov/pmc/articles/PMC3677766/
-E-GEOD-35574	GSM871055 1					Fetal Growth Retardation									1.1 ± 1.6							329.8 ± 114.7											https://www.ncbi.nlm.nih.gov/pmc/articles/PMC3677766/
-E-GEOD-35574	GSM871054 1					Healthy									2.4 ± 1.7							491.1 ± 141.3											https://www.ncbi.nlm.nih.gov/pmc/articles/PMC3677766/
-E-GEOD-35574	GSM871053 1					Fetal Growth Retardation									1.1 ± 1.6							329.8 ± 114.7											https://www.ncbi.nlm.nih.gov/pmc/articles/PMC3677766/
-E-GEOD-35574	GSM871052 1					Healthy									2.4 ± 1.7							491.1 ± 141.3											https://www.ncbi.nlm.nih.gov/pmc/articles/PMC3677766/
-E-GEOD-35574	GSM871051 1					Healthy									2.4 ± 1.7							491.1 ± 141.3											https://www.ncbi.nlm.nih.gov/pmc/articles/PMC3677766/
-E-GEOD-35574	GSM871050 1					Pre-Eclampsia									0.4±  0.7							448.2 ± 237.8		140	90			300					https://www.ncbi.nlm.nih.gov/pmc/articles/PMC3677766/
-E-GEOD-35574	GSM871049 1					Pre-Eclampsia									0.4 ± 0.7							448.2 ± 237.8		140	90			300					https://www.ncbi.nlm.nih.gov/pmc/articles/PMC3677766/
-E-GEOD-35574	GSM871048 1					Fetal Growth Retardation									1.1 ± 1.6							329.8 ± 114.7											https://www.ncbi.nlm.nih.gov/pmc/articles/PMC3677766/
-E-GEOD-35574	GSM871047 1					Pre-Eclampsia									0.4 ± 0.7							448.2 ± 237.8		140	90			300					https://www.ncbi.nlm.nih.gov/pmc/articles/PMC3677766/
-E-GEOD-35574	GSM871046 1					Fetal Growth Retardation									1.1 ± 1.6							329.8 ± 114.7											https://www.ncbi.nlm.nih.gov/pmc/articles/PMC3677766/
-E-GEOD-35574	GSM871139 1					Fetal Growth Retardation									1.1 ± 1.6							329.8 ± 114.7											https://www.ncbi.nlm.nih.gov/pmc/articles/PMC3677766/
-E-GEOD-35574	GSM871138 1					Healthy									2.4 ± 1.7							491.1 ± 141.3											https://www.ncbi.nlm.nih.gov/pmc/articles/PMC3677766/
-E-GEOD-35574	GSM871137 1					Pre-Eclampsia									0.4 ± 0.7							448.2 ± 237.8		140	90			300					https://www.ncbi.nlm.nih.gov/pmc/articles/PMC3677766/
-E-GEOD-35574	GSM871136 1					Healthy									2.4 ± 1.7							491.1 ± 141.3											https://www.ncbi.nlm.nih.gov/pmc/articles/PMC3677766/
-E-GEOD-35574	GSM871135 1					Fetal Growth Retardation									1.1 ± 1.6							329.8 ± 114.7											https://www.ncbi.nlm.nih.gov/pmc/articles/PMC3677766/
-E-GEOD-35574	GSM871134 1					Healthy									2.4 ± 1.7							491.1 ± 141.3											https://www.ncbi.nlm.nih.gov/pmc/articles/PMC3677766/
-E-GEOD-35574	GSM871133 1					Healthy									2.4 ± 1.7							491.1 ± 141.3											https://www.ncbi.nlm.nih.gov/pmc/articles/PMC3677766/
-E-GEOD-35574	GSM871132 1					Fetal Growth Retardation									1.1 ± 1.6							329.8 ± 114.7											https://www.ncbi.nlm.nih.gov/pmc/articles/PMC3677766/
-E-GEOD-35574	GSM871131 1					Pre-Eclampsia									0.4 ± 0.7							448.2 ± 237.8		140	90			300					https://www.ncbi.nlm.nih.gov/pmc/articles/PMC3677766/
-E-GEOD-35574	GSM871130 1					Healthy									2.4 ± 1.7							491.1 ± 141.3											https://www.ncbi.nlm.nih.gov/pmc/articles/PMC3677766/
-E-GEOD-35574	GSM871129 1					Fetal Growth Retardation									1.1 ± 1.6							329.8 ± 114.7											https://www.ncbi.nlm.nih.gov/pmc/articles/PMC3677766/
-E-GEOD-35574	GSM871128 1					Pre-Eclampsia									0.4 ± 0.7							448.2 ± 237.8		140	90			300					https://www.ncbi.nlm.nih.gov/pmc/articles/PMC3677766/
-E-GEOD-35574	GSM871127 1					Healthy									2.4 ± 1.7							491.1 ± 141.3											https://www.ncbi.nlm.nih.gov/pmc/articles/PMC3677766/
-E-GEOD-35574	GSM871126 1					Pre-Eclampsia									0.4 ± 0.7							448.2 ± 237.8		140	90			300					https://www.ncbi.nlm.nih.gov/pmc/articles/PMC3677766/
-E-GEOD-35574	GSM871125 1					Healthy									2.4 ± 1.7							491.1 ± 141.3											https://www.ncbi.nlm.nih.gov/pmc/articles/PMC3677766/
-E-GEOD-35574	GSM871124 1					Fetal Growth Retardation									1.1 ± 1.6							329.8 ± 114.7											https://www.ncbi.nlm.nih.gov/pmc/articles/PMC3677766/
-E-GEOD-35574	GSM871123 1					Healthy									2.4 ± 1.7							491.1 ± 141.3											https://www.ncbi.nlm.nih.gov/pmc/articles/PMC3677766/
-E-GEOD-35574	GSM871122 1					Pre-Eclampsia									0.4 ± 0.7							448.2 ± 237.8		140	90			300					https://www.ncbi.nlm.nih.gov/pmc/articles/PMC3677766/
-E-GEOD-35574	GSM871121 1					Fetal Growth Retardation									1.1 ± 1.6							329.8 ± 114.7											https://www.ncbi.nlm.nih.gov/pmc/articles/PMC3677766/
-E-GEOD-35574	GSM871120 1					Fetal Growth Retardation									1.1 ± 1.6							329.8 ± 114.7											https://www.ncbi.nlm.nih.gov/pmc/articles/PMC3677766/
-E-GEOD-35574	GSM871119 1					Healthy									2.4 ± 1.7							491.1 ± 141.3											https://www.ncbi.nlm.nih.gov/pmc/articles/PMC3677766/
-E-GEOD-35574	GSM871118 1					Healthy									2.4 ± 1.7							491.1 ± 141.3											https://www.ncbi.nlm.nih.gov/pmc/articles/PMC3677766/
-E-GEOD-35574	GSM871117 1					Pre-Eclampsia									0.4 ± 0.7							448.2 ± 237.8		140	90			300					https://www.ncbi.nlm.nih.gov/pmc/articles/PMC3677766/
-E-GEOD-35574	GSM871116 1					Healthy									2.4 ± 1.7							491.1 ± 141.3											https://www.ncbi.nlm.nih.gov/pmc/articles/PMC3677766/
-E-GEOD-35574	GSM871115 1					Healthy									2.4 ± 1.7							491.1 ± 141.3											https://www.ncbi.nlm.nih.gov/pmc/articles/PMC3677766/
-E-GEOD-35574	GSM871114 1					Healthy									2.4 ± 1.7							491.1 ± 141.3											https://www.ncbi.nlm.nih.gov/pmc/articles/PMC3677766/
-E-GEOD-35574	GSM871113 1					Fetal Growth Retardation									1.1 ± 1.6							329.8 ± 114.7											https://www.ncbi.nlm.nih.gov/pmc/articles/PMC3677766/
-E-GEOD-35574	GSM871112 1					Pre-Eclampsia									0.4 ± 0.7							448.2 ± 237.8		140	90			300					https://www.ncbi.nlm.nih.gov/pmc/articles/PMC3677766/
-E-GEOD-35574	GSM871111 1					Healthy									2.4 ± 1.7							491.1 ± 141.3											https://www.ncbi.nlm.nih.gov/pmc/articles/PMC3677766/
-E-GEOD-35574	GSM871110 1					Fetal Growth Retardation									1.1 ± 1.6							329.8 ± 114.7											https://www.ncbi.nlm.nih.gov/pmc/articles/PMC3677766/
-E-GEOD-35574	GSM871109 1					Fetal Growth Retardation									1.1 ± 1.6							329.8 ± 114.7											https://www.ncbi.nlm.nih.gov/pmc/articles/PMC3677766/
-E-GEOD-35574	GSM871108 1					Healthy									2.4 ± 1.7							491.1 ± 141.3											https://www.ncbi.nlm.nih.gov/pmc/articles/PMC3677766/
-E-GEOD-35574	GSM871107 1					Pre-Eclampsia									0.4 ± 0.7							448.2 ± 237.8		140	90			300					https://www.ncbi.nlm.nih.gov/pmc/articles/PMC3677766/
-E-GEOD-35574	GSM871106 1					Fetal Growth Retardation									1.1 ± 1.6							329.8 ± 114.7											https://www.ncbi.nlm.nih.gov/pmc/articles/PMC3677766/
-E-GEOD-35574	GSM871105 1					Fetal Growth Retardation									1.1 ± 1.6							329.8 ± 114.7											https://www.ncbi.nlm.nih.gov/pmc/articles/PMC3677766/
-E-GEOD-35574	GSM871104 1					Healthy									2.4 ± 1.7							491.1 ± 141.3											https://www.ncbi.nlm.nih.gov/pmc/articles/PMC3677766/
-E-GEOD-35574	GSM871103 1					Fetal Growth Retardation									1.1 ± 1.6							329.8 ± 114.7											https://www.ncbi.nlm.nih.gov/pmc/articles/PMC3677766/
-E-GEOD-35574	GSM871102 1					Healthy									2.4 ± 1.7							491.1 ± 141.3											https://www.ncbi.nlm.nih.gov/pmc/articles/PMC3677766/
-E-GEOD-35574	GSM871101 1					Healthy									2.4 ± 1.7							491.1 ± 141.3											https://www.ncbi.nlm.nih.gov/pmc/articles/PMC3677766/
-E-GEOD-35574	GSM871100 1					Pre-Eclampsia									0.4 ± 0.7							448.2 ± 237.8		140	90			300					https://www.ncbi.nlm.nih.gov/pmc/articles/PMC3677766/
-E-GEOD-35574	GSM871099 1					Healthy									2.4 ± 1.7							491.1 ± 141.3											https://www.ncbi.nlm.nih.gov/pmc/articles/PMC3677766/
-E-GEOD-35574	GSM871098 1					Fetal Growth Retardation									1.1 ± 1.6							329.8 ± 114.7											https://www.ncbi.nlm.nih.gov/pmc/articles/PMC3677766/
-E-GEOD-35574	GSM871097 1					Healthy									2.4 ± 1.7							491.1 ± 141.3											https://www.ncbi.nlm.nih.gov/pmc/articles/PMC3677766/
-E-GEOD-35574	GSM871096 1					Pre-Eclampsia									0.4 ± 0.7							448.2 ± 237.8		140	90			300					https://www.ncbi.nlm.nih.gov/pmc/articles/PMC3677766/
-E-GEOD-35574	GSM871095 1					Fetal Growth Retardation									1.1 ± 1.6							329.8 ± 114.7											https://www.ncbi.nlm.nih.gov/pmc/articles/PMC3677766/
-E-GEOD-35574	GSM871094 1					Pre-Eclampsia									0.4 ± 0.7							448.2 ± 237.8		140	90			300					https://www.ncbi.nlm.nih.gov/pmc/articles/PMC3677766/
-E-GEOD-35574	GSM871093 1					Healthy									2.4 ± 1.7							491.1 ± 141.3											https://www.ncbi.nlm.nih.gov/pmc/articles/PMC3677766/
-E-GEOD-35574	GSM871092 1					Fetal Growth Retardation									1.1 ± 1.6							329.8 ± 114.7											https://www.ncbi.nlm.nih.gov/pmc/articles/PMC3677766/
-E-GEOD-35574	GSM871091 1					Pre-Eclampsia									0.4 ± 0.7							448.2 ± 237.8		140	90			300					https://www.ncbi.nlm.nih.gov/pmc/articles/PMC3677766/
-E-GEOD-35574	GSM871090 1					Healthy									2.4 ± 1.7							491.1 ± 141.3											https://www.ncbi.nlm.nih.gov/pmc/articles/PMC3677766/
-E-GEOD-35574	GSM871089 1					Healthy									2.4 ± 1.7							491.1 ± 141.3											https://www.ncbi.nlm.nih.gov/pmc/articles/PMC3677766/
-E-GEOD-35574	GSM871088 1					Fetal Growth Retardation									1.1 ± 1.6							329.8 ± 114.7											https://www.ncbi.nlm.nih.gov/pmc/articles/PMC3677766/
-E-GEOD-35574	GSM871087 1					Fetal Growth Retardation									1.1 ± 1.6							329.8 ± 114.7											https://www.ncbi.nlm.nih.gov/pmc/articles/PMC3677766/
-E-GEOD-35574	GSM871086 1					Healthy									2.4 ± 1.7							491.1 ± 141.3											https://www.ncbi.nlm.nih.gov/pmc/articles/PMC3677766/
-E-GEOD-35574	GSM871085 1					Fetal Growth Retardation									1.1 ± 1.6							329.8 ± 114.7											https://www.ncbi.nlm.nih.gov/pmc/articles/PMC3677766/
-E-GEOD-35574	GSM871084 1					Fetal Growth Retardation									1.1 ± 1.6							329.8 ± 114.7											https://www.ncbi.nlm.nih.gov/pmc/articles/PMC3677766/
-E-GEOD-35574	GSM871083 1					Healthy									2.4 ± 1.7							491.1 ± 141.3											https://www.ncbi.nlm.nih.gov/pmc/articles/PMC3677766/
-E-GEOD-35574	GSM871082 1					Fetal Growth Retardation									1.1 ± 1.6							329.8 ± 114.7											https://www.ncbi.nlm.nih.gov/pmc/articles/PMC3677766/
-E-GEOD-35574	GSM871081 1					Pre-Eclampsia									0.4 ± 0.7							448.2 ± 237.8		140	90			300					https://www.ncbi.nlm.nih.gov/pmc/articles/PMC3677766/
-E-GEOD-35574	GSM871080 1					Pre-Eclampsia									0.4 ± 0.7							448.2 ± 237.8		140	90			300					https://www.ncbi.nlm.nih.gov/pmc/articles/PMC3677766/
-E-GEOD-35574	GSM871079 1					Fetal Growth Retardation									1.1 ± 1.6							329.8 ± 114.7											https://www.ncbi.nlm.nih.gov/pmc/articles/PMC3677766/
-E-GEOD-35574	GSM871078 1					Fetal Growth Retardation									1.1 ± 1.6							329.8 ± 114.7											https://www.ncbi.nlm.nih.gov/pmc/articles/PMC3677766/
-E-GEOD-35574	GSM871077 1					Healthy									2.4 ± 1.7							491.1 ± 141.3											https://www.ncbi.nlm.nih.gov/pmc/articles/PMC3677766/
-E-GEOD-35574	GSM871076 1					Pre-Eclampsia									0.4 ± 0.7							448.2 ± 237.8		140	90			300					https://www.ncbi.nlm.nih.gov/pmc/articles/PMC3677766/
-E-GEOD-35574	GSM871075 1					Healthy									2.4 ± 1.7							491.1 ± 141.3											https://www.ncbi.nlm.nih.gov/pmc/articles/PMC3677766/
-E-GEOD-35574	GSM871074 1					Healthy									2.4 ± 1.7							491.1 ± 141.3											https://www.ncbi.nlm.nih.gov/pmc/articles/PMC3677766/
-E-GEOD-35574	GSM871073 1					Fetal Growth Retardation									1.1 ± 1.6							329.8 ± 114.7											https://www.ncbi.nlm.nih.gov/pmc/articles/PMC3677766/
-E-GEOD-35574	GSM871072 1					Fetal Growth Retardation									1.1 ± 1.6							329.8 ± 114.7											https://www.ncbi.nlm.nih.gov/pmc/articles/PMC3677766/
-E-GEOD-35574	GSM871071 1					Healthy									2.4 ± 1.7							491.1 ± 141.3											https://www.ncbi.nlm.nih.gov/pmc/articles/PMC3677766/
-E-GEOD-35574	GSM871070 1					Pre-Eclampsia									0.4 ± 0.7							448.2 ± 237.8		140	90			300					https://www.ncbi.nlm.nih.gov/pmc/articles/PMC3677766/
-E-GEOD-35574	GSM871069 1					Fetal Growth Retardation									1.1 ± 1.6							329.8 ± 114.7											https://www.ncbi.nlm.nih.gov/pmc/articles/PMC3677766/
-E-GEOD-35574	GSM871068 1					Healthy									2.4 ± 1.7							491.1 ± 141.3											https://www.ncbi.nlm.nih.gov/pmc/articles/PMC3677766/
-E-GEOD-35574	GSM871067 1					Healthy									2.4 ± 1.7							491.1 ± 141.3											https://www.ncbi.nlm.nih.gov/pmc/articles/PMC3677766/
-E-GEOD-35574	GSM871066 1					Healthy									2.4 ± 1.7							491.1 ± 141.3											https://www.ncbi.nlm.nih.gov/pmc/articles/PMC3677766/
-E-GEOD-54618	GSM1319987 1					Pre-Eclampsia												TRUE			1195				105			318					https://www.ncbi.nlm.nih.gov/geo/query/acc.cgi?acc=GSE54618  http://www.placentajournal.org/article/S0143-4004(14)00900-X/fulltext
-E-GEOD-54618	GSM1319986 1					Pre-Eclampsia												FALSE			1195				105			318					https://www.ncbi.nlm.nih.gov/geo/query/acc.cgi?acc=GSE54618  http://www.placentajournal.org/article/S0143-4004(14)00900-X/fulltext
-E-GEOD-54618	GSM1319985 1					Healthy												FALSE			1740				75								https://www.ncbi.nlm.nih.gov/geo/query/acc.cgi?acc=GSE54618  http://www.placentajournal.org/article/S0143-4004(14)00900-X/fulltext
-E-GEOD-54618	GSM1319984 1					Healthy												TRUE			1740				75								https://www.ncbi.nlm.nih.gov/geo/query/acc.cgi?acc=GSE54618  http://www.placentajournal.org/article/S0143-4004(14)00900-X/fulltext
-E-GEOD-54618	GSM1319983 1					Pre-Eclampsia and HELLP												TRUE			1195				105			318					https://www.ncbi.nlm.nih.gov/geo/query/acc.cgi?acc=GSE54618  http://www.placentajournal.org/article/S0143-4004(14)00900-X/fulltext
-E-GEOD-54618	GSM1319982 1					Healthy												TRUE			1740				75								https://www.ncbi.nlm.nih.gov/geo/query/acc.cgi?acc=GSE54618  http://www.placentajournal.org/article/S0143-4004(14)00900-X/fulltext
-E-GEOD-54618	GSM1319981 1					Pre-Eclampsia and HELLP												TRUE			1195				105			318					https://www.ncbi.nlm.nih.gov/geo/query/acc.cgi?acc=GSE54618  http://www.placentajournal.org/article/S0143-4004(14)00900-X/fulltext
-E-GEOD-54618	GSM1319980 1					Pre-Eclampsia and HELLP												FALSE			1195				105			318					https://www.ncbi.nlm.nih.gov/geo/query/acc.cgi?acc=GSE54618  http://www.placentajournal.org/article/S0143-4004(14)00900-X/fulltext
-E-GEOD-54618	GSM1319979 1					Healthy												FALSE			1740				75								https://www.ncbi.nlm.nih.gov/geo/query/acc.cgi?acc=GSE54618  http://www.placentajournal.org/article/S0143-4004(14)00900-X/fulltext
-E-GEOD-54618	GSM1319978 1					Pre-Eclampsia and HELLP												TRUE			1195				105			318					https://www.ncbi.nlm.nih.gov/geo/query/acc.cgi?acc=GSE54618  http://www.placentajournal.org/article/S0143-4004(14)00900-X/fulltext
-E-GEOD-54618	GSM1319977 1					Pre-Eclampsia												TRUE			1195				105			318					https://www.ncbi.nlm.nih.gov/geo/query/acc.cgi?acc=GSE54618  http://www.placentajournal.org/article/S0143-4004(14)00900-X/fulltext
-E-GEOD-54618	GSM1319976 1					Healthy												TRUE			1740				75								https://www.ncbi.nlm.nih.gov/geo/query/acc.cgi?acc=GSE54618  http://www.placentajournal.org/article/S0143-4004(14)00900-X/fulltext
-E-GEOD-54618	GSM1319975 1					Pre-Eclampsia												TRUE			1195				105			318					https://www.ncbi.nlm.nih.gov/geo/query/acc.cgi?acc=GSE54618  http://www.placentajournal.org/article/S0143-4004(14)00900-X/fulltext
-E-GEOD-54618	GSM1319974 1					Pre-Eclampsia and HELLP												TRUE			1195				105			318					https://www.ncbi.nlm.nih.gov/geo/query/acc.cgi?acc=GSE54618  http://www.placentajournal.org/article/S0143-4004(14)00900-X/fulltext
-E-GEOD-54618	GSM1319973 1					Healthy												TRUE			1740				75								https://www.ncbi.nlm.nih.gov/geo/query/acc.cgi?acc=GSE54618  http://www.placentajournal.org/article/S0143-4004(14)00900-X/fulltext
-E-GEOD-54618	GSM1319972 1					Healthy												TRUE			1740				75								https://www.ncbi.nlm.nih.gov/geo/query/acc.cgi?acc=GSE54618  http://www.placentajournal.org/article/S0143-4004(14)00900-X/fulltext
-E-GEOD-54618	GSM1319971 1					Healthy												TRUE			1740				75								https://www.ncbi.nlm.nih.gov/geo/query/acc.cgi?acc=GSE54618  http://www.placentajournal.org/article/S0143-4004(14)00900-X/fulltext
-E-GEOD-54618	GSM1319970 1					Healthy												TRUE			1740				75								https://www.ncbi.nlm.nih.gov/geo/query/acc.cgi?acc=GSE54618  http://www.placentajournal.org/article/S0143-4004(14)00900-X/fulltext
-E-GEOD-54618	GSM1319969 1					Healthy												TRUE			1740				75								https://www.ncbi.nlm.nih.gov/geo/query/acc.cgi?acc=GSE54618  http://www.placentajournal.org/article/S0143-4004(14)00900-X/fulltext
-E-GEOD-54618	GSM1319968 1					Healthy												FALSE			1740				75								https://www.ncbi.nlm.nih.gov/geo/query/acc.cgi?acc=GSE54618  http://www.placentajournal.org/article/S0143-4004(14)00900-X/fulltext
-E-GEOD-54618	GSM1319967 1					Pre-Eclampsia and HELLP												FALSE			1195				105			318					https://www.ncbi.nlm.nih.gov/geo/query/acc.cgi?acc=GSE54618  http://www.placentajournal.org/article/S0143-4004(14)00900-X/fulltext
-E-GEOD-54618	GSM1319966 1					Pre-Eclampsia												TRUE			1195				105			318					https://www.ncbi.nlm.nih.gov/geo/query/acc.cgi?acc=GSE54618  http://www.placentajournal.org/article/S0143-4004(14)00900-X/fulltext
-E-GEOD-54618	GSM1319965 1					Pre-Eclampsia and HELLP												TRUE			1195				105			318					https://www.ncbi.nlm.nih.gov/geo/query/acc.cgi?acc=GSE54618  http://www.placentajournal.org/article/S0143-4004(14)00900-X/fulltext
-E-GEOD-54618	GSM1319964 1					Healthy																			75								https://www.ncbi.nlm.nih.gov/geo/query/acc.cgi?acc=GSE54618  http://www.placentajournal.org/article/S0143-4004(14)00900-X/fulltext
-E-GEOD-48424	GSM1177811 1					Severe Pre-Eclampsia															1900			160	110			1000					https://www.ncbi.nlm.nih.gov/pmc/articles/PMC3859491/
-E-GEOD-48424	GSM1177810 1					Healthy															3240												https://www.ncbi.nlm.nih.gov/pmc/articles/PMC3859491/
-E-GEOD-48424	GSM1177809 1					Healthy															3240												https://www.ncbi.nlm.nih.gov/pmc/articles/PMC3859491/
-E-GEOD-48424	GSM1177808 1					Severe Pre-Eclampsia															1900			160	110			1000					https://www.ncbi.nlm.nih.gov/pmc/articles/PMC3859491/
-E-GEOD-48424	GSM1177807 1					Severe Pre-Eclampsia															1900			160	110			1000					https://www.ncbi.nlm.nih.gov/pmc/articles/PMC3859491/
-E-GEOD-48424	GSM1177806 1					Pre-Eclampsia															1805			140	90			380					https://www.ncbi.nlm.nih.gov/pmc/articles/PMC3859491/
-E-GEOD-48424	GSM1177805 1					Healthy															3240												https://www.ncbi.nlm.nih.gov/pmc/articles/PMC3859491/
-E-GEOD-48424	GSM1177804 1					Healthy															3240												https://www.ncbi.nlm.nih.gov/pmc/articles/PMC3859491/
-E-GEOD-48424	GSM1177803 1					Severe Pre-Eclampsia															1900			160	110			1000					https://www.ncbi.nlm.nih.gov/pmc/articles/PMC3859491/
-E-GEOD-48424	GSM1177802 1					Healthy															3240												https://www.ncbi.nlm.nih.gov/pmc/articles/PMC3859491/
-E-GEOD-48424	GSM1177801 1					Healthy															3240												https://www.ncbi.nlm.nih.gov/pmc/articles/PMC3859491/
-E-GEOD-48424	GSM1177800 1					Healthy															3240												https://www.ncbi.nlm.nih.gov/pmc/articles/PMC3859491/
-E-GEOD-48424	GSM1177799 1					Healthy															3240												https://www.ncbi.nlm.nih.gov/pmc/articles/PMC3859491/
-E-GEOD-48424	GSM1177798 1					Healthy															3240												https://www.ncbi.nlm.nih.gov/pmc/articles/PMC3859491/
-E-GEOD-48424	GSM1177797 1					Pre-Eclampsia															1805			140	90			380					https://www.ncbi.nlm.nih.gov/pmc/articles/PMC3859491/
-E-GEOD-48424	GSM1177796 1					Severe Pre-Eclampsia															1900			160	110			1000					https://www.ncbi.nlm.nih.gov/pmc/articles/PMC3859491/
-E-GEOD-48424	GSM1177795 1					Healthy															3240												https://www.ncbi.nlm.nih.gov/pmc/articles/PMC3859491/
-E-GEOD-48424	GSM1177794 1					Severe Pre-Eclampsia															1900			160	110			1000					https://www.ncbi.nlm.nih.gov/pmc/articles/PMC3859491/
-E-GEOD-48424	GSM1177793 1					Healthy															3240												https://www.ncbi.nlm.nih.gov/pmc/articles/PMC3859491/
-E-GEOD-48424	GSM1177792 1					Severe Pre-Eclampsia															1900			160	110			1000					https://www.ncbi.nlm.nih.gov/pmc/articles/PMC3859491/
-E-GEOD-48424	GSM1177791 1					Pre-Eclampsia															1805			140	90			380					https://www.ncbi.nlm.nih.gov/pmc/articles/PMC3859491/
-E-GEOD-48424	GSM1177790 1					Severe Pre-Eclampsia															1900			160	110			1000					https://www.ncbi.nlm.nih.gov/pmc/articles/PMC3859491/
-E-GEOD-48424	GSM1177789 1					Healthy															3240												https://www.ncbi.nlm.nih.gov/pmc/articles/PMC3859491/
-E-GEOD-48424	GSM1177788 1					Pre-Eclampsia															1805			140	90			380					https://www.ncbi.nlm.nih.gov/pmc/articles/PMC3859491/
-E-GEOD-48424	GSM1177787 1					Severe Pre-Eclampsia															1900			160	110			1000					https://www.ncbi.nlm.nih.gov/pmc/articles/PMC3859491/
-E-GEOD-48424	GSM1177786 1					Pre-Eclampsia																											https://www.ncbi.nlm.nih.gov/pmc/articles/PMC3859491/
-E-GEOD-48424	GSM1177785 1					Severe Pre-Eclampsia															1900			160	110			1000					https://www.ncbi.nlm.nih.gov/pmc/articles/PMC3859491/
-E-GEOD-48424	GSM1177784 1					Healthy															3240												https://www.ncbi.nlm.nih.gov/pmc/articles/PMC3859491/
-E-GEOD-48424	GSM1177783 1					Healthy															3240												https://www.ncbi.nlm.nih.gov/pmc/articles/PMC3859491/
-E-GEOD-48424	GSM1177782 1					Healthy															3240												https://www.ncbi.nlm.nih.gov/pmc/articles/PMC3859491/
-E-GEOD-48424	GSM1177781 1					Severe Pre-Eclampsia															1900			160	110			1000					https://www.ncbi.nlm.nih.gov/pmc/articles/PMC3859491/
-E-GEOD-48424	GSM1177780 1					Healthy															3240												https://www.ncbi.nlm.nih.gov/pmc/articles/PMC3859491/
-E-GEOD-48424	GSM1177779 1					Severe Pre-Eclampsia															1900			160	110			1000					https://www.ncbi.nlm.nih.gov/pmc/articles/PMC3859491/
-E-GEOD-48424	GSM1177778 1					Healthy															3240												https://www.ncbi.nlm.nih.gov/pmc/articles/PMC3859491/
-E-GEOD-48424	GSM1177777 1					Healthy															3240												https://www.ncbi.nlm.nih.gov/pmc/articles/PMC3859491/
-E-GEOD-48424	GSM1177776 1					Severe Pre-Eclampsia															1900			160	110			1000					https://www.ncbi.nlm.nih.gov/pmc/articles/PMC3859491/
-E-GEOD-44711	GSM1089244 1					Healthy								31.5																			https://www.ncbi.nlm.nih.gov/pmc/articles/PMC3779005/
-E-GEOD-44711	GSM1089243 1					Healthy								31.5																			https://www.ncbi.nlm.nih.gov/pmc/articles/PMC3779005/
-E-GEOD-44711	GSM1089242 1					Healthy								31.5																			https://www.ncbi.nlm.nih.gov/pmc/articles/PMC3779005/
-E-GEOD-44711	GSM1089241 1					Healthy								31.5																			https://www.ncbi.nlm.nih.gov/pmc/articles/PMC3779005/
-E-GEOD-44711	GSM1089240 1					Healthy								31.5																			https://www.ncbi.nlm.nih.gov/pmc/articles/PMC3779005/
-E-GEOD-44711	GSM1089239 1					Healthy								31.5																			https://www.ncbi.nlm.nih.gov/pmc/articles/PMC3779005/
-E-GEOD-44711	GSM1089238 1					Healthy								31.5																			https://www.ncbi.nlm.nih.gov/pmc/articles/PMC3779005/
-E-GEOD-44711	GSM1089237 1					Healthy								31.5																			https://www.ncbi.nlm.nih.gov/pmc/articles/PMC3779005/
-E-GEOD-44711	GSM1089236 1					Pre-Eclampsia								33.5										140	90			300					https://www.ncbi.nlm.nih.gov/pmc/articles/PMC3779005/
-E-GEOD-44711	GSM1089235 1					Pre-Eclampsia and FGR								33.5										140	90			300					https://www.ncbi.nlm.nih.gov/pmc/articles/PMC3779005/
-E-GEOD-44711	GSM1089234 1					Pre-Eclampsia and FGR								33.5										140	90			300					https://www.ncbi.nlm.nih.gov/pmc/articles/PMC3779005/
-E-GEOD-44711	GSM1089233 1					Pre-Eclampsia and FGR								33.5										140	90			300					https://www.ncbi.nlm.nih.gov/pmc/articles/PMC3779005/
-E-GEOD-44711	GSM1089232 1					Pre-Eclampsia								33.5										140	90			300					https://www.ncbi.nlm.nih.gov/pmc/articles/PMC3779005/
-E-GEOD-44711	GSM1089231 1					Pre-Eclampsia and FGR								33.5										140	90			300					https://www.ncbi.nlm.nih.gov/pmc/articles/PMC3779005/
-E-GEOD-44711	GSM1089230 1					Pre-Eclampsia and FGR								33.5										140	90			300					https://www.ncbi.nlm.nih.gov/pmc/articles/PMC3779005/
-E-GEOD-44711	GSM1089229 1					Pre-Eclampsia and FGR								33.5										140	90			300					https://www.ncbi.nlm.nih.gov/pmc/articles/PMC3779005/
-E-GEOD-47187	GSM1146438 2					Healthy								30.6					male		1886			121	68								http://www.placentajournal.org/article/S0143-4004(13)00739-X/fulltext
-E-GEOD-47187	GSM1146438 1					Pre-Eclampsia								26.6							1482			168	113			6500					http://www.placentajournal.org/article/S0143-4004(13)00739-X/fulltext
-E-GEOD-47187	GSM1146437 2					Healthy								30.6					male		1886			121	68								http://www.placentajournal.org/article/S0143-4004(13)00739-X/fulltext
-E-GEOD-47187	GSM1146437 1					Pre-Eclampsia								26.6							1482			168	113			6500					http://www.placentajournal.org/article/S0143-4004(13)00739-X/fulltext
-E-GEOD-47187	GSM1146436 1					Pre-Eclampsia								26.6							1482			168	113			6500					http://www.placentajournal.org/article/S0143-4004(13)00739-X/fulltext
-E-GEOD-47187	GSM1146436 2					Healthy								30.6					male		1886			121	68								http://www.placentajournal.org/article/S0143-4004(13)00739-X/fulltext
-E-GEOD-47187	GSM1146435 2					Healthy								30.6					male		1886			121	68								http://www.placentajournal.org/article/S0143-4004(13)00739-X/fulltext
-E-GEOD-47187	GSM1146435 1					Pre-Eclampsia								26.6							1482			168	113			6500					http://www.placentajournal.org/article/S0143-4004(13)00739-X/fulltext
-E-GEOD-47187	GSM1146434 1					Pre-Eclampsia								26.6							1482			168	113			6500					http://www.placentajournal.org/article/S0143-4004(13)00739-X/fulltext
-E-GEOD-47187	GSM1146434 2					Healthy								30.6					male		1886			121	68								http://www.placentajournal.org/article/S0143-4004(13)00739-X/fulltext
-E-TABM-682	D01					Healthy		39						31							3619			116	70								http://europepmc.org/articles/PMC2989830/
-E-TABM-682	D02					Healthy		39						31							3619			116	70								http://europepmc.org/articles/PMC2989830/
-E-TABM-682	D03					Healthy		39						31							3619			116	70								http://europepmc.org/articles/PMC2989830/
-E-TABM-682	D04					Healthy		39						31							3619			116	70								http://europepmc.org/articles/PMC2989830/
-E-TABM-682	D05					Healthy		39						31							3619			116	70								http://europepmc.org/articles/PMC2989830/
-E-TABM-682	D06					Healthy		39						31							3619			116	70								http://europepmc.org/articles/PMC2989830/
-E-TABM-682	D07					Healthy		39						31							3619			116	70								http://europepmc.org/articles/PMC2989830/
-E-TABM-682	D09					Healthy		39						31							3619			116	70								http://europepmc.org/articles/PMC2989830/
-E-TABM-682	D10					Healthy		39						31							3619			116	70								http://europepmc.org/articles/PMC2989830/
-E-TABM-682	D11					Healthy		39						31							3619			116	70								http://europepmc.org/articles/PMC2989830/
-E-TABM-682	D12					Fetal Growth Retardation		32						34							1225			128	74								http://europepmc.org/articles/PMC2989830/
-E-TABM-682	D13					Fetal Growth Retardation		32						34							1225			128	74								http://europepmc.org/articles/PMC2989830/
-E-TABM-682	D14					Fetal Growth Retardation		32						34							1225			128	74								http://europepmc.org/articles/PMC2989830/
-E-TABM-682	D16					Fetal Growth Retardation		32						34							1225			128	74								http://europepmc.org/articles/PMC2989830/
-E-TABM-682	D17					Pre-Eclampsia		35						30							2364			153	95								http://europepmc.org/articles/PMC2989830/
-E-TABM-682	D18					Pre-Eclampsia		35						30							2364			153	95								http://europepmc.org/articles/PMC2989830/
-E-TABM-682	D19					Pre-Eclampsia		35						30							2364			153	95								http://europepmc.org/articles/PMC2989830/
-E-TABM-682	D20					Pre-Eclampsia		35						30							2364			153	95								http://europepmc.org/articles/PMC2989830/
-E-TABM-682	D21					Pre-Eclampsia		35						30							2364			153	95								http://europepmc.org/articles/PMC2989830/
-E-TABM-682	D22					Pre-Eclampsia		35						30							2364			153	95								http://europepmc.org/articles/PMC2989830/
-E-TABM-682	D23					Pre-Eclampsia and FGR		30						31							1118			151	97								http://europepmc.org/articles/PMC2989830/
-E-TABM-682	D24					Pre-Eclampsia and FGR		30						31							1118			151	97								http://europepmc.org/articles/PMC2989830/
-E-TABM-682	D25					Pre-Eclampsia and FGR		30						31							1118			151	97								http://europepmc.org/articles/PMC2989830/
-E-TABM-682	D26					Pre-Eclampsia and FGR		30						31							1118			151	97								http://europepmc.org/articles/PMC2989830/
-E-TABM-682	D28					Pre-Eclampsia and FGR		30						31							1118			151	97								http://europepmc.org/articles/PMC2989830/
-E-TABM-682	D29					Pre-Eclampsia and FGR		30						31							1118			151	97								http://europepmc.org/articles/PMC2989830/
-E-TABM-682	D30					Pre-Eclampsia and FGR		30						31							1118			151	97								http://europepmc.org/articles/PMC2989830/
-E-TABM-682	S01					Pre-Eclampsia		35						30							2364			153	95								http://europepmc.org/articles/PMC2989830/
-E-TABM-682	S02					Pre-Eclampsia		35						30							2364			153	95								http://europepmc.org/articles/PMC2989830/
-E-TABM-682	S03					Pre-Eclampsia		35						30							2364			153	95								http://europepmc.org/articles/PMC2989830/
-E-TABM-682	S05					Pre-Eclampsia		35						30							2364			153	95								http://europepmc.org/articles/PMC2989830/
-E-TABM-682	S07					Pre-Eclampsia and FGR		30						31							1118			151	97								http://europepmc.org/articles/PMC2989830/
-E-TABM-682	S08					Pre-Eclampsia and FGR		30						31							1118			151	97								http://europepmc.org/articles/PMC2989830/
-E-TABM-682	S09					Pre-Eclampsia and FGR		30						31							1118			151	97								http://europepmc.org/articles/PMC2989830/
-E-TABM-682	S10					Pre-Eclampsia and FGR		30						31							1118			151	97								http://europepmc.org/articles/PMC2989830/
-E-TABM-682	S12					Pre-Eclampsia and FGR		30						31							1118			151	97								http://europepmc.org/articles/PMC2989830/
-E-TABM-682	S14					Pre-Eclampsia and FGR		30						31							1118			151	97								http://europepmc.org/articles/PMC2989830/
-E-TABM-682	S15					Pre-Eclampsia and FGR		30						31							1118			151	97								http://europepmc.org/articles/PMC2989830/
-E-TABM-682	S16					Pre-Eclampsia and FGR		30						31							1118			151	97								http://europepmc.org/articles/PMC2989830/
-E-TABM-682	S17					Pre-Eclampsia and FGR		30						31							1118			151	97								http://europepmc.org/articles/PMC2989830/
-E-TABM-682	S19					Pre-Eclampsia and FGR		30						31							1118			151	97								http://europepmc.org/articles/PMC2989830/
-E-TABM-682	S20					Fetal Growth Retardation		32						34							1225			128	74								http://europepmc.org/articles/PMC2989830/
-E-TABM-682	S21					Fetal Growth Retardation		32						34							1225			128	74								http://europepmc.org/articles/PMC2989830/
-E-TABM-682	S23					Fetal Growth Retardation		32						34							1225			128	74								http://europepmc.org/articles/PMC2989830/
-E-TABM-682	S25					Healthy		39						31							3619			116	70								http://europepmc.org/articles/PMC2989830/
-E-TABM-682	S26					Healthy		39						31							3619			116	70								http://europepmc.org/articles/PMC2989830/
-E-TABM-682	S27					Healthy		39						31							3619			116	70								http://europepmc.org/articles/PMC2989830/
-E-TABM-682	S29					Healthy		39						31							3619			116	70								http://europepmc.org/articles/PMC2989830/
-E-TABM-682	S30					Pre-Eclampsia and FGR		30						31							1118			151	97								http://europepmc.org/articles/PMC2989830/
-E-TABM-682	S32					Healthy		39						31							3619			116	70								http://europepmc.org/articles/PMC2989830/
-E-TABM-682	S33					Healthy		39						31							3619			116	70								http://europepmc.org/articles/PMC2989830/
-E-TABM-682	S34					Healthy		39						31							3619			116	70								http://europepmc.org/articles/PMC2989830/
-E-TABM-682	S35					Healthy		39						31							3619			116	70								http://europepmc.org/articles/PMC2989830/
-E-TABM-682	S37					Healthy		39						31							3619			116	70								http://europepmc.org/articles/PMC2989830/
-E-TABM-682	S38					Healthy		39						31							3619			116	70								http://europepmc.org/articles/PMC2989830/
-E-TABM-682	S39					Healthy		39						31							3619			116	70								http://europepmc.org/articles/PMC2989830/
-E-TABM-682	S40					Healthy		39						31							3619			116	70								http://europepmc.org/articles/PMC2989830/
-E-TABM-682	S41					Healthy		39						31							3619			116	70								http://europepmc.org/articles/PMC2989830/
-E-TABM-682	S42					Healthy		39						31							3619			116	70								http://europepmc.org/articles/PMC2989830/
-E-TABM-682	S43					Healthy		39						31							3619			116	70								http://europepmc.org/articles/PMC2989830/
-E-TABM-682	S44					Pre-Eclampsia		35						30							2364			153	95								http://europepmc.org/articles/PMC2989830/
-E-TABM-682	S45					Healthy		39						31							3619			116	70								http://europepmc.org/articles/PMC2989830/
-E-TABM-682	S46					Healthy		39						31							3619			116	70								http://europepmc.org/articles/PMC2989830/
-E-TABM-682	S47					Healthy		39						31							3619			116	70								http://europepmc.org/articles/PMC2989830/
-E-TABM-682	S48					Healthy		39						31							3619			116	70								http://europepmc.org/articles/PMC2989830/
-E-TABM-682	S49					Healthy		39						31							3619			116	70								http://europepmc.org/articles/PMC2989830/
-E-TABM-682	S51					Healthy		39						31							3619			116	70								http://europepmc.org/articles/PMC2989830/
-E-TABM-682	S52					Healthy		39						31							3619			116	70								http://europepmc.org/articles/PMC2989830/
-E-TABM-682	S54					Healthy		39						31							3619			116	70								http://europepmc.org/articles/PMC2989830/
-E-TABM-682	S55					Healthy		39						31							3619			116	70								http://europepmc.org/articles/PMC2989830/
-E-TABM-682	S56					Healthy		39						31							3619			116	70								http://europepmc.org/articles/PMC2989830/
-E-TABM-682	S57					Healthy		39						31							3619			116	70								http://europepmc.org/articles/PMC2989830/
-E-TABM-682	S58					Pre-Eclampsia and FGR		30						31							1118			151	97								http://europepmc.org/articles/PMC2989830/
-E-TABM-682	S59					Healthy		39						31							3619			116	70								http://europepmc.org/articles/PMC2989830/
-E-TABM-682	S60					Healthy		39						31							3619			116	70								http://europepmc.org/articles/PMC2989830/
-E-TABM-682	S61					Healthy		39						31							3619			116	70								http://europepmc.org/articles/PMC2989830/
-E-TABM-682	S62					Healthy		39						31							3619			116	70								http://europepmc.org/articles/PMC2989830/
-E-TABM-682	S63					Healthy		39						31							3619			116	70								http://europepmc.org/articles/PMC2989830/
-E-TABM-682	T01					Healthy		39						31							3619			116	70								http://europepmc.org/articles/PMC2989830/
-E-TABM-682	T02					Healthy		39						31							3619			116	70								http://europepmc.org/articles/PMC2989830/
-E-TABM-682	T03					Healthy		39						31							3619			116	70								http://europepmc.org/articles/PMC2989830/
-E-TABM-682	T04					Healthy		39						31							3619			116	70								http://europepmc.org/articles/PMC2989830/
-E-TABM-682	T05					Healthy		39						31							3619			116	70								http://europepmc.org/articles/PMC2989830/
-E-TABM-682	T06					Healthy		39						31							3619			116	70								http://europepmc.org/articles/PMC2989830/
-E-TABM-682	T07					Healthy		39						31							3619			116	70								http://europepmc.org/articles/PMC2989830/
-E-TABM-682	T09					Healthy		39						31							3619			116	70								http://europepmc.org/articles/PMC2989830/
-E-TABM-682	T10					Healthy		39						31							3619			116	70								http://europepmc.org/articles/PMC2989830/
-E-TABM-682	T11					Healthy		39						31							3619			116	70								http://europepmc.org/articles/PMC2989830/
-E-TABM-682	T12					Healthy		39						31							3619			116	70								http://europepmc.org/articles/PMC2989830/
-E-TABM-682	T13					Healthy		39						31							3619			116	70								http://europepmc.org/articles/PMC2989830/
-E-TABM-682	T16					Healthy		39						31							3619			116	70								http://europepmc.org/articles/PMC2989830/
-E-TABM-682	T19					Healthy		39						31							3619			116	70								http://europepmc.org/articles/PMC2989830/
-E-TABM-682	T21					Healthy		39						31							3619			116	70								http://europepmc.org/articles/PMC2989830/
-E-TABM-682	T22					Healthy		39						31							3619			116	70								http://europepmc.org/articles/PMC2989830/
-E-TABM-682	T23					Healthy		39						31							3619			116	70								http://europepmc.org/articles/PMC2989830/
-E-TABM-682	T24					Fetal Growth Retardation		32						34							1225			128	74								http://europepmc.org/articles/PMC2989830/
-E-TABM-682	T25					Fetal Growth Retardation		32						34							1225			128	74								http://europepmc.org/articles/PMC2989830/
-E-TABM-682	T28					Pre-Eclampsia		35						30							2364			153	95								http://europepmc.org/articles/PMC2989830/
-E-TABM-682	T30					Pre-Eclampsia		35						30							2364			153	95								http://europepmc.org/articles/PMC2989830/
-E-TABM-682	T32					Pre-Eclampsia and FGR		30						31							1118			151	97								http://europepmc.org/articles/PMC2989830/
-E-TABM-682	T37					Pre-Eclampsia and FGR		30						31							1118			151	97								http://europepmc.org/articles/PMC2989830/
-E-TABM-682	T38					Pre-Eclampsia and FGR		30						31							1118			151	97								http://europepmc.org/articles/PMC2989830/
-E-TABM-682	T39					Pre-Eclampsia and FGR		30						31							1118			151	97								http://europepmc.org/articles/PMC2989830/
-E-TABM-682	T40					Pre-Eclampsia and FGR		30						31							1118			151	97								http://europepmc.org/articles/PMC2989830/
-E-GEOD-14722	GSM367826 1					Pre-Eclampsia		32.1						30.7										140	90			300					https://www.ncbi.nlm.nih.gov/pmc/articles/PMC2630905/table/T1/
-E-GEOD-14722	GSM367825 1					Pre-Eclampsia		32.1						30.7										140	90			300					https://www.ncbi.nlm.nih.gov/pmc/articles/PMC2630905/table/T1/
-E-GEOD-14722	GSM367824 1					Pre-Eclampsia		32.1						30.7										140	90			300					https://www.ncbi.nlm.nih.gov/pmc/articles/PMC2630905/table/T1/
-E-GEOD-14722	GSM367823 1					Pre-Eclampsia		32.1						30.7										140	90			300					https://www.ncbi.nlm.nih.gov/pmc/articles/PMC2630905/table/T1/
-E-GEOD-14722	GSM367822 1					Pre-Eclampsia		32.1						30.7										140	90			300					https://www.ncbi.nlm.nih.gov/pmc/articles/PMC2630905/table/T1/
-E-GEOD-14722	GSM367821 1					Pre-Eclampsia		32.1						30.7										140	90			300					https://www.ncbi.nlm.nih.gov/pmc/articles/PMC2630905/table/T1/
-E-GEOD-14722	GSM367820 1					Pre-Eclampsia		32.1						30.7										140	90			300					https://www.ncbi.nlm.nih.gov/pmc/articles/PMC2630905/table/T1/
-E-GEOD-14722	GSM367819 1					Pre-Eclampsia		32.1						30.7										140	90			300					https://www.ncbi.nlm.nih.gov/pmc/articles/PMC2630905/table/T1/
-E-GEOD-14722	GSM367818 1					Pre-Eclampsia		32.1						30.7										140	90			300					https://www.ncbi.nlm.nih.gov/pmc/articles/PMC2630905/table/T1/
-E-GEOD-14722	GSM367817 1					Pre-Eclampsia		32.1						30.7										140	90			300					https://www.ncbi.nlm.nih.gov/pmc/articles/PMC2630905/table/T1/
-E-GEOD-14722	GSM367816 1					Pre-Eclampsia		32.1						30.7										140	90			300					https://www.ncbi.nlm.nih.gov/pmc/articles/PMC2630905/table/T1/
-E-GEOD-14722	GSM367815 1					Pre-Eclampsia		32.1						30.7										140	90			300					https://www.ncbi.nlm.nih.gov/pmc/articles/PMC2630905/table/T1/
-E-GEOD-14722	GSM367814 1					Healthy		31						30.2																			https://www.ncbi.nlm.nih.gov/pmc/articles/PMC2630905/table/T1/
-E-GEOD-14722	GSM367813 1					Healthy		31						30.2																			https://www.ncbi.nlm.nih.gov/pmc/articles/PMC2630905/table/T1/
-E-GEOD-14722	GSM367812 1					Healthy		31						30.2																			https://www.ncbi.nlm.nih.gov/pmc/articles/PMC2630905/table/T1/
-E-GEOD-14722	GSM367811 1					Healthy		31						30.2																			https://www.ncbi.nlm.nih.gov/pmc/articles/PMC2630905/table/T1/
-E-GEOD-14722	GSM367810 1					Healthy		31						30.2																			https://www.ncbi.nlm.nih.gov/pmc/articles/PMC2630905/table/T1/
-E-GEOD-14722	GSM367809 1					Healthy		31						30.2																			https://www.ncbi.nlm.nih.gov/pmc/articles/PMC2630905/table/T1/
-E-GEOD-14722	GSM367808 1					Healthy		31						30.2																			https://www.ncbi.nlm.nih.gov/pmc/articles/PMC2630905/table/T1/
-E-GEOD-14722	GSM367807 1					Healthy		31						30.2																			https://www.ncbi.nlm.nih.gov/pmc/articles/PMC2630905/table/T1/
-E-GEOD-14722	GSM367806 1					Healthy		31						30.2																			https://www.ncbi.nlm.nih.gov/pmc/articles/PMC2630905/table/T1/
-E-GEOD-14722	GSM367805 1					Healthy		31						30.2																			https://www.ncbi.nlm.nih.gov/pmc/articles/PMC2630905/table/T1/
-E-GEOD-14722	GSM367804 1					Healthy		31						30.2																			https://www.ncbi.nlm.nih.gov/pmc/articles/PMC2630905/table/T1/
-E-GEOD-14722	GSM367803 1					Pre-Eclampsia		32.1						30.7										140	90			300					https://www.ncbi.nlm.nih.gov/pmc/articles/PMC2630905/table/T1/
-E-GEOD-14722	GSM367802 1					Pre-Eclampsia		32.1						30.7										140	90			300					https://www.ncbi.nlm.nih.gov/pmc/articles/PMC2630905/table/T1/
-E-GEOD-14722	GSM367801 1					Pre-Eclampsia		32.1						30.7										140	90			300					https://www.ncbi.nlm.nih.gov/pmc/articles/PMC2630905/table/T1/
-E-GEOD-14722	GSM367800 1					Pre-Eclampsia		32.1						30.7										140	90			300					https://www.ncbi.nlm.nih.gov/pmc/articles/PMC2630905/table/T1/
-E-GEOD-14722	GSM367799 1					Pre-Eclampsia		32.1						30.7										140	90			300					https://www.ncbi.nlm.nih.gov/pmc/articles/PMC2630905/table/T1/
-E-GEOD-14722	GSM367798 1					Pre-Eclampsia		32.1						30.7										140	90			300					https://www.ncbi.nlm.nih.gov/pmc/articles/PMC2630905/table/T1/
-E-GEOD-14722	GSM367797 1					Pre-Eclampsia		32.1						30.7										140	90			300					https://www.ncbi.nlm.nih.gov/pmc/articles/PMC2630905/table/T1/
-E-GEOD-14722	GSM367796 1					Pre-Eclampsia		32.1						30.7										140	90			300					https://www.ncbi.nlm.nih.gov/pmc/articles/PMC2630905/table/T1/
-E-GEOD-14722	GSM367795 1					Pre-Eclampsia		32.1						30.7										140	90			300					https://www.ncbi.nlm.nih.gov/pmc/articles/PMC2630905/table/T1/
-E-GEOD-14722	GSM367794 1					Pre-Eclampsia		32.1						30.7										140	90			300					https://www.ncbi.nlm.nih.gov/pmc/articles/PMC2630905/table/T1/
-E-GEOD-14722	GSM367793 1					Pre-Eclampsia		32.1						30.7										140	90			300					https://www.ncbi.nlm.nih.gov/pmc/articles/PMC2630905/table/T1/
-E-GEOD-14722	GSM367792 1					Pre-Eclampsia		32.1						30.7										140	90			300					https://www.ncbi.nlm.nih.gov/pmc/articles/PMC2630905/table/T1/
-E-GEOD-14722	GSM367791 1					Healthy		31						30.2																			https://www.ncbi.nlm.nih.gov/pmc/articles/PMC2630905/table/T1/
-E-GEOD-14722	GSM367790 1					Healthy		31						30.2																			https://www.ncbi.nlm.nih.gov/pmc/articles/PMC2630905/table/T1/
-E-GEOD-14722	GSM367789 1					Healthy		31						30.2																			https://www.ncbi.nlm.nih.gov/pmc/articles/PMC2630905/table/T1/
-E-GEOD-14722	GSM367788 1					Healthy		31						30.2																			https://www.ncbi.nlm.nih.gov/pmc/articles/PMC2630905/table/T1/
-E-GEOD-14722	GSM367787 1					Healthy		31						30.2																			https://www.ncbi.nlm.nih.gov/pmc/articles/PMC2630905/table/T1/
-E-GEOD-14722	GSM367786 1					Healthy		31						30.2																			https://www.ncbi.nlm.nih.gov/pmc/articles/PMC2630905/table/T1/
-E-GEOD-14722	GSM367785 1					Healthy		31						30.2																			https://www.ncbi.nlm.nih.gov/pmc/articles/PMC2630905/table/T1/
-E-GEOD-14722	GSM367784 1					Healthy		31						30.2																			https://www.ncbi.nlm.nih.gov/pmc/articles/PMC2630905/table/T1/
-E-GEOD-14722	GSM367783 1					Healthy		31						30.2																			https://www.ncbi.nlm.nih.gov/pmc/articles/PMC2630905/table/T1/
-E-GEOD-14722	GSM367782 1					Healthy		31						30.2																			https://www.ncbi.nlm.nih.gov/pmc/articles/PMC2630905/table/T1/
-E-GEOD-14722	GSM367781 1					Healthy		31						30.2																			https://www.ncbi.nlm.nih.gov/pmc/articles/PMC2630905/table/T1/
-E-GEOD-12216	GSM307201 1					Fetal Growth Retardation								30.13								293											
-E-GEOD-12216	GSM307200 1					Fetal Growth Retardation								30.13								293											
-E-GEOD-12216	GSM307199 1					Fetal Growth Retardation								30.13								293											
-E-GEOD-12216	GSM307198 1					Fetal Growth Retardation								30.13								293											
-E-GEOD-12216	GSM307197 1					Fetal Growth Retardation								30.13								293											
-E-GEOD-12216	GSM307196 1					Fetal Growth Retardation								30.13								293											
-E-GEOD-12216	GSM307195 1					Fetal Growth Retardation								30.13								293											
-E-GEOD-12216	GSM307194 1					Fetal Growth Retardation								30.13								293											
-E-GEOD-12216	GSM307193 1					Healthy								32.25								730											
-E-GEOD-12216	GSM307192 1					Healthy								32.25								730											
-E-GEOD-12216	GSM307191 1					Healthy								32.25								730											
-E-GEOD-12216	GSM307190 1					Healthy								32.25								730											
-E-GEOD-12216	GSM307189 1					Healthy								32.25								730											
-E-GEOD-12216	GSM307188 1					Healthy								32.25								730											
-E-GEOD-12216	GSM307187 1					Healthy								32.25								730											
-E-GEOD-12216	GSM307186 1					Healthy								32.25								730											
-E-GEOD-4707	GSE4707GSM106285_Cy5					Severe Pre-Eclampsia		32.9						30.3							1533.7	277		170.6	105.7			2000					http://sci-hub.cc/10.1016/j.placenta.2006.05.010/
-E-GEOD-4707	GSE4707GSM106285_Cy3					Healthy		32.9						29.2							2265.9	616.4		113.1	67.1								http://sci-hub.cc/10.1016/j.placenta.2006.05.010/
-E-GEOD-4707	GSE4707GSM106282_Cy3					Healthy		32.9						29.2							2265.9	616.4		113.1	67.1								http://sci-hub.cc/10.1016/j.placenta.2006.05.010/
-E-GEOD-4707	GSE4707GSM106282_Cy5					Severe Pre-Eclampsia		32.9						30.3							1533.7	277		170.6	105.7			2000					http://sci-hub.cc/10.1016/j.placenta.2006.05.010/
-E-GEOD-4707	GSE4707GSM106283_Cy3					Healthy		32.9						29.2							2265.9	616.4		113.1	67.1								http://sci-hub.cc/10.1016/j.placenta.2006.05.010/
-E-GEOD-4707	GSE4707GSM106283_Cy5					Severe Pre-Eclampsia		32.9						30.3							1533.7	277		170.6	105.7			2000					http://sci-hub.cc/10.1016/j.placenta.2006.05.010/
-E-GEOD-4707	GSE4707GSM106284_Cy3					Healthy		32.9						29.2							2265.9	616.4		113.1	67.1								http://sci-hub.cc/10.1016/j.placenta.2006.05.010/
-E-GEOD-4707	GSE4707GSM106284_Cy5					Severe Pre-Eclampsia		32.9						30.3							1533.7	277		170.6	105.7			2000					http://sci-hub.cc/10.1016/j.placenta.2006.05.010/
-E-GEOD-4707	GSE4707GSM106274_Cy5					Healthy		32.9						29.2							2265.9	616.4		113.1	67.1								http://sci-hub.cc/10.1016/j.placenta.2006.05.010/
-E-GEOD-4707	GSE4707GSM106274_Cy3					Healthy		32.9						29.2							2265.9	616.4		113.1	67.1								http://sci-hub.cc/10.1016/j.placenta.2006.05.010/
-E-GEOD-4707	GSE4707GSM106278_Cy5					Severe Pre-Eclampsia		32.9						30.3							1533.7	277		170.6	105.7			2000					http://sci-hub.cc/10.1016/j.placenta.2006.05.010/
-E-GEOD-4707	GSE4707GSM106278_Cy3					Healthy		32.9						29.2							2265.9	616.4		113.1	67.1								http://sci-hub.cc/10.1016/j.placenta.2006.05.010/
-E-GEOD-4707	GSE4707GSM106279_Cy5					Severe Pre-Eclampsia		32.9						30.3							1533.7	277		170.6	105.7			2000					http://sci-hub.cc/10.1016/j.placenta.2006.05.010/
-E-GEOD-4707	GSE4707GSM106279_Cy3					Healthy		32.9						29.2							2265.9	616.4		113.1	67.1								http://sci-hub.cc/10.1016/j.placenta.2006.05.010/
-E-GEOD-4707	GSE4707GSM106250_Cy5					Healthy		32.9						29.2							2265.9	616.4		113.1	67.1								http://sci-hub.cc/10.1016/j.placenta.2006.05.010/
-E-GEOD-4707	GSE4707GSM106250_Cy3					Healthy		32.9						29.2							2265.9	616.4		113.1	67.1								http://sci-hub.cc/10.1016/j.placenta.2006.05.010/
-E-GEOD-4707	GSE4707GSM106277_Cy5					Severe Pre-Eclampsia		32.9						30.3							1533.7	277		170.6	105.7			2000					http://sci-hub.cc/10.1016/j.placenta.2006.05.010/
-E-GEOD-4707	GSE4707GSM106277_Cy3					Healthy		32.9						29.2							2265.9	616.4		113.1	67.1								http://sci-hub.cc/10.1016/j.placenta.2006.05.010/
-E-GEOD-4707	GSE4707GSM106281_Cy5					Severe Pre-Eclampsia		32.9						30.3							1533.7	277		170.6	105.7			2000					http://sci-hub.cc/10.1016/j.placenta.2006.05.010/
-E-GEOD-4707	GSE4707GSM106281_Cy3					Healthy		32.9						29.2							2265.9	616.4		113.1	67.1								http://sci-hub.cc/10.1016/j.placenta.2006.05.010/
-E-GEOD-4707	GSE4707GSM106276_Cy3					Healthy		32.9						29.2							2265.9	616.4		113.1	67.1								http://sci-hub.cc/10.1016/j.placenta.2006.05.010/
-E-GEOD-4707	GSE4707GSM106276_Cy5					Severe Pre-Eclampsia		32.9						30.3							1533.7	277		170.6	105.7			2000					http://sci-hub.cc/10.1016/j.placenta.2006.05.010/
-E-GEOD-4707	GSE4707GSM106249_Cy3					Healthy		32.9						29.2							2265.9	616.4		113.1	67.1								http://sci-hub.cc/10.1016/j.placenta.2006.05.010/
-E-GEOD-4707	GSE4707GSM106249_Cy5					Healthy		32.9						29.2							2265.9	616.4		113.1	67.1								http://sci-hub.cc/10.1016/j.placenta.2006.05.010/
-E-GEOD-4707	GSE4707GSM106280_Cy3					Healthy		32.9						29.2							2265.9	616.4		113.1	67.1								http://sci-hub.cc/10.1016/j.placenta.2006.05.010/
-E-GEOD-4707	GSE4707GSM106280_Cy5					Severe Pre-Eclampsia		32.9						30.3							1533.7	277		170.6	105.7			2000					http://sci-hub.cc/10.1016/j.placenta.2006.05.010/
-E-GEOD-4707	GSE4707GSM106275_Cy5					Healthy		32.9						29.2							2265.9	616.4		113.1	67.1								http://sci-hub.cc/10.1016/j.placenta.2006.05.010/
-E-GEOD-4707	GSE4707GSM106275_Cy3					Healthy		32.9						29.2							2265.9	616.4		113.1	67.1								http://sci-hub.cc/10.1016/j.placenta.2006.05.010/
+Sample Name	Оrganism	Biological Specimen	Cells, Cultured	culture time	Diagnosis	Gestational Age	Average Gestational Age	Gestational Age Upper Bound	Gestational Age Lower Bound	Deviation Gestational Age	Gestational Age at Experiment	Maternal Age	Average Maternal Age	Parity	Labor Induction	Batch	Caesarean Section	Fetus Sex	Fetal Weight	Average Fetal Weight	Placenta Weight	Pregnancy Trimesters	Systolic Pressure	Diastolic Pressure	Systolic Pressure at < 20 week	Diastolic Pressure at < 20 week	Urine Protein Concentration	Pre-Eclampsia Onset	Biosource Provider	Continental Population Groups
+GSM1892024 1					Pre-Eclampsia																		140	90			300			
+GSM1892023 1					Pre-Eclampsia																		140	90			300			
+GSM1892022 1					Pre-Eclampsia																		140	90			300			
+GSM1892021 1					Pre-Eclampsia																		140	90			300			
+GSM1892020 1					Pre-Eclampsia																		140	90			300			
+GSM1892019 1					Pre-Eclampsia																		140	90			300			
+GSM1892018 1					Pre-Eclampsia																		140	90			300			
+GSM1892017 1					Pre-Eclampsia																		140	90			300			
+GSM1892016 1					Pre-Eclampsia																		140	90			300			
+GSM1892015 1					Pre-Eclampsia																		140	90			300			
+GSM1892014 1					Pre-Eclampsia																		140	90			300			
+GSM1892013 1					Pre-Eclampsia																		140	90			300			
+GSM1892012 1					Pre-Eclampsia																		140	90			300			
+GSM1892011 1					Pre-Eclampsia																		140	90			300			
+GSM1892010 1					Pre-Eclampsia																		140	90			300			
+GSM1892009 1					Pre-Eclampsia																		140	90			300			
+GSM1892008 1					Pre-Eclampsia																		140	90			300			
+GSM1892007 1					Healthy																									
+GSM1892006 1					Healthy																									
+GSM1892005 1					Healthy																									
+GSM1892004 1					Healthy																									
+GSM1892003 1					Healthy																									
+GSM1892002 1					Healthy																									
+GSM1892001 1					Healthy																									
+GSM1892000 1					Healthy																									
+GSM1891999 1					Healthy																									
+GSM1891998 1					Healthy																									
+GSM1891997 1					Healthy																									
+GSM1891996 1					Healthy																									
+GSM1891995 1					Healthy																									
+GSM1891994 1					Healthy																									
+GSM1891993 1					Healthy																									
+GSM1891992 1					Healthy																									
+GSM1891991 1					Pre-Eclampsia																		140	90			300			
+GSM1891990 1					Pre-Eclampsia																		140	90			300			
+GSM1891989 1					Healthy																									
+GSM871065 1					Fetal Growth Retardation									1.1 ± 1.6							329.8 ± 114.7									
+GSM871064 1					Healthy									2.4 ± 1.7							491.1 ± 141.3									
+GSM871063 1					Fetal Growth Retardation									1.1 ± 1.6							329.8 ± 114.7									
+GSM871062 1					Fetal Growth Retardation									1.1 ± 1.6							329.8 ± 114.7									
+GSM871061 1					Fetal Growth Retardation									1.1 ± 1.6							329.8 ± 114.7									
+GSM871060 1					Healthy									2.4 ± 1.7							491.1 ± 141.3									
+GSM871059 1					Healthy									2.4 ± 1.7							491.1 ± 141.3									
+GSM871058 1					Healthy									2.4 ± 1.7							491.1 ± 141.3									
+GSM871057 1					Fetal Growth Retardation									1.1 ± 1.6							329.8 ± 114.7									
+GSM871056 1					Healthy									2.4 ± 1.7							491.1 ± 141.3									
+GSM871055 1					Fetal Growth Retardation									1.1 ± 1.6							329.8 ± 114.7									
+GSM871054 1					Healthy									2.4 ± 1.7							491.1 ± 141.3									
+GSM871053 1					Fetal Growth Retardation									1.1 ± 1.6							329.8 ± 114.7									
+GSM871052 1					Healthy									2.4 ± 1.7							491.1 ± 141.3									
+GSM871051 1					Healthy									2.4 ± 1.7							491.1 ± 141.3									
+GSM871050 1					Pre-Eclampsia									0.4±  0.7							448.2 ± 237.8		140	90			300			
+GSM871049 1					Pre-Eclampsia									0.4 ± 0.7							448.2 ± 237.8		140	90			300			
+GSM871048 1					Fetal Growth Retardation									1.1 ± 1.6							329.8 ± 114.7									
+GSM871047 1					Pre-Eclampsia									0.4 ± 0.7							448.2 ± 237.8		140	90			300			
+GSM871046 1					Fetal Growth Retardation									1.1 ± 1.6							329.8 ± 114.7									
+GSM871139 1					Fetal Growth Retardation									1.1 ± 1.6							329.8 ± 114.7									
+GSM871138 1					Healthy									2.4 ± 1.7							491.1 ± 141.3									
+GSM871137 1					Pre-Eclampsia									0.4 ± 0.7							448.2 ± 237.8		140	90			300			
+GSM871136 1					Healthy									2.4 ± 1.7							491.1 ± 141.3									
+GSM871135 1					Fetal Growth Retardation									1.1 ± 1.6							329.8 ± 114.7									
+GSM871134 1					Healthy									2.4 ± 1.7							491.1 ± 141.3									
+GSM871133 1					Healthy									2.4 ± 1.7							491.1 ± 141.3									
+GSM871132 1					Fetal Growth Retardation									1.1 ± 1.6							329.8 ± 114.7									
+GSM871131 1					Pre-Eclampsia									0.4 ± 0.7							448.2 ± 237.8		140	90			300			
+GSM871130 1					Healthy									2.4 ± 1.7							491.1 ± 141.3									
+GSM871129 1					Fetal Growth Retardation									1.1 ± 1.6							329.8 ± 114.7									
+GSM871128 1					Pre-Eclampsia									0.4 ± 0.7							448.2 ± 237.8		140	90			300			
+GSM871127 1					Healthy									2.4 ± 1.7							491.1 ± 141.3									
+GSM871126 1					Pre-Eclampsia									0.4 ± 0.7							448.2 ± 237.8		140	90			300			
+GSM871125 1					Healthy									2.4 ± 1.7							491.1 ± 141.3									
+GSM871124 1					Fetal Growth Retardation									1.1 ± 1.6							329.8 ± 114.7									
+GSM871123 1					Healthy									2.4 ± 1.7							491.1 ± 141.3									
+GSM871122 1					Pre-Eclampsia									0.4 ± 0.7							448.2 ± 237.8		140	90			300			
+GSM871121 1					Fetal Growth Retardation									1.1 ± 1.6							329.8 ± 114.7									
+GSM871120 1					Fetal Growth Retardation									1.1 ± 1.6							329.8 ± 114.7									
+GSM871119 1					Healthy									2.4 ± 1.7							491.1 ± 141.3									
+GSM871118 1					Healthy									2.4 ± 1.7							491.1 ± 141.3									
+GSM871117 1					Pre-Eclampsia									0.4 ± 0.7							448.2 ± 237.8		140	90			300			
+GSM871116 1					Healthy									2.4 ± 1.7							491.1 ± 141.3									
+GSM871115 1					Healthy									2.4 ± 1.7							491.1 ± 141.3									
+GSM871114 1					Healthy									2.4 ± 1.7							491.1 ± 141.3									
+GSM871113 1					Fetal Growth Retardation									1.1 ± 1.6							329.8 ± 114.7									
+GSM871112 1					Pre-Eclampsia									0.4 ± 0.7							448.2 ± 237.8		140	90			300			
+GSM871111 1					Healthy									2.4 ± 1.7							491.1 ± 141.3									
+GSM871110 1					Fetal Growth Retardation									1.1 ± 1.6							329.8 ± 114.7									
+GSM871109 1					Fetal Growth Retardation									1.1 ± 1.6							329.8 ± 114.7									
+GSM871108 1					Healthy									2.4 ± 1.7							491.1 ± 141.3									
+GSM871107 1					Pre-Eclampsia									0.4 ± 0.7							448.2 ± 237.8		140	90			300			
+GSM871106 1					Fetal Growth Retardation									1.1 ± 1.6							329.8 ± 114.7									
+GSM871105 1					Fetal Growth Retardation									1.1 ± 1.6							329.8 ± 114.7									
+GSM871104 1					Healthy									2.4 ± 1.7							491.1 ± 141.3									
+GSM871103 1					Fetal Growth Retardation									1.1 ± 1.6							329.8 ± 114.7									
+GSM871102 1					Healthy									2.4 ± 1.7							491.1 ± 141.3									
+GSM871101 1					Healthy									2.4 ± 1.7							491.1 ± 141.3									
+GSM871100 1					Pre-Eclampsia									0.4 ± 0.7							448.2 ± 237.8		140	90			300			
+GSM871099 1					Healthy									2.4 ± 1.7							491.1 ± 141.3									
+GSM871098 1					Fetal Growth Retardation									1.1 ± 1.6							329.8 ± 114.7									
+GSM871097 1					Healthy									2.4 ± 1.7							491.1 ± 141.3									
+GSM871096 1					Pre-Eclampsia									0.4 ± 0.7							448.2 ± 237.8		140	90			300			
+GSM871095 1					Fetal Growth Retardation									1.1 ± 1.6							329.8 ± 114.7									
+GSM871094 1					Pre-Eclampsia									0.4 ± 0.7							448.2 ± 237.8		140	90			300			
+GSM871093 1					Healthy									2.4 ± 1.7							491.1 ± 141.3									
+GSM871092 1					Fetal Growth Retardation									1.1 ± 1.6							329.8 ± 114.7									
+GSM871091 1					Pre-Eclampsia									0.4 ± 0.7							448.2 ± 237.8		140	90			300			
+GSM871090 1					Healthy									2.4 ± 1.7							491.1 ± 141.3									
+GSM871089 1					Healthy									2.4 ± 1.7							491.1 ± 141.3									
+GSM871088 1					Fetal Growth Retardation									1.1 ± 1.6							329.8 ± 114.7									
+GSM871087 1					Fetal Growth Retardation									1.1 ± 1.6							329.8 ± 114.7									
+GSM871086 1					Healthy									2.4 ± 1.7							491.1 ± 141.3									
+GSM871085 1					Fetal Growth Retardation									1.1 ± 1.6							329.8 ± 114.7									
+GSM871084 1					Fetal Growth Retardation									1.1 ± 1.6							329.8 ± 114.7									
+GSM871083 1					Healthy									2.4 ± 1.7							491.1 ± 141.3									
+GSM871082 1					Fetal Growth Retardation									1.1 ± 1.6							329.8 ± 114.7									
+GSM871081 1					Pre-Eclampsia									0.4 ± 0.7							448.2 ± 237.8		140	90			300			
+GSM871080 1					Pre-Eclampsia									0.4 ± 0.7							448.2 ± 237.8		140	90			300			
+GSM871079 1					Fetal Growth Retardation									1.1 ± 1.6							329.8 ± 114.7									
+GSM871078 1					Fetal Growth Retardation									1.1 ± 1.6							329.8 ± 114.7									
+GSM871077 1					Healthy									2.4 ± 1.7							491.1 ± 141.3									
+GSM871076 1					Pre-Eclampsia									0.4 ± 0.7							448.2 ± 237.8		140	90			300			
+GSM871075 1					Healthy									2.4 ± 1.7							491.1 ± 141.3									
+GSM871074 1					Healthy									2.4 ± 1.7							491.1 ± 141.3									
+GSM871073 1					Fetal Growth Retardation									1.1 ± 1.6							329.8 ± 114.7									
+GSM871072 1					Fetal Growth Retardation									1.1 ± 1.6							329.8 ± 114.7									
+GSM871071 1					Healthy									2.4 ± 1.7							491.1 ± 141.3									
+GSM871070 1					Pre-Eclampsia									0.4 ± 0.7							448.2 ± 237.8		140	90			300			
+GSM871069 1					Fetal Growth Retardation									1.1 ± 1.6							329.8 ± 114.7									
+GSM871068 1					Healthy									2.4 ± 1.7							491.1 ± 141.3									
+GSM871067 1					Healthy									2.4 ± 1.7							491.1 ± 141.3									
+GSM871066 1					Healthy									2.4 ± 1.7							491.1 ± 141.3									
+GSM1319987 1					Pre-Eclampsia												TRUE			1195				105			318			
+GSM1319986 1					Pre-Eclampsia												FALSE			1195				105			318			
+GSM1319985 1					Healthy												FALSE			1740				75						
+GSM1319984 1					Healthy												TRUE			1740				75						
+GSM1319983 1					Pre-Eclampsia and HELLP												TRUE			1195				105			318			
+GSM1319982 1					Healthy												TRUE			1740				75						
+GSM1319981 1					Pre-Eclampsia and HELLP												TRUE			1195				105			318			
+GSM1319980 1					Pre-Eclampsia and HELLP												FALSE			1195				105			318			
+GSM1319979 1					Healthy												FALSE			1740				75						
+GSM1319978 1					Pre-Eclampsia and HELLP												TRUE			1195				105			318			
+GSM1319977 1					Pre-Eclampsia												TRUE			1195				105			318			
+GSM1319976 1					Healthy												TRUE			1740				75						
+GSM1319975 1					Pre-Eclampsia												TRUE			1195				105			318			
+GSM1319974 1					Pre-Eclampsia and HELLP												TRUE			1195				105			318			
+GSM1319973 1					Healthy												TRUE			1740				75						
+GSM1319972 1					Healthy												TRUE			1740				75						
+GSM1319971 1					Healthy												TRUE			1740				75						
+GSM1319970 1					Healthy												TRUE			1740				75						
+GSM1319969 1					Healthy												TRUE			1740				75						
+GSM1319968 1					Healthy												FALSE			1740				75						
+GSM1319967 1					Pre-Eclampsia and HELLP												FALSE			1195				105			318			
+GSM1319966 1					Pre-Eclampsia												TRUE			1195				105			318			
+GSM1319965 1					Pre-Eclampsia and HELLP												TRUE			1195				105			318			
+GSM1319964 1					Healthy																			75						
+GSM1177811 1					Severe Pre-Eclampsia															1900			160	110			1000			
+GSM1177810 1					Healthy															3240										
+GSM1177809 1					Healthy															3240										
+GSM1177808 1					Severe Pre-Eclampsia															1900			160	110			1000			
+GSM1177807 1					Severe Pre-Eclampsia															1900			160	110			1000			
+GSM1177806 1					Pre-Eclampsia															1805			140	90			380			
+GSM1177805 1					Healthy															3240										
+GSM1177804 1					Healthy															3240										
+GSM1177803 1					Severe Pre-Eclampsia															1900			160	110			1000			
+GSM1177802 1					Healthy															3240										
+GSM1177801 1					Healthy															3240										
+GSM1177800 1					Healthy															3240										
+GSM1177799 1					Healthy															3240										
+GSM1177798 1					Healthy															3240										
+GSM1177797 1					Pre-Eclampsia															1805			140	90			380			
+GSM1177796 1					Severe Pre-Eclampsia															1900			160	110			1000			
+GSM1177795 1					Healthy															3240										
+GSM1177794 1					Severe Pre-Eclampsia															1900			160	110			1000			
+GSM1177793 1					Healthy															3240										
+GSM1177792 1					Severe Pre-Eclampsia															1900			160	110			1000			
+GSM1177791 1					Pre-Eclampsia															1805			140	90			380			
+GSM1177790 1					Severe Pre-Eclampsia															1900			160	110			1000			
+GSM1177789 1					Healthy															3240										
+GSM1177788 1					Pre-Eclampsia															1805			140	90			380			
+GSM1177787 1					Severe Pre-Eclampsia															1900			160	110			1000			
+GSM1177786 1					Pre-Eclampsia																									
+GSM1177785 1					Severe Pre-Eclampsia															1900			160	110			1000			
+GSM1177784 1					Healthy															3240										
+GSM1177783 1					Healthy															3240										
+GSM1177782 1					Healthy															3240										
+GSM1177781 1					Severe Pre-Eclampsia															1900			160	110			1000			
+GSM1177780 1					Healthy															3240										
+GSM1177779 1					Severe Pre-Eclampsia															1900			160	110			1000			
+GSM1177778 1					Healthy															3240										
+GSM1177777 1					Healthy															3240										
+GSM1177776 1					Severe Pre-Eclampsia															1900			160	110			1000			
+GSM1089244 1					Healthy								31.5																	
+GSM1089243 1					Healthy								31.5																	
+GSM1089242 1					Healthy								31.5																	
+GSM1089241 1					Healthy								31.5																	
+GSM1089240 1					Healthy								31.5																	
+GSM1089239 1					Healthy								31.5																	
+GSM1089238 1					Healthy								31.5																	
+GSM1089237 1					Healthy								31.5																	
+GSM1089236 1					Pre-Eclampsia								33.5										140	90			300			
+GSM1089235 1					Pre-Eclampsia and FGR								33.5										140	90			300			
+GSM1089234 1					Pre-Eclampsia and FGR								33.5										140	90			300			
+GSM1089233 1					Pre-Eclampsia and FGR								33.5										140	90			300			
+GSM1089232 1					Pre-Eclampsia								33.5										140	90			300			
+GSM1089231 1					Pre-Eclampsia and FGR								33.5										140	90			300			
+GSM1089230 1					Pre-Eclampsia and FGR								33.5										140	90			300			
+GSM1089229 1					Pre-Eclampsia and FGR								33.5										140	90			300			
+GSM1146438 2					Healthy								30.6					male		1886			121	68						
+GSM1146438 1					Pre-Eclampsia								26.6							1482			168	113			6500			
+GSM1146437 2					Healthy								30.6					male		1886			121	68						
+GSM1146437 1					Pre-Eclampsia								26.6							1482			168	113			6500			
+GSM1146436 1					Pre-Eclampsia								26.6							1482			168	113			6500			
+GSM1146436 2					Healthy								30.6					male		1886			121	68						
+GSM1146435 2					Healthy								30.6					male		1886			121	68						
+GSM1146435 1					Pre-Eclampsia								26.6							1482			168	113			6500			
+GSM1146434 1					Pre-Eclampsia								26.6							1482			168	113			6500			
+GSM1146434 2					Healthy								30.6					male		1886			121	68						
+D01					Healthy		39						31							3619			116	70						
+D02					Healthy		39						31							3619			116	70						
+D03					Healthy		39						31							3619			116	70						
+D04					Healthy		39						31							3619			116	70						
+D05					Healthy		39						31							3619			116	70						
+D06					Healthy		39						31							3619			116	70						
+D07					Healthy		39						31							3619			116	70						
+D09					Healthy		39						31							3619			116	70						
+D10					Healthy		39						31							3619			116	70						
+D11					Healthy		39						31							3619			116	70						
+D12					Fetal Growth Retardation		32						34							1225			128	74						
+D13					Fetal Growth Retardation		32						34							1225			128	74						
+D14					Fetal Growth Retardation		32						34							1225			128	74						
+D16					Fetal Growth Retardation		32						34							1225			128	74						
+D17					Pre-Eclampsia		35						30							2364			153	95						
+D18					Pre-Eclampsia		35						30							2364			153	95						
+D19					Pre-Eclampsia		35						30							2364			153	95						
+D20					Pre-Eclampsia		35						30							2364			153	95						
+D21					Pre-Eclampsia		35						30							2364			153	95						
+D22					Pre-Eclampsia		35						30							2364			153	95						
+D23					Pre-Eclampsia and FGR		30						31							1118			151	97						
+D24					Pre-Eclampsia and FGR		30						31							1118			151	97						
+D25					Pre-Eclampsia and FGR		30						31							1118			151	97						
+D26					Pre-Eclampsia and FGR		30						31							1118			151	97						
+D28					Pre-Eclampsia and FGR		30						31							1118			151	97						
+D29					Pre-Eclampsia and FGR		30						31							1118			151	97						
+D30					Pre-Eclampsia and FGR		30						31							1118			151	97						
+S01					Pre-Eclampsia		35						30							2364			153	95						
+S02					Pre-Eclampsia		35						30							2364			153	95						
+S03					Pre-Eclampsia		35						30							2364			153	95						
+S05					Pre-Eclampsia		35						30							2364			153	95						
+S07					Pre-Eclampsia and FGR		30						31							1118			151	97						
+S08					Pre-Eclampsia and FGR		30						31							1118			151	97						
+S09					Pre-Eclampsia and FGR		30						31							1118			151	97						
+S10					Pre-Eclampsia and FGR		30						31							1118			151	97						
+S12					Pre-Eclampsia and FGR		30						31							1118			151	97						
+S14					Pre-Eclampsia and FGR		30						31							1118			151	97						
+S15					Pre-Eclampsia and FGR		30						31							1118			151	97						
+S16					Pre-Eclampsia and FGR		30						31							1118			151	97						
+S17					Pre-Eclampsia and FGR		30						31							1118			151	97						
+S19					Pre-Eclampsia and FGR		30						31							1118			151	97						
+S20					Fetal Growth Retardation		32						34							1225			128	74						
+S21					Fetal Growth Retardation		32						34							1225			128	74						
+S23					Fetal Growth Retardation		32						34							1225			128	74						
+S25					Healthy		39						31							3619			116	70						
+S26					Healthy		39						31							3619			116	70						
+S27					Healthy		39						31							3619			116	70						
+S29					Healthy		39						31							3619			116	70						
+S30					Pre-Eclampsia and FGR		30						31							1118			151	97						
+S32					Healthy		39						31							3619			116	70						
+S33					Healthy		39						31							3619			116	70						
+S34					Healthy		39						31							3619			116	70						
+S35					Healthy		39						31							3619			116	70						
+S37					Healthy		39						31							3619			116	70						
+S38					Healthy		39						31							3619			116	70						
+S39					Healthy		39						31							3619			116	70						
+S40					Healthy		39						31							3619			116	70						
+S41					Healthy		39						31							3619			116	70						
+S42					Healthy		39						31							3619			116	70						
+S43					Healthy		39						31							3619			116	70						
+S44					Pre-Eclampsia		35						30							2364			153	95						
+S45					Healthy		39						31							3619			116	70						
+S46					Healthy		39						31							3619			116	70						
+S47					Healthy		39						31							3619			116	70						
+S48					Healthy		39						31							3619			116	70						
+S49					Healthy		39						31							3619			116	70						
+S51					Healthy		39						31							3619			116	70						
+S52					Healthy		39						31							3619			116	70						
+S54					Healthy		39						31							3619			116	70						
+S55					Healthy		39						31							3619			116	70						
+S56					Healthy		39						31							3619			116	70						
+S57					Healthy		39						31							3619			116	70						
+S58					Pre-Eclampsia and FGR		30						31							1118			151	97						
+S59					Healthy		39						31							3619			116	70						
+S60					Healthy		39						31							3619			116	70						
+S61					Healthy		39						31							3619			116	70						
+S62					Healthy		39						31							3619			116	70						
+S63					Healthy		39						31							3619			116	70						
+T01					Healthy		39						31							3619			116	70						
+T02					Healthy		39						31							3619			116	70						
+T03					Healthy		39						31							3619			116	70						
+T04					Healthy		39						31							3619			116	70						
+T05					Healthy		39						31							3619			116	70						
+T06					Healthy		39						31							3619			116	70						
+T07					Healthy		39						31							3619			116	70						
+T09					Healthy		39						31							3619			116	70						
+T10					Healthy		39						31							3619			116	70						
+T11					Healthy		39						31							3619			116	70						
+T12					Healthy		39						31							3619			116	70						
+T13					Healthy		39						31							3619			116	70						
+T16					Healthy		39						31							3619			116	70						
+T19					Healthy		39						31							3619			116	70						
+T21					Healthy		39						31							3619			116	70						
+T22					Healthy		39						31							3619			116	70						
+T23					Healthy		39						31							3619			116	70						
+T24					Fetal Growth Retardation		32						34							1225			128	74						
+T25					Fetal Growth Retardation		32						34							1225			128	74						
+T28					Pre-Eclampsia		35						30							2364			153	95						
+T30					Pre-Eclampsia		35						30							2364			153	95						
+T32					Pre-Eclampsia and FGR		30						31							1118			151	97						
+T37					Pre-Eclampsia and FGR		30						31							1118			151	97						
+T38					Pre-Eclampsia and FGR		30						31							1118			151	97						
+T39					Pre-Eclampsia and FGR		30						31							1118			151	97						
+T40					Pre-Eclampsia and FGR		30						31							1118			151	97						
+GSM367826 1					Pre-Eclampsia		32.1						30.7										140	90			300			
+GSM367825 1					Pre-Eclampsia		32.1						30.7										140	90			300			
+GSM367824 1					Pre-Eclampsia		32.1						30.7										140	90			300			
+GSM367823 1					Pre-Eclampsia		32.1						30.7										140	90			300			
+GSM367822 1					Pre-Eclampsia		32.1						30.7										140	90			300			
+GSM367821 1					Pre-Eclampsia		32.1						30.7										140	90			300			
+GSM367820 1					Pre-Eclampsia		32.1						30.7										140	90			300			
+GSM367819 1					Pre-Eclampsia		32.1						30.7										140	90			300			
+GSM367818 1					Pre-Eclampsia		32.1						30.7										140	90			300			
+GSM367817 1					Pre-Eclampsia		32.1						30.7										140	90			300			
+GSM367816 1					Pre-Eclampsia		32.1						30.7										140	90			300			
+GSM367815 1					Pre-Eclampsia		32.1						30.7										140	90			300			
+GSM367814 1					Healthy		31						30.2																	
+GSM367813 1					Healthy		31						30.2																	
+GSM367812 1					Healthy		31						30.2																	
+GSM367811 1					Healthy		31						30.2																	
+GSM367810 1					Healthy		31						30.2																	
+GSM367809 1					Healthy		31						30.2																	
+GSM367808 1					Healthy		31						30.2																	
+GSM367807 1					Healthy		31						30.2																	
+GSM367806 1					Healthy		31						30.2																	
+GSM367805 1					Healthy		31						30.2																	
+GSM367804 1					Healthy		31						30.2																	
+GSM367803 1					Pre-Eclampsia		32.1						30.7										140	90			300			
+GSM367802 1					Pre-Eclampsia		32.1						30.7										140	90			300			
+GSM367801 1					Pre-Eclampsia		32.1						30.7										140	90			300			
+GSM367800 1					Pre-Eclampsia		32.1						30.7										140	90			300			
+GSM367799 1					Pre-Eclampsia		32.1						30.7										140	90			300			
+GSM367798 1					Pre-Eclampsia		32.1						30.7										140	90			300			
+GSM367797 1					Pre-Eclampsia		32.1						30.7										140	90			300			
+GSM367796 1					Pre-Eclampsia		32.1						30.7										140	90			300			
+GSM367795 1					Pre-Eclampsia		32.1						30.7										140	90			300			
+GSM367794 1					Pre-Eclampsia		32.1						30.7										140	90			300			
+GSM367793 1					Pre-Eclampsia		32.1						30.7										140	90			300			
+GSM367792 1					Pre-Eclampsia		32.1						30.7										140	90			300			
+GSM367791 1					Healthy		31						30.2																	
+GSM367790 1					Healthy		31						30.2																	
+GSM367789 1					Healthy		31						30.2																	
+GSM367788 1					Healthy		31						30.2																	
+GSM367787 1					Healthy		31						30.2																	
+GSM367786 1					Healthy		31						30.2																	
+GSM367785 1					Healthy		31						30.2																	
+GSM367784 1					Healthy		31						30.2																	
+GSM367783 1					Healthy		31						30.2																	
+GSM367782 1					Healthy		31						30.2																	
+GSM367781 1					Healthy		31						30.2																	
+GSM307201 1					Fetal Growth Retardation								30.13								293									
+GSM307200 1					Fetal Growth Retardation								30.13								293									
+GSM307199 1					Fetal Growth Retardation								30.13								293									
+GSM307198 1					Fetal Growth Retardation								30.13								293									
+GSM307197 1					Fetal Growth Retardation								30.13								293									
+GSM307196 1					Fetal Growth Retardation								30.13								293									
+GSM307195 1					Fetal Growth Retardation								30.13								293									
+GSM307194 1					Fetal Growth Retardation								30.13								293									
+GSM307193 1					Healthy								32.25								730									
+GSM307192 1					Healthy								32.25								730									
+GSM307191 1					Healthy								32.25								730									
+GSM307190 1					Healthy								32.25								730									
+GSM307189 1					Healthy								32.25								730									
+GSM307188 1					Healthy								32.25								730									
+GSM307187 1					Healthy								32.25								730									
+GSM307186 1					Healthy								32.25								730									
+GSE4707GSM106285_Cy5					Severe Pre-Eclampsia		32.9						30.3							1533.7	277		170.6	105.7			2000			
+GSE4707GSM106285_Cy3					Healthy		32.9						29.2							2265.9	616.4		113.1	67.1						
+GSE4707GSM106282_Cy3					Healthy		32.9						29.2							2265.9	616.4		113.1	67.1						
+GSE4707GSM106282_Cy5					Severe Pre-Eclampsia		32.9						30.3							1533.7	277		170.6	105.7			2000			
+GSE4707GSM106283_Cy3					Healthy		32.9						29.2							2265.9	616.4		113.1	67.1						
+GSE4707GSM106283_Cy5					Severe Pre-Eclampsia		32.9						30.3							1533.7	277		170.6	105.7			2000			
+GSE4707GSM106284_Cy3					Healthy		32.9						29.2							2265.9	616.4		113.1	67.1						
+GSE4707GSM106284_Cy5					Severe Pre-Eclampsia		32.9						30.3							1533.7	277		170.6	105.7			2000			
+GSE4707GSM106274_Cy5					Healthy		32.9						29.2							2265.9	616.4		113.1	67.1						
+GSE4707GSM106274_Cy3					Healthy		32.9						29.2							2265.9	616.4		113.1	67.1						
+GSE4707GSM106278_Cy5					Severe Pre-Eclampsia		32.9						30.3							1533.7	277		170.6	105.7			2000			
+GSE4707GSM106278_Cy3					Healthy		32.9						29.2							2265.9	616.4		113.1	67.1						
+GSE4707GSM106279_Cy5					Severe Pre-Eclampsia		32.9						30.3							1533.7	277		170.6	105.7			2000			
+GSE4707GSM106279_Cy3					Healthy		32.9						29.2							2265.9	616.4		113.1	67.1						
+GSE4707GSM106250_Cy5					Healthy		32.9						29.2							2265.9	616.4		113.1	67.1						
+GSE4707GSM106250_Cy3					Healthy		32.9						29.2							2265.9	616.4		113.1	67.1						
+GSE4707GSM106277_Cy5					Severe Pre-Eclampsia		32.9						30.3							1533.7	277		170.6	105.7			2000			
+GSE4707GSM106277_Cy3					Healthy		32.9						29.2							2265.9	616.4		113.1	67.1						
+GSE4707GSM106281_Cy5					Severe Pre-Eclampsia		32.9						30.3							1533.7	277		170.6	105.7			2000			
+GSE4707GSM106281_Cy3					Healthy		32.9						29.2							2265.9	616.4		113.1	67.1						
+GSE4707GSM106276_Cy3					Healthy		32.9						29.2							2265.9	616.4		113.1	67.1						
+GSE4707GSM106276_Cy5					Severe Pre-Eclampsia		32.9						30.3							1533.7	277		170.6	105.7			2000			
+GSE4707GSM106249_Cy3					Healthy		32.9						29.2							2265.9	616.4		113.1	67.1						
+GSE4707GSM106249_Cy5					Healthy		32.9						29.2							2265.9	616.4		113.1	67.1						
+GSE4707GSM106280_Cy3					Healthy		32.9						29.2							2265.9	616.4		113.1	67.1						
+GSE4707GSM106280_Cy5					Severe Pre-Eclampsia		32.9						30.3							1533.7	277		170.6	105.7			2000			
+GSE4707GSM106275_Cy5					Healthy		32.9						29.2							2265.9	616.4		113.1	67.1						
+GSE4707GSM106275_Cy3					Healthy		32.9						29.2							2265.9	616.4		113.1	67.1						

@@ -1,295 +1,192 @@
-GSM1892024 1	Experiment	E-GEOD-73374
 GSM1892024 1	Sample Name	GSM1892024 1
 GSM1892024 1	Diagnosis	Pre-Eclampsia
 GSM1892024 1	Systolic Pressure	140
 GSM1892024 1	Diastolic Pressure	90
 GSM1892024 1	Urine Protein Concentration	300
-GSM1892024 1	reference 	https://www.ncbi.nlm.nih.gov/pmc/articles/PMC4624949/
-GSM1892023 1	Experiment	E-GEOD-73374
 GSM1892023 1	Sample Name	GSM1892023 1
 GSM1892023 1	Diagnosis	Pre-Eclampsia
 GSM1892023 1	Systolic Pressure	140
 GSM1892023 1	Diastolic Pressure	90
 GSM1892023 1	Urine Protein Concentration	300
-GSM1892023 1	reference 	https://www.ncbi.nlm.nih.gov/pmc/articles/PMC4624949/
-GSM1892022 1	Experiment	E-GEOD-73374
 GSM1892022 1	Sample Name	GSM1892022 1
 GSM1892022 1	Diagnosis	Pre-Eclampsia
 GSM1892022 1	Systolic Pressure	140
 GSM1892022 1	Diastolic Pressure	90
 GSM1892022 1	Urine Protein Concentration	300
-GSM1892022 1	reference 	https://www.ncbi.nlm.nih.gov/pmc/articles/PMC4624949/
-GSM1892021 1	Experiment	E-GEOD-73374
 GSM1892021 1	Sample Name	GSM1892021 1
 GSM1892021 1	Diagnosis	Pre-Eclampsia
 GSM1892021 1	Systolic Pressure	140
 GSM1892021 1	Diastolic Pressure	90
 GSM1892021 1	Urine Protein Concentration	300
-GSM1892021 1	reference 	https://www.ncbi.nlm.nih.gov/pmc/articles/PMC4624949/
-GSM1892020 1	Experiment	E-GEOD-73374
 GSM1892020 1	Sample Name	GSM1892020 1
 GSM1892020 1	Diagnosis	Pre-Eclampsia
 GSM1892020 1	Systolic Pressure	140
 GSM1892020 1	Diastolic Pressure	90
 GSM1892020 1	Urine Protein Concentration	300
-GSM1892020 1	reference 	https://www.ncbi.nlm.nih.gov/pmc/articles/PMC4624949/
-GSM1892019 1	Experiment	E-GEOD-73374
 GSM1892019 1	Sample Name	GSM1892019 1
 GSM1892019 1	Diagnosis	Pre-Eclampsia
 GSM1892019 1	Systolic Pressure	140
 GSM1892019 1	Diastolic Pressure	90
 GSM1892019 1	Urine Protein Concentration	300
-GSM1892019 1	reference 	https://www.ncbi.nlm.nih.gov/pmc/articles/PMC4624949/
-GSM1892018 1	Experiment	E-GEOD-73374
 GSM1892018 1	Sample Name	GSM1892018 1
 GSM1892018 1	Diagnosis	Pre-Eclampsia
 GSM1892018 1	Systolic Pressure	140
 GSM1892018 1	Diastolic Pressure	90
 GSM1892018 1	Urine Protein Concentration	300
-GSM1892018 1	reference 	https://www.ncbi.nlm.nih.gov/pmc/articles/PMC4624949/
-GSM1892017 1	Experiment	E-GEOD-73374
 GSM1892017 1	Sample Name	GSM1892017 1
 GSM1892017 1	Diagnosis	Pre-Eclampsia
 GSM1892017 1	Systolic Pressure	140
 GSM1892017 1	Diastolic Pressure	90
 GSM1892017 1	Urine Protein Concentration	300
-GSM1892017 1	reference 	https://www.ncbi.nlm.nih.gov/pmc/articles/PMC4624949/
-GSM1892016 1	Experiment	E-GEOD-73374
 GSM1892016 1	Sample Name	GSM1892016 1
 GSM1892016 1	Diagnosis	Pre-Eclampsia
 GSM1892016 1	Systolic Pressure	140
 GSM1892016 1	Diastolic Pressure	90
 GSM1892016 1	Urine Protein Concentration	300
-GSM1892016 1	reference 	https://www.ncbi.nlm.nih.gov/pmc/articles/PMC4624949/
-GSM1892015 1	Experiment	E-GEOD-73374
 GSM1892015 1	Sample Name	GSM1892015 1
 GSM1892015 1	Diagnosis	Pre-Eclampsia
 GSM1892015 1	Systolic Pressure	140
 GSM1892015 1	Diastolic Pressure	90
 GSM1892015 1	Urine Protein Concentration	300
-GSM1892015 1	reference 	https://www.ncbi.nlm.nih.gov/pmc/articles/PMC4624949/
-GSM1892014 1	Experiment	E-GEOD-73374
 GSM1892014 1	Sample Name	GSM1892014 1
 GSM1892014 1	Diagnosis	Pre-Eclampsia
 GSM1892014 1	Systolic Pressure	140
 GSM1892014 1	Diastolic Pressure	90
 GSM1892014 1	Urine Protein Concentration	300
-GSM1892014 1	reference 	https://www.ncbi.nlm.nih.gov/pmc/articles/PMC4624949/
-GSM1892013 1	Experiment	E-GEOD-73374
 GSM1892013 1	Sample Name	GSM1892013 1
 GSM1892013 1	Diagnosis	Pre-Eclampsia
 GSM1892013 1	Systolic Pressure	140
 GSM1892013 1	Diastolic Pressure	90
 GSM1892013 1	Urine Protein Concentration	300
-GSM1892013 1	reference 	https://www.ncbi.nlm.nih.gov/pmc/articles/PMC4624949/
-GSM1892012 1	Experiment	E-GEOD-73374
 GSM1892012 1	Sample Name	GSM1892012 1
 GSM1892012 1	Diagnosis	Pre-Eclampsia
 GSM1892012 1	Systolic Pressure	140
 GSM1892012 1	Diastolic Pressure	90
 GSM1892012 1	Urine Protein Concentration	300
-GSM1892012 1	reference 	https://www.ncbi.nlm.nih.gov/pmc/articles/PMC4624949/
-GSM1892011 1	Experiment	E-GEOD-73374
 GSM1892011 1	Sample Name	GSM1892011 1
 GSM1892011 1	Diagnosis	Pre-Eclampsia
 GSM1892011 1	Systolic Pressure	140
 GSM1892011 1	Diastolic Pressure	90
 GSM1892011 1	Urine Protein Concentration	300
-GSM1892011 1	reference 	https://www.ncbi.nlm.nih.gov/pmc/articles/PMC4624949/
-GSM1892010 1	Experiment	E-GEOD-73374
 GSM1892010 1	Sample Name	GSM1892010 1
 GSM1892010 1	Diagnosis	Pre-Eclampsia
 GSM1892010 1	Systolic Pressure	140
 GSM1892010 1	Diastolic Pressure	90
 GSM1892010 1	Urine Protein Concentration	300
-GSM1892010 1	reference 	https://www.ncbi.nlm.nih.gov/pmc/articles/PMC4624949/
-GSM1892009 1	Experiment	E-GEOD-73374
 GSM1892009 1	Sample Name	GSM1892009 1
 GSM1892009 1	Diagnosis	Pre-Eclampsia
 GSM1892009 1	Systolic Pressure	140
 GSM1892009 1	Diastolic Pressure	90
 GSM1892009 1	Urine Protein Concentration	300
-GSM1892009 1	reference 	https://www.ncbi.nlm.nih.gov/pmc/articles/PMC4624949/
-GSM1892008 1	Experiment	E-GEOD-73374
 GSM1892008 1	Sample Name	GSM1892008 1
 GSM1892008 1	Diagnosis	Pre-Eclampsia
 GSM1892008 1	Systolic Pressure	140
 GSM1892008 1	Diastolic Pressure	90
 GSM1892008 1	Urine Protein Concentration	300
-GSM1892008 1	reference 	https://www.ncbi.nlm.nih.gov/pmc/articles/PMC4624949/
-GSM1892007 1	Experiment	E-GEOD-73374
 GSM1892007 1	Sample Name	GSM1892007 1
 GSM1892007 1	Diagnosis	Healthy
-GSM1892007 1	reference 	https://www.ncbi.nlm.nih.gov/pmc/articles/PMC4624949/
-GSM1892006 1	Experiment	E-GEOD-73374
 GSM1892006 1	Sample Name	GSM1892006 1
 GSM1892006 1	Diagnosis	Healthy
-GSM1892006 1	reference 	https://www.ncbi.nlm.nih.gov/pmc/articles/PMC4624949/
-GSM1892005 1	Experiment	E-GEOD-73374
 GSM1892005 1	Sample Name	GSM1892005 1
 GSM1892005 1	Diagnosis	Healthy
-GSM1892005 1	reference 	https://www.ncbi.nlm.nih.gov/pmc/articles/PMC4624949/
-GSM1892004 1	Experiment	E-GEOD-73374
 GSM1892004 1	Sample Name	GSM1892004 1
 GSM1892004 1	Diagnosis	Healthy
-GSM1892004 1	reference 	https://www.ncbi.nlm.nih.gov/pmc/articles/PMC4624949/
-GSM1892003 1	Experiment	E-GEOD-73374
 GSM1892003 1	Sample Name	GSM1892003 1
 GSM1892003 1	Diagnosis	Healthy
-GSM1892003 1	reference 	https://www.ncbi.nlm.nih.gov/pmc/articles/PMC4624949/
-GSM1892002 1	Experiment	E-GEOD-73374
 GSM1892002 1	Sample Name	GSM1892002 1
 GSM1892002 1	Diagnosis	Healthy
-GSM1892002 1	reference 	https://www.ncbi.nlm.nih.gov/pmc/articles/PMC4624949/
-GSM1892001 1	Experiment	E-GEOD-73374
 GSM1892001 1	Sample Name	GSM1892001 1
 GSM1892001 1	Diagnosis	Healthy
-GSM1892001 1	reference 	https://www.ncbi.nlm.nih.gov/pmc/articles/PMC4624949/
-GSM1892000 1	Experiment	E-GEOD-73374
 GSM1892000 1	Sample Name	GSM1892000 1
 GSM1892000 1	Diagnosis	Healthy
-GSM1892000 1	reference 	https://www.ncbi.nlm.nih.gov/pmc/articles/PMC4624949/
-GSM1891999 1	Experiment	E-GEOD-73374
 GSM1891999 1	Sample Name	GSM1891999 1
 GSM1891999 1	Diagnosis	Healthy
-GSM1891999 1	reference 	https://www.ncbi.nlm.nih.gov/pmc/articles/PMC4624949/
-GSM1891998 1	Experiment	E-GEOD-73374
 GSM1891998 1	Sample Name	GSM1891998 1
 GSM1891998 1	Diagnosis	Healthy
-GSM1891998 1	reference 	https://www.ncbi.nlm.nih.gov/pmc/articles/PMC4624949/
-GSM1891997 1	Experiment	E-GEOD-73374
 GSM1891997 1	Sample Name	GSM1891997 1
 GSM1891997 1	Diagnosis	Healthy
-GSM1891997 1	reference 	https://www.ncbi.nlm.nih.gov/pmc/articles/PMC4624949/
-GSM1891996 1	Experiment	E-GEOD-73374
 GSM1891996 1	Sample Name	GSM1891996 1
 GSM1891996 1	Diagnosis	Healthy
-GSM1891996 1	reference 	https://www.ncbi.nlm.nih.gov/pmc/articles/PMC4624949/
-GSM1891995 1	Experiment	E-GEOD-73374
 GSM1891995 1	Sample Name	GSM1891995 1
 GSM1891995 1	Diagnosis	Healthy
-GSM1891995 1	reference 	https://www.ncbi.nlm.nih.gov/pmc/articles/PMC4624949/
-GSM1891994 1	Experiment	E-GEOD-73374
 GSM1891994 1	Sample Name	GSM1891994 1
 GSM1891994 1	Diagnosis	Healthy
-GSM1891994 1	reference 	https://www.ncbi.nlm.nih.gov/pmc/articles/PMC4624949/
-GSM1891993 1	Experiment	E-GEOD-73374
 GSM1891993 1	Sample Name	GSM1891993 1
 GSM1891993 1	Diagnosis	Healthy
-GSM1891993 1	reference 	https://www.ncbi.nlm.nih.gov/pmc/articles/PMC4624949/
-GSM1891992 1	Experiment	E-GEOD-73374
 GSM1891992 1	Sample Name	GSM1891992 1
 GSM1891992 1	Diagnosis	Healthy
-GSM1891992 1	reference 	https://www.ncbi.nlm.nih.gov/pmc/articles/PMC4624949/
-GSM1891991 1	Experiment	E-GEOD-73374
 GSM1891991 1	Sample Name	GSM1891991 1
 GSM1891991 1	Diagnosis	Pre-Eclampsia
 GSM1891991 1	Systolic Pressure	140
 GSM1891991 1	Diastolic Pressure	90
 GSM1891991 1	Urine Protein Concentration	300
-GSM1891991 1	reference 	https://www.ncbi.nlm.nih.gov/pmc/articles/PMC4624949/
-GSM1891990 1	Experiment	E-GEOD-73374
 GSM1891990 1	Sample Name	GSM1891990 1
 GSM1891990 1	Diagnosis	Pre-Eclampsia
 GSM1891990 1	Systolic Pressure	140
 GSM1891990 1	Diastolic Pressure	90
 GSM1891990 1	Urine Protein Concentration	300
-GSM1891990 1	reference 	https://www.ncbi.nlm.nih.gov/pmc/articles/PMC4624949/
-GSM1891989 1	Experiment	E-GEOD-73374
 GSM1891989 1	Sample Name	GSM1891989 1
 GSM1891989 1	Diagnosis	Healthy
-GSM1891989 1	reference 	https://www.ncbi.nlm.nih.gov/pmc/articles/PMC4624949/
-GSM871065 1	Experiment	E-GEOD-35574
 GSM871065 1	Sample Name	GSM871065 1
 GSM871065 1	Diagnosis	Fetal Growth Retardation
 GSM871065 1	Parity	1.1 ± 1.6
 GSM871065 1	Placenta Weight	329.8 ± 114.7
-GSM871065 1	reference 	https://www.ncbi.nlm.nih.gov/pmc/articles/PMC3677766/
-GSM871064 1	Experiment	E-GEOD-35574
 GSM871064 1	Sample Name	GSM871064 1
 GSM871064 1	Diagnosis	Healthy
 GSM871064 1	Parity	2.4 ± 1.7
 GSM871064 1	Placenta Weight	491.1 ± 141.3
-GSM871064 1	reference 	https://www.ncbi.nlm.nih.gov/pmc/articles/PMC3677766/
-GSM871063 1	Experiment	E-GEOD-35574
 GSM871063 1	Sample Name	GSM871063 1
 GSM871063 1	Diagnosis	Fetal Growth Retardation
 GSM871063 1	Parity	1.1 ± 1.6
 GSM871063 1	Placenta Weight	329.8 ± 114.7
-GSM871063 1	reference 	https://www.ncbi.nlm.nih.gov/pmc/articles/PMC3677766/
-GSM871062 1	Experiment	E-GEOD-35574
 GSM871062 1	Sample Name	GSM871062 1
 GSM871062 1	Diagnosis	Fetal Growth Retardation
 GSM871062 1	Parity	1.1 ± 1.6
 GSM871062 1	Placenta Weight	329.8 ± 114.7
-GSM871062 1	reference 	https://www.ncbi.nlm.nih.gov/pmc/articles/PMC3677766/
-GSM871061 1	Experiment	E-GEOD-35574
 GSM871061 1	Sample Name	GSM871061 1
 GSM871061 1	Diagnosis	Fetal Growth Retardation
 GSM871061 1	Parity	1.1 ± 1.6
 GSM871061 1	Placenta Weight	329.8 ± 114.7
-GSM871061 1	reference 	https://www.ncbi.nlm.nih.gov/pmc/articles/PMC3677766/
-GSM871060 1	Experiment	E-GEOD-35574
 GSM871060 1	Sample Name	GSM871060 1
 GSM871060 1	Diagnosis	Healthy
 GSM871060 1	Parity	2.4 ± 1.7
 GSM871060 1	Placenta Weight	491.1 ± 141.3
-GSM871060 1	reference 	https://www.ncbi.nlm.nih.gov/pmc/articles/PMC3677766/
-GSM871059 1	Experiment	E-GEOD-35574
 GSM871059 1	Sample Name	GSM871059 1
 GSM871059 1	Diagnosis	Healthy
 GSM871059 1	Parity	2.4 ± 1.7
 GSM871059 1	Placenta Weight	491.1 ± 141.3
-GSM871059 1	reference 	https://www.ncbi.nlm.nih.gov/pmc/articles/PMC3677766/
-GSM871058 1	Experiment	E-GEOD-35574
 GSM871058 1	Sample Name	GSM871058 1
 GSM871058 1	Diagnosis	Healthy
 GSM871058 1	Parity	2.4 ± 1.7
 GSM871058 1	Placenta Weight	491.1 ± 141.3
-GSM871058 1	reference 	https://www.ncbi.nlm.nih.gov/pmc/articles/PMC3677766/
-GSM871057 1	Experiment	E-GEOD-35574
 GSM871057 1	Sample Name	GSM871057 1
 GSM871057 1	Diagnosis	Fetal Growth Retardation
 GSM871057 1	Parity	1.1 ± 1.6
 GSM871057 1	Placenta Weight	329.8 ± 114.7
-GSM871057 1	reference 	https://www.ncbi.nlm.nih.gov/pmc/articles/PMC3677766/
-GSM871056 1	Experiment	E-GEOD-35574
 GSM871056 1	Sample Name	GSM871056 1
 GSM871056 1	Diagnosis	Healthy
 GSM871056 1	Parity	2.4 ± 1.7
 GSM871056 1	Placenta Weight	491.1 ± 141.3
-GSM871056 1	reference 	https://www.ncbi.nlm.nih.gov/pmc/articles/PMC3677766/
-GSM871055 1	Experiment	E-GEOD-35574
 GSM871055 1	Sample Name	GSM871055 1
 GSM871055 1	Diagnosis	Fetal Growth Retardation
 GSM871055 1	Parity	1.1 ± 1.6
 GSM871055 1	Placenta Weight	329.8 ± 114.7
-GSM871055 1	reference 	https://www.ncbi.nlm.nih.gov/pmc/articles/PMC3677766/
-GSM871054 1	Experiment	E-GEOD-35574
 GSM871054 1	Sample Name	GSM871054 1
 GSM871054 1	Diagnosis	Healthy
 GSM871054 1	Parity	2.4 ± 1.7
 GSM871054 1	Placenta Weight	491.1 ± 141.3
-GSM871054 1	reference 	https://www.ncbi.nlm.nih.gov/pmc/articles/PMC3677766/
-GSM871053 1	Experiment	E-GEOD-35574
 GSM871053 1	Sample Name	GSM871053 1
 GSM871053 1	Diagnosis	Fetal Growth Retardation
 GSM871053 1	Parity	1.1 ± 1.6
 GSM871053 1	Placenta Weight	329.8 ± 114.7
-GSM871053 1	reference 	https://www.ncbi.nlm.nih.gov/pmc/articles/PMC3677766/
-GSM871052 1	Experiment	E-GEOD-35574
 GSM871052 1	Sample Name	GSM871052 1
 GSM871052 1	Diagnosis	Healthy
 GSM871052 1	Parity	2.4 ± 1.7
 GSM871052 1	Placenta Weight	491.1 ± 141.3
-GSM871052 1	reference 	https://www.ncbi.nlm.nih.gov/pmc/articles/PMC3677766/
-GSM871051 1	Experiment	E-GEOD-35574
 GSM871051 1	Sample Name	GSM871051 1
 GSM871051 1	Diagnosis	Healthy
 GSM871051 1	Parity	2.4 ± 1.7
 GSM871051 1	Placenta Weight	491.1 ± 141.3
-GSM871051 1	reference 	https://www.ncbi.nlm.nih.gov/pmc/articles/PMC3677766/
-GSM871050 1	Experiment	E-GEOD-35574
 GSM871050 1	Sample Name	GSM871050 1
 GSM871050 1	Diagnosis	Pre-Eclampsia
 GSM871050 1	Parity	0.4±  0.7
@@ -297,8 +194,6 @@ GSM871050 1	Placenta Weight	448.2 ± 237.8
 GSM871050 1	Systolic Pressure	140
 GSM871050 1	Diastolic Pressure	90
 GSM871050 1	Urine Protein Concentration	300
-GSM871050 1	reference 	https://www.ncbi.nlm.nih.gov/pmc/articles/PMC3677766/
-GSM871049 1	Experiment	E-GEOD-35574
 GSM871049 1	Sample Name	GSM871049 1
 GSM871049 1	Diagnosis	Pre-Eclampsia
 GSM871049 1	Parity	0.4 ± 0.7
@@ -306,14 +201,10 @@ GSM871049 1	Placenta Weight	448.2 ± 237.8
 GSM871049 1	Systolic Pressure	140
 GSM871049 1	Diastolic Pressure	90
 GSM871049 1	Urine Protein Concentration	300
-GSM871049 1	reference 	https://www.ncbi.nlm.nih.gov/pmc/articles/PMC3677766/
-GSM871048 1	Experiment	E-GEOD-35574
 GSM871048 1	Sample Name	GSM871048 1
 GSM871048 1	Diagnosis	Fetal Growth Retardation
 GSM871048 1	Parity	1.1 ± 1.6
 GSM871048 1	Placenta Weight	329.8 ± 114.7
-GSM871048 1	reference 	https://www.ncbi.nlm.nih.gov/pmc/articles/PMC3677766/
-GSM871047 1	Experiment	E-GEOD-35574
 GSM871047 1	Sample Name	GSM871047 1
 GSM871047 1	Diagnosis	Pre-Eclampsia
 GSM871047 1	Parity	0.4 ± 0.7
@@ -321,26 +212,18 @@ GSM871047 1	Placenta Weight	448.2 ± 237.8
 GSM871047 1	Systolic Pressure	140
 GSM871047 1	Diastolic Pressure	90
 GSM871047 1	Urine Protein Concentration	300
-GSM871047 1	reference 	https://www.ncbi.nlm.nih.gov/pmc/articles/PMC3677766/
-GSM871046 1	Experiment	E-GEOD-35574
 GSM871046 1	Sample Name	GSM871046 1
 GSM871046 1	Diagnosis	Fetal Growth Retardation
 GSM871046 1	Parity	1.1 ± 1.6
 GSM871046 1	Placenta Weight	329.8 ± 114.7
-GSM871046 1	reference 	https://www.ncbi.nlm.nih.gov/pmc/articles/PMC3677766/
-GSM871139 1	Experiment	E-GEOD-35574
 GSM871139 1	Sample Name	GSM871139 1
 GSM871139 1	Diagnosis	Fetal Growth Retardation
 GSM871139 1	Parity	1.1 ± 1.6
 GSM871139 1	Placenta Weight	329.8 ± 114.7
-GSM871139 1	reference 	https://www.ncbi.nlm.nih.gov/pmc/articles/PMC3677766/
-GSM871138 1	Experiment	E-GEOD-35574
 GSM871138 1	Sample Name	GSM871138 1
 GSM871138 1	Diagnosis	Healthy
 GSM871138 1	Parity	2.4 ± 1.7
 GSM871138 1	Placenta Weight	491.1 ± 141.3
-GSM871138 1	reference 	https://www.ncbi.nlm.nih.gov/pmc/articles/PMC3677766/
-GSM871137 1	Experiment	E-GEOD-35574
 GSM871137 1	Sample Name	GSM871137 1
 GSM871137 1	Diagnosis	Pre-Eclampsia
 GSM871137 1	Parity	0.4 ± 0.7
@@ -348,38 +231,26 @@ GSM871137 1	Placenta Weight	448.2 ± 237.8
 GSM871137 1	Systolic Pressure	140
 GSM871137 1	Diastolic Pressure	90
 GSM871137 1	Urine Protein Concentration	300
-GSM871137 1	reference 	https://www.ncbi.nlm.nih.gov/pmc/articles/PMC3677766/
-GSM871136 1	Experiment	E-GEOD-35574
 GSM871136 1	Sample Name	GSM871136 1
 GSM871136 1	Diagnosis	Healthy
 GSM871136 1	Parity	2.4 ± 1.7
 GSM871136 1	Placenta Weight	491.1 ± 141.3
-GSM871136 1	reference 	https://www.ncbi.nlm.nih.gov/pmc/articles/PMC3677766/
-GSM871135 1	Experiment	E-GEOD-35574
 GSM871135 1	Sample Name	GSM871135 1
 GSM871135 1	Diagnosis	Fetal Growth Retardation
 GSM871135 1	Parity	1.1 ± 1.6
 GSM871135 1	Placenta Weight	329.8 ± 114.7
-GSM871135 1	reference 	https://www.ncbi.nlm.nih.gov/pmc/articles/PMC3677766/
-GSM871134 1	Experiment	E-GEOD-35574
 GSM871134 1	Sample Name	GSM871134 1
 GSM871134 1	Diagnosis	Healthy
 GSM871134 1	Parity	2.4 ± 1.7
 GSM871134 1	Placenta Weight	491.1 ± 141.3
-GSM871134 1	reference 	https://www.ncbi.nlm.nih.gov/pmc/articles/PMC3677766/
-GSM871133 1	Experiment	E-GEOD-35574
 GSM871133 1	Sample Name	GSM871133 1
 GSM871133 1	Diagnosis	Healthy
 GSM871133 1	Parity	2.4 ± 1.7
 GSM871133 1	Placenta Weight	491.1 ± 141.3
-GSM871133 1	reference 	https://www.ncbi.nlm.nih.gov/pmc/articles/PMC3677766/
-GSM871132 1	Experiment	E-GEOD-35574
 GSM871132 1	Sample Name	GSM871132 1
 GSM871132 1	Diagnosis	Fetal Growth Retardation
 GSM871132 1	Parity	1.1 ± 1.6
 GSM871132 1	Placenta Weight	329.8 ± 114.7
-GSM871132 1	reference 	https://www.ncbi.nlm.nih.gov/pmc/articles/PMC3677766/
-GSM871131 1	Experiment	E-GEOD-35574
 GSM871131 1	Sample Name	GSM871131 1
 GSM871131 1	Diagnosis	Pre-Eclampsia
 GSM871131 1	Parity	0.4 ± 0.7
@@ -387,20 +258,14 @@ GSM871131 1	Placenta Weight	448.2 ± 237.8
 GSM871131 1	Systolic Pressure	140
 GSM871131 1	Diastolic Pressure	90
 GSM871131 1	Urine Protein Concentration	300
-GSM871131 1	reference 	https://www.ncbi.nlm.nih.gov/pmc/articles/PMC3677766/
-GSM871130 1	Experiment	E-GEOD-35574
 GSM871130 1	Sample Name	GSM871130 1
 GSM871130 1	Diagnosis	Healthy
 GSM871130 1	Parity	2.4 ± 1.7
 GSM871130 1	Placenta Weight	491.1 ± 141.3
-GSM871130 1	reference 	https://www.ncbi.nlm.nih.gov/pmc/articles/PMC3677766/
-GSM871129 1	Experiment	E-GEOD-35574
 GSM871129 1	Sample Name	GSM871129 1
 GSM871129 1	Diagnosis	Fetal Growth Retardation
 GSM871129 1	Parity	1.1 ± 1.6
 GSM871129 1	Placenta Weight	329.8 ± 114.7
-GSM871129 1	reference 	https://www.ncbi.nlm.nih.gov/pmc/articles/PMC3677766/
-GSM871128 1	Experiment	E-GEOD-35574
 GSM871128 1	Sample Name	GSM871128 1
 GSM871128 1	Diagnosis	Pre-Eclampsia
 GSM871128 1	Parity	0.4 ± 0.7
@@ -408,14 +273,10 @@ GSM871128 1	Placenta Weight	448.2 ± 237.8
 GSM871128 1	Systolic Pressure	140
 GSM871128 1	Diastolic Pressure	90
 GSM871128 1	Urine Protein Concentration	300
-GSM871128 1	reference 	https://www.ncbi.nlm.nih.gov/pmc/articles/PMC3677766/
-GSM871127 1	Experiment	E-GEOD-35574
 GSM871127 1	Sample Name	GSM871127 1
 GSM871127 1	Diagnosis	Healthy
 GSM871127 1	Parity	2.4 ± 1.7
 GSM871127 1	Placenta Weight	491.1 ± 141.3
-GSM871127 1	reference 	https://www.ncbi.nlm.nih.gov/pmc/articles/PMC3677766/
-GSM871126 1	Experiment	E-GEOD-35574
 GSM871126 1	Sample Name	GSM871126 1
 GSM871126 1	Diagnosis	Pre-Eclampsia
 GSM871126 1	Parity	0.4 ± 0.7
@@ -423,26 +284,18 @@ GSM871126 1	Placenta Weight	448.2 ± 237.8
 GSM871126 1	Systolic Pressure	140
 GSM871126 1	Diastolic Pressure	90
 GSM871126 1	Urine Protein Concentration	300
-GSM871126 1	reference 	https://www.ncbi.nlm.nih.gov/pmc/articles/PMC3677766/
-GSM871125 1	Experiment	E-GEOD-35574
 GSM871125 1	Sample Name	GSM871125 1
 GSM871125 1	Diagnosis	Healthy
 GSM871125 1	Parity	2.4 ± 1.7
 GSM871125 1	Placenta Weight	491.1 ± 141.3
-GSM871125 1	reference 	https://www.ncbi.nlm.nih.gov/pmc/articles/PMC3677766/
-GSM871124 1	Experiment	E-GEOD-35574
 GSM871124 1	Sample Name	GSM871124 1
 GSM871124 1	Diagnosis	Fetal Growth Retardation
 GSM871124 1	Parity	1.1 ± 1.6
 GSM871124 1	Placenta Weight	329.8 ± 114.7
-GSM871124 1	reference 	https://www.ncbi.nlm.nih.gov/pmc/articles/PMC3677766/
-GSM871123 1	Experiment	E-GEOD-35574
 GSM871123 1	Sample Name	GSM871123 1
 GSM871123 1	Diagnosis	Healthy
 GSM871123 1	Parity	2.4 ± 1.7
 GSM871123 1	Placenta Weight	491.1 ± 141.3
-GSM871123 1	reference 	https://www.ncbi.nlm.nih.gov/pmc/articles/PMC3677766/
-GSM871122 1	Experiment	E-GEOD-35574
 GSM871122 1	Sample Name	GSM871122 1
 GSM871122 1	Diagnosis	Pre-Eclampsia
 GSM871122 1	Parity	0.4 ± 0.7
@@ -450,32 +303,22 @@ GSM871122 1	Placenta Weight	448.2 ± 237.8
 GSM871122 1	Systolic Pressure	140
 GSM871122 1	Diastolic Pressure	90
 GSM871122 1	Urine Protein Concentration	300
-GSM871122 1	reference 	https://www.ncbi.nlm.nih.gov/pmc/articles/PMC3677766/
-GSM871121 1	Experiment	E-GEOD-35574
 GSM871121 1	Sample Name	GSM871121 1
 GSM871121 1	Diagnosis	Fetal Growth Retardation
 GSM871121 1	Parity	1.1 ± 1.6
 GSM871121 1	Placenta Weight	329.8 ± 114.7
-GSM871121 1	reference 	https://www.ncbi.nlm.nih.gov/pmc/articles/PMC3677766/
-GSM871120 1	Experiment	E-GEOD-35574
 GSM871120 1	Sample Name	GSM871120 1
 GSM871120 1	Diagnosis	Fetal Growth Retardation
 GSM871120 1	Parity	1.1 ± 1.6
 GSM871120 1	Placenta Weight	329.8 ± 114.7
-GSM871120 1	reference 	https://www.ncbi.nlm.nih.gov/pmc/articles/PMC3677766/
-GSM871119 1	Experiment	E-GEOD-35574
 GSM871119 1	Sample Name	GSM871119 1
 GSM871119 1	Diagnosis	Healthy
 GSM871119 1	Parity	2.4 ± 1.7
 GSM871119 1	Placenta Weight	491.1 ± 141.3
-GSM871119 1	reference 	https://www.ncbi.nlm.nih.gov/pmc/articles/PMC3677766/
-GSM871118 1	Experiment	E-GEOD-35574
 GSM871118 1	Sample Name	GSM871118 1
 GSM871118 1	Diagnosis	Healthy
 GSM871118 1	Parity	2.4 ± 1.7
 GSM871118 1	Placenta Weight	491.1 ± 141.3
-GSM871118 1	reference 	https://www.ncbi.nlm.nih.gov/pmc/articles/PMC3677766/
-GSM871117 1	Experiment	E-GEOD-35574
 GSM871117 1	Sample Name	GSM871117 1
 GSM871117 1	Diagnosis	Pre-Eclampsia
 GSM871117 1	Parity	0.4 ± 0.7
@@ -483,32 +326,22 @@ GSM871117 1	Placenta Weight	448.2 ± 237.8
 GSM871117 1	Systolic Pressure	140
 GSM871117 1	Diastolic Pressure	90
 GSM871117 1	Urine Protein Concentration	300
-GSM871117 1	reference 	https://www.ncbi.nlm.nih.gov/pmc/articles/PMC3677766/
-GSM871116 1	Experiment	E-GEOD-35574
 GSM871116 1	Sample Name	GSM871116 1
 GSM871116 1	Diagnosis	Healthy
 GSM871116 1	Parity	2.4 ± 1.7
 GSM871116 1	Placenta Weight	491.1 ± 141.3
-GSM871116 1	reference 	https://www.ncbi.nlm.nih.gov/pmc/articles/PMC3677766/
-GSM871115 1	Experiment	E-GEOD-35574
 GSM871115 1	Sample Name	GSM871115 1
 GSM871115 1	Diagnosis	Healthy
 GSM871115 1	Parity	2.4 ± 1.7
 GSM871115 1	Placenta Weight	491.1 ± 141.3
-GSM871115 1	reference 	https://www.ncbi.nlm.nih.gov/pmc/articles/PMC3677766/
-GSM871114 1	Experiment	E-GEOD-35574
 GSM871114 1	Sample Name	GSM871114 1
 GSM871114 1	Diagnosis	Healthy
 GSM871114 1	Parity	2.4 ± 1.7
 GSM871114 1	Placenta Weight	491.1 ± 141.3
-GSM871114 1	reference 	https://www.ncbi.nlm.nih.gov/pmc/articles/PMC3677766/
-GSM871113 1	Experiment	E-GEOD-35574
 GSM871113 1	Sample Name	GSM871113 1
 GSM871113 1	Diagnosis	Fetal Growth Retardation
 GSM871113 1	Parity	1.1 ± 1.6
 GSM871113 1	Placenta Weight	329.8 ± 114.7
-GSM871113 1	reference 	https://www.ncbi.nlm.nih.gov/pmc/articles/PMC3677766/
-GSM871112 1	Experiment	E-GEOD-35574
 GSM871112 1	Sample Name	GSM871112 1
 GSM871112 1	Diagnosis	Pre-Eclampsia
 GSM871112 1	Parity	0.4 ± 0.7
@@ -516,32 +349,22 @@ GSM871112 1	Placenta Weight	448.2 ± 237.8
 GSM871112 1	Systolic Pressure	140
 GSM871112 1	Diastolic Pressure	90
 GSM871112 1	Urine Protein Concentration	300
-GSM871112 1	reference 	https://www.ncbi.nlm.nih.gov/pmc/articles/PMC3677766/
-GSM871111 1	Experiment	E-GEOD-35574
 GSM871111 1	Sample Name	GSM871111 1
 GSM871111 1	Diagnosis	Healthy
 GSM871111 1	Parity	2.4 ± 1.7
 GSM871111 1	Placenta Weight	491.1 ± 141.3
-GSM871111 1	reference 	https://www.ncbi.nlm.nih.gov/pmc/articles/PMC3677766/
-GSM871110 1	Experiment	E-GEOD-35574
 GSM871110 1	Sample Name	GSM871110 1
 GSM871110 1	Diagnosis	Fetal Growth Retardation
 GSM871110 1	Parity	1.1 ± 1.6
 GSM871110 1	Placenta Weight	329.8 ± 114.7
-GSM871110 1	reference 	https://www.ncbi.nlm.nih.gov/pmc/articles/PMC3677766/
-GSM871109 1	Experiment	E-GEOD-35574
 GSM871109 1	Sample Name	GSM871109 1
 GSM871109 1	Diagnosis	Fetal Growth Retardation
 GSM871109 1	Parity	1.1 ± 1.6
 GSM871109 1	Placenta Weight	329.8 ± 114.7
-GSM871109 1	reference 	https://www.ncbi.nlm.nih.gov/pmc/articles/PMC3677766/
-GSM871108 1	Experiment	E-GEOD-35574
 GSM871108 1	Sample Name	GSM871108 1
 GSM871108 1	Diagnosis	Healthy
 GSM871108 1	Parity	2.4 ± 1.7
 GSM871108 1	Placenta Weight	491.1 ± 141.3
-GSM871108 1	reference 	https://www.ncbi.nlm.nih.gov/pmc/articles/PMC3677766/
-GSM871107 1	Experiment	E-GEOD-35574
 GSM871107 1	Sample Name	GSM871107 1
 GSM871107 1	Diagnosis	Pre-Eclampsia
 GSM871107 1	Parity	0.4 ± 0.7
@@ -549,44 +372,30 @@ GSM871107 1	Placenta Weight	448.2 ± 237.8
 GSM871107 1	Systolic Pressure	140
 GSM871107 1	Diastolic Pressure	90
 GSM871107 1	Urine Protein Concentration	300
-GSM871107 1	reference 	https://www.ncbi.nlm.nih.gov/pmc/articles/PMC3677766/
-GSM871106 1	Experiment	E-GEOD-35574
 GSM871106 1	Sample Name	GSM871106 1
 GSM871106 1	Diagnosis	Fetal Growth Retardation
 GSM871106 1	Parity	1.1 ± 1.6
 GSM871106 1	Placenta Weight	329.8 ± 114.7
-GSM871106 1	reference 	https://www.ncbi.nlm.nih.gov/pmc/articles/PMC3677766/
-GSM871105 1	Experiment	E-GEOD-35574
 GSM871105 1	Sample Name	GSM871105 1
 GSM871105 1	Diagnosis	Fetal Growth Retardation
 GSM871105 1	Parity	1.1 ± 1.6
 GSM871105 1	Placenta Weight	329.8 ± 114.7
-GSM871105 1	reference 	https://www.ncbi.nlm.nih.gov/pmc/articles/PMC3677766/
-GSM871104 1	Experiment	E-GEOD-35574
 GSM871104 1	Sample Name	GSM871104 1
 GSM871104 1	Diagnosis	Healthy
 GSM871104 1	Parity	2.4 ± 1.7
 GSM871104 1	Placenta Weight	491.1 ± 141.3
-GSM871104 1	reference 	https://www.ncbi.nlm.nih.gov/pmc/articles/PMC3677766/
-GSM871103 1	Experiment	E-GEOD-35574
 GSM871103 1	Sample Name	GSM871103 1
 GSM871103 1	Diagnosis	Fetal Growth Retardation
 GSM871103 1	Parity	1.1 ± 1.6
 GSM871103 1	Placenta Weight	329.8 ± 114.7
-GSM871103 1	reference 	https://www.ncbi.nlm.nih.gov/pmc/articles/PMC3677766/
-GSM871102 1	Experiment	E-GEOD-35574
 GSM871102 1	Sample Name	GSM871102 1
 GSM871102 1	Diagnosis	Healthy
 GSM871102 1	Parity	2.4 ± 1.7
 GSM871102 1	Placenta Weight	491.1 ± 141.3
-GSM871102 1	reference 	https://www.ncbi.nlm.nih.gov/pmc/articles/PMC3677766/
-GSM871101 1	Experiment	E-GEOD-35574
 GSM871101 1	Sample Name	GSM871101 1
 GSM871101 1	Diagnosis	Healthy
 GSM871101 1	Parity	2.4 ± 1.7
 GSM871101 1	Placenta Weight	491.1 ± 141.3
-GSM871101 1	reference 	https://www.ncbi.nlm.nih.gov/pmc/articles/PMC3677766/
-GSM871100 1	Experiment	E-GEOD-35574
 GSM871100 1	Sample Name	GSM871100 1
 GSM871100 1	Diagnosis	Pre-Eclampsia
 GSM871100 1	Parity	0.4 ± 0.7
@@ -594,26 +403,18 @@ GSM871100 1	Placenta Weight	448.2 ± 237.8
 GSM871100 1	Systolic Pressure	140
 GSM871100 1	Diastolic Pressure	90
 GSM871100 1	Urine Protein Concentration	300
-GSM871100 1	reference 	https://www.ncbi.nlm.nih.gov/pmc/articles/PMC3677766/
-GSM871099 1	Experiment	E-GEOD-35574
 GSM871099 1	Sample Name	GSM871099 1
 GSM871099 1	Diagnosis	Healthy
 GSM871099 1	Parity	2.4 ± 1.7
 GSM871099 1	Placenta Weight	491.1 ± 141.3
-GSM871099 1	reference 	https://www.ncbi.nlm.nih.gov/pmc/articles/PMC3677766/
-GSM871098 1	Experiment	E-GEOD-35574
 GSM871098 1	Sample Name	GSM871098 1
 GSM871098 1	Diagnosis	Fetal Growth Retardation
 GSM871098 1	Parity	1.1 ± 1.6
 GSM871098 1	Placenta Weight	329.8 ± 114.7
-GSM871098 1	reference 	https://www.ncbi.nlm.nih.gov/pmc/articles/PMC3677766/
-GSM871097 1	Experiment	E-GEOD-35574
 GSM871097 1	Sample Name	GSM871097 1
 GSM871097 1	Diagnosis	Healthy
 GSM871097 1	Parity	2.4 ± 1.7
 GSM871097 1	Placenta Weight	491.1 ± 141.3
-GSM871097 1	reference 	https://www.ncbi.nlm.nih.gov/pmc/articles/PMC3677766/
-GSM871096 1	Experiment	E-GEOD-35574
 GSM871096 1	Sample Name	GSM871096 1
 GSM871096 1	Diagnosis	Pre-Eclampsia
 GSM871096 1	Parity	0.4 ± 0.7
@@ -621,14 +422,10 @@ GSM871096 1	Placenta Weight	448.2 ± 237.8
 GSM871096 1	Systolic Pressure	140
 GSM871096 1	Diastolic Pressure	90
 GSM871096 1	Urine Protein Concentration	300
-GSM871096 1	reference 	https://www.ncbi.nlm.nih.gov/pmc/articles/PMC3677766/
-GSM871095 1	Experiment	E-GEOD-35574
 GSM871095 1	Sample Name	GSM871095 1
 GSM871095 1	Diagnosis	Fetal Growth Retardation
 GSM871095 1	Parity	1.1 ± 1.6
 GSM871095 1	Placenta Weight	329.8 ± 114.7
-GSM871095 1	reference 	https://www.ncbi.nlm.nih.gov/pmc/articles/PMC3677766/
-GSM871094 1	Experiment	E-GEOD-35574
 GSM871094 1	Sample Name	GSM871094 1
 GSM871094 1	Diagnosis	Pre-Eclampsia
 GSM871094 1	Parity	0.4 ± 0.7
@@ -636,20 +433,14 @@ GSM871094 1	Placenta Weight	448.2 ± 237.8
 GSM871094 1	Systolic Pressure	140
 GSM871094 1	Diastolic Pressure	90
 GSM871094 1	Urine Protein Concentration	300
-GSM871094 1	reference 	https://www.ncbi.nlm.nih.gov/pmc/articles/PMC3677766/
-GSM871093 1	Experiment	E-GEOD-35574
 GSM871093 1	Sample Name	GSM871093 1
 GSM871093 1	Diagnosis	Healthy
 GSM871093 1	Parity	2.4 ± 1.7
 GSM871093 1	Placenta Weight	491.1 ± 141.3
-GSM871093 1	reference 	https://www.ncbi.nlm.nih.gov/pmc/articles/PMC3677766/
-GSM871092 1	Experiment	E-GEOD-35574
 GSM871092 1	Sample Name	GSM871092 1
 GSM871092 1	Diagnosis	Fetal Growth Retardation
 GSM871092 1	Parity	1.1 ± 1.6
 GSM871092 1	Placenta Weight	329.8 ± 114.7
-GSM871092 1	reference 	https://www.ncbi.nlm.nih.gov/pmc/articles/PMC3677766/
-GSM871091 1	Experiment	E-GEOD-35574
 GSM871091 1	Sample Name	GSM871091 1
 GSM871091 1	Diagnosis	Pre-Eclampsia
 GSM871091 1	Parity	0.4 ± 0.7
@@ -657,62 +448,42 @@ GSM871091 1	Placenta Weight	448.2 ± 237.8
 GSM871091 1	Systolic Pressure	140
 GSM871091 1	Diastolic Pressure	90
 GSM871091 1	Urine Protein Concentration	300
-GSM871091 1	reference 	https://www.ncbi.nlm.nih.gov/pmc/articles/PMC3677766/
-GSM871090 1	Experiment	E-GEOD-35574
 GSM871090 1	Sample Name	GSM871090 1
 GSM871090 1	Diagnosis	Healthy
 GSM871090 1	Parity	2.4 ± 1.7
 GSM871090 1	Placenta Weight	491.1 ± 141.3
-GSM871090 1	reference 	https://www.ncbi.nlm.nih.gov/pmc/articles/PMC3677766/
-GSM871089 1	Experiment	E-GEOD-35574
 GSM871089 1	Sample Name	GSM871089 1
 GSM871089 1	Diagnosis	Healthy
 GSM871089 1	Parity	2.4 ± 1.7
 GSM871089 1	Placenta Weight	491.1 ± 141.3
-GSM871089 1	reference 	https://www.ncbi.nlm.nih.gov/pmc/articles/PMC3677766/
-GSM871088 1	Experiment	E-GEOD-35574
 GSM871088 1	Sample Name	GSM871088 1
 GSM871088 1	Diagnosis	Fetal Growth Retardation
 GSM871088 1	Parity	1.1 ± 1.6
 GSM871088 1	Placenta Weight	329.8 ± 114.7
-GSM871088 1	reference 	https://www.ncbi.nlm.nih.gov/pmc/articles/PMC3677766/
-GSM871087 1	Experiment	E-GEOD-35574
 GSM871087 1	Sample Name	GSM871087 1
 GSM871087 1	Diagnosis	Fetal Growth Retardation
 GSM871087 1	Parity	1.1 ± 1.6
 GSM871087 1	Placenta Weight	329.8 ± 114.7
-GSM871087 1	reference 	https://www.ncbi.nlm.nih.gov/pmc/articles/PMC3677766/
-GSM871086 1	Experiment	E-GEOD-35574
 GSM871086 1	Sample Name	GSM871086 1
 GSM871086 1	Diagnosis	Healthy
 GSM871086 1	Parity	2.4 ± 1.7
 GSM871086 1	Placenta Weight	491.1 ± 141.3
-GSM871086 1	reference 	https://www.ncbi.nlm.nih.gov/pmc/articles/PMC3677766/
-GSM871085 1	Experiment	E-GEOD-35574
 GSM871085 1	Sample Name	GSM871085 1
 GSM871085 1	Diagnosis	Fetal Growth Retardation
 GSM871085 1	Parity	1.1 ± 1.6
 GSM871085 1	Placenta Weight	329.8 ± 114.7
-GSM871085 1	reference 	https://www.ncbi.nlm.nih.gov/pmc/articles/PMC3677766/
-GSM871084 1	Experiment	E-GEOD-35574
 GSM871084 1	Sample Name	GSM871084 1
 GSM871084 1	Diagnosis	Fetal Growth Retardation
 GSM871084 1	Parity	1.1 ± 1.6
 GSM871084 1	Placenta Weight	329.8 ± 114.7
-GSM871084 1	reference 	https://www.ncbi.nlm.nih.gov/pmc/articles/PMC3677766/
-GSM871083 1	Experiment	E-GEOD-35574
 GSM871083 1	Sample Name	GSM871083 1
 GSM871083 1	Diagnosis	Healthy
 GSM871083 1	Parity	2.4 ± 1.7
 GSM871083 1	Placenta Weight	491.1 ± 141.3
-GSM871083 1	reference 	https://www.ncbi.nlm.nih.gov/pmc/articles/PMC3677766/
-GSM871082 1	Experiment	E-GEOD-35574
 GSM871082 1	Sample Name	GSM871082 1
 GSM871082 1	Diagnosis	Fetal Growth Retardation
 GSM871082 1	Parity	1.1 ± 1.6
 GSM871082 1	Placenta Weight	329.8 ± 114.7
-GSM871082 1	reference 	https://www.ncbi.nlm.nih.gov/pmc/articles/PMC3677766/
-GSM871081 1	Experiment	E-GEOD-35574
 GSM871081 1	Sample Name	GSM871081 1
 GSM871081 1	Diagnosis	Pre-Eclampsia
 GSM871081 1	Parity	0.4 ± 0.7
@@ -720,8 +491,6 @@ GSM871081 1	Placenta Weight	448.2 ± 237.8
 GSM871081 1	Systolic Pressure	140
 GSM871081 1	Diastolic Pressure	90
 GSM871081 1	Urine Protein Concentration	300
-GSM871081 1	reference 	https://www.ncbi.nlm.nih.gov/pmc/articles/PMC3677766/
-GSM871080 1	Experiment	E-GEOD-35574
 GSM871080 1	Sample Name	GSM871080 1
 GSM871080 1	Diagnosis	Pre-Eclampsia
 GSM871080 1	Parity	0.4 ± 0.7
@@ -729,26 +498,18 @@ GSM871080 1	Placenta Weight	448.2 ± 237.8
 GSM871080 1	Systolic Pressure	140
 GSM871080 1	Diastolic Pressure	90
 GSM871080 1	Urine Protein Concentration	300
-GSM871080 1	reference 	https://www.ncbi.nlm.nih.gov/pmc/articles/PMC3677766/
-GSM871079 1	Experiment	E-GEOD-35574
 GSM871079 1	Sample Name	GSM871079 1
 GSM871079 1	Diagnosis	Fetal Growth Retardation
 GSM871079 1	Parity	1.1 ± 1.6
 GSM871079 1	Placenta Weight	329.8 ± 114.7
-GSM871079 1	reference 	https://www.ncbi.nlm.nih.gov/pmc/articles/PMC3677766/
-GSM871078 1	Experiment	E-GEOD-35574
 GSM871078 1	Sample Name	GSM871078 1
 GSM871078 1	Diagnosis	Fetal Growth Retardation
 GSM871078 1	Parity	1.1 ± 1.6
 GSM871078 1	Placenta Weight	329.8 ± 114.7
-GSM871078 1	reference 	https://www.ncbi.nlm.nih.gov/pmc/articles/PMC3677766/
-GSM871077 1	Experiment	E-GEOD-35574
 GSM871077 1	Sample Name	GSM871077 1
 GSM871077 1	Diagnosis	Healthy
 GSM871077 1	Parity	2.4 ± 1.7
 GSM871077 1	Placenta Weight	491.1 ± 141.3
-GSM871077 1	reference 	https://www.ncbi.nlm.nih.gov/pmc/articles/PMC3677766/
-GSM871076 1	Experiment	E-GEOD-35574
 GSM871076 1	Sample Name	GSM871076 1
 GSM871076 1	Diagnosis	Pre-Eclampsia
 GSM871076 1	Parity	0.4 ± 0.7
@@ -756,38 +517,26 @@ GSM871076 1	Placenta Weight	448.2 ± 237.8
 GSM871076 1	Systolic Pressure	140
 GSM871076 1	Diastolic Pressure	90
 GSM871076 1	Urine Protein Concentration	300
-GSM871076 1	reference 	https://www.ncbi.nlm.nih.gov/pmc/articles/PMC3677766/
-GSM871075 1	Experiment	E-GEOD-35574
 GSM871075 1	Sample Name	GSM871075 1
 GSM871075 1	Diagnosis	Healthy
 GSM871075 1	Parity	2.4 ± 1.7
 GSM871075 1	Placenta Weight	491.1 ± 141.3
-GSM871075 1	reference 	https://www.ncbi.nlm.nih.gov/pmc/articles/PMC3677766/
-GSM871074 1	Experiment	E-GEOD-35574
 GSM871074 1	Sample Name	GSM871074 1
 GSM871074 1	Diagnosis	Healthy
 GSM871074 1	Parity	2.4 ± 1.7
 GSM871074 1	Placenta Weight	491.1 ± 141.3
-GSM871074 1	reference 	https://www.ncbi.nlm.nih.gov/pmc/articles/PMC3677766/
-GSM871073 1	Experiment	E-GEOD-35574
 GSM871073 1	Sample Name	GSM871073 1
 GSM871073 1	Diagnosis	Fetal Growth Retardation
 GSM871073 1	Parity	1.1 ± 1.6
 GSM871073 1	Placenta Weight	329.8 ± 114.7
-GSM871073 1	reference 	https://www.ncbi.nlm.nih.gov/pmc/articles/PMC3677766/
-GSM871072 1	Experiment	E-GEOD-35574
 GSM871072 1	Sample Name	GSM871072 1
 GSM871072 1	Diagnosis	Fetal Growth Retardation
 GSM871072 1	Parity	1.1 ± 1.6
 GSM871072 1	Placenta Weight	329.8 ± 114.7
-GSM871072 1	reference 	https://www.ncbi.nlm.nih.gov/pmc/articles/PMC3677766/
-GSM871071 1	Experiment	E-GEOD-35574
 GSM871071 1	Sample Name	GSM871071 1
 GSM871071 1	Diagnosis	Healthy
 GSM871071 1	Parity	2.4 ± 1.7
 GSM871071 1	Placenta Weight	491.1 ± 141.3
-GSM871071 1	reference 	https://www.ncbi.nlm.nih.gov/pmc/articles/PMC3677766/
-GSM871070 1	Experiment	E-GEOD-35574
 GSM871070 1	Sample Name	GSM871070 1
 GSM871070 1	Diagnosis	Pre-Eclampsia
 GSM871070 1	Parity	0.4 ± 0.7
@@ -795,544 +544,382 @@ GSM871070 1	Placenta Weight	448.2 ± 237.8
 GSM871070 1	Systolic Pressure	140
 GSM871070 1	Diastolic Pressure	90
 GSM871070 1	Urine Protein Concentration	300
-GSM871070 1	reference 	https://www.ncbi.nlm.nih.gov/pmc/articles/PMC3677766/
-GSM871069 1	Experiment	E-GEOD-35574
 GSM871069 1	Sample Name	GSM871069 1
 GSM871069 1	Diagnosis	Fetal Growth Retardation
 GSM871069 1	Parity	1.1 ± 1.6
 GSM871069 1	Placenta Weight	329.8 ± 114.7
-GSM871069 1	reference 	https://www.ncbi.nlm.nih.gov/pmc/articles/PMC3677766/
-GSM871068 1	Experiment	E-GEOD-35574
 GSM871068 1	Sample Name	GSM871068 1
 GSM871068 1	Diagnosis	Healthy
 GSM871068 1	Parity	2.4 ± 1.7
 GSM871068 1	Placenta Weight	491.1 ± 141.3
-GSM871068 1	reference 	https://www.ncbi.nlm.nih.gov/pmc/articles/PMC3677766/
-GSM871067 1	Experiment	E-GEOD-35574
 GSM871067 1	Sample Name	GSM871067 1
 GSM871067 1	Diagnosis	Healthy
 GSM871067 1	Parity	2.4 ± 1.7
 GSM871067 1	Placenta Weight	491.1 ± 141.3
-GSM871067 1	reference 	https://www.ncbi.nlm.nih.gov/pmc/articles/PMC3677766/
-GSM871066 1	Experiment	E-GEOD-35574
 GSM871066 1	Sample Name	GSM871066 1
 GSM871066 1	Diagnosis	Healthy
 GSM871066 1	Parity	2.4 ± 1.7
 GSM871066 1	Placenta Weight	491.1 ± 141.3
-GSM871066 1	reference 	https://www.ncbi.nlm.nih.gov/pmc/articles/PMC3677766/
-GSM1319987 1	Experiment	E-GEOD-54618
 GSM1319987 1	Sample Name	GSM1319987 1
 GSM1319987 1	Diagnosis	Pre-Eclampsia
 GSM1319987 1	Caesarean Section	TRUE
 GSM1319987 1	Average Fetal Weight	1195
 GSM1319987 1	Diastolic Pressure	105
 GSM1319987 1	Urine Protein Concentration	318
-GSM1319987 1	reference 	https://www.ncbi.nlm.nih.gov/geo/query/acc.cgi?acc=GSE54618  http://www.placentajournal.org/article/S0143-4004(14)00900-X/fulltext
-GSM1319986 1	Experiment	E-GEOD-54618
 GSM1319986 1	Sample Name	GSM1319986 1
 GSM1319986 1	Diagnosis	Pre-Eclampsia
 GSM1319986 1	Caesarean Section	FALSE
 GSM1319986 1	Average Fetal Weight	1195
 GSM1319986 1	Diastolic Pressure	105
 GSM1319986 1	Urine Protein Concentration	318
-GSM1319986 1	reference 	https://www.ncbi.nlm.nih.gov/geo/query/acc.cgi?acc=GSE54618  http://www.placentajournal.org/article/S0143-4004(14)00900-X/fulltext
-GSM1319985 1	Experiment	E-GEOD-54618
 GSM1319985 1	Sample Name	GSM1319985 1
 GSM1319985 1	Diagnosis	Healthy
 GSM1319985 1	Caesarean Section	FALSE
 GSM1319985 1	Average Fetal Weight	1740
 GSM1319985 1	Diastolic Pressure	75
-GSM1319985 1	reference 	https://www.ncbi.nlm.nih.gov/geo/query/acc.cgi?acc=GSE54618  http://www.placentajournal.org/article/S0143-4004(14)00900-X/fulltext
-GSM1319984 1	Experiment	E-GEOD-54618
 GSM1319984 1	Sample Name	GSM1319984 1
 GSM1319984 1	Diagnosis	Healthy
 GSM1319984 1	Caesarean Section	TRUE
 GSM1319984 1	Average Fetal Weight	1740
 GSM1319984 1	Diastolic Pressure	75
-GSM1319984 1	reference 	https://www.ncbi.nlm.nih.gov/geo/query/acc.cgi?acc=GSE54618  http://www.placentajournal.org/article/S0143-4004(14)00900-X/fulltext
-GSM1319983 1	Experiment	E-GEOD-54618
 GSM1319983 1	Sample Name	GSM1319983 1
 GSM1319983 1	Diagnosis	Pre-Eclampsia and HELLP
 GSM1319983 1	Caesarean Section	TRUE
 GSM1319983 1	Average Fetal Weight	1195
 GSM1319983 1	Diastolic Pressure	105
 GSM1319983 1	Urine Protein Concentration	318
-GSM1319983 1	reference 	https://www.ncbi.nlm.nih.gov/geo/query/acc.cgi?acc=GSE54618  http://www.placentajournal.org/article/S0143-4004(14)00900-X/fulltext
-GSM1319982 1	Experiment	E-GEOD-54618
 GSM1319982 1	Sample Name	GSM1319982 1
 GSM1319982 1	Diagnosis	Healthy
 GSM1319982 1	Caesarean Section	TRUE
 GSM1319982 1	Average Fetal Weight	1740
 GSM1319982 1	Diastolic Pressure	75
-GSM1319982 1	reference 	https://www.ncbi.nlm.nih.gov/geo/query/acc.cgi?acc=GSE54618  http://www.placentajournal.org/article/S0143-4004(14)00900-X/fulltext
-GSM1319981 1	Experiment	E-GEOD-54618
 GSM1319981 1	Sample Name	GSM1319981 1
 GSM1319981 1	Diagnosis	Pre-Eclampsia and HELLP
 GSM1319981 1	Caesarean Section	TRUE
 GSM1319981 1	Average Fetal Weight	1195
 GSM1319981 1	Diastolic Pressure	105
 GSM1319981 1	Urine Protein Concentration	318
-GSM1319981 1	reference 	https://www.ncbi.nlm.nih.gov/geo/query/acc.cgi?acc=GSE54618  http://www.placentajournal.org/article/S0143-4004(14)00900-X/fulltext
-GSM1319980 1	Experiment	E-GEOD-54618
 GSM1319980 1	Sample Name	GSM1319980 1
 GSM1319980 1	Diagnosis	Pre-Eclampsia and HELLP
 GSM1319980 1	Caesarean Section	FALSE
 GSM1319980 1	Average Fetal Weight	1195
 GSM1319980 1	Diastolic Pressure	105
 GSM1319980 1	Urine Protein Concentration	318
-GSM1319980 1	reference 	https://www.ncbi.nlm.nih.gov/geo/query/acc.cgi?acc=GSE54618  http://www.placentajournal.org/article/S0143-4004(14)00900-X/fulltext
-GSM1319979 1	Experiment	E-GEOD-54618
 GSM1319979 1	Sample Name	GSM1319979 1
 GSM1319979 1	Diagnosis	Healthy
 GSM1319979 1	Caesarean Section	FALSE
 GSM1319979 1	Average Fetal Weight	1740
 GSM1319979 1	Diastolic Pressure	75
-GSM1319979 1	reference 	https://www.ncbi.nlm.nih.gov/geo/query/acc.cgi?acc=GSE54618  http://www.placentajournal.org/article/S0143-4004(14)00900-X/fulltext
-GSM1319978 1	Experiment	E-GEOD-54618
 GSM1319978 1	Sample Name	GSM1319978 1
 GSM1319978 1	Diagnosis	Pre-Eclampsia and HELLP
 GSM1319978 1	Caesarean Section	TRUE
 GSM1319978 1	Average Fetal Weight	1195
 GSM1319978 1	Diastolic Pressure	105
 GSM1319978 1	Urine Protein Concentration	318
-GSM1319978 1	reference 	https://www.ncbi.nlm.nih.gov/geo/query/acc.cgi?acc=GSE54618  http://www.placentajournal.org/article/S0143-4004(14)00900-X/fulltext
-GSM1319977 1	Experiment	E-GEOD-54618
 GSM1319977 1	Sample Name	GSM1319977 1
 GSM1319977 1	Diagnosis	Pre-Eclampsia
 GSM1319977 1	Caesarean Section	TRUE
 GSM1319977 1	Average Fetal Weight	1195
 GSM1319977 1	Diastolic Pressure	105
 GSM1319977 1	Urine Protein Concentration	318
-GSM1319977 1	reference 	https://www.ncbi.nlm.nih.gov/geo/query/acc.cgi?acc=GSE54618  http://www.placentajournal.org/article/S0143-4004(14)00900-X/fulltext
-GSM1319976 1	Experiment	E-GEOD-54618
 GSM1319976 1	Sample Name	GSM1319976 1
 GSM1319976 1	Diagnosis	Healthy
 GSM1319976 1	Caesarean Section	TRUE
 GSM1319976 1	Average Fetal Weight	1740
 GSM1319976 1	Diastolic Pressure	75
-GSM1319976 1	reference 	https://www.ncbi.nlm.nih.gov/geo/query/acc.cgi?acc=GSE54618  http://www.placentajournal.org/article/S0143-4004(14)00900-X/fulltext
-GSM1319975 1	Experiment	E-GEOD-54618
 GSM1319975 1	Sample Name	GSM1319975 1
 GSM1319975 1	Diagnosis	Pre-Eclampsia
 GSM1319975 1	Caesarean Section	TRUE
 GSM1319975 1	Average Fetal Weight	1195
 GSM1319975 1	Diastolic Pressure	105
 GSM1319975 1	Urine Protein Concentration	318
-GSM1319975 1	reference 	https://www.ncbi.nlm.nih.gov/geo/query/acc.cgi?acc=GSE54618  http://www.placentajournal.org/article/S0143-4004(14)00900-X/fulltext
-GSM1319974 1	Experiment	E-GEOD-54618
 GSM1319974 1	Sample Name	GSM1319974 1
 GSM1319974 1	Diagnosis	Pre-Eclampsia and HELLP
 GSM1319974 1	Caesarean Section	TRUE
 GSM1319974 1	Average Fetal Weight	1195
 GSM1319974 1	Diastolic Pressure	105
 GSM1319974 1	Urine Protein Concentration	318
-GSM1319974 1	reference 	https://www.ncbi.nlm.nih.gov/geo/query/acc.cgi?acc=GSE54618  http://www.placentajournal.org/article/S0143-4004(14)00900-X/fulltext
-GSM1319973 1	Experiment	E-GEOD-54618
 GSM1319973 1	Sample Name	GSM1319973 1
 GSM1319973 1	Diagnosis	Healthy
 GSM1319973 1	Caesarean Section	TRUE
 GSM1319973 1	Average Fetal Weight	1740
 GSM1319973 1	Diastolic Pressure	75
-GSM1319973 1	reference 	https://www.ncbi.nlm.nih.gov/geo/query/acc.cgi?acc=GSE54618  http://www.placentajournal.org/article/S0143-4004(14)00900-X/fulltext
-GSM1319972 1	Experiment	E-GEOD-54618
 GSM1319972 1	Sample Name	GSM1319972 1
 GSM1319972 1	Diagnosis	Healthy
 GSM1319972 1	Caesarean Section	TRUE
 GSM1319972 1	Average Fetal Weight	1740
 GSM1319972 1	Diastolic Pressure	75
-GSM1319972 1	reference 	https://www.ncbi.nlm.nih.gov/geo/query/acc.cgi?acc=GSE54618  http://www.placentajournal.org/article/S0143-4004(14)00900-X/fulltext
-GSM1319971 1	Experiment	E-GEOD-54618
 GSM1319971 1	Sample Name	GSM1319971 1
 GSM1319971 1	Diagnosis	Healthy
 GSM1319971 1	Caesarean Section	TRUE
 GSM1319971 1	Average Fetal Weight	1740
 GSM1319971 1	Diastolic Pressure	75
-GSM1319971 1	reference 	https://www.ncbi.nlm.nih.gov/geo/query/acc.cgi?acc=GSE54618  http://www.placentajournal.org/article/S0143-4004(14)00900-X/fulltext
-GSM1319970 1	Experiment	E-GEOD-54618
 GSM1319970 1	Sample Name	GSM1319970 1
 GSM1319970 1	Diagnosis	Healthy
 GSM1319970 1	Caesarean Section	TRUE
 GSM1319970 1	Average Fetal Weight	1740
 GSM1319970 1	Diastolic Pressure	75
-GSM1319970 1	reference 	https://www.ncbi.nlm.nih.gov/geo/query/acc.cgi?acc=GSE54618  http://www.placentajournal.org/article/S0143-4004(14)00900-X/fulltext
-GSM1319969 1	Experiment	E-GEOD-54618
 GSM1319969 1	Sample Name	GSM1319969 1
 GSM1319969 1	Diagnosis	Healthy
 GSM1319969 1	Caesarean Section	TRUE
 GSM1319969 1	Average Fetal Weight	1740
 GSM1319969 1	Diastolic Pressure	75
-GSM1319969 1	reference 	https://www.ncbi.nlm.nih.gov/geo/query/acc.cgi?acc=GSE54618  http://www.placentajournal.org/article/S0143-4004(14)00900-X/fulltext
-GSM1319968 1	Experiment	E-GEOD-54618
 GSM1319968 1	Sample Name	GSM1319968 1
 GSM1319968 1	Diagnosis	Healthy
 GSM1319968 1	Caesarean Section	FALSE
 GSM1319968 1	Average Fetal Weight	1740
 GSM1319968 1	Diastolic Pressure	75
-GSM1319968 1	reference 	https://www.ncbi.nlm.nih.gov/geo/query/acc.cgi?acc=GSE54618  http://www.placentajournal.org/article/S0143-4004(14)00900-X/fulltext
-GSM1319967 1	Experiment	E-GEOD-54618
 GSM1319967 1	Sample Name	GSM1319967 1
 GSM1319967 1	Diagnosis	Pre-Eclampsia and HELLP
 GSM1319967 1	Caesarean Section	FALSE
 GSM1319967 1	Average Fetal Weight	1195
 GSM1319967 1	Diastolic Pressure	105
 GSM1319967 1	Urine Protein Concentration	318
-GSM1319967 1	reference 	https://www.ncbi.nlm.nih.gov/geo/query/acc.cgi?acc=GSE54618  http://www.placentajournal.org/article/S0143-4004(14)00900-X/fulltext
-GSM1319966 1	Experiment	E-GEOD-54618
 GSM1319966 1	Sample Name	GSM1319966 1
 GSM1319966 1	Diagnosis	Pre-Eclampsia
 GSM1319966 1	Caesarean Section	TRUE
 GSM1319966 1	Average Fetal Weight	1195
 GSM1319966 1	Diastolic Pressure	105
 GSM1319966 1	Urine Protein Concentration	318
-GSM1319966 1	reference 	https://www.ncbi.nlm.nih.gov/geo/query/acc.cgi?acc=GSE54618  http://www.placentajournal.org/article/S0143-4004(14)00900-X/fulltext
-GSM1319965 1	Experiment	E-GEOD-54618
 GSM1319965 1	Sample Name	GSM1319965 1
 GSM1319965 1	Diagnosis	Pre-Eclampsia and HELLP
 GSM1319965 1	Caesarean Section	TRUE
 GSM1319965 1	Average Fetal Weight	1195
 GSM1319965 1	Diastolic Pressure	105
 GSM1319965 1	Urine Protein Concentration	318
-GSM1319965 1	reference 	https://www.ncbi.nlm.nih.gov/geo/query/acc.cgi?acc=GSE54618  http://www.placentajournal.org/article/S0143-4004(14)00900-X/fulltext
-GSM1319964 1	Experiment	E-GEOD-54618
 GSM1319964 1	Sample Name	GSM1319964 1
 GSM1319964 1	Diagnosis	Healthy
 GSM1319964 1	Diastolic Pressure	75
-GSM1319964 1	reference 	https://www.ncbi.nlm.nih.gov/geo/query/acc.cgi?acc=GSE54618  http://www.placentajournal.org/article/S0143-4004(14)00900-X/fulltext
-GSM1177811 1	Experiment	E-GEOD-48424
 GSM1177811 1	Sample Name	GSM1177811 1
 GSM1177811 1	Diagnosis	Severe Pre-Eclampsia
 GSM1177811 1	Average Fetal Weight	1900
 GSM1177811 1	Systolic Pressure	160
 GSM1177811 1	Diastolic Pressure	110
 GSM1177811 1	Urine Protein Concentration	1000
-GSM1177811 1	reference 	https://www.ncbi.nlm.nih.gov/pmc/articles/PMC3859491/
-GSM1177810 1	Experiment	E-GEOD-48424
 GSM1177810 1	Sample Name	GSM1177810 1
 GSM1177810 1	Diagnosis	Healthy
 GSM1177810 1	Average Fetal Weight	3240
-GSM1177810 1	reference 	https://www.ncbi.nlm.nih.gov/pmc/articles/PMC3859491/
-GSM1177809 1	Experiment	E-GEOD-48424
 GSM1177809 1	Sample Name	GSM1177809 1
 GSM1177809 1	Diagnosis	Healthy
 GSM1177809 1	Average Fetal Weight	3240
-GSM1177809 1	reference 	https://www.ncbi.nlm.nih.gov/pmc/articles/PMC3859491/
-GSM1177808 1	Experiment	E-GEOD-48424
 GSM1177808 1	Sample Name	GSM1177808 1
 GSM1177808 1	Diagnosis	Severe Pre-Eclampsia
 GSM1177808 1	Average Fetal Weight	1900
 GSM1177808 1	Systolic Pressure	160
 GSM1177808 1	Diastolic Pressure	110
 GSM1177808 1	Urine Protein Concentration	1000
-GSM1177808 1	reference 	https://www.ncbi.nlm.nih.gov/pmc/articles/PMC3859491/
-GSM1177807 1	Experiment	E-GEOD-48424
 GSM1177807 1	Sample Name	GSM1177807 1
 GSM1177807 1	Diagnosis	Severe Pre-Eclampsia
 GSM1177807 1	Average Fetal Weight	1900
 GSM1177807 1	Systolic Pressure	160
 GSM1177807 1	Diastolic Pressure	110
 GSM1177807 1	Urine Protein Concentration	1000
-GSM1177807 1	reference 	https://www.ncbi.nlm.nih.gov/pmc/articles/PMC3859491/
-GSM1177806 1	Experiment	E-GEOD-48424
 GSM1177806 1	Sample Name	GSM1177806 1
 GSM1177806 1	Diagnosis	Pre-Eclampsia
 GSM1177806 1	Average Fetal Weight	1805
 GSM1177806 1	Systolic Pressure	140
 GSM1177806 1	Diastolic Pressure	90
 GSM1177806 1	Urine Protein Concentration	380
-GSM1177806 1	reference 	https://www.ncbi.nlm.nih.gov/pmc/articles/PMC3859491/
-GSM1177805 1	Experiment	E-GEOD-48424
 GSM1177805 1	Sample Name	GSM1177805 1
 GSM1177805 1	Diagnosis	Healthy
 GSM1177805 1	Average Fetal Weight	3240
-GSM1177805 1	reference 	https://www.ncbi.nlm.nih.gov/pmc/articles/PMC3859491/
-GSM1177804 1	Experiment	E-GEOD-48424
 GSM1177804 1	Sample Name	GSM1177804 1
 GSM1177804 1	Diagnosis	Healthy
 GSM1177804 1	Average Fetal Weight	3240
-GSM1177804 1	reference 	https://www.ncbi.nlm.nih.gov/pmc/articles/PMC3859491/
-GSM1177803 1	Experiment	E-GEOD-48424
 GSM1177803 1	Sample Name	GSM1177803 1
 GSM1177803 1	Diagnosis	Severe Pre-Eclampsia
 GSM1177803 1	Average Fetal Weight	1900
 GSM1177803 1	Systolic Pressure	160
 GSM1177803 1	Diastolic Pressure	110
 GSM1177803 1	Urine Protein Concentration	1000
-GSM1177803 1	reference 	https://www.ncbi.nlm.nih.gov/pmc/articles/PMC3859491/
-GSM1177802 1	Experiment	E-GEOD-48424
 GSM1177802 1	Sample Name	GSM1177802 1
 GSM1177802 1	Diagnosis	Healthy
 GSM1177802 1	Average Fetal Weight	3240
-GSM1177802 1	reference 	https://www.ncbi.nlm.nih.gov/pmc/articles/PMC3859491/
-GSM1177801 1	Experiment	E-GEOD-48424
 GSM1177801 1	Sample Name	GSM1177801 1
 GSM1177801 1	Diagnosis	Healthy
 GSM1177801 1	Average Fetal Weight	3240
-GSM1177801 1	reference 	https://www.ncbi.nlm.nih.gov/pmc/articles/PMC3859491/
-GSM1177800 1	Experiment	E-GEOD-48424
 GSM1177800 1	Sample Name	GSM1177800 1
 GSM1177800 1	Diagnosis	Healthy
 GSM1177800 1	Average Fetal Weight	3240
-GSM1177800 1	reference 	https://www.ncbi.nlm.nih.gov/pmc/articles/PMC3859491/
-GSM1177799 1	Experiment	E-GEOD-48424
 GSM1177799 1	Sample Name	GSM1177799 1
 GSM1177799 1	Diagnosis	Healthy
 GSM1177799 1	Average Fetal Weight	3240
-GSM1177799 1	reference 	https://www.ncbi.nlm.nih.gov/pmc/articles/PMC3859491/
-GSM1177798 1	Experiment	E-GEOD-48424
 GSM1177798 1	Sample Name	GSM1177798 1
 GSM1177798 1	Diagnosis	Healthy
 GSM1177798 1	Average Fetal Weight	3240
-GSM1177798 1	reference 	https://www.ncbi.nlm.nih.gov/pmc/articles/PMC3859491/
-GSM1177797 1	Experiment	E-GEOD-48424
 GSM1177797 1	Sample Name	GSM1177797 1
 GSM1177797 1	Diagnosis	Pre-Eclampsia
 GSM1177797 1	Average Fetal Weight	1805
 GSM1177797 1	Systolic Pressure	140
 GSM1177797 1	Diastolic Pressure	90
 GSM1177797 1	Urine Protein Concentration	380
-GSM1177797 1	reference 	https://www.ncbi.nlm.nih.gov/pmc/articles/PMC3859491/
-GSM1177796 1	Experiment	E-GEOD-48424
 GSM1177796 1	Sample Name	GSM1177796 1
 GSM1177796 1	Diagnosis	Severe Pre-Eclampsia
 GSM1177796 1	Average Fetal Weight	1900
 GSM1177796 1	Systolic Pressure	160
 GSM1177796 1	Diastolic Pressure	110
 GSM1177796 1	Urine Protein Concentration	1000
-GSM1177796 1	reference 	https://www.ncbi.nlm.nih.gov/pmc/articles/PMC3859491/
-GSM1177795 1	Experiment	E-GEOD-48424
 GSM1177795 1	Sample Name	GSM1177795 1
 GSM1177795 1	Diagnosis	Healthy
 GSM1177795 1	Average Fetal Weight	3240
-GSM1177795 1	reference 	https://www.ncbi.nlm.nih.gov/pmc/articles/PMC3859491/
-GSM1177794 1	Experiment	E-GEOD-48424
 GSM1177794 1	Sample Name	GSM1177794 1
 GSM1177794 1	Diagnosis	Severe Pre-Eclampsia
 GSM1177794 1	Average Fetal Weight	1900
 GSM1177794 1	Systolic Pressure	160
 GSM1177794 1	Diastolic Pressure	110
 GSM1177794 1	Urine Protein Concentration	1000
-GSM1177794 1	reference 	https://www.ncbi.nlm.nih.gov/pmc/articles/PMC3859491/
-GSM1177793 1	Experiment	E-GEOD-48424
 GSM1177793 1	Sample Name	GSM1177793 1
 GSM1177793 1	Diagnosis	Healthy
 GSM1177793 1	Average Fetal Weight	3240
-GSM1177793 1	reference 	https://www.ncbi.nlm.nih.gov/pmc/articles/PMC3859491/
-GSM1177792 1	Experiment	E-GEOD-48424
 GSM1177792 1	Sample Name	GSM1177792 1
 GSM1177792 1	Diagnosis	Severe Pre-Eclampsia
 GSM1177792 1	Average Fetal Weight	1900
 GSM1177792 1	Systolic Pressure	160
 GSM1177792 1	Diastolic Pressure	110
 GSM1177792 1	Urine Protein Concentration	1000
-GSM1177792 1	reference 	https://www.ncbi.nlm.nih.gov/pmc/articles/PMC3859491/
-GSM1177791 1	Experiment	E-GEOD-48424
 GSM1177791 1	Sample Name	GSM1177791 1
 GSM1177791 1	Diagnosis	Pre-Eclampsia
 GSM1177791 1	Average Fetal Weight	1805
 GSM1177791 1	Systolic Pressure	140
 GSM1177791 1	Diastolic Pressure	90
 GSM1177791 1	Urine Protein Concentration	380
-GSM1177791 1	reference 	https://www.ncbi.nlm.nih.gov/pmc/articles/PMC3859491/
-GSM1177790 1	Experiment	E-GEOD-48424
 GSM1177790 1	Sample Name	GSM1177790 1
 GSM1177790 1	Diagnosis	Severe Pre-Eclampsia
 GSM1177790 1	Average Fetal Weight	1900
 GSM1177790 1	Systolic Pressure	160
 GSM1177790 1	Diastolic Pressure	110
 GSM1177790 1	Urine Protein Concentration	1000
-GSM1177790 1	reference 	https://www.ncbi.nlm.nih.gov/pmc/articles/PMC3859491/
-GSM1177789 1	Experiment	E-GEOD-48424
 GSM1177789 1	Sample Name	GSM1177789 1
 GSM1177789 1	Diagnosis	Healthy
 GSM1177789 1	Average Fetal Weight	3240
-GSM1177789 1	reference 	https://www.ncbi.nlm.nih.gov/pmc/articles/PMC3859491/
-GSM1177788 1	Experiment	E-GEOD-48424
 GSM1177788 1	Sample Name	GSM1177788 1
 GSM1177788 1	Diagnosis	Pre-Eclampsia
 GSM1177788 1	Average Fetal Weight	1805
 GSM1177788 1	Systolic Pressure	140
 GSM1177788 1	Diastolic Pressure	90
 GSM1177788 1	Urine Protein Concentration	380
-GSM1177788 1	reference 	https://www.ncbi.nlm.nih.gov/pmc/articles/PMC3859491/
-GSM1177787 1	Experiment	E-GEOD-48424
 GSM1177787 1	Sample Name	GSM1177787 1
 GSM1177787 1	Diagnosis	Severe Pre-Eclampsia
 GSM1177787 1	Average Fetal Weight	1900
 GSM1177787 1	Systolic Pressure	160
 GSM1177787 1	Diastolic Pressure	110
 GSM1177787 1	Urine Protein Concentration	1000
-GSM1177787 1	reference 	https://www.ncbi.nlm.nih.gov/pmc/articles/PMC3859491/
-GSM1177786 1	Experiment	E-GEOD-48424
 GSM1177786 1	Sample Name	GSM1177786 1
 GSM1177786 1	Diagnosis	Pre-Eclampsia
-GSM1177786 1	reference 	https://www.ncbi.nlm.nih.gov/pmc/articles/PMC3859491/
-GSM1177785 1	Experiment	E-GEOD-48424
 GSM1177785 1	Sample Name	GSM1177785 1
 GSM1177785 1	Diagnosis	Severe Pre-Eclampsia
 GSM1177785 1	Average Fetal Weight	1900
 GSM1177785 1	Systolic Pressure	160
 GSM1177785 1	Diastolic Pressure	110
 GSM1177785 1	Urine Protein Concentration	1000
-GSM1177785 1	reference 	https://www.ncbi.nlm.nih.gov/pmc/articles/PMC3859491/
-GSM1177784 1	Experiment	E-GEOD-48424
 GSM1177784 1	Sample Name	GSM1177784 1
 GSM1177784 1	Diagnosis	Healthy
 GSM1177784 1	Average Fetal Weight	3240
-GSM1177784 1	reference 	https://www.ncbi.nlm.nih.gov/pmc/articles/PMC3859491/
-GSM1177783 1	Experiment	E-GEOD-48424
 GSM1177783 1	Sample Name	GSM1177783 1
 GSM1177783 1	Diagnosis	Healthy
 GSM1177783 1	Average Fetal Weight	3240
-GSM1177783 1	reference 	https://www.ncbi.nlm.nih.gov/pmc/articles/PMC3859491/
-GSM1177782 1	Experiment	E-GEOD-48424
 GSM1177782 1	Sample Name	GSM1177782 1
 GSM1177782 1	Diagnosis	Healthy
 GSM1177782 1	Average Fetal Weight	3240
-GSM1177782 1	reference 	https://www.ncbi.nlm.nih.gov/pmc/articles/PMC3859491/
-GSM1177781 1	Experiment	E-GEOD-48424
 GSM1177781 1	Sample Name	GSM1177781 1
 GSM1177781 1	Diagnosis	Severe Pre-Eclampsia
 GSM1177781 1	Average Fetal Weight	1900
 GSM1177781 1	Systolic Pressure	160
 GSM1177781 1	Diastolic Pressure	110
 GSM1177781 1	Urine Protein Concentration	1000
-GSM1177781 1	reference 	https://www.ncbi.nlm.nih.gov/pmc/articles/PMC3859491/
-GSM1177780 1	Experiment	E-GEOD-48424
 GSM1177780 1	Sample Name	GSM1177780 1
 GSM1177780 1	Diagnosis	Healthy
 GSM1177780 1	Average Fetal Weight	3240
-GSM1177780 1	reference 	https://www.ncbi.nlm.nih.gov/pmc/articles/PMC3859491/
-GSM1177779 1	Experiment	E-GEOD-48424
 GSM1177779 1	Sample Name	GSM1177779 1
 GSM1177779 1	Diagnosis	Severe Pre-Eclampsia
 GSM1177779 1	Average Fetal Weight	1900
 GSM1177779 1	Systolic Pressure	160
 GSM1177779 1	Diastolic Pressure	110
 GSM1177779 1	Urine Protein Concentration	1000
-GSM1177779 1	reference 	https://www.ncbi.nlm.nih.gov/pmc/articles/PMC3859491/
-GSM1177778 1	Experiment	E-GEOD-48424
 GSM1177778 1	Sample Name	GSM1177778 1
 GSM1177778 1	Diagnosis	Healthy
 GSM1177778 1	Average Fetal Weight	3240
-GSM1177778 1	reference 	https://www.ncbi.nlm.nih.gov/pmc/articles/PMC3859491/
-GSM1177777 1	Experiment	E-GEOD-48424
 GSM1177777 1	Sample Name	GSM1177777 1
 GSM1177777 1	Diagnosis	Healthy
 GSM1177777 1	Average Fetal Weight	3240
-GSM1177777 1	reference 	https://www.ncbi.nlm.nih.gov/pmc/articles/PMC3859491/
-GSM1177776 1	Experiment	E-GEOD-48424
 GSM1177776 1	Sample Name	GSM1177776 1
 GSM1177776 1	Diagnosis	Severe Pre-Eclampsia
 GSM1177776 1	Average Fetal Weight	1900
 GSM1177776 1	Systolic Pressure	160
 GSM1177776 1	Diastolic Pressure	110
 GSM1177776 1	Urine Protein Concentration	1000
-GSM1177776 1	reference 	https://www.ncbi.nlm.nih.gov/pmc/articles/PMC3859491/
-GSM1089244 1	Experiment	E-GEOD-44711
 GSM1089244 1	Sample Name	GSM1089244 1
 GSM1089244 1	Diagnosis	Healthy
 GSM1089244 1	Average Maternal Age	31.5
-GSM1089244 1	reference 	https://www.ncbi.nlm.nih.gov/pmc/articles/PMC3779005/
-GSM1089243 1	Experiment	E-GEOD-44711
 GSM1089243 1	Sample Name	GSM1089243 1
 GSM1089243 1	Diagnosis	Healthy
 GSM1089243 1	Average Maternal Age	31.5
-GSM1089243 1	reference 	https://www.ncbi.nlm.nih.gov/pmc/articles/PMC3779005/
-GSM1089242 1	Experiment	E-GEOD-44711
 GSM1089242 1	Sample Name	GSM1089242 1
 GSM1089242 1	Diagnosis	Healthy
 GSM1089242 1	Average Maternal Age	31.5
-GSM1089242 1	reference 	https://www.ncbi.nlm.nih.gov/pmc/articles/PMC3779005/
-GSM1089241 1	Experiment	E-GEOD-44711
 GSM1089241 1	Sample Name	GSM1089241 1
 GSM1089241 1	Diagnosis	Healthy
 GSM1089241 1	Average Maternal Age	31.5
-GSM1089241 1	reference 	https://www.ncbi.nlm.nih.gov/pmc/articles/PMC3779005/
-GSM1089240 1	Experiment	E-GEOD-44711
 GSM1089240 1	Sample Name	GSM1089240 1
 GSM1089240 1	Diagnosis	Healthy
 GSM1089240 1	Average Maternal Age	31.5
-GSM1089240 1	reference 	https://www.ncbi.nlm.nih.gov/pmc/articles/PMC3779005/
-GSM1089239 1	Experiment	E-GEOD-44711
 GSM1089239 1	Sample Name	GSM1089239 1
 GSM1089239 1	Diagnosis	Healthy
 GSM1089239 1	Average Maternal Age	31.5
-GSM1089239 1	reference 	https://www.ncbi.nlm.nih.gov/pmc/articles/PMC3779005/
-GSM1089238 1	Experiment	E-GEOD-44711
 GSM1089238 1	Sample Name	GSM1089238 1
 GSM1089238 1	Diagnosis	Healthy
 GSM1089238 1	Average Maternal Age	31.5
-GSM1089238 1	reference 	https://www.ncbi.nlm.nih.gov/pmc/articles/PMC3779005/
-GSM1089237 1	Experiment	E-GEOD-44711
 GSM1089237 1	Sample Name	GSM1089237 1
 GSM1089237 1	Diagnosis	Healthy
 GSM1089237 1	Average Maternal Age	31.5
-GSM1089237 1	reference 	https://www.ncbi.nlm.nih.gov/pmc/articles/PMC3779005/
-GSM1089236 1	Experiment	E-GEOD-44711
 GSM1089236 1	Sample Name	GSM1089236 1
 GSM1089236 1	Diagnosis	Pre-Eclampsia
 GSM1089236 1	Average Maternal Age	33.5
 GSM1089236 1	Systolic Pressure	140
 GSM1089236 1	Diastolic Pressure	90
 GSM1089236 1	Urine Protein Concentration	300
-GSM1089236 1	reference 	https://www.ncbi.nlm.nih.gov/pmc/articles/PMC3779005/
-GSM1089235 1	Experiment	E-GEOD-44711
 GSM1089235 1	Sample Name	GSM1089235 1
 GSM1089235 1	Diagnosis	Pre-Eclampsia and FGR
 GSM1089235 1	Average Maternal Age	33.5
 GSM1089235 1	Systolic Pressure	140
 GSM1089235 1	Diastolic Pressure	90
 GSM1089235 1	Urine Protein Concentration	300
-GSM1089235 1	reference 	https://www.ncbi.nlm.nih.gov/pmc/articles/PMC3779005/
-GSM1089234 1	Experiment	E-GEOD-44711
 GSM1089234 1	Sample Name	GSM1089234 1
 GSM1089234 1	Diagnosis	Pre-Eclampsia and FGR
 GSM1089234 1	Average Maternal Age	33.5
 GSM1089234 1	Systolic Pressure	140
 GSM1089234 1	Diastolic Pressure	90
 GSM1089234 1	Urine Protein Concentration	300
-GSM1089234 1	reference 	https://www.ncbi.nlm.nih.gov/pmc/articles/PMC3779005/
-GSM1089233 1	Experiment	E-GEOD-44711
 GSM1089233 1	Sample Name	GSM1089233 1
 GSM1089233 1	Diagnosis	Pre-Eclampsia and FGR
 GSM1089233 1	Average Maternal Age	33.5
 GSM1089233 1	Systolic Pressure	140
 GSM1089233 1	Diastolic Pressure	90
 GSM1089233 1	Urine Protein Concentration	300
-GSM1089233 1	reference 	https://www.ncbi.nlm.nih.gov/pmc/articles/PMC3779005/
-GSM1089232 1	Experiment	E-GEOD-44711
 GSM1089232 1	Sample Name	GSM1089232 1
 GSM1089232 1	Diagnosis	Pre-Eclampsia
 GSM1089232 1	Average Maternal Age	33.5
 GSM1089232 1	Systolic Pressure	140
 GSM1089232 1	Diastolic Pressure	90
 GSM1089232 1	Urine Protein Concentration	300
-GSM1089232 1	reference 	https://www.ncbi.nlm.nih.gov/pmc/articles/PMC3779005/
-GSM1089231 1	Experiment	E-GEOD-44711
 GSM1089231 1	Sample Name	GSM1089231 1
 GSM1089231 1	Diagnosis	Pre-Eclampsia and FGR
 GSM1089231 1	Average Maternal Age	33.5
 GSM1089231 1	Systolic Pressure	140
 GSM1089231 1	Diastolic Pressure	90
 GSM1089231 1	Urine Protein Concentration	300
-GSM1089231 1	reference 	https://www.ncbi.nlm.nih.gov/pmc/articles/PMC3779005/
-GSM1089230 1	Experiment	E-GEOD-44711
 GSM1089230 1	Sample Name	GSM1089230 1
 GSM1089230 1	Diagnosis	Pre-Eclampsia and FGR
 GSM1089230 1	Average Maternal Age	33.5
 GSM1089230 1	Systolic Pressure	140
 GSM1089230 1	Diastolic Pressure	90
 GSM1089230 1	Urine Protein Concentration	300
-GSM1089230 1	reference 	https://www.ncbi.nlm.nih.gov/pmc/articles/PMC3779005/
-GSM1089229 1	Experiment	E-GEOD-44711
 GSM1089229 1	Sample Name	GSM1089229 1
 GSM1089229 1	Diagnosis	Pre-Eclampsia and FGR
 GSM1089229 1	Average Maternal Age	33.5
 GSM1089229 1	Systolic Pressure	140
 GSM1089229 1	Diastolic Pressure	90
 GSM1089229 1	Urine Protein Concentration	300
-GSM1089229 1	reference 	https://www.ncbi.nlm.nih.gov/pmc/articles/PMC3779005/
-GSM1146438 2	Experiment	E-GEOD-47187
 GSM1146438 2	Sample Name	GSM1146438 2
 GSM1146438 2	Diagnosis	Healthy
 GSM1146438 2	Average Maternal Age	30.6
@@ -1340,8 +927,6 @@ GSM1146438 2	Fetus Sex	male
 GSM1146438 2	Average Fetal Weight	1886
 GSM1146438 2	Systolic Pressure	121
 GSM1146438 2	Diastolic Pressure	68
-GSM1146438 2	reference 	http://www.placentajournal.org/article/S0143-4004(13)00739-X/fulltext
-GSM1146438 1	Experiment	E-GEOD-47187
 GSM1146438 1	Sample Name	GSM1146438 1
 GSM1146438 1	Diagnosis	Pre-Eclampsia
 GSM1146438 1	Average Maternal Age	26.6
@@ -1349,8 +934,6 @@ GSM1146438 1	Average Fetal Weight	1482
 GSM1146438 1	Systolic Pressure	168
 GSM1146438 1	Diastolic Pressure	113
 GSM1146438 1	Urine Protein Concentration	6500
-GSM1146438 1	reference 	http://www.placentajournal.org/article/S0143-4004(13)00739-X/fulltext
-GSM1146437 2	Experiment	E-GEOD-47187
 GSM1146437 2	Sample Name	GSM1146437 2
 GSM1146437 2	Diagnosis	Healthy
 GSM1146437 2	Average Maternal Age	30.6
@@ -1358,8 +941,6 @@ GSM1146437 2	Fetus Sex	male
 GSM1146437 2	Average Fetal Weight	1886
 GSM1146437 2	Systolic Pressure	121
 GSM1146437 2	Diastolic Pressure	68
-GSM1146437 2	reference 	http://www.placentajournal.org/article/S0143-4004(13)00739-X/fulltext
-GSM1146437 1	Experiment	E-GEOD-47187
 GSM1146437 1	Sample Name	GSM1146437 1
 GSM1146437 1	Diagnosis	Pre-Eclampsia
 GSM1146437 1	Average Maternal Age	26.6
@@ -1367,8 +948,6 @@ GSM1146437 1	Average Fetal Weight	1482
 GSM1146437 1	Systolic Pressure	168
 GSM1146437 1	Diastolic Pressure	113
 GSM1146437 1	Urine Protein Concentration	6500
-GSM1146437 1	reference 	http://www.placentajournal.org/article/S0143-4004(13)00739-X/fulltext
-GSM1146436 1	Experiment	E-GEOD-47187
 GSM1146436 1	Sample Name	GSM1146436 1
 GSM1146436 1	Diagnosis	Pre-Eclampsia
 GSM1146436 1	Average Maternal Age	26.6
@@ -1376,8 +955,6 @@ GSM1146436 1	Average Fetal Weight	1482
 GSM1146436 1	Systolic Pressure	168
 GSM1146436 1	Diastolic Pressure	113
 GSM1146436 1	Urine Protein Concentration	6500
-GSM1146436 1	reference 	http://www.placentajournal.org/article/S0143-4004(13)00739-X/fulltext
-GSM1146436 2	Experiment	E-GEOD-47187
 GSM1146436 2	Sample Name	GSM1146436 2
 GSM1146436 2	Diagnosis	Healthy
 GSM1146436 2	Average Maternal Age	30.6
@@ -1385,8 +962,6 @@ GSM1146436 2	Fetus Sex	male
 GSM1146436 2	Average Fetal Weight	1886
 GSM1146436 2	Systolic Pressure	121
 GSM1146436 2	Diastolic Pressure	68
-GSM1146436 2	reference 	http://www.placentajournal.org/article/S0143-4004(13)00739-X/fulltext
-GSM1146435 2	Experiment	E-GEOD-47187
 GSM1146435 2	Sample Name	GSM1146435 2
 GSM1146435 2	Diagnosis	Healthy
 GSM1146435 2	Average Maternal Age	30.6
@@ -1394,8 +969,6 @@ GSM1146435 2	Fetus Sex	male
 GSM1146435 2	Average Fetal Weight	1886
 GSM1146435 2	Systolic Pressure	121
 GSM1146435 2	Diastolic Pressure	68
-GSM1146435 2	reference 	http://www.placentajournal.org/article/S0143-4004(13)00739-X/fulltext
-GSM1146435 1	Experiment	E-GEOD-47187
 GSM1146435 1	Sample Name	GSM1146435 1
 GSM1146435 1	Diagnosis	Pre-Eclampsia
 GSM1146435 1	Average Maternal Age	26.6
@@ -1403,8 +976,6 @@ GSM1146435 1	Average Fetal Weight	1482
 GSM1146435 1	Systolic Pressure	168
 GSM1146435 1	Diastolic Pressure	113
 GSM1146435 1	Urine Protein Concentration	6500
-GSM1146435 1	reference 	http://www.placentajournal.org/article/S0143-4004(13)00739-X/fulltext
-GSM1146434 1	Experiment	E-GEOD-47187
 GSM1146434 1	Sample Name	GSM1146434 1
 GSM1146434 1	Diagnosis	Pre-Eclampsia
 GSM1146434 1	Average Maternal Age	26.6
@@ -1412,8 +983,6 @@ GSM1146434 1	Average Fetal Weight	1482
 GSM1146434 1	Systolic Pressure	168
 GSM1146434 1	Diastolic Pressure	113
 GSM1146434 1	Urine Protein Concentration	6500
-GSM1146434 1	reference 	http://www.placentajournal.org/article/S0143-4004(13)00739-X/fulltext
-GSM1146434 2	Experiment	E-GEOD-47187
 GSM1146434 2	Sample Name	GSM1146434 2
 GSM1146434 2	Diagnosis	Healthy
 GSM1146434 2	Average Maternal Age	30.6
@@ -1421,8 +990,6 @@ GSM1146434 2	Fetus Sex	male
 GSM1146434 2	Average Fetal Weight	1886
 GSM1146434 2	Systolic Pressure	121
 GSM1146434 2	Diastolic Pressure	68
-GSM1146434 2	reference 	http://www.placentajournal.org/article/S0143-4004(13)00739-X/fulltext
-D01	Experiment	E-TABM-682
 D01	Sample Name	D01
 D01	Diagnosis	Healthy
 D01	Average Gestational Age	39
@@ -1430,8 +997,6 @@ D01	Average Maternal Age	31
 D01	Average Fetal Weight	3619
 D01	Systolic Pressure	116
 D01	Diastolic Pressure	70
-D01	reference 	http://europepmc.org/articles/PMC2989830/
-D02	Experiment	E-TABM-682
 D02	Sample Name	D02
 D02	Diagnosis	Healthy
 D02	Average Gestational Age	39
@@ -1439,8 +1004,6 @@ D02	Average Maternal Age	31
 D02	Average Fetal Weight	3619
 D02	Systolic Pressure	116
 D02	Diastolic Pressure	70
-D02	reference 	http://europepmc.org/articles/PMC2989830/
-D03	Experiment	E-TABM-682
 D03	Sample Name	D03
 D03	Diagnosis	Healthy
 D03	Average Gestational Age	39
@@ -1448,8 +1011,6 @@ D03	Average Maternal Age	31
 D03	Average Fetal Weight	3619
 D03	Systolic Pressure	116
 D03	Diastolic Pressure	70
-D03	reference 	http://europepmc.org/articles/PMC2989830/
-D04	Experiment	E-TABM-682
 D04	Sample Name	D04
 D04	Diagnosis	Healthy
 D04	Average Gestational Age	39
@@ -1457,8 +1018,6 @@ D04	Average Maternal Age	31
 D04	Average Fetal Weight	3619
 D04	Systolic Pressure	116
 D04	Diastolic Pressure	70
-D04	reference 	http://europepmc.org/articles/PMC2989830/
-D05	Experiment	E-TABM-682
 D05	Sample Name	D05
 D05	Diagnosis	Healthy
 D05	Average Gestational Age	39
@@ -1466,8 +1025,6 @@ D05	Average Maternal Age	31
 D05	Average Fetal Weight	3619
 D05	Systolic Pressure	116
 D05	Diastolic Pressure	70
-D05	reference 	http://europepmc.org/articles/PMC2989830/
-D06	Experiment	E-TABM-682
 D06	Sample Name	D06
 D06	Diagnosis	Healthy
 D06	Average Gestational Age	39
@@ -1475,8 +1032,6 @@ D06	Average Maternal Age	31
 D06	Average Fetal Weight	3619
 D06	Systolic Pressure	116
 D06	Diastolic Pressure	70
-D06	reference 	http://europepmc.org/articles/PMC2989830/
-D07	Experiment	E-TABM-682
 D07	Sample Name	D07
 D07	Diagnosis	Healthy
 D07	Average Gestational Age	39
@@ -1484,8 +1039,6 @@ D07	Average Maternal Age	31
 D07	Average Fetal Weight	3619
 D07	Systolic Pressure	116
 D07	Diastolic Pressure	70
-D07	reference 	http://europepmc.org/articles/PMC2989830/
-D09	Experiment	E-TABM-682
 D09	Sample Name	D09
 D09	Diagnosis	Healthy
 D09	Average Gestational Age	39
@@ -1493,8 +1046,6 @@ D09	Average Maternal Age	31
 D09	Average Fetal Weight	3619
 D09	Systolic Pressure	116
 D09	Diastolic Pressure	70
-D09	reference 	http://europepmc.org/articles/PMC2989830/
-D10	Experiment	E-TABM-682
 D10	Sample Name	D10
 D10	Diagnosis	Healthy
 D10	Average Gestational Age	39
@@ -1502,8 +1053,6 @@ D10	Average Maternal Age	31
 D10	Average Fetal Weight	3619
 D10	Systolic Pressure	116
 D10	Diastolic Pressure	70
-D10	reference 	http://europepmc.org/articles/PMC2989830/
-D11	Experiment	E-TABM-682
 D11	Sample Name	D11
 D11	Diagnosis	Healthy
 D11	Average Gestational Age	39
@@ -1511,8 +1060,6 @@ D11	Average Maternal Age	31
 D11	Average Fetal Weight	3619
 D11	Systolic Pressure	116
 D11	Diastolic Pressure	70
-D11	reference 	http://europepmc.org/articles/PMC2989830/
-D12	Experiment	E-TABM-682
 D12	Sample Name	D12
 D12	Diagnosis	Fetal Growth Retardation
 D12	Average Gestational Age	32
@@ -1520,8 +1067,6 @@ D12	Average Maternal Age	34
 D12	Average Fetal Weight	1225
 D12	Systolic Pressure	128
 D12	Diastolic Pressure	74
-D12	reference 	http://europepmc.org/articles/PMC2989830/
-D13	Experiment	E-TABM-682
 D13	Sample Name	D13
 D13	Diagnosis	Fetal Growth Retardation
 D13	Average Gestational Age	32
@@ -1529,8 +1074,6 @@ D13	Average Maternal Age	34
 D13	Average Fetal Weight	1225
 D13	Systolic Pressure	128
 D13	Diastolic Pressure	74
-D13	reference 	http://europepmc.org/articles/PMC2989830/
-D14	Experiment	E-TABM-682
 D14	Sample Name	D14
 D14	Diagnosis	Fetal Growth Retardation
 D14	Average Gestational Age	32
@@ -1538,8 +1081,6 @@ D14	Average Maternal Age	34
 D14	Average Fetal Weight	1225
 D14	Systolic Pressure	128
 D14	Diastolic Pressure	74
-D14	reference 	http://europepmc.org/articles/PMC2989830/
-D16	Experiment	E-TABM-682
 D16	Sample Name	D16
 D16	Diagnosis	Fetal Growth Retardation
 D16	Average Gestational Age	32
@@ -1547,8 +1088,6 @@ D16	Average Maternal Age	34
 D16	Average Fetal Weight	1225
 D16	Systolic Pressure	128
 D16	Diastolic Pressure	74
-D16	reference 	http://europepmc.org/articles/PMC2989830/
-D17	Experiment	E-TABM-682
 D17	Sample Name	D17
 D17	Diagnosis	Pre-Eclampsia
 D17	Average Gestational Age	35
@@ -1556,8 +1095,6 @@ D17	Average Maternal Age	30
 D17	Average Fetal Weight	2364
 D17	Systolic Pressure	153
 D17	Diastolic Pressure	95
-D17	reference 	http://europepmc.org/articles/PMC2989830/
-D18	Experiment	E-TABM-682
 D18	Sample Name	D18
 D18	Diagnosis	Pre-Eclampsia
 D18	Average Gestational Age	35
@@ -1565,8 +1102,6 @@ D18	Average Maternal Age	30
 D18	Average Fetal Weight	2364
 D18	Systolic Pressure	153
 D18	Diastolic Pressure	95
-D18	reference 	http://europepmc.org/articles/PMC2989830/
-D19	Experiment	E-TABM-682
 D19	Sample Name	D19
 D19	Diagnosis	Pre-Eclampsia
 D19	Average Gestational Age	35
@@ -1574,8 +1109,6 @@ D19	Average Maternal Age	30
 D19	Average Fetal Weight	2364
 D19	Systolic Pressure	153
 D19	Diastolic Pressure	95
-D19	reference 	http://europepmc.org/articles/PMC2989830/
-D20	Experiment	E-TABM-682
 D20	Sample Name	D20
 D20	Diagnosis	Pre-Eclampsia
 D20	Average Gestational Age	35
@@ -1583,8 +1116,6 @@ D20	Average Maternal Age	30
 D20	Average Fetal Weight	2364
 D20	Systolic Pressure	153
 D20	Diastolic Pressure	95
-D20	reference 	http://europepmc.org/articles/PMC2989830/
-D21	Experiment	E-TABM-682
 D21	Sample Name	D21
 D21	Diagnosis	Pre-Eclampsia
 D21	Average Gestational Age	35
@@ -1592,8 +1123,6 @@ D21	Average Maternal Age	30
 D21	Average Fetal Weight	2364
 D21	Systolic Pressure	153
 D21	Diastolic Pressure	95
-D21	reference 	http://europepmc.org/articles/PMC2989830/
-D22	Experiment	E-TABM-682
 D22	Sample Name	D22
 D22	Diagnosis	Pre-Eclampsia
 D22	Average Gestational Age	35
@@ -1601,8 +1130,6 @@ D22	Average Maternal Age	30
 D22	Average Fetal Weight	2364
 D22	Systolic Pressure	153
 D22	Diastolic Pressure	95
-D22	reference 	http://europepmc.org/articles/PMC2989830/
-D23	Experiment	E-TABM-682
 D23	Sample Name	D23
 D23	Diagnosis	Pre-Eclampsia and FGR
 D23	Average Gestational Age	30
@@ -1610,8 +1137,6 @@ D23	Average Maternal Age	31
 D23	Average Fetal Weight	1118
 D23	Systolic Pressure	151
 D23	Diastolic Pressure	97
-D23	reference 	http://europepmc.org/articles/PMC2989830/
-D24	Experiment	E-TABM-682
 D24	Sample Name	D24
 D24	Diagnosis	Pre-Eclampsia and FGR
 D24	Average Gestational Age	30
@@ -1619,8 +1144,6 @@ D24	Average Maternal Age	31
 D24	Average Fetal Weight	1118
 D24	Systolic Pressure	151
 D24	Diastolic Pressure	97
-D24	reference 	http://europepmc.org/articles/PMC2989830/
-D25	Experiment	E-TABM-682
 D25	Sample Name	D25
 D25	Diagnosis	Pre-Eclampsia and FGR
 D25	Average Gestational Age	30
@@ -1628,8 +1151,6 @@ D25	Average Maternal Age	31
 D25	Average Fetal Weight	1118
 D25	Systolic Pressure	151
 D25	Diastolic Pressure	97
-D25	reference 	http://europepmc.org/articles/PMC2989830/
-D26	Experiment	E-TABM-682
 D26	Sample Name	D26
 D26	Diagnosis	Pre-Eclampsia and FGR
 D26	Average Gestational Age	30
@@ -1637,8 +1158,6 @@ D26	Average Maternal Age	31
 D26	Average Fetal Weight	1118
 D26	Systolic Pressure	151
 D26	Diastolic Pressure	97
-D26	reference 	http://europepmc.org/articles/PMC2989830/
-D28	Experiment	E-TABM-682
 D28	Sample Name	D28
 D28	Diagnosis	Pre-Eclampsia and FGR
 D28	Average Gestational Age	30
@@ -1646,8 +1165,6 @@ D28	Average Maternal Age	31
 D28	Average Fetal Weight	1118
 D28	Systolic Pressure	151
 D28	Diastolic Pressure	97
-D28	reference 	http://europepmc.org/articles/PMC2989830/
-D29	Experiment	E-TABM-682
 D29	Sample Name	D29
 D29	Diagnosis	Pre-Eclampsia and FGR
 D29	Average Gestational Age	30
@@ -1655,8 +1172,6 @@ D29	Average Maternal Age	31
 D29	Average Fetal Weight	1118
 D29	Systolic Pressure	151
 D29	Diastolic Pressure	97
-D29	reference 	http://europepmc.org/articles/PMC2989830/
-D30	Experiment	E-TABM-682
 D30	Sample Name	D30
 D30	Diagnosis	Pre-Eclampsia and FGR
 D30	Average Gestational Age	30
@@ -1664,8 +1179,6 @@ D30	Average Maternal Age	31
 D30	Average Fetal Weight	1118
 D30	Systolic Pressure	151
 D30	Diastolic Pressure	97
-D30	reference 	http://europepmc.org/articles/PMC2989830/
-S01	Experiment	E-TABM-682
 S01	Sample Name	S01
 S01	Diagnosis	Pre-Eclampsia
 S01	Average Gestational Age	35
@@ -1673,8 +1186,6 @@ S01	Average Maternal Age	30
 S01	Average Fetal Weight	2364
 S01	Systolic Pressure	153
 S01	Diastolic Pressure	95
-S01	reference 	http://europepmc.org/articles/PMC2989830/
-S02	Experiment	E-TABM-682
 S02	Sample Name	S02
 S02	Diagnosis	Pre-Eclampsia
 S02	Average Gestational Age	35
@@ -1682,8 +1193,6 @@ S02	Average Maternal Age	30
 S02	Average Fetal Weight	2364
 S02	Systolic Pressure	153
 S02	Diastolic Pressure	95
-S02	reference 	http://europepmc.org/articles/PMC2989830/
-S03	Experiment	E-TABM-682
 S03	Sample Name	S03
 S03	Diagnosis	Pre-Eclampsia
 S03	Average Gestational Age	35
@@ -1691,8 +1200,6 @@ S03	Average Maternal Age	30
 S03	Average Fetal Weight	2364
 S03	Systolic Pressure	153
 S03	Diastolic Pressure	95
-S03	reference 	http://europepmc.org/articles/PMC2989830/
-S05	Experiment	E-TABM-682
 S05	Sample Name	S05
 S05	Diagnosis	Pre-Eclampsia
 S05	Average Gestational Age	35
@@ -1700,8 +1207,6 @@ S05	Average Maternal Age	30
 S05	Average Fetal Weight	2364
 S05	Systolic Pressure	153
 S05	Diastolic Pressure	95
-S05	reference 	http://europepmc.org/articles/PMC2989830/
-S07	Experiment	E-TABM-682
 S07	Sample Name	S07
 S07	Diagnosis	Pre-Eclampsia and FGR
 S07	Average Gestational Age	30
@@ -1709,8 +1214,6 @@ S07	Average Maternal Age	31
 S07	Average Fetal Weight	1118
 S07	Systolic Pressure	151
 S07	Diastolic Pressure	97
-S07	reference 	http://europepmc.org/articles/PMC2989830/
-S08	Experiment	E-TABM-682
 S08	Sample Name	S08
 S08	Diagnosis	Pre-Eclampsia and FGR
 S08	Average Gestational Age	30
@@ -1718,8 +1221,6 @@ S08	Average Maternal Age	31
 S08	Average Fetal Weight	1118
 S08	Systolic Pressure	151
 S08	Diastolic Pressure	97
-S08	reference 	http://europepmc.org/articles/PMC2989830/
-S09	Experiment	E-TABM-682
 S09	Sample Name	S09
 S09	Diagnosis	Pre-Eclampsia and FGR
 S09	Average Gestational Age	30
@@ -1727,8 +1228,6 @@ S09	Average Maternal Age	31
 S09	Average Fetal Weight	1118
 S09	Systolic Pressure	151
 S09	Diastolic Pressure	97
-S09	reference 	http://europepmc.org/articles/PMC2989830/
-S10	Experiment	E-TABM-682
 S10	Sample Name	S10
 S10	Diagnosis	Pre-Eclampsia and FGR
 S10	Average Gestational Age	30
@@ -1736,8 +1235,6 @@ S10	Average Maternal Age	31
 S10	Average Fetal Weight	1118
 S10	Systolic Pressure	151
 S10	Diastolic Pressure	97
-S10	reference 	http://europepmc.org/articles/PMC2989830/
-S12	Experiment	E-TABM-682
 S12	Sample Name	S12
 S12	Diagnosis	Pre-Eclampsia and FGR
 S12	Average Gestational Age	30
@@ -1745,8 +1242,6 @@ S12	Average Maternal Age	31
 S12	Average Fetal Weight	1118
 S12	Systolic Pressure	151
 S12	Diastolic Pressure	97
-S12	reference 	http://europepmc.org/articles/PMC2989830/
-S14	Experiment	E-TABM-682
 S14	Sample Name	S14
 S14	Diagnosis	Pre-Eclampsia and FGR
 S14	Average Gestational Age	30
@@ -1754,8 +1249,6 @@ S14	Average Maternal Age	31
 S14	Average Fetal Weight	1118
 S14	Systolic Pressure	151
 S14	Diastolic Pressure	97
-S14	reference 	http://europepmc.org/articles/PMC2989830/
-S15	Experiment	E-TABM-682
 S15	Sample Name	S15
 S15	Diagnosis	Pre-Eclampsia and FGR
 S15	Average Gestational Age	30
@@ -1763,8 +1256,6 @@ S15	Average Maternal Age	31
 S15	Average Fetal Weight	1118
 S15	Systolic Pressure	151
 S15	Diastolic Pressure	97
-S15	reference 	http://europepmc.org/articles/PMC2989830/
-S16	Experiment	E-TABM-682
 S16	Sample Name	S16
 S16	Diagnosis	Pre-Eclampsia and FGR
 S16	Average Gestational Age	30
@@ -1772,8 +1263,6 @@ S16	Average Maternal Age	31
 S16	Average Fetal Weight	1118
 S16	Systolic Pressure	151
 S16	Diastolic Pressure	97
-S16	reference 	http://europepmc.org/articles/PMC2989830/
-S17	Experiment	E-TABM-682
 S17	Sample Name	S17
 S17	Diagnosis	Pre-Eclampsia and FGR
 S17	Average Gestational Age	30
@@ -1781,8 +1270,6 @@ S17	Average Maternal Age	31
 S17	Average Fetal Weight	1118
 S17	Systolic Pressure	151
 S17	Diastolic Pressure	97
-S17	reference 	http://europepmc.org/articles/PMC2989830/
-S19	Experiment	E-TABM-682
 S19	Sample Name	S19
 S19	Diagnosis	Pre-Eclampsia and FGR
 S19	Average Gestational Age	30
@@ -1790,8 +1277,6 @@ S19	Average Maternal Age	31
 S19	Average Fetal Weight	1118
 S19	Systolic Pressure	151
 S19	Diastolic Pressure	97
-S19	reference 	http://europepmc.org/articles/PMC2989830/
-S20	Experiment	E-TABM-682
 S20	Sample Name	S20
 S20	Diagnosis	Fetal Growth Retardation
 S20	Average Gestational Age	32
@@ -1799,8 +1284,6 @@ S20	Average Maternal Age	34
 S20	Average Fetal Weight	1225
 S20	Systolic Pressure	128
 S20	Diastolic Pressure	74
-S20	reference 	http://europepmc.org/articles/PMC2989830/
-S21	Experiment	E-TABM-682
 S21	Sample Name	S21
 S21	Diagnosis	Fetal Growth Retardation
 S21	Average Gestational Age	32
@@ -1808,8 +1291,6 @@ S21	Average Maternal Age	34
 S21	Average Fetal Weight	1225
 S21	Systolic Pressure	128
 S21	Diastolic Pressure	74
-S21	reference 	http://europepmc.org/articles/PMC2989830/
-S23	Experiment	E-TABM-682
 S23	Sample Name	S23
 S23	Diagnosis	Fetal Growth Retardation
 S23	Average Gestational Age	32
@@ -1817,8 +1298,6 @@ S23	Average Maternal Age	34
 S23	Average Fetal Weight	1225
 S23	Systolic Pressure	128
 S23	Diastolic Pressure	74
-S23	reference 	http://europepmc.org/articles/PMC2989830/
-S25	Experiment	E-TABM-682
 S25	Sample Name	S25
 S25	Diagnosis	Healthy
 S25	Average Gestational Age	39
@@ -1826,8 +1305,6 @@ S25	Average Maternal Age	31
 S25	Average Fetal Weight	3619
 S25	Systolic Pressure	116
 S25	Diastolic Pressure	70
-S25	reference 	http://europepmc.org/articles/PMC2989830/
-S26	Experiment	E-TABM-682
 S26	Sample Name	S26
 S26	Diagnosis	Healthy
 S26	Average Gestational Age	39
@@ -1835,8 +1312,6 @@ S26	Average Maternal Age	31
 S26	Average Fetal Weight	3619
 S26	Systolic Pressure	116
 S26	Diastolic Pressure	70
-S26	reference 	http://europepmc.org/articles/PMC2989830/
-S27	Experiment	E-TABM-682
 S27	Sample Name	S27
 S27	Diagnosis	Healthy
 S27	Average Gestational Age	39
@@ -1844,8 +1319,6 @@ S27	Average Maternal Age	31
 S27	Average Fetal Weight	3619
 S27	Systolic Pressure	116
 S27	Diastolic Pressure	70
-S27	reference 	http://europepmc.org/articles/PMC2989830/
-S29	Experiment	E-TABM-682
 S29	Sample Name	S29
 S29	Diagnosis	Healthy
 S29	Average Gestational Age	39
@@ -1853,8 +1326,6 @@ S29	Average Maternal Age	31
 S29	Average Fetal Weight	3619
 S29	Systolic Pressure	116
 S29	Diastolic Pressure	70
-S29	reference 	http://europepmc.org/articles/PMC2989830/
-S30	Experiment	E-TABM-682
 S30	Sample Name	S30
 S30	Diagnosis	Pre-Eclampsia and FGR
 S30	Average Gestational Age	30
@@ -1862,8 +1333,6 @@ S30	Average Maternal Age	31
 S30	Average Fetal Weight	1118
 S30	Systolic Pressure	151
 S30	Diastolic Pressure	97
-S30	reference 	http://europepmc.org/articles/PMC2989830/
-S32	Experiment	E-TABM-682
 S32	Sample Name	S32
 S32	Diagnosis	Healthy
 S32	Average Gestational Age	39
@@ -1871,8 +1340,6 @@ S32	Average Maternal Age	31
 S32	Average Fetal Weight	3619
 S32	Systolic Pressure	116
 S32	Diastolic Pressure	70
-S32	reference 	http://europepmc.org/articles/PMC2989830/
-S33	Experiment	E-TABM-682
 S33	Sample Name	S33
 S33	Diagnosis	Healthy
 S33	Average Gestational Age	39
@@ -1880,8 +1347,6 @@ S33	Average Maternal Age	31
 S33	Average Fetal Weight	3619
 S33	Systolic Pressure	116
 S33	Diastolic Pressure	70
-S33	reference 	http://europepmc.org/articles/PMC2989830/
-S34	Experiment	E-TABM-682
 S34	Sample Name	S34
 S34	Diagnosis	Healthy
 S34	Average Gestational Age	39
@@ -1889,8 +1354,6 @@ S34	Average Maternal Age	31
 S34	Average Fetal Weight	3619
 S34	Systolic Pressure	116
 S34	Diastolic Pressure	70
-S34	reference 	http://europepmc.org/articles/PMC2989830/
-S35	Experiment	E-TABM-682
 S35	Sample Name	S35
 S35	Diagnosis	Healthy
 S35	Average Gestational Age	39
@@ -1898,8 +1361,6 @@ S35	Average Maternal Age	31
 S35	Average Fetal Weight	3619
 S35	Systolic Pressure	116
 S35	Diastolic Pressure	70
-S35	reference 	http://europepmc.org/articles/PMC2989830/
-S37	Experiment	E-TABM-682
 S37	Sample Name	S37
 S37	Diagnosis	Healthy
 S37	Average Gestational Age	39
@@ -1907,8 +1368,6 @@ S37	Average Maternal Age	31
 S37	Average Fetal Weight	3619
 S37	Systolic Pressure	116
 S37	Diastolic Pressure	70
-S37	reference 	http://europepmc.org/articles/PMC2989830/
-S38	Experiment	E-TABM-682
 S38	Sample Name	S38
 S38	Diagnosis	Healthy
 S38	Average Gestational Age	39
@@ -1916,8 +1375,6 @@ S38	Average Maternal Age	31
 S38	Average Fetal Weight	3619
 S38	Systolic Pressure	116
 S38	Diastolic Pressure	70
-S38	reference 	http://europepmc.org/articles/PMC2989830/
-S39	Experiment	E-TABM-682
 S39	Sample Name	S39
 S39	Diagnosis	Healthy
 S39	Average Gestational Age	39
@@ -1925,8 +1382,6 @@ S39	Average Maternal Age	31
 S39	Average Fetal Weight	3619
 S39	Systolic Pressure	116
 S39	Diastolic Pressure	70
-S39	reference 	http://europepmc.org/articles/PMC2989830/
-S40	Experiment	E-TABM-682
 S40	Sample Name	S40
 S40	Diagnosis	Healthy
 S40	Average Gestational Age	39
@@ -1934,8 +1389,6 @@ S40	Average Maternal Age	31
 S40	Average Fetal Weight	3619
 S40	Systolic Pressure	116
 S40	Diastolic Pressure	70
-S40	reference 	http://europepmc.org/articles/PMC2989830/
-S41	Experiment	E-TABM-682
 S41	Sample Name	S41
 S41	Diagnosis	Healthy
 S41	Average Gestational Age	39
@@ -1943,8 +1396,6 @@ S41	Average Maternal Age	31
 S41	Average Fetal Weight	3619
 S41	Systolic Pressure	116
 S41	Diastolic Pressure	70
-S41	reference 	http://europepmc.org/articles/PMC2989830/
-S42	Experiment	E-TABM-682
 S42	Sample Name	S42
 S42	Diagnosis	Healthy
 S42	Average Gestational Age	39
@@ -1952,8 +1403,6 @@ S42	Average Maternal Age	31
 S42	Average Fetal Weight	3619
 S42	Systolic Pressure	116
 S42	Diastolic Pressure	70
-S42	reference 	http://europepmc.org/articles/PMC2989830/
-S43	Experiment	E-TABM-682
 S43	Sample Name	S43
 S43	Diagnosis	Healthy
 S43	Average Gestational Age	39
@@ -1961,8 +1410,6 @@ S43	Average Maternal Age	31
 S43	Average Fetal Weight	3619
 S43	Systolic Pressure	116
 S43	Diastolic Pressure	70
-S43	reference 	http://europepmc.org/articles/PMC2989830/
-S44	Experiment	E-TABM-682
 S44	Sample Name	S44
 S44	Diagnosis	Pre-Eclampsia
 S44	Average Gestational Age	35
@@ -1970,8 +1417,6 @@ S44	Average Maternal Age	30
 S44	Average Fetal Weight	2364
 S44	Systolic Pressure	153
 S44	Diastolic Pressure	95
-S44	reference 	http://europepmc.org/articles/PMC2989830/
-S45	Experiment	E-TABM-682
 S45	Sample Name	S45
 S45	Diagnosis	Healthy
 S45	Average Gestational Age	39
@@ -1979,8 +1424,6 @@ S45	Average Maternal Age	31
 S45	Average Fetal Weight	3619
 S45	Systolic Pressure	116
 S45	Diastolic Pressure	70
-S45	reference 	http://europepmc.org/articles/PMC2989830/
-S46	Experiment	E-TABM-682
 S46	Sample Name	S46
 S46	Diagnosis	Healthy
 S46	Average Gestational Age	39
@@ -1988,8 +1431,6 @@ S46	Average Maternal Age	31
 S46	Average Fetal Weight	3619
 S46	Systolic Pressure	116
 S46	Diastolic Pressure	70
-S46	reference 	http://europepmc.org/articles/PMC2989830/
-S47	Experiment	E-TABM-682
 S47	Sample Name	S47
 S47	Diagnosis	Healthy
 S47	Average Gestational Age	39
@@ -1997,8 +1438,6 @@ S47	Average Maternal Age	31
 S47	Average Fetal Weight	3619
 S47	Systolic Pressure	116
 S47	Diastolic Pressure	70
-S47	reference 	http://europepmc.org/articles/PMC2989830/
-S48	Experiment	E-TABM-682
 S48	Sample Name	S48
 S48	Diagnosis	Healthy
 S48	Average Gestational Age	39
@@ -2006,8 +1445,6 @@ S48	Average Maternal Age	31
 S48	Average Fetal Weight	3619
 S48	Systolic Pressure	116
 S48	Diastolic Pressure	70
-S48	reference 	http://europepmc.org/articles/PMC2989830/
-S49	Experiment	E-TABM-682
 S49	Sample Name	S49
 S49	Diagnosis	Healthy
 S49	Average Gestational Age	39
@@ -2015,8 +1452,6 @@ S49	Average Maternal Age	31
 S49	Average Fetal Weight	3619
 S49	Systolic Pressure	116
 S49	Diastolic Pressure	70
-S49	reference 	http://europepmc.org/articles/PMC2989830/
-S51	Experiment	E-TABM-682
 S51	Sample Name	S51
 S51	Diagnosis	Healthy
 S51	Average Gestational Age	39
@@ -2024,8 +1459,6 @@ S51	Average Maternal Age	31
 S51	Average Fetal Weight	3619
 S51	Systolic Pressure	116
 S51	Diastolic Pressure	70
-S51	reference 	http://europepmc.org/articles/PMC2989830/
-S52	Experiment	E-TABM-682
 S52	Sample Name	S52
 S52	Diagnosis	Healthy
 S52	Average Gestational Age	39
@@ -2033,8 +1466,6 @@ S52	Average Maternal Age	31
 S52	Average Fetal Weight	3619
 S52	Systolic Pressure	116
 S52	Diastolic Pressure	70
-S52	reference 	http://europepmc.org/articles/PMC2989830/
-S54	Experiment	E-TABM-682
 S54	Sample Name	S54
 S54	Diagnosis	Healthy
 S54	Average Gestational Age	39
@@ -2042,8 +1473,6 @@ S54	Average Maternal Age	31
 S54	Average Fetal Weight	3619
 S54	Systolic Pressure	116
 S54	Diastolic Pressure	70
-S54	reference 	http://europepmc.org/articles/PMC2989830/
-S55	Experiment	E-TABM-682
 S55	Sample Name	S55
 S55	Diagnosis	Healthy
 S55	Average Gestational Age	39
@@ -2051,8 +1480,6 @@ S55	Average Maternal Age	31
 S55	Average Fetal Weight	3619
 S55	Systolic Pressure	116
 S55	Diastolic Pressure	70
-S55	reference 	http://europepmc.org/articles/PMC2989830/
-S56	Experiment	E-TABM-682
 S56	Sample Name	S56
 S56	Diagnosis	Healthy
 S56	Average Gestational Age	39
@@ -2060,8 +1487,6 @@ S56	Average Maternal Age	31
 S56	Average Fetal Weight	3619
 S56	Systolic Pressure	116
 S56	Diastolic Pressure	70
-S56	reference 	http://europepmc.org/articles/PMC2989830/
-S57	Experiment	E-TABM-682
 S57	Sample Name	S57
 S57	Diagnosis	Healthy
 S57	Average Gestational Age	39
@@ -2069,8 +1494,6 @@ S57	Average Maternal Age	31
 S57	Average Fetal Weight	3619
 S57	Systolic Pressure	116
 S57	Diastolic Pressure	70
-S57	reference 	http://europepmc.org/articles/PMC2989830/
-S58	Experiment	E-TABM-682
 S58	Sample Name	S58
 S58	Diagnosis	Pre-Eclampsia and FGR
 S58	Average Gestational Age	30
@@ -2078,8 +1501,6 @@ S58	Average Maternal Age	31
 S58	Average Fetal Weight	1118
 S58	Systolic Pressure	151
 S58	Diastolic Pressure	97
-S58	reference 	http://europepmc.org/articles/PMC2989830/
-S59	Experiment	E-TABM-682
 S59	Sample Name	S59
 S59	Diagnosis	Healthy
 S59	Average Gestational Age	39
@@ -2087,8 +1508,6 @@ S59	Average Maternal Age	31
 S59	Average Fetal Weight	3619
 S59	Systolic Pressure	116
 S59	Diastolic Pressure	70
-S59	reference 	http://europepmc.org/articles/PMC2989830/
-S60	Experiment	E-TABM-682
 S60	Sample Name	S60
 S60	Diagnosis	Healthy
 S60	Average Gestational Age	39
@@ -2096,8 +1515,6 @@ S60	Average Maternal Age	31
 S60	Average Fetal Weight	3619
 S60	Systolic Pressure	116
 S60	Diastolic Pressure	70
-S60	reference 	http://europepmc.org/articles/PMC2989830/
-S61	Experiment	E-TABM-682
 S61	Sample Name	S61
 S61	Diagnosis	Healthy
 S61	Average Gestational Age	39
@@ -2105,8 +1522,6 @@ S61	Average Maternal Age	31
 S61	Average Fetal Weight	3619
 S61	Systolic Pressure	116
 S61	Diastolic Pressure	70
-S61	reference 	http://europepmc.org/articles/PMC2989830/
-S62	Experiment	E-TABM-682
 S62	Sample Name	S62
 S62	Diagnosis	Healthy
 S62	Average Gestational Age	39
@@ -2114,8 +1529,6 @@ S62	Average Maternal Age	31
 S62	Average Fetal Weight	3619
 S62	Systolic Pressure	116
 S62	Diastolic Pressure	70
-S62	reference 	http://europepmc.org/articles/PMC2989830/
-S63	Experiment	E-TABM-682
 S63	Sample Name	S63
 S63	Diagnosis	Healthy
 S63	Average Gestational Age	39
@@ -2123,8 +1536,6 @@ S63	Average Maternal Age	31
 S63	Average Fetal Weight	3619
 S63	Systolic Pressure	116
 S63	Diastolic Pressure	70
-S63	reference 	http://europepmc.org/articles/PMC2989830/
-T01	Experiment	E-TABM-682
 T01	Sample Name	T01
 T01	Diagnosis	Healthy
 T01	Average Gestational Age	39
@@ -2132,8 +1543,6 @@ T01	Average Maternal Age	31
 T01	Average Fetal Weight	3619
 T01	Systolic Pressure	116
 T01	Diastolic Pressure	70
-T01	reference 	http://europepmc.org/articles/PMC2989830/
-T02	Experiment	E-TABM-682
 T02	Sample Name	T02
 T02	Diagnosis	Healthy
 T02	Average Gestational Age	39
@@ -2141,8 +1550,6 @@ T02	Average Maternal Age	31
 T02	Average Fetal Weight	3619
 T02	Systolic Pressure	116
 T02	Diastolic Pressure	70
-T02	reference 	http://europepmc.org/articles/PMC2989830/
-T03	Experiment	E-TABM-682
 T03	Sample Name	T03
 T03	Diagnosis	Healthy
 T03	Average Gestational Age	39
@@ -2150,8 +1557,6 @@ T03	Average Maternal Age	31
 T03	Average Fetal Weight	3619
 T03	Systolic Pressure	116
 T03	Diastolic Pressure	70
-T03	reference 	http://europepmc.org/articles/PMC2989830/
-T04	Experiment	E-TABM-682
 T04	Sample Name	T04
 T04	Diagnosis	Healthy
 T04	Average Gestational Age	39
@@ -2159,8 +1564,6 @@ T04	Average Maternal Age	31
 T04	Average Fetal Weight	3619
 T04	Systolic Pressure	116
 T04	Diastolic Pressure	70
-T04	reference 	http://europepmc.org/articles/PMC2989830/
-T05	Experiment	E-TABM-682
 T05	Sample Name	T05
 T05	Diagnosis	Healthy
 T05	Average Gestational Age	39
@@ -2168,8 +1571,6 @@ T05	Average Maternal Age	31
 T05	Average Fetal Weight	3619
 T05	Systolic Pressure	116
 T05	Diastolic Pressure	70
-T05	reference 	http://europepmc.org/articles/PMC2989830/
-T06	Experiment	E-TABM-682
 T06	Sample Name	T06
 T06	Diagnosis	Healthy
 T06	Average Gestational Age	39
@@ -2177,8 +1578,6 @@ T06	Average Maternal Age	31
 T06	Average Fetal Weight	3619
 T06	Systolic Pressure	116
 T06	Diastolic Pressure	70
-T06	reference 	http://europepmc.org/articles/PMC2989830/
-T07	Experiment	E-TABM-682
 T07	Sample Name	T07
 T07	Diagnosis	Healthy
 T07	Average Gestational Age	39
@@ -2186,8 +1585,6 @@ T07	Average Maternal Age	31
 T07	Average Fetal Weight	3619
 T07	Systolic Pressure	116
 T07	Diastolic Pressure	70
-T07	reference 	http://europepmc.org/articles/PMC2989830/
-T09	Experiment	E-TABM-682
 T09	Sample Name	T09
 T09	Diagnosis	Healthy
 T09	Average Gestational Age	39
@@ -2195,8 +1592,6 @@ T09	Average Maternal Age	31
 T09	Average Fetal Weight	3619
 T09	Systolic Pressure	116
 T09	Diastolic Pressure	70
-T09	reference 	http://europepmc.org/articles/PMC2989830/
-T10	Experiment	E-TABM-682
 T10	Sample Name	T10
 T10	Diagnosis	Healthy
 T10	Average Gestational Age	39
@@ -2204,8 +1599,6 @@ T10	Average Maternal Age	31
 T10	Average Fetal Weight	3619
 T10	Systolic Pressure	116
 T10	Diastolic Pressure	70
-T10	reference 	http://europepmc.org/articles/PMC2989830/
-T11	Experiment	E-TABM-682
 T11	Sample Name	T11
 T11	Diagnosis	Healthy
 T11	Average Gestational Age	39
@@ -2213,8 +1606,6 @@ T11	Average Maternal Age	31
 T11	Average Fetal Weight	3619
 T11	Systolic Pressure	116
 T11	Diastolic Pressure	70
-T11	reference 	http://europepmc.org/articles/PMC2989830/
-T12	Experiment	E-TABM-682
 T12	Sample Name	T12
 T12	Diagnosis	Healthy
 T12	Average Gestational Age	39
@@ -2222,8 +1613,6 @@ T12	Average Maternal Age	31
 T12	Average Fetal Weight	3619
 T12	Systolic Pressure	116
 T12	Diastolic Pressure	70
-T12	reference 	http://europepmc.org/articles/PMC2989830/
-T13	Experiment	E-TABM-682
 T13	Sample Name	T13
 T13	Diagnosis	Healthy
 T13	Average Gestational Age	39
@@ -2231,8 +1620,6 @@ T13	Average Maternal Age	31
 T13	Average Fetal Weight	3619
 T13	Systolic Pressure	116
 T13	Diastolic Pressure	70
-T13	reference 	http://europepmc.org/articles/PMC2989830/
-T16	Experiment	E-TABM-682
 T16	Sample Name	T16
 T16	Diagnosis	Healthy
 T16	Average Gestational Age	39
@@ -2240,8 +1627,6 @@ T16	Average Maternal Age	31
 T16	Average Fetal Weight	3619
 T16	Systolic Pressure	116
 T16	Diastolic Pressure	70
-T16	reference 	http://europepmc.org/articles/PMC2989830/
-T19	Experiment	E-TABM-682
 T19	Sample Name	T19
 T19	Diagnosis	Healthy
 T19	Average Gestational Age	39
@@ -2249,8 +1634,6 @@ T19	Average Maternal Age	31
 T19	Average Fetal Weight	3619
 T19	Systolic Pressure	116
 T19	Diastolic Pressure	70
-T19	reference 	http://europepmc.org/articles/PMC2989830/
-T21	Experiment	E-TABM-682
 T21	Sample Name	T21
 T21	Diagnosis	Healthy
 T21	Average Gestational Age	39
@@ -2258,8 +1641,6 @@ T21	Average Maternal Age	31
 T21	Average Fetal Weight	3619
 T21	Systolic Pressure	116
 T21	Diastolic Pressure	70
-T21	reference 	http://europepmc.org/articles/PMC2989830/
-T22	Experiment	E-TABM-682
 T22	Sample Name	T22
 T22	Diagnosis	Healthy
 T22	Average Gestational Age	39
@@ -2267,8 +1648,6 @@ T22	Average Maternal Age	31
 T22	Average Fetal Weight	3619
 T22	Systolic Pressure	116
 T22	Diastolic Pressure	70
-T22	reference 	http://europepmc.org/articles/PMC2989830/
-T23	Experiment	E-TABM-682
 T23	Sample Name	T23
 T23	Diagnosis	Healthy
 T23	Average Gestational Age	39
@@ -2276,8 +1655,6 @@ T23	Average Maternal Age	31
 T23	Average Fetal Weight	3619
 T23	Systolic Pressure	116
 T23	Diastolic Pressure	70
-T23	reference 	http://europepmc.org/articles/PMC2989830/
-T24	Experiment	E-TABM-682
 T24	Sample Name	T24
 T24	Diagnosis	Fetal Growth Retardation
 T24	Average Gestational Age	32
@@ -2285,8 +1662,6 @@ T24	Average Maternal Age	34
 T24	Average Fetal Weight	1225
 T24	Systolic Pressure	128
 T24	Diastolic Pressure	74
-T24	reference 	http://europepmc.org/articles/PMC2989830/
-T25	Experiment	E-TABM-682
 T25	Sample Name	T25
 T25	Diagnosis	Fetal Growth Retardation
 T25	Average Gestational Age	32
@@ -2294,8 +1669,6 @@ T25	Average Maternal Age	34
 T25	Average Fetal Weight	1225
 T25	Systolic Pressure	128
 T25	Diastolic Pressure	74
-T25	reference 	http://europepmc.org/articles/PMC2989830/
-T28	Experiment	E-TABM-682
 T28	Sample Name	T28
 T28	Diagnosis	Pre-Eclampsia
 T28	Average Gestational Age	35
@@ -2303,8 +1676,6 @@ T28	Average Maternal Age	30
 T28	Average Fetal Weight	2364
 T28	Systolic Pressure	153
 T28	Diastolic Pressure	95
-T28	reference 	http://europepmc.org/articles/PMC2989830/
-T30	Experiment	E-TABM-682
 T30	Sample Name	T30
 T30	Diagnosis	Pre-Eclampsia
 T30	Average Gestational Age	35
@@ -2312,8 +1683,6 @@ T30	Average Maternal Age	30
 T30	Average Fetal Weight	2364
 T30	Systolic Pressure	153
 T30	Diastolic Pressure	95
-T30	reference 	http://europepmc.org/articles/PMC2989830/
-T32	Experiment	E-TABM-682
 T32	Sample Name	T32
 T32	Diagnosis	Pre-Eclampsia and FGR
 T32	Average Gestational Age	30
@@ -2321,8 +1690,6 @@ T32	Average Maternal Age	31
 T32	Average Fetal Weight	1118
 T32	Systolic Pressure	151
 T32	Diastolic Pressure	97
-T32	reference 	http://europepmc.org/articles/PMC2989830/
-T37	Experiment	E-TABM-682
 T37	Sample Name	T37
 T37	Diagnosis	Pre-Eclampsia and FGR
 T37	Average Gestational Age	30
@@ -2330,8 +1697,6 @@ T37	Average Maternal Age	31
 T37	Average Fetal Weight	1118
 T37	Systolic Pressure	151
 T37	Diastolic Pressure	97
-T37	reference 	http://europepmc.org/articles/PMC2989830/
-T38	Experiment	E-TABM-682
 T38	Sample Name	T38
 T38	Diagnosis	Pre-Eclampsia and FGR
 T38	Average Gestational Age	30
@@ -2339,8 +1704,6 @@ T38	Average Maternal Age	31
 T38	Average Fetal Weight	1118
 T38	Systolic Pressure	151
 T38	Diastolic Pressure	97
-T38	reference 	http://europepmc.org/articles/PMC2989830/
-T39	Experiment	E-TABM-682
 T39	Sample Name	T39
 T39	Diagnosis	Pre-Eclampsia and FGR
 T39	Average Gestational Age	30
@@ -2348,8 +1711,6 @@ T39	Average Maternal Age	31
 T39	Average Fetal Weight	1118
 T39	Systolic Pressure	151
 T39	Diastolic Pressure	97
-T39	reference 	http://europepmc.org/articles/PMC2989830/
-T40	Experiment	E-TABM-682
 T40	Sample Name	T40
 T40	Diagnosis	Pre-Eclampsia and FGR
 T40	Average Gestational Age	30
@@ -2357,8 +1718,6 @@ T40	Average Maternal Age	31
 T40	Average Fetal Weight	1118
 T40	Systolic Pressure	151
 T40	Diastolic Pressure	97
-T40	reference 	http://europepmc.org/articles/PMC2989830/
-GSM367826 1	Experiment	E-GEOD-14722
 GSM367826 1	Sample Name	GSM367826 1
 GSM367826 1	Diagnosis	Pre-Eclampsia
 GSM367826 1	Average Gestational Age	32.1
@@ -2366,8 +1725,6 @@ GSM367826 1	Average Maternal Age	30.7
 GSM367826 1	Systolic Pressure	140
 GSM367826 1	Diastolic Pressure	90
 GSM367826 1	Urine Protein Concentration	300
-GSM367826 1	reference 	https://www.ncbi.nlm.nih.gov/pmc/articles/PMC2630905/table/T1/
-GSM367825 1	Experiment	E-GEOD-14722
 GSM367825 1	Sample Name	GSM367825 1
 GSM367825 1	Diagnosis	Pre-Eclampsia
 GSM367825 1	Average Gestational Age	32.1
@@ -2375,8 +1732,6 @@ GSM367825 1	Average Maternal Age	30.7
 GSM367825 1	Systolic Pressure	140
 GSM367825 1	Diastolic Pressure	90
 GSM367825 1	Urine Protein Concentration	300
-GSM367825 1	reference 	https://www.ncbi.nlm.nih.gov/pmc/articles/PMC2630905/table/T1/
-GSM367824 1	Experiment	E-GEOD-14722
 GSM367824 1	Sample Name	GSM367824 1
 GSM367824 1	Diagnosis	Pre-Eclampsia
 GSM367824 1	Average Gestational Age	32.1
@@ -2384,8 +1739,6 @@ GSM367824 1	Average Maternal Age	30.7
 GSM367824 1	Systolic Pressure	140
 GSM367824 1	Diastolic Pressure	90
 GSM367824 1	Urine Protein Concentration	300
-GSM367824 1	reference 	https://www.ncbi.nlm.nih.gov/pmc/articles/PMC2630905/table/T1/
-GSM367823 1	Experiment	E-GEOD-14722
 GSM367823 1	Sample Name	GSM367823 1
 GSM367823 1	Diagnosis	Pre-Eclampsia
 GSM367823 1	Average Gestational Age	32.1
@@ -2393,8 +1746,6 @@ GSM367823 1	Average Maternal Age	30.7
 GSM367823 1	Systolic Pressure	140
 GSM367823 1	Diastolic Pressure	90
 GSM367823 1	Urine Protein Concentration	300
-GSM367823 1	reference 	https://www.ncbi.nlm.nih.gov/pmc/articles/PMC2630905/table/T1/
-GSM367822 1	Experiment	E-GEOD-14722
 GSM367822 1	Sample Name	GSM367822 1
 GSM367822 1	Diagnosis	Pre-Eclampsia
 GSM367822 1	Average Gestational Age	32.1
@@ -2402,8 +1753,6 @@ GSM367822 1	Average Maternal Age	30.7
 GSM367822 1	Systolic Pressure	140
 GSM367822 1	Diastolic Pressure	90
 GSM367822 1	Urine Protein Concentration	300
-GSM367822 1	reference 	https://www.ncbi.nlm.nih.gov/pmc/articles/PMC2630905/table/T1/
-GSM367821 1	Experiment	E-GEOD-14722
 GSM367821 1	Sample Name	GSM367821 1
 GSM367821 1	Diagnosis	Pre-Eclampsia
 GSM367821 1	Average Gestational Age	32.1
@@ -2411,8 +1760,6 @@ GSM367821 1	Average Maternal Age	30.7
 GSM367821 1	Systolic Pressure	140
 GSM367821 1	Diastolic Pressure	90
 GSM367821 1	Urine Protein Concentration	300
-GSM367821 1	reference 	https://www.ncbi.nlm.nih.gov/pmc/articles/PMC2630905/table/T1/
-GSM367820 1	Experiment	E-GEOD-14722
 GSM367820 1	Sample Name	GSM367820 1
 GSM367820 1	Diagnosis	Pre-Eclampsia
 GSM367820 1	Average Gestational Age	32.1
@@ -2420,8 +1767,6 @@ GSM367820 1	Average Maternal Age	30.7
 GSM367820 1	Systolic Pressure	140
 GSM367820 1	Diastolic Pressure	90
 GSM367820 1	Urine Protein Concentration	300
-GSM367820 1	reference 	https://www.ncbi.nlm.nih.gov/pmc/articles/PMC2630905/table/T1/
-GSM367819 1	Experiment	E-GEOD-14722
 GSM367819 1	Sample Name	GSM367819 1
 GSM367819 1	Diagnosis	Pre-Eclampsia
 GSM367819 1	Average Gestational Age	32.1
@@ -2429,8 +1774,6 @@ GSM367819 1	Average Maternal Age	30.7
 GSM367819 1	Systolic Pressure	140
 GSM367819 1	Diastolic Pressure	90
 GSM367819 1	Urine Protein Concentration	300
-GSM367819 1	reference 	https://www.ncbi.nlm.nih.gov/pmc/articles/PMC2630905/table/T1/
-GSM367818 1	Experiment	E-GEOD-14722
 GSM367818 1	Sample Name	GSM367818 1
 GSM367818 1	Diagnosis	Pre-Eclampsia
 GSM367818 1	Average Gestational Age	32.1
@@ -2438,8 +1781,6 @@ GSM367818 1	Average Maternal Age	30.7
 GSM367818 1	Systolic Pressure	140
 GSM367818 1	Diastolic Pressure	90
 GSM367818 1	Urine Protein Concentration	300
-GSM367818 1	reference 	https://www.ncbi.nlm.nih.gov/pmc/articles/PMC2630905/table/T1/
-GSM367817 1	Experiment	E-GEOD-14722
 GSM367817 1	Sample Name	GSM367817 1
 GSM367817 1	Diagnosis	Pre-Eclampsia
 GSM367817 1	Average Gestational Age	32.1
@@ -2447,8 +1788,6 @@ GSM367817 1	Average Maternal Age	30.7
 GSM367817 1	Systolic Pressure	140
 GSM367817 1	Diastolic Pressure	90
 GSM367817 1	Urine Protein Concentration	300
-GSM367817 1	reference 	https://www.ncbi.nlm.nih.gov/pmc/articles/PMC2630905/table/T1/
-GSM367816 1	Experiment	E-GEOD-14722
 GSM367816 1	Sample Name	GSM367816 1
 GSM367816 1	Diagnosis	Pre-Eclampsia
 GSM367816 1	Average Gestational Age	32.1
@@ -2456,8 +1795,6 @@ GSM367816 1	Average Maternal Age	30.7
 GSM367816 1	Systolic Pressure	140
 GSM367816 1	Diastolic Pressure	90
 GSM367816 1	Urine Protein Concentration	300
-GSM367816 1	reference 	https://www.ncbi.nlm.nih.gov/pmc/articles/PMC2630905/table/T1/
-GSM367815 1	Experiment	E-GEOD-14722
 GSM367815 1	Sample Name	GSM367815 1
 GSM367815 1	Diagnosis	Pre-Eclampsia
 GSM367815 1	Average Gestational Age	32.1
@@ -2465,74 +1802,50 @@ GSM367815 1	Average Maternal Age	30.7
 GSM367815 1	Systolic Pressure	140
 GSM367815 1	Diastolic Pressure	90
 GSM367815 1	Urine Protein Concentration	300
-GSM367815 1	reference 	https://www.ncbi.nlm.nih.gov/pmc/articles/PMC2630905/table/T1/
-GSM367814 1	Experiment	E-GEOD-14722
 GSM367814 1	Sample Name	GSM367814 1
 GSM367814 1	Diagnosis	Healthy
 GSM367814 1	Average Gestational Age	31
 GSM367814 1	Average Maternal Age	30.2
-GSM367814 1	reference 	https://www.ncbi.nlm.nih.gov/pmc/articles/PMC2630905/table/T1/
-GSM367813 1	Experiment	E-GEOD-14722
 GSM367813 1	Sample Name	GSM367813 1
 GSM367813 1	Diagnosis	Healthy
 GSM367813 1	Average Gestational Age	31
 GSM367813 1	Average Maternal Age	30.2
-GSM367813 1	reference 	https://www.ncbi.nlm.nih.gov/pmc/articles/PMC2630905/table/T1/
-GSM367812 1	Experiment	E-GEOD-14722
 GSM367812 1	Sample Name	GSM367812 1
 GSM367812 1	Diagnosis	Healthy
 GSM367812 1	Average Gestational Age	31
 GSM367812 1	Average Maternal Age	30.2
-GSM367812 1	reference 	https://www.ncbi.nlm.nih.gov/pmc/articles/PMC2630905/table/T1/
-GSM367811 1	Experiment	E-GEOD-14722
 GSM367811 1	Sample Name	GSM367811 1
 GSM367811 1	Diagnosis	Healthy
 GSM367811 1	Average Gestational Age	31
 GSM367811 1	Average Maternal Age	30.2
-GSM367811 1	reference 	https://www.ncbi.nlm.nih.gov/pmc/articles/PMC2630905/table/T1/
-GSM367810 1	Experiment	E-GEOD-14722
 GSM367810 1	Sample Name	GSM367810 1
 GSM367810 1	Diagnosis	Healthy
 GSM367810 1	Average Gestational Age	31
 GSM367810 1	Average Maternal Age	30.2
-GSM367810 1	reference 	https://www.ncbi.nlm.nih.gov/pmc/articles/PMC2630905/table/T1/
-GSM367809 1	Experiment	E-GEOD-14722
 GSM367809 1	Sample Name	GSM367809 1
 GSM367809 1	Diagnosis	Healthy
 GSM367809 1	Average Gestational Age	31
 GSM367809 1	Average Maternal Age	30.2
-GSM367809 1	reference 	https://www.ncbi.nlm.nih.gov/pmc/articles/PMC2630905/table/T1/
-GSM367808 1	Experiment	E-GEOD-14722
 GSM367808 1	Sample Name	GSM367808 1
 GSM367808 1	Diagnosis	Healthy
 GSM367808 1	Average Gestational Age	31
 GSM367808 1	Average Maternal Age	30.2
-GSM367808 1	reference 	https://www.ncbi.nlm.nih.gov/pmc/articles/PMC2630905/table/T1/
-GSM367807 1	Experiment	E-GEOD-14722
 GSM367807 1	Sample Name	GSM367807 1
 GSM367807 1	Diagnosis	Healthy
 GSM367807 1	Average Gestational Age	31
 GSM367807 1	Average Maternal Age	30.2
-GSM367807 1	reference 	https://www.ncbi.nlm.nih.gov/pmc/articles/PMC2630905/table/T1/
-GSM367806 1	Experiment	E-GEOD-14722
 GSM367806 1	Sample Name	GSM367806 1
 GSM367806 1	Diagnosis	Healthy
 GSM367806 1	Average Gestational Age	31
 GSM367806 1	Average Maternal Age	30.2
-GSM367806 1	reference 	https://www.ncbi.nlm.nih.gov/pmc/articles/PMC2630905/table/T1/
-GSM367805 1	Experiment	E-GEOD-14722
 GSM367805 1	Sample Name	GSM367805 1
 GSM367805 1	Diagnosis	Healthy
 GSM367805 1	Average Gestational Age	31
 GSM367805 1	Average Maternal Age	30.2
-GSM367805 1	reference 	https://www.ncbi.nlm.nih.gov/pmc/articles/PMC2630905/table/T1/
-GSM367804 1	Experiment	E-GEOD-14722
 GSM367804 1	Sample Name	GSM367804 1
 GSM367804 1	Diagnosis	Healthy
 GSM367804 1	Average Gestational Age	31
 GSM367804 1	Average Maternal Age	30.2
-GSM367804 1	reference 	https://www.ncbi.nlm.nih.gov/pmc/articles/PMC2630905/table/T1/
-GSM367803 1	Experiment	E-GEOD-14722
 GSM367803 1	Sample Name	GSM367803 1
 GSM367803 1	Diagnosis	Pre-Eclampsia
 GSM367803 1	Average Gestational Age	32.1
@@ -2540,8 +1853,6 @@ GSM367803 1	Average Maternal Age	30.7
 GSM367803 1	Systolic Pressure	140
 GSM367803 1	Diastolic Pressure	90
 GSM367803 1	Urine Protein Concentration	300
-GSM367803 1	reference 	https://www.ncbi.nlm.nih.gov/pmc/articles/PMC2630905/table/T1/
-GSM367802 1	Experiment	E-GEOD-14722
 GSM367802 1	Sample Name	GSM367802 1
 GSM367802 1	Diagnosis	Pre-Eclampsia
 GSM367802 1	Average Gestational Age	32.1
@@ -2549,8 +1860,6 @@ GSM367802 1	Average Maternal Age	30.7
 GSM367802 1	Systolic Pressure	140
 GSM367802 1	Diastolic Pressure	90
 GSM367802 1	Urine Protein Concentration	300
-GSM367802 1	reference 	https://www.ncbi.nlm.nih.gov/pmc/articles/PMC2630905/table/T1/
-GSM367801 1	Experiment	E-GEOD-14722
 GSM367801 1	Sample Name	GSM367801 1
 GSM367801 1	Diagnosis	Pre-Eclampsia
 GSM367801 1	Average Gestational Age	32.1
@@ -2558,8 +1867,6 @@ GSM367801 1	Average Maternal Age	30.7
 GSM367801 1	Systolic Pressure	140
 GSM367801 1	Diastolic Pressure	90
 GSM367801 1	Urine Protein Concentration	300
-GSM367801 1	reference 	https://www.ncbi.nlm.nih.gov/pmc/articles/PMC2630905/table/T1/
-GSM367800 1	Experiment	E-GEOD-14722
 GSM367800 1	Sample Name	GSM367800 1
 GSM367800 1	Diagnosis	Pre-Eclampsia
 GSM367800 1	Average Gestational Age	32.1
@@ -2567,8 +1874,6 @@ GSM367800 1	Average Maternal Age	30.7
 GSM367800 1	Systolic Pressure	140
 GSM367800 1	Diastolic Pressure	90
 GSM367800 1	Urine Protein Concentration	300
-GSM367800 1	reference 	https://www.ncbi.nlm.nih.gov/pmc/articles/PMC2630905/table/T1/
-GSM367799 1	Experiment	E-GEOD-14722
 GSM367799 1	Sample Name	GSM367799 1
 GSM367799 1	Diagnosis	Pre-Eclampsia
 GSM367799 1	Average Gestational Age	32.1
@@ -2576,8 +1881,6 @@ GSM367799 1	Average Maternal Age	30.7
 GSM367799 1	Systolic Pressure	140
 GSM367799 1	Diastolic Pressure	90
 GSM367799 1	Urine Protein Concentration	300
-GSM367799 1	reference 	https://www.ncbi.nlm.nih.gov/pmc/articles/PMC2630905/table/T1/
-GSM367798 1	Experiment	E-GEOD-14722
 GSM367798 1	Sample Name	GSM367798 1
 GSM367798 1	Diagnosis	Pre-Eclampsia
 GSM367798 1	Average Gestational Age	32.1
@@ -2585,8 +1888,6 @@ GSM367798 1	Average Maternal Age	30.7
 GSM367798 1	Systolic Pressure	140
 GSM367798 1	Diastolic Pressure	90
 GSM367798 1	Urine Protein Concentration	300
-GSM367798 1	reference 	https://www.ncbi.nlm.nih.gov/pmc/articles/PMC2630905/table/T1/
-GSM367797 1	Experiment	E-GEOD-14722
 GSM367797 1	Sample Name	GSM367797 1
 GSM367797 1	Diagnosis	Pre-Eclampsia
 GSM367797 1	Average Gestational Age	32.1
@@ -2594,8 +1895,6 @@ GSM367797 1	Average Maternal Age	30.7
 GSM367797 1	Systolic Pressure	140
 GSM367797 1	Diastolic Pressure	90
 GSM367797 1	Urine Protein Concentration	300
-GSM367797 1	reference 	https://www.ncbi.nlm.nih.gov/pmc/articles/PMC2630905/table/T1/
-GSM367796 1	Experiment	E-GEOD-14722
 GSM367796 1	Sample Name	GSM367796 1
 GSM367796 1	Diagnosis	Pre-Eclampsia
 GSM367796 1	Average Gestational Age	32.1
@@ -2603,8 +1902,6 @@ GSM367796 1	Average Maternal Age	30.7
 GSM367796 1	Systolic Pressure	140
 GSM367796 1	Diastolic Pressure	90
 GSM367796 1	Urine Protein Concentration	300
-GSM367796 1	reference 	https://www.ncbi.nlm.nih.gov/pmc/articles/PMC2630905/table/T1/
-GSM367795 1	Experiment	E-GEOD-14722
 GSM367795 1	Sample Name	GSM367795 1
 GSM367795 1	Diagnosis	Pre-Eclampsia
 GSM367795 1	Average Gestational Age	32.1
@@ -2612,8 +1909,6 @@ GSM367795 1	Average Maternal Age	30.7
 GSM367795 1	Systolic Pressure	140
 GSM367795 1	Diastolic Pressure	90
 GSM367795 1	Urine Protein Concentration	300
-GSM367795 1	reference 	https://www.ncbi.nlm.nih.gov/pmc/articles/PMC2630905/table/T1/
-GSM367794 1	Experiment	E-GEOD-14722
 GSM367794 1	Sample Name	GSM367794 1
 GSM367794 1	Diagnosis	Pre-Eclampsia
 GSM367794 1	Average Gestational Age	32.1
@@ -2621,8 +1916,6 @@ GSM367794 1	Average Maternal Age	30.7
 GSM367794 1	Systolic Pressure	140
 GSM367794 1	Diastolic Pressure	90
 GSM367794 1	Urine Protein Concentration	300
-GSM367794 1	reference 	https://www.ncbi.nlm.nih.gov/pmc/articles/PMC2630905/table/T1/
-GSM367793 1	Experiment	E-GEOD-14722
 GSM367793 1	Sample Name	GSM367793 1
 GSM367793 1	Diagnosis	Pre-Eclampsia
 GSM367793 1	Average Gestational Age	32.1
@@ -2630,8 +1923,6 @@ GSM367793 1	Average Maternal Age	30.7
 GSM367793 1	Systolic Pressure	140
 GSM367793 1	Diastolic Pressure	90
 GSM367793 1	Urine Protein Concentration	300
-GSM367793 1	reference 	https://www.ncbi.nlm.nih.gov/pmc/articles/PMC2630905/table/T1/
-GSM367792 1	Experiment	E-GEOD-14722
 GSM367792 1	Sample Name	GSM367792 1
 GSM367792 1	Diagnosis	Pre-Eclampsia
 GSM367792 1	Average Gestational Age	32.1
@@ -2639,154 +1930,114 @@ GSM367792 1	Average Maternal Age	30.7
 GSM367792 1	Systolic Pressure	140
 GSM367792 1	Diastolic Pressure	90
 GSM367792 1	Urine Protein Concentration	300
-GSM367792 1	reference 	https://www.ncbi.nlm.nih.gov/pmc/articles/PMC2630905/table/T1/
-GSM367791 1	Experiment	E-GEOD-14722
 GSM367791 1	Sample Name	GSM367791 1
 GSM367791 1	Diagnosis	Healthy
 GSM367791 1	Average Gestational Age	31
 GSM367791 1	Average Maternal Age	30.2
-GSM367791 1	reference 	https://www.ncbi.nlm.nih.gov/pmc/articles/PMC2630905/table/T1/
-GSM367790 1	Experiment	E-GEOD-14722
 GSM367790 1	Sample Name	GSM367790 1
 GSM367790 1	Diagnosis	Healthy
 GSM367790 1	Average Gestational Age	31
 GSM367790 1	Average Maternal Age	30.2
-GSM367790 1	reference 	https://www.ncbi.nlm.nih.gov/pmc/articles/PMC2630905/table/T1/
-GSM367789 1	Experiment	E-GEOD-14722
 GSM367789 1	Sample Name	GSM367789 1
 GSM367789 1	Diagnosis	Healthy
 GSM367789 1	Average Gestational Age	31
 GSM367789 1	Average Maternal Age	30.2
-GSM367789 1	reference 	https://www.ncbi.nlm.nih.gov/pmc/articles/PMC2630905/table/T1/
-GSM367788 1	Experiment	E-GEOD-14722
 GSM367788 1	Sample Name	GSM367788 1
 GSM367788 1	Diagnosis	Healthy
 GSM367788 1	Average Gestational Age	31
 GSM367788 1	Average Maternal Age	30.2
-GSM367788 1	reference 	https://www.ncbi.nlm.nih.gov/pmc/articles/PMC2630905/table/T1/
-GSM367787 1	Experiment	E-GEOD-14722
 GSM367787 1	Sample Name	GSM367787 1
 GSM367787 1	Diagnosis	Healthy
 GSM367787 1	Average Gestational Age	31
 GSM367787 1	Average Maternal Age	30.2
-GSM367787 1	reference 	https://www.ncbi.nlm.nih.gov/pmc/articles/PMC2630905/table/T1/
-GSM367786 1	Experiment	E-GEOD-14722
 GSM367786 1	Sample Name	GSM367786 1
 GSM367786 1	Diagnosis	Healthy
 GSM367786 1	Average Gestational Age	31
 GSM367786 1	Average Maternal Age	30.2
-GSM367786 1	reference 	https://www.ncbi.nlm.nih.gov/pmc/articles/PMC2630905/table/T1/
-GSM367785 1	Experiment	E-GEOD-14722
 GSM367785 1	Sample Name	GSM367785 1
 GSM367785 1	Diagnosis	Healthy
 GSM367785 1	Average Gestational Age	31
 GSM367785 1	Average Maternal Age	30.2
-GSM367785 1	reference 	https://www.ncbi.nlm.nih.gov/pmc/articles/PMC2630905/table/T1/
-GSM367784 1	Experiment	E-GEOD-14722
 GSM367784 1	Sample Name	GSM367784 1
 GSM367784 1	Diagnosis	Healthy
 GSM367784 1	Average Gestational Age	31
 GSM367784 1	Average Maternal Age	30.2
-GSM367784 1	reference 	https://www.ncbi.nlm.nih.gov/pmc/articles/PMC2630905/table/T1/
-GSM367783 1	Experiment	E-GEOD-14722
 GSM367783 1	Sample Name	GSM367783 1
 GSM367783 1	Diagnosis	Healthy
 GSM367783 1	Average Gestational Age	31
 GSM367783 1	Average Maternal Age	30.2
-GSM367783 1	reference 	https://www.ncbi.nlm.nih.gov/pmc/articles/PMC2630905/table/T1/
-GSM367782 1	Experiment	E-GEOD-14722
 GSM367782 1	Sample Name	GSM367782 1
 GSM367782 1	Diagnosis	Healthy
 GSM367782 1	Average Gestational Age	31
 GSM367782 1	Average Maternal Age	30.2
-GSM367782 1	reference 	https://www.ncbi.nlm.nih.gov/pmc/articles/PMC2630905/table/T1/
-GSM367781 1	Experiment	E-GEOD-14722
 GSM367781 1	Sample Name	GSM367781 1
 GSM367781 1	Diagnosis	Healthy
 GSM367781 1	Average Gestational Age	31
 GSM367781 1	Average Maternal Age	30.2
-GSM367781 1	reference 	https://www.ncbi.nlm.nih.gov/pmc/articles/PMC2630905/table/T1/
-GSM307201 1	Experiment	E-GEOD-12216
 GSM307201 1	Sample Name	GSM307201 1
 GSM307201 1	Diagnosis	Fetal Growth Retardation
 GSM307201 1	Average Maternal Age	30.13
 GSM307201 1	Placenta Weight	293
-GSM307200 1	Experiment	E-GEOD-12216
 GSM307200 1	Sample Name	GSM307200 1
 GSM307200 1	Diagnosis	Fetal Growth Retardation
 GSM307200 1	Average Maternal Age	30.13
 GSM307200 1	Placenta Weight	293
-GSM307199 1	Experiment	E-GEOD-12216
 GSM307199 1	Sample Name	GSM307199 1
 GSM307199 1	Diagnosis	Fetal Growth Retardation
 GSM307199 1	Average Maternal Age	30.13
 GSM307199 1	Placenta Weight	293
-GSM307198 1	Experiment	E-GEOD-12216
 GSM307198 1	Sample Name	GSM307198 1
 GSM307198 1	Diagnosis	Fetal Growth Retardation
 GSM307198 1	Average Maternal Age	30.13
 GSM307198 1	Placenta Weight	293
-GSM307197 1	Experiment	E-GEOD-12216
 GSM307197 1	Sample Name	GSM307197 1
 GSM307197 1	Diagnosis	Fetal Growth Retardation
 GSM307197 1	Average Maternal Age	30.13
 GSM307197 1	Placenta Weight	293
-GSM307196 1	Experiment	E-GEOD-12216
 GSM307196 1	Sample Name	GSM307196 1
 GSM307196 1	Diagnosis	Fetal Growth Retardation
 GSM307196 1	Average Maternal Age	30.13
 GSM307196 1	Placenta Weight	293
-GSM307195 1	Experiment	E-GEOD-12216
 GSM307195 1	Sample Name	GSM307195 1
 GSM307195 1	Diagnosis	Fetal Growth Retardation
 GSM307195 1	Average Maternal Age	30.13
 GSM307195 1	Placenta Weight	293
-GSM307194 1	Experiment	E-GEOD-12216
 GSM307194 1	Sample Name	GSM307194 1
 GSM307194 1	Diagnosis	Fetal Growth Retardation
 GSM307194 1	Average Maternal Age	30.13
 GSM307194 1	Placenta Weight	293
-GSM307193 1	Experiment	E-GEOD-12216
 GSM307193 1	Sample Name	GSM307193 1
 GSM307193 1	Diagnosis	Healthy
 GSM307193 1	Average Maternal Age	32.25
 GSM307193 1	Placenta Weight	730
-GSM307192 1	Experiment	E-GEOD-12216
 GSM307192 1	Sample Name	GSM307192 1
 GSM307192 1	Diagnosis	Healthy
 GSM307192 1	Average Maternal Age	32.25
 GSM307192 1	Placenta Weight	730
-GSM307191 1	Experiment	E-GEOD-12216
 GSM307191 1	Sample Name	GSM307191 1
 GSM307191 1	Diagnosis	Healthy
 GSM307191 1	Average Maternal Age	32.25
 GSM307191 1	Placenta Weight	730
-GSM307190 1	Experiment	E-GEOD-12216
 GSM307190 1	Sample Name	GSM307190 1
 GSM307190 1	Diagnosis	Healthy
 GSM307190 1	Average Maternal Age	32.25
 GSM307190 1	Placenta Weight	730
-GSM307189 1	Experiment	E-GEOD-12216
 GSM307189 1	Sample Name	GSM307189 1
 GSM307189 1	Diagnosis	Healthy
 GSM307189 1	Average Maternal Age	32.25
 GSM307189 1	Placenta Weight	730
-GSM307188 1	Experiment	E-GEOD-12216
 GSM307188 1	Sample Name	GSM307188 1
 GSM307188 1	Diagnosis	Healthy
 GSM307188 1	Average Maternal Age	32.25
 GSM307188 1	Placenta Weight	730
-GSM307187 1	Experiment	E-GEOD-12216
 GSM307187 1	Sample Name	GSM307187 1
 GSM307187 1	Diagnosis	Healthy
 GSM307187 1	Average Maternal Age	32.25
 GSM307187 1	Placenta Weight	730
-GSM307186 1	Experiment	E-GEOD-12216
 GSM307186 1	Sample Name	GSM307186 1
 GSM307186 1	Diagnosis	Healthy
 GSM307186 1	Average Maternal Age	32.25
 GSM307186 1	Placenta Weight	730
-GSE4707GSM106285_Cy5	Experiment	E-GEOD-4707
 GSE4707GSM106285_Cy5	Sample Name	GSE4707GSM106285_Cy5
 GSE4707GSM106285_Cy5	Diagnosis	Severe Pre-Eclampsia
 GSE4707GSM106285_Cy5	Average Gestational Age	32.9
@@ -2796,8 +2047,6 @@ GSE4707GSM106285_Cy5	Placenta Weight	277
 GSE4707GSM106285_Cy5	Systolic Pressure	170.6
 GSE4707GSM106285_Cy5	Diastolic Pressure	105.7
 GSE4707GSM106285_Cy5	Urine Protein Concentration	2000
-GSE4707GSM106285_Cy5	reference 	http://sci-hub.cc/10.1016/j.placenta.2006.05.010/
-GSE4707GSM106285_Cy3	Experiment	E-GEOD-4707
 GSE4707GSM106285_Cy3	Sample Name	GSE4707GSM106285_Cy3
 GSE4707GSM106285_Cy3	Diagnosis	Healthy
 GSE4707GSM106285_Cy3	Average Gestational Age	32.9
@@ -2806,8 +2055,6 @@ GSE4707GSM106285_Cy3	Average Fetal Weight	2265.9
 GSE4707GSM106285_Cy3	Placenta Weight	616.4
 GSE4707GSM106285_Cy3	Systolic Pressure	113.1
 GSE4707GSM106285_Cy3	Diastolic Pressure	67.1
-GSE4707GSM106285_Cy3	reference 	http://sci-hub.cc/10.1016/j.placenta.2006.05.010/
-GSE4707GSM106282_Cy3	Experiment	E-GEOD-4707
 GSE4707GSM106282_Cy3	Sample Name	GSE4707GSM106282_Cy3
 GSE4707GSM106282_Cy3	Diagnosis	Healthy
 GSE4707GSM106282_Cy3	Average Gestational Age	32.9
@@ -2816,8 +2063,6 @@ GSE4707GSM106282_Cy3	Average Fetal Weight	2265.9
 GSE4707GSM106282_Cy3	Placenta Weight	616.4
 GSE4707GSM106282_Cy3	Systolic Pressure	113.1
 GSE4707GSM106282_Cy3	Diastolic Pressure	67.1
-GSE4707GSM106282_Cy3	reference 	http://sci-hub.cc/10.1016/j.placenta.2006.05.010/
-GSE4707GSM106282_Cy5	Experiment	E-GEOD-4707
 GSE4707GSM106282_Cy5	Sample Name	GSE4707GSM106282_Cy5
 GSE4707GSM106282_Cy5	Diagnosis	Severe Pre-Eclampsia
 GSE4707GSM106282_Cy5	Average Gestational Age	32.9
@@ -2827,8 +2072,6 @@ GSE4707GSM106282_Cy5	Placenta Weight	277
 GSE4707GSM106282_Cy5	Systolic Pressure	170.6
 GSE4707GSM106282_Cy5	Diastolic Pressure	105.7
 GSE4707GSM106282_Cy5	Urine Protein Concentration	2000
-GSE4707GSM106282_Cy5	reference 	http://sci-hub.cc/10.1016/j.placenta.2006.05.010/
-GSE4707GSM106283_Cy3	Experiment	E-GEOD-4707
 GSE4707GSM106283_Cy3	Sample Name	GSE4707GSM106283_Cy3
 GSE4707GSM106283_Cy3	Diagnosis	Healthy
 GSE4707GSM106283_Cy3	Average Gestational Age	32.9
@@ -2837,8 +2080,6 @@ GSE4707GSM106283_Cy3	Average Fetal Weight	2265.9
 GSE4707GSM106283_Cy3	Placenta Weight	616.4
 GSE4707GSM106283_Cy3	Systolic Pressure	113.1
 GSE4707GSM106283_Cy3	Diastolic Pressure	67.1
-GSE4707GSM106283_Cy3	reference 	http://sci-hub.cc/10.1016/j.placenta.2006.05.010/
-GSE4707GSM106283_Cy5	Experiment	E-GEOD-4707
 GSE4707GSM106283_Cy5	Sample Name	GSE4707GSM106283_Cy5
 GSE4707GSM106283_Cy5	Diagnosis	Severe Pre-Eclampsia
 GSE4707GSM106283_Cy5	Average Gestational Age	32.9
@@ -2848,8 +2089,6 @@ GSE4707GSM106283_Cy5	Placenta Weight	277
 GSE4707GSM106283_Cy5	Systolic Pressure	170.6
 GSE4707GSM106283_Cy5	Diastolic Pressure	105.7
 GSE4707GSM106283_Cy5	Urine Protein Concentration	2000
-GSE4707GSM106283_Cy5	reference 	http://sci-hub.cc/10.1016/j.placenta.2006.05.010/
-GSE4707GSM106284_Cy3	Experiment	E-GEOD-4707
 GSE4707GSM106284_Cy3	Sample Name	GSE4707GSM106284_Cy3
 GSE4707GSM106284_Cy3	Diagnosis	Healthy
 GSE4707GSM106284_Cy3	Average Gestational Age	32.9
@@ -2858,8 +2097,6 @@ GSE4707GSM106284_Cy3	Average Fetal Weight	2265.9
 GSE4707GSM106284_Cy3	Placenta Weight	616.4
 GSE4707GSM106284_Cy3	Systolic Pressure	113.1
 GSE4707GSM106284_Cy3	Diastolic Pressure	67.1
-GSE4707GSM106284_Cy3	reference 	http://sci-hub.cc/10.1016/j.placenta.2006.05.010/
-GSE4707GSM106284_Cy5	Experiment	E-GEOD-4707
 GSE4707GSM106284_Cy5	Sample Name	GSE4707GSM106284_Cy5
 GSE4707GSM106284_Cy5	Diagnosis	Severe Pre-Eclampsia
 GSE4707GSM106284_Cy5	Average Gestational Age	32.9
@@ -2869,8 +2106,6 @@ GSE4707GSM106284_Cy5	Placenta Weight	277
 GSE4707GSM106284_Cy5	Systolic Pressure	170.6
 GSE4707GSM106284_Cy5	Diastolic Pressure	105.7
 GSE4707GSM106284_Cy5	Urine Protein Concentration	2000
-GSE4707GSM106284_Cy5	reference 	http://sci-hub.cc/10.1016/j.placenta.2006.05.010/
-GSE4707GSM106274_Cy5	Experiment	E-GEOD-4707
 GSE4707GSM106274_Cy5	Sample Name	GSE4707GSM106274_Cy5
 GSE4707GSM106274_Cy5	Diagnosis	Healthy
 GSE4707GSM106274_Cy5	Average Gestational Age	32.9
@@ -2879,8 +2114,6 @@ GSE4707GSM106274_Cy5	Average Fetal Weight	2265.9
 GSE4707GSM106274_Cy5	Placenta Weight	616.4
 GSE4707GSM106274_Cy5	Systolic Pressure	113.1
 GSE4707GSM106274_Cy5	Diastolic Pressure	67.1
-GSE4707GSM106274_Cy5	reference 	http://sci-hub.cc/10.1016/j.placenta.2006.05.010/
-GSE4707GSM106274_Cy3	Experiment	E-GEOD-4707
 GSE4707GSM106274_Cy3	Sample Name	GSE4707GSM106274_Cy3
 GSE4707GSM106274_Cy3	Diagnosis	Healthy
 GSE4707GSM106274_Cy3	Average Gestational Age	32.9
@@ -2889,8 +2122,6 @@ GSE4707GSM106274_Cy3	Average Fetal Weight	2265.9
 GSE4707GSM106274_Cy3	Placenta Weight	616.4
 GSE4707GSM106274_Cy3	Systolic Pressure	113.1
 GSE4707GSM106274_Cy3	Diastolic Pressure	67.1
-GSE4707GSM106274_Cy3	reference 	http://sci-hub.cc/10.1016/j.placenta.2006.05.010/
-GSE4707GSM106278_Cy5	Experiment	E-GEOD-4707
 GSE4707GSM106278_Cy5	Sample Name	GSE4707GSM106278_Cy5
 GSE4707GSM106278_Cy5	Diagnosis	Severe Pre-Eclampsia
 GSE4707GSM106278_Cy5	Average Gestational Age	32.9
@@ -2900,8 +2131,6 @@ GSE4707GSM106278_Cy5	Placenta Weight	277
 GSE4707GSM106278_Cy5	Systolic Pressure	170.6
 GSE4707GSM106278_Cy5	Diastolic Pressure	105.7
 GSE4707GSM106278_Cy5	Urine Protein Concentration	2000
-GSE4707GSM106278_Cy5	reference 	http://sci-hub.cc/10.1016/j.placenta.2006.05.010/
-GSE4707GSM106278_Cy3	Experiment	E-GEOD-4707
 GSE4707GSM106278_Cy3	Sample Name	GSE4707GSM106278_Cy3
 GSE4707GSM106278_Cy3	Diagnosis	Healthy
 GSE4707GSM106278_Cy3	Average Gestational Age	32.9
@@ -2910,8 +2139,6 @@ GSE4707GSM106278_Cy3	Average Fetal Weight	2265.9
 GSE4707GSM106278_Cy3	Placenta Weight	616.4
 GSE4707GSM106278_Cy3	Systolic Pressure	113.1
 GSE4707GSM106278_Cy3	Diastolic Pressure	67.1
-GSE4707GSM106278_Cy3	reference 	http://sci-hub.cc/10.1016/j.placenta.2006.05.010/
-GSE4707GSM106279_Cy5	Experiment	E-GEOD-4707
 GSE4707GSM106279_Cy5	Sample Name	GSE4707GSM106279_Cy5
 GSE4707GSM106279_Cy5	Diagnosis	Severe Pre-Eclampsia
 GSE4707GSM106279_Cy5	Average Gestational Age	32.9
@@ -2921,8 +2148,6 @@ GSE4707GSM106279_Cy5	Placenta Weight	277
 GSE4707GSM106279_Cy5	Systolic Pressure	170.6
 GSE4707GSM106279_Cy5	Diastolic Pressure	105.7
 GSE4707GSM106279_Cy5	Urine Protein Concentration	2000
-GSE4707GSM106279_Cy5	reference 	http://sci-hub.cc/10.1016/j.placenta.2006.05.010/
-GSE4707GSM106279_Cy3	Experiment	E-GEOD-4707
 GSE4707GSM106279_Cy3	Sample Name	GSE4707GSM106279_Cy3
 GSE4707GSM106279_Cy3	Diagnosis	Healthy
 GSE4707GSM106279_Cy3	Average Gestational Age	32.9
@@ -2931,8 +2156,6 @@ GSE4707GSM106279_Cy3	Average Fetal Weight	2265.9
 GSE4707GSM106279_Cy3	Placenta Weight	616.4
 GSE4707GSM106279_Cy3	Systolic Pressure	113.1
 GSE4707GSM106279_Cy3	Diastolic Pressure	67.1
-GSE4707GSM106279_Cy3	reference 	http://sci-hub.cc/10.1016/j.placenta.2006.05.010/
-GSE4707GSM106250_Cy5	Experiment	E-GEOD-4707
 GSE4707GSM106250_Cy5	Sample Name	GSE4707GSM106250_Cy5
 GSE4707GSM106250_Cy5	Diagnosis	Healthy
 GSE4707GSM106250_Cy5	Average Gestational Age	32.9
@@ -2941,8 +2164,6 @@ GSE4707GSM106250_Cy5	Average Fetal Weight	2265.9
 GSE4707GSM106250_Cy5	Placenta Weight	616.4
 GSE4707GSM106250_Cy5	Systolic Pressure	113.1
 GSE4707GSM106250_Cy5	Diastolic Pressure	67.1
-GSE4707GSM106250_Cy5	reference 	http://sci-hub.cc/10.1016/j.placenta.2006.05.010/
-GSE4707GSM106250_Cy3	Experiment	E-GEOD-4707
 GSE4707GSM106250_Cy3	Sample Name	GSE4707GSM106250_Cy3
 GSE4707GSM106250_Cy3	Diagnosis	Healthy
 GSE4707GSM106250_Cy3	Average Gestational Age	32.9
@@ -2951,8 +2172,6 @@ GSE4707GSM106250_Cy3	Average Fetal Weight	2265.9
 GSE4707GSM106250_Cy3	Placenta Weight	616.4
 GSE4707GSM106250_Cy3	Systolic Pressure	113.1
 GSE4707GSM106250_Cy3	Diastolic Pressure	67.1
-GSE4707GSM106250_Cy3	reference 	http://sci-hub.cc/10.1016/j.placenta.2006.05.010/
-GSE4707GSM106277_Cy5	Experiment	E-GEOD-4707
 GSE4707GSM106277_Cy5	Sample Name	GSE4707GSM106277_Cy5
 GSE4707GSM106277_Cy5	Diagnosis	Severe Pre-Eclampsia
 GSE4707GSM106277_Cy5	Average Gestational Age	32.9
@@ -2962,8 +2181,6 @@ GSE4707GSM106277_Cy5	Placenta Weight	277
 GSE4707GSM106277_Cy5	Systolic Pressure	170.6
 GSE4707GSM106277_Cy5	Diastolic Pressure	105.7
 GSE4707GSM106277_Cy5	Urine Protein Concentration	2000
-GSE4707GSM106277_Cy5	reference 	http://sci-hub.cc/10.1016/j.placenta.2006.05.010/
-GSE4707GSM106277_Cy3	Experiment	E-GEOD-4707
 GSE4707GSM106277_Cy3	Sample Name	GSE4707GSM106277_Cy3
 GSE4707GSM106277_Cy3	Diagnosis	Healthy
 GSE4707GSM106277_Cy3	Average Gestational Age	32.9
@@ -2972,8 +2189,6 @@ GSE4707GSM106277_Cy3	Average Fetal Weight	2265.9
 GSE4707GSM106277_Cy3	Placenta Weight	616.4
 GSE4707GSM106277_Cy3	Systolic Pressure	113.1
 GSE4707GSM106277_Cy3	Diastolic Pressure	67.1
-GSE4707GSM106277_Cy3	reference 	http://sci-hub.cc/10.1016/j.placenta.2006.05.010/
-GSE4707GSM106281_Cy5	Experiment	E-GEOD-4707
 GSE4707GSM106281_Cy5	Sample Name	GSE4707GSM106281_Cy5
 GSE4707GSM106281_Cy5	Diagnosis	Severe Pre-Eclampsia
 GSE4707GSM106281_Cy5	Average Gestational Age	32.9
@@ -2983,8 +2198,6 @@ GSE4707GSM106281_Cy5	Placenta Weight	277
 GSE4707GSM106281_Cy5	Systolic Pressure	170.6
 GSE4707GSM106281_Cy5	Diastolic Pressure	105.7
 GSE4707GSM106281_Cy5	Urine Protein Concentration	2000
-GSE4707GSM106281_Cy5	reference 	http://sci-hub.cc/10.1016/j.placenta.2006.05.010/
-GSE4707GSM106281_Cy3	Experiment	E-GEOD-4707
 GSE4707GSM106281_Cy3	Sample Name	GSE4707GSM106281_Cy3
 GSE4707GSM106281_Cy3	Diagnosis	Healthy
 GSE4707GSM106281_Cy3	Average Gestational Age	32.9
@@ -2993,8 +2206,6 @@ GSE4707GSM106281_Cy3	Average Fetal Weight	2265.9
 GSE4707GSM106281_Cy3	Placenta Weight	616.4
 GSE4707GSM106281_Cy3	Systolic Pressure	113.1
 GSE4707GSM106281_Cy3	Diastolic Pressure	67.1
-GSE4707GSM106281_Cy3	reference 	http://sci-hub.cc/10.1016/j.placenta.2006.05.010/
-GSE4707GSM106276_Cy3	Experiment	E-GEOD-4707
 GSE4707GSM106276_Cy3	Sample Name	GSE4707GSM106276_Cy3
 GSE4707GSM106276_Cy3	Diagnosis	Healthy
 GSE4707GSM106276_Cy3	Average Gestational Age	32.9
@@ -3003,8 +2214,6 @@ GSE4707GSM106276_Cy3	Average Fetal Weight	2265.9
 GSE4707GSM106276_Cy3	Placenta Weight	616.4
 GSE4707GSM106276_Cy3	Systolic Pressure	113.1
 GSE4707GSM106276_Cy3	Diastolic Pressure	67.1
-GSE4707GSM106276_Cy3	reference 	http://sci-hub.cc/10.1016/j.placenta.2006.05.010/
-GSE4707GSM106276_Cy5	Experiment	E-GEOD-4707
 GSE4707GSM106276_Cy5	Sample Name	GSE4707GSM106276_Cy5
 GSE4707GSM106276_Cy5	Diagnosis	Severe Pre-Eclampsia
 GSE4707GSM106276_Cy5	Average Gestational Age	32.9
@@ -3014,8 +2223,6 @@ GSE4707GSM106276_Cy5	Placenta Weight	277
 GSE4707GSM106276_Cy5	Systolic Pressure	170.6
 GSE4707GSM106276_Cy5	Diastolic Pressure	105.7
 GSE4707GSM106276_Cy5	Urine Protein Concentration	2000
-GSE4707GSM106276_Cy5	reference 	http://sci-hub.cc/10.1016/j.placenta.2006.05.010/
-GSE4707GSM106249_Cy3	Experiment	E-GEOD-4707
 GSE4707GSM106249_Cy3	Sample Name	GSE4707GSM106249_Cy3
 GSE4707GSM106249_Cy3	Diagnosis	Healthy
 GSE4707GSM106249_Cy3	Average Gestational Age	32.9
@@ -3024,8 +2231,6 @@ GSE4707GSM106249_Cy3	Average Fetal Weight	2265.9
 GSE4707GSM106249_Cy3	Placenta Weight	616.4
 GSE4707GSM106249_Cy3	Systolic Pressure	113.1
 GSE4707GSM106249_Cy3	Diastolic Pressure	67.1
-GSE4707GSM106249_Cy3	reference 	http://sci-hub.cc/10.1016/j.placenta.2006.05.010/
-GSE4707GSM106249_Cy5	Experiment	E-GEOD-4707
 GSE4707GSM106249_Cy5	Sample Name	GSE4707GSM106249_Cy5
 GSE4707GSM106249_Cy5	Diagnosis	Healthy
 GSE4707GSM106249_Cy5	Average Gestational Age	32.9
@@ -3034,8 +2239,6 @@ GSE4707GSM106249_Cy5	Average Fetal Weight	2265.9
 GSE4707GSM106249_Cy5	Placenta Weight	616.4
 GSE4707GSM106249_Cy5	Systolic Pressure	113.1
 GSE4707GSM106249_Cy5	Diastolic Pressure	67.1
-GSE4707GSM106249_Cy5	reference 	http://sci-hub.cc/10.1016/j.placenta.2006.05.010/
-GSE4707GSM106280_Cy3	Experiment	E-GEOD-4707
 GSE4707GSM106280_Cy3	Sample Name	GSE4707GSM106280_Cy3
 GSE4707GSM106280_Cy3	Diagnosis	Healthy
 GSE4707GSM106280_Cy3	Average Gestational Age	32.9
@@ -3044,8 +2247,6 @@ GSE4707GSM106280_Cy3	Average Fetal Weight	2265.9
 GSE4707GSM106280_Cy3	Placenta Weight	616.4
 GSE4707GSM106280_Cy3	Systolic Pressure	113.1
 GSE4707GSM106280_Cy3	Diastolic Pressure	67.1
-GSE4707GSM106280_Cy3	reference 	http://sci-hub.cc/10.1016/j.placenta.2006.05.010/
-GSE4707GSM106280_Cy5	Experiment	E-GEOD-4707
 GSE4707GSM106280_Cy5	Sample Name	GSE4707GSM106280_Cy5
 GSE4707GSM106280_Cy5	Diagnosis	Severe Pre-Eclampsia
 GSE4707GSM106280_Cy5	Average Gestational Age	32.9
@@ -3055,8 +2256,6 @@ GSE4707GSM106280_Cy5	Placenta Weight	277
 GSE4707GSM106280_Cy5	Systolic Pressure	170.6
 GSE4707GSM106280_Cy5	Diastolic Pressure	105.7
 GSE4707GSM106280_Cy5	Urine Protein Concentration	2000
-GSE4707GSM106280_Cy5	reference 	http://sci-hub.cc/10.1016/j.placenta.2006.05.010/
-GSE4707GSM106275_Cy5	Experiment	E-GEOD-4707
 GSE4707GSM106275_Cy5	Sample Name	GSE4707GSM106275_Cy5
 GSE4707GSM106275_Cy5	Diagnosis	Healthy
 GSE4707GSM106275_Cy5	Average Gestational Age	32.9
@@ -3065,8 +2264,6 @@ GSE4707GSM106275_Cy5	Average Fetal Weight	2265.9
 GSE4707GSM106275_Cy5	Placenta Weight	616.4
 GSE4707GSM106275_Cy5	Systolic Pressure	113.1
 GSE4707GSM106275_Cy5	Diastolic Pressure	67.1
-GSE4707GSM106275_Cy5	reference 	http://sci-hub.cc/10.1016/j.placenta.2006.05.010/
-GSE4707GSM106275_Cy3	Experiment	E-GEOD-4707
 GSE4707GSM106275_Cy3	Sample Name	GSE4707GSM106275_Cy3
 GSE4707GSM106275_Cy3	Diagnosis	Healthy
 GSE4707GSM106275_Cy3	Average Gestational Age	32.9
@@ -3075,4 +2272,3 @@ GSE4707GSM106275_Cy3	Average Fetal Weight	2265.9
 GSE4707GSM106275_Cy3	Placenta Weight	616.4
 GSE4707GSM106275_Cy3	Systolic Pressure	113.1
 GSE4707GSM106275_Cy3	Diastolic Pressure	67.1
-GSE4707GSM106275_Cy3	reference 	http://sci-hub.cc/10.1016/j.placenta.2006.05.010/

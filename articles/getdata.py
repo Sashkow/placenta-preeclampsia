@@ -565,22 +565,98 @@ def unify_exp(exp):
                     new_sa.save()
                     print(".. and saved!")
 
-def tsv_to_db():
-    # with open('articles/temp/vsevolod.tsv') as tsvin:
-    #     rows = list(csv.reader(tsvin, delimiter='\t'))
-    #     pairs = []
-    #     rownames = rows[0]
-    #     for rowid in range(1,len(rows)):
-    #         sample_name = rows[rowid][1]
-    #         if sample_name:
-    #             for colid in range(len(rows[rowid])):
-    #                 if rows[rowid][colid]:
-    #                     pairs.append('\t'.join([sample_name, rownames[colid], rows[rowid][colid]]))
-    #
-    #     with open('articles/temp/three_cols_vsevolod.tsv', 'w') as tsv:
-    #         for pair in pairs:
-    #             tsv.write(pair+'\n')
+def sample_tsv_to_three_column_tsv():
+    """Create "sample    old_name    old_value" tsv based on samples.tsv"""
+    with open('articles/temp/vsevolod.tsv') as tsvin:
+        rows = list(csv.reader(tsvin, delimiter='\t'))
+        pairs = []
+        rownames = rows[0]
+        for rowid in range(1,len(rows)):
+            sample_name = rows[rowid][0]
+            if sample_name:
+                for colid in range(len(rows[rowid])):
+                    if rows[rowid][colid]:
+                        pairs.append('\t'.join([sample_name, rownames[colid], rows[rowid][colid]]))
 
+        with open('articles/temp/three_cols_vsevolod.tsv', 'w') as tsv:
+            for pair in pairs:
+                tsv.write(pair+'\n')
+
+def three_column_tsv_check():
+    attributes = SampleAttribute.objects.all()
+
+    with open('articles/temp/three_cols_vsevolod.tsv', 'r') as tsv:
+        rows = list(csv.reader(tsv, delimiter='\t'))
+        for row in rows:
+            sample = SampleAttribute.objects.filter(
+                unificated_name__name='Sample Name',
+                old_value=row[0]).first()
+            if sample:
+                sample = sample.sample
+            else:
+                print("No such sample", row[0])
+                return
+
+            attribute = attributes.filter(sample=sample, unificated_name__name=row[1]).first()
+
+            """
+            1. sample unificated_name unificated_value
+                do nothing
+            2. sample unificated_name old_value
+                do nothing
+            3. sample unificated_name
+                modify old_value
+            4. sample
+                add new old name old value
+            5. nothing
+                print(nosample)
+            """
+            if attribute:
+                if attribute.unificated_value:
+                    value = attribute.unificated_value.value
+                else:
+                    value = ""
+                if value == row[2] or attribute.old_value == row[2]:
+                    # print("Do nothing for", attribute)
+                    pass
+                else:
+                    print("Modify old value", attribute.old_value, "to", row[2], "in", row, attribute)
+                    # attribute.old_value = row[2]
+            else:
+                pass
+                # print("Make new attribute", row)
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+                # SampleAttribute.add_or_replace(
+                #         sample=sample,
+                #         old_name=row[1],
+                #         old_value=row[2]
+                # )
+
+
+
+
+
+
+
+
+
+def tsv_to_db():
         with open('articles/temp/three_cols_vsevolod.tsv', 'r') as tsv:
             rows = list(csv.reader(tsv, delimiter='\t'))
             for row in rows:
@@ -612,8 +688,12 @@ def tsv_to_db():
                                 print("Not Exist", sample, unificated_name, row[2])
 
 
-
-
+"""
+samples.tsv to three column.tsv
+three_column.tsv to db as old names
+three_column.tsv to standardize.tsv
+standardize.tsv to unify_exp()
+"""
 
 
 def main():

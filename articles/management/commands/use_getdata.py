@@ -16,11 +16,11 @@ class Command(BaseCommand):
 
         # tsv_to_db()
 
-        for item in StandardValue.objects.all():
-            print(item.value)
+        three_column_tsv_check()
 
         
         # lst = get_placenta_accession()
         # experiment_id = lst[0]
         # # get_experiment_attributes(experiment_id)
-        # print(get_experiment_samples_attributes(experiment_id))
+        # print(get_experiment_samples_attributes(experiment_-``
+        #

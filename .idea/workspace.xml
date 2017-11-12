@@ -2,45 +2,14 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="93a00d0c-8fdd-4565-b313-9599ba83cdde" name="Default" comment="">
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/misc.xml" afterPath="$PROJECT_DIR$/.idea/misc.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/placenta-preeclampsia.iml" afterPath="$PROJECT_DIR$/.idea/placenta-preeclampsia.iml" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/articles/temp/.~lock.three_cols_vsevolod.tsv#" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/articles/temp/.~lock.vsevolod.tsv#" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/articles/test/tsv/.~lock.samples.tsv#" afterPath="" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/articles/add_gestational_age.py" afterPath="$PROJECT_DIR$/articles/add_gestational_age.py" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/articles/admin.py" afterPath="$PROJECT_DIR$/articles/admin.py" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/articles/getdata.py" afterPath="$PROJECT_DIR$/articles/getdata.py" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/articles/management/commands/add_E-GEOD-10588.py" afterPath="$PROJECT_DIR$/articles/management/commands/add_E-GEOD-10588.py" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/articles/management/commands/add_E-GEOD-35574.py" afterPath="$PROJECT_DIR$/articles/management/commands/add_E-GEOD-35574.py" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/articles/management/commands/add_E-GEOD-41336.py" afterPath="$PROJECT_DIR$/articles/management/commands/add_E-GEOD-41336.py" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/articles/management/commands/add_E-GEOD-44667.py" afterPath="$PROJECT_DIR$/articles/management/commands/add_E-GEOD-44667.py" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/articles/management/commands/add_E-GEOD-54618.py" afterPath="$PROJECT_DIR$/articles/management/commands/add_E-GEOD-54618.py" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/articles/management/commands/add_E-GEOD-59274.py" afterPath="$PROJECT_DIR$/articles/management/commands/add_E-GEOD-59274.py" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/articles/management/commands/add_E-GEOD-60438.py" afterPath="$PROJECT_DIR$/articles/management/commands/add_E-GEOD-60438.py" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/articles/management/commands/add_E-GEOD-73377.py" afterPath="$PROJECT_DIR$/articles/management/commands/add_E-GEOD-73377.py" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/articles/management/commands/add_E-GEOD-74341.py" afterPath="$PROJECT_DIR$/articles/management/commands/add_E-GEOD-74341.py" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/articles/management/commands/add_E-TABM-682.py" afterPath="$PROJECT_DIR$/articles/management/commands/add_E-TABM-682.py" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/articles/management/commands/add_gestational_age.py" afterPath="$PROJECT_DIR$/articles/management/commands/add_gestational_age.py" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/articles/management/commands/replace_csection.py" afterPath="$PROJECT_DIR$/articles/management/commands/replace_csection.py" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/articles/management/commands/use_getdata.py" afterPath="$PROJECT_DIR$/articles/management/commands/use_getdata.py" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/articles/management/commands/use_queries.py" afterPath="$PROJECT_DIR$/articles/management/commands/use_queries.py" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/articles/migrations/0003_auto_20160830_1650.py" afterPath="$PROJECT_DIR$/articles/migrations/0003_auto_20160830_1650.py" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/articles/migrations/0006_auto_20160831_1753.py" afterPath="$PROJECT_DIR$/articles/migrations/0006_auto_20160831_1753.py" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/articles/migrations/0007_auto_20160831_1901.py" afterPath="$PROJECT_DIR$/articles/migrations/0007_auto_20160831_1901.py" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/articles/migrations/0008_auto_20160906_1412.py" afterPath="$PROJECT_DIR$/articles/migrations/0008_auto_20160906_1412.py" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/articles/migrations/0012_auto_20160908_1230.py" afterPath="$PROJECT_DIR$/articles/migrations/0012_auto_20160908_1230.py" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/articles/migrations/0013_auto_20160908_1238.py" afterPath="$PROJECT_DIR$/articles/migrations/0013_auto_20160908_1238.py" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/articles/migrations/0014_auto_20160912_2245.py" afterPath="$PROJECT_DIR$/articles/migrations/0014_auto_20160912_2245.py" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/articles/migrations/0015_auto_20160913_0535.py" afterPath="$PROJECT_DIR$/articles/migrations/0015_auto_20160913_0535.py" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/articles/migrations/0016_unificatedsamplesattributename_synonyms.py" afterPath="$PROJECT_DIR$/articles/migrations/0016_unificatedsamplesattributename_synonyms.py" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/articles/migrations/0017_auto_20160913_1707.py" afterPath="$PROJECT_DIR$/articles/migrations/0017_auto_20160913_1707.py" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/articles/migrations/0018_auto_20160913_1942.py" afterPath="$PROJECT_DIR$/articles/migrations/0018_auto_20160913_1942.py" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/articles/migrations/0021_columnorder.py" afterPath="$PROJECT_DIR$/articles/migrations/0021_columnorder.py" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/articles/models.py" afterPath="$PROJECT_DIR$/articles/models.py" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/articles/queries.py" afterPath="$PROJECT_DIR$/articles/queries.py" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/articles/test/tsv/.~lock.samples.tsv#" afterPath="$PROJECT_DIR$/articles/test/tsv/.~lock.samples.tsv#" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/articles/test/tsv/samples.tsv" afterPath="$PROJECT_DIR$/articles/test/tsv/samples.tsv" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/articles/tests/tests_models.py" afterPath="$PROJECT_DIR$/articles/tests/tests_models.py" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/preeclampsia_db/settings.py" afterPath="$PROJECT_DIR$/preeclampsia_db/settings.py" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/samples_E-GEOD-74341.txt" afterPath="$PROJECT_DIR$/samples_E-GEOD-74341.txt" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/articles/temp/three_cols_vsevolod.tsv" afterPath="$PROJECT_DIR$/articles/temp/three_cols_vsevolod.tsv" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/articles/temp/vsevolod.tsv" afterPath="$PROJECT_DIR$/articles/temp/vsevolod.tsv" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="TRACKING_ENABLED" value="true" />
@@ -61,28 +30,8 @@
       <file leaf-file-name="admin.py" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/articles/admin.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="374">
+            <state relative-caret-position="0">
               <caret line="283" column="13" lean-forward="false" selection-start-line="283" selection-start-column="6" selection-end-line="283" selection-end-column="13" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="0014_auto_20160912_2245.py" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/articles/migrations/0014_auto_20160912_2245.py">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="513">
-              <caret line="30" column="37" lean-forward="false" selection-start-line="30" selection-start-column="24" selection-end-line="30" selection-end-column="37" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="use_getdata.py" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/articles/management/commands/use_getdata.py">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="437">
-              <caret line="21" column="8" lean-forward="false" selection-start-line="21" selection-start-column="8" selection-end-line="21" selection-end-column="8" />
               <folding />
             </state>
           </provider>
@@ -91,18 +40,40 @@
       <file leaf-file-name="use_queries.py" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/articles/management/commands/use_queries.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="260">
-              <caret line="15" column="0" lean-forward="false" selection-start-line="15" selection-start-column="0" selection-end-line="15" selection-end-column="0" />
+            <state relative-caret-position="456">
+              <caret line="26" column="25" lean-forward="true" selection-start-line="26" selection-start-column="25" selection-end-line="26" selection-end-column="25" />
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="models.py" pinned="false" current-in-tab="true">
+      <file leaf-file-name="getdata.py" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/articles/getdata.py">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="218">
+              <caret line="599" column="94" lean-forward="true" selection-start-line="599" selection-start-column="94" selection-end-line="599" selection-end-column="94" />
+              <folding>
+                <element signature="e#0#9#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="use_getdata.py" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/articles/management/commands/use_getdata.py">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="95">
+              <caret line="7" column="7" lean-forward="true" selection-start-line="7" selection-start-column="7" selection-end-line="7" selection-end-column="7" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="models.py" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/articles/models.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="629">
-              <caret line="74" column="14" lean-forward="false" selection-start-line="74" selection-start-column="14" selection-end-line="74" selection-end-column="14" />
+            <state relative-caret-position="887">
+              <caret line="63" column="25" lean-forward="false" selection-start-line="63" selection-start-column="25" selection-end-line="63" selection-end-column="25" />
               <folding />
             </state>
           </provider>
@@ -121,8 +92,8 @@
       <find>exp_to</find>
       <find>unificatedsamplesattributename</find>
       <find>Unifica</find>
-      <find>'UnificatedSamplesAttributeName'</find>
       <find>unificatedsamplesattributevalue</find>
+      <find>'UnificatedSamplesAttributeName'</find>
     </findStrings>
     <replaceStrings>
       <replace>'StandardName'</replace>
@@ -141,8 +112,6 @@
         <option value="$PROJECT_DIR$/articles/templates/articles/table.html" />
         <option value="$PROJECT_DIR$/env3/lib/python3.5/site-packages/django_tables2/views.py" />
         <option value="$PROJECT_DIR$/articles/views.py" />
-        <option value="$PROJECT_DIR$/articles/management/commands/use_getdata.py" />
-        <option value="$PROJECT_DIR$/articles/getdata.py" />
         <option value="$PROJECT_DIR$/articles/add_gestational_age.py" />
         <option value="$PROJECT_DIR$/articles/management/commands/add_gestational_age.py" />
         <option value="$PROJECT_DIR$/articles/migrations/0024_auto_20171111_1608.py" />
@@ -154,6 +123,8 @@
         <option value="$PROJECT_DIR$/articles/migrations/0015_auto_20160913_0535.py" />
         <option value="$PROJECT_DIR$/articles/migrations/0018_auto_20160913_1942.py" />
         <option value="$PROJECT_DIR$/articles/migrations/0024_auto_20171111_1658.py" />
+        <option value="$PROJECT_DIR$/articles/management/commands/use_getdata.py" />
+        <option value="$PROJECT_DIR$/articles/getdata.py" />
       </list>
     </option>
   </component>
@@ -199,6 +170,8 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
+      <pane id="Scratches" />
+      <pane id="Scope" />
       <pane id="ProjectPane">
         <subPane>
           <PATH>
@@ -239,7 +212,11 @@
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
-              <option name="myItemId" value="migrations" />
+              <option name="myItemId" value="test" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="tsv" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
@@ -257,36 +234,12 @@
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
-              <option name="myItemId" value="management" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="placenta-preeclampsia" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="placenta-preeclampsia" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="articles" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="management" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="commands" />
+              <option name="myItemId" value="temp" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
         </subPane>
       </pane>
-      <pane id="Scratches" />
-      <pane id="Scope" />
     </panes>
   </component>
   <component name="PropertiesComponent">
@@ -295,7 +248,7 @@
     <property name="settings.editor.splitter.proportion" value="0.27946767" />
     <property name="ToolWindowHierarchy.ShowToolbar" value="false" />
   </component>
-  <component name="RunManager" selected="Python.runserver">
+  <component name="RunManager" selected="Python.use_getdata">
     <configuration default="true" type="PythonConfigurationType" factoryName="Python">
       <option name="INTERPRETER_OPTIONS" value="" />
       <option name="PARENT_ENVS" value="true" />
@@ -516,22 +469,22 @@
     <frame x="0" y="24" width="1920" height="1056" extended-state="6" />
     <editor active="true" />
     <layout>
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.1782284" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.17817606" sideWeight="0.4958159" order="0" side_tool="false" content_ui="combo" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32972136" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
-      <window_info id="Hierarchy" active="false" anchor="right" auto_hide="true" internal_type="SLIDING" type="SLIDING" visible="false" show_stripe_button="true" weight="0.2609375" sideWeight="0.5" order="2" side_tool="false" content_ui="combo" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="true" content_ui="tabs" />
-      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32670158" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32972136" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Python Console" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32761312" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
-      <window_info id="Run" active="false" anchor="bottom" auto_hide="true" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.2764398" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Run" active="false" anchor="bottom" auto_hide="true" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.8702929" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.24961714" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32670158" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
-      <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
-      <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.44887525" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
+      <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.17817606" sideWeight="0.5041841" order="2" side_tool="true" content_ui="tabs" />
+      <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.44874477" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
+      <window_info id="Hierarchy" active="false" anchor="right" auto_hide="true" internal_type="SLIDING" type="SLIDING" visible="false" show_stripe_button="true" weight="0.2609375" sideWeight="0.5" order="2" side_tool="false" content_ui="combo" />
+      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32670158" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
     </layout>
   </component>
@@ -543,36 +496,20 @@
       <breakpoints>
         <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
           <url>file://$PROJECT_DIR$/articles/getdata.py</url>
-          <line>590</line>
+          <line>666</line>
           <option name="timeStamp" value="17" />
         </line-breakpoint>
+        <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
+          <url>file://$PROJECT_DIR$/articles/getdata.py</url>
+          <line>589</line>
+          <option name="timeStamp" value="21" />
+        </line-breakpoint>
       </breakpoints>
-      <option name="time" value="18" />
+      <option name="time" value="22" />
     </breakpoint-manager>
     <watches-manager />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/articles/management/commands/use_queries.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="252">
-          <caret line="14" column="16" lean-forward="false" selection-start-line="14" selection-start-column="16" selection-end-line="14" selection-end-column="16" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/manage.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/articles/models.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/articles/queries.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="0">
@@ -711,7 +648,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="4245">
           <caret line="293" column="11" lean-forward="false" selection-start-line="293" selection-start-column="11" selection-end-line="293" selection-end-column="11" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -734,7 +670,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="916">
           <caret line="414" column="88" lean-forward="false" selection-start-line="414" selection-start-column="79" selection-end-line="414" selection-end-column="88" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -742,7 +677,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="916">
           <caret line="411" column="0" lean-forward="false" selection-start-line="411" selection-start-column="0" selection-end-line="411" selection-end-column="0" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -750,7 +684,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="0">
           <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -758,7 +691,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="209">
           <caret line="399" column="22" lean-forward="false" selection-start-line="399" selection-start-column="22" selection-end-line="399" selection-end-column="22" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -766,7 +698,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="303">
           <caret line="33" column="7" lean-forward="false" selection-start-line="33" selection-start-column="4" selection-end-line="33" selection-end-column="7" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -774,7 +705,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="892">
           <caret line="130" column="29" lean-forward="false" selection-start-line="130" selection-start-column="29" selection-end-line="130" selection-end-column="29" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -782,7 +712,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="0">
           <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -790,17 +719,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="506">
           <caret line="101" column="40" lean-forward="false" selection-start-line="101" selection-start-column="40" selection-end-line="101" selection-end-column="40" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/articles/getdata.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="325">
-          <caret line="343" column="34" lean-forward="false" selection-start-line="343" selection-start-column="34" selection-end-line="343" selection-end-column="34" />
-          <folding>
-            <element signature="e#0#9#0" expanded="true" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -808,9 +726,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="311">
           <caret line="55" column="78" lean-forward="false" selection-start-line="55" selection-start-column="78" selection-end-line="55" selection-end-column="78" />
-          <folding>
-            <element signature="e#0#65#0" expanded="false" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -818,7 +733,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="148">
           <caret line="120" column="0" lean-forward="true" selection-start-line="120" selection-start-column="0" selection-end-line="120" selection-end-column="0" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -826,41 +740,14 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="596">
           <caret line="55" column="78" lean-forward="false" selection-start-line="55" selection-start-column="78" selection-end-line="55" selection-end-column="78" />
-          <folding>
-            <element signature="e#0#65#0" expanded="false" />
-          </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/articles/management/commands/use_queries.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="260">
-          <caret line="15" column="0" lean-forward="false" selection-start-line="15" selection-start-column="0" selection-end-line="15" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/articles/management/commands/use_getdata.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="437">
-          <caret line="21" column="8" lean-forward="false" selection-start-line="21" selection-start-column="8" selection-end-line="21" selection-end-column="8" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/articles/migrations/0024_auto_20171111_1608.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="234">
-          <caret line="15" column="0" lean-forward="true" selection-start-line="15" selection-start-column="0" selection-end-line="15" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
+    <entry file="file://$PROJECT_DIR$/articles/migrations/0024_auto_20171111_1608.py" />
     <entry file="file://$PROJECT_DIR$/articles/migrations/0017_auto_20160913_1707.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="0">
           <caret line="0" column="23" lean-forward="true" selection-start-line="0" selection-start-column="23" selection-end-line="0" selection-end-column="23" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -868,7 +755,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="195">
           <caret line="15" column="36" lean-forward="false" selection-start-line="15" selection-start-column="36" selection-end-line="15" selection-end-column="36" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -876,15 +762,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="440">
           <caret line="88" column="24" lean-forward="false" selection-start-line="88" selection-start-column="20" selection-end-line="88" selection-end-column="24" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/articles/admin.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="374">
-          <caret line="283" column="13" lean-forward="false" selection-start-line="283" selection-start-column="6" selection-end-line="283" selection-end-column="13" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -892,7 +769,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="494">
           <caret line="28" column="10" lean-forward="true" selection-start-line="28" selection-start-column="10" selection-end-line="28" selection-end-column="10" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -900,31 +776,80 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="494">
           <caret line="29" column="37" lean-forward="false" selection-start-line="29" selection-start-column="37" selection-end-line="29" selection-end-column="37" />
-          <folding />
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/articles/migrations/0024_auto_20171111_1658.py" />
     <entry file="file://$PROJECT_DIR$/articles/migrations/0014_auto_20160912_2245.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="513">
           <caret line="30" column="37" lean-forward="false" selection-start-line="30" selection-start-column="24" selection-end-line="30" selection-end-column="37" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/articles/admin.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="283" column="13" lean-forward="false" selection-start-line="283" selection-start-column="6" selection-end-line="283" selection-end-column="13" />
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/articles/migrations/0024_auto_20171111_1658.py">
+    <entry file="file://$PROJECT_DIR$/articles/temp/vsevolod.tsv">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="190">
-          <caret line="12" column="0" lean-forward="false" selection-start-line="12" selection-start-column="0" selection-end-line="12" selection-end-column="0" />
+        <state relative-caret-position="38">
+          <caret line="2" column="31" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="413" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/articles/temp/three_cols_vsevolod.tsv">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="108" column="38" lean-forward="false" selection-start-line="2" selection-start-column="0" selection-end-line="108" selection-end-column="38" />
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/articles/models.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="629">
-          <caret line="74" column="14" lean-forward="false" selection-start-line="74" selection-start-column="14" selection-end-line="74" selection-end-column="14" />
+        <state relative-caret-position="887">
+          <caret line="63" column="25" lean-forward="false" selection-start-line="63" selection-start-column="25" selection-end-line="63" selection-end-column="25" />
           <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/articles/management/commands/use_getdata.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="95">
+          <caret line="7" column="7" lean-forward="true" selection-start-line="7" selection-start-column="7" selection-end-line="7" selection-end-column="7" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/articles/management/commands/use_queries.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="456">
+          <caret line="26" column="25" lean-forward="true" selection-start-line="26" selection-start-column="25" selection-end-line="26" selection-end-column="25" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$USER_HOME$/.PyCharmCE2016.3/system/python_stubs/961923947/builtins.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="137">
+          <caret line="470" column="4" lean-forward="false" selection-start-line="470" selection-start-column="4" selection-end-line="470" selection-end-column="9" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/articles/getdata.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="218">
+          <caret line="599" column="94" lean-forward="true" selection-start-line="599" selection-start-column="94" selection-end-line="599" selection-end-column="94" />
+          <folding>
+            <element signature="e#0#9#0" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>
