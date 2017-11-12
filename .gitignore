@@ -21,7 +21,9 @@ preeclamsia_db/settings_db.py
 
 articles/data/*
 
-.idea/*
+.idea/
 
 downloads
 /downloads
+
+.~*
