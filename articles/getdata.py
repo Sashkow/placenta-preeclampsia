@@ -99,8 +99,6 @@ def print_exp_accession_microarrays_platform_name():
             i += 1
 
 
-
-
 def get_expression_matrix():
     exps = ['E-GEOD-14722', 'E-GEOD-54618', 'E-GEOD-44711', 'E-GEOD-9984',
             'E-GEOD-4707', 'E-GEOD-12216', 'E-GEOD-30186', 'E-GEOD-10588', 
@@ -278,13 +276,54 @@ def get_experiment_attributes(experiment_id):
                 arrays_data.append(array_data)
     return exp_data, arrays_data
 
+def get_experiment_array_data_file_attribute(experiment_id):
+    url = 'xml/v3/experiments/' + experiment_id + '/samples'
+    samples_xml = s.http_get(url, 'xml')
+
+    samples_xml = s.easyXML(samples_xml)
+
+    with open("samples_E-GEOD-74341.txt", "w") as text_file:
+        print(samples_xml.prettify(), file=text_file)
+
+    samples_xml = samples_xml.getchildren()
+    samples = []
+    for sample_xml in samples_xml:
+        if sample_xml.tag == 'sample':
+            sample = {}
+            for characteristic in sample_xml.getchildren():
+                if characteristic.tag == 'file':
+                    print(characteristic)
+                    file = characteristic.getchildren()
+
+                    for item in file:
+                        print("     ", item.tag, item.text)
+                        if item.tag == 'type':
+                            type = item.text
+                        if item.tag == 'name':
+                            name = item.text
+                    if type and name:
+                        if type == 'data':
+                            sample['array data file'] = name
+
+                elif characteristic.tag == 'source':
+                    # sometimes <name> tag which is under <assay>
+                    # tag is absent or not unique
+                    first_tag = characteristic.getchildren()[0]
+                    if first_tag.tag == 'name':
+                        # print('Took name from sample xml <source> section',first_tag.tag,first_tag.text)
+                        sample[first_tag.tag] = first_tag.text
+
+            samples.append(sample)
+    return samples
 
 
 def get_experiment_samples_attributes(experiment_id):
     url ='xml/v3/experiments/'+experiment_id+'/samples'
     samples_xml = s.http_get(url, 'xml')
 
+
     samples_xml = s.easyXML(samples_xml)
+
     with open("samples_E-GEOD-74341.txt", "w") as text_file:
         print(samples_xml.prettify(), file=text_file)
 
@@ -304,9 +343,22 @@ def get_experiment_samples_attributes(experiment_id):
                         sample[category_value[0].text] = category_value[1].text
                     else:
                         print("Error while processing sample")
-                elif characteristic.tag == 'source': 
+
+                elif characteristic.tag == 'file':
+                    file = characteristic.getchildren()
+                    for item in file:
+                        if item.tag == 'type':
+                            type = item.text
+                        if item.tag == 'name':
+                            name = item.text
+                    if type and name:
+                        if type == 'data':
+                            sample['array data file'] = name
+
+
+                elif characteristic.tag == 'source':
                     # sometimes <name> tag which is under <assay>
-                    # tag is absent or not unique 
+                    # tag is absent or not unique
                     first_tag = characteristic.getchildren()[0]
                     if first_tag.tag == 'name':
                         # print('Took name from sample xml <source> section',first_tag.tag,first_tag.text)
@@ -316,40 +368,33 @@ def get_experiment_samples_attributes(experiment_id):
     return samples
 
 
-
-
-
-
-
-
 def exp_to_db(experiment_id):
     """
     retreive experiment data from ArrayExpress and add it to db
     """
+    print("Processing", experiment_id)
 
-    experiment, microarrays = get_experiment_attributes(experiment_id)
-    samples = get_experiment_samples_attributes(experiment_id)
-    experiment_obj = Experiment.add_or_replace(data=experiment)
-    print("Created:", experiment_obj)
+    # experiment, microarrays = get_experiment_attributes(experiment_id)
+    samples = get_experiment_array_data_file_attribute(experiment_id)
+    print("     ", samples)
 
+    # experiment_obj = Experiment.add_or_replace(data=experiment)
+    experiment_obj = Experiment.find(experiment_id)
+    #
+    # for microarray in microarrays:
+    #     microarray_obj = Microarray.add_or_replace(data=microarray)
+    #     if not(experiment_obj.microarrays.filter(id=microarray_obj.id).exists()):
+    #         experiment_obj.microarrays.add(microarray_obj)
+    #         experiment_obj.save()
+    #         print("Added microarray:", microarray_obj, "to", experiment_obj)
 
-    for microarray in microarrays:
-        microarray_obj = Microarray.add_or_replace(data=microarray)
-        if not(experiment_obj.microarrays.filter(id=microarray_obj.id).exists()):
-            experiment_obj.microarrays.add(microarray_obj)
-            experiment_obj.save()
-            print("Added microarray:", microarray_obj, "to", experiment_obj)
+    for sample in samples:
+        sample_obj = Sample.add_or_replace(
+            experiment=experiment_obj,
+            sample_data=sample
+        )
 
-    for sample in samples:  
-        sample_obj = Sample.add_or_replace(experiment=experiment_obj,
-                                           data=sample)
-        sample_attributes = SampleAttribute.objects.filter(sample=sample_obj)
-        for old_name, old_value in sample.items():
-
-            if old_value == None or old_value == '':
-                SampleAttribute.add_or_replace(sample_obj, old_name, '<empty>')
-            else:
-                SampleAttribute.add_or_replace(sample_obj, old_name, old_value)
+        # sample_attributes = SampleAttribute.objects.filter(sample=sample_obj)
 
 
 def sample_to_db(experiment_id, sample_data):
@@ -360,19 +405,12 @@ def sample_to_db(experiment_id, sample_data):
     :return:
     """
 
-        
-
-
-
-
 def get_some():
     # get some experiment
     acc = "E-GEOD-74341"
-    path ='xml/v3/experiments/E-GEOD-74341/samples'
+    path = 'xml/v3/experiments/E-GEOD-74341/samples'
     res = s.http_get(path,'xml')
     res = s.easyXML(res)
-
-
 
     # for item in lst:
     #     # print(item)
@@ -582,20 +620,22 @@ def sample_tsv_to_three_column_tsv():
             for pair in pairs:
                 tsv.write(pair+'\n')
 
+
 def three_column_tsv_check():
     attributes = SampleAttribute.objects.all()
 
-    with open('articles/temp/three_cols_vsevolod.tsv', 'r') as tsv:
+    with open('articles/temp/scandate_three_cols.tsv', 'r') as tsv:
         rows = list(csv.reader(tsv, delimiter='\t'))
         for row in rows:
             sample = SampleAttribute.objects.filter(
-                unificated_name__name='Sample Name',
+                unificated_name__name='Array Data File',
                 old_value=row[0]).first()
             if sample:
                 sample = sample.sample
             else:
                 print("No such sample", row[0])
-                return
+                continue
+                # return
 
             attribute = attributes.filter(sample=sample, unificated_name__name=row[1]).first()
 
@@ -617,17 +657,95 @@ def three_column_tsv_check():
                 else:
                     value = ""
                 if value == row[2] or attribute.old_value == row[2]:
-                    # print("Do nothing for", attribute)
-                    pass
+                    print("Do nothing for", attribute)
+                    # pass
                 else:
                     print("Modify old value", attribute.old_value, "to", row[2], "in", row, attribute)
-                    # attribute.old_value = row[2]
+                    attribute.old_value = row[2]
             else:
-                pass
-                # print("Make new attribute", row)
+                print("Make new attribute", row)
+
+
+def three_column_tsv_to_db():
+
+    attributes = SampleAttribute.objects.filter(~Q(sample__experiment__data__contains = {"accession":""}))
+
+    with open('articles/temp/scandate_three_cols.tsv', 'r') as tsv:
+        rows = list(csv.reader(tsv, delimiter='\t'))
+        for row in rows:
+            sample = SampleAttribute.objects.filter(
+                unificated_name__name='Array Data File',
+                old_value=row[0]).first()
+            if sample:
+                sample = sample.sample
+            else:
+                print("No such sample", row[0])
+                return
+
+            # attribute = attributes.filter(sample=sample, unificated_name__name=row[1]).first()
+            unificated_name = StandardName.objects.get(name=row[1])
+            unificated_value = StandardValue.objects.get(value=row[2])
+            SampleAttribute.add_or_replace_numeric(
+                sample,
+                unificated_name=unificated_name,
+                unificated_value= unificated_value,
+                old_value= row[3])
 
 
 
+
+
+
+            """
+            1. sample unificated_name unificated_value
+                do nothing
+            2. sample unificated_name old_value
+                do nothing
+            3. sample unificated_name
+                modify old_value
+            4. sample
+                add new old name old value
+            5. nothing
+                print(nosample)
+
+            add to old value
+                when from array express/geo/articles/authors
+            add to unified
+                when estimated
+            """
+
+
+            # if attribute:
+            #     if attribute.unificated_value:
+            #         value = attribute.unificated_value.value
+            #     else:
+            #         value = ""
+            #     if value == row[2] or attribute.old_value == row[2]:
+            #         print("Do nothing for", attribute)
+            #         # pass
+            #     else:
+            #         print("Modify old value", attribute.old_value, "to", row[2], "in", row, attribute)
+            #         attribute.old_value = row[2]
+            #         attribute.save()
+            # else:
+            #     print("Create new", row)
+            #
+            #     args = {'sample':sample}
+            #
+            #     unificated_name = StandardName.objects.filter(name = row[1]).first()
+            #     if unificated_name:
+            #         args['unificated_name'] = unificated_name
+            #     else:
+            #         args['old_name'] = row[1]
+            #
+            #     unificated_value = StandardValue.objects.filter(value = row[2]).first()
+            #     if unificated_value:
+            #         args['unificated_value'] = unificated_value
+            #     else:
+            #         args['old_value'] = row[2]
+            #
+            #     attribute = SampleAttribute.objects.create(**args)
+            #     attribute.save()
 
 
 
@@ -652,40 +770,54 @@ def three_column_tsv_check():
 
 
 
+def create_three_cols_tsv():
+    cwd = 'articles/temp/scandate/affymetrix'
+    files = os.listdir(cwd)
+    with open("articles/temp/scandate_three_cols.tsv", 'w') as three:
+        for f in files:
+
+            # print(os.path.join('articles/temp/sex',f))
+            with open(os.path.join(cwd,f)) as tsv:
+                rows = list(csv.reader(tsv, delimiter='\t'))
+                for row in rows[1:]:
+                    print(row)
+                    array_data_file = row[0]
+                    attribute_value = row[1]
+                    three.write('\t'.join([array_data_file, 'Scan Date', attribute_value]) + '\n')
 
 
 
 
 def tsv_to_db():
-        with open('articles/temp/three_cols_vsevolod.tsv', 'r') as tsv:
-            rows = list(csv.reader(tsv, delimiter='\t'))
-            for row in rows:
-                sample = SampleAttribute.objects.filter(
-                        unificated_name__name='Sample Name',
-                        old_value=row[0]).first()
-                
-                if sample:
-                    sample = sample.sample
-                    unificated_name = StandardName.objects.filter(name=row[1]).first()
-                    if unificated_name:
-                        unificated_value = StandardValue.objects.filter(value=row[2]).first()
-                        if unificated_value:
-                            if SampleAttribute.objects.filter(
-                                    sample,
-                                    unificated_name=unificated_name,
-                                    unificated_value=unificated_value):
-                                print("Exists", sample, unificated_name, unificated_value)
-                            else:
-                                print("Not Exist", sample, unificated_name, unificated_value)
+    with open('articles/temp/curent_three_cols.tsv', 'r') as tsv:
+        rows = list(csv.reader(tsv, delimiter='\t'))
+        for row in rows:
+            sample = SampleAttribute.objects.filter(
+                    unificated_name__name='Array Data File',
+                    old_value=row[0]).first()
+
+            if sample:
+                sample = sample.sample
+                unificated_name = StandardName.objects.filter(name=row[1]).first()
+                if unificated_name:
+                    unificated_value = StandardValue.objects.filter(value=row[2]).first()
+                    if unificated_value:
+                        if SampleAttribute.objects.filter(
+                                sample,
+                                unificated_name=unificated_name,
+                                unificated_value=unificated_value):
+                            print("Exists", sample, unificated_name, unificated_value)
                         else:
-                            
-                            if SampleAttribute.objects.filter(
-                                    sample=sample,
-                                    unificated_name=unificated_name,
-                                    old_value=row[2]):
-                                print("Exists", sample, unificated_name, row[2])
-                            else:
-                                print("Not Exist", sample, unificated_name, row[2])
+                            print("Not Exist", sample, unificated_name, unificated_value)
+                    else:
+
+                        if SampleAttribute.objects.filter(
+                                sample=sample,
+                                unificated_name=unificated_name,
+                                old_value=row[2]):
+                            print("Exists", sample, unificated_name, row[2])
+                        else:
+                            print("Not Exist", sample, unificated_name, row[2])
 
 
 """

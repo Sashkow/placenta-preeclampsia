@@ -108,6 +108,7 @@ class Experiment(models.Model):
     data = hstore.DictionaryField(db_index=True)
     objects = hstore.HStoreManager()
     history = HistoricalRecords()
+    samples = models.ManyToManyField('Sample')
 
     microarrays = models.ManyToManyField('Microarray')
 
@@ -154,7 +155,9 @@ class Experiment(models.Model):
                 else:
                     attributes[attribute] = self.data[attribute]
         attributes['microarrays'] = self.get_microarrays_lst()
-        attributes['status'] = self.data['status']
+        attributes['status'] = self.cached_status()
+
+
 
 
         return attributes
@@ -227,12 +230,15 @@ class Experiment(models.Model):
         """
         # import time
         # timestart = time.time()
-        print(self, "start")
+        # print(self, "start")
+
         bspecimen = StandardName.objects.get(name="Biological Specimen").id
         diagnosis = StandardName.objects.get(name="Diagnosis").id
         age = StandardName.objects.get(name="Gestational Age").id
-        age_exp = StandardName.objects.get(name="Gestational Age at Experiment").id
+        age_exp = StandardName.objects.get(name="Gestational Age at Time of Sampling").id
         age_avg = StandardName.objects.get(name="Average Gestational Age").id
+        age_cat = StandardName.objects.get(name= "Gestational Age Category").id
+
 
 
         attributes = SampleAttribute.objects.filter(
@@ -240,7 +246,9 @@ class Experiment(models.Model):
                 Q(unificated_name=diagnosis) |
                 Q(unificated_name=age) |
                 Q(unificated_name=age_avg) |
-                Q(unificated_name=age_exp))
+                Q(unificated_name=age_exp) |
+                Q(unificated_name=age_cat)
+        )
 
         # timeq1 = time.time()
         # print(timeq1-timestart)
@@ -258,9 +266,10 @@ class Experiment(models.Model):
 
             if not (bspecimen in sample_attributes and \
                     diagnosis in sample_attributes and \
-                    (age in sample_attributes or \
-                    age_exp in sample_attributes or \
-                    age_avg in sample_attributes)):
+                    (age in sample_attributes or
+                    age_exp in sample_attributes or
+                    age_avg in sample_attributes or
+                    age_cat in sample_attributes)):
                 for attr in sample_attributes:
                     print(StandardName.objects.get(id=attr))
                 # timeq3 = time.time()
@@ -297,7 +306,7 @@ class Experiment(models.Model):
         if self.is_cell_line():
             status.append('Cell Сulture')
 
-        if self.get_has_minimal():
+        if self.has_minimal():
             status.append('Has minimal sample data')
         if 'excluded' in self.data:
             status.append('Excluded')
@@ -306,6 +315,12 @@ class Experiment(models.Model):
     def update_status(self):
         self.data['status'] = self.status()
         self.save()
+
+    def cached_status(self):
+        if 'status' not in self.data:
+            self.update_status()
+        return self.data['status']
+
 
 
 class Microarray(models.Model):
@@ -557,39 +572,36 @@ class Sample(models.Model):
 
 
 
-    def add_or_replace(experiment, data):
+    def add_or_replace(experiment, sample_data):
         """
         add or replace sample with given data in an experiment
         """
-
         sample_obj = None
-        if 'name' in data:
-            samplesamples_in_experiment = Sample.objects.filter(
+        if 'name' in sample_data:
+            samples_in_experiment = Sample.objects.filter(
                                       experiment=experiment)
             name_attribute = SampleAttribute.objects.filter(
                     sample__in=samples_in_experiment,
                     old_name='name',
-                    old_value=data['name'])
+                    old_value=sample_data['name'])
 
             if len(name_attribute) > 1:
-                print("Multiple instances of", data['name'], "in", experiment)
+                print("Multiple instances of", sample_data['name'], "in", experiment)
                 return
 
             elif len(name_attribute) == 1:
-                the_sample = name_attribute[0].sample
+                sample_obj = name_attribute[0].sample
             elif not name_attribute:
-                the_sample = Sample.objects.create(experiment=experiment)
+                sample_obj = Sample.objects.create(experiment=experiment)
 
-            for name, value in data.items():
-                if not value:
-                    value = '_'
-                    SampleAttribute.add_or_replace(
-                            the_sample,
-                            old_name=name,
-                            old_value=value)
+            for old_name, old_value in sample_data.items():
+                if old_value == None or old_value == '':
+                    SampleAttribute.add_or_replace(sample_obj, old_name, '<empty>')
+                else:
+                    SampleAttribute.add_or_replace(sample_obj, old_name, old_value)
 
-            the_sample.save()
-            return the_sample
+            sample_obj.save()
+            return sample_obj
 
 
     # def _show(self):
@@ -649,7 +661,7 @@ class SampleAttribute(models.Model):
             attribute.unificated_value = unificated_value
             attribute.save()
         else:
-            # print("no such attribute",sample,old_name,old_value)
+            print("no such attribute",sample,old_name,old_value)
             return
 
     def unify_for_each_old_value(sample, old_name, unificated_name, unificated_value):
@@ -724,11 +736,14 @@ class SampleAttribute(models.Model):
             if len(attribute) == 1:
                 attribute_obj = attribute[0]
                 setattr(attribute_obj, value_name, value)
+                print("Replacing", value_name, "with", value, "in attribute:", attribute_obj, "in sample:", sample)
             else:
                 print("Multiple replace spots in", sample, "Retrun None")
                 return
         else:
+
             attribute_obj = SampleAttribute.objects.create(**create)
+            print("Creating new attribute", create, "in sample:", sample)
         attribute_obj.save()
         return attribute_obj
 
@@ -742,10 +757,12 @@ class SampleAttribute(models.Model):
                                                    unificated_name=unificated_name)
         # if it exists
         if attribute.exists():
+
             # get first element as .filter() method returns list
             attribute_obj = attribute[0]
             # set old_value to a new old_value
             attribute_obj.old_value = old_value
+            attribute_obj.unificated_value = unificated_value
 
         else:
             # if not found, create new attribute of given properties

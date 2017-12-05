@@ -35,6 +35,7 @@ def all_to_tsv():
     samples = Sample.to_dict()
 
 
+
     for sample in samples:
         if 'Experiment' in sample:
             accession = sample['Experiment']
@@ -127,7 +128,8 @@ def all_samples_to_tsv():
     samples = Sample.to_dict()
     column_names = ColumnOrder.objects.all().order_by(
             'column_order').values_list('unificated_name__name', flat=True)
-    print(column_names)
+    import os
+    print(os.getcwd())
 
     with open('articles/static/tsv/samples.tsv','w') as tsv:
         tsv.write('\t'.join(column_names)+'\n')
