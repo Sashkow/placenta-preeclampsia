@@ -12,7 +12,7 @@ import ast
 from articles.getdata import get_experiment_attributes
 from articles.getdata import get_experiment_samples_attributes
 
-from django.core.urlresolvers import reverse
+from django.urls import reverse
 
 from simple_history.admin import SimpleHistoryAdmin
 
@@ -34,8 +34,6 @@ def _list_display(ModelClass):
     for attr_name in ModelClass.must_have_attributes:
         f_lst.append(_lookup_f(ModelClass, attr_name))
     return f_lst
-
-
 
 class AttributeInline(admin.TabularInline):
     model = Attribute

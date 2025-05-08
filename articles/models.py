@@ -1,7 +1,7 @@
 from django.db import models
 from django.utils import timezone
 
-from django_hstore import hstore
+from django.contrib.postgres.fields import HStoreField
 from simple_history.models import HistoricalRecords
 
 from django.utils.functional import cached_property
@@ -45,7 +45,7 @@ class Attribute(ShowModel):
                        'platform', 
                        'samples']
 
-    article = models.ForeignKey('Article')
+    article = models.ForeignKey('Article', on_delete=models.CASCADE)
     attribute_name = models.CharField(blank=True, max_length=200)
     attribute_value = models.CharField(blank=True, max_length=200)
     to_show = 'attribute_name'
@@ -56,7 +56,7 @@ class StandardName(ShowModel):
 
     """
     name = models.CharField(max_length=255)
-    additional_info = hstore.DictionaryField(db_index=True, blank=True, null=True)
+    additional_info = HStoreField(blank=True, null=True)
     synonyms = models.ManyToManyField('self', symmetrical=False)
     to_show = 'name'
 
@@ -73,13 +73,11 @@ class StandardName(ShowModel):
 
 
 class StandardValue(ShowModel):
-    unificated_name = models.ForeignKey('StandardName')
+    unificated_name = models.ForeignKey('StandardName', on_delete=models.CASCADE)
     value = models.CharField(max_length=255)
-    additional_info = hstore.DictionaryField(db_index=True, blank=True, null=True)
+    additional_info = HStoreField(blank=True, null=True)
     synonyms = models.ManyToManyField('self', symmetrical=False)
     to_show = 'value'
-
-    objects = hstore.HStoreManager()
 
     @staticmethod
     def autocomplete_search_fields():
@@ -105,8 +103,7 @@ class Experiment(models.Model):
 
     extra_attributes = ['microarrays','status']
 
-    data = hstore.DictionaryField(db_index=True)
-    objects = hstore.HStoreManager()
+    data = HStoreField(blank=True)
     history = HistoricalRecords()
     samples = models.ManyToManyField('Sample')
 
@@ -325,8 +322,7 @@ class Experiment(models.Model):
 
 class Microarray(models.Model):
     must_have_attributes = ['accession', 'name']
-    data = hstore.DictionaryField(db_index=True, blank=True)
-    objects = hstore.HStoreManager()
+    data = HStoreField(blank=True)
 
     def _show(self):
         to_print = 'name'
@@ -367,7 +363,7 @@ class Microarray(models.Model):
 
 class Sample(models.Model):
     must_have_attributes = ['name']
-    experiment = models.ForeignKey('Experiment', db_index=True)
+    experiment = models.ForeignKey('Experiment', db_index=True, on_delete=models.CASCADE)
 
     def _show(self):
         return str(self.id)
@@ -626,11 +622,13 @@ class SampleAttribute(models.Model):
     unificated_name = models.ForeignKey('StandardName',
                                         blank=True,
                                         null=True,
-                                        db_index=True)
+                                        db_index=True,
+                                        on_delete=models.CASCADE)
     unificated_value = models.ForeignKey('StandardValue',
                                          blank=True,
-                                         null=True)
-    sample = models.ForeignKey('Sample', db_index=True)
+                                         null=True,
+                                         on_delete=models.CASCADE)
+    sample = models.ForeignKey('Sample', db_index=True, on_delete=models.CASCADE)
 
     def _show(self):
         return " | ".join((
@@ -775,7 +773,7 @@ class SampleAttribute(models.Model):
 
 
 class ColumnOrder(models.Model):
-    unificated_name = models.ForeignKey('StandardName')
+    unificated_name = models.ForeignKey('StandardName', on_delete=models.CASCADE)
     column_order = models.IntegerField(default=99)
     show_by_default = models.BooleanField(default=False)
     show_at_all = models.BooleanField(default=True)

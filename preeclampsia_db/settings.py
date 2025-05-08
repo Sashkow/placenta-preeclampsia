@@ -78,7 +78,6 @@ INSTALLED_APPS = [
     # 'allauth.socialaccount',    
 
     'articles',
-    'django_hstore',
     'django_tables2',
     'import_export',
     
@@ -88,15 +87,31 @@ INSTALLED_APPS = [
 
 ]
 
-MIDDLEWARE_CLASSES = [
-    'simple_history.middleware.HistoryRequestMiddleware',
-    'django.middleware.security.SecurityMiddleware',
+MIDDLEWARE = [
+    # session middleware comes first
     'django.contrib.sessions.middleware.SessionMiddleware',
+
+    # authentication must come after sessions
+    'django.contrib.auth.middleware.AuthenticationMiddleware',
+
+    # message middleware must come after auth
+    'django.contrib.messages.middleware.MessageMiddleware',
+
+    # then your other middleware, e.g.:
     'django.middleware.common.CommonMiddleware',
     'django.middleware.csrf.CsrfViewMiddleware',
-    'django.contrib.auth.middleware.AuthenticationMiddleware',
-    'django.contrib.auth.middleware.SessionAuthenticationMiddleware',
-    'django.contrib.messages.middleware.MessageMiddleware',
+    'django.middleware.clickjacking.XFrameOptionsMiddleware',
+    # …etc.
+]
+
+MIDDLEWARE = [
+    'simple_history.middleware.HistoryRequestMiddleware',           # your app‐specific
+    'django.middleware.security.SecurityMiddleware',
+    'django.contrib.sessions.middleware.SessionMiddleware',         # required by admin
+    'django.middleware.common.CommonMiddleware',
+    'django.middleware.csrf.CsrfViewMiddleware',
+    'django.contrib.auth.middleware.AuthenticationMiddleware',      # required by admin
+    'django.contrib.messages.middleware.MessageMiddleware',         # required by admin
     'django.middleware.clickjacking.XFrameOptionsMiddleware',
 ]
 

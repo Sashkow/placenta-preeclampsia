@@ -5,7 +5,6 @@ from articles.models import *
 from django.db.models import Q
 
 from plotly.graph_objs import *
-import plotly.plotly as py
 import plotly.graph_objs as go
 import plotly
 
